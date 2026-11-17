@@ -430,7 +430,7 @@ export function mount(host, bridge) {
     card.setAttribute('aria-label', `Conversación entre ${A.n} y ${B.n}`);
     card.innerHTML = `<div class="h"><span class="t"><b>${esc(bridge.deptName(A.dep))} → ${esc(bridge.deptName(B.dep))}</b><small>${esc(A.n)} y ${esc(B.n)}${c.reason ? ' · ' + esc(clip(c.reason, 60)) : ''}</small>${status}</span><button type="button" class="x" aria-label="Cerrar">×</button></div>`
       + `<div class="ls">${c.lines.length ? c.lines.map((l) => { const P = bridge.agent(l.from) || A; return `<div class="ln${l.from === c.to ? ' r' : ''}"><span class="av" style="background:${bridge.deptColor(P.dep)}">${esc(ini(P.n))}</span><div><small>${esc(P.n)}</small><p>${esc(clip(l.text, 360))}</p></div></div>`; }).join('') : '<p class="emp">Empezando…</p>'}</div>`
-      + `<div class="f"><span>Se guarda en el historial</span>${c.task ? '<button type="button" class="vc">Ver el encargo →</button>' : ''}</div>`;
+      + `<div class="f"><span>${c.sim ? 'Simulación: no se guarda' : 'Se guarda en el historial y cada noche en GitHub'}</span>${c.task ? '<button type="button" class="vc">Ver el encargo →</button>' : ''}</div>`;
     card.querySelector('.x').onclick = closeCard;
     const vc = card.querySelector('.vc'); if (vc) vc.onclick = () => bridge.openTask(c.task);
     const ls = card.querySelector('.ls'); ls.scrollTop = ls.scrollHeight;

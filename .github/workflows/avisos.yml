@@ -1,0 +1,31 @@
+# Avisos de cada lunes como issue: decisiones pendientes, semana del plan y fuentes que revisar (D-017). Sin IA.
+name: Avisos de la semana
+on:
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+jobs:
+  avisos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Escribir avisos
+        run: python tools/avisos.py > avisos.md
+      - name: Publicar en la issue de avisos
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          n=$(gh issue list --label avisos --state open --json number --jq '.[0].number')
+          if [ -z "$n" ]; then
+            gh label create avisos --color FBCA04 --description "Avisos automáticos" 2>/dev/null || true
+            gh issue create --title "Avisos de la semana" --label avisos --body-file avisos.md
+          else
+            gh issue edit "$n" --body-file avisos.md
+            gh issue comment "$n" --body "Actualizado el $(date +%d/%m/%Y)."
+          fi

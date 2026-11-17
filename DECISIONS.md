@@ -101,6 +101,18 @@ No construir primero un CEO omnisciente; descubrir, diseñar, integrar y medir u
 - Riesgo: rendimiento en equipos sin GPU y 0,8 MB más de librería. Mitigación: calidad adaptativa (sin oclusión ambiental y sombras más ligeras si baja de 45 FPS), carga bajo demanda y vuelta al 2D.
 - Estado: propuesta.
 
+## D-017 — La oficina se vuelca cada noche a GitHub y las automatizaciones van por GitHub Actions
+- Fecha: 2026-11-17
+- Decisión:
+  - Cada noche, una tarea programada de Claude lee de la base de datos de la oficina solo lo nuevo (encargos, resultados, conversaciones entre agentes, chats con los socios, memoria, reglas, habilidades, proyectos y decisiones propuestas) y lo vuelca al repositorio con `tools/registro_oficina.py`: copia fiel en `oficina/registro/datos/` y versión legible en `precedents/oficina/`, que entra en el cerebro. Abre una propuesta de cambios y la acepta según D-012. Después publica el cerebro nuevo en la oficina. Instrucciones: `oficina/registro/VOLCADO.md`.
+  - Lo que no necesita IA lo hace GitHub Actions: comprobaciones en cada cambio (`ci.yml`), regenerar el cerebro y las fichas cuando cambian documentos (`regenerar.yml`) y los avisos de cada lunes como issue (`avisos.yml`, con `tools/avisos.py`).
+  - Las fichas de los 28 agentes y sus 45 habilidades se generan desde `tools/org_data/agentes.py` y `habilidades.py` (`tools/agentes_gen.py`) y la oficina las carga de `oficina/agentes.json`.
+- Motivo: los socios quieren que lo que se habla y se hace en la oficina mejore el cerebro sin copiarlo a mano, y gastando los mínimos tokens. La oficina no puede escribir en GitHub por sí misma (no hay conector y no debe guardar credenciales).
+- Alternativas descartadas: un token de GitHub dentro de la oficina (secreto expuesto en el navegador); exportar a mano un paquete cada día (se olvida).
+- Privacidad: no se vuelca el texto de los documentos subidos, ni los proyectos marcados como confidenciales, ni nada que parezca un secreto. Antes de L2, con clientes reales, hay que revisar este volcado con Legal: el repositorio no es lugar para datos de clientes.
+- Riesgo: un volcado con datos que no debían subir. Mitigación: filtros en el script, aceptación con revisión según D-012 y escáner de secretos en `check_repo.py`.
+- Estado: propuesta.
+
 ## Decisiones pendientes (con fecha límite)
 | Decisión | Quién | Antes de |
 |---|---|---|

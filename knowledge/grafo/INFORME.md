@@ -6,7 +6,7 @@ Cómo está conectado el cerebro de Varios: qué sostiene todo, qué temas forma
 ## Resumen
 
 - 3412 nodos: seccion 2924, documento 257, fuente 53, habilidad 45, proceso 38, especialista 30, agente 28, decision 18, puerta 12, departamento 7.
-- 4219 relaciones: 70 % EXTRACTADAS (escritas en la fuente), 30 % INFERIDAS (temas compartidos, con puntuación) y 0 AMBIGUAS (para revisar).
+- 4218 relaciones: 70 % EXTRACTADAS (escritas en la fuente), 30 % INFERIDAS (temas compartidos, con puntuación) y 0 AMBIGUAS (para revisar).
 - 12 comunidades de temas.
 
 ## Nodos centrales
@@ -84,7 +84,7 @@ Cohesión 0.17 · 36 nodos: Índice del conocimiento de Varios; P38 · Gestión 
 
 ### 6 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Ejecucion agentes
 
-Cohesión 0.33 · 33 nodos: Guia de Arranque Proyecto v1.4 Diseno Cerrado; Ejecucion agentes; Flujo ceo; Motor conocimiento obsidian; Comunicaciones estados; Seguridad clientes; 12 · Ciclo de vida de un proyecto con cliente; Infraestructura portabilidad (y 25 más)
+Cohesión 0.33 · 33 nodos: Guia de Arranque Proyecto v1.4 Diseno Cerrado; Ejecucion agentes; Flujo ceo; Motor conocimiento obsidian; Comunicaciones estados; Seguridad clientes; 12 · Ciclo de vida de un proyecto con cliente; Ciclo vida proyecto (y 25 más)
 
 ### 7 · knowledge/ingenieria · Especialista en ciberseguridad y Arquitecto de datos e IA
 

@@ -144,7 +144,7 @@ textarea{resize:vertical;min-height:70px}
 /* Capas */
 .ov{position:fixed;inset:0;background:rgba(22,16,15,.45);z-index:60;display:none}
 .ov.on{display:block}
-.drawer{position:fixed;top:0;right:0;bottom:0;width:min(640px,100vw);background:var(--surface);z-index:70;transform:translateX(105%);transition:transform .32s cubic-bezier(.3,1,.4,1);display:flex;flex-direction:column;border-left:1px solid var(--hairline)}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(640px,100vw);background:var(--surface);z-index:80;transform:translateX(105%);transition:transform .32s cubic-bezier(.3,1,.4,1);display:flex;flex-direction:column;border-left:1px solid var(--hairline)}
 .drawer.on{transform:none}
 .dh{display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid var(--hairline)}
 .dh .av{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;color:#fff;font-weight:700}
@@ -153,6 +153,7 @@ textarea{resize:vertical;min-height:70px}
 .dh .x{margin-left:auto}
 .db{flex:1;overflow:auto;padding:14px 16px}
 .df{border-top:1px solid var(--hairline);padding:12px 16px}
+.full.behind::after{content:"";position:absolute;inset:0;background:rgba(28,20,16,.28);border-radius:inherit;z-index:5}
 .full{position:fixed;inset:24px;z-index:70;background:var(--surface);border:1px solid var(--hairline);border-radius:24px;display:none;flex-direction:column;overflow:hidden}
 .full.on{display:flex}
 @media (max-width:700px){.full{inset:8px}}
@@ -732,6 +733,7 @@ async function addTask(text,opts){
   var r;
   try{r=S.sample?await route(text,t.dep,{project:pj,hist:t.hist}):routeDemo(text,t.dep)}
   catch(e){if(e&&e.code==='not_granted'){S.sample=null;setStatus()}r=routeDemo(text,t.dep);r.motivo='No se pudo consultar al CEO; asignado por palabras clave.'}
+  if(opts.agent&&ag(opts.agent)&&r.agente!==opts.agent&&r.decision!=='RECHAZAR'){r.motivo=(r.motivo||'')+' Asignado por el plan del proyecto a '+ag(opts.agent).n+'.';r.agente=opts.agent}
   t=Object.assign({},S.tasks[id],{agent:r.agente,decision:r.decision,risk:r.riesgo,reason:r.motivo,question:r.pregunta||'',title:r.titulo||t.title,ceo:{objetivo:r.objetivo||'',confirmado:r.confirmado||[],inferido:r.inferido||[],desconocido:r.desconocido||[],proceso:r.proceso||'',criterio:r.criterio||''},ceoRead:r.refs||[]});
   t.format=(opts.format&&opts.format!=='auto')?opts.format:(VE.KINDS[r.formato]?r.formato:'texto');
   t.sector=SECT[r.sector]?r.sector:(pj&&SECT[pj.sector]?pj.sector:'');t.reuse=r.reutiliza||'';
@@ -798,7 +800,7 @@ async function run(id,extra){
     if(e&&e.code==='not_granted'){S.sample=null;setStatus()}
     t.status='cola';lg(t,'No se pudo trabajar: '+((e&&e.code)==='rate_limited'?'límite de uso alcanzado, inténtalo más tarde':'error al consultar a Claude'));
     await put('tasks',id,t);
-  }finally{delete S.working[a.id];render()}
+  }finally{delete S.working[a.id];delete INFLIGHT[id];render();setTimeout(pumpPlans,400)}
 }
 function parseNotes(txt,from){var N=[];String(txt).split('\n').forEach(function(l){var m=l.match(/^\s*@([^:]{2,40}):\s*(.+)$/);if(m)N.push({from:from,to:m[1].trim(),txt:m[2].trim()})});return N}
 async function teamWork(t,lead,extra,brain){
@@ -1163,10 +1165,16 @@ function card(t){var a=t.agent?ag(t.agent):null,d=a?dep(a.dep):null;
 
 // ======================= CAPAS =======================
 var cur={view:null};
-function openDrawer(html){var d=document.getElementById('drawer');d.innerHTML=html;d.classList.add('on');document.getElementById('ov').classList.add('on');var x=d.querySelector('.x');if(x&&!d.contains(document.activeElement))x.focus()}
-function openFull(html,view){var f=document.getElementById('full');f.innerHTML=html;f.classList.add('on');document.getElementById('ov').classList.add('on');cur.view=view||null}
+function openDrawer(html){var d=document.getElementById('drawer');d.innerHTML=html;d.classList.add('on');document.getElementById('ov').classList.add('on');q('full').classList.toggle('behind',q('full').classList.contains('on'));var x=d.querySelector('.x');if(x&&!d.contains(document.activeElement))x.focus()}
+function openFull(html,view){var f=document.getElementById('full');if(q('drawer').classList.contains('on')){q('drawer').classList.remove('on');cur.agent=null;cur.task=null}f.classList.remove('behind');f.innerHTML=html;f.classList.add('on');document.getElementById('ov').classList.add('on');cur.view=view||null}
 function closeAll(){var ae=document.activeElement;if(ae&&ae.blur&&(q('drawer').contains(ae)||q('full').contains(ae)))ae.blur();document.getElementById('drawer').classList.remove('on');document.getElementById('full').classList.remove('on');document.getElementById('ov').classList.remove('on');cur.view=null;cur.agent=null;cur.task=null}
-document.getElementById('ov').onclick=closeAll;
+function closeDrawer(){var d=q('drawer'),f=q('full');if(d.contains(document.activeElement))document.activeElement.blur();d.classList.remove('on');cur.agent=null;cur.task=null;
+  if(f.classList.contains('on')){f.classList.remove('behind');if(cur.view)cur.view()}else q('ov').classList.remove('on')}
+function closeFull(){var f=q('full');if(f.contains(document.activeElement))document.activeElement.blur();f.classList.remove('on','behind');cur.view=null;if(!q('drawer').classList.contains('on'))q('ov').classList.remove('on')}
+function closeTop(){if(q('drawer').classList.contains('on'))closeDrawer();else if(q('full').classList.contains('on'))closeFull();else closeAll()}
+document.getElementById('ov').onclick=closeTop;
+q('full').addEventListener('click',function(e){if(q('full').classList.contains('behind')&&q('drawer').classList.contains('on')){e.stopPropagation();e.preventDefault();closeDrawer();return}var b=e.target.closest('#cx');if(b)closeFull()},true);
+q('drawer').addEventListener('click',function(e){var b=e.target.closest('#cx');if(b)closeDrawer()});
 function q(i){return document.getElementById(i)}
 
 // ---------- Encargo: flujo, contrato, entrega ----------
@@ -1219,7 +1227,7 @@ function openTask(id){
   h+='</div>';
   if(t.result&&!t.piece&&(t.status==='hecha'||t.status==='aprob'))h+='<div class="df"><textarea id="rev" placeholder="Pide un cambio: hazlo más corto, añade una tabla, sin tecnicismos…" style="min-height:54px"></textarea><div class="row" style="margin-top:8px"><span class="hint" style="flex:1">El CEO decide si es una corrección puntual o una regla que '+esc(a.n)+' aplicará siempre.</span><button class="btn p" id="bRev" type="button">Revisar</button></div></div>';
   openDrawer(h);
-  q('cx').onclick=closeAll;
+  
   var dr=q('drawer');
   dr.querySelectorAll('[data-t]').forEach(function(b){b.onclick=function(){openTask(b.dataset.t)}});
   dr.querySelectorAll('[data-t2]').forEach(function(b){b.onclick=function(e){e.preventDefault();openTask(b.dataset.t2)}});
@@ -1279,7 +1287,7 @@ function openAgent(id,tab){
   }
   openDrawer(h);
   var dr=q('drawer');
-  q('cx').onclick=closeAll;
+  
   dr.querySelectorAll('[data-tab]').forEach(function(b){b.onclick=function(){openAgent(id,b.dataset.tab)}});
   dr.querySelectorAll('[data-t]').forEach(function(b){b.onclick=function(){openTask(b.dataset.t)}});
   bindRoutineBtns(dr);
@@ -1359,7 +1367,7 @@ function openBoard(){
     var h='<div class="dh"><div><h2>Tablero</h2><small>Todos los encargos, de programado a hecho'+(S.depFilter?' · '+esc(dep(S.depFilter).n):'')+'</small></div><button class="btn x" id="cx" type="button">Cerrar</button></div><div class="board">';
     C.forEach(function(c){var L=Object.values(S.tasks).filter(function(t){return t.status===c[0]&&(!S.depFilter||tdep(t)===S.depFilter)}).sort(function(a,b){return (b.created||'').localeCompare(a.created||'')});var extra=c[0]==='prog'?routines().filter(function(r){return r.active&&(!S.depFilter||ag(r.ag).dep===S.depFilter)}):[];h+='<div class="col"><h5><span>'+c[1]+'</span><span>'+(L.length+extra.length)+'</span></h5>'+extra.map(rcard).join('')+L.map(card).join('')+'</div>'});
     var f=q('full');f.innerHTML=h+'</div>';
-    q('cx').onclick=closeAll;f.querySelectorAll('[data-t]').forEach(function(b){b.onclick=function(){openTask(b.dataset.t)}});bindRoutineBtns(f);
+    f.querySelectorAll('[data-t]').forEach(function(b){b.onclick=function(){openTask(b.dataset.t)}});bindRoutineBtns(f);
   };
   openFull('',draw);draw();
 }
@@ -1388,7 +1396,7 @@ function openCal(){
       h+='<div class="day'+(d.getMonth()!==m?' out':'')+(k===today?' today':'')+(k===calSel?' sel':'')+'" data-day="'+k+'" role="button" tabindex="0"><span class="num">'+d.getDate()+'</span>'+ev+'</div>';
     }
     var f=q('full');f.innerHTML=h+'</div></div></div>';
-    q('cx').onclick=closeAll;q('cp').onclick=function(){calMonth=new Date(y,m-1,1);draw()};q('cn').onclick=function(){calMonth=new Date(y,m+1,1);draw()};q('ct').onclick=function(){var n=new Date();calMonth=new Date(n.getFullYear(),n.getMonth(),1);draw()};
+    q('cp').onclick=function(){calMonth=new Date(y,m-1,1);draw()};q('cn').onclick=function(){calMonth=new Date(y,m+1,1);draw()};q('ct').onclick=function(){var n=new Date();calMonth=new Date(n.getFullYear(),n.getMonth(),1);draw()};
     f.querySelectorAll('[data-t]').forEach(function(b){b.onclick=function(e){e.stopPropagation();openTask(b.dataset.t)}});
     f.querySelectorAll('[data-dec]').forEach(function(b){b.onclick=function(e){e.stopPropagation();openDecisions()}});
     f.querySelectorAll('[data-day]').forEach(function(b){var go=function(){if(b.dataset.day<today){toast('Ese día ya ha pasado');return}calSel=b.dataset.day;draw();setTimeout(function(){if(q('sT'))q('sT').focus()},30)};b.onclick=go;b.onkeydown=function(e){if(e.key==='Enter')go()}});
@@ -1454,7 +1462,7 @@ function openBrain(opt){
     }
     var f=q('full');
     f.innerHTML='<div class="dh"><div><h2>Cerebro · empresa-ia</h2><small>'+DOCS.length+' documentos y cómo se enlazan · pasa por encima para ver sus enlaces</small></div><div class="spacer"></div><button class="btn" id="bMemB" type="button">Memoria ('+memList().length+')</button><button class="btn x" id="cx" type="button">Cerrar</button></div><div class="brainview"><svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Mapa de documentos del repositorio">'+o+'</svg><div class="brainside">'+side+'</div></div>';
-    if(q('bMemB'))q('bMemB').onclick=openMemory;q('cx').onclick=closeAll;
+    if(q('bMemB'))q('bMemB').onclick=openMemory;
     f.querySelectorAll('[data-n]').forEach(function(g){g.onclick=function(){if(!BRN)return;sel=sel===g.dataset.n?null:g.dataset.n;openChunk=null;draw()};g.onkeydown=function(e){if(e.key==='Enter')g.onclick()};g.onmouseenter=function(){hov=g.dataset.n;draw()};g.onmouseleave=function(){hov=null;draw()}});
     f.querySelectorAll('[data-tk]').forEach(function(g){g.onclick=function(){openTask(g.dataset.tk)}});
     f.querySelectorAll('[data-t]').forEach(function(b){b.onclick=function(){openTask(b.dataset.t)}});
@@ -1483,7 +1491,7 @@ function openDecisions(selId){
     }else h+='<p class="hint">Elige una decisión para verla. El agente Registro de decisiones redacta propuestas desde cualquier entrega ("Proponer como decisión") o desde aquí.</p>';
     h+='<p class="sec">Nueva propuesta</p><textarea id="dTxt" placeholder="Qué se ha decidido o se quiere decidir, y por qué"></textarea><div class="row" style="margin-top:6px"><button class="btn p" type="button" id="dAdd">Redactar propuesta</button></div></div></div>';
     var f=q('full');f.innerHTML=h;
-    q('cx').onclick=closeAll;
+    
     f.querySelectorAll('[data-d]').forEach(function(b){b.onclick=function(){sel=b.dataset.d;draw()}});
     f.querySelectorAll('[data-t2]').forEach(function(b){b.onclick=function(e){e.preventDefault();openTask(b.dataset.t2)}});
     f.querySelectorAll('[data-prep]').forEach(function(b){b.onclick=function(){var p=BRN.pending[+b.dataset.prep];closeAll();addTask('Prepara la decisión pendiente "'+p[0]+'" (responsable: '+p[1]+', antes del '+p[2]+'): opciones, pros y contras de cada una, qué recomiendas y qué hay que preguntar o confirmar antes de decidir. No decides tú: lo deciden los socios.',{});toast('Encargado al CEO')}});
@@ -1501,7 +1509,7 @@ function openDecisions(selId){
 function openMeeting(){
   var opts=A.map(function(a){return '<option value="'+a.id+'">'+esc(a.n+' · '+dep(a.dep).n)+'</option>'}).join('');
   openDrawer('<div class="dh"><div><h2>Reunión en el cerebro</h2><small>Dos agentes hablan de un tema y uno escribe el acta</small></div><button class="btn x" type="button" id="cx">Cerrar</button></div><div class="db"><label class="fl">Primer agente (escribe el acta)<select id="mA">'+opts+'</select></label><label class="fl">Segundo agente<select id="mB">'+opts+'</select></label><label class="fl">Tema<textarea id="mT" placeholder="Ejemplo: qué casos límite debe tener el examen de 50 casos"></textarea></label><div class="row"><button class="btn p" type="button" id="mGo">Convocar</button></div><p class="hint">Cada uno lee el cerebro, da su punto de vista y el primero redacta el acta. Las decisiones salen como propuestas.</p></div>');
-  q('mA').value='ingj';q('mB').value='calj';q('cx').onclick=closeAll;
+  q('mA').value='ingj';q('mB').value='calj';
   q('mGo').onclick=function(){var a=q('mA').value,b=q('mB').value,t=q('mT').value.trim();if(a===b){toast('Elige dos agentes distintos');return}if(!t){toast('Escribe el tema');return}closeAll();addTask(t,{meeting:{a:a,b:b}})};
 }
 
@@ -1591,7 +1599,7 @@ function openDeliverable(id){
     h+='<aside class="dvside"><p class="sec" style="margin-top:0">Pedir un cambio</p><textarea id="dvRev" placeholder="Ejemplo: añade una diapositiva de riesgos, pon los importes sin IVA, quita la columna de fecha…"></textarea><div class="row" style="margin-top:8px"><button class="btn p" type="button" id="dvGo"'+(S.sample?'':' disabled')+'>Crear versión '+(V[0].version+1)+'</button></div><p class="hint">'+(S.sample?esc(a?a.n:'El agente')+' hace una versión nueva; la anterior se conserva. La corrección se guarda en la memoria.':'Sin Claude no se pueden pedir cambios.')+'</p>';
     h+='<p class="sec">Versiones</p><ul class="hint" style="padding-left:18px">'+V.map(function(v){return '<li>v'+v.version+' · '+fmt(v.created)+(v.change?' · '+esc(clipT(v.change,80)):'')+'</li>'}).join('')+'</ul></aside></div>';
     var f=q('full');f.innerHTML=h;VE.bindPreview(f);bindDl(f);
-    q('cx').onclick=closeAll;
+    
     if(q('dvV'))q('dvV').onchange=function(){openDeliverable(this.value)};
     if(q('dvP'))q('dvP').onclick=function(){openProject(p.id,'deliv')};
     if(q('dvT'))q('dvT').onclick=function(){closeAll();openTask(d.task)};
@@ -1620,7 +1628,7 @@ function openProjects(){
     if(!S.projects['atalaya-2026'])h+='<div class="callout" style="margin-top:12px"><b>Caso de práctica: Atalaya, correduría ficticia</b><p class="hint">Diagnóstico completo de la apertura de siniestros con 13 encargos para 12 agentes en 4 fases, con 4 documentos del cliente (todo inventado). Al cargarlo, lanzas las fases tú desde el proyecto.</p><button class="btn p" type="button" id="pjCase">Cargar el caso Atalaya</button></div>';
     var loose=series().filter(function(d){return !d.project});
     if(loose.length)h+='<p class="sec">Entregables sin proyecto</p><div class="dvg">'+loose.map(dcard).join('')+'</div>';
-    h+='</div>';var f=q('full');f.innerHTML=h;q('cx').onclick=closeAll;
+    h+='</div>';var f=q('full');f.innerHTML=h;
     [q('pjNew'),q('pjNew2')].forEach(function(b){if(b)b.onclick=function(){openNewProject()}});
     if(q('pjCase'))q('pjCase').onclick=function(){var b=this;b.disabled=true;b.textContent='Cargando…';loadCase('casos/atalaya.json').then(function(id){toast('Caso cargado');openProject(id)}).catch(function(){b.disabled=false;b.textContent='Cargar el caso Atalaya';toast('No se ha podido cargar el caso')})};
     f.querySelectorAll('[data-pj]').forEach(function(b){b.onclick=function(){openProject(b.dataset.pj)};b.onkeydown=function(e){if(e.key==='Enter')openProject(b.dataset.pj)}});
@@ -1640,8 +1648,11 @@ function openProject(id,tab){
       h+='<p class="sec">Nuevo encargo en este proyecto</p><textarea id="pjTxt" placeholder="Ejemplo: prepara la presentación de arranque para la primera reunión"></textarea><div class="row" style="margin-top:8px"><select id="pjFmt" aria-label="Formato" style="flex:1">'+Object.keys(FMTN).map(function(k){return '<option value="'+k+'">'+FMTN[k]+'</option>'}).join('')+'</select><button class="btn p" type="button" id="pjGo">Encargar</button></div><p class="hint">Los agentes leen el informe del proyecto, sus documentos y el histórico antes de trabajar.</p></div>';
       h+='<div><p class="sec" style="margin-top:0">Plan del CEO</p>';
       if(p.plan){var pl=p.plan;h+=(pl.resumen?'<p>'+esc(pl.resumen)+'</p>':'')+(pl.fases&&pl.fases.length?'<ol class="hint" style="padding-left:18px">'+pl.fases.map(function(f){return '<li><b>'+esc(f.nombre)+'</b> · '+esc(f.objetivo||'')+'</li>'}).join('')+'</ol>':'');
-        h+=(pl.encargos||[]).map(function(e,i){var la=e.lanzado&&S.tasks[e.lanzado];return '<div class="tk"><div class="h"><span class="pill p-cola">'+esc(FMTN[e.formato]||'Texto')+'</span>'+(ag(e.agente)?'<span class="who"><i style="background:'+dep(ag(e.agente).dep).c+'"></i>'+esc(ag(e.agente).n)+'</span>':'')+(e.fase?'<span style="margin-left:auto">'+esc(e.fase)+'</span>':'')+'</div><div class="t">'+esc(e.titulo)+'</div><p class="hint" style="margin:4px 0">'+esc(clipT(e.encargo,220))+'</p>'+(la?'<button class="btn sm" type="button" data-t="'+e.lanzado+'">Ver encargo · '+esc(ST[la.status][0])+'</button>':'<button class="btn sm p" type="button" data-launch="'+i+'">Lanzar</button>')+'</div>'}).join('');
-        if((pl.encargos||[]).some(function(e){return !e.lanzado})){var fz=[];(pl.encargos||[]).forEach(function(e){if(!e.lanzado&&e.fase&&fz.indexOf(e.fase)<0)fz.push(e.fase)});
+        if(pl.auto||pl.terminado){var est=(pl.encargos||[]).map(function(e,i){return planState(id,i).k}),cn=function(k){return est.filter(function(x){return x===k}).length};
+          h+='<div class="callout'+(pl.pausado?' w':'')+'"><b>'+(pl.terminado?'Plan terminado':pl.pausado?'Plan en pausa':'El plan se está ejecutando solo')+'</b><p class="hint" style="margin:4px 0">'+cn('hecho')+' hechos · '+cn('marcha')+' en marcha · '+cn('listo')+' listos para empezar · '+cn('espera')+' esperando a otros · '+cn('bloq')+' bloqueados. Cada agente hace un encargo a la vez y como mucho '+MAXPAR+' trabajan a la vez; cada encargo empieza cuando terminan los que necesita.'+(S.sample?'':' Necesita Claude: con la oficina sin Claude no avanza.')+'</p>'+(pl.terminado?'':'<button class="btn sm" type="button" id="pjPause">'+(pl.pausado?'Reanudar':'Pausar')+'</button>')+'</div>'}
+        h+=(pl.encargos||[]).map(function(e,i){var la=e.lanzado&&S.tasks[e.lanzado],ps=planState(id,i);return '<div class="tk"><div class="h"><span class="pill p-cola">'+esc(FMTN[e.formato]||'Texto')+'</span>'+(ag(e.agente)?'<span class="who"><i style="background:'+dep(ag(e.agente).dep).c+'"></i>'+esc(ag(e.agente).n)+'</span>':'')+(e.fase?'<span style="margin-left:auto">'+esc(e.fase)+'</span>':'')+'</div><div class="t">'+esc(e.titulo)+'</div><p class="hint" style="margin:4px 0">'+esc(clipT(e.encargo,220))+'</p>'+(pl.auto&&!la?'<p class="hint" style="margin:2px 0 6px">'+(ps.k==='listo'?(agentBusy(e.agente)?'Listo: empieza cuando '+esc(ag(e.agente)?ag(e.agente).n:'el agente')+' termine lo que tiene':'Listo para empezar'):esc(ps.why||''))+'</p>':'')+(la?'<button class="btn sm" type="button" data-t="'+e.lanzado+'">Ver encargo · '+esc(ST[la.status][0])+'</button>':pl.auto?'':'<button class="btn sm p" type="button" data-launch="'+i+'">Lanzar</button>')+'</div>'}).join('');
+        if(!pl.auto&&!pl.terminado&&(pl.encargos||[]).some(function(e){return !e.lanzado}))h+='<div class="row" style="margin:8px 0"><button class="btn p" type="button" id="pjAuto">Lanzar todo el plan: que se organicen solos</button></div>';
+        if(!pl.auto&&(pl.encargos||[]).some(function(e){return !e.lanzado})){var fz=[];(pl.encargos||[]).forEach(function(e){if(!e.lanzado&&e.fase&&fz.indexOf(e.fase)<0)fz.push(e.fase)});
           h+='<div class="row" style="margin:8px 0;flex-wrap:wrap;gap:6px">'+fz.map(function(f,k){return '<button class="btn'+(k?'':' p')+'" type="button" data-phase="'+esc(f)+'">Lanzar «'+esc(f)+'»</button>'}).join('')+'<button class="btn" type="button" id="pjAll">Lanzar todos los pendientes</button></div><p class="hint">Mejor fase a fase: cada encargo lee lo que ya han entregado los anteriores del proyecto.</p>'}
         if(pl.preguntas&&pl.preguntas.length)h+='<p class="sec">Lo que el CEO necesita saber</p>'+listOr(pl.preguntas);
         if(pl.riesgos&&pl.riesgos.length)h+='<p class="sec">Riesgos</p>'+listOr(pl.riesgos);}
@@ -1660,13 +1671,15 @@ function openProject(id,tab){
     if(tab==='mem')h+=M.length?M.map(memCard).join(''):'<p class="hint">La memoria del proyecto se llena sola: cada encargo terminado deja un precedente y una lección; cada corrección tuya, también.</p>';
     h+='</div>';
     var f=q('full');f.innerHTML=h;
-    q('cx').onclick=closeAll;q('pjBack').onclick=openProjects;
+    q('pjBack').onclick=openProjects;
     f.querySelectorAll('[data-tab]').forEach(function(b){b.onclick=function(){tab=b.dataset.tab;draw()}});
     f.querySelectorAll('[data-t]').forEach(function(b){b.onclick=function(){openTask(b.dataset.t)}});
     bindDv(f);bindDl(f);bindMem(f);
     if(q('pjGo'))q('pjGo').onclick=function(){var v=q('pjTxt').value.trim();if(!v)return;addTask(v,{project:id,format:q('pjFmt').value});q('pjTxt').value='';toast('Encargo enviado al CEO');tab='tasks';setTimeout(draw,300)};
     if(q('pjPlan'))q('pjPlan').onclick=async function(){planning=true;draw();try{await planProject(id)}catch(e){toast(e&&e.code==='rate_limited'?'Límite de uso: inténtalo más tarde':'El CEO no ha podido hacer el plan')}planning=false;draw()};
     f.querySelectorAll('[data-launch]').forEach(function(b){b.onclick=function(){launchPlan(id,[+b.dataset.launch]);setTimeout(draw,300)}});
+    if(q('pjAuto'))q('pjAuto').onclick=function(){if(!S.sample){toast('Hace falta Claude para que los agentes trabajen');return}var x=clone(proj(id));x.plan.auto=now();x.plan.pausado=false;put('projects',id,x).then(function(){remember({kind:'decision',title:'Plan lanzado entero: '+x.name,text:'Los agentes se organizan por dependencias: cada uno hace un encargo a la vez y como mucho '+MAXPAR+' a la vez.',project:id,agent:'ceo'});pumpPlans();draw()})};
+    if(q('pjPause'))q('pjPause').onclick=function(){var x=clone(proj(id));x.plan.pausado=!x.plan.pausado;put('projects',id,x).then(function(){if(!x.plan.pausado)pumpPlans();draw()})};
     f.querySelectorAll('[data-phase]').forEach(function(b){b.onclick=function(){launchPlan(id,(p.plan.encargos||[]).map(function(e,i){return !e.lanzado&&e.fase===b.dataset.phase?i:-1}).filter(function(i){return i>=0}));setTimeout(draw,300)}});
     if(q('pjAll'))q('pjAll').onclick=function(){launchPlan(id,(p.plan.encargos||[]).map(function(e,i){return e.lanzado?-1:i}).filter(function(i){return i>=0}));setTimeout(draw,300)};
     if(q('pjEdit'))q('pjEdit').onclick=function(){openNewProject(id)};
@@ -1685,10 +1698,37 @@ async function planProject(id){
   r.created=now();var x=clone(proj(id));x.plan=r;await put('projects',id,x);
   remember({kind:'decision',title:'Plan propuesto para «'+p.name+'»',text:(r.resumen||'')+'\nEncargos: '+r.encargos.map(function(e){return e.titulo}).join('; '),project:id,agent:'ceo'});
 }
-function launchPlan(id,idx){var p=clone(proj(id));if(!p||!p.plan)return;
-  idx.forEach(function(i){var e=p.plan.encargos[i];if(!e||e.lanzado)return;var tid=null;
-    addTask(e.encargo,{project:id,format:e.formato,dep:e.agente&&ag(e.agente)?ag(e.agente).dep:''}).then(function(x){tid=x;var pp=clone(proj(id));if(pp&&pp.plan&&pp.plan.encargos[i]){pp.plan.encargos[i].lanzado=tid;put('projects',id,pp)}});
-  });toast(idx.length>1?idx.length+' encargos enviados al CEO':'Encargo enviado al CEO')}
+var LAUNCHING={},INFLIGHT={},RETRIES={};
+function launchPlan(id,idx,quiet){var p=clone(proj(id));if(!p||!p.plan)return;
+  idx.forEach(function(i){var e=p.plan.encargos[i],key=id+'#'+i;if(!e||e.lanzado||LAUNCHING[key])return;LAUNCHING[key]=1;
+    addTask(e.encargo,{project:id,format:e.formato,agent:e.agente,dep:e.agente&&ag(e.agente)?ag(e.agente).dep:''}).then(function(x){if(x)INFLIGHT[x]=Date.now();var pp=clone(proj(id));if(pp&&pp.plan&&pp.plan.encargos[i]){pp.plan.encargos[i].lanzado=x;return put('projects',id,pp)}}).finally(function(){delete LAUNCHING[key]});
+  });if(!quiet)toast(idx.length>1?idx.length+' encargos enviados al CEO':'Encargo enviado al CEO')}
+// ---------- Orquestador del plan: lanza solo lo que ya puede empezar ----------
+// Reglas: un encargo empieza cuando han terminado los que necesita (depende, o la fase anterior si no dice nada);
+// cada agente hace un encargo a la vez, en orden de prioridad; como mucho MAXPAR encargos a la vez en toda la oficina.
+var MAXPAR=4,RUNNING_ST={cola:1,marcha:1,revision:1,maqueta:1};
+function planDeps(pl,i){var e=pl.encargos[i];if(Array.isArray(e.depende))return e.depende;var fz=(pl.fases||[]).map(function(f){return f.nombre}),k=fz.indexOf(e.fase);
+  return k<=0?[]:pl.encargos.map(function(x,j){return fz.indexOf(x.fase)<k?j:-1}).filter(function(j){return j>=0})}
+function planState(pid,i){var p=proj(pid),pl=p.plan,e=pl.encargos[i],t=e.lanzado&&S.tasks[e.lanzado];
+  if(t){if(t.status==='hecha'||t.status==='aprob')return {k:'hecho',t:t};if(t.status==='rech')return {k:'bloq',why:'Rechazado'};if(t.status==='preg')return {k:'bloq',why:'Espera tu respuesta'};return {k:'marcha',t:t}}
+  if(LAUNCHING[pid+'#'+i])return {k:'marcha'};
+  var dep=planDeps(pl,i),falta=dep.filter(function(j){return planState(pid,j).k!=='hecho'});
+  if(falta.some(function(j){return planState(pid,j).k==='bloq'}))return {k:'bloq',why:'Bloqueado por un encargo anterior'};
+  if(falta.length)return {k:'espera',why:'Espera a: '+falta.map(function(j){return '«'+clipT(pl.encargos[j].titulo,40)+'»'}).join(', ')};
+  return {k:'listo'}}
+function agentBusy(aid){return !!S.working[aid]||Object.values(S.tasks).some(function(t){return t.agent===aid&&!t.piece&&RUNNING_ST[t.status]&&INFLIGHT[t.id]})}
+function pumpPlans(){if(!S.sample)return;var running=Object.keys(INFLIGHT).filter(function(id){var t=S.tasks[id];if(!t||!RUNNING_ST[t.status]){delete INFLIGHT[id];return false}return true}).length+Object.keys(LAUNCHING).length;
+  projList().forEach(function(p){if(!p.plan||!p.plan.auto||p.plan.pausado||p.status==='cerrado')return;var pl=p.plan;
+    // reanudar encargos que se quedaron a medias al cerrar la oficina
+    pl.encargos.forEach(function(e){var t=e.lanzado&&S.tasks[e.lanzado];if(t&&RUNNING_ST[t.status]&&!INFLIGHT[t.id]&&running<MAXPAR&&!agentBusy(t.agent)){var last=(t.log||[]).slice(-1)[0],age=Date.now()-new Date(last?last.t:t.created).getTime();
+      if(age>3*60000&&(RETRIES[t.id]||0)<2){RETRIES[t.id]=(RETRIES[t.id]||0)+1;INFLIGHT[t.id]=Date.now();running++;var x=clone(t);lg(x,'El plan lo retoma (se había quedado a medias)');put('tasks',t.id,x).then(function(){run(t.id)})}}});
+    var listos=pl.encargos.map(function(e,i){return i}).filter(function(i){return planState(p.id,i).k==='listo'});
+    listos.sort(function(a,b){return (pl.encargos[a].prioridad||9)-(pl.encargos[b].prioridad||9)||a-b});
+    var tomados={};
+    listos.forEach(function(i){var aid=pl.encargos[i].agente;if(running>=MAXPAR||tomados[aid]||agentBusy(aid))return;tomados[aid]=1;running++;launchPlan(p.id,[i],true)});
+    if(pl.encargos.every(function(e,i){return planState(p.id,i).k==='hecho'})&&!pl.terminado){var x=clone(p);x.plan.terminado=now();x.plan.auto=false;put('projects',p.id,x);toast('Plan terminado: «'+clipT(p.name,50)+'»');remember({kind:'decision',title:'Plan terminado: '+p.name,text:'Los '+pl.encargos.length+' encargos del plan están entregados.',project:p.id,agent:'ceo'})}
+  })}
+setInterval(pumpPlans,5000);
 
 // ---------- Memoria ----------
 function memCard(m){var K=MEMK[m.kind]||['Memoria','p-cola'],t=m.task&&S.tasks[m.task],p=proj(m.project);return '<div class="tk mem"><div class="h"><span class="pill '+K[1]+'">'+K[0]+'</span>'+(m.agent&&ag(m.agent)?'<span class="who"><i style="background:'+dep(ag(m.agent).dep).c+'"></i>'+esc(ag(m.agent).n)+'</span>':'')+'<span style="margin-left:auto">'+fmt(m.created)+'</span></div><div class="t">'+esc(m.title)+'</div><div class="md" style="font-size:13px">'+md(m.text)+'</div><div class="row" style="margin-top:6px">'+(t?'<button class="btn sm" type="button" data-t="'+t.id+'">Encargo</button>':'')+(p?'<button class="btn sm" type="button" data-pj2="'+p.id+'">'+esc(clipT(p.name,30))+'</button>':'')+'<button class="btn sm" type="button" data-mdel="'+m.id+'">Borrar</button></div></div>'}
@@ -1703,7 +1743,7 @@ function openMemory(){
     h+='<div class="row" style="flex-wrap:wrap;gap:6px"><input id="mq" placeholder="Buscar en la memoria" value="'+esc(qq)+'" style="flex:1;min-width:200px"><button class="chip" type="button" data-mk="" aria-pressed="'+(!fk)+'">Todo ('+memList().length+')</button>'+Object.keys(MEMK).map(function(k){return '<button class="chip" type="button" data-mk="'+k+'" aria-pressed="'+(fk===k)+'">'+MEMK[k][0]+' ('+memList().filter(function(m){return m.kind===k}).length+')</button>'}).join('')+'</div>';
     h+='<details class="skd" style="margin:10px 0"><summary>Añadir un apunte a mano</summary><textarea id="mNew" placeholder="Ejemplo: en las propuestas para corredurías, el precio siempre aparte del alcance"></textarea><div class="row" style="margin-top:6px"><select id="mProj" style="flex:1"><option value="">Sin proyecto</option>'+projList().map(function(p){return '<option value="'+p.id+'">'+esc(p.name)+'</option>'}).join('')+'</select><button class="btn p" type="button" id="mAdd">Guardar</button></div></details>';
     h+=(L.map(memCard).join('')||'<p class="hint">Nada todavía. Cada encargo terminado deja aquí un precedente y una lección; cada corrección y aprobación tuya, también.</p>')+'</div>';
-    var f=q('full');f.innerHTML=h;q('cx').onclick=closeAll;bindMem(f);
+    var f=q('full');f.innerHTML=h;bindMem(f);
     q('mq').oninput=function(){qq=this.value;var pos=this.selectionStart;draw();var e=q('mq');e.focus();e.setSelectionRange(pos,pos)};
     f.querySelectorAll('[data-mk]').forEach(function(b){b.onclick=function(){fk=b.dataset.mk;draw()}});
     q('mAdd').onclick=function(){var v=q('mNew').value.trim();if(!v)return;remember({kind:'manual',title:clipT(v,80),text:v,project:q('mProj').value}).then(draw)};
@@ -1764,7 +1804,7 @@ function openNewProject(editId){
   openFull(h,function(){});
   var st=bindUploader('up1');
   q('full').querySelectorAll('[data-ex]').forEach(function(b){b.onclick=function(){tog(b)}});
-  q('cx').onclick=closeAll;
+  
   var go=async function(plan){
     var name=q('nN').value.trim(),obj=q('nO').value.trim();
     if(!name||!obj){toast('Faltan el nombre y el objetivo');(name?q('nO'):q('nN')).focus();return}
@@ -1817,7 +1857,7 @@ try{var th=localStorage.getItem('varios-theme');if(th)document.documentElement.s
 function focusMode(){document.body.classList.toggle('focus');setTimeout(fit,60)}
 q('bFocus').onclick=focusMode;
 document.addEventListener('keydown',function(e){
-  if(e.key==='Escape'){if(document.body.classList.contains('focus')&&!q('ov').classList.contains('on')){focusMode();return}closeAll();return}
+  if(e.key==='Escape'){if(document.body.classList.contains('focus')&&!q('ov').classList.contains('on')){focusMode();return}closeTop();return}
   var tag=(e.target.tagName||'').toLowerCase();if(tag==='input'||tag==='textarea'||tag==='select'||e.metaKey||e.ctrlKey||e.altKey)return;
   var k=e.key.toLowerCase();
   if(k==='j')openProjects();else if(k==='n')openNewProject();else if(k==='m')openMemory();else if(k==='b')openBoard();else if(k==='p')openCal();else if(k==='g')openBrain();else if(k==='d')openDecisions();else if(k==='x')openMeeting();else if(k==='v')focusMode();

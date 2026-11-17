@@ -83,8 +83,18 @@ def secretos() -> list[str]:
     return hallados
 
 
+def agentes() -> list[str]:
+    import agentes_gen
+
+    err = agentes_gen.validar()
+    stale = [rel for rel, txt in agentes_gen.salidas().items()
+             if not (RAIZ / rel).exists() or (RAIZ / rel).read_text(encoding="utf-8") != txt]
+    return err + [f"{r} desactualizado (python3 tools/agentes_gen.py)" for r in stale]
+
+
 def main() -> int:
     problemas = {
+        "agentes y habilidades": agentes(),
         "enlaces rotos": enlaces_rotos(),
         "fichas incompletas": fichas_incompletas(),
         "fuentes inexistentes": fuentes_inexistentes(),

@@ -9,6 +9,14 @@ Contiene visión, arquitectura, procesos, decisiones, el plan de 12 semanas y un
 - Prioridad actual: conseguir el primer cliente de pago. Ver `docs/10-plan-12-semanas.md`.
 - Estado: 0 clientes, 0 líneas de código. No construir el "CEO digital" completo antes del primer proceso piloto (D-006).
 
+## Documentos base (por orden de autoridad)
+1. `DECISIONS.md`
+2. `docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado.md` (línea base de diseño)
+3. `docs/fuentes/Atlas_Evolucion_v1.1_Modelo_Operativo_Procesos_y_Despliegue.md` (procesos y despliegue)
+4. `docs/fuentes/Marco_Integral_Legal_Ciberseguridad_IA_Espana_UE_2026-11-16.md` (legal)
+5. `docs/atlas/` (diagramas corregidos) y `docs/16-correcciones.md`
+Puertas: G0–G6 = cliente; L0–L4 = técnicas. No confundirlas.
+
 ## Reglas
 - No subir secretos, credenciales ni datos reales de clientes. Solo datos inventados en pruebas.
 - No inventar datos, clientes, cifras ni fuentes. Separar hecho, hipótesis y propuesta.
@@ -18,6 +26,7 @@ Contiene visión, arquitectura, procesos, decisiones, el plan de 12 semanas y un
 - Cualquier acción externa, financiera, legal o contractual requiere aprobación humana.
 - Antes de añadir una tecnología nueva, justificar por qué en DECISIONS.md.
 - Si cambias algo de `docs/`, revisa si la web de `site/` dice lo mismo.
+- Los diagramas se editan solo en `tools/atlas_data.py` y se regeneran con `python3 tools/gen.py site/js/atlas-data.js docs/atlas`.
 
 ## Estructura
 - `docs/` documentación funcional y técnica (empieza por `00-negocio.md`)

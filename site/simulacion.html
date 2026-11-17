@@ -120,10 +120,10 @@
 <body>
 <main>
   <section class="hero">
-    <p class="eyebrow">5 · Simulación</p>
+    <p class="eyebrow">Simulación</p>
     <h1>Entra un cliente. Así trabaja el cerebro por dentro.</h1>
     <p class="lede">Elige un caso y avanza paso a paso. Verás qué entiende, cómo piensa el CEO digital, cómo clasifica el riesgo, cómo reparte el trabajo, qué hace cada departamento y qué se comprueba antes de entregar.</p>
-    <p class="small muted">Los tres casos son ejemplos inventados para explicar el funcionamiento. Las empresas, cifras y tiempos no son reales.</p>
+    <p class="small muted">Los tres casos son ejemplos inventados para explicar el funcionamiento. Las empresas, cifras y tiempos no son reales. Las reglas que sigue el CEO son las de la Guía v1.4; los diagramas completos están en el <a href="atlas.html">Atlas</a>.</p>
   </section>
 
   <section style="padding-top:0">
@@ -184,7 +184,7 @@ var S=[
   entender:[['Intención','Automatizar un proceso que ya existe'],['Objetivo','Abrir antes los expedientes y con menos errores'],['Sector','Seguros · correduría'],['Proceso','Apertura y triaje de siniestros'],['Resultado esperado','Expediente abierto con una ficha revisada']],
   aclarar:[['¿Dónde se abren hoy los expedientes?','En nuestro gestor de siniestros. Tiene API.'],['¿Quién decide si se abre o se rechaza?','El tramitador.'],['¿Llegan datos de salud?','Sí, en los partes con lesiones.']],
   clasif:{rows:[['Complejidad','Media: texto libre y documentos variados',2],['Impacto','Medio: afecta a asegurados, sin pagos',2],['Datos','Personales; de salud en lesiones',3],['Volumen','Alto y repetitivo: bueno para automatizar',1]],
-    riesgo:'Medio',nivel:2,ria:'Según el Reglamento Europeo de IA, abrir siniestros no es tarificar ni seleccionar riesgos de vida o salud, así que en principio no es alto riesgo (orientativo). Por RGPD, los datos de salud exigen una evaluación de impacto.'},
+    riesgo:'Medio',nivel:2,dec:['CONTINUAR','good','con aprobación humana en la escritura'],ria:'Según el Reglamento Europeo de IA, abrir siniestros no es tarificar ni seleccionar riesgos de vida o salud, así que en principio no es alto riesgo (orientativo). Por RGPD, los datos de salud exigen una evaluación de impacto.'},
   conoc:{ok:[['Método Varios','Cómo hacemos un piloto'],['Sector seguros','Tipos de siniestro y vocabulario'],['Cliente: Correduría Ejemplo','Solo su espacio'],['Plantillas','Ficha de siniestro y AS-IS']],no:[['Otros clientes','Bloqueado por identidad'],['Fichas en borrador','No aprobadas, no se usan']]},
   plan:[{id:'T1',t:'Leer el correo y los adjuntos',ty:'ia',d:[]},{id:'T2',t:'Extraer póliza, fecha, daño y asegurado',ty:'ia',d:['T1']},
     {id:'T3',t:'Comprobar póliza en vigor y cobertura',ty:'re',d:['T2']},{id:'T4',t:'Detectar lesiones y desviarlas a mano',ty:'re',d:['T2']},
@@ -201,7 +201,7 @@ var S=[
    entrada:['Llega un correo de un contacto identificado. Lo asocio a su empresa por su identidad, no por lo que diga el texto.','Nada se ejecuta todavía. Primero hay que entender.'],
    entender:['Piden automatizar algo que ya hacen: hay volumen, tiempo y errores medibles. Buen candidato.','Sector seguros: activo el perfil de seguros.'],
    aclarar:['Me faltan tres datos críticos: dónde vive el expediente, quién decide y si hay datos sensibles.','No los invento. Los pregunto.'],
-   clasificar:['La IA solo propone; abrir expedientes toca a asegurados, así que el riesgo es medio.','Los partes con lesiones tienen datos de salud: esos los saco del flujo automático.','Decisión: seguir, con aprobación humana en la escritura.'],
+   clasificar:['La IA solo propone; abrir expedientes toca a asegurados, así que el riesgo es medio.','Los partes con lesiones tienen datos de salud: esos los saco del flujo automático.','Decisión: CONTINUAR, con aprobación humana para escribir en su sistema.'],
    conocimiento:['Busco solo en lo que este cliente y nosotros podemos ver.','Los espacios de otros clientes ni aparecen: el filtro va antes de buscar.'],
    plan:['Divido en seis tareas. Lo que es lenguaje, a la IA. Lo que es exacto, a reglas. La decisión, a una persona.','T3 y T4 pueden ir en paralelo cuando T2 termine.'],
    asignar:['No creo un agente nuevo: uso Operaciones con el perfil de seguros.','Cada tarea recibe solo las herramientas que necesita. Solo T6 puede escribir.'],
@@ -218,7 +218,7 @@ var S=[
   entender:[['Intención','Automatizar una tarea repetitiva'],['Objetivo','Reducir horas de conciliación y llegar holgados al cierre'],['Sector','Servicios profesionales · gestoría'],['Proceso','Conciliación de facturas con banco'],['Resultado esperado','Facturas cuadradas y lista de descuadres']],
   aclarar:[['¿Cómo llegan los movimientos del banco?','Exportamos un fichero de cada banco.'],['¿El sistema hará pagos o asientos?','No queremos que pague nada.'],['¿Quién valida los dudosos?','Un contable del equipo.']],
   clasif:{rows:[['Complejidad','Media: facturas de formatos distintos',2],['Impacto','Alto si se tocara dinero; aquí solo se propone',3],['Datos','Personales de autónomos y datos económicos',2],['Precisión','Las cifras tienen que ser exactas',3]],
-    riesgo:'Alto en dinero, medio en lectura',nivel:3,ria:'No es un uso de alto riesgo del Reglamento Europeo de IA (orientativo). El riesgo es de negocio: un cuadre mal hecho llega a la contabilidad del cliente. Por eso las cuentas no las hace la IA.'},
+    riesgo:'Alto en dinero, medio en lectura',nivel:3,dec:['CONTINUAR','good','sin herramientas de pago ni de contabilidad'],ria:'No es un uso de alto riesgo del Reglamento Europeo de IA (orientativo). El riesgo es de negocio: un cuadre mal hecho llega a la contabilidad del cliente. Por eso las cuentas no las hace la IA.'},
   conoc:{ok:[['Método Varios','Cómo hacemos un piloto'],['Finanzas','Reglas de conciliación'],['Cliente: Gestoría Ejemplo','Solo su espacio'],['Plantillas','Informe de descuadres']],no:[['Otros clientes','Bloqueado por identidad'],['Credenciales bancarias','Nunca entran en el sistema']]},
   plan:[{id:'T1',t:'Leer las facturas (PDF e imagen)',ty:'ia',d:[]},{id:'T2',t:'Importar el extracto del banco',ty:'re',d:[]},
     {id:'T3',t:'Cuadre exacto por importe, fecha y NIF',ty:'re',d:['T1','T2']},{id:'T4',t:'Proponer pareja para los dudosos',ty:'ia',d:['T3']},
@@ -235,7 +235,7 @@ var S=[
    entrada:['Petición por la web de una empresa identificada.','Habla de dinero: alerta de precisión desde el principio.'],
    entender:['El trabajo es de emparejar números: eso es exacto, no es lenguaje.','La IA solo debería leer facturas y ayudar con los casos raros.'],
    aclarar:['Pregunto si el sistema tendría que pagar o contabilizar. Si dicen que sí, cambia todo el riesgo.','Respuesta: no. Mejor.'],
-   clasificar:['Riesgo alto en lo que toca dinero; medio en leer y proponer.','Decisión: el sistema no tendrá ninguna herramienta de pago ni de contabilidad.'],
+   clasificar:['Riesgo alto en lo que toca dinero; medio en leer y proponer.','Decisión: CONTINUAR, sin ninguna herramienta de pago ni de contabilidad.'],
    conocimiento:['Uso reglas de conciliación y el espacio de este cliente.','Las credenciales del banco no entran nunca: trabajamos con ficheros exportados.'],
    plan:['T1 y T2 van en paralelo. El cuadre exacto lo hacen reglas.','La IA solo entra en los dudosos y siempre explica su propuesta.'],
    asignar:['Todo cae en Finanzas, con Integraciones para el fichero del banco.','Sin perfil sectorial especial: es un proceso de finanzas general.'],
@@ -252,7 +252,7 @@ var S=[
   entender:[['Intención','Ahorrar tiempo de preparación'],['Objetivo','Resumen del historial antes de cada consulta'],['Sector','Salud · clínica privada'],['Proceso','Preparación de consultas'],['Resultado esperado','Resumen fiable que el médico revisa']],
   aclarar:[['¿El resumen influye en el diagnóstico?','No, solo prepara la consulta. Decide el médico.'],['¿Hay evaluación de impacto de protección de datos para esto?','No, todavía no.'],['¿Dónde están los historiales?','En el programa de la clínica.']],
   clasif:{rows:[['Complejidad','Alta: lenguaje médico',3],['Impacto','Alto: afecta a pacientes',3],['Datos','De salud: categoría especial del RGPD',3],['Errores','Un resumen que omite algo puede influir en la consulta',3]],
-    riesgo:'Alto',nivel:3,ria:'Los datos de salud son categoría especial (artículo 9 del RGPD) y exigen base legal y evaluación de impacto. Si el sistema llegara a influir en decisiones clínicas, habría que estudiar si es producto sanitario. Orientativo: necesita revisión legal.'},
+    riesgo:'Alto',nivel:3,dec:['ESCALAR','wine','y seguir solo con datos inventados'],ria:'Los datos de salud son categoría especial (artículo 9 del RGPD) y exigen base legal y evaluación de impacto. Si el sistema llegara a influir en decisiones clínicas, habría que estudiar si es producto sanitario. Orientativo: necesita revisión legal.'},
   conoc:{ok:[['Método Varios','Cómo hacemos un piloto'],['Sector salud','Vocabulario y normas'],['Cliente: Clínica Ejemplo','Solo documentos de ejemplo anonimizados']],no:[['Historiales reales','Bloqueados hasta evaluación de impacto aprobada'],['Otros clientes','Bloqueado por identidad']]},
   plan:[{id:'T0',t:'Evaluación de impacto y base legal',ty:'pe',d:[]},{id:'T1',t:'Generar historiales inventados',ty:'re',d:[]},
     {id:'T2',t:'Resumir los historiales inventados',ty:'ia',d:['T1']},{id:'T3',t:'Revisión de un médico',ty:'pe',d:['T2']},
@@ -269,7 +269,7 @@ var S=[
    entrada:['Petición en reunión. La registro y la asocio a la clínica.','Aparece la palabra historial: datos de salud.'],
    entender:['El objetivo es razonable y medible: minutos por consulta.','Pero el material es lo más sensible que hay.'],
    aclarar:['La pregunta clave es si hay evaluación de impacto. Respuesta: no.','Eso decide el resto.'],
-   clasificar:['Riesgo alto en todos los ejes.','Decisión: no se toca un dato real. Seguimos con datos inventados y en paralelo con la parte legal.'],
+   clasificar:['Riesgo alto en todos los ejes.','Decisión: ESCALAR a la clínica por la evaluación de impacto y CONTINUAR solo con datos inventados.'],
    conocimiento:['Uso solo documentos de ejemplo anonimizados.','Los historiales reales están bloqueados por regla, no por buena voluntad.'],
    plan:['T0 legal y T1 datos inventados empiezan a la vez.','T5 (datos reales) existe en el plan, pero nace bloqueada.'],
    asignar:['Legal lleva la evaluación de impacto, con el delegado de protección de datos de la clínica.','Un médico es parte obligatoria del control de calidad.'],
@@ -310,7 +310,7 @@ function render(){
     h+='<h3>Pregunta lo que falta en lugar de inventarlo.</h3><div class="qa">'+s.aclarar.map(function(r){return '<div class="q"><b>Pregunta: '+r[0]+'</b><span>Respuesta del cliente: '+r[1]+'</span></div>'}).join('')+'</div>';
   }else if(k==='clasificar'){
     h+='<h3>Mide el riesgo antes de mover nada.</h3><div class="kv">'+s.clasif.rows.map(function(r){return '<div>'+r[0]+'</div><div><div class="meter l'+r[2]+'"><i></i><i></i><i></i></div>'+r[1]+'</div>'}).join('')+'</div>';
-    h+='<p class="mt"><span class="pill '+(s.clasif.nivel===3?'crit':s.clasif.nivel===2?'warn':'good')+'">Riesgo global: '+s.clasif.riesgo+'</span></p><div class="note mt"><span class="tag">Leyes</span><p class="small">'+s.clasif.ria+'</p></div>';
+    h+='<p class="mt"><span class="pill '+(s.clasif.nivel===3?'crit':s.clasif.nivel===2?'warn':'good')+'">Riesgo global: '+s.clasif.riesgo+'</span> <span class="pill '+s.clasif.dec[1]+'">Decisión: '+s.clasif.dec[0]+'</span> <span class="small muted">'+s.clasif.dec[2]+'</span></p><div class="note mt"><span class="tag">Leyes</span><p class="small">'+s.clasif.ria+'</p></div>';
   }else if(k==='conocimiento'){
     h+='<h3>Consulta solo lo que puede ver.</h3><p class="muted small">Primero se comprueba la identidad y luego se busca. Lo bloqueado ni siquiera aparece en la búsqueda.</p><div class="spaces">'+s.conoc.ok.map(function(r){return '<div class="space ok"><b>Permitido</b>'+r[0]+'<br><span class="muted small">'+r[1]+'</span></div>'}).join('')+s.conoc.no.map(function(r){return '<div class="space no"><b>Bloqueado</b>'+r[0]+'<br><span class="small">'+r[1]+'</span></div>'}).join('')+'</div>';
   }else if(k==='plan'){

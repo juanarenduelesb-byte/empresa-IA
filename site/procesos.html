@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Varios · Procesos y estados</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<style>
+.filters{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:16px}
+.search{flex:1 1 240px;max-width:360px;padding:11px 16px;border-radius:999px;border:1px solid var(--glass-edge);background:var(--glass-strong);font:15px var(--font);color:var(--ink)}
+.search:focus{outline:2px solid var(--accent);outline-offset:3px}
+.plist{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media (max-width:760px){.plist{grid-template-columns:1fr}}
+.pc{background:var(--glass-strong);border:1px solid var(--hairline);border-radius:var(--r-md);padding:14px 16px;display:grid;grid-template-columns:54px 1fr;gap:10px}
+.pc .id{font-weight:700;color:var(--wine);font-variant-numeric:tabular-nums;font-size:15px}
+.pc b{display:block;font-size:15.5px}
+.pc p{margin:4px 0 8px;font-size:14px;color:var(--ink-muted)}
+.count{font-size:14px;color:var(--ink-muted)}
+.lane{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media (max-width:900px){.lane{grid-template-columns:1fr 1fr}}
+.lane .card h4{display:flex;justify-content:space-between}
+.chain{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:13.5px}
+.chain span{background:var(--card);border:1px solid var(--hairline);border-radius:999px;padding:5px 10px}
+.chain i{color:var(--wine);font-style:normal}
+</style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <p class="eyebrow">Procesos y estados</p>
+    <h1>Treinta y ocho procesos. No todos se construyen ahora.</h1>
+    <p class="lede">Es el catálogo completo de lo que la organización tendrá que gobernar: P01–P18 y P19–P30 vienen de la Guía v1.4; P31–P38, del Atlas de Evolución. Cada uno lleva cuándo hace falta tenerlo, para no construir de más.</p>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="sec-head"><p class="eyebrow">Cuándo hace falta cada uno</p><h2>Cuatro momentos. Se avanza solo con pruebas.</h2></div>
+    <div class="lane" id="lane"></div>
+  </section>
+
+  <section>
+    <div class="glass">
+      <div class="filters">
+        <input class="search" id="q" type="search" placeholder="Buscar un proceso" aria-label="Buscar un proceso">
+        <div class="seg" id="fseg" role="group" aria-label="Filtrar por momento">
+          <button type="button" aria-pressed="true" data-f="">Todos</button>
+          <button type="button" aria-pressed="false" data-f="mvp">MVP</button>
+          <button type="button" aria-pressed="false" data-f="datos">Antes de datos reales</button>
+          <button type="button" aria-pressed="false" data-f="auto">Antes de automatizar</button>
+          <button type="button" aria-pressed="false" data-f="escala">Antes de escalar</button>
+        </div>
+        <span class="count" id="count"></span>
+      </div>
+      <div class="plist" id="plist"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Estados</p><h2>Cada cosa tiene su propia lista de estados. No se mezclan.</h2><p class="lede">Los documentos originales usaban tres listas distintas sin decir a qué objeto se refería cada una. Aquí van separadas. Los nombres en código se fijarán en el software; las flechas indican el camino normal.</p></div>
+    <div class="grid" style="gap:12px">
+      <div class="card"><h4>Encargo <span class="muted small">· lo que pide un cliente</span></h4><div class="chain"><span>Recibido</span><i>→</i><span>En clasificación</span><i>→</i><span>Pendiente de información</span><i>→</i><span>Planificado</span><i>→</i><span>En ejecución</span><i>→</i><span>En QA</span><i>→</i><span>Pendiente de aprobación</span><i>→</i><span>Entregado</span><i>→</i><span>Cerrado</span></div><p class="small muted mt">Alternativos: Bloqueado, Escalado, Retrabajo, Rechazado, Cancelado, Reabierto. Diagrama completo en el <a href="atlas.html#estados">Atlas, mapa 16</a>.</p></div>
+      <div class="card"><h4>Tarea <span class="muted small">· cada pieza de trabajo dentro de un encargo</span></h4><div class="chain"><span>queued · en cola</span><i>→</i><span>running · en marcha</span><i>→</i><span>needs_approval · espera aprobación</span><i>→</i><span>succeeded · terminada</span></div><p class="small muted mt">Alternativos: blocked, failed, cancelled.</p></div>
+      <div class="card"><h4>Instancia de proceso <span class="muted small">· un caso concreto que recorre un proceso</span></h4><div class="chain"><span>created</span><i>→</i><span>ready</span><i>→</i><span>running</span><i>→</i><span>waiting_external / waiting_human</span><i>→</i><span>completed</span></div><p class="small muted mt">Alternativos: exception, failed, cancelled.</p></div>
+      <div class="grid g3">
+        <div class="card"><h4>Definición de proceso</h4><div class="chain"><span>draft</span><i>→</i><span>under_review</span><i>→</i><span>approved</span><i>→</i><span>active</span><i>→</i><span>deprecated</span><i>→</i><span>retired</span></div></div>
+        <div class="card"><h4>Conector</h4><div class="chain"><span>draft</span><i>→</i><span>tested</span><i>→</i><span>approved</span><i>→</i><span>active</span><i>→</i><span>degraded / suspended</span><i>→</i><span>retired</span></div></div>
+        <div class="card"><h4>Despliegue en cliente</h4><div class="chain"><span>qualified</span><i>→</i><span>discovery</span><i>→</i><span>design</span><i>→</i><span>prototype</span><i>→</i><span>pilot</span><i>→</i><span>production</span><i>→</i><span>operating</span></div></div>
+        <div class="card"><h4>Ficha de conocimiento</h4><div class="chain"><span>raw</span><i>→</i><span>draft</span><i>→</i><span>validated</span><i>→</i><span>approved</span><i>→</i><span>deprecated</span></div><p class="small muted mt">Y disputed si dos fuentes chocan.</p></div>
+        <div class="card"><h4>Capacidad</h4><div class="chain"><span>draft</span><i>→</i><span>tested</span><i>→</i><span>approved</span><i>→</i><span>deprecated</span></div><p class="small muted mt">Una capacidad en borrador nunca se usa en producción.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Qué se guarda</p><h2>El modelo de datos mínimo, en cristiano.</h2><p class="lede">Entidades de la Guía v1.4 (apartado 13) más las que añade el Atlas de Evolución (apartado 6). Todas llevan el cliente al que pertenecen cuando aplica.</p></div>
+    <div class="glass"><div class="table-wrap"><table>
+      <thead><tr><th>Entidad</th><th>Qué es</th><th>Datos clave</th></tr></thead>
+      <tbody>
+        <tr><td><b>Cliente (tenant)</b></td><td>Cada empresa cliente, aislada</td><td>estado, contrato, retención, políticas</td></tr>
+        <tr><td><b>Usuario</b></td><td>Persona o servicio con acceso</td><td>roles, clientes a los que accede, método de acceso</td></tr>
+        <tr><td><b>Solicitud / proyecto</b></td><td>El encargo</td><td>objetivo, alcance, riesgo, responsable, estado, presupuesto</td></tr>
+        <tr><td><b>Plan / workflow</b></td><td>Cómo se va a hacer</td><td>versión, tareas, dependencias, criterios de aceptación</td></tr>
+        <tr><td><b>Tarea</b></td><td>Cada pieza de trabajo</td><td>responsable, entradas, salidas, herramienta, permisos, intentos, estado</td></tr>
+        <tr><td><b>Documento / fuente</b></td><td>Un original guardado</td><td>huella, versión, origen, clasificación, permisos, retención</td></tr>
+        <tr><td><b>Ejecución de modelo</b></td><td>Cada llamada a una IA</td><td>proveedor, modelo, versión de instrucciones, coste, tiempo, evaluación</td></tr>
+        <tr><td><b>Uso de herramienta</b></td><td>Cada acción ejecutada</td><td>quién, cliente, acción, parámetros ocultos, autorización, resultado</td></tr>
+        <tr><td><b>Aprobación</b></td><td>Cada "sí" o "no" de una persona</td><td>aprobador, versión exacta, fecha, decisión, motivo</td></tr>
+        <tr><td><b>Auditoría / incidente</b></td><td>El rastro de todo</td><td>evento, actor, acción, resultado, hora; los incidentes enlazan evidencias</td></tr>
+        <tr><td><b>Definición de proceso</b></td><td>La receta de un proceso</td><td>versión, responsable, disparador, riesgo, estado</td></tr>
+        <tr><td><b>Instancia de proceso</b></td><td>Un caso que recorre la receta</td><td>versión usada, cliente, estado, inicio, fin, resultado</td></tr>
+        <tr><td><b>Decisión</b></td><td>Por qué se eligió algo</td><td>alternativas, evidencias, versión de regla o modelo, aprobador</td></tr>
+        <tr><td><b>Excepción</b></td><td>Lo que se sale de lo normal</td><td>tipo, gravedad, responsable, plazo, cómo se reanuda</td></tr>
+        <tr><td><b>Conector</b></td><td>Enlace con un sistema del cliente</td><td>versión, permisos, operaciones, estado</td></tr>
+        <tr><td><b>Observación de KPI</b></td><td>Una medida</td><td>métrica, valor, fuente, definición usada</td></tr>
+        <tr><td><b>Despliegue</b></td><td>El proyecto en un cliente</td><td>fase D0–D6, responsable, riesgos, línea base</td></tr>
+        <tr><td><b>Versión publicada</b></td><td>Cada cambio que sale a producción</td><td>piezas cambiadas, pruebas, aprobador, cómo revertir</td></tr>
+      </tbody></table></div></div>
+  </section>
+  <div id="next" class="next"></div>
+</main>
+<script src="js/site.js"></script>
+<script>
+(function(){
+var W={mvp:['MVP interno','Un flujo completo repetible con datos inventados y revisión humana.','info'],
+datos:['Antes de datos reales','Pruebas de acceso cruzado que fallan por diseño; restauración y borrado comprobados.','warn'],
+auto:['Antes de automatizar acciones','Pruebas de abuso, fallos y recuperación superadas.','wine'],
+escala:['Antes de escalar','Objetivos de servicio, responsables, runbooks y evidencias.','good']};
+var P=[
+['P01','Alta y recepción de petición','Registrar solicitante, cliente, objetivo, alcance, plazo, formato y restricciones.','mvp'],
+['P02','Clasificación y triaje','Sector, proceso, tipo de problema, complejidad, sensibilidad, riesgo e incertidumbre.','mvp'],
+['P03','Gestión de aclaraciones','Detectar datos que faltan, preguntar y bloquear las tareas que dependen de la respuesta.','mvp'],
+['P04','Recuperación de conocimiento','Consultar fuentes autorizadas, filtrar por permisos y citar evidencias.','mvp'],
+['P05','Diseño del plan','Tareas, dependencias, responsables, herramientas y criterios de aceptación.','mvp'],
+['P06','Asignación y coordinación','Elegir departamentos y especialistas; controlar carga, estados, bloqueos y escalados.','mvp'],
+['P07','Ingesta documental','Validar tipo, origen, integridad, metadatos, clasificación, permisos y versión; conservar el original.','datos'],
+['P08','Ejecución de tareas','Análisis, reglas, código o automatizaciones con límites, registro y tratamiento de errores.','mvp'],
+['P09','Control de calidad','Formato, completitud, coherencia, cálculos, fuentes, pruebas y criterios del encargo.','mvp'],
+['P10','Aprobación humana','Para decisiones sensibles, acciones externas, entregas reguladas o tareas de alto impacto.','mvp'],
+['P11','Entrega y cierre','Artefactos, evidencias, limitaciones, métricas, aceptación y registro de cierre.','mvp'],
+['P12','Gestión de cambios','Cambios de alcance, datos, modelo, reglas o herramientas; versionar y replanificar.','escala'],
+['P13','Aprendizaje y actualización de la wiki','Proponer, revisar, aprobar, versionar y retirar conocimiento sacado de proyectos.','escala'],
+['P14','Permisos y aislamiento','Identidades, roles, cliente, ámbitos de acceso y pruebas de separación.','datos'],
+['P15','Observabilidad e incidencias','Registros, costes, tiempos, errores, decisiones e incidentes.','mvp'],
+['P16','Gobierno de modelos y prompts','Inventario de modelos, versiones, instrucciones, límites, evaluaciones y alternativas.','escala'],
+['P17','Seguridad y continuidad','Secretos, copias, restauración, vulnerabilidades, dependencias e incidentes.','datos'],
+['P18','Evaluación y mejora','Medir calidad, tiempo, coste, retrabajo, errores y satisfacción; priorizar con evidencia.','escala'],
+['P19','Política de uso y límites','Tareas permitidas, prohibidas y condicionadas; límites de autonomía y criterios de escalado.','auto'],
+['P20','Entradas seguras y prompt injection','Documentos, webs, correos y resultados de herramientas se tratan como datos no confiables.','datos'],
+['P21','Ejecución segura de herramientas','Identidad, autorización por acción, mínimo privilegio, sandbox, límites y evidencias.','auto'],
+['P22','Errores y reintentos','Clasificar errores, limitar reintentos, idempotencia, tiempo máximo, alternativa, bloqueo y escalado.','auto'],
+['P23','Evaluación de agentes y modelos','Casos de prueba, umbrales, regresión y aprobación de cambios antes de producción.','escala'],
+['P24','Ciclo de vida del dato','Finalidad, clasificación, retención, acceso, exportación, rectificación y borrado, también en copias.','datos'],
+['P25','Cambios y versiones','Versionar prompts, modelos, reglas, herramientas y código; probar aparte, aprobar y poder revertir.','escala'],
+['P26','Continuidad y recuperación','RPO y RTO por criticidad, copias cifradas, restauraciones reales y procedimiento manual.','escala'],
+['P27','Proveedores y dependencias','Inventario de modelos, APIs, librerías y terceros; privacidad, ubicación, condiciones y salida.','datos'],
+['P28','Gestión de incidentes','Detectar, clasificar, contener, preservar evidencias, notificar, recuperar y aprender.','escala'],
+['P29','Costes y capacidad','Presupuesto por proyecto y cliente, límites de uso, alertas, cuotas y coste frente a valor.','auto'],
+['P30','Identidades y secretos','Autenticación, roles, rotación y custodia de secretos; nunca en prompts, logs ni repositorios.','datos'],
+['P31','Calificación de oportunidad','Problema, sponsor, encaje, impacto, viabilidad, riesgo y decisión de seguir o no.','mvp'],
+['P32','Descubrimiento de procesos','Entrevistas, evidencia, AS-IS, variantes, excepciones y línea base.','mvp'],
+['P33','Diseño y validación TO-BE','Modelo futuro, reglas, controles, RACI, KPI y aprobación del cliente.','mvp'],
+['P34','Definiciones de proceso','Versiones, responsable, estados, pruebas, aprobación, publicación y retirada.','mvp'],
+['P35','Instancias y excepciones','Estados, tareas, plazos, temporizadores, reintentos, escalado, compensación y cierre.','mvp'],
+['P36','Catálogo de conectores','Alta, evaluación, permisos, versiones, pruebas, cambios y revocación.','auto'],
+['P37','Medición de rendimiento y valor','Línea base, KPI, ROI, calidad, costes, adopción y atribución.','mvp'],
+['P38','Despliegue por cliente','Fases D0–D6, controles de paso, riesgos, aceptación, soporte y mejora.','datos']];
+var lane=document.getElementById('lane');
+lane.innerHTML=Object.keys(W).map(function(k){var n=P.filter(function(p){return p[3]===k}).length;return '<div class="card"><h4><span>'+W[k][0]+'</span><span class="pill '+W[k][2]+'">'+n+'</span></h4><p class="small muted">Para avanzar: '+W[k][1]+'</p></div>'}).join('');
+var f='',q=document.getElementById('q');
+function render(){var v=q.value.trim().toLowerCase();var L=P.filter(function(p){return (!f||p[3]===f)&&(!v||(p[0]+' '+p[1]+' '+p[2]).toLowerCase().indexOf(v)>-1)});
+document.getElementById('plist').innerHTML=L.map(function(p){return '<div class="pc"><span class="id">'+p[0]+'</span><div><b>'+p[1]+'</b><p>'+p[2]+'</p><span class="pill '+W[p[3]][2]+'">'+W[p[3]][0]+'</span></div></div>'}).join('')||'<p class="muted">Ningún proceso coincide.</p>';
+document.getElementById('count').textContent=L.length+' de '+P.length;}
+q.addEventListener('input',render);
+document.querySelectorAll('#fseg button').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('#fseg button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});f=b.dataset.f;render()})});
+render();
+})();
+</script>
+</body>
+</html>

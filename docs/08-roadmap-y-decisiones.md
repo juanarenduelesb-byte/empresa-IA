@@ -15,6 +15,12 @@ Arquitectura conceptual y documentación consolidadas; implementación pendiente
 Primer sector/proceso; canal inicial; identidad/proveedor; hosting/región; política de datos/retención; aprobaciones humanas; límites de coste/SLA; primer conector; autonomía por tipo de acción.
 
 ## Gates
-G0 alcance aprobado; G1 proceso descubierto; G2 diseño y riesgos aprobados; G3 prototipo validado; G4 integración y pruebas; G5 piloto aceptado; G6 operación continua.
+Unificadas el 17/11/2026 con el Atlas de Evolución v1.1 (ver D-009).
+
+**Puertas de cliente (G0–G6), una por fase D0–D6:** G0 caso elegido · G1 proceso entendido · G2 diseño aceptado · G3 prototipo · G4 piloto seguro · G5 producción · G6 escalado.
+
+**Puertas técnicas (L0–L4), de la Guía v1.4:** L0 MVP local con datos inventados · L1 datos internos reales · L2 datos de clientes · L3 automatización externa · L4 escala.
+
+Un piloto con datos reales (G4) exige haber superado L2.
 
 **Riesgo de enfoque:** sin proceso real, datos, integraciones y métricas, construir primero el CEO optimiza una abstracción.

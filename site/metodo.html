@@ -19,7 +19,7 @@
 <body>
 <main>
   <section class="hero">
-    <p class="eyebrow">2 · Cómo trabajamos con un cliente</p>
+    <p class="eyebrow">Cómo trabajamos con un cliente</p>
     <h1>Cuatro fases. Una decisión al final de cada una.</h1>
     <p class="lede">Como al subir una escalera, solo se sube al siguiente nivel cuando el anterior está asegurado. El cliente decide con datos al final de cada fase y puede parar. Así se evita el piloto eterno.</p>
   </section>
@@ -69,26 +69,39 @@
   </section>
 
   <section>
-    <div class="sec-head">
-      <p class="eyebrow">Los controles de paso</p>
-      <h2>Siete puertas. No se abre una sin cerrar la anterior.</h2>
-      <p class="lede">Son las "gates" del repositorio. Cada puerta tiene una pregunta de sí o no y alguien que la firma.</p>
+    <div class="sec-head"><p class="eyebrow">Por dentro de las cuatro fases</p><h2>Siete fases internas, siete puertas.</h2><p class="lede">Al cliente le vendemos cuatro fases. Por dentro, el Atlas de Evolución las divide en siete (D0 a D6), cada una con su puerta de paso (G0 a G6). Una puerta no se cruza por calendario ni porque "parece que funciona": se cruza con evidencias.</p></div>
+    <div class="glass">
+      <div class="table-wrap"><table>
+        <thead><tr><th>Fase comercial</th><th>Fase interna</th><th>Qué se entrega</th><th>Puerta para pasar</th></tr></thead>
+        <tbody>
+          <tr><td rowspan="2"><b>1 · Diagnosticar</b></td><td>D0 · Calificación</td><td>Problema, sponsor, alcance, sistemas, presupuesto y criterio de éxito</td><td><b>G0 · Caso elegido:</b> problema, responsable, alcance, datos y KPI definidos</td></tr>
+          <tr><td>D1 · Descubrimiento</td><td>AS-IS, entrevistas, excepciones, línea base, riesgos y datos</td><td><b>G1 · Proceso entendido:</b> el cliente firma el mapa y los datos</td></tr>
+          <tr><td><b>2 · Diseñar</b></td><td>D2 · Diseño de la solución</td><td>TO-BE, arquitectura, RACI, seguridad, privacidad, plan y coste</td><td><b>G2 · Diseño aceptado:</b> proceso versionado y revisión de seguridad y privacidad</td></tr>
+          <tr><td rowspan="2"><b>3 · Construir</b></td><td>D3 · Prototipo</td><td>Flujo acotado con datos controlados, pruebas y demo</td><td><b>G3 · Prototipo:</b> pruebas y criterios superados</td></tr>
+          <tr><td>D4 · Piloto</td><td>Usuarios limitados, revisión humana, runbooks y medición</td><td><b>G4 · Piloto seguro:</b> permisos, aislamiento, contratos, incidentes, reversión y soporte</td></tr>
+          <tr><td rowspan="2"><b>4 · Operar</b></td><td>D5 · Producción</td><td>Separación de clientes, contrato, SLA, soporte, continuidad y formación</td><td><b>G5 · Producción:</b> checklist legal y técnica completa</td></tr>
+          <tr><td>D6 · Operar y mejorar</td><td>Objetivos de servicio, incidencias, versiones, ROI y nuevos casos</td><td><b>G6 · Escalado:</b> valor y reutilización demostrados</td></tr>
+        </tbody></table></div>
+      <p class="small muted mt">Dibujado en el <a href="atlas.html#ciclo-proyecto">Atlas, mapa 12</a>.</p>
     </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Puertas técnicas</p><h2>Cinco puertas para la tecnología, que no hay que confundir con las del cliente.</h2><p class="lede">La Guía v1.4 tiene otras puertas que también se llamaban G0 a G4. Para no mezclarlas, aquí se llaman L0 a L4: dicen cuándo el sistema está listo para usar cada tipo de dato.</p></div>
     <div class="vflow glass">
-      <div class="row"><div class="rail"><div class="dot">G0</div><div class="line"></div></div><div class="body"><h4>Alcance aprobado</h4><p>¿Sabemos qué proceso, qué objetivo y quién decide en el cliente?</p></div></div>
-      <div class="row"><div class="rail"><div class="dot">G1</div><div class="line"></div></div><div class="body"><h4>Proceso descubierto</h4><p>¿Está dibujado el proceso actual con volumen, tiempos y excepciones?</p></div></div>
-      <div class="row"><div class="rail"><div class="dot">G2</div><div class="line"></div></div><div class="body"><h4>Diseño y riesgos aprobados</h4><p>¿El cliente ha firmado el proceso nuevo, los controles y la métrica?</p></div></div>
-      <div class="row"><div class="rail"><div class="dot">G3</div><div class="line"></div></div><div class="body"><h4>Prototipo validado</h4><p>¿Funciona con datos de prueba y lo ha visto quien hará el trabajo?</p></div></div>
-      <div class="row"><div class="rail"><div class="dot">G4</div><div class="line"></div></div><div class="body"><h4>Integración y pruebas</h4><p>¿Está conectado a un sistema real y pasa las pruebas, incluidas las de no mezclar clientes?</p></div></div>
-      <div class="row"><div class="rail"><div class="dot">G5</div><div class="line"></div></div><div class="body"><h4>Piloto aceptado</h4><p>¿Se ha alcanzado la métrica firmada?</p></div></div>
-      <div class="row"><div class="rail"><div class="dot">G6</div><div class="line"></div></div><div class="body"><h4>Operación continua</h4><p>¿Hay responsables, alertas, copias de seguridad y soporte?</p></div></div>
+      <div class="row"><div class="rail"><div class="dot">L0</div><div class="line"></div></div><div class="body"><h4>MVP local · para usar datos inventados</h4><p>Flujo de punta a punta, tests, estados, registros y coste estimado.</p></div></div>
+      <div class="row"><div class="rail"><div class="dot">L1</div><div class="line"></div></div><div class="body"><h4>Datos internos reales · los nuestros</h4><p>Identidad, roles, secretos, minimización, copias y revisión de privacidad.</p></div></div>
+      <div class="row"><div class="rail"><div class="dot h">L2</div><div class="line"></div></div><div class="body"><h4>Datos de clientes · pilotar con un cliente</h4><p>Contrato y privacidad revisados, separación probada, respuesta a incidentes, borrado, proveedor y restauración.</p></div></div>
+      <div class="row"><div class="rail"><div class="dot h">L3</div><div class="line"></div></div><div class="body"><h4>Automatización externa · actuar fuera del entorno de prueba</h4><p>Puerta de herramientas, lista cerrada, aprobaciones, idempotencia, sandbox, botón de parada y auditoría.</p></div></div>
+      <div class="row"><div class="rail"><div class="dot">L4</div><div class="line"></div></div><div class="body"><h4>Escala · más clientes, sectores o volumen</h4><p>Evaluación continua, objetivos de servicio, capacidad, costes, soporte, runbooks y continuidad.</p></div></div>
     </div>
+    <div class="note warm mt"><span class="tag">Cómo encajan</span><p>El piloto de un cliente (G4) no puede empezar con datos reales hasta que la tecnología haya pasado L2. Si una prueba crítica falla, no se avanza.</p></div>
   </section>
 
   <section>
     <div class="sec-head">
       <p class="eyebrow">Roles</p>
-      <h2>Cinco papeles en cada proyecto. Hoy los cubrimos entre dos.</h2>
+      <h2>Seis papeles en cada proyecto. Hoy los cubrimos entre dos.</h2>
     </div>
     <div class="glass">
       <div class="table-wrap">
@@ -96,6 +109,7 @@
         <thead><tr><th>Papel</th><th>Qué hace</th><th>Quién lo cubre hoy · propuesta</th></tr></thead>
         <tbody>
           <tr><td><b>Responsable del despliegue</b></td><td>Lleva la relación, dirige el descubrimiento y diseña el proceso nuevo</td><td>Álvaro, con Juan en el diseño</td></tr>
+          <tr><td><b>Arquitecto de procesos</b></td><td>Mapa AS-IS y TO-BE, reglas, excepciones, controles y métricas</td><td>Juan, con Álvaro en las entrevistas</td></tr>
           <tr><td><b>Ingeniero desplegado</b></td><td>Construye e integra junto al cliente</td><td>Juan</td></tr>
           <tr><td><b>Especialista del sector</b></td><td>Conoce las reglas del negocio del cliente</td><td>Lo aporta el cliente o un asesor externo</td></tr>
           <tr><td><b>Responsable del proceso</b></td><td>Persona del cliente que decide y acepta</td><td>Cliente</td></tr>

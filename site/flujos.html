@@ -26,9 +26,9 @@
 <body>
 <main>
   <section class="hero">
-    <p class="eyebrow">4 · Los flujos</p>
+    <p class="eyebrow">Los flujos</p>
     <h1>Qué pasa desde que llega un encargo hasta que se entrega.</h1>
-    <p class="lede">Once pasos, siempre los mismos. Al lado de cada paso verás quién lo hace: la IA, las reglas fijas o una persona.</p>
+    <p class="lede">Once pasos, siempre los mismos. Todos los diagramas detallados están en el <a href="atlas.html">Atlas</a>. Al lado de cada paso verás quién lo hace: la IA, las reglas fijas o una persona.</p>
     <p class="small muted"><span class="who ia" style="margin:0">IA</span> propone o entiende · <span class="who re">Reglas</span> código fijo · <span class="who pe">Persona</span> decide o aprueba</p>
   </section>
 
@@ -50,6 +50,18 @@
   </section>
 
   <section>
+    <div class="sec-head"><p class="eyebrow">Cómo decide el CEO</p><h2>Cada encargo termina en una de cinco decisiones, y siempre con su motivo.</h2><p class="lede">La confianza que diga la IA es solo una pista. Cada dato se marca como confirmado, inferido o desconocido, y las reglas fijas deciden cuándo parar.</p></div>
+    <div class="grid g5">
+      <div class="card" style="border-color:var(--good)"><span class="pill good">Continuar</span><p class="small mt">Alcance permitido, datos suficientes y riesgo dentro de la política.</p><p class="small muted">Se crea el plan y las tareas.</p></div>
+      <div class="card" style="border-color:var(--accent)"><span class="pill info">Preguntar</span><p class="small mt">Falta algo que cambia la solución, el coste o el riesgo.</p><p class="small muted">Se pausan las tareas dependientes.</p></div>
+      <div class="card" style="border-color:var(--wine)"><span class="pill wine">Escalar</span><p class="small mt">Riesgo alto, duda relevante, dato sensible o excepción.</p><p class="small muted">Revisa una persona identificada.</p></div>
+      <div class="card" style="border-color:var(--crit)"><span class="pill crit">Rechazar</span><p class="small mt">Prohibido, no autorizado o contrario a la ley.</p><p class="small muted">Se explica el límite y se registra.</p></div>
+      <div class="card" style="border-color:var(--warn)"><span class="pill warn">Derivar</span><p class="small mt">Necesita un profesional o herramienta que no tenemos.</p><p class="small muted">Se pasa el contexto mínimo autorizado.</p></div>
+    </div>
+    <p class="small muted mt">Dibujado en el <a href="atlas.html#decisiones-ceo">Atlas, mapa 03</a>. Flujo completo con todos los desvíos en el <a href="atlas.html#flujo-ceo">mapa 02</a>.</p>
+  </section>
+
+  <section>
     <div class="sec-head"><p class="eyebrow">Flujo 2</p><h2>Los siete estados de una tarea.</h2><p class="lede">Cualquier tarea está siempre en uno de estos estados. Así se sabe en todo momento qué está pasando.</p></div>
     <div class="glass">
       <p class="tag">Camino normal</p><div class="flow"><div class="step alt"><b>En cola</b><span>queued · esperando turno</span></div><div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div><div class="step"><b>En marcha</b><span>running · trabajando</span></div><div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div><div class="step risk"><b>Esperando aprobación</b><span>needs_approval · si el riesgo lo pide</span></div><div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div><div class="step" style="background:var(--good-tint);border-color:var(--good)"><b>Terminada bien</b><span>succeeded</span></div></div><p class="tag mt2">Salidas posibles desde "En marcha"</p><div class="grid g3"><div class="st w">Bloqueada<small>blocked · falta un dato o un permiso</small></div><div class="st c">Fallida<small>failed · tras los reintentos permitidos</small></div><div class="st">Cancelada<small>cancelled · la para una persona</small></div></div>
@@ -58,20 +70,22 @@
   </section>
 
   <section>
-    <div class="sec-head"><p class="eyebrow">Flujo 3</p><h2>Quién aprueba depende de lo que está en juego.</h2></div>
+    <div class="sec-head"><p class="eyebrow">Flujo 3</p><h2>Quién aprueba depende de lo que está en juego.</h2><p class="lede">El riesgo se mide por tarea, no por proyecto: un mismo proyecto puede tener tareas de nivel bajo y de nivel alto. Y no se etiqueta por el nombre del departamento.</p></div>
     <div class="glass">
       <div class="table-wrap">
       <table class="risk">
-        <thead><tr><th>Nivel</th><th>Ejemplos</th><th>Qué hace el sistema</th></tr></thead>
+        <thead><tr><th>Nivel</th><th>Ejemplos</th><th>Autonomía</th><th>Control</th></tr></thead>
         <tbody>
-          <tr><td><span class="pill good">Bajo</span></td><td>Resumir un documento interno, clasificar un correo, preparar un borrador</td><td>Lo hace solo y lo registra. Se revisan muestras.</td></tr>
-          <tr><td><span class="pill warn">Medio</span></td><td>Responder a un cliente, actualizar un dato en un sistema, asignar un caso</td><td>Prepara la acción y una persona la aprueba antes de ejecutarla.</td></tr>
-          <tr><td><span class="pill crit">Alto</span></td><td>Pagos, contratos, decisiones legales, rechazar un siniestro, datos de salud</td><td>Solo recomienda. Decide siempre una persona con permisos, y queda registrado quién.</td></tr>
+          <tr><td><span class="pill good">Bajo</span></td><td>Borrador interno, resumen de documentos no sensibles, clasificación auxiliar</td><td>Automático dentro de límites</td><td>QA automático y muestras revisadas</td></tr>
+          <tr><td><span class="pill warn">Medio</span></td><td>Análisis con datos internos, recomendaciones no vinculantes, cambios reversibles</td><td>Prepara y ejecuta en entorno controlado</td><td>Revisión de especialista; aprobación según impacto</td></tr>
+          <tr><td><span class="pill crit">Alto</span></td><td>Datos personales o sensibles, decisiones relevantes, cambios en producción, informes externos</td><td>Prepara, pero no termina ni envía solo</td><td>Aprobación humana explícita; doble control si procede</td></tr>
+          <tr><td><span class="pill wine">Crítico o prohibido</span></td><td>Acciones ilegales, acceso no autorizado, acciones irreversibles sin mandato</td><td>Bloqueado</td><td>Denegar y guardar registro</td></tr>
         </tbody>
       </table>
       </div>
       <p class="small muted mt">La autonomía sube poco a poco y solo con evidencia: si durante semanas un tipo de acción sale bien, se puede bajar su nivel de control.</p>
     </div>
+    <div class="note warm mt"><span class="tag">Lo que el sistema nunca hace por su cuenta</span><ul class="ticks small"><li>Aprobar su propia recomendación o acción.</li><li>Enviar comunicaciones externas, firmar, pagar, borrar o tocar producción sin permiso y aprobación.</li><li>Afirmar que algo cumple la ley sin fuente vigente y revisión competente.</li><li>Tomar decisiones de alto impacto sobre personas sin marco legal y validación humana.</li><li>Ocultar dudas, omitir límites o inventar datos o fuentes.</li></ul></div>
   </section>
 
   <section>

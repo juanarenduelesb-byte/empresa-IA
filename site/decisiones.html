@@ -11,7 +11,7 @@
 <body>
 <main>
   <section class="hero">
-    <p class="eyebrow">10 · Decisiones y riesgos</p>
+    <p class="eyebrow">Decisiones y riesgos</p>
     <h1>Lo decidido, lo pendiente y lo que puede salir mal.</h1>
     <p class="lede">Cada decisión importante se apunta con fecha y motivo en DECISIONS.md del repositorio. Así nadie tiene que acordarse y no se discute dos veces lo mismo.</p>
   </section>
@@ -70,24 +70,31 @@
   </section>
 
   <section>
-    <div class="sec-head"><p class="eyebrow">Documentos existentes</p><h2>Qué se queda y qué se archiva.</h2><p class="lede">Propuesta para dejar una sola versión de cada cosa en el repositorio.</p></div>
-    <div class="glass">
-      <div class="table-wrap">
-      <table>
-        <thead><tr><th>Documento</th><th>Propuesta</th></tr></thead>
-        <tbody>
-          <tr><td>Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado.docx</td><td><span class="pill good">Mantener</span> pasar a Markdown en docs/</td></tr>
-          <tr><td>Atlas_Evolucion_v1.1_Modelo_Operativo_Procesos_y_Despliegue.docx</td><td><span class="pill good">Mantener</span> pasar a Markdown</td></tr>
-          <tr><td>Atlas_Arquitectura_Digital_Completo.zip y diagramas</td><td><span class="pill good">Mantener</span> imágenes en docs/assets/</td></tr>
-          <tr><td>Marco_Integral_Legal_Ciberseguridad_IA_Espana_UE_2026-11-16.docx</td><td><span class="pill good">Mantener</span> en governance/, actualizado con el ómnibus de 2026</td></tr>
-          <tr><td>ExcluSa_Demo_Interactiva_Siniestros.html y demo comercial de seguros</td><td><span class="pill good">Mantener</span> material de venta</td></tr>
-          <tr><td>Guías v1.0 a v1.3, V3, Cerebro v2, documento temprano de visión, Plan Maestro</td><td><span class="pill info">Archivar</span> en archive/</td></tr>
-          <tr><td>02_flujo_ceo a 09_comunicaciones (enviados por WhatsApp)</td><td><span class="pill warn">Revisar</span> fusionar en los docs del repositorio y no duplicar</td></tr>
-        </tbody>
-      </table>
-      </div>
-      <p class="small muted mt">Muchos documentos antiguos usan el nombre "ExcluSa" y otros "Cauce". El nombre provisional desde el 17/11/2026 es Varios: conviene unificarlo al pasarlos al repositorio.</p>
+    <div class="sec-head"><p class="eyebrow">Documentos integrados</p><h2>Los once documentos ya están dentro, revisados.</h2><p class="lede">Recibidos el 17/11/2026. Los originales se guardan sin tocar en el repositorio (archive/originales). Su contenido corregido está en esta web y en docs/.</p></div>
+    <div class="glass"><div class="table-wrap"><table>
+      <thead><tr><th>Documento</th><th>Dónde está ahora</th></tr></thead>
+      <tbody>
+        <tr><td>Guía de Arranque v1.4 · Diseño cerrado</td><td><a href="atlas.html">Atlas</a> (mapas 01, 03, 05, 06, 10, 13, 14, 16), <a href="flujos.html">Flujos</a>, <a href="procesos.html">Procesos</a>, <a href="metodo.html">puertas L0–L4</a></td></tr>
+        <tr><td>Atlas Evolución v1.1 · Procesos y despliegue</td><td><a href="metodo.html">Método</a> (D0–D6 y G0–G6), <a href="procesos.html">P31–P38 y estados</a>, <a href="atlas.html#arquitectura">mapa 00</a>, <a href="atlas.html#organizacion">mapa 01</a></td></tr>
+        <tr><td>Marco Integral Legal y Ciberseguridad v1.0</td><td><a href="legal.html">Leyes</a> y <a href="atlas.html#incidentes">mapa 14</a></td></tr>
+        <tr><td>Mapas 2 a 9 del Atlas (8 documentos)</td><td><a href="atlas.html">Atlas</a>, cada uno con su versión original para comparar</td></tr>
+        <tr><td>Imagen "Arquitectura del cerebro digital"</td><td><a href="atlas.html#arquitectura">Atlas, mapa 00</a></td></tr>
+      </tbody></table></div></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Correcciones</p><h2>Lo que estaba mal en los documentos y cómo se ha resuelto.</h2></div>
+    <div class="grid g2">
+      <div class="card"><span class="pill crit">Contenido</span><h4 class="mt">El flujo del CEO entregaba antes de aprobar</h4><p class="small muted">El dibujo del mapa 2 ponía la aprobación humana después de la entrega, al revés que su propio texto. Corregido en el Atlas.</p></div>
+      <div class="card"><span class="pill crit">Contenido</span><h4 class="mt">Dos juegos de puertas con el mismo nombre</h4><p class="small muted">G0–G4 en la Guía (tecnología) y G0–G6 en el Atlas de Evolución (cliente) significaban cosas distintas. Ahora son L0–L4 y G0–G6. El repositorio tenía una tercera versión de G0–G6 con otros nombres; se unifica con la del Atlas de Evolución.</p></div>
+      <div class="card"><span class="pill warn">Contenido</span><h4 class="mt">Tres listas de estados mezcladas</h4><p class="small muted">Encargo, tarea e instancia de proceso usaban listas distintas sin decirlo. Separadas en <a href="procesos.html">Procesos</a>.</p></div>
+      <div class="card"><span class="pill warn">Contenido</span><h4 class="mt">Mapas sin actualizar</h4><p class="small muted">El Atlas de Evolución pedía añadir el motor de procesos, las integraciones, las fases D0–D6 y los nuevos roles a los mapas 1 a 9. No estaba hecho; ahora sí.</p></div>
+      <div class="card"><span class="pill warn">Forma</span><h4 class="mt">Diagramas ilegibles</h4><p class="small muted">Flechas por encima de cajas y de texto, etiquetas superpuestas ("artifact ref/vent"), texto que se sale de las cajas. Los 17 se han redibujado.</p></div>
+      <div class="card"><span class="pill info">Forma</span><h4 class="mt">Versión y nombre</h4><p class="small muted">La Guía v1.4 decía "versión 1.3" en la portada y "nombre por definir". Varios documentos usan ExcluSa o Cauce. Se unifica como Varios (nombre provisional).</p></div>
+      <div class="card"><span class="pill info">Forma</span><h4 class="mt">Texto repetido</h4><p class="small muted">Los mapas 2 a 9 repetían idénticos sus apartados de criterios, prioridad y decisiones pendientes. Se dejan una sola vez en el Atlas.</p></div>
+      <div class="card"><span class="pill crit">Error nuestro</span><h4 class="mt">Fecha del Reglamento de IA</h4><p class="small muted">La primera versión de esta web atribuía al 02/12/2026 la transparencia general. Según el Marco legal, la transparencia del artículo 50 se aplica desde el 02/08/2026. Corregido.</p></div>
     </div>
+    <div class="note mt"><span class="tag">Una tensión que hay que decidir entre los dos</span><p>La Guía v1.4 propone empezar construyendo el MVP técnico ya, con un caso interno. El plan de 12 semanas pone antes las entrevistas con clientes. Propuesta: las dos cosas en paralelo, pero sin que la construcción retrase las entrevistas. El entorno técnico básico entra en la semana 5 (Navidad), cuando hay menos reuniones.</p></div>
   </section>
   <div id="next" class="next"></div>
 </main>

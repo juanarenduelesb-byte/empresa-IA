@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Varios · Leyes y cumplimiento</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<style>
+.tl{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.tl .card{padding:14px}
+.tl .d{font-weight:700;font-size:16px;letter-spacing:-.01em;font-variant-numeric:tabular-nums;display:block}
+.tl .past{opacity:.75}
+.tl .now{border:1.5px solid var(--wine)}
+@media (max-width:980px){.tl{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:560px){.tl{grid-template-columns:1fr}}
+.lab{display:inline-block;min-width:30px;text-align:center;font-weight:700;font-size:12.5px;padding:4px 8px;border-radius:8px}
+.lab.A{background:var(--crit-tint);color:var(--crit)}.lab.C{background:var(--warn-tint);color:var(--warn)}.lab.K{background:var(--accent-tint);color:var(--accent)}.lab.BP{background:var(--good-tint);color:var(--good)}.lab.F{background:var(--wine-tint);color:var(--wine)}
+.check li{list-style:none;position:relative;padding:7px 0 7px 30px;border-bottom:1px solid var(--hairline);font-size:15px}
+.check{padding:0;margin:0}
+.check li::before{content:"";position:absolute;left:2px;top:9px;width:16px;height:16px;border:1.5px solid var(--ink-muted);border-radius:4px}
+</style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <p class="eyebrow">Leyes y cumplimiento</p>
+    <h1>Qué normas nos tocan, cuáles dependen del cliente y qué hay que tener antes de producción.</h1>
+    <p class="lede">Resumen del Marco Integral Legal, Regulatorio, Privacidad y Ciberseguridad (versión 1.0, corte 16/11/2026, España y UE). No sustituye a un abogado ni a una auditoría.</p>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="note warm"><span class="tag">La advertencia más importante del documento</span><p>No existe una lista universal de "todas las normas que hay que cumplir". Depende del producto, del sector, de los datos, de los países, del papel contractual y del tamaño. Usar IA no convierte automáticamente a nadie en proveedor de alto riesgo. Y los contratos de los clientes pueden imponernos obligaciones aunque una ley no nos aplique directamente.</p></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Mapa normativo</p><h2>Cinco etiquetas para saber qué hacer con cada norma.</h2></div>
+    <div class="grid g5">
+      <div class="card"><span class="lab A">A</span><h4 class="mt">Probable</h4><p class="small muted">Aplica casi seguro por operar en España o la UE. Se diseña desde el inicio.</p></div>
+      <div class="card"><span class="lab C">C</span><h4 class="mt">Condicional</h4><p class="small muted">Depende del sector, tamaño, rol o datos. Se evalúa por cliente.</p></div>
+      <div class="card"><span class="lab K">K</span><h4 class="mt">Contractual</h4><p class="small muted">Lo exige el cliente o la licitación. Va al contrato.</p></div>
+      <div class="card"><span class="lab BP">BP</span><h4 class="mt">Buena práctica</h4><p class="small muted">Voluntario salvo que lo pida un contrato.</p></div>
+      <div class="card"><span class="lab F">F</span><h4 class="mt">Futuro</h4><p class="small muted">Aprobada, con aplicación escalonada.</p></div>
+    </div>
+    <div class="glass mt"><div class="table-wrap"><table>
+      <thead><tr><th>Norma</th><th>Etiqueta</th><th>Qué nos supone</th></tr></thead>
+      <tbody>
+        <tr><td><b>RGPD</b> (UE) 2016/679 y <b>LOPDGDD</b> 3/2018</td><td><span class="lab A">A</span></td><td>Base jurídica, transparencia, derechos, seguridad, contratos con encargados, brechas, evaluación de impacto y transferencias.</td></tr>
+        <tr><td><b>Reglamento Europeo de IA</b> (UE) 2024/1689 y modificaciones</td><td><span class="lab A">A</span> <span class="lab C">C</span></td><td>Alfabetización, prácticas prohibidas, transparencia, clasificación de riesgo y obligaciones según el rol.</td></tr>
+        <tr><td><b>LSSI-CE</b> 34/2002 y cookies</td><td><span class="lab A">A</span></td><td>Aviso legal, comunicaciones comerciales, contratación electrónica y consentimiento de cookies en la web.</td></tr>
+        <tr><td><b>DORA</b> (UE) 2022/2554</td><td><span class="lab C">C</span> <span class="lab K">K</span></td><td>No nos aplica directamente, pero si vendemos a bancos o aseguradoras nos exigirán cláusulas, auditoría, incidentes, continuidad y plan de salida.</td></tr>
+        <tr><td><b>NIS2</b> (UE) 2022/2555</td><td><span class="lab C">C</span> <span class="lab K">K</span></td><td>Según sector y tamaño; los clientes regulados pueden trasladarnos sus requisitos.</td></tr>
+        <tr><td><b>Cyber Resilience Act</b> (UE) 2024/2847</td><td><span class="lab C">C</span> <span class="lab F">F</span></td><td>Solo si comercializamos un producto con elementos digitales (software descargable, agente instalable). Un SaaS remoto no entra automáticamente.</td></tr>
+        <tr><td><b>Data Act</b> (UE) 2023/2854</td><td><span class="lab C">C</span></td><td>Portabilidad, cambio de proveedor y cláusulas de salida si prestamos servicios de tratamiento de datos.</td></tr>
+        <tr><td><b>ENS</b> (RD 311/2022)</td><td><span class="lab C">C</span> <span class="lab K">K</span></td><td>Solo si trabajamos para el sector público.</td></tr>
+        <tr><td><b>Normativa sectorial</b></td><td><span class="lab C">C</span></td><td>Seguros: Solvencia II, IDD, externalización, siniestros, datos de salud. Salud: Ley 41/2002 y, si el software es producto sanitario, MDR. Banca: DORA, PSD2, AML.</td></tr>
+        <tr><td><b>ISO/IEC 27001, ISO/IEC 42001, NIST CSF 2.0, OWASP LLM Top 10</b></td><td><span class="lab BP">BP</span></td><td>Marcos de referencia. No afirmar certificación ni conformidad sin auditoría.</td></tr>
+      </tbody></table></div></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Reglamento Europeo de IA</p><h2>El calendario, ya con el cambio de julio de 2026.</h2><p class="lede">El Reglamento (UE) 2026/1744, conocido como ómnibus digital sobre IA, retrasó las obligaciones de alto riesgo. Fechas según el Marco legal, coherentes con los análisis publicados tras su aprobación.</p></div>
+    <div class="tl">
+      <div class="card past"><span class="d">02/02/2025</span><p class="small mt">Definiciones, alfabetización en IA (art. 4) y primeras prohibiciones.</p></div>
+      <div class="card past"><span class="d">02/08/2025</span><p class="small mt">Gobernanza y obligaciones de proveedores de modelos de uso general.</p></div>
+      <div class="card past"><span class="d">02/08/2026</span><p class="small mt">Reglas generales y transparencia del artículo 50.</p></div>
+      <div class="card now"><span class="d">02/12/2026</span><p class="small mt">Nuevas prohibiciones y transición del etiquetado para sistemas de contenido sintético comercializados antes del 02/08/2026.</p></div>
+      <div class="card"><span class="d">02/12/2027</span><p class="small mt">Alto riesgo del anexo III (incluye tarificación y selección de riesgos en seguros de vida y salud).</p></div>
+      <div class="card"><span class="d">02/08/2028</span><p class="small mt">Alto riesgo integrado en productos regulados del anexo I.</p></div>
+    </div>
+    <div class="grid g2 mt">
+      <div class="card"><span class="tag">Qué papel podemos tener</span><ul class="clean small"><li><b>Proveedor</b> si ponemos un sistema en el mercado con nuestro nombre.</li><li><b>Responsable del despliegue</b> si usamos un sistema bajo nuestra autoridad.</li><li><b>Integrador</b>: si cambiamos la finalidad de un sistema, puede cambiar nuestro papel.</li><li>Integrar la API de Claude u otro modelo <b>no</b> nos hace proveedor de un modelo de uso general.</li></ul></div>
+      <div class="card"><span class="tag">Qué hay que hacer ya</span><ul class="ticks small"><li>Inventario de sistemas de IA: finalidad, modelo, versión, responsable, riesgo.</li><li>Clasificarlos frente a prohibidos, alto riesgo y transparencia.</li><li>Formación en IA para quien los usa (art. 4).</li><li>Avisar cuando una persona habla con una IA.</li><li>Supervisión humana real: poder ignorar, revertir y parar.</li><li>No convertir una herramienta general en selección de personal, scoring de crédito o diagnóstico sin análisis legal.</li></ul></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Protección de datos</p><h2>Lo primero es decidir quién es quién en cada tratamiento.</h2></div>
+    <div class="grid g3">
+      <div class="card"><h4>Responsable</h4><p class="small muted">Decide para qué y cómo se usan los datos. Lo seremos con nuestros propios datos (clientes potenciales, web, facturación).</p></div>
+      <div class="card"><h4>Encargado</h4><p class="small muted">Trata datos siguiendo instrucciones del cliente. Será lo habitual en los proyectos. Exige contrato del artículo 28.</p></div>
+      <div class="card"><h4>Corresponsable</h4><p class="small muted">Dos partes deciden juntas. Exige acuerdo del artículo 26. No aceptar la etiqueta del contrato sin analizar la realidad.</p></div>
+    </div>
+    <div class="grid g2 mt">
+      <div class="card"><span class="tag">Reglas que afectan al diseño</span><ul class="ticks small"><li>No reutilizar datos de clientes para entrenar, comparar o hacer marketing sin base jurídica.</li><li>Enviar a la IA solo los campos necesarios; ocultar identificadores y secretos.</li><li>Las correcciones llegan también a índices, cachés y copias derivadas.</li><li>Comprobar si el proveedor de IA usa los datos para entrenar, cuánto los guarda y si se puede desactivar.</li><li>Que los datos estén en la UE no basta: soporte, telemetría y subencargados pueden implicar transferencias.</li></ul></div>
+      <div class="card"><span class="tag">Brechas de datos</span><ul class="ticks small"><li>Como encargados, avisamos al cliente sin dilación. Conviene pactar un plazo interno corto, por ejemplo 12–24 horas.</li><li>El responsable notifica a la AEPD en un máximo de 72 horas desde que tiene constancia, si hay riesgo.</li><li>Si el riesgo es alto, se avisa también a los afectados.</li><li>Se documenta siempre, aunque no se notifique.</li></ul></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Incidentes</p><h2>Cada norma tiene su propio reloj. No se mezclan.</h2></div>
+    <div class="glass"><div class="table-wrap"><table>
+      <thead><tr><th>Régimen</th><th>Qué exige</th></tr></thead>
+      <tbody>
+        <tr><td><b>RGPD</b></td><td>72 horas a la autoridad cuando hay riesgo; el encargado avisa al responsable sin dilación.</td></tr>
+        <tr><td><b>NIS2</b></td><td>Notificación escalonada para entidades en su ámbito. Confirmar la transposición española.</td></tr>
+        <tr><td><b>DORA</b></td><td>Las entidades financieras tienen sus plazos; el proveedor debe avisar rápido por contrato.</td></tr>
+        <tr><td><b>CRA</b></td><td>Desde el 11/09/2026, notificación de vulnerabilidades explotadas para fabricantes dentro de su alcance.</td></tr>
+        <tr><td><b>Contrato</b></td><td>Puede exigir plazos más cortos. Mantener una matriz por cliente.</td></tr>
+      </tbody></table></div>
+      <p class="small muted mt">El flujo de respuesta está dibujado en el <a href="atlas.html#incidentes">Atlas, mapa 14</a>.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Implantación</p><h2>Diez fases, cada una con su puerta de salida.</h2></div>
+    <div class="vflow glass">
+      <div class="row"><div class="rail"><div class="dot">0</div><div class="line"></div></div><div class="body"><h4>Alcance</h4><p>Servicios, sectores, países, datos y roles. Sale con un mapa de aplicabilidad aprobado.</p></div></div>
+      <div class="row"><div class="rail"><div class="dot">1</div><div class="line"></div></div><div class="body"><h4>Gobierno</h4><p>Responsables, políticas base y registro de riesgos.</p></div></div>
+      <div class="row"><div class="rail"><div class="dot">2</div><div class="line"></div></div><div class="body"><h4>Privacidad</h4><p>No entra un dato personal real sin base jurídica, información y contrato.</p></div></div>
+      <div class="row"><div class="rail"><div class="dot">3</div><div class="line"></div></div><div class="body"><h4>Proveedores</h4><p>Nube, base de datos, modelos, correo y repositorio aprobados, con contrato y plan de salida.</p></div></div>
+      <div class="row"><div class="rail"><div class="dot">4</div><div class="line"></div></div><div class="body"><h4>Seguridad base</h4><p>Doble factor, accesos, entornos separados, secretos, cifrado, registros y copias probadas.</p></div></div>
+      <div class="row"><div class="rail"><div class="dot">5</div><div class="line"></div></div><div class="body"><h4>Separación de clientes</h4><p>Pruebas de acceso cruzado sin fugas. Cualquier fallo bloquea.</p></div></div>
+      <div class="row"><div class="rail"><div class="dot">6</div><div class="line"></div></div><div class="body"><h4>IA y agentes</h4><p>Inventario, clasificación, transparencia, puerta de herramientas y pruebas de ataque superadas.</p></div></div>
+      <div class="row"><div class="rail"><div class="dot">7</div><div class="line"></div></div><div class="body"><h4>Desarrollo seguro</h4><p>Revisión de código, análisis automáticos, pentest y fallos críticos cerrados.</p></div></div>
+      <div class="row"><div class="rail"><div class="dot">8</div><div class="line"></div></div><div class="body"><h4>Incidentes y recuperación</h4><p>Simulacro completo y recuperación demostrada.</p></div></div>
+      <div class="row"><div class="rail"><div class="dot h">9</div><div class="line"></div></div><div class="body"><h4>Piloto</h4><p>Datos limitados, revisión humana, métricas y plan de mejora aceptado.</p></div></div>
+      <div class="row"><div class="rail"><div class="dot h">10</div><div class="line"></div></div><div class="body"><h4>Producción</h4><p>Aprobación de negocio, tecnología, seguridad y legal.</p></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="two">
+      <div>
+        <p class="eyebrow">Antes de producción</p>
+        <h2>La lista que hay que poder marcar entera.</h2>
+        <p class="muted">Si una casilla no se puede marcar, no se pasa a producción. Los riesgos que queden los acepta por escrito quien tenga autoridad.</p>
+        <div class="note warm mt"><span class="tag">Prioridad inmediata para nosotros</span><ul class="ticks small"><li>Ningún dato real de cliente hasta resolver roles, contratos, accesos y borrado.</li><li>Elegir primer sector: sin él no se puede cerrar el análisis de NIS2, DORA ni alto riesgo.</li><li>Revisar entrenamiento, retención, ubicación y salida de cada proveedor.</li><li>Inventario de IA y formación desde ahora.</li><li>Desarrollar con datos inventados hasta tener la base.</li></ul></div>
+      </div>
+      <div class="glass"><ul class="check">
+        <li>Alcance, país, sector, rol contractual y matriz legal aprobados</li>
+        <li>Inventario de tratamientos, bases jurídicas y avisos</li>
+        <li>Contratos con encargados, subencargados y transferencias revisados</li>
+        <li>Evaluación de impacto hecha cuando proceda</li>
+        <li>Inventario y clasificación de IA; transparencia y formación</li>
+        <li>Proveedores evaluados: datos, retención, región y salida</li>
+        <li>Doble factor, roles y mínimo privilegio revisados</li>
+        <li>Separación de clientes probada en API, base, búsqueda, caché, archivos, logs y copias</li>
+        <li>Gestor de secretos, rotación y cifrado funcionando</li>
+        <li>Desarrollo seguro y gestión de vulnerabilidades en marcha</li>
+        <li>Pruebas de seguridad hechas; fallos críticos cerrados</li>
+        <li>Agentes con puerta de herramientas, límites, aprobaciones y parada</li>
+        <li>Alertas, incidentes y escalado probados</li>
+        <li>Copias y restauración probadas; RTO y RPO aprobados</li>
+        <li>Contratos, SLA, soporte, portabilidad y borrado definidos</li>
+        <li>Documentación, responsables y formación disponibles</li>
+        <li>Aprobación de negocio, tecnología, seguridad y legal</li>
+      </ul></div>
+    </div>
+  </section>
+
+  <section>
+    <p class="small muted">Fuentes oficiales citadas en el Marco legal: <a href="https://eur-lex.europa.eu/eli/reg/2016/679">RGPD</a> · <a href="https://eur-lex.europa.eu/eli/reg/2024/1689/2026-07-27/eng">Reglamento de IA consolidado</a> · <a href="https://ai-act-service-desk.ec.europa.eu/en/ai-act/eu-ai-act-implementation-timeline">Calendario de la Comisión</a> · <a href="https://eur-lex.europa.eu/eli/reg/2022/2554/oj">DORA</a> · <a href="https://eur-lex.europa.eu/eli/dir/2022/2555/oj">NIS2</a> · <a href="https://eur-lex.europa.eu/legal-content/ES/ALL/?uri=CELEX:32024R2847">CRA</a> · <a href="https://eur-lex.europa.eu/eli/reg/2023/2854/oj">Data Act</a> · <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673">LOPDGDD</a> · <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2002-13758">LSSI-CE</a> · <a href="https://www.aepd.es/derechos-y-deberes/cumple-tus-deberes/medidas-de-cumplimiento/seguridad-de-los-tratamientos">AEPD</a>. El documento completo está en el repositorio, en <span class="tabular">docs/fuentes/</span>.</p>
+  </section>
+  <div id="next" class="next"></div>
+</main>
+<script src="js/site.js"></script>
+</body>
+</html>

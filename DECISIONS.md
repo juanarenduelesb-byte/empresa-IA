@@ -34,6 +34,20 @@ No construir primero un CEO omnisciente; descubrir, diseñar, integrar y medir u
 - Motivo: tener una base de contexto antes de crear la cuenta de Claude del proyecto.
 - Estado: aprobada.
 
+## D-009 — Unificación de puertas y estados
+- Fecha: 2026-11-17
+- Decisión: G0–G6 son las puertas de cliente (una por fase D0–D6, según Atlas Evolución v1.1). Las puertas de lanzamiento de la Guía v1.4 pasan a llamarse L0–L4. Los estados se separan por objeto (encargo, tarea, instancia, definición, conector, despliegue, conocimiento, capacidad).
+- Motivo: había tres juegos de puertas con el mismo nombre y listas de estados mezcladas.
+- Impacto: `docs/08`, `docs/13`, web (Método, Procesos).
+- Estado: aprobada como corrección documental; confirmar entre socios.
+
+## D-010 — Diagramas como código
+- Fecha: 2026-11-17
+- Decisión: los diagramas viven como Mermaid en `tools/atlas_data.py`, que genera a la vez la web (`site/js/atlas-data.js`) y `docs/atlas/`. Las imágenes de los Word quedan solo como histórico en `archive/originales/`.
+- Motivo: los PNG tenían errores y no se podían corregir ni versionar. GitHub dibuja Mermaid directamente.
+- Uso: `python3 tools/gen.py site/js/atlas-data.js docs/atlas`
+- Estado: aprobada.
+
 ## Decisiones pendientes (con fecha límite)
 | Decisión | Quién | Antes de |
 |---|---|---|

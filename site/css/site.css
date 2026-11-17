@@ -173,3 +173,7 @@ body::before{content:"";position:fixed;inset:0 0 auto 0;height:6px;background:li
 .vflow .dot{box-shadow:0 0 0 4px var(--accent-tint)}
 .vflow .dot.h{background:var(--wine);color:var(--on-wine);box-shadow:0 0 0 4px var(--wine-tint)}
 .flow .step{box-shadow:0 2px 0 var(--hairline)}
+
+.g5{grid-template-columns:repeat(5,1fr)}
+@media (max-width:900px){.g5{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:620px){.g5{grid-template-columns:1fr}}

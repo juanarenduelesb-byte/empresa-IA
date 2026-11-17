@@ -11,18 +11,19 @@ Este repositorio es **la memoria oficial del proyecto**. Si algo no está aquí,
 | | |
 |---|---|
 | Socios | 2 (Juan y Álvaro) |
-| Arquitectura y método | Diseñados (ver `docs/`) |
+| Arquitectura y método | Diseñados: Guía v1.4, Atlas Evolución v1.1, Marco legal v1.0 (ver `docs/fuentes/`) |
 | Clientes con contrato | 0 |
 | Código del sistema | 0 líneas: todavía no se construye |
 | Siguiente objetivo | Diagnóstico de pago entregado y piloto firmado antes del 12/02/2027 |
 
 ## Empieza aquí
 
-1. **Mapa visual del proyecto:** abre `site/index.html` en el navegador. Son 12 páginas, una por tema, incluida una **simulación interactiva** del cerebro (`site/simulacion.html`).
-2. **El negocio:** [docs/00-negocio.md](docs/00-negocio.md)
-3. **El plan de 12 semanas:** [docs/10-plan-12-semanas.md](docs/10-plan-12-semanas.md)
-4. **Cómo montar el cerebro en Claude:** [docs/11-cerebro-en-claude.md](docs/11-cerebro-en-claude.md)
-5. **Decisiones:** [DECISIONS.md](DECISIONS.md)
+1. **Mapa visual del proyecto:** abre `site/index.html` en el navegador. Son 15 páginas, una por tema, con una **simulación interactiva** del cerebro (`site/simulacion.html`) y el **Atlas** de 17 diagramas (`site/atlas.html`).
+2. **Diagramas en GitHub:** [docs/atlas/](docs/atlas/README.md). GitHub los dibuja directamente.
+3. **El negocio:** [docs/00-negocio.md](docs/00-negocio.md)
+4. **El plan de 12 semanas:** [docs/10-plan-12-semanas.md](docs/10-plan-12-semanas.md)
+5. **Cómo montar el cerebro en Claude:** [docs/11-cerebro-en-claude.md](docs/11-cerebro-en-claude.md)
+6. **Decisiones:** [DECISIONS.md](DECISIONS.md)
 
 ## Documentación
 
@@ -39,6 +40,11 @@ Este repositorio es **la memoria oficial del proyecto**. Si algo no está aquí,
 - [10 · Plan de 12 semanas](docs/10-plan-12-semanas.md)
 - [11 · Cerebro en Claude](docs/11-cerebro-en-claude.md)
 - [12 · Simulación del cerebro](docs/12-simulacion.md)
+- [13 · Procesos P01–P38 y estados](docs/13-procesos-y-estados.md)
+- [14 · Reglas del CEO](docs/14-reglas-del-ceo.md)
+- [16 · Correcciones a los documentos](docs/16-correcciones.md)
+- [Atlas de diagramas](docs/atlas/README.md)
+- [Documentos fuente en Markdown](docs/fuentes/) (Guía v1.4, Atlas Evolución v1.1, Marco legal v1.0, mapas 2–9)
 
 ## Principios
 
@@ -55,7 +61,8 @@ site/          web visual del proyecto (abrir site/index.html)
 processes/     catálogo de procesos, uno por carpeta
 knowledge/     principios y plantillas de conocimiento
 governance/    seguridad, calidad y legal
-archive/       contexto consolidado y versiones antiguas
+archive/       contexto consolidado y originales (archive/originales: Word e imagen recibidos)
+tools/         atlas_data.py y gen.py: fuente única de los diagramas
 ```
 
 No subir secretos, credenciales ni datos reales de clientes. Toda decisión estructural se registra en `DECISIONS.md`.

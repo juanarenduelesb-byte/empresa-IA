@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Varios · Decisiones y riesgos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<main>
+  <section class="hero">
+    <p class="eyebrow">Decisiones y riesgos</p>
+    <h1>Lo decidido, lo pendiente y lo que puede salir mal.</h1>
+    <p class="lede">Cada decisión importante se apunta con fecha y motivo en DECISIONS.md del repositorio. Así nadie tiene que acordarse y no se discute dos veces lo mismo.</p>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="sec-head"><p class="eyebrow">Ya decidido</p><h2>Seis decisiones registradas el 17/11/2026.</h2></div>
+    <div class="glass">
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>Código</th><th>Decisión</th><th>En pocas palabras</th><th>Estado</th></tr></thead>
+        <tbody>
+          <tr><td>D-001</td><td><b>Orientado a procesos</b></td><td>El valor está en terminar procesos completos. El CEO digital coordina, no lo hace todo.</td><td><span class="pill warn">Propuesta</span></td></tr>
+          <tr><td>D-002</td><td><b>Modelo matricial</b></td><td>Departamentos reutilizables y especialistas de sector que se activan según el caso.</td><td><span class="pill info">Diseño</span></td></tr>
+          <tr><td>D-003</td><td><b>Obsidian como interfaz</b></td><td>Para leer y editar el conocimiento. Los permisos los lleva el servidor.</td><td><span class="pill info">Diseño</span></td></tr>
+          <tr><td>D-004</td><td><b>PostgreSQL como base</b></td><td>Datos de operación en PostgreSQL. Conocimiento no confidencial en texto con historial en GitHub.</td><td><span class="pill info">Diseño</span></td></tr>
+          <tr><td>D-005</td><td><b>Clientes aislados</b></td><td>El cliente se deduce de quién se identifica, y se comprueba antes de buscar nada.</td><td><span class="pill good">Obligatorio</span></td></tr>
+          <tr><td>D-006</td><td><b>Primero un proceso piloto</b></td><td>No construir primero un CEO que lo sabe todo. Empezar por un proceso real y medirlo.</td><td><span class="pill good">Siguiente paso</span></td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Por decidir</p><h2>Nueve decisiones con fecha límite.</h2></div>
+    <div class="glass">
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>Decisión</th><th>Quién</th><th>Antes de</th></tr></thead>
+        <tbody class="tabular">
+          <tr><td><b>Acuerdo entre socios:</b> roles, horas, reparto de la empresa y salida</td><td>Los dos</td><td>22/11/2026</td></tr>
+          <tr><td><b>Plan de Claude</b> que se contrata</td><td>Juan</td><td>22/11/2026</td></tr>
+          <tr><td><b>Proceso de referencia</b> que se construye (por defecto: siniestros en corredurías)</td><td>Los dos</td><td>22/11/2026</td></tr>
+          <tr><td><b>Umbral de acierto</b> para dar el sistema por bueno</td><td>Los dos</td><td>22/01/2027</td></tr>
+          <tr><td><b>Forma jurídica</b> y cómo facturar</td><td>Álvaro, con gestor</td><td>08/01/2027</td></tr>
+          <tr><td><b>Precio</b> del diagnóstico y del piloto</td><td>Los dos</td><td>29/01/2027</td></tr>
+          <tr><td><b>Dónde se aloja</b> la demo y, después, los datos de clientes</td><td>Juan</td><td>05/02/2027</td></tr>
+          <tr><td><b>Proveedor de identidad</b> para producción</td><td>Juan</td><td>Antes de L2</td></tr>
+          <tr><td><b>Nicho comercial</b> para salir a vender</td><td>Los dos, propone Álvaro</td><td>12/02/2027</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Riesgos</p><h2>Lo que puede tumbar el proyecto, dicho sin rodeos.</h2></div>
+    <div class="grid g2">
+      <div class="card"><span class="pill crit">Alto</span><h3 class="mt">Construir algo que nadie paga</h3><p class="muted">Doce semanas de construcción sin clientes. Es cómodo porque nadie te dice que no.</p><p class="small"><b>Freno:</b> una conversación de validación por semana y un proceso de referencia que se confirma con ellas antes del Control B.</p></div>
+      <div class="card"><span class="pill crit">Alto</span><h3 class="mt">Querer hacer todo para todos</h3><p class="muted">Diez departamentos y nueve sectores con dos personas a tiempo parcial.</p><p class="small"><b>Freno:</b> un nicho y un proceso hasta tener tres clientes.</p></div>
+      <div class="card"><span class="pill warn">Medio</span><h3 class="mt">Copiar a quien juega en otra liga</h3><p class="muted">Sapira y similares tienen equipo, inversión y acceso a grandes empresas. Copiar su discurso sin eso no convence.</p><p class="small"><b>Freno:</b> empresas medianas, precio cerrado y quien vende es quien ejecuta.</p></div>
+      <div class="card"><span class="pill warn">Medio</span><h3 class="mt">Ciclos de venta largos en sectores regulados</h3><p class="muted">Una aseguradora grande puede tardar meses en decidir y exigir requisitos como los de DORA.</p><p class="small"><b>Freno:</b> empezar por empresas donde decide una persona, como corredurías o gabinetes medianos.</p></div>
+      <div class="card"><span class="pill warn">Medio</span><h3 class="mt">Socios sin acuerdo escrito</h3><p class="muted">Rompe más empresas que la tecnología, sobre todo cuando llega el primer dinero.</p><p class="small"><b>Freno:</b> acuerdo en la semana 0, revisado por un profesional antes de facturar.</p></div>
+      <div class="card"><span class="pill warn">Medio</span><h3 class="mt">Poco tiempo disponible</h3><p class="muted">Con otro trabajo, un diagnóstico de tres semanas puede no caber.</p><p class="small"><b>Freno:</b> confirmar horas reales y ajustar el alcance del primer diagnóstico.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Documentos integrados</p><h2>Los once documentos ya están dentro, revisados.</h2><p class="lede">Recibidos el 17/11/2026. Los originales se guardan sin tocar en el repositorio (archive/originales). Su contenido corregido está en esta web y en docs/.</p></div>
+    <div class="glass"><div class="table-wrap"><table>
+      <thead><tr><th>Documento</th><th>Dónde está ahora</th></tr></thead>
+      <tbody>
+        <tr><td>Guía de Arranque v1.4 · Diseño cerrado</td><td><a href="atlas.html">Atlas</a> (mapas 01, 03, 05, 06, 10, 13, 14, 16), <a href="flujos.html">Flujos</a>, <a href="procesos.html">Procesos</a>, <a href="metodo.html">puertas L0–L4</a></td></tr>
+        <tr><td>Atlas Evolución v1.1 · Procesos y despliegue</td><td><a href="metodo.html">Método</a> (D0–D6 y G0–G6), <a href="procesos.html">P31–P38 y estados</a>, <a href="atlas.html#arquitectura">mapa 00</a>, <a href="atlas.html#organizacion">mapa 01</a></td></tr>
+        <tr><td>Marco Integral Legal y Ciberseguridad v1.0</td><td><a href="legal.html">Leyes</a> y <a href="atlas.html#incidentes">mapa 14</a></td></tr>
+        <tr><td>Mapas 2 a 9 del Atlas (8 documentos)</td><td><a href="atlas.html">Atlas</a>, cada uno con su versión original para comparar</td></tr>
+        <tr><td>Imagen "Arquitectura del cerebro digital"</td><td><a href="atlas.html#arquitectura">Atlas, mapa 00</a></td></tr>
+      </tbody></table></div></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Correcciones</p><h2>Lo que estaba mal en los documentos y cómo se ha resuelto.</h2></div>
+    <div class="grid g2">
+      <div class="card"><span class="pill crit">Contenido</span><h4 class="mt">El flujo del CEO entregaba antes de aprobar</h4><p class="small muted">El dibujo del mapa 2 ponía la aprobación humana después de la entrega, al revés que su propio texto. Corregido en el Atlas.</p></div>
+      <div class="card"><span class="pill crit">Contenido</span><h4 class="mt">Dos juegos de puertas con el mismo nombre</h4><p class="small muted">G0–G4 en la Guía (tecnología) y G0–G6 en el Atlas de Evolución (cliente) significaban cosas distintas. Ahora son L0–L4 y G0–G6. El repositorio tenía una tercera versión de G0–G6 con otros nombres; se unifica con la del Atlas de Evolución.</p></div>
+      <div class="card"><span class="pill warn">Contenido</span><h4 class="mt">Tres listas de estados mezcladas</h4><p class="small muted">Encargo, tarea e instancia de proceso usaban listas distintas sin decirlo. Separadas en <a href="procesos.html">Procesos</a>.</p></div>
+      <div class="card"><span class="pill warn">Contenido</span><h4 class="mt">Mapas sin actualizar</h4><p class="small muted">El Atlas de Evolución pedía añadir el motor de procesos, las integraciones, las fases D0–D6 y los nuevos roles a los mapas 1 a 9. No estaba hecho; ahora sí.</p></div>
+      <div class="card"><span class="pill warn">Forma</span><h4 class="mt">Diagramas ilegibles</h4><p class="small muted">Flechas por encima de cajas y de texto, etiquetas superpuestas ("artifact ref/vent"), texto que se sale de las cajas. Los 17 se han redibujado.</p></div>
+      <div class="card"><span class="pill info">Forma</span><h4 class="mt">Versión y nombre</h4><p class="small muted">La Guía v1.4 decía "versión 1.3" en la portada y "nombre por definir". Varios documentos usan ExcluSa o Cauce. Se unifica como Varios (nombre provisional).</p></div>
+      <div class="card"><span class="pill info">Forma</span><h4 class="mt">Texto repetido</h4><p class="small muted">Los mapas 2 a 9 repetían idénticos sus apartados de criterios, prioridad y decisiones pendientes. Se dejan una sola vez en el Atlas.</p></div>
+      <div class="card"><span class="pill crit">Error nuestro</span><h4 class="mt">Fecha del Reglamento de IA</h4><p class="small muted">La primera versión de esta web atribuía al 02/12/2026 la transparencia general. Según el Marco legal, la transparencia del artículo 50 se aplica desde el 02/08/2026. Corregido.</p></div>
+    </div>
+    <div class="note mt"><span class="tag">Decidido el 17/11/2026 (D-011)</span><p>Hasta el 12/02/2027 se construye, siguiendo el orden de la Guía v1.4. Los clientes, desde el 15/02. Para cubrir el riesgo de construir algo que nadie pague, hay una conversación de validación por semana, sin vender. Detalle en el <a href="planning.html">plan de construcción</a>.</p></div>
+  </section>
+  <div id="next" class="next"></div>
+</main>
+<script src="js/site.js"></script>
+</body>
+</html>

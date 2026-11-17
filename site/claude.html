@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Varios · Construir el cerebro en Claude</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<style>
+pre{margin:0;white-space:pre-wrap;font:13.5px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--card);border:1px solid var(--hairline);border-radius:var(--r-md);padding:16px;max-height:420px;overflow:auto}
+.copy{float:right;margin:-4px 0 8px 8px;padding:8px 14px;font-size:14px}
+.steps .card{display:grid;grid-template-columns:48px 1fr;gap:14px}
+.steps .num{margin:0;width:38px;height:38px;font-size:16px}
+</style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <p class="eyebrow">Construir el cerebro en Claude</p>
+    <h1>Primero un cerebro para trabajar nosotros. Después, el que venderemos.</h1>
+    <p class="lede">Hay dos cerebros y conviene no mezclarlos. El primero se monta esta semana con Claude tal como viene. El segundo es software propio y se construye cuando haya un cliente.</p>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="grid g2">
+      <div class="glass"><span class="pill good">Empieza ahora</span><h3 class="mt">Cerebro de trabajo</h3><p class="muted">Claude configurado con todo lo que sabemos de Varios: oferta, método, marca, decisiones y clientes. Prepara reuniones, escribe propuestas, ordena notas y nos ayuda a programar. Lo usamos los dos cada día.</p><p class="small muted">Herramientas: proyecto de Claude, habilidades (skills), conectores, repositorio de GitHub y Claude Code.</p></div>
+      <div class="glass"><span class="pill info">Desde el piloto</span><h3 class="mt">Cerebro producto</h3><p class="muted">El sistema de las páginas 3 a 6: CEO digital, motor de procesos y conocimiento con permisos. Es código nuestro que usa modelos de IA mediante su API y corre en la nube del cliente o en la nuestra.</p><p class="small muted">Se empieza por un solo proceso del primer cliente, no por el sistema completo.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Paso a paso</p><h2>Ocho pasos para montar el cerebro de trabajo.</h2><p class="lede">Los pasos 1 a 5 caben en la semana del 18 al 22 de noviembre. El 6 (Claude Code) empieza en la semana 1 del plan de construcción.</p></div>
+    <div class="grid steps" style="gap:12px">
+      <div class="card"><span class="num">1</span><div><h3>Elegir el plan de Claude</h3><p class="muted">Para compartir proyectos entre los dos hace falta un plan de equipo (Team). Con dos cuentas individuales (Pro o Max), cada uno tiene sus proyectos por separado. Precios publicados por Anthropic en dólares, sin impuestos: Pro desde 20 $/mes, Max desde 100 $/mes y Team desde 25 $ por puesto al mes (20 $ con pago anual). Comprobad el precio vigente y si el tipo de puesto incluye Claude Code en <a href="https://claude.com/pricing">claude.com/pricing</a> antes de pagar.</p><p class="small"><b>Propuesta:</b> plan Team para los dos. Quien programe necesitará más uso que el otro.</p></div></div>
+      <div class="card"><span class="num">2</span><div><h3>Una sola fuente de verdad</h3><p class="muted">El repositorio <b>empresa-ia</b> de GitHub es la memoria oficial. Hoy hay más de 16 documentos Word con versiones repetidas (Guía v1.0 a v1.4, Atlas, V3…). Quedaos solo con la última versión de cada cosa, pasadla a texto (Markdown) dentro del repositorio y moved el resto a <b>archive/</b>.</p><p class="small"><b>Regla:</b> si no está en el repositorio, no existe.</p></div></div>
+      <div class="card"><span class="num">3</span><div><h3>Crear el proyecto "Varios · Cerebro"</h3><p class="muted">Un proyecto de Claude tiene dos cosas: <b>instrucciones</b> (cómo debe comportarse siempre) y <b>conocimiento</b> (los documentos que consulta). Conectad el repositorio de GitHub como conocimiento para que Claude lea siempre la versión actual. Abajo tenéis unas instrucciones listas para copiar.</p></div></div>
+      <div class="card"><span class="num">4</span><div><h3>Convertir lo que se repite en habilidades</h3><p class="muted">Una habilidad (skill) es una receta escrita que Claude sigue igual cada vez. Ya tenéis una de marca (hecha para el nombre anterior; hay que adaptarla a Varios). Las siguientes, por orden de uso:</p>
+        <ul class="ticks small"><li><b>entrevista-descubrimiento</b> · guion y hoja de notas para hablar con un posible cliente</li><li><b>acta-reunion</b> · de notas sueltas a acta con acuerdos y siguientes pasos</li><li><b>propuesta-diagnostico</b> · propuesta con alcance, plazos y precio cerrado</li><li><b>informe-as-is-to-be</b> · el proceso actual y el nuevo, con números</li><li><b>revision-riesgo-ia</b> · clasificación orientativa según el Reglamento Europeo de IA</li></ul>
+        <p class="small muted">Se crea una cuando se ha hecho la misma tarea al menos dos veces a mano. Así la receta sale de la práctica y no de la teoría.</p></div></div>
+      <div class="card"><span class="num">5</span><div><h3>Conectar las herramientas del día a día</h3><p class="muted">Conectores de Gmail, Google Calendar, Google Drive y GitHub. Con ellos Claude puede preparar una reunión leyendo el hilo de correo, proponer huecos en el calendario o guardar un acta en el repositorio. Claude pide confirmación antes de enviar o crear nada.</p></div></div>
+      <div class="card"><span class="num">6</span><div><h3>Claude Code para construir</h3><p class="muted">Claude Code trabaja directamente sobre el repositorio: escribe y prueba código. Lee un archivo <b>CLAUDE.md</b> en la raíz con las reglas del proyecto. Se usa desde la semana 1 del plan de construcción.</p></div></div>
+      <div class="card"><span class="num">7</span><div><h3>Rutinas fijas</h3><p class="muted">El cerebro solo sirve si se alimenta. Tres rutinas:</p><ul class="ticks small"><li><b>Tras cada reunión:</b> notas → habilidad acta-reunion → al repositorio. Máximo 15 minutos.</li><li><b>Cada viernes:</b> revisión semanal de 45 minutos entre los dos. Qué se hizo, qué métrica se movió y qué toca la semana siguiente. Se actualiza la página del plan.</li><li><b>Cada decisión importante:</b> una línea en DECISIONS.md con fecha y motivo.</li></ul></div></div>
+      <div class="card"><span class="num">8</span><div><h3>Comprobar que funciona</h3><p class="muted">Cada habilidad tiene 3 o 4 casos de prueba: por ejemplo, unas notas reales de reunión y el acta que esperaríamos. Si cambia la habilidad, se vuelve a probar. Es la misma disciplina que venderemos a los clientes.</p></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Para copiar</p><h2>Instrucciones del proyecto, listas para pegar.</h2></div>
+    <div class="glass">
+      <button class="btn copy" type="button" data-copy="instr">Copiar</button>
+      <pre id="instr">Eres el cerebro de trabajo de Varios (nombre provisional), consultora de inteligencia artificial para empresas medianas y reguladas. Socios: Juan y Álvaro.
+
+QUÉ HACEMOS
+Elegimos un proceso concreto de una empresa, lo medimos, lo automatizamos con IA y controles, y demostramos el resultado con una métrica firmada. Método en cuatro fases: Diagnosticar (3 semanas), Diseñar (2 semanas), Construir (4–8 semanas, piloto con pago 50/50), Operar (cuota mensual).
+
+CÓMO TRABAJAS
+- La fuente de verdad es el repositorio empresa-ia. Si algo contradice al repositorio, avisa.
+- No inventes datos, clientes, cifras ni fuentes. Si falta un dato, pregúntalo.
+- Separa siempre hecho, hipótesis y propuesta, y márcalos.
+- Sé directo y crítico: señala puntos débiles y propón una alternativa mejor.
+- Prioriza lo que acerca al primer cliente de pago frente a más documentación.
+- Nunca pegues ni pidas datos personales reales de clientes en esta conversación.
+
+ESTILO
+Español de España. Frases cortas, conclusión primero. Usa la identidad de Varios: burdeos, turquesa y champán. Formato español en cifras (6.500 €, 62 %).
+
+PRIORIDAD ACTUAL (actualizar cada viernes)
+Plan de construcción del 18/11/2026 al 12/02/2027. Objetivo: proceso de referencia (siniestros en corredurías) funcionando de punta a punta con datos inventados, puerta técnica L0 superada y todo listo para vender desde el 15/02/2027.</pre>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Para copiar</p><h2>El archivo CLAUDE.md del repositorio.</h2><p class="lede">Va en la raíz de empresa-ia. Claude Code lo lee cada vez que trabaja en el repositorio.</p></div>
+    <div class="glass">
+      <button class="btn copy" type="button" data-copy="cmd">Copiar</button>
+      <pre id="cmd"># Varios · empresa-ia
+
+Repositorio maestro de Varios (nombre provisional). Contiene visión, arquitectura, procesos, decisiones y, más adelante, el código.
+
+## Reglas
+- No subir secretos, credenciales ni datos reales de clientes. Solo datos inventados en pruebas.
+- Toda decisión estructural se registra en DECISIONS.md (fecha, decisión, motivo, estado).
+- Proceso antes que agente. Código fijo para reglas y cálculos; IA para lenguaje y ambigüedad.
+- El cliente (tenant) se obtiene de la identidad autenticada, nunca de un dato que envía el usuario.
+- Cualquier acción externa, financiera, legal o contractual requiere aprobación humana.
+- Antes de añadir una tecnología nueva, justificar por qué en DECISIONS.md.
+
+## Estructura
+docs/         documentación funcional y técnica
+knowledge/    principios y plantillas de conocimiento
+processes/    catálogo de procesos (uno por carpeta, con AS-IS, TO-BE y métricas)
+governance/   seguridad, calidad, legal
+archive/      versiones antiguas y contexto
+
+## Stack del piloto
+Python, FastAPI, Pydantic, PostgreSQL, Docker Compose, pytest, Ruff, Alembic.
+Nada más sin una decisión registrada.</pre>
+    </div>
+  </section>
+
+  <section>
+    <div class="grid g2">
+      <div class="note"><span class="tag">Lo que sí</span><ul class="ticks"><li>Un proyecto, un repositorio, una versión de cada documento</li><li>Habilidades nacidas de tareas reales</li><li>Revisión semanal fija</li></ul></div>
+      <div class="note warm"><span class="tag">Lo que no</span><ul class="ticks"><li>Seguir generando documentos de arquitectura antes de hablar con clientes</li><li>Pegar datos reales de un cliente sin revisar antes las condiciones del plan y su contrato</li><li>Construir el CEO digital completo antes del primer proceso</li></ul></div>
+    </div>
+  </section>
+  <div id="next" class="next"></div>
+</main>
+<script src="js/site.js"></script>
+<script>
+document.querySelectorAll('[data-copy]').forEach(function(b){b.addEventListener('click',function(){
+  var t=document.getElementById(b.dataset.copy).innerText;
+  navigator.clipboard.writeText(t).then(function(){b.textContent='Copiado';setTimeout(function(){b.textContent='Copiar'},1600)},function(){b.textContent='Selecciona y copia';});
+})});
+</script>
+</body>
+</html>

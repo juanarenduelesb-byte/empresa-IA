@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Varios · Atlas de diagramas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<style>
+.atlas{display:grid;grid-template-columns:250px 1fr;gap:22px;align-items:start}
+.atlas>*{min-width:0}
+@media (max-width:980px){.atlas{grid-template-columns:1fr}}
+.side{position:sticky;top:90px;background:var(--card);border:1px solid var(--hairline);border-radius:var(--r-lg);padding:14px;max-height:calc(100vh - 110px);overflow:auto}
+@media (max-width:980px){.side{position:static;max-height:none}}
+.side h4{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--wine);margin:12px 6px 4px}
+.side h4:first-child{margin-top:2px}
+.side button{display:flex;gap:8px;width:100%;text-align:left;border:0;background:none;font:500 14px/1.3 var(--font);color:var(--ink-muted);padding:7px 8px;border-radius:10px;cursor:pointer}
+.side button b{font-variant-numeric:tabular-nums;color:var(--ink-muted);font-weight:600;min-width:20px}
+.side button:hover{background:var(--track);color:var(--ink)}
+.side button[aria-current=true]{background:var(--accent-tint);color:var(--ink)}
+.side button[aria-current=true] b{color:var(--accent)}
+.side button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.mhead{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap}
+.mhead h2{max-width:none;font-size:clamp(28px,3.4vw,40px)}
+.paper{background:#FFFBF3;border:1px solid #E4D6BC;border-radius:var(--r-lg);overflow:auto;position:relative;min-height:260px}
+.paper .inner{padding:22px;transform-origin:top left;display:inline-block;min-width:100%}
+.paper svg{max-width:none!important;height:auto;display:block;margin:0 auto}
+.paper img{display:block;width:100%;height:auto}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:14px 0 10px}
+.toolbar .btn{padding:9px 14px;font-size:14px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--ink-muted)}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:4px;margin-right:6px;vertical-align:-2px;border:1.5px solid}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}
+@media (max-width:900px){.cols{grid-template-columns:1fr}}
+.cols ol{margin:0;padding-left:20px;font-size:15px}.cols ol li{margin:5px 0}
+.fix{background:var(--wine-tint);border-radius:var(--r-md);padding:16px 18px;margin-top:14px}
+.fix .tag{color:var(--wine)}
+.loading{padding:40px;color:#6A5A55;text-align:center}
+.mnav{display:flex;justify-content:space-between;gap:10px;margin-top:18px}
+</style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <p class="eyebrow">Atlas de diagramas</p>
+    <h1>Todos los flujos del cerebro, redibujados para que se lean de un vistazo.</h1>
+    <p class="lede">Diecisiete mapas sacados de la Guía v1.4, el Atlas de arquitectura, el Atlas de Evolución y el Marco legal. Cada uno tiene una explicación sencilla, los pasos, qué hacer si algo falla y qué se ha corregido respecto al original.</p>
+    <div class="legend mt">
+      <span><i style="background:#DDEFEA;border-color:#0B7A78"></i>IA</span>
+      <span><i style="background:#FFFBF3;border-color:#B9A88A"></i>Reglas fijas</span>
+      <span><i style="background:#F3E2E1;border-color:#7A1F2E"></i>Persona</span>
+      <span><i style="background:#F8EBCF;border-color:#8A5A0C"></i>Decisión</span>
+      <span><i style="background:#F6DEDF;border-color:#A8283A"></i>Parada o error</span>
+      <span><i style="background:#E1F0E4;border-color:#1D6B3E"></i>Resultado</span>
+      <span><i style="background:#22171A;border-color:#22171A"></i>Pieza central</span>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="atlas">
+      <nav class="side" id="side" aria-label="Mapas"></nav>
+      <div>
+        <div class="glass" id="view"></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="note">
+      <span class="tag">Criterios comunes a todos los mapas</span>
+      <p>Los mapas originales repetían este texto en cada documento. Va aquí una sola vez: el flujo se puede ejecutar de principio a fin en pruebas; todo queda registrado; se prueban también los errores y las denegaciones; los permisos se comprueban en el servidor con identidades distintas; y hay documentación para que otra persona lo mantenga.</p>
+      <p class="small"><b>Prioridad:</b> MVP = recorrido mínimo con estados guardados. Antes de datos reales de clientes = seguridad, privacidad, copias, recuperación, evaluación y contratos de proveedores. Para escalar = colas, observabilidad avanzada y redundancia, solo cuando el uso lo justifique.</p>
+    </div>
+  </section>
+  <div id="next" class="next"></div>
+</main>
+<script src="js/site.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.17.2/dist/mermaid.min.js"></script>
+<script src="js/atlas-data.js"></script>
+<script>
+(function(){
+var A=window.ATLAS, cache={}, cur=0, zoom=1, showOrig=false;
+mermaid.initialize({startOnLoad:false,securityLevel:'strict',flowchart:{htmlLabels:true}});
+function esc(t){var d=document.createElement('div');d.textContent=t;return d.innerHTML}
+var side=document.getElementById('side'),h='';
+window.ATLAS_GROUPS.forEach(function(g){
+  var items=A.map(function(m,i){return [m,i]}).filter(function(x){return x[0].grupo===g});
+  if(!items.length)return;
+  h+='<h4>'+esc(g)+'</h4>'+items.map(function(x){return '<button type="button" data-i="'+x[1]+'"><b>'+x[0].num+'</b><span>'+esc(x[0].titulo)+'</span></button>'}).join('');
+});
+side.innerHTML=h;
+side.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){go(+b.dataset.i,true)})});
+
+function list(arr,ord){return (ord?'<ol>':'<ul class="ticks small">')+arr.map(function(x){return '<li>'+esc(x)+'</li>'}).join('')+(ord?'</ol>':'</ul>')}
+async function draw(m){
+  var box=document.getElementById('dg');
+  if(showOrig&&m.orig){box.innerHTML='<img src="'+m.orig+'" alt="Diagrama original: '+esc(m.titulo)+'">';return}
+  if(!cache[m.id]){
+    box.innerHTML='<div class="loading">Dibujando el diagrama…</div>';
+    try{if(document.fonts&&document.fonts.ready)await document.fonts.ready}catch(e){}
+    try{var r=await mermaid.render('svg-'+m.id+'-'+Date.now(),m.code);cache[m.id]=r.svg}catch(e){cache[m.id]='<div class="loading">No se pudo dibujar este diagrama.</div>'}
+  }
+  if(A[cur]!==m)return;
+  box.innerHTML=cache[m.id];applyZoom();
+}
+function applyZoom(){var s=document.querySelector('#dg svg');if(!s)return;var w=s.viewBox&&s.viewBox.baseVal?s.viewBox.baseVal.width:0;var pw=(document.querySelector('.paper').clientWidth||900)-44;var base=pw<600?Math.min(w,Math.max(pw,640)):Math.min(w,pw);if(w){s.style.width=Math.round(base*zoom)+'px'}}
+window.addEventListener('resize',function(){applyZoom()});
+function go(i,push){
+  cur=(i+A.length)%A.length;var m=A[cur];zoom=1;showOrig=false;
+  side.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-current',+b.dataset.i===cur)});
+  var v=document.getElementById('view');
+  v.innerHTML='<div class="mhead"><div><p class="eyebrow">Mapa '+m.num+' · '+esc(m.grupo)+'</p><h2>'+esc(m.titulo)+'</h2><p class="lede" style="margin:0">'+esc(m.sub)+'</p></div></div>'+
+   '<div class="note mt"><span class="tag">En palabras sencillas</span><p>'+esc(m.simple)+'</p></div>'+
+   '<div class="toolbar"><button class="btn" type="button" id="zout" aria-label="Alejar">−</button><button class="btn" type="button" id="zin" aria-label="Acercar">+</button><button class="btn" type="button" id="zfit">Ajustar</button><span class="small muted" id="zhint"></span>'+(m.orig?'<div class="seg" role="group" aria-label="Versión del diagrama" style="margin-left:auto"><button type="button" aria-pressed="true" id="vnew">Redibujado</button><button type="button" aria-pressed="false" id="vold">Original</button></div>':'')+'</div>'+
+   '<div class="paper"><div class="inner" id="dg"></div></div>'+
+   '<p class="small muted mt">Fuente: '+esc(m.fuente)+'</p>'+
+   '<div class="cols"><div class="card"><span class="tag">Pasos</span>'+list(m.pasos,true)+'</div><div class="card"><span class="tag">Si algo falla</span>'+list(m.excepciones)+'</div><div class="card"><span class="tag">Qué tiene que existir</span>'+list(m.artefactos)+'</div></div>'+
+   (m.prueba?'<div class="note mt"><span class="tag">Prueba de aceptación</span><p>'+esc(m.prueba)+'</p></div>':'')+
+   '<div class="fix"><span class="tag">Corregido respecto al original</span>'+list(m.correcciones)+'</div>'+
+   '<div class="mnav"><button class="btn" type="button" id="mprev">Mapa anterior</button><button class="btn primary" type="button" id="mnext">Mapa siguiente</button></div>';
+  document.getElementById('zin').onclick=function(){zoom=Math.min(zoom*1.25,3);applyZoom()};
+  document.getElementById('zout').onclick=function(){zoom=Math.max(zoom/1.25,.4);applyZoom()};
+  document.getElementById('zfit').onclick=function(){zoom=1;applyZoom()};
+  document.getElementById('mprev').onclick=function(){go(cur-1,true);v.scrollIntoView({behavior:'smooth',block:'start'})};
+  document.getElementById('mnext').onclick=function(){go(cur+1,true);v.scrollIntoView({behavior:'smooth',block:'start'})};
+  if(m.orig){var bn=document.getElementById('vnew'),bo=document.getElementById('vold');
+    bn.onclick=function(){showOrig=false;bn.setAttribute('aria-pressed','true');bo.setAttribute('aria-pressed','false');draw(m)};
+    bo.onclick=function(){showOrig=true;bo.setAttribute('aria-pressed','true');bn.setAttribute('aria-pressed','false');draw(m)};}
+  if(push){try{history.replaceState(null,'','#'+m.id)}catch(e){location.hash=m.id}}
+  draw(m);
+}
+function fromHash(){var id=(location.hash||'').slice(1),i=A.findIndex(function(m){return m.id===id});return i<0?0:i}
+window.addEventListener('hashchange',function(){var i=fromHash();if(i!==cur)go(i,false)});
+go(fromHash(),false);
+})();
+</script>
+</body>
+</html>

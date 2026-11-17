@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Varios · Plan de construcción</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<style>
+.gantt-wrap{overflow-x:auto}
+.gantt{display:grid;grid-template-columns:190px repeat(13,minmax(56px,1fr));gap:5px 3px;min-width:960px;font-size:13px;align-items:center}
+.gantt .wk{text-align:center;color:var(--ink-muted);font-weight:600;font-size:12px;line-height:1.2;padding-bottom:4px}
+.gantt .wk small{display:block;font-weight:400;font-size:11px}
+.gantt .wk.hol{color:var(--warn)}
+.gantt .lab{font-weight:600;font-size:13.5px;padding-right:8px}
+.gantt .lab small{display:block;font-weight:400;color:var(--ink-muted);font-size:11.5px}
+.gantt .bar{height:28px;border-radius:999px;background:var(--accent);color:var(--on-accent);font-size:12px;font-weight:600;display:flex;align-items:center;padding:0 10px;white-space:nowrap;overflow:hidden}
+.gantt .b2{background:var(--wine);color:#fff}.gantt .b3{background:var(--s3);color:#fff}.gantt .b4{background:var(--ink-muted);color:var(--surface)}
+.gantt .soft{background:var(--accent-tint);color:var(--accent)}.gantt .wsoft{background:var(--wine-tint);color:var(--wine)}
+.gantt .gate{height:28px;display:grid;place-items:center}
+.gantt .gate span{width:22px;height:22px;transform:rotate(45deg);background:var(--ink);border-radius:5px;display:block}
+.gantt .sep{grid-column:1/-1;height:1px;background:var(--hairline);margin:4px 0}
+.wk-card{border-bottom:1px solid var(--hairline);padding:20px 0}
+.wk-card:last-child{border-bottom:0}
+.wk-top{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap;margin-bottom:10px}
+.wk-top b{font-size:19px;letter-spacing:-.01em}
+.wk-top .d{color:var(--ink-muted);font-size:14px}
+.wk-top .ph{margin-left:auto}
+.wk-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:760px){.wk-grid{grid-template-columns:1fr}}
+.wk-grid ul{margin:0;padding-left:18px;font-size:15px}.wk-grid li{margin:4px 0}
+.who-h{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:4px}
+.done{font-size:14.5px;background:var(--accent-tint);border-radius:12px;padding:10px 14px;margin-top:12px}
+.done b{color:var(--accent)}
+.extra{font-size:14px;color:var(--ink-muted);margin-top:8px}
+.extra b{color:var(--ink)}
+.gatebox{background:var(--ink);color:var(--surface);border-radius:12px;padding:12px 16px;margin-top:12px;font-size:14.5px}
+.gatebox b{color:var(--surface)}
+.ref{font-size:12.5px;color:var(--ink-muted);margin-top:6px}
+.cl{list-style:none;padding:0;margin:0}
+.cl li{border-bottom:1px solid var(--hairline)}
+.cl label{display:flex;gap:10px;align-items:flex-start;padding:9px 0;font-size:15px;cursor:pointer}
+.cl input{margin-top:3px;width:17px;height:17px;accent-color:var(--accent);flex:none}
+.cl input:checked+span{color:var(--ink-muted);text-decoration:line-through}
+.prog{height:8px;border-radius:8px;background:var(--track);overflow:hidden;margin:8px 0 14px}
+.prog i{display:block;height:100%;background:var(--accent);width:0;transition:width .4s}
+</style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <p class="eyebrow">Plan de construcción</p>
+    <h1>Del 18 de noviembre al 12 de febrero: construir el cerebro y dejarlo listo para el primer cliente.</h1>
+    <p class="lede">Doce semanas de construcción en el orden que fija la Guía v1.4. Cada semana dice qué hace cada socio, cuándo está hecha y qué se puede dejar si no da tiempo. Al final hay una lista maestra para que no se escape nada.</p>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="glass">
+      <p class="eyebrow">El objetivo a 12/02/2027</p>
+      <h2 style="max-width:none">Listo para el primer cliente: el sistema funciona con datos inventados y todo lo demás está preparado para vender.</h2>
+      <div class="grid g3 mt">
+        <div class="card"><span class="tag">Producto</span><ul class="ticks small"><li>Proceso de referencia funcionando de principio a fin con datos inventados</li><li>Puerta técnica L0 superada con evidencias</li><li>Lista fechada de lo que falta para L2 (datos reales de un cliente)</li></ul></div>
+        <div class="card"><span class="tag">Empresa y legal</span><ul class="ticks small"><li>Forma de facturar resuelta</li><li>Acuerdo de socios firmado</li><li>Plantillas de contrato y de encargo de tratamiento (DPA) revisadas por un profesional</li></ul></div>
+        <div class="card"><span class="tag">Comercial</span><ul class="ticks small"><li>Demo grabada y en vivo</li><li>Propuesta de diagnóstico con precio</li><li>Web actualizada y lista de 40 contactos</li></ul></div>
+      </div>
+      <div class="note warm mt">
+        <span class="tag">El riesgo de este plan, y cómo lo cubrimos</span>
+        <p>Construir doce semanas sin clientes puede acabar en algo muy bien hecho para un proceso que nadie paga. Por eso hay una línea pequeña de <b>validación ligera</b>: desde la semana 2, Álvaro tiene una conversación por semana con alguien que haga ese proceso, sin vender nada. Son unas diez en total y unas 2 horas a la semana. Sirven para confirmar que el proceso de referencia es el bueno antes de que sea tarde para cambiarlo.</p>
+      </div>
+      <div class="note mt">
+        <span class="tag">Supuestos del plan</span>
+        <p>Juan programa y Álvaro lleva el proceso, los datos de prueba, lo legal y lo comercial. Cada uno dedica entre 10 y 15 horas a la semana. El proceso de referencia por defecto es la apertura de siniestros en corredurías, porque ya existe una demo. Se confirma en la semana 0. Si hay menos horas, se recorta lo que está marcado como "si da tiempo", no las pruebas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Vista general</p><h2>Una pieza cada semana, en el orden de la Guía.</h2><p class="lede">No se salta de fase. Si una semana no termina, la siguiente empieza por terminarla. S5 y S6 son Navidad y tienen menos carga.</p></div>
+    <div class="glass gantt-wrap">
+      <div class="gantt" id="gantt"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Controles de paso</p><h2>Tres viernes para comprobar que vamos bien.</h2></div>
+    <div class="grid g3">
+      <div class="glass"><span class="tag">Control A · viernes 18/12/2026</span><h3>El CEO decide sobre casos inventados</h3><p class="muted small"><b>Sí si:</b> entra una petición, el CEO la convierte en ficha, la clasifica y toma una de las cinco decisiones con su motivo. Todo queda guardado en la base de datos. Los tests de separación de clientes pasan.</p><p class="small"><b>Si no:</b> se usan S5 y S6 para terminarlo y se recorta lo marcado como "si da tiempo" en enero.</p></div>
+      <div class="glass"><span class="tag">Control B · viernes 15/01/2027</span><h3>El proceso de referencia funciona de principio a fin</h3><p class="muted small"><b>Sí si:</b> 20 siniestros inventados recorren todo el flujo: lectura, extracción, reglas, revisión humana, apertura simulada y registro.</p><p class="small"><b>Si no:</b> se reduce el panel y las métricas de S10 a lo mínimo y se protege la semana de calidad.</p></div>
+      <div class="glass"><span class="tag">Control C · viernes 12/02/2027</span><h3>Listo para el primer cliente</h3><p class="muted small"><b>Sí si:</b> se cumple todo lo de la caja de objetivo de arriba y la lista maestra de abajo está marcada.</p><p class="small"><b>Siempre:</b> retrospectiva y plan para conseguir clientes desde el 15/02.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Semana a semana</p><h2>Qué hace cada uno, cuándo está hecho y qué se puede dejar.</h2><p class="lede">Cada semana se construye con Claude Code siguiendo la regla de la Guía: una fase y una tarea pequeña cada vez, con tests y documentación antes de dar nada por terminado.</p></div>
+    <div class="glass">
+      <div class="seg" data-seg="tramo" role="group" aria-label="Elegir tramo">
+        <button aria-pressed="true" data-show="t1">Noviembre y diciembre</button>
+        <button aria-pressed="false" data-show="t2">Navidad</button>
+        <button aria-pressed="false" data-show="t3">Enero</button>
+        <button aria-pressed="false" data-show="t4">Febrero</button>
+      </div>
+      <div id="t1" class="mt2"></div>
+      <div id="t2" class="mt2" hidden></div>
+      <div id="t3" class="mt2" hidden></div>
+      <div id="t4" class="mt2" hidden></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="two">
+      <div>
+        <p class="eyebrow">Lista maestra</p>
+        <h2>Todo lo que tiene que estar hecho el 12 de febrero.</h2>
+        <p class="muted">Marca cada casilla cuando esté hecha. Se guarda solo en este navegador, así que la referencia oficial sigue siendo el repositorio (docs/10-plan-12-semanas.md).</p>
+        <div class="prog"><i id="clbar"></i></div>
+        <p class="small muted" id="cltext"></p>
+      </div>
+      <div class="glass" id="checklist"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Cómo se trabaja cada semana</p><h2>Tres rutinas fijas y cinco reglas.</h2></div>
+    <div class="grid g3">
+      <div class="card"><h4>Lunes · 20 minutos</h4><p class="small muted">Leer el plan de la semana, partirlo en tareas pequeñas y apuntarlas en el repositorio.</p></div>
+      <div class="card"><h4>Cada tarea</h4><p class="small muted">Claude Code primero inspecciona y propone; después implementa, pasa los tests y documenta. Cada cambio entra por pull request.</p></div>
+      <div class="card"><h4>Viernes · 45 minutos</h4><p class="small muted">Demo de lo hecho entre los dos, revisar el "hecho cuando", actualizar el plan y apuntar decisiones en DECISIONS.md.</p></div>
+    </div>
+    <div class="note mt"><span class="tag">Reglas de la Guía v1.4 para trabajar con Claude</span><ul class="ticks small"><li>No cambiar la arquitectura ni añadir dependencias sin justificarlo en DECISIONS.md.</li><li>No inventar datos ni dar una fase por terminada sin evidencias.</li><li>Limitar llamadas, presupuesto y acciones externas.</li><li>Nada de datos reales de nadie en todo el periodo: solo datos inventados.</li><li>Lo que no tenga test no está hecho.</li></ul></div>
+  </section>
+  <div id="next" class="next"></div>
+</main>
+<script src="js/site.js"></script>
+<script>
+(function(){
+// ---------- Gantt ----------
+var W=[['S0','18 nov'],['S1','23 nov'],['S2','30 nov'],['S3','7 dic'],['S4','14 dic'],['S5','21 dic',1],['S6','28 dic',1],['S7','4 ene'],['S8','11 ene'],['S9','18 ene'],['S10','25 ene'],['S11','1 feb'],['S12','8 feb']];
+// filas: [etiqueta, sub, [[inicio(0-12), duracion, texto, clase]]]
+var R=[
+ ['Socios y empresa','',[[0,1,'Pacto','b4'],[5,3,'Forma jurídica','b4'],[9,3,'Contrato y DPA','b4']]],
+ ['sep'],
+ ['Entorno','Juan',[[1,1,'Base','']]],
+ ['Datos y auditoría','Juan',[[2,1,'Modelo','']]],
+ ['Seguridad','Juan',[[3,1,'Aislar',''],[4,9,'Tests de separación en cada cambio','soft']]],
+ ['CEO limitado','Juan',[[4,1,'CEO','']]],
+ ['Motor y herramientas','Juan',[[5,2,'Motor + puerta','']]],
+ ['Conocimiento','Juan',[[7,1,'Docs','']]],
+ ['Proceso de referencia','Juan + Álvaro',[[8,1,'Flujo','b3']]],
+ ['Calidad','Juan + Álvaro',[[9,1,'Examen','b3']]],
+ ['Panel y métricas','Juan',[[10,1,'Panel','']]],
+ ['Puesta a punto','Juan',[[11,2,'Copias, despliegue, demo','']]],
+ ['sep'],
+ ['Proceso y datos de prueba','Álvaro',[[0,4,'AS-IS, 20 casos, criterios','b2']]],
+ ['Políticas y riesgos','Álvaro',[[3,2,'Uso y aprobaciones','wsoft']]],
+ ['Comercial','Álvaro',[[9,4,'Propuesta, precio, web, contactos','b2']]],
+ ['Validación ligera','Álvaro',[[2,10,'1 conversación por semana, sin vender','wsoft']]],
+ ['Cerebro en Claude','Los dos',[[0,2,'Pasos 1–5','soft']]],
+ ['sep'],
+ ['Controles de paso','',[[4,1,'G','gate'],[8,1,'G','gate'],[12,1,'G','gate']]]
+];
+var g='<div></div>'+W.map(function(w){return '<div class="wk'+(w[2]?' hol':'')+'">'+w[0]+'<small>'+w[1]+'</small></div>'}).join('');
+R.forEach(function(r){
+  if(r[0]==='sep'){g+='<div class="sep"></div>';return}
+  g+='<div class="lab">'+r[0]+(r[1]?'<small>'+r[1]+'</small>':'')+'</div>';
+  var pos=0;
+  r[2].forEach(function(b){
+    if(b[0]>pos)g+='<div style="grid-column:'+(pos+2)+' / span '+(b[0]-pos)+'"></div>';
+    if(b[3]==='gate')g+='<div class="gate" style="grid-column:'+(b[0]+2)+'"><span></span></div>';
+    else g+='<div class="bar '+b[3]+'" style="grid-column:'+(b[0]+2)+' / span '+b[1]+'" title="'+b[2]+'">'+b[2]+'</div>';
+    pos=b[0]+b[1];
+  });
+  if(pos<13)g+='<div style="grid-column:'+(pos+2)+' / span '+(13-pos)+'"></div>';
+});
+document.getElementById('gantt').innerHTML=g;
+
+// ---------- Semanas ----------
+var S=[
+{t:'t1',s:'S0 · Arranque',d:'18–22 nov',ph:'Decisiones',
+ j:['Contratar Claude y hacer los pasos 1 a 5 del cerebro de trabajo (página Construir en Claude).','Aceptar el pull request en GitHub y crear el proyecto de Claude conectado al repositorio.','Instalar en el Mac: Git, Python con uv, Docker Desktop y VS Code.'],
+ a:['Conversación de socios: roles, horas reales por semana, reparto de la empresa, qué pasa si uno lo deja. Dejarlo por escrito.','Confirmar el proceso de referencia (por defecto: apertura de siniestros en corredurías).','Leer juntos esta web y marcar desacuerdos.'],
+ h:'Acuerdo de socios escrito, proceso de referencia confirmado, proyecto de Claude creado y repositorio con todo en la rama principal.',
+ x:'',ref:'Guía v1.4 §17 (decisiones de negocio) · página Construir en Claude'},
+{t:'t1',s:'S1 · Entorno',d:'23–29 nov',ph:'Fase 1 de la Guía',
+ j:['Repositorio con estructura del backend: Python, uv, FastAPI con /health.','PostgreSQL con Docker Compose; archivos .env y .gitignore.','Ruff, pytest y GitHub Actions (CI) que corran en cada cambio.','Escáner de secretos para que nunca se suba una contraseña.','Documentar cómo arrancar y parar todo.'],
+ a:['Escribir la ficha del proceso de referencia tal como se hace hoy (AS-IS), con lo que se sabe del sector.','Empezar 20 siniestros inventados realistas: correo, parte en PDF, datos de póliza. Ninguno real.','Definir qué es un buen resultado: qué campos se extraen y cuándo algo es un error.'],
+ h:'Cualquiera de los dos arranca el proyecto en su Mac siguiendo el README, /health responde y el CI está en verde.',
+ x:'<b>Si da tiempo:</b> plantilla de pull request y protección de la rama principal.',ref:'Guía v1.4 §5 fase 1, §6 primer fin de semana, §16 orden 2'},
+{t:'t1',s:'S2 · Datos y auditoría',d:'30 nov – 6 dic',ph:'Fase 2',
+ j:['Modelo de datos con migraciones (Alembic): cliente, usuario, solicitud, plan, tarea, documento, aprobación, auditoría, ejecución de modelo y uso de herramienta.','Registro de auditoría que guarda cada cambio: quién, qué, cuándo.','Tests de que se crean, leen y relacionan bien.'],
+ a:['Terminar los 20 casos inventados con su resultado esperado: el "examen" del sistema.','Primera conversación de validación ligera con alguien que abra siniestros. Solo preguntar.','Glosario del sector: términos de seguros que el sistema debe entender.'],
+ h:'Las migraciones crean todas las tablas desde cero y los tests pasan. Los 20 casos de prueba están en el repositorio.',
+ x:'<b>Si da tiempo:</b> datos de ejemplo cargados automáticamente para las demos.',ref:'Guía v1.4 §13 modelo de datos mínimo · Atlas mapa 16'},
+{t:'t1',s:'S3 · Seguridad y clientes aislados',d:'7–13 dic · festivo el 8',ph:'Fase 3',
+ j:['Autenticación con usuarios en PostgreSQL y tokens con caducidad.','Roles y permisos. El cliente se deduce siempre de la identidad, nunca de lo que mande el usuario.','Dos clientes de prueba con datos señuelo. Tests que intentan leer los datos de uno desde el otro y deben fallar.','Secretos solo en variables de entorno.'],
+ a:['Política de uso: qué puede hacer el sistema, qué no y qué solo con aprobación.','Matriz de aprobaciones del proceso de referencia: qué acción es de riesgo bajo, medio o alto.','Segunda conversación de validación.'],
+ h:'Los tests de acceso cruzado fallan siempre por diseño, en API y base de datos. La política de uso está en el repositorio.',
+ x:'<b>Si da tiempo:</b> seguridad a nivel de fila (RLS) en PostgreSQL como segunda barrera.',ref:'Guía v1.4 §7 · Atlas mapa 08 · P14, P19, P30'},
+{t:'t1',s:'S4 · CEO limitado',d:'14–20 dic',ph:'Fases 4–5',
+ j:['Adaptador de modelos: una versión simulada (sin coste) y otra con la API de Claude, intercambiables.','Ficha estructurada de la petición (hechos, supuestos, preguntas).','Clasificación con campos confirmados, inferidos o desconocidos.','Las cinco decisiones: continuar, preguntar, escalar, rechazar y derivar, cada una con motivo y guardada.','Límite de coste por petición.'],
+ a:['Probar el CEO con los casos inventados y anotar dónde se equivoca.','Preparar 5 peticiones trampa: fuera de alcance, datos de salud, instrucciones escondidas en un PDF.','Tercera conversación de validación.'],
+ h:'Control A: los 20 casos y las 5 trampas pasan por el CEO y acaban en la decisión correcta o en una pregunta, todo guardado.',
+ x:'<b>Si da tiempo:</b> plan estructurado con tareas y dependencias.',ref:'Guía v1.4 Anexo III §2 · Atlas mapas 02 y 03',gate:'Control A · viernes 18/12'},
+{t:'t2',s:'S5 · Motor de procesos',d:'21–27 dic · festivo el 25',ph:'Fases 8–9, carga ligera',
+ j:['Estados del encargo y de la tarea con transiciones permitidas (no texto libre).','Reintentos con límite y claves de idempotencia para no duplicar acciones.','El plan del CEO se convierte en tareas que el motor ejecuta en orden.'],
+ a:['Consultar con un gestor la forma jurídica y cómo facturar el primer contrato.','Pedir presupuesto a un abogado para revisar contrato marco y encargo de tratamiento (DPA).'],
+ h:'Un encargo inventado recorre los estados correctos y un reinicio del sistema no pierde ni duplica tareas.',
+ x:'<b>Si da tiempo:</b> plazos y avisos cuando una tarea se atasca.',ref:'Guía v1.4 Anexo III §4 · Atlas mapas 04, 06 y 16 · P22, P35'},
+{t:'t2',s:'S6 · Puerta de herramientas',d:'28 dic – 3 ene · festivo el 1',ph:'Fase 5 del orden definitivo, carga ligera',
+ j:['Catálogo de capacidades con permisos y límites.','Puerta de herramientas con lista cerrada y una herramienta inofensiva de prueba.','Tarea humana: el flujo se pausa, una persona aprueba o rechaza y se reanuda.','Botón de parada por herramienta y por cliente.'],
+ a:['Descansar.','Empezar los trámites de la forma jurídica elegida.'],
+ h:'Una acción no autorizada se bloquea y queda registrada; una acción que requiere aprobación espera a la persona.',
+ x:'<b>Si da tiempo:</b> sandbox para ejecutar código no confiable.',ref:'Guía v1.4 Anexo III §5 · Atlas mapa 05 · P10, P21'},
+{t:'t3',s:'S7 · Conocimiento',d:'4–10 ene · festivo el 6',ph:'Fase 10',
+ j:['Almacén de originales (RAW) con huella, versión, origen y permisos.','Ingesta con cuarentena básica: tipo de archivo, tamaño, metadatos.','Búsqueda de texto en PostgreSQL filtrada por permisos antes de buscar, con citas en cada respuesta.','Fichas de conocimiento con estados: borrador, validada, aprobada.'],
+ a:['Escribir 10 fichas de conocimiento del sector de seguros, con su fuente, para cargar como ejemplo.','Cuarta conversación de validación.'],
+ h:'Una búsqueda desde el cliente A nunca devuelve nada del cliente B y cada respuesta lleva su cita.',
+ x:'<b>Si da tiempo:</b> detección de duplicados y enlaces rotos.',ref:'Guía v1.4 Anexo III §6 · Atlas mapa 07 · P04, P07, P13'},
+{t:'t3',s:'S8 · Proceso de referencia de punta a punta',d:'11–17 ene',ph:'Piloto interno',
+ j:['Leer correo y PDF inventados, extraer los datos con IA y validarlos con un esquema fijo.','Reglas fijas de póliza en vigor y cobertura.','Desvío automático a persona de los casos con lesiones.','Revisión del tramitador como tarea humana.','Apertura del expediente en un sistema simulado a través de la puerta de herramientas.'],
+ a:['Hacer de tramitador: revisar las fichas como lo haría un cliente y anotar todo lo que confunde.','Quinta conversación de validación: enseñar capturas, no vender.'],
+ h:'Control B: los 20 siniestros inventados recorren todo el flujo y el registro permite reconstruir cada uno.',
+ x:'<b>Si da tiempo:</b> lectura de fotos además del PDF.',ref:'Atlas Evolución §11.1 secuencia del MVP · Simulación, caso A',gate:'Control B · viernes 15/01'},
+{t:'t3',s:'S9 · Calidad y evaluación',d:'18–24 ene',ph:'Fase 7',
+ j:['Ampliar el examen a 50 casos con casos límite y ataques.','Medir el acierto por campo, las omisiones y el coste por caso.','Pruebas de instrucciones escondidas en documentos.','Cada fallo encontrado se convierte en un test nuevo.'],
+ a:['Crear los 30 casos nuevos del examen, incluidos los difíciles.','Fijar con Juan el umbral mínimo de acierto para dar el sistema por bueno.','Empezar el paquete comercial: estructura de la propuesta de diagnóstico.'],
+ h:'Informe de evaluación con cifras reales del examen y ninguna prueba de seguridad fallando.',
+ x:'<b>Si da tiempo:</b> comparar dos modelos de IA con el mismo examen.',ref:'Guía v1.4 Anexo III §9 · Atlas mapas 09 y 10 · P09, P23'},
+{t:'t3',s:'S10 · Panel y métricas',d:'25–31 ene',ph:'Fases 11–13',
+ j:['Panel sencillo: lista de casos, estado, ficha propuesta y botones de aprobar o corregir.','Métricas del proceso: tiempo por caso, porcentaje sin corregir, coste, escalados.','Registros y alertas básicas.'],
+ a:['Probar el panel como si fuera el cliente y priorizar arreglos.','Precio del diagnóstico y del piloto, razonado con las conversaciones.','Sexta conversación de validación.'],
+ h:'Una persona sin conocimientos técnicos puede revisar y aprobar un caso desde el panel sin ayuda.',
+ x:'<b>Si da tiempo:</b> exportar el informe de métricas en PDF.',ref:'Atlas Evolución §3.4 inteligencia operativa · P15, P37'},
+{t:'t4',s:'S11 · Puesta a punto',d:'1–7 feb',ph:'Fase 14',
+ j:['Copias de seguridad automáticas y una restauración real probada en un entorno limpio.','Despliegue de la demo en la nube, solo con datos inventados.','Runbooks: caída del proveedor de IA, credencial comprometida, fallo de un flujo.','Inventario de sistemas de IA y de proveedores, con región y condiciones de datos.'],
+ a:['Recibir la revisión del abogado: contrato marco y encargo de tratamiento.','Propuesta de diagnóstico terminada con precio.','Actualizar la web y la lista de 40 contactos.'],
+ h:'Se ha borrado y restaurado la base de datos de la demo sin perder nada, y la demo funciona en una URL.',
+ x:'<b>Si da tiempo:</b> simulacro de incidente de 30 minutos.',ref:'Guía v1.4 Anexo III §11 · Marco legal §12 · Atlas mapas 11 y 14 · P17, P26, P27'},
+{t:'t4',s:'S12 · Cierre y demo',d:'8–14 feb',ph:'Control C',
+ j:['Pasar todas las pruebas y cerrar la puerta técnica L0 con evidencias.','Escribir la lista fechada de lo que falta para L2 (datos reales de un cliente).','Documentación al día en el repositorio.'],
+ a:['Grabar la demo de 5 minutos y ensayar la demo en vivo.','Preparar el plan comercial desde el 15/02.','Retrospectiva de las 12 semanas juntos.'],
+ h:'Control C: lista maestra completa, demo grabada y plan comercial listo.',
+ x:'',ref:'Guía v1.4 Anexo III §15 puertas · Marco legal §13',gate:'Control C · viernes 12/02'}
+];
+function li(a){return a.map(function(x){return '<li>'+x+'</li>'}).join('')}
+S.forEach(function(w){
+  var el=document.getElementById(w.t);
+  el.insertAdjacentHTML('beforeend','<div class="wk-card"><div class="wk-top"><b>'+w.s+'</b><span class="d">'+w.d+'</span><span class="pill info ph">'+w.ph+'</span></div><div class="wk-grid"><div><div class="who-h">Juan</div><ul>'+li(w.j)+'</ul></div><div><div class="who-h">Álvaro</div><ul>'+li(w.a)+'</ul></div></div><div class="done"><b>Hecho cuando:</b> '+w.h+'</div>'+(w.x?'<p class="extra">'+w.x+'</p>':'')+(w.gate?'<div class="gatebox"><b>'+w.gate+'</b>. Ver criterios arriba.</div>':'')+'<p class="ref">Referencia: '+w.ref+'</p></div>');
+});
+
+// ---------- Lista maestra ----------
+var C=[
+['Empresa',['Acuerdo de socios firmado','Forma jurídica decidida y en trámite o resuelta','Cuenta y forma de facturar listas','Plan de Claude contratado y proyecto conectado al repositorio']],
+['Producto',['Entorno reproducible con README, CI en verde y escáner de secretos','Modelo de datos con migraciones y auditoría','Autenticación, roles y cliente deducido de la identidad','Tests de separación de clientes que fallan por diseño','CEO con ficha, clasificación y cinco decisiones','Motor de procesos con estados, reintentos e idempotencia','Puerta de herramientas con lista cerrada, aprobaciones y botón de parada','Conocimiento con originales, permisos y citas','Proceso de referencia de punta a punta con datos inventados','Examen de 50 casos con umbral de acierto superado','Pruebas de instrucciones escondidas superadas','Panel de revisión usable por alguien no técnico','Métricas: tiempo, coste, acierto y escalados','Copias de seguridad con restauración probada','Demo desplegada solo con datos inventados','Puerta técnica L0 cerrada con evidencias','Lista fechada de lo que falta para L2']],
+['Seguridad y legal',['Política de uso y matriz de aprobaciones','Inventario de sistemas de IA y de proveedores','Runbooks de incidentes básicos','Contrato marco y encargo de tratamiento revisados por un profesional','Ningún dato real de nadie usado en todo el periodo']],
+['Comercial',['Proceso de referencia confirmado con conversaciones reales','Propuesta de diagnóstico con precio','Demo grabada de 5 minutos','Web actualizada','Lista de 40 contactos','Plan comercial desde el 15/02']]];
+var KEY='varios-checklist-v1',st={};try{st=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+var h='',n=0;
+C.forEach(function(g){h+='<p class="tag" style="margin-top:12px">'+g[0]+'</p><ul class="cl">';g[1].forEach(function(t){var id='c'+(n++);h+='<li><label><input type="checkbox" data-id="'+id+'"'+(st[id]?' checked':'')+'><span>'+t+'</span></label></li>'});h+='</ul>'});
+var box=document.getElementById('checklist');box.innerHTML=h;
+function upd(){var all=box.querySelectorAll('input'),d=box.querySelectorAll('input:checked').length;document.getElementById('clbar').style.width=(d/all.length*100)+'%';document.getElementById('cltext').textContent=d+' de '+all.length+' hechas';}
+box.addEventListener('change',function(e){if(e.target.dataset.id){st[e.target.dataset.id]=e.target.checked;try{localStorage.setItem(KEY,JSON.stringify(st))}catch(err){}upd()}});
+upd();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Varios · El motor de conocimiento</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<style>
+.spaces{display:grid;gap:10px}
+.sp{border:1.5px solid var(--hairline);border-radius:var(--r-lg);padding:14px 16px;background:var(--card)}
+.sp .sp{background:var(--glass-strong)}
+.sp.k{border-color:var(--accent);background:var(--accent-tint)}
+.tree{font-size:15px;line-height:1.9;font-variant-numeric:tabular-nums}
+.tree code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13.5px;background:var(--card);padding:2px 7px;border-radius:6px}
+</style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <p class="eyebrow">El motor de conocimiento</p>
+    <h1>Una biblioteca con tres plantas y un bibliotecario muy estricto.</h1>
+    <p class="lede">El cerebro solo es tan bueno como lo que sabe. Esta pieza guarda los documentos, los convierte en conocimiento ordenado y decide quién puede leer qué.</p>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="grid g3">
+      <div class="glass"><span class="num">1</span><p class="eyebrow">RAW</p><h3>La caja fuerte</h3><p class="muted">Los documentos originales tal como llegan. Nunca se modifican. Cada uno guarda de dónde viene, cuándo, de quién es y quién puede verlo.</p></div>
+      <div class="glass"><span class="num">2</span><p class="eyebrow">WIKI</p><h3>Los apuntes ordenados</h3><p class="muted">Lo importante, escrito en fichas claras: procesos, conceptos, decisiones, aprendizajes. Cada afirmación enlaza al original del que sale.</p></div>
+      <div class="glass"><span class="num">3</span><p class="eyebrow">SCHEMA</p><h3>Las normas de la biblioteca</h3><p class="muted">Cómo entra un documento, cómo se resume, quién lo valida, cuándo caduca y quién puede consultarlo.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Las tres operaciones</p><h2>Entrar, consultar y revisar.</h2></div>
+    <div class="grid g3">
+      <div class="card"><h3>Ingesta</h3><p class="muted">Llega un documento: se valida, se clasifica, se guarda en la caja fuerte y la IA propone fichas nuevas para la wiki.</p></div>
+      <div class="card"><h3>Consulta</h3><p class="muted">Primero se comprueba quién pregunta y qué puede ver. Después se busca. La respuesta lleva siempre la cita de dónde sale.</p></div>
+      <div class="card"><h3>Revisión</h3><p class="muted">Una comprobación periódica busca enlaces rotos, duplicados, fichas caducadas y fichas sin fuente o sin dueño.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Ciclo de vida de una ficha</p><h2>La IA propone. Una persona aprueba.</h2></div>
+    <div class="flow">
+      <div class="step alt"><b>Original</b><span>raw</span></div>
+      <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="step"><b>Borrador</b><span>draft · lo escribe la IA</span></div>
+      <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="step"><b>Validada</b><span>validated · pasa las comprobaciones</span></div>
+      <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="step"><b>Aprobada</b><span>approved · la firma una persona</span></div>
+    </div>
+    <div class="grid g2 mt">
+      <div class="card"><span class="pill warn">En disputa</span><p class="mt">disputed · dos fuentes dicen cosas distintas. Nadie la usa hasta que se resuelva.</p></div>
+      <div class="card"><span class="pill crit">Obsoleta</span><p class="mt">deprecated · ya no vale. Se guarda por historial pero no se usa.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="two">
+      <div>
+        <p class="eyebrow">Espacios separados</p>
+        <h2>Lo de un cliente nunca se mezcla con lo de otro.</h2>
+        <p class="muted">El conocimiento vive en espacios separados. La separación la impone el sistema antes de buscar, no un filtro en la pantalla ni una instrucción a la IA. Es la regla que más confianza da a un cliente y la que más daño haría si fallara.</p>
+        <p class="muted">Sí se reutiliza lo aprendido (métodos, plantillas, conocimiento del sector), pero nunca los datos de un cliente.</p>
+      </div>
+      <div class="spaces">
+        <div class="sp k"><b>Corporativo de Varios</b><span class="muted small"> · métodos, plantillas, decisiones</span>
+          <div class="spaces mt">
+            <div class="sp"><b>Departamentos</b><span class="muted small"> · legal, finanzas…</span></div>
+            <div class="sp"><b>Sectores</b><span class="muted small"> · seguros, banca…</span></div>
+          </div>
+        </div>
+        <div class="grid g2">
+          <div class="sp"><b>Cliente A</b><div class="sp mt small">Proyecto A1</div></div>
+          <div class="sp"><b>Cliente B</b><div class="sp mt small">Proyecto B1</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="two">
+      <div class="glass">
+        <p class="eyebrow">Obsidian</p>
+        <h3>La estantería que vemos nosotros</h3>
+        <p class="muted">Obsidian es solo un editor cómodo para leer y escribir las fichas en texto. No es el sistema de permisos ni la base de datos: eso lo hace el servidor. Estructura propuesta de carpetas:</p>
+        <div class="tree">
+          <code>00_HOME</code> portada y mapa<br>
+          <code>01_CORPORATE</code> quiénes somos, oferta, precios<br>
+          <code>02_DEPARTMENTS</code> conocimiento por función<br>
+          <code>03_SECTORS</code> conocimiento por sector<br>
+          <code>04_METHODOLOGIES</code> cómo hacemos un diagnóstico, un piloto…<br>
+          <code>05_PROCESSES</code> procesos documentados<br>
+          <code>06_TEMPLATES</code> plantillas de actas, propuestas, informes<br>
+          <code>07_DECISIONS</code> registro de decisiones<br>
+          <code>08_GLOSSARY</code> glosario
+        </div>
+      </div>
+      <div class="glass">
+        <p class="eyebrow">La etiqueta de cada ficha</p>
+        <h3>Diez datos mínimos</h3>
+        <ul class="clean small">
+          <li><b>Dueño</b> · quién responde de ella</li>
+          <li><b>Fuente</b> · de qué original sale</li>
+          <li><b>Versión</b></li>
+          <li><b>Válida desde</b> y <b>fecha de revisión</b></li>
+          <li><b>Clasificación</b> · pública, interna, confidencial</li>
+          <li><b>Cliente</b> y <b>proyecto</b></li>
+          <li><b>Estado</b> · borrador, aprobada…</li>
+          <li><b>Fechas</b> de creación y cambio</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <div id="next" class="next"></div>
+</main>
+<script src="js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Varios · Los flujos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<style>
+.who{display:inline-block;font-size:11.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:3px 8px;border-radius:999px;margin-left:6px;vertical-align:2px}
+.who.ia{background:var(--accent-tint);color:var(--accent)}
+.who.re{background:var(--card);color:var(--ink-muted);border:1px solid var(--hairline)}
+.who.pe{background:var(--ink);color:var(--surface)}
+.states{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;align-items:center}
+.st{border-radius:var(--r-md);padding:12px;text-align:center;font-weight:600;font-size:14.5px;border:1.5px solid var(--hairline);background:var(--card)}
+.st small{display:block;font-weight:400;color:var(--ink-muted);font-size:12.5px;margin-top:2px}
+.st.a{border-color:var(--accent);background:var(--accent-tint)}
+.st.g{border-color:var(--good);background:var(--good-tint)}
+.st.w{border-color:var(--warn);background:var(--warn-tint)}
+.st.c{border-color:var(--crit);background:var(--crit-tint)}
+@media (max-width:700px){.states{grid-template-columns:1fr 1fr}}
+.risk td:first-child{white-space:nowrap}
+</style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <p class="eyebrow">Los flujos</p>
+    <h1>Qué pasa desde que llega un encargo hasta que se entrega.</h1>
+    <p class="lede">Once pasos, siempre los mismos. Todos los diagramas detallados están en el <a href="atlas.html">Atlas</a>. Al lado de cada paso verás quién lo hace: la IA, las reglas fijas o una persona.</p>
+    <p class="small muted"><span class="who ia" style="margin:0">IA</span> propone o entiende · <span class="who re">Reglas</span> código fijo · <span class="who pe">Persona</span> decide o aprueba</p>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="sec-head"><p class="eyebrow">Flujo 1</p><h2>El recorrido de una petición por el CEO digital.</h2></div>
+    <div class="glass vflow">
+      <div class="row"><div class="rail"><div class="dot">1</div><div class="line"></div></div><div class="body"><h4>Recibir la petición<span class="who re">Reglas</span></h4><p>Se identifica quién pide y de qué cliente es. Sin identidad no se sigue.</p></div></div>
+      <div class="row"><div class="rail"><div class="dot">2</div><div class="line"></div></div><div class="body"><h4>Entender qué se quiere<span class="who ia">IA</span></h4><p>Objetivo, sector, proceso y resultado esperado.</p></div></div>
+      <div class="row"><div class="rail"><div class="dot">3</div><div class="line"></div></div><div class="body"><h4>Preguntar lo que falta<span class="who ia">IA</span></h4><p>Si falta un dato crítico, se pregunta. No se inventa.</p></div></div>
+      <div class="row"><div class="rail"><div class="dot">4</div><div class="line"></div></div><div class="body"><h4>Medir el riesgo<span class="who re">Reglas</span><span class="who ia">IA</span></h4><p>Complejidad, impacto, sensibilidad de los datos. Las reglas fijan el nivel; la IA ayuda a clasificar.</p></div></div>
+      <div class="row"><div class="rail"><div class="dot">5</div><div class="line"></div></div><div class="body"><h4>Consultar lo que sabemos<span class="who re">Reglas</span></h4><p>Solo el conocimiento que ese usuario tiene permiso para ver.</p></div></div>
+      <div class="row"><div class="rail"><div class="dot">6</div><div class="line"></div></div><div class="body"><h4>Hacer el plan<span class="who ia">IA</span></h4><p>Tareas, responsables, herramientas y cómo sabremos que está bien hecho.</p></div></div>
+      <div class="row"><div class="rail"><div class="dot h">7</div><div class="line"></div></div><div class="body"><h4>Pedir aprobación si toca<span class="who pe">Persona</span></h4><p>Según el nivel de riesgo (tabla de abajo).</p></div></div>
+      <div class="row"><div class="rail"><div class="dot">8</div><div class="line"></div></div><div class="body"><h4>Ejecutar<span class="who re">Reglas</span><span class="who ia">IA</span></h4><p>El motor de procesos reparte las tareas y solo usa herramientas autorizadas.</p></div></div>
+      <div class="row"><div class="rail"><div class="dot">9</div><div class="line"></div></div><div class="body"><h4>Comprobar<span class="who re">Reglas</span><span class="who pe">Persona</span></h4><p>Pruebas independientes. Lo que dice la IA es una propuesta hasta que se valida.</p></div></div>
+      <div class="row"><div class="rail"><div class="dot">10</div><div class="line"></div></div><div class="body"><h4>Entregar<span class="who re">Reglas</span></h4><p>Resultado, pruebas de dónde sale cada dato y limitaciones conocidas.</p></div></div>
+      <div class="row"><div class="rail"><div class="dot">11</div><div class="line"></div></div><div class="body"><h4>Dejarlo registrado<span class="who re">Reglas</span></h4><p>Fuentes, versiones, decisiones, acciones y resultado. Todo se puede auditar.</p></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Cómo decide el CEO</p><h2>Cada encargo termina en una de cinco decisiones, y siempre con su motivo.</h2><p class="lede">La confianza que diga la IA es solo una pista. Cada dato se marca como confirmado, inferido o desconocido, y las reglas fijas deciden cuándo parar.</p></div>
+    <div class="grid g5">
+      <div class="card" style="border-color:var(--good)"><span class="pill good">Continuar</span><p class="small mt">Alcance permitido, datos suficientes y riesgo dentro de la política.</p><p class="small muted">Se crea el plan y las tareas.</p></div>
+      <div class="card" style="border-color:var(--accent)"><span class="pill info">Preguntar</span><p class="small mt">Falta algo que cambia la solución, el coste o el riesgo.</p><p class="small muted">Se pausan las tareas dependientes.</p></div>
+      <div class="card" style="border-color:var(--wine)"><span class="pill wine">Escalar</span><p class="small mt">Riesgo alto, duda relevante, dato sensible o excepción.</p><p class="small muted">Revisa una persona identificada.</p></div>
+      <div class="card" style="border-color:var(--crit)"><span class="pill crit">Rechazar</span><p class="small mt">Prohibido, no autorizado o contrario a la ley.</p><p class="small muted">Se explica el límite y se registra.</p></div>
+      <div class="card" style="border-color:var(--warn)"><span class="pill warn">Derivar</span><p class="small mt">Necesita un profesional o herramienta que no tenemos.</p><p class="small muted">Se pasa el contexto mínimo autorizado.</p></div>
+    </div>
+    <p class="small muted mt">Dibujado en el <a href="atlas.html#decisiones-ceo">Atlas, mapa 03</a>. Flujo completo con todos los desvíos en el <a href="atlas.html#flujo-ceo">mapa 02</a>.</p>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Flujo 2</p><h2>Los siete estados de una tarea.</h2><p class="lede">Cualquier tarea está siempre en uno de estos estados. Así se sabe en todo momento qué está pasando.</p></div>
+    <div class="glass">
+      <p class="tag">Camino normal</p><div class="flow"><div class="step alt"><b>En cola</b><span>queued · esperando turno</span></div><div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div><div class="step"><b>En marcha</b><span>running · trabajando</span></div><div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div><div class="step risk"><b>Esperando aprobación</b><span>needs_approval · si el riesgo lo pide</span></div><div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div><div class="step" style="background:var(--good-tint);border-color:var(--good)"><b>Terminada bien</b><span>succeeded</span></div></div><p class="tag mt2">Salidas posibles desde "En marcha"</p><div class="grid g3"><div class="st w">Bloqueada<small>blocked · falta un dato o un permiso</small></div><div class="st c">Fallida<small>failed · tras los reintentos permitidos</small></div><div class="st">Cancelada<small>cancelled · la para una persona</small></div></div>
+      <p class="muted small mt">Camino normal: en cola → en marcha → (esperando aprobación) → terminada bien. Si falta un dato pasa a bloqueada; si algo falla tras los reintentos permitidos, a fallida; una persona puede cancelarla en cualquier momento.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Flujo 3</p><h2>Quién aprueba depende de lo que está en juego.</h2><p class="lede">El riesgo se mide por tarea, no por proyecto: un mismo proyecto puede tener tareas de nivel bajo y de nivel alto. Y no se etiqueta por el nombre del departamento.</p></div>
+    <div class="glass">
+      <div class="table-wrap">
+      <table class="risk">
+        <thead><tr><th>Nivel</th><th>Ejemplos</th><th>Autonomía</th><th>Control</th></tr></thead>
+        <tbody>
+          <tr><td><span class="pill good">Bajo</span></td><td>Borrador interno, resumen de documentos no sensibles, clasificación auxiliar</td><td>Automático dentro de límites</td><td>QA automático y muestras revisadas</td></tr>
+          <tr><td><span class="pill warn">Medio</span></td><td>Análisis con datos internos, recomendaciones no vinculantes, cambios reversibles</td><td>Prepara y ejecuta en entorno controlado</td><td>Revisión de especialista; aprobación según impacto</td></tr>
+          <tr><td><span class="pill crit">Alto</span></td><td>Datos personales o sensibles, decisiones relevantes, cambios en producción, informes externos</td><td>Prepara, pero no termina ni envía solo</td><td>Aprobación humana explícita; doble control si procede</td></tr>
+          <tr><td><span class="pill wine">Crítico o prohibido</span></td><td>Acciones ilegales, acceso no autorizado, acciones irreversibles sin mandato</td><td>Bloqueado</td><td>Denegar y guardar registro</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="small muted mt">La autonomía sube poco a poco y solo con evidencia: si durante semanas un tipo de acción sale bien, se puede bajar su nivel de control.</p>
+    </div>
+    <div class="note warm mt"><span class="tag">Lo que el sistema nunca hace por su cuenta</span><ul class="ticks small"><li>Aprobar su propia recomendación o acción.</li><li>Enviar comunicaciones externas, firmar, pagar, borrar o tocar producción sin permiso y aprobación.</li><li>Afirmar que algo cumple la ley sin fuente vigente y revisión competente.</li><li>Tomar decisiones de alto impacto sobre personas sin marco legal y validación humana.</li><li>Ocultar dudas, omitir límites o inventar datos o fuentes.</li></ul></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Flujo 4 · ejemplo</p><h2>Así se vería un siniestro de seguros.</h2><p class="lede">Ejemplo ilustrativo basado en la demo de siniestros que ya existe. No es un cliente real.</p></div>
+    <div class="flow">
+      <div class="step alt"><b>Entra un correo</b><span>Un asegurado comunica un daño con fotos y un PDF.</span></div>
+      <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="step"><b>Se lee y se extrae</b><span>La IA saca póliza, fecha, tipo de daño y datos del asegurado.</span></div>
+      <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="step"><b>Se comprueba</b><span>Las reglas validan que la póliza existe, está en vigor y cubre ese daño.</span></div>
+      <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="step risk"><b>Una persona revisa</b><span>El tramitador ve la ficha propuesta y la acepta o corrige.</span></div>
+      <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="step"><b>Se abre el expediente</b><span>Se crea en su sistema y se registra todo lo hecho.</span></div>
+    </div>
+    <div class="grid g3 mt">
+      <div class="card"><span class="tag">Qué se mide</span><p>Tiempo desde que entra hasta que queda abierto, porcentaje de fichas sin corregir y coste por siniestro.</p></div>
+      <div class="card"><span class="tag">Qué no hace la IA</span><p>No decide si se paga ni cuánto. No contesta al asegurado sin revisión.</p></div>
+      <div class="card"><span class="tag">Qué datos toca</span><p>Datos personales y a veces de salud. Por eso hay que revisar la protección de datos antes de usar datos reales.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">La ficha de cada tarea</p><h2>Nada se ejecuta sin una ficha completa.</h2><p class="lede">Es el "contrato de tarea" del repositorio. Si falta un campo, la tarea no arranca.</p></div>
+    <div class="glass">
+      <div class="grid g4">
+        <div><span class="tag">Qué</span><ul class="clean small"><li>Identificador</li><li>Objetivo</li><li>Resultado esperado</li><li>Criterios de aceptación</li></ul></div>
+        <div><span class="tag">De quién</span><ul class="clean small"><li>Cliente y proyecto</li><li>Responsable</li><li>Aprobaciones necesarias</li></ul></div>
+        <div><span class="tag">Con qué</span><ul class="clean small"><li>Fuentes autorizadas</li><li>Herramientas permitidas</li><li>Nivel de riesgo</li></ul></div>
+        <div><span class="tag">Límites y prueba</span><ul class="clean small"><li>Coste y tiempo máximos</li><li>Estado actual</li><li>Evidencias</li></ul></div>
+      </div>
+    </div>
+  </section>
+  <div id="next" class="next"></div>
+</main>
+<script src="js/site.js"></script>
+</body>
+</html>

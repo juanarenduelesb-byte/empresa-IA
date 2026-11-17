@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Varios · Oficina de agentes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --surface:#F6EFE1;--ink:#22171A;--ink-muted:#6A5A55;--accent:#0B7A78;--on-accent:#FFFFFF;
+  --wine:#7A1F2E;--wine-tint:#F3E2E1;--card:#FFFBF3;--paper:#FFFFFF;--hairline:#E4D6BC;--accent-tint:#DDEFEA;--champ:#EADBB8;
+  --good:#1D6B3E;--good-tint:#E1F0E4;--warn:#8A5A0C;--warn-tint:#F8EBCF;--crit:#A8283A;--crit-tint:#F6DEDF;--ochre:#B07A2A;--ochre-tint:#F5E8D2;
+  --track:rgba(34,23,26,.06);--shadow:0 1px 0 rgba(34,23,26,.04),0 8px 22px -12px rgba(34,23,26,.22);
+  --font:"Instrument Sans",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){
+  --surface:#16100F;--ink:#F5ECDD;--ink-muted:#B8A898;--accent:#4FC2BC;--on-accent:#06201F;--wine:#E07A88;--wine-tint:#3A1A1F;
+  --card:#211917;--paper:#2A201E;--hairline:#3A2D29;--accent-tint:#123432;--champ:#4A3D27;--good:#5BD18E;--good-tint:#123222;
+  --warn:#F0C25E;--warn-tint:#3A2C0E;--crit:#F27C8A;--crit-tint:#3A1619;--ochre:#E2B26A;--ochre-tint:#3A2C17;--track:rgba(255,255,255,.07)}}
+:root[data-theme=dark]{
+  --surface:#16100F;--ink:#F5ECDD;--ink-muted:#B8A898;--accent:#4FC2BC;--on-accent:#06201F;--wine:#E07A88;--wine-tint:#3A1A1F;
+  --card:#211917;--paper:#2A201E;--hairline:#3A2D29;--accent-tint:#123432;--champ:#4A3D27;--good:#5BD18E;--good-tint:#123222;
+  --warn:#F0C25E;--warn-tint:#3A2C0E;--crit:#F27C8A;--crit-tint:#3A1619;--ochre:#E2B26A;--ochre-tint:#3A2C17;--track:rgba(255,255,255,.07)}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--surface);color:var(--ink);font:400 15px/1.5 var(--font);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto 0;height:5px;background:linear-gradient(90deg,var(--wine) 0 33.3%,var(--accent) 33.3% 66.6%,var(--champ) 66.6% 100%);z-index:90}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.top{position:sticky;top:5px;z-index:40;display:flex;align-items:center;gap:12px;padding:10px 18px;background:var(--surface);border-bottom:1px solid var(--hairline);flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:8px;font-weight:700;font-size:19px;letter-spacing:-.03em}
+.mk{display:inline-flex;gap:3px}.mk i{width:7px;height:18px;border-radius:4px;display:block}
+.mk i:nth-child(1){background:var(--wine)}.mk i:nth-child(2){background:var(--accent);height:13px;align-self:flex-end}.mk i:nth-child(3){background:var(--champ);height:15px;align-self:center;outline:1px solid var(--hairline)}
+.logo small{font-weight:500;color:var(--ink-muted);font-size:14px;letter-spacing:0}
+.status{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:5px 10px;border-radius:999px;background:var(--track);color:var(--ink-muted)}
+.status::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.status.live{background:var(--good-tint);color:var(--good)}.status.demo{background:var(--warn-tint);color:var(--warn)}
+.tbtn{border:1px solid var(--hairline);background:var(--card);border-radius:999px;padding:7px 13px;font-size:13.5px;font-weight:500;cursor:pointer;display:inline-flex;gap:6px;align-items:center}
+.tbtn:hover{border-color:var(--ink-muted)}
+.tbtn kbd{font:600 11px var(--font);color:var(--ink-muted);border:1px solid var(--hairline);border-radius:5px;padding:0 4px}
+.tbtn .n{background:var(--warn);color:#fff;border-radius:999px;font-size:11.5px;padding:0 7px;font-weight:700}
+.spacer{flex:1}
+.wrap{display:grid;grid-template-columns:1fr 400px;gap:16px;padding:16px 18px 30px;align-items:start}
+@media (max-width:1100px){.wrap{grid-template-columns:1fr}}
+/* Planta */
+.floor{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:auto auto auto;gap:12px}
+@media (max-width:760px){.floor{grid-template-columns:1fr}}
+.room{background:var(--card);border:1px solid var(--hairline);border-radius:22px;padding:14px;box-shadow:var(--shadow);position:relative;min-width:0}
+.room h3{margin:0;font-size:15px;display:flex;align-items:center;gap:8px}
+.room h3 .dot{width:10px;height:10px;border-radius:3px}
+.room h3 kbd{margin-left:auto;font:600 11px var(--font);color:var(--ink-muted);border:1px solid var(--hairline);border-radius:5px;padding:0 5px}
+.room p.d{margin:2px 0 10px;font-size:12.5px;color:var(--ink-muted)}
+.room.dim{opacity:.38}
+.desks{display:grid;grid-template-columns:repeat(2,1fr);gap:7px}
+.desk{display:flex;gap:8px;align-items:flex-start;padding-right:16px!important;border:1px solid var(--hairline);background:var(--paper);border-radius:12px;padding:7px 8px;cursor:pointer;text-align:left;min-width:0;position:relative}
+.desk:hover{border-color:var(--ink-muted)}
+.desk .av{flex:none;width:28px;height:28px;border-radius:9px;display:grid;place-items:center;font-weight:700;font-size:11px;color:#fff}
+.desk .nm{font-size:12.5px;font-weight:600;line-height:1.2}
+.desk .rl{font-size:11px;color:var(--ink-muted);line-height:1.2}
+.desk .st{position:absolute;top:6px;right:7px;width:8px;height:8px;border-radius:50%;background:var(--hairline)}
+.desk.work .st{background:var(--accent);box-shadow:0 0 0 0 var(--accent);animation:pulse 1.4s infinite}
+.desk.wait .st{background:var(--warn)}
+.desk.lead{border-color:var(--ink-muted)}
+.desk.flash{animation:flash 1s ease}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(11,122,120,.5)}100%{box-shadow:0 0 0 8px rgba(11,122,120,0)}}
+@keyframes flash{0%{background:var(--accent-tint)}100%{background:var(--paper)}}
+.brainbox{grid-column:2;grid-row:2;background:var(--ink);color:var(--surface);border-radius:22px;padding:16px;display:flex;flex-direction:column;gap:8px;cursor:pointer;box-shadow:var(--shadow);min-height:200px}
+@media (max-width:760px){.brainbox{grid-column:auto;grid-row:auto}}
+.brainbox h3{margin:0;font-size:16px}
+.brainbox p{margin:0;font-size:12.5px;opacity:.8}
+.brainbox .mini{flex:1;min-height:110px}
+.brainbox .k{display:flex;gap:10px;font-size:12px;opacity:.85;flex-wrap:wrap}
+.brainbox .k b{font-size:18px;display:block;font-variant-numeric:tabular-nums}
+/* Panel */
+.panel{position:sticky;top:70px;display:flex;flex-direction:column;gap:12px;max-height:calc(100vh - 86px)}
+@media (max-width:1100px){.panel{position:static;max-height:none}}
+.box{background:var(--card);border:1px solid var(--hairline);border-radius:20px;padding:14px;box-shadow:var(--shadow)}
+.box h4{margin:0 0 8px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--wine)}
+textarea,select,input[type=text]{font:inherit;color:var(--ink);background:var(--paper);border:1px solid var(--hairline);border-radius:12px;padding:9px 11px;width:100%}
+textarea{resize:vertical;min-height:70px}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.chip{border:1px solid var(--hairline);background:var(--paper);border-radius:999px;padding:6px 11px;font-size:13px;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+.btn{border:0;border-radius:999px;padding:9px 16px;font-weight:600;font-size:14px;cursor:pointer;background:var(--track)}
+.btn.p{background:var(--accent);color:var(--on-accent)}
+.btn.w{background:var(--wine);color:#fff}
+.btn.g{background:var(--good);color:#fff}
+.btn[disabled]{opacity:.5;cursor:default}
+.hint{font-size:12.5px;color:var(--ink-muted)}
+.feed{overflow:auto;display:flex;flex-direction:column;gap:8px;min-height:120px}
+.tk{border:1px solid var(--hairline);background:var(--paper);border-radius:14px;padding:10px 12px;cursor:pointer}
+.tk:hover{border-color:var(--ink-muted)}
+.tk .h{display:flex;gap:6px;align-items:center;flex-wrap:wrap;font-size:12px;color:var(--ink-muted)}
+.tk .t{font-size:14px;margin-top:4px;font-weight:500}
+.pill{display:inline-flex;align-items:center;gap:5px;font-weight:600;font-size:11.5px;padding:3px 8px;border-radius:999px}
+.pill::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.p-cola{background:var(--track);color:var(--ink-muted)}.p-marcha{background:var(--accent-tint);color:var(--accent)}
+.p-aprob{background:var(--warn-tint);color:var(--warn)}.p-preg{background:var(--wine-tint);color:var(--wine)}
+.p-hecha{background:var(--good-tint);color:var(--good)}.p-rech{background:var(--crit-tint);color:var(--crit)}
+.p-rut{background:var(--ochre-tint);color:var(--ochre)}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+/* Capas */
+.ov{position:fixed;inset:0;background:rgba(22,16,15,.45);z-index:60;display:none}
+.ov.on{display:block}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(640px,100vw);background:var(--surface);z-index:70;transform:translateX(105%);transition:transform .32s cubic-bezier(.3,1,.4,1);display:flex;flex-direction:column;border-left:1px solid var(--hairline)}
+.drawer.on{transform:none}
+.dh{display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid var(--hairline)}
+.dh .av{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;color:#fff;font-weight:700}
+.dh h2{margin:0;font-size:18px;line-height:1.2}
+.dh small{color:var(--ink-muted)}
+.dh .x{margin-left:auto}
+.db{flex:1;overflow:auto;padding:14px 16px}
+.df{border-top:1px solid var(--hairline);padding:12px 16px}
+.full{position:fixed;inset:24px;z-index:70;background:var(--surface);border:1px solid var(--hairline);border-radius:24px;display:none;flex-direction:column;overflow:hidden}
+.full.on{display:flex}
+@media (max-width:700px){.full{inset:8px}}
+.msg{border-radius:14px;padding:10px 12px;margin:8px 0;max-width:92%}
+.msg.u{background:var(--ink);color:var(--surface);margin-left:auto}
+.msg.a{background:var(--card);border:1px solid var(--hairline)}
+.md h1,.md h2,.md h3{font-size:16px;margin:12px 0 6px}
+.md p{margin:6px 0}.md ul,.md ol{margin:6px 0;padding-left:20px}
+.md table{border-collapse:collapse;font-size:13.5px;margin:8px 0;width:100%}
+.md td,.md th{border-bottom:1px solid var(--hairline);padding:5px 6px;text-align:left;vertical-align:top}
+.md code{background:var(--track);border-radius:5px;padding:1px 5px;font-size:13px}
+.sec{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--wine);margin:16px 0 6px;font-weight:600}
+.kv{display:grid;grid-template-columns:130px 1fr;gap:4px 12px;font-size:14px}
+.kv div:nth-child(odd){color:var(--ink-muted);font-size:13px}
+.tag{display:inline-block;font-size:12px;border:1px solid var(--hairline);border-radius:999px;padding:2px 8px;margin:2px}
+.board{display:grid;grid-template-columns:repeat(6,minmax(170px,1fr));gap:10px;overflow:auto;padding:14px;flex:1}
+.col{background:var(--track);border-radius:16px;padding:10px;min-height:200px}
+.col h5{margin:2px 2px 8px;font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-muted);display:flex;justify-content:space-between}
+.col .tk{margin-bottom:8px}
+.cal{padding:14px;overflow:auto;flex:1}
+.calgrid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
+.calgrid .dn{font-size:11.5px;font-weight:600;color:var(--ink-muted);text-align:center;padding:4px}
+.day{background:var(--card);border:1px solid var(--hairline);border-radius:10px;min-height:96px;padding:5px;font-size:11.5px;display:flex;flex-direction:column;gap:3px}
+.day.out{opacity:.35}.day.today{border:2px solid var(--wine)}
+.day .num{font-weight:700;font-size:12px}
+.ev{border-radius:6px;padding:2px 5px;line-height:1.25;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ev.plan{background:var(--accent-tint);color:var(--accent)}.ev.ctl{background:var(--ink);color:var(--surface)}
+.ev.fest{background:var(--warn-tint);color:var(--warn)}.ev.rut{background:var(--ochre-tint);color:var(--ochre);border:1px dashed var(--ochre)}
+.ev.done{background:var(--good-tint);color:var(--good)}
+.brainview{display:grid;grid-template-columns:1fr 320px;flex:1;min-height:0}
+@media (max-width:800px){.brainview{grid-template-columns:1fr}}
+.brainview svg{width:100%;height:100%;min-height:420px}
+.brainside{border-left:1px solid var(--hairline);padding:14px;overflow:auto}
+.node{cursor:pointer}
+.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--surface);padding:10px 16px;border-radius:999px;font-size:14px;z-index:99;opacity:0;transition:opacity .25s;pointer-events:none}
+.toast.on{opacity:1}
+.foot{padding:0 18px 24px;color:var(--ink-muted);font-size:12.5px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="logo"><span class="mk" aria-hidden="true"><i></i><i></i><i></i></span>varios <small>· oficina de agentes</small></div>
+  <span class="status" id="status">Conectando…</span>
+  <div class="spacer"></div>
+  <button class="tbtn" id="bApr" type="button">Esperan tu OK <span class="n" id="nApr">0</span></button>
+  <button class="tbtn" id="bBoard" type="button">Tablero <kbd>B</kbd></button>
+  <button class="tbtn" id="bCal" type="button">Calendario <kbd>P</kbd></button>
+  <button class="tbtn" id="bBrain" type="button">Cerebro <kbd>G</kbd></button>
+  <button class="tbtn" id="bTheme" type="button" aria-label="Cambiar tema">Tema</button>
+</header>
+
+<div class="wrap">
+  <section class="floor" id="floor" aria-label="Planta de la oficina"></section>
+
+  <aside class="panel">
+    <div class="box">
+      <h4>Nuevo encargo</h4>
+      <textarea id="tTxt" placeholder="Ejemplo: prepara el guion para la conversación de validación con un tramitador de siniestros"></textarea>
+      <div class="row" style="margin-top:8px">
+        <select id="tDep" aria-label="Departamento" style="flex:1"></select>
+        <select id="tTier" aria-label="Esfuerzo" style="width:auto"><option value="quick">Rápido</option><option value="default" selected>Normal</option><option value="complex">A fondo</option></select>
+      </div>
+      <div class="row" style="margin-top:8px">
+        <button class="chip" id="tTeam" type="button" aria-pressed="false" title="El jefe del departamento lo reparte entre su equipo">En equipo</button>
+        <button class="chip" id="tOk" type="button" aria-pressed="false" title="Aunque el riesgo sea bajo, el resultado espera tu aprobación">Necesita mi OK</button>
+        <div class="spacer"></div>
+        <button class="btn p" id="tAdd" type="button">Encargar</button>
+      </div>
+      <p class="hint" id="tHint" style="margin:8px 0 0">El CEO digital lee el encargo, decide si sigue, pregunta, escala, rechaza o deriva, y elige al agente. Enter encarga; Mayús+Enter, salto de línea.</p>
+    </div>
+    <div class="box" style="display:flex;flex-direction:column;min-height:0;flex:1">
+      <h4>Encargos</h4>
+      <div class="filters" id="fil"></div>
+      <div class="feed" id="feed"></div>
+    </div>
+  </aside>
+</div>
+<p class="foot">Oficina interna de Varios. Los agentes trabajan con Claude y con el contexto del repositorio empresa-ia. No envían, publican, pagan ni borran nada: entregan borradores y lo que tenga riesgo espera tu aprobación. Nada de datos reales de clientes aquí.</p>
+
+<div class="ov" id="ov"></div>
+<aside class="drawer" id="drawer" aria-label="Detalle"></aside>
+<section class="full" id="full" aria-label="Vista"></section>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function(){
+"use strict";
+// ======================= DATOS DE VARIOS =======================
+var DEP=[
+ {id:'dir',n:'Dirección',c:'#7A1F2E',d:'El CEO digital y el control del plan'},
+ {id:'com',n:'Comercial y clientes',c:'#0B7A78',d:'Validación, contactos, propuestas y contenido'},
+ {id:'pro',n:'Procesos',c:'#B07A2A',d:'AS-IS, TO-BE, datos de prueba y métricas'},
+ {id:'ing',n:'Ingeniería',c:'#3E4B8C',d:'Construir el cerebro producto'},
+ {id:'cal',n:'Calidad, seguridad y legal',c:'#A8283A',d:'Que nada falle ni incumpla'},
+ {id:'adm',n:'Administración',c:'#6A5A55',d:'Empresa, costes y proveedores'}
+];
+var SK={
+ 'acta-reunion':'De notas sueltas a acta: asistentes, acuerdos, decisiones, siguientes pasos con responsable y fecha.',
+ 'entrevista-descubrimiento':'Guion de 30 minutos: proceso actual, volumen al mes, tiempo por caso, errores, excepciones, coste, quién decide. Sin vender.',
+ 'propuesta-diagnostico':'Propuesta con contexto, alcance, entregables, 3 semanas, precio cerrado (si no está decidido, dejar [PRECIO POR DECIDIR]) y siguiente paso.',
+ 'informe-as-is-to-be':'Proceso actual y nuevo paso a paso, marcando qué hace la IA, qué las reglas y qué una persona; volumen, tiempos y métrica de éxito.',
+ 'revision-riesgo-ia':'Clasificación orientativa según el Reglamento Europeo de IA y RGPD, con aviso de que no es asesoría jurídica.',
+ 'marca-varios':'Voz de Varios: español de España, frases cortas, conclusión primero, sin adjetivos grandilocuentes, sin emojis, cifras en formato español.',
+ 'decision-registro':'Entrada de DECISIONS.md: código, fecha, decisión, motivo, impacto, estado.',
+ 'spec-tecnica':'Especificación para Claude Code: objetivo, archivos, pasos pequeños, tests que deben pasar, qué no tocar.'
+};
+var A=[
+ ['ceo','dir',1,'CEO digital','Orquestador','Lee cada encargo, aplica las cinco decisiones y reparte el trabajo. Nunca ejecuta acciones privilegiadas.',['decision-registro'],'Separa hechos, supuestos y preguntas. Si falta un dato que cambia la solución, pregunta.'],
+ ['pmo','dir',0,'Plan y seguimiento','PMO','Lleva el plan de construcción semana a semana y los controles A, B y C.',['acta-reunion'],'Compara siempre con el plan de docs/10. Señala retrasos sin dramatizar y propone qué recortar de lo marcado "si da tiempo".'],
+ ['dec','dir',0,'Registro de decisiones','Secretaría','Redacta entradas para DECISIONS.md y mantiene la lista de decisiones pendientes.',['decision-registro'],'Una decisión por entrada. Si no está decidido, lo marca como propuesta.'],
+ ['bib','dir',0,'Bibliotecario','Conocimiento','Propone fichas de conocimiento con su fuente y detecta contradicciones entre documentos.',[],'Nunca aprueba una ficha: la deja en borrador.'],
+ ['comj','com',1,'Jefe comercial','Comercial','Coordina validación, contactos y propuestas.',['marca-varios'],'Hasta el 12/02 no se vende: se escucha.'],
+ ['val','com',0,'Validación','Entrevistas','Prepara las conversaciones semanales con quien hace el proceso, y sintetiza lo aprendido.',['entrevista-descubrimiento','acta-reunion'],'Preguntas abiertas, nada de demostraciones de producto.'],
+ ['pros','com',0,'Prospección','Contactos','Define el cliente ideal y arma la lista de 40 contactos con criterio.',[],'No inventa empresas ni personas: da criterios y dónde buscarlas.'],
+ ['prop','com',0,'Propuestas','Ofertas','Escribe la propuesta de diagnóstico y sus variantes.',['propuesta-diagnostico','marca-varios'],'Nunca pone un precio que no esté decidido.'],
+ ['cont','com',0,'Contenido','Web y LinkedIn','Textos de la web, publicaciones y la demo grabada.',['marca-varios'],'Promete solo lo que se mide.'],
+ ['proj','pro',1,'Arquitecto de procesos','Procesos','Dibuja el AS-IS y el TO-BE y decide qué hace la IA, qué las reglas y qué una persona.',['informe-as-is-to-be'],'Proceso antes que agente.'],
+ ['dat','pro',0,'Datos de prueba','Casos inventados','Crea siniestros inventados realistas con su resultado esperado: el examen del sistema.',[],'Todo inventado y marcado como ficticio. Incluye casos límite y trampas.'],
+ ['seg','pro',0,'Especialista en seguros','Perfil sectorial','Aporta vocabulario y reglas del sector asegurador.',[],'Distingue práctica habitual de norma legal y lo dice.'],
+ ['kpi','pro',0,'Métricas','Línea base','Define qué se mide, cómo y frente a qué línea base.',[],'Cada métrica con fórmula, fuente y exclusiones.'],
+ ['ingj','ing',1,'Arquitecto técnico','Ingeniería','Traduce cada semana del plan a tareas pequeñas para Claude Code.',['spec-tecnica'],'Monolito modular, nada de dependencias nuevas sin decisión registrada.'],
+ ['back','ing',0,'Backend','FastAPI y PostgreSQL','Modelo de datos, API, migraciones y tests.',['spec-tecnica'],'Lo que no tiene test no está hecho.'],
+ ['ia','ing',0,'IA y evaluación','Modelos y examen','Instrucciones, adaptador de modelos y examen de 50 casos.',['spec-tecnica'],'Medir antes de opinar.'],
+ ['int','ing',0,'Integraciones','Puerta de herramientas','Conectores y puerta de herramientas con lista cerrada.',['spec-tecnica'],'Denegar por defecto.'],
+ ['calj','cal',1,'Calidad y riesgo','QA','Fija criterios de aceptación y revisa entregables antes de darlos por buenos.',[],'Un entregable sin criterio de aceptación no está terminado.'],
+ ['sec','cal',0,'Seguridad','Amenazas y aislamiento','Modelo de amenazas, separación de clientes, secretos, pruebas de ataque.',[],'Ninguna fuga entre clientes es aceptable.'],
+ ['leg','cal',0,'Legal y privacidad','RGPD y Reglamento IA','Lista de obligaciones, preguntas para el abogado y borradores de cláusulas.',['revision-riesgo-ia'],'No es asesoría jurídica y lo dice siempre.'],
+ ['admj','adm',1,'Administración','Empresa','Forma jurídica, trámites y preguntas para el gestor.',[],'Prepara preguntas; las decisiones las toman los socios con su gestor.'],
+ ['fin','adm',0,'Costes','Presupuesto','Coste de Claude, nube y proveedores; límites de gasto.',[],'Cifras con fuente y fecha; si no hay fuente, lo dice.'],
+ ['prov','adm',0,'Proveedores','Inventario','Inventario de proveedores con región, retención de datos y salida.',[],'Comprueba si usan los datos para entrenar.']
+].map(function(a){return {id:a[0],dep:a[1],lead:!!a[2],n:a[3],r:a[4],does:a[5],skills:a[6],brief:a[7]}});
+function ag(id){return A.find(function(a){return a.id===id})}
+function dep(id){return DEP.find(function(d){return d.id===id})}
+function ini(n){return n.split(' ').filter(function(w){return w.length>2||/^[A-Z]/.test(w)}).slice(0,2).map(function(w){return w[0]}).join('').toUpperCase()}
+
+var BRAIN=[
+'VARIOS (nombre provisional): consultora de IA para empresas medianas y reguladas. Socios: Juan (producto y construcción) y Álvaro (procesos, legal y comercial).',
+'OFERTA: cuatro fases con precio cerrado por fase. Diagnosticar (3 semanas), Diseñar (2), Construir (4-8, piloto con pago 50/50: la segunda mitad solo si se cumple la métrica firmada), Operar (cuota mensual). Formación en IA (art. 4 del Reglamento de IA) como entrada. Precios: por decidir.',
+'MÉTODO INTERNO: fases D0-D6 (calificación, descubrimiento, diseño, prototipo, piloto, producción, operar) con puertas de cliente G0-G6. Puertas técnicas L0-L4 (datos inventados, internos, de clientes, acciones externas, escala).',
+'PLAN VIGENTE (D-011): del 18/11/2026 al 12/02/2027 se construye; clientes desde el 15/02/2027. Proceso de referencia: apertura de siniestros en corredurías, con datos inventados. Semanas: S0 arranque, S1 entorno (FastAPI, PostgreSQL, Docker, Ruff, pytest, CI), S2 modelo de datos y auditoría, S3 seguridad y aislamiento de clientes, S4 CEO limitado (control A 18/12), S5 motor de procesos, S6 puerta de herramientas, S7 conocimiento, S8 proceso de punta a punta (control B 15/01), S9 calidad y examen de 50 casos, S10 panel y métricas, S11 copias y despliegue de demo, S12 cierre (control C 12/02). Una conversación de validación por semana, sin vender.',
+'ARQUITECTURA: monolito modular en Python/FastAPI, PostgreSQL como fuente de verdad, conocimiento RAW/WIKI/SCHEMA en Markdown y Git, Obsidian como ventana, búsqueda de texto primero. CEO digital (clasifica y reparte), motor de procesos (estados y reglas), departamentos + especialistas de sector, centro de integraciones y puerta de herramientas, calidad y aprobaciones, auditoría.',
+'REGLAS DEL CEO: cinco decisiones con motivo: CONTINUAR, PREGUNTAR, ESCALAR, RECHAZAR, DERIVAR. Campos confirmados, inferidos o desconocidos; la confianza del modelo no es un permiso. Riesgo por tarea: bajo (automático con muestreo), medio (aprobación según impacto), alto (prepara pero no termina solo), crítico o prohibido (bloqueado).',
+'NUNCA: aprobar su propia acción; enviar, firmar, pagar, borrar o tocar producción sin aprobación; afirmar cumplimiento legal sin fuente y revisión; inventar datos o fuentes; usar datos reales de clientes antes de L2.',
+'LEGAL: RGPD y LOPDGDD, Reglamento Europeo de IA (2024/1689, modificado por 2026/1744: alto riesgo anexo III desde 02/12/2027), DORA y NIS2 por contrato con clientes financieros. Brechas: 72 h a la AEPD si hay riesgo. Nada de esto es asesoría jurídica.',
+'VOZ: español de España, frases cortas, conclusión primero, promete solo lo que se mide, sin emojis ni exclamaciones, cifras en formato español (6.500 €, 62 %). Ejemplos marcados como ejemplos; nunca inventar clientes.'
+].join('\n');
+
+var DOCS=[
+ ['readme','README',0,'Puerta de entrada al repositorio: estado, estructura y por dónde empezar.'],
+ ['claude','CLAUDE.md',0,'Reglas que sigue Claude Code en el repositorio.'],
+ ['decisions','DECISIONS.md',0,'Decisiones D-001 a D-011 y pendientes con fecha.'],
+ ['negocio','00 · Negocio',1,'Problema, cliente, oferta en cuatro fases, competencia, hipótesis sin validar.'],
+ ['vision','01 · Visión',1,'Modelo matricial, roles humanos y principios.'],
+ ['arq','02 · Arquitectura',1,'Vista lógica, componentes, stack inicial y qué evitar.'],
+ ['ceo','03 · CEO digital',1,'Flujo, contrato de tarea y estados.'],
+ ['know','04 · Conocimiento',1,'RAW, WIKI, SCHEMA, espacios separados y Obsidian.'],
+ ['agentes','05 · Agentes y procesos',1,'Capacidades, paquetes sectoriales, motor de procesos.'],
+ ['segdoc','06 · Seguridad',1,'Requisitos, multi-cliente, controles, riesgos de IA.'],
+ ['calidad','07 · Calidad e infraestructura',1,'Calidad, portabilidad, operación, métricas.'],
+ ['roadmap','08 · Roadmap',1,'Puertas G0-G6 y L0-L4.'],
+ ['plan','10 · Plan de construcción',1,'Doce semanas hasta el 12/02/2027 con controles A, B y C.'],
+ ['cerebro','11 · Cerebro en Claude',1,'Ocho pasos para montar el cerebro de trabajo.'],
+ ['sim','12 · Simulación',1,'Tres casos de ejemplo recorriendo los doce pasos.'],
+ ['procesos','13 · Procesos y estados',1,'P01-P38 y los estados por objeto.'],
+ ['reglas','14 · Reglas del CEO',1,'Cinco decisiones, matriz de riesgo, lo que nunca hace.'],
+ ['correc','16 · Correcciones',1,'Diez correcciones a los documentos recibidos.'],
+ ['atlas','Atlas (17 mapas)',2,'Diagramas en Mermaid, del flujo del CEO a incidentes.'],
+ ['guia','Guía de Arranque v1.4',3,'Línea base de diseño: decisiones, controles, puertas, orden de construcción.'],
+ ['evol','Atlas Evolución v1.1',3,'Descubrimiento de procesos, motor, integraciones, D0-D6, P31-P38.'],
+ ['marco','Marco legal v1.0',3,'RGPD, Reglamento de IA, NIS2, DORA, incidentes, checklist de producción.'],
+ ['web','Web del proyecto',2,'Quince páginas visuales con simulación y atlas.']
+];
+var LINKS=[['readme','claude'],['readme','decisions'],['readme','negocio'],['readme','plan'],['claude','decisions'],['claude','guia'],['claude','evol'],['claude','marco'],['negocio','vision'],['vision','arq'],['arq','ceo'],['arq','know'],['arq','agentes'],['arq','segdoc'],['ceo','reglas'],['ceo','procesos'],['agentes','procesos'],['segdoc','marco'],['calidad','roadmap'],['roadmap','plan'],['plan','decisions'],['cerebro','claude'],['sim','reglas'],['procesos','evol'],['reglas','guia'],['correc','guia'],['correc','evol'],['atlas','guia'],['atlas','evol'],['atlas','correc'],['web','atlas'],['web','sim'],['know','guia'],['segdoc','guia'],['calidad','guia']];
+
+var ROUT_DEF=[
+ {id:'r1',name:'Planificar la semana',ag:'pmo',days:[1],h:'09:00',task:'Lee el plan de construcción y prepara la lista de tareas de esta semana para Juan y para Álvaro, con el "hecho cuando" de la semana.'},
+ {id:'r2',name:'Preparar la conversación de validación',ag:'val',days:[2],h:'10:00',task:'Prepara el guion y las 8 preguntas clave para la conversación de validación de esta semana con alguien que abra siniestros en una correduría.'},
+ {id:'r3',name:'Revisión del viernes',ag:'pmo',days:[5],h:'16:30',task:'Prepara la revisión semanal: qué tocaba esta semana según el plan, qué preguntas hacernos para saber si está hecho, riesgos para la semana siguiente y qué recortar si vamos tarde.'},
+ {id:'r4',name:'Decisiones de la semana',ag:'dec',days:[5],h:'17:00',task:'A partir de los encargos terminados esta semana, propone entradas para DECISIONS.md de lo que parezca una decisión, marcadas como propuesta.'}
+];
+var PLAN=[['2026-11-18','S0 · Arranque'],['2026-11-23','S1 · Entorno'],['2026-11-30','S2 · Datos y auditoría'],['2026-12-07','S3 · Seguridad'],['2026-12-14','S4 · CEO limitado'],['2026-12-21','S5 · Motor (Navidad)'],['2026-12-28','S6 · Puerta (Navidad)'],['2027-01-04','S7 · Conocimiento'],['2027-01-11','S8 · Punta a punta'],['2027-01-18','S9 · Calidad'],['2027-01-25','S10 · Panel'],['2027-02-01','S11 · Puesta a punto'],['2027-02-08','S12 · Cierre']];
+var CTL={'2026-12-18':'Control A','2027-01-15':'Control B','2027-02-12':'Control C'};
+var FEST={'2026-12-08':'Festivo','2026-12-25':'Navidad','2027-01-01':'Año Nuevo','2027-01-06':'Reyes'};
+
+// ======================= ESTADO Y ALMACÉN =======================
+var S={tasks:{},rules:{},routines:{},chats:{},sample:null,db:null,uid:null,filter:'all',depFilter:null,working:{}};
+var LS='varios-oficina-v1';
+function lsLoad(){try{var o=JSON.parse(localStorage.getItem(LS)||'{}');S.tasks=o.tasks||{};S.rules=o.rules||{};S.routines=o.routines||{};}catch(e){}}
+function lsSave(){if(S.db)return;try{localStorage.setItem(LS,JSON.stringify({tasks:S.tasks,rules:S.rules,routines:S.routines}))}catch(e){}}
+var writing={};
+async function put(col,id,obj){
+  if(col==='tasks')S.tasks[id]=obj;else if(col==='rules')S.rules[id]=obj;else if(col==='routines')S.routines[id]=obj;
+  render();
+  if(!S.db){lsSave();return}
+  var key=col+'/'+id;
+  while(writing[key])await writing[key];
+  var p=S.db.collection(col).doc(id).set(JSON.parse(JSON.stringify(obj))).catch(function(e){if(e&&e.code==='quota_exceeded')toast('La base de datos está llena: borra encargos antiguos.');else if(e&&e.code==='invalid_argument')toast('No tienes permiso para guardar cambios aquí.');});
+  writing[key]=p;await p;delete writing[key];
+}
+async function del(col,id){
+  if(col==='tasks')delete S.tasks[id];
+  render();
+  if(!S.db){lsSave();return}
+  try{await S.db.collection(col).doc(id).delete()}catch(e){}
+}
+function subscribe(){
+  var got=0,timer=setTimeout(function(){if(!got)toast('Aún no llegan los datos guardados; puede que no estén al día.')},10000);
+  [['tasks','tasks'],['rules','rules'],['routines','routines']].forEach(function(p){
+    S.db.collection(p[0]).onSnapshot(function(snap){
+      got++;if(!snap.metadata.fromCache)clearTimeout(timer);
+      var m={};snap.docs.forEach(function(d){m[d.id]=d.data()});
+      S[p[1]]=m;render();
+    },function(){clearTimeout(timer)});
+  });
+}
+function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2,7)}
+function now(){return new Date().toISOString()}
+
+// ======================= UTILIDADES =======================
+function esc(t){return String(t==null?'':t).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function md(src){
+  var L=esc(src||'').split('\n'),o='',inL=null,tbl=[];
+  function inl(s){return s.replace(/\*\*([^*]+)\*\*/g,'<b>$1</b>').replace(/`([^`]+)`/g,'<code>$1</code>')}
+  function flushT(){if(!tbl.length)return;var rows=tbl.filter(function(r){return !/^\|?\s*:?-{2,}/.test(r)});o+='<table>'+rows.map(function(r,i){var c=r.replace(/^\||\|$/g,'').split('|');return '<tr>'+c.map(function(x){return (i?'<td>':'<th>')+inl(x.trim())+(i?'</td>':'</th>')}).join('')+'</tr>'}).join('')+'</table>';tbl=[]}
+  function close(){if(inL){o+='</'+inL+'>';inL=null}}
+  L.forEach(function(l){
+    if(/^\s*\|.*\|\s*$/.test(l)){close();tbl.push(l.trim());return}else flushT();
+    var m;
+    if(m=l.match(/^#{1,3}\s+(.*)/)){close();o+='<h3>'+inl(m[1])+'</h3>';return}
+    if(m=l.match(/^\s*[-*]\s+(.*)/)){if(inL!=='ul'){close();o+='<ul>';inL='ul'}o+='<li>'+inl(m[1])+'</li>';return}
+    if(m=l.match(/^\s*\d+[.)]\s+(.*)/)){if(inL!=='ol'){close();o+='<ol>';inL='ol'}o+='<li>'+inl(m[1])+'</li>';return}
+    if(!l.trim()){close();return}
+    close();o+='<p>'+inl(l)+'</p>';
+  });
+  close();flushT();return o;
+}
+var tt;function toast(m){var t=document.getElementById('toast');t.textContent=m;t.classList.add('on');clearTimeout(tt);tt=setTimeout(function(){t.classList.remove('on')},2800)}
+var ST={cola:['En cola','p-cola'],marcha:['En marcha','p-marcha'],aprob:['Espera tu OK','p-aprob'],preg:['Pregunta','p-preg'],hecha:['Hecha','p-hecha'],rech:['Rechazada','p-rech']};
+function pill(s){var x=ST[s]||['?','p-cola'];return '<span class="pill '+x[1]+'">'+x[0]+'</span>'}
+function fmt(iso){try{var d=new Date(iso);return d.toLocaleDateString('es-ES',{day:'2-digit',month:'short'})+' '+d.toLocaleTimeString('es-ES',{hour:'2-digit',minute:'2-digit'})}catch(e){return ''}}
+
+// ======================= CLAUDE =======================
+function roster(){return A.map(function(a){return a.id+' | '+dep(a.dep).n+(a.lead?' (jefe)':'')+' | '+a.n+' | '+a.does}).join('\n')}
+function agentContext(a){
+  var rules=(S.rules[a.id]&&S.rules[a.id].list)||[];
+  return 'CONTEXTO DE VARIOS (el cerebro, resumen del repositorio empresa-ia):\n'+BRAIN+
+  '\n\nERES: '+a.n+' ('+a.r+'), departamento de '+dep(a.dep).n+'. Tu trabajo: '+a.does+
+  '\nTu forma de trabajar: '+a.brief+
+  (a.skills.length?'\nHabilidades que aplicas:\n'+a.skills.map(function(s){return '- '+s+': '+SK[s]}).join('\n'):'')+
+  (rules.length?'\nReglas fijas que te han enseñado los socios:\n'+rules.map(function(r){return '- '+r}).join('\n'):'')+
+  '\n\nREGLAS DE LA OFICINA: entregas borradores, nunca envías, publicas, pagas ni borras nada. No inventes datos, empresas, personas, cifras ni fuentes: si falta algo, márcalo como [POR CONFIRMAR]. Separa hecho, hipótesis y propuesta. Nada de datos reales de clientes. Escribe en español de España con la voz de Varios. Formato Markdown sencillo (títulos con ##, listas, tablas si ayudan).';
+}
+async function route(text,depSel){
+  var ins='Eres el CEO digital de Varios. Decide qué hacer con este encargo y quién lo hace.\n\n'+BRAIN+'\n\nAGENTES (id | departamento | nombre | qué hace):\n'+roster()+
+  (depSel?'\n\nEl socio ha pedido que lo haga el departamento con id "'+depSel+'": elige un agente de ese departamento salvo que sea imposible.':'')+
+  '\n\nENCARGO:\n"""'+text+'"""\n\nResponde SOLO con JSON con estas claves: {"agente": id del agente, "decision": "CONTINUAR"|"PREGUNTAR"|"ESCALAR"|"RECHAZAR"|"DERIVAR", "riesgo": "bajo"|"medio"|"alto"|"critico", "motivo": una frase, "pregunta": si decision es PREGUNTAR la pregunta concreta, si no "", "titulo": título corto del encargo (máximo 8 palabras)}. RECHAZAR si pide algo prohibido (enviar, pagar, usar datos reales de clientes, afirmar cumplimiento legal sin revisión). ESCALAR si el riesgo es alto. DERIVAR si necesita un profesional externo (abogado, gestor).';
+  var r=await S.sample.json(ins,{modelTier:'quick'});
+  if(!r||!ag(r.agente))throw {code:'bad_route',message:'Respuesta no válida'};
+  return r;
+}
+function routeDemo(text,depSel){
+  var t=text.toLowerCase(),pick=null;
+  var KW=[['val',/conversaci|entrevist|validaci|guion/],['prop',/propuesta|oferta|precio/],['pros',/contacto|lista|cliente ideal|prospec/],['cont',/linkedin|web|post|publicaci|demo grabada/],['proj',/as-is|to-be|proceso/],['dat',/caso|inventad|dato.* prueba|examen/],['kpi',/métric|metric|kpi|línea base/],['back',/fastapi|postgres|api|migraci|modelo de datos/],['ia',/prompt|evaluaci|modelo de ia/],['int',/conector|integraci|herramienta/],['sec',/seguridad|amenaza|aislamiento|secreto/],['leg',/rgpd|legal|contrato|dpa|reglamento/],['admj',/forma jurídica|gestor|sociedad|autónomo/],['fin',/coste|presupuesto|gasto/],['prov',/proveedor/],['pmo',/plan|semana|control/],['dec',/decisi/],['bib',/ficha|conocimiento|documento/],['ingj',/spec|técnic|tarea.*claude code/]];
+  for(var i=0;i<KW.length;i++){if(KW[i][1].test(t)&&(!depSel||ag(KW[i][0]).dep===depSel)){pick=KW[i][0];break}}
+  if(!pick)pick=depSel?A.find(function(a){return a.dep===depSel&&a.lead}).id:'ceo';
+  var risky=/env[ií]a|paga|borra|publica|datos reales/.test(t);
+  return {agente:pick,decision:risky?'ESCALAR':'CONTINUAR',riesgo:risky?'alto':'bajo',motivo:'Modo demostración: asignado por palabras clave.',pregunta:'',titulo:text.slice(0,60)};
+}
+async function work(task,a,extra){
+  var prompt=agentContext(a)+'\n\nENCARGO: '+task.text+(extra?'\n\n'+extra:'')+'\n\nEntrega el resultado completo. Termina con dos líneas: "Usado del cerebro:" (qué partes del contexto has usado) y "Necesita aprobación:" (qué debería revisar un socio antes de usarlo, o "nada").';
+  var r=await S.sample(prompt,{modelTier:task.tier||'default'});
+  return r.text;
+}
+
+// ======================= FLUJO DE ENCARGOS =======================
+async function addTask(text,opts){
+  opts=opts||{};
+  text=(text||'').trim();if(!text)return;
+  var id=uid(),t={id:id,text:text,title:text.slice(0,70),dep:opts.dep||'',tier:opts.tier||'default',team:!!opts.team,forceOk:!!opts.ok,routine:opts.routine||'',status:'cola',created:now(),log:[{t:now(),m:'Encargo recibido'}]};
+  await put('tasks',id,t);
+  var r;
+  try{ r=S.sample?await route(text,t.dep):routeDemo(text,t.dep); }
+  catch(e){ if(e&&e.code==='not_granted'){S.sample=null;setStatus()} r=routeDemo(text,t.dep); r.motivo='No se pudo consultar al CEO; asignado por palabras clave.'}
+  t=Object.assign({},S.tasks[id],{agent:r.agente,decision:r.decision,risk:r.riesgo,reason:r.motivo,question:r.pregunta||'',title:r.titulo||t.title});
+  t.log=t.log.concat([{t:now(),m:'CEO: '+r.decision+' → '+ag(r.agente).n+'. '+r.motivo}]);
+  flash(r.agente);
+  if(r.decision==='RECHAZAR'){t.status='rech';await put('tasks',id,t);return}
+  if(r.decision==='PREGUNTAR'){t.status='preg';await put('tasks',id,t);return}
+  if(r.decision==='DERIVAR'){t.status='preg';t.question='El CEO propone derivarlo a un profesional externo. '+(r.motivo||'')+' ¿Lo preparamos igualmente como borrador?';await put('tasks',id,t);return}
+  await put('tasks',id,t);
+  run(id);
+}
+async function run(id,extra){
+  var t=Object.assign({},S.tasks[id]);if(!t.id)return;
+  var a=ag(t.agent);t.status='marcha';t.log=(t.log||[]).concat([{t:now(),m:a.n+' empieza'}]);await put('tasks',id,t);
+  S.working[a.id]=1;render();
+  try{
+    var out;
+    if(!S.sample){out='## Modo demostración\n\nEsta oficina no tiene permiso para usar Claude en esta vista, así que **'+a.n+'** no puede trabajar de verdad.\n\nCon Claude activo, aquí aparecería el borrador completo de: *'+t.text+'*.\n\nUsado del cerebro: nada\nNecesita aprobación: nada';}
+    else if(t.team){out=await teamWork(t,a,extra);}
+    else out=await work(t,a,extra);
+    t=Object.assign({},S.tasks[id]);
+    t.result=out;t.done=now();
+    var needOk=t.forceOk||t.risk==='alto'||t.risk==='critico'||t.decision==='ESCALAR'||t.risk==='medio';
+    t.status=needOk?'aprob':'hecha';
+    t.log=t.log.concat([{t:now(),m:needOk?'Entregado; espera aprobación de un socio (riesgo '+t.risk+')':'Entregado'}]);
+    await put('tasks',id,t);
+    toast(a.n+' ha entregado: '+t.title);
+  }catch(e){
+    t=Object.assign({},S.tasks[id]);
+    if(e&&e.code==='not_granted'){S.sample=null;setStatus()}
+    t.status='cola';t.log=t.log.concat([{t:now(),m:'No se pudo trabajar: '+((e&&e.code)==='rate_limited'?'límite de uso alcanzado, inténtalo más tarde':'error al consultar a Claude')}]);
+    await put('tasks',id,t);
+  }finally{delete S.working[a.id];render()}
+}
+async function teamWork(t,lead){
+  var team=A.filter(function(x){return x.dep===lead.dep});
+  if(!lead.lead){lead=team.find(function(x){return x.lead})}
+  var plan=await S.sample.json(agentContext(lead)+'\n\nEres el jefe del departamento. Reparte este encargo en 2 a 4 piezas independientes entre tu equipo.\nEQUIPO:\n'+team.map(function(x){return x.id+' | '+x.n+' | '+x.does}).join('\n')+'\n\nENCARGO: '+t.text+'\n\nResponde SOLO JSON: {"piezas":[{"agente":id,"encargo":texto}]}',{modelTier:'quick'});
+  var pcs=(plan&&plan.piezas||[]).filter(function(p){return ag(p.agente)}).slice(0,4);
+  if(!pcs.length)return work(t,lead);
+  var tt=Object.assign({},S.tasks[t.id]);tt.log=tt.log.concat([{t:now(),m:'En equipo: '+pcs.map(function(p){return ag(p.agente).n}).join(', ')}]);await put('tasks',t.id,tt);
+  pcs.forEach(function(p){S.working[p.agente]=1});render();
+  var res=await Promise.all(pcs.map(function(p){return work({text:p.encargo,tier:t.tier},ag(p.agente),'Es una pieza de un encargo mayor: "'+t.text+'". Entrega solo tu pieza.').then(function(x){delete S.working[p.agente];render();return '### '+ag(p.agente).n+'\n'+x})}));
+  var fin=await S.sample(agentContext(lead)+'\n\nEres el jefe del departamento. Une estas piezas en un único entregable coherente para el encargo: "'+t.text+'". Elimina repeticiones y contradicciones. Termina con una línea "Quién hizo qué:".\n\n'+res.join('\n\n'),{modelTier:t.tier||'default'});
+  return fin.text+'\n\n---\n\n## Piezas del equipo\n\n'+res.join('\n\n');
+}
+async function revise(id,txt,asRule){
+  var t=Object.assign({},S.tasks[id]),a=ag(t.agent);
+  if(asRule){var cur=(S.rules[a.id]&&S.rules[a.id].list)||[];if(cur.indexOf(txt)<0){await put('rules',a.id,{agent:a.id,list:cur.concat([txt]),updated:now()})}}
+  t.log=t.log.concat([{t:now(),m:'Revisión pedida: '+txt+(asRule?' (guardada como regla fija)':'')}]);await put('tasks',id,t);
+  run(id,'BORRADOR ANTERIOR:\n'+(t.result||'')+'\n\nCORRECCIÓN DEL SOCIO: '+txt+'\nRehaz el entregable aplicando la corrección.');
+}
+async function answer(id,txt){
+  var t=Object.assign({},S.tasks[id]);
+  t.text=t.text+'\n\nRespuesta del socio a la pregunta del CEO ('+(t.question||'')+'): '+txt;t.question='';t.decision='CONTINUAR';
+  t.log=t.log.concat([{t:now(),m:'Respuesta del socio: '+txt}]);await put('tasks',id,t);run(id);
+}
+
+// ======================= RUTINAS =======================
+function routines(){return ROUT_DEF.map(function(r){var s=S.routines[r.id]||{};return Object.assign({},r,{active:s.active!==false,last:s.last||''})})}
+function lastDue(r,ref){
+  ref=ref||new Date();var hh=+r.h.split(':')[0],mm=+r.h.split(':')[1];
+  for(var i=0;i<8;i++){var d=new Date(ref);d.setDate(d.getDate()-i);d.setHours(hh,mm,0,0);if(d<=ref&&r.days.indexOf(d.getDay())>-1)return d}
+  return null;
+}
+function nextDue(r){var hh=+r.h.split(':')[0],mm=+r.h.split(':')[1],n=new Date();for(var i=0;i<8;i++){var d=new Date();d.setDate(d.getDate()+i);d.setHours(hh,mm,0,0);if(d>n&&r.days.indexOf(d.getDay())>-1)return d}return null}
+function pendingRoutines(){var day=Date.now()-864e5;return routines().filter(function(r){if(!r.active)return false;var d=lastDue(r);return d&&d.getTime()>day&&(!r.last||new Date(r.last)<d)})}
+async function runRoutine(r){
+  await put('routines',r.id,{id:r.id,active:r.active,last:now()});
+  addTask(r.task,{dep:ag(r.ag).dep,routine:r.name});
+}
+
+// ======================= RENDER =======================
+function setStatus(){var s=document.getElementById('status');if(S.sample){s.className='status live';s.textContent='En vivo · Claude'}else{s.className='status demo';s.textContent='Demostración · sin Claude'};s.title=S.db?'Los encargos se guardan y se comparten con quien tenga acceso a esta oficina.':'Los encargos se guardan solo en este navegador.'}
+function render(){renderFloor();renderFeed();renderBrainMini();document.getElementById('nApr').textContent=Object.values(S.tasks).filter(function(t){return t.status==='aprob'}).length;if(cur.view)cur.view()}
+function agentState(id){if(S.working[id])return 'work';var w=Object.values(S.tasks).some(function(t){return t.agent===id&&(t.status==='aprob'||t.status==='preg')});return w?'wait':''}
+function renderFloor(){
+  var f=document.getElementById('floor'),h='',pos=[[1,1],[2,1],[3,1],[1,2],[3,2],[1,3],[2,3],[3,3]];
+  DEP.forEach(function(d,i){
+    var p=[[1,1],[2,1],[3,1],[1,2],[3,2],[2,3]][i];
+    var dim=S.depFilter&&S.depFilter!==d.id?' dim':'';
+    h+='<div class="room'+dim+'" style="grid-column:'+p[0]+';grid-row:'+p[1]+'"><h3><span class="dot" style="background:'+d.c+'"></span>'+esc(d.n)+'<kbd>'+(i+1)+'</kbd></h3><p class="d">'+esc(d.d)+'</p><div class="desks">'+
+     A.filter(function(a){return a.dep===d.id}).map(function(a){var st=agentState(a.id);return '<button type="button" class="desk'+(a.lead?' lead':'')+(st?' '+st:'')+'" data-ag="'+a.id+'" id="desk-'+a.id+'"><span class="av" style="background:'+d.c+'">'+ini(a.n)+'</span><span style="min-width:0"><span class="nm" style="display:block">'+esc(a.n)+'</span><span class="rl" style="display:block">'+(a.lead?'Jefe · ':'')+esc(a.r)+'</span></span><span class="st"></span></button>'}).join('')+'</div></div>';
+  });
+  var nT=Object.keys(S.tasks).length,nD=Object.values(S.tasks).filter(function(t){return t.status==='hecha'}).length,nR=Object.values(S.rules).reduce(function(s,r){return s+((r.list||[]).length)},0);
+  h+='<div class="brainbox" id="brainbox" role="button" tabindex="0"><h3>Cerebro · empresa-ia</h3><p>Lo que saben todos los agentes: el repositorio de Varios. Pulsa para verlo.</p><svg class="mini" id="mini" viewBox="0 0 300 120" aria-hidden="true"></svg><div class="k"><span><b>'+DOCS.length+'</b>documentos</span><span><b>'+nD+'</b>entregas</span><span><b>'+nR+'</b>reglas aprendidas</span></div></div>';
+  f.innerHTML=h;
+  f.querySelectorAll('.desk').forEach(function(b){b.onclick=function(){openAgent(b.dataset.ag)}});
+  var bb=document.getElementById('brainbox');bb.onclick=openBrain;bb.onkeydown=function(e){if(e.key==='Enter')openBrain()};
+}
+function renderBrainMini(){
+  var s=document.getElementById('mini');if(!s)return;var P=layout(300,120,8),o='';
+  LINKS.forEach(function(l){var a=P[l[0]],b=P[l[1]];o+='<line x1="'+a[0]+'" y1="'+a[1]+'" x2="'+b[0]+'" y2="'+b[1]+'" stroke="rgba(246,239,225,.25)"/>'});
+  DOCS.forEach(function(d){var p=P[d[0]];o+='<circle cx="'+p[0]+'" cy="'+p[1]+'" r="'+(d[2]===0?4:3)+'" fill="'+['#EADBB8','#4FC2BC','#E07A88','#E2B26A'][d[2]]+'"/>'});
+  s.innerHTML=o;
+}
+function layout(W,H,pad){
+  var P={},groups=[[],[],[],[]];DOCS.forEach(function(d){groups[d[2]].push(d[0])});
+  var cx=W/2,cy=H/2;
+  groups[0].forEach(function(id,i){P[id]=[cx+(i-1)*W*0.11,cy+(i===1?-H*0.07:H*0.05)]});
+  var ring=groups[1];ring.forEach(function(id,i){var a=i/ring.length*Math.PI*2;P[id]=[cx+Math.cos(a)*(W*0.26),cy+Math.sin(a)*(H*0.32)]});
+  var outer=groups[2].concat(groups[3]);outer.forEach(function(id,i){var a=i/outer.length*Math.PI*2+0.4;P[id]=[cx+Math.cos(a)*(W/2-pad),cy+Math.sin(a)*(H/2-pad)]});
+  return P;
+}
+function renderFeed(){
+  var fl=document.getElementById('fil'),F=[['all','Todos'],['cola','En curso'],['aprob','Tu OK'],['preg','Preguntas'],['hecha','Hechas']];
+  fl.innerHTML=F.map(function(x){return '<button type="button" class="chip" aria-pressed="'+(S.filter===x[0])+'" data-f="'+x[0]+'">'+x[1]+'</button>'}).join('');
+  fl.querySelectorAll('button').forEach(function(b){b.onclick=function(){S.filter=b.dataset.f;renderFeed()}});
+  var L=Object.values(S.tasks).sort(function(a,b){return (b.created||'').localeCompare(a.created||'')}).filter(function(t){
+    if(S.depFilter&&t.agent&&ag(t.agent).dep!==S.depFilter)return false;
+    if(S.filter==='all')return true;if(S.filter==='cola')return t.status==='cola'||t.status==='marcha';return t.status===S.filter});
+  var pr=pendingRoutines(),h='';
+  pr.forEach(function(r){h+='<div class="tk" style="border-style:dashed"><div class="h"><span class="pill p-rut">Rutina pendiente</span>'+esc(ag(r.ag).n)+'</div><div class="t">'+esc(r.name)+'</div><div class="row" style="margin-top:6px"><button class="btn p" type="button" data-run="'+r.id+'">Ejecutar ahora</button><button class="btn" type="button" data-skip="'+r.id+'">Saltar esta vez</button></div></div>'});
+  h+=L.map(card).join('')||(pr.length?'':'<p class="hint">No hay encargos todavía. Escribe uno arriba, o abre un agente y habla con él.</p>');
+  var fd=document.getElementById('feed');fd.innerHTML=h;
+  fd.querySelectorAll('[data-t]').forEach(function(b){b.onclick=function(){openTask(b.dataset.t)}});
+  fd.querySelectorAll('[data-run]').forEach(function(b){b.onclick=function(e){e.stopPropagation();runRoutine(routines().find(function(r){return r.id===b.dataset.run}))}});
+  fd.querySelectorAll('[data-skip]').forEach(function(b){b.onclick=function(e){e.stopPropagation();var r=routines().find(function(x){return x.id===b.dataset.skip});put('routines',r.id,{id:r.id,active:r.active,last:now()})}});
+}
+function card(t){var a=t.agent?ag(t.agent):null;return '<div class="tk" data-t="'+t.id+'" role="button" tabindex="0"><div class="h">'+pill(t.status)+(t.team?'<span class="pill p-cola">Equipo</span>':'')+(t.routine?'<span class="pill p-rut">Rutina</span>':'')+(a?'<span>'+esc(a.n)+'</span>':'<span>El CEO lo está leyendo…</span>')+'<span style="margin-left:auto">'+fmt(t.created)+'</span></div><div class="t">'+esc(t.title||t.text)+'</div></div>'}
+function flash(id){var d=document.getElementById('desk-'+id);if(d){d.classList.remove('flash');void d.offsetWidth;d.classList.add('flash')}}
+
+// ======================= CAPAS =======================
+var cur={view:null};
+function openDrawer(html){var d=document.getElementById('drawer');d.innerHTML=html;d.classList.add('on');document.getElementById('ov').classList.add('on');var x=d.querySelector('.x');if(x)x.focus()}
+function openFull(html,view){var f=document.getElementById('full');f.innerHTML=html;f.classList.add('on');document.getElementById('ov').classList.add('on');cur.view=view||null}
+function closeAll(){document.getElementById('drawer').classList.remove('on');document.getElementById('full').classList.remove('on');document.getElementById('ov').classList.remove('on');cur.view=null;cur.agent=null;cur.task=null}
+document.getElementById('ov').onclick=closeAll;
+
+function openTask(id){
+  cur.task=id;var t=S.tasks[id];if(!t)return;var a=t.agent?ag(t.agent):null,d=a?dep(a.dep):null;
+  var h='<div class="dh"><span class="av" style="background:'+(d?d.c:'#6A5A55')+'">'+(a?ini(a.n):'CEO')+'</span><div><h2>'+esc(t.title||'Encargo')+'</h2><small>'+(a?esc(a.n)+' · '+esc(d.n):'Pendiente de asignar')+'</small></div><button class="btn x" type="button" id="cx">Cerrar</button></div><div class="db">';
+  h+='<div class="kv"><div>Estado</div><div>'+pill(t.status)+'</div><div>Decisión del CEO</div><div>'+esc(t.decision||'—')+'</div><div>Riesgo</div><div>'+esc(t.risk||'—')+'</div><div>Motivo</div><div>'+esc(t.reason||'—')+'</div><div>Encargo</div><div style="white-space:pre-wrap">'+esc(t.text)+'</div></div>';
+  if(t.status==='preg')h+='<p class="sec">El CEO pregunta</p><p>'+esc(t.question||'Necesita más información.')+'</p><textarea id="ans" placeholder="Tu respuesta"></textarea><div class="row" style="margin-top:8px"><button class="btn p" id="bAns" type="button">Responder y seguir</button><button class="btn" id="bDel" type="button">Descartar</button></div>';
+  if(t.result)h+='<p class="sec">Entrega</p><div class="md">'+md(t.result)+'</div><div class="row" style="margin-top:8px"><button class="btn" id="bCopy" type="button">Copiar</button></div>';
+  if(t.status==='aprob')h+='<p class="sec">Tu decisión</p><p class="hint">Riesgo '+esc(t.risk)+'. Aprobar significa que el borrador vale para usarlo. La oficina no envía nada por ti.</p><div class="row"><button class="btn g" id="bOk" type="button">Aprobar</button><button class="btn w" id="bNo" type="button">Rechazar</button></div>';
+  if(t.status==='rech'&&!t.result)h+='<p class="sec">Rechazado por el CEO</p><p>'+esc(t.reason)+'</p>';
+  h+='<p class="sec">Historial</p><ul class="hint" style="padding-left:18px">'+(t.log||[]).map(function(l){return '<li>'+fmt(l.t)+' · '+esc(l.m)+'</li>'}).join('')+'</ul></div>';
+  if(t.result&&(t.status==='hecha'||t.status==='aprob'))h+='<div class="df"><textarea id="rev" placeholder="Pide un cambio: hazlo más corto, añade una tabla, sin tecnicismos…" style="min-height:54px"></textarea><div class="row" style="margin-top:8px"><label class="hint"><input type="checkbox" id="rule"> Guardarlo como regla fija para '+esc(a?a.n:'')+'</label><div class="spacer"></div><button class="btn p" id="bRev" type="button">Revisar</button></div></div>';
+  openDrawer(h);
+  document.getElementById('cx').onclick=closeAll;
+  var q=function(i){return document.getElementById(i)};
+  if(q('bAns'))q('bAns').onclick=function(){var v=q('ans').value.trim();if(v){answer(id,v);closeAll()}};
+  if(q('bDel'))q('bDel').onclick=function(){del('tasks',id);closeAll()};
+  if(q('bCopy'))q('bCopy').onclick=function(){navigator.clipboard.writeText(t.result).then(function(){toast('Copiado')},function(){toast('Selecciona el texto y cópialo')})};
+  if(q('bOk'))q('bOk').onclick=function(){var x=Object.assign({},S.tasks[id]);x.status='hecha';x.log=x.log.concat([{t:now(),m:'Aprobado por un socio'}]);put('tasks',id,x);closeAll()};
+  if(q('bNo'))q('bNo').onclick=function(){var x=Object.assign({},S.tasks[id]);x.status='rech';x.log=x.log.concat([{t:now(),m:'Rechazado por un socio'}]);put('tasks',id,x);closeAll()};
+  if(q('bRev'))q('bRev').onclick=function(){var v=q('rev').value.trim();if(v){revise(id,v,q('rule').checked);closeAll();toast('Revisión encargada a '+a.n)}};
+}
+
+function openAgent(id){
+  cur.agent=id;var a=ag(id),d=dep(a.dep),rules=(S.rules[id]&&S.rules[id].list)||[];
+  var mine=Object.values(S.tasks).filter(function(t){return t.agent===id}).sort(function(x,y){return (y.created||'').localeCompare(x.created||'')});
+  var rts=routines().filter(function(r){return r.ag===id});
+  var h='<div class="dh"><span class="av" style="background:'+d.c+'">'+ini(a.n)+'</span><div><h2>'+esc(a.n)+'</h2><small>'+esc(a.r)+' · '+esc(d.n)+(a.lead?' · jefe de departamento':'')+'</small></div><button class="btn x" type="button" id="cx">Cerrar</button></div><div class="db">';
+  h+='<p>'+esc(a.does)+'</p><p class="hint"><b>Cómo trabaja:</b> '+esc(a.brief)+'</p>';
+  if(a.skills.length)h+='<p class="sec">Habilidades</p>'+a.skills.map(function(s){return '<span class="tag" title="'+esc(SK[s])+'">'+esc(s)+'</span>'}).join('');
+  h+='<p class="sec">Reglas aprendidas ('+rules.length+')</p>'+(rules.length?'<ul>'+rules.map(function(r,i){return '<li>'+esc(r)+' <button class="btn" style="padding:2px 8px;font-size:12px" data-unr="'+i+'" type="button">Olvidar</button></li>'}).join('')+'</ul>':'<p class="hint">Cuando pidas una revisión y marques "regla fija", aparecerá aquí y la aplicará siempre.</p>');
+  if(rts.length)h+='<p class="sec">Rutinas</p>'+rts.map(function(r){var n=nextDue(r);return '<div class="row" style="justify-content:space-between;border-bottom:1px solid var(--hairline);padding:6px 0"><span><b>'+esc(r.name)+'</b><br><span class="hint">'+diasTxt(r.days)+' a las '+r.h+(r.active&&n?' · próxima '+fmt(n.toISOString()):'')+'</span></span><span class="row"><button class="btn" type="button" data-rnow="'+r.id+'">Ahora</button><button class="btn" type="button" data-rtog="'+r.id+'">'+(r.active?'Pausar':'Reanudar')+'</button></span></div>'}).join('');
+  h+='<p class="sec">Encargos ('+mine.length+')</p>'+(mine.slice(0,8).map(card).join('')||'<p class="hint">Ninguno todavía.</p>');
+  h+='<p class="sec">Conversación</p><div id="chat">'+(S.chats[id]||[]).map(function(m){return '<div class="msg '+(m.role==='user'?'u':'a')+'">'+(m.role==='user'?esc(m.content):'<div class="md">'+md(m.content)+'</div>')+'</div>'}).join('')+'</div></div>';
+  h+='<div class="df"><div class="row"><input type="text" id="cin" placeholder="Habla con '+esc(a.n)+'…" style="flex:1"><button class="btn p" type="button" id="csend">Enviar</button></div><div class="row" style="margin-top:6px"><button class="btn" type="button" id="cAsk">Encargarle una tarea</button></div></div>';
+  openDrawer(h);
+  document.getElementById('cx').onclick=closeAll;
+  document.querySelectorAll('#drawer [data-t]').forEach(function(b){b.onclick=function(){openTask(b.dataset.t)}});
+  document.querySelectorAll('[data-unr]').forEach(function(b){b.onclick=function(){var l=rules.slice();l.splice(+b.dataset.unr,1);put('rules',id,{agent:id,list:l,updated:now()}).then(function(){openAgent(id)})}});
+  document.querySelectorAll('[data-rnow]').forEach(function(b){b.onclick=function(){runRoutine(routines().find(function(r){return r.id===b.dataset.rnow}));closeAll()}});
+  document.querySelectorAll('[data-rtog]').forEach(function(b){b.onclick=function(){var r=routines().find(function(x){return x.id===b.dataset.rtog});put('routines',r.id,{id:r.id,active:!r.active,last:r.last}).then(function(){openAgent(id)})}});
+  document.getElementById('cAsk').onclick=function(){closeAll();document.getElementById('tDep').value=a.dep;document.getElementById('tTxt').focus()};
+  var send=async function(){
+    var inp=document.getElementById('cin'),v=inp.value.trim();if(!v)return;inp.value='';
+    var hist=(S.chats[id]||[]).concat([{role:'user',content:v}]);S.chats[id]=hist;openAgent(id);
+    if(!S.sample){S.chats[id]=hist.concat([{role:'assistant',content:'Modo demostración: sin Claude no puedo responder.'}]);openAgent(id);return}
+    try{
+      var msgs=[{role:'user',content:agentContext(a)+'\n\nVas a conversar con uno de los socios. Responde corto y en tu papel.'},{role:'assistant',content:'Entendido.'}].concat(hist.slice(-12));
+      var r=await S.sample(msgs,{modelTier:'default',cache:false});
+      S.chats[id]=hist.concat([{role:'assistant',content:r.text}]);
+    }catch(e){S.chats[id]=hist.concat([{role:'assistant',content:'No he podido responder ahora mismo.'}])}
+    if(cur.agent===id)openAgent(id);
+  };
+  document.getElementById('csend').onclick=send;
+  document.getElementById('cin').onkeydown=function(e){if(e.key==='Enter')send()};
+  var ch=document.getElementById('chat');if(ch&&ch.lastElementChild)ch.lastElementChild.scrollIntoView({block:'nearest'});
+}
+function diasTxt(ds){var n=['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];return 'Cada '+ds.map(function(d){return n[d]}).join(' y ')}
+
+function openBoard(){
+  var draw=function(){
+    var C=[['cola','En cola'],['marcha','En marcha'],['preg','Preguntas'],['aprob','Espera tu OK'],['hecha','Hechas'],['rech','Rechazadas']];
+    var h='<div class="dh"><div><h2>Tablero</h2><small>Todos los encargos, de la cola a hecho</small></div><button class="btn x" id="cx" type="button">Cerrar</button></div><div class="board">';
+    C.forEach(function(c){var L=Object.values(S.tasks).filter(function(t){return t.status===c[0]}).sort(function(a,b){return (b.created||'').localeCompare(a.created||'')});h+='<div class="col"><h5><span>'+c[1]+'</span><span>'+L.length+'</span></h5>'+L.map(card).join('')+'</div>'});
+    h+='</div>';
+    var f=document.getElementById('full');f.innerHTML=h;
+    document.getElementById('cx').onclick=closeAll;
+    f.querySelectorAll('[data-t]').forEach(function(b){b.onclick=function(){openTask(b.dataset.t)}});
+  };
+  openFull('',draw);draw();
+}
+
+var calMonth=null;
+function openCal(){
+  if(!calMonth){var n=new Date();calMonth=new Date(n.getFullYear(),n.getMonth(),1)}
+  var draw=function(){
+    var y=calMonth.getFullYear(),m=calMonth.getMonth(),first=new Date(y,m,1),start=new Date(first);start.setDate(1-((first.getDay()+6)%7));
+    var today=iso(new Date()),h='<div class="dh"><div><h2>'+first.toLocaleDateString('es-ES',{month:'long',year:'numeric'})+'</h2><small>Plan de construcción, controles, festivos, rutinas y encargos terminados</small></div><div class="row" style="margin-left:auto"><button class="btn" id="cp" type="button">Anterior</button><button class="btn" id="ct" type="button">Hoy</button><button class="btn" id="cn" type="button">Siguiente</button><button class="btn" id="cx" type="button">Cerrar</button></div></div><div class="cal"><div class="calgrid">';
+    ['lun','mar','mié','jue','vie','sáb','dom'].forEach(function(d){h+='<div class="dn">'+d+'</div>'});
+    var done={};Object.values(S.tasks).forEach(function(t){if(t.status==='hecha'&&t.done){var k=iso(new Date(t.done));(done[k]=done[k]||[]).push(t)}});
+    for(var i=0;i<42;i++){
+      var d=new Date(start);d.setDate(start.getDate()+i);var k=iso(d),ev='';
+      PLAN.forEach(function(p){if(p[0]===k)ev+='<div class="ev plan" title="'+esc(p[1])+'">'+esc(p[1])+'</div>'});
+      if(CTL[k])ev+='<div class="ev ctl">'+CTL[k]+'</div>';
+      if(FEST[k])ev+='<div class="ev fest">'+FEST[k]+'</div>';
+      if(d>=new Date(new Date().toDateString()))routines().forEach(function(r){if(r.active&&r.days.indexOf(d.getDay())>-1)ev+='<div class="ev rut" title="'+esc(ag(r.ag).n)+'">'+r.h+' '+esc(r.name)+'</div>'});
+      (done[k]||[]).forEach(function(t){ev+='<div class="ev done" data-t="'+t.id+'" style="cursor:pointer">'+esc(t.title)+'</div>'});
+      h+='<div class="day'+(d.getMonth()!==m?' out':'')+(k===today?' today':'')+'"><span class="num">'+d.getDate()+'</span>'+ev+'</div>';
+    }
+    h+='</div><p class="hint" style="margin-top:10px">Las rutinas no corren solas con la oficina cerrada: si una tocaba en las últimas 24 horas y no se ha hecho, aparece como "Rutina pendiente" en la lista de encargos al abrir.</p></div>';
+    var f=document.getElementById('full');f.innerHTML=h;
+    document.getElementById('cx').onclick=closeAll;
+    document.getElementById('cp').onclick=function(){calMonth=new Date(y,m-1,1);draw()};
+    document.getElementById('cn').onclick=function(){calMonth=new Date(y,m+1,1);draw()};
+    document.getElementById('ct').onclick=function(){var n=new Date();calMonth=new Date(n.getFullYear(),n.getMonth(),1);draw()};
+    f.querySelectorAll('[data-t]').forEach(function(b){b.onclick=function(){openTask(b.dataset.t)}});
+  };
+  openFull('',draw);draw();
+}
+function iso(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+
+function openBrain(){
+  var sel=null;
+  var draw=function(){
+    var W=800,H=520,P=layout(W,H,60),o='';
+    LINKS.forEach(function(l){var a=P[l[0]],b=P[l[1]],hl=sel&&(l[0]===sel||l[1]===sel);o+='<line x1="'+a[0]+'" y1="'+a[1]+'" x2="'+b[0]+'" y2="'+b[1]+'" stroke="'+(hl?'var(--wine)':'var(--hairline)')+'" stroke-width="'+(hl?2:1.2)+'"/>'});
+    var col=['var(--ink)','var(--accent)','var(--wine)','var(--ochre)'];
+    DOCS.forEach(function(d){var p=P[d[0]];o+='<g class="node" data-n="'+d[0]+'" tabindex="0"><circle cx="'+p[0]+'" cy="'+p[1]+'" r="'+(sel===d[0]?13:d[2]===0?11:9)+'" fill="'+col[d[2]]+'"/><text x="'+p[0]+'" y="'+(p[1]+24)+'" text-anchor="middle" font-size="12" fill="var(--ink)" font-family="Instrument Sans, sans-serif">'+esc(d[1])+'</text></g>'});
+    var side;
+    if(sel){var d=DOCS.find(function(x){return x[0]===sel}),rel=LINKS.filter(function(l){return l[0]===sel||l[1]===sel}).map(function(l){var o2=l[0]===sel?l[1]:l[0];return DOCS.find(function(x){return x[0]===o2})[1]});
+      side='<p class="sec">Documento</p><h3 style="margin:0">'+esc(d[1])+'</h3><p>'+esc(d[3])+'</p><p class="sec">Conectado con</p>'+rel.map(function(r){return '<span class="tag">'+esc(r)+'</span>'}).join('');}
+    else side='<p class="sec">Qué es</p><p>El cerebro de la oficina es el repositorio <b>empresa-ia</b>. Todos los agentes trabajan con un resumen de él, y sus entregas se pueden llevar al repositorio como documentos nuevos.</p><p class="sec">Leyenda</p><p><span class="tag" style="border-color:var(--ink)">Raíz</span><span class="tag" style="border-color:var(--accent)">docs/</span><span class="tag" style="border-color:var(--wine)">Atlas y web</span><span class="tag" style="border-color:var(--ochre)">Documentos fuente</span></p><p class="hint">Pulsa un nodo para ver con qué se relaciona.</p>';
+    var ent=Object.values(S.tasks).filter(function(t){return t.status==='hecha'}).sort(function(a,b){return (b.done||'').localeCompare(a.done||'')}).slice(0,8);
+    side+='<p class="sec">Últimas entregas</p>'+(ent.map(card).join('')||'<p class="hint">Ninguna todavía.</p>');
+    var f=document.getElementById('full');
+    f.innerHTML='<div class="dh"><div><h2>Cerebro · empresa-ia</h2><small>'+DOCS.length+' documentos y cómo se enlazan</small></div><button class="btn x" id="cx" type="button">Cerrar</button></div><div class="brainview"><svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Mapa de documentos del repositorio">'+o+'</svg><div class="brainside">'+side+'</div></div>';
+    document.getElementById('cx').onclick=closeAll;
+    f.querySelectorAll('.node').forEach(function(g){g.onclick=function(){sel=sel===g.dataset.n?null:g.dataset.n;draw()};g.onkeydown=function(e){if(e.key==='Enter')g.onclick()}});
+    f.querySelectorAll('[data-t]').forEach(function(b){b.onclick=function(){openTask(b.dataset.t)}});
+  };
+  openFull('',draw);draw();
+}
+
+// ======================= CONTROLES =======================
+var selDep=document.getElementById('tDep');
+selDep.innerHTML='<option value="">Que decida el CEO</option>'+DEP.map(function(d){return '<option value="'+d.id+'">'+esc(d.n)+'</option>'}).join('');
+function tog(b){b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')==='true'?'false':'true')}
+document.getElementById('tTeam').onclick=function(){tog(this)};
+document.getElementById('tOk').onclick=function(){tog(this)};
+function submit(){var tx=document.getElementById('tTxt');var v=tx.value;if(!v.trim())return;tx.value='';
+  addTask(v,{dep:selDep.value,tier:document.getElementById('tTier').value,team:document.getElementById('tTeam').getAttribute('aria-pressed')==='true',ok:document.getElementById('tOk').getAttribute('aria-pressed')==='true'});}
+document.getElementById('tAdd').onclick=submit;
+document.getElementById('tTxt').onkeydown=function(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();submit()}};
+document.getElementById('bBoard').onclick=openBoard;
+document.getElementById('bCal').onclick=openCal;
+document.getElementById('bBrain').onclick=openBrain;
+document.getElementById('bApr').onclick=function(){S.filter='aprob';renderFeed();document.getElementById('feed').scrollIntoView({block:'nearest'})};
+document.getElementById('bTheme').onclick=function(){var d=document.documentElement,c=d.getAttribute('data-theme'),dark=c?c==='dark':matchMedia('(prefers-color-scheme: dark)').matches;d.setAttribute('data-theme',dark?'light':'dark');try{localStorage.setItem('varios-theme',dark?'light':'dark')}catch(e){}};
+try{var th=localStorage.getItem('varios-theme');if(th)document.documentElement.setAttribute('data-theme',th)}catch(e){}
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'){closeAll();return}
+  var tag=(e.target.tagName||'').toLowerCase();if(tag==='input'||tag==='textarea'||tag==='select'||e.metaKey||e.ctrlKey||e.altKey)return;
+  var k=e.key.toLowerCase();
+  if(k==='b')openBoard();else if(k==='p')openCal();else if(k==='g')openBrain();
+  else if(/^[1-6]$/.test(k)){var id=DEP[+k-1].id;S.depFilter=S.depFilter===id?null:id;render()}
+});
+
+// ======================= ARRANQUE =======================
+lsLoad();setStatus();render();
+(async function(){
+  try{if(window.claude&&claude.use){
+    var smp=await claude.use('sample');if(smp){S.sample=smp}
+    var db=await claude.use('db');
+    if(db){S.db=db;try{var u=await claude.use('user');if(u&&u.id)S.uid=await u.id()}catch(e){}subscribe()}
+  }}catch(e){}
+  setStatus();render();
+})();
+setInterval(function(){renderFeed()},60000);
+})();
+</script>
+</body>
+</html>

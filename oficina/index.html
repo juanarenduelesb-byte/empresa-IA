@@ -733,6 +733,7 @@ async function addTask(text,opts){
   var r;
   try{r=S.sample?await route(text,t.dep,{project:pj,hist:t.hist}):routeDemo(text,t.dep)}
   catch(e){if(e&&e.code==='not_granted'){S.sample=null;setStatus()}r=routeDemo(text,t.dep);r.motivo='No se pudo consultar al CEO; asignado por palabras clave.'}
+  if(opts.agent&&ag(opts.agent)&&r.agente!==opts.agent&&r.decision!=='RECHAZAR'){r.motivo=(r.motivo||'')+' Asignado por el plan del proyecto a '+ag(opts.agent).n+'.';r.agente=opts.agent}
   t=Object.assign({},S.tasks[id],{agent:r.agente,decision:r.decision,risk:r.riesgo,reason:r.motivo,question:r.pregunta||'',title:r.titulo||t.title,ceo:{objetivo:r.objetivo||'',confirmado:r.confirmado||[],inferido:r.inferido||[],desconocido:r.desconocido||[],proceso:r.proceso||'',criterio:r.criterio||''},ceoRead:r.refs||[]});
   t.format=(opts.format&&opts.format!=='auto')?opts.format:(VE.KINDS[r.formato]?r.formato:'texto');
   t.sector=SECT[r.sector]?r.sector:(pj&&SECT[pj.sector]?pj.sector:'');t.reuse=r.reutiliza||'';
@@ -799,7 +800,7 @@ async function run(id,extra){
     if(e&&e.code==='not_granted'){S.sample=null;setStatus()}
     t.status='cola';lg(t,'No se pudo trabajar: '+((e&&e.code)==='rate_limited'?'límite de uso alcanzado, inténtalo más tarde':'error al consultar a Claude'));
     await put('tasks',id,t);
-  }finally{delete S.working[a.id];render()}
+  }finally{delete S.working[a.id];delete INFLIGHT[id];render();setTimeout(pumpPlans,400)}
 }
 function parseNotes(txt,from){var N=[];String(txt).split('\n').forEach(function(l){var m=l.match(/^\s*@([^:]{2,40}):\s*(.+)$/);if(m)N.push({from:from,to:m[1].trim(),txt:m[2].trim()})});return N}
 async function teamWork(t,lead,extra,brain){
@@ -1647,8 +1648,11 @@ function openProject(id,tab){
       h+='<p class="sec">Nuevo encargo en este proyecto</p><textarea id="pjTxt" placeholder="Ejemplo: prepara la presentación de arranque para la primera reunión"></textarea><div class="row" style="margin-top:8px"><select id="pjFmt" aria-label="Formato" style="flex:1">'+Object.keys(FMTN).map(function(k){return '<option value="'+k+'">'+FMTN[k]+'</option>'}).join('')+'</select><button class="btn p" type="button" id="pjGo">Encargar</button></div><p class="hint">Los agentes leen el informe del proyecto, sus documentos y el histórico antes de trabajar.</p></div>';
       h+='<div><p class="sec" style="margin-top:0">Plan del CEO</p>';
       if(p.plan){var pl=p.plan;h+=(pl.resumen?'<p>'+esc(pl.resumen)+'</p>':'')+(pl.fases&&pl.fases.length?'<ol class="hint" style="padding-left:18px">'+pl.fases.map(function(f){return '<li><b>'+esc(f.nombre)+'</b> · '+esc(f.objetivo||'')+'</li>'}).join('')+'</ol>':'');
-        h+=(pl.encargos||[]).map(function(e,i){var la=e.lanzado&&S.tasks[e.lanzado];return '<div class="tk"><div class="h"><span class="pill p-cola">'+esc(FMTN[e.formato]||'Texto')+'</span>'+(ag(e.agente)?'<span class="who"><i style="background:'+dep(ag(e.agente).dep).c+'"></i>'+esc(ag(e.agente).n)+'</span>':'')+(e.fase?'<span style="margin-left:auto">'+esc(e.fase)+'</span>':'')+'</div><div class="t">'+esc(e.titulo)+'</div><p class="hint" style="margin:4px 0">'+esc(clipT(e.encargo,220))+'</p>'+(la?'<button class="btn sm" type="button" data-t="'+e.lanzado+'">Ver encargo · '+esc(ST[la.status][0])+'</button>':'<button class="btn sm p" type="button" data-launch="'+i+'">Lanzar</button>')+'</div>'}).join('');
-        if((pl.encargos||[]).some(function(e){return !e.lanzado})){var fz=[];(pl.encargos||[]).forEach(function(e){if(!e.lanzado&&e.fase&&fz.indexOf(e.fase)<0)fz.push(e.fase)});
+        if(pl.auto||pl.terminado){var est=(pl.encargos||[]).map(function(e,i){return planState(id,i).k}),cn=function(k){return est.filter(function(x){return x===k}).length};
+          h+='<div class="callout'+(pl.pausado?' w':'')+'"><b>'+(pl.terminado?'Plan terminado':pl.pausado?'Plan en pausa':'El plan se está ejecutando solo')+'</b><p class="hint" style="margin:4px 0">'+cn('hecho')+' hechos · '+cn('marcha')+' en marcha · '+cn('listo')+' listos para empezar · '+cn('espera')+' esperando a otros · '+cn('bloq')+' bloqueados. Cada agente hace un encargo a la vez y como mucho '+MAXPAR+' trabajan a la vez; cada encargo empieza cuando terminan los que necesita.'+(S.sample?'':' Necesita Claude: con la oficina sin Claude no avanza.')+'</p>'+(pl.terminado?'':'<button class="btn sm" type="button" id="pjPause">'+(pl.pausado?'Reanudar':'Pausar')+'</button>')+'</div>'}
+        h+=(pl.encargos||[]).map(function(e,i){var la=e.lanzado&&S.tasks[e.lanzado],ps=planState(id,i);return '<div class="tk"><div class="h"><span class="pill p-cola">'+esc(FMTN[e.formato]||'Texto')+'</span>'+(ag(e.agente)?'<span class="who"><i style="background:'+dep(ag(e.agente).dep).c+'"></i>'+esc(ag(e.agente).n)+'</span>':'')+(e.fase?'<span style="margin-left:auto">'+esc(e.fase)+'</span>':'')+'</div><div class="t">'+esc(e.titulo)+'</div><p class="hint" style="margin:4px 0">'+esc(clipT(e.encargo,220))+'</p>'+(pl.auto&&!la?'<p class="hint" style="margin:2px 0 6px">'+(ps.k==='listo'?(agentBusy(e.agente)?'Listo: empieza cuando '+esc(ag(e.agente)?ag(e.agente).n:'el agente')+' termine lo que tiene':'Listo para empezar'):esc(ps.why||''))+'</p>':'')+(la?'<button class="btn sm" type="button" data-t="'+e.lanzado+'">Ver encargo · '+esc(ST[la.status][0])+'</button>':pl.auto?'':'<button class="btn sm p" type="button" data-launch="'+i+'">Lanzar</button>')+'</div>'}).join('');
+        if(!pl.auto&&!pl.terminado&&(pl.encargos||[]).some(function(e){return !e.lanzado}))h+='<div class="row" style="margin:8px 0"><button class="btn p" type="button" id="pjAuto">Lanzar todo el plan: que se organicen solos</button></div>';
+        if(!pl.auto&&(pl.encargos||[]).some(function(e){return !e.lanzado})){var fz=[];(pl.encargos||[]).forEach(function(e){if(!e.lanzado&&e.fase&&fz.indexOf(e.fase)<0)fz.push(e.fase)});
           h+='<div class="row" style="margin:8px 0;flex-wrap:wrap;gap:6px">'+fz.map(function(f,k){return '<button class="btn'+(k?'':' p')+'" type="button" data-phase="'+esc(f)+'">Lanzar «'+esc(f)+'»</button>'}).join('')+'<button class="btn" type="button" id="pjAll">Lanzar todos los pendientes</button></div><p class="hint">Mejor fase a fase: cada encargo lee lo que ya han entregado los anteriores del proyecto.</p>'}
         if(pl.preguntas&&pl.preguntas.length)h+='<p class="sec">Lo que el CEO necesita saber</p>'+listOr(pl.preguntas);
         if(pl.riesgos&&pl.riesgos.length)h+='<p class="sec">Riesgos</p>'+listOr(pl.riesgos);}
@@ -1674,6 +1678,8 @@ function openProject(id,tab){
     if(q('pjGo'))q('pjGo').onclick=function(){var v=q('pjTxt').value.trim();if(!v)return;addTask(v,{project:id,format:q('pjFmt').value});q('pjTxt').value='';toast('Encargo enviado al CEO');tab='tasks';setTimeout(draw,300)};
     if(q('pjPlan'))q('pjPlan').onclick=async function(){planning=true;draw();try{await planProject(id)}catch(e){toast(e&&e.code==='rate_limited'?'Límite de uso: inténtalo más tarde':'El CEO no ha podido hacer el plan')}planning=false;draw()};
     f.querySelectorAll('[data-launch]').forEach(function(b){b.onclick=function(){launchPlan(id,[+b.dataset.launch]);setTimeout(draw,300)}});
+    if(q('pjAuto'))q('pjAuto').onclick=function(){if(!S.sample){toast('Hace falta Claude para que los agentes trabajen');return}var x=clone(proj(id));x.plan.auto=now();x.plan.pausado=false;put('projects',id,x).then(function(){remember({kind:'decision',title:'Plan lanzado entero: '+x.name,text:'Los agentes se organizan por dependencias: cada uno hace un encargo a la vez y como mucho '+MAXPAR+' a la vez.',project:id,agent:'ceo'});pumpPlans();draw()})};
+    if(q('pjPause'))q('pjPause').onclick=function(){var x=clone(proj(id));x.plan.pausado=!x.plan.pausado;put('projects',id,x).then(function(){if(!x.plan.pausado)pumpPlans();draw()})};
     f.querySelectorAll('[data-phase]').forEach(function(b){b.onclick=function(){launchPlan(id,(p.plan.encargos||[]).map(function(e,i){return !e.lanzado&&e.fase===b.dataset.phase?i:-1}).filter(function(i){return i>=0}));setTimeout(draw,300)}});
     if(q('pjAll'))q('pjAll').onclick=function(){launchPlan(id,(p.plan.encargos||[]).map(function(e,i){return e.lanzado?-1:i}).filter(function(i){return i>=0}));setTimeout(draw,300)};
     if(q('pjEdit'))q('pjEdit').onclick=function(){openNewProject(id)};
@@ -1692,10 +1698,37 @@ async function planProject(id){
   r.created=now();var x=clone(proj(id));x.plan=r;await put('projects',id,x);
   remember({kind:'decision',title:'Plan propuesto para «'+p.name+'»',text:(r.resumen||'')+'\nEncargos: '+r.encargos.map(function(e){return e.titulo}).join('; '),project:id,agent:'ceo'});
 }
-function launchPlan(id,idx){var p=clone(proj(id));if(!p||!p.plan)return;
-  idx.forEach(function(i){var e=p.plan.encargos[i];if(!e||e.lanzado)return;var tid=null;
-    addTask(e.encargo,{project:id,format:e.formato,dep:e.agente&&ag(e.agente)?ag(e.agente).dep:''}).then(function(x){tid=x;var pp=clone(proj(id));if(pp&&pp.plan&&pp.plan.encargos[i]){pp.plan.encargos[i].lanzado=tid;put('projects',id,pp)}});
-  });toast(idx.length>1?idx.length+' encargos enviados al CEO':'Encargo enviado al CEO')}
+var LAUNCHING={},INFLIGHT={},RETRIES={};
+function launchPlan(id,idx,quiet){var p=clone(proj(id));if(!p||!p.plan)return;
+  idx.forEach(function(i){var e=p.plan.encargos[i],key=id+'#'+i;if(!e||e.lanzado||LAUNCHING[key])return;LAUNCHING[key]=1;
+    addTask(e.encargo,{project:id,format:e.formato,agent:e.agente,dep:e.agente&&ag(e.agente)?ag(e.agente).dep:''}).then(function(x){if(x)INFLIGHT[x]=Date.now();var pp=clone(proj(id));if(pp&&pp.plan&&pp.plan.encargos[i]){pp.plan.encargos[i].lanzado=x;return put('projects',id,pp)}}).finally(function(){delete LAUNCHING[key]});
+  });if(!quiet)toast(idx.length>1?idx.length+' encargos enviados al CEO':'Encargo enviado al CEO')}
+// ---------- Orquestador del plan: lanza solo lo que ya puede empezar ----------
+// Reglas: un encargo empieza cuando han terminado los que necesita (depende, o la fase anterior si no dice nada);
+// cada agente hace un encargo a la vez, en orden de prioridad; como mucho MAXPAR encargos a la vez en toda la oficina.
+var MAXPAR=4,RUNNING_ST={cola:1,marcha:1,revision:1,maqueta:1};
+function planDeps(pl,i){var e=pl.encargos[i];if(Array.isArray(e.depende))return e.depende;var fz=(pl.fases||[]).map(function(f){return f.nombre}),k=fz.indexOf(e.fase);
+  return k<=0?[]:pl.encargos.map(function(x,j){return fz.indexOf(x.fase)<k?j:-1}).filter(function(j){return j>=0})}
+function planState(pid,i){var p=proj(pid),pl=p.plan,e=pl.encargos[i],t=e.lanzado&&S.tasks[e.lanzado];
+  if(t){if(t.status==='hecha'||t.status==='aprob')return {k:'hecho',t:t};if(t.status==='rech')return {k:'bloq',why:'Rechazado'};if(t.status==='preg')return {k:'bloq',why:'Espera tu respuesta'};return {k:'marcha',t:t}}
+  if(LAUNCHING[pid+'#'+i])return {k:'marcha'};
+  var dep=planDeps(pl,i),falta=dep.filter(function(j){return planState(pid,j).k!=='hecho'});
+  if(falta.some(function(j){return planState(pid,j).k==='bloq'}))return {k:'bloq',why:'Bloqueado por un encargo anterior'};
+  if(falta.length)return {k:'espera',why:'Espera a: '+falta.map(function(j){return '«'+clipT(pl.encargos[j].titulo,40)+'»'}).join(', ')};
+  return {k:'listo'}}
+function agentBusy(aid){return !!S.working[aid]||Object.values(S.tasks).some(function(t){return t.agent===aid&&!t.piece&&RUNNING_ST[t.status]&&INFLIGHT[t.id]})}
+function pumpPlans(){if(!S.sample)return;var running=Object.keys(INFLIGHT).filter(function(id){var t=S.tasks[id];if(!t||!RUNNING_ST[t.status]){delete INFLIGHT[id];return false}return true}).length+Object.keys(LAUNCHING).length;
+  projList().forEach(function(p){if(!p.plan||!p.plan.auto||p.plan.pausado||p.status==='cerrado')return;var pl=p.plan;
+    // reanudar encargos que se quedaron a medias al cerrar la oficina
+    pl.encargos.forEach(function(e){var t=e.lanzado&&S.tasks[e.lanzado];if(t&&RUNNING_ST[t.status]&&!INFLIGHT[t.id]&&running<MAXPAR&&!agentBusy(t.agent)){var last=(t.log||[]).slice(-1)[0],age=Date.now()-new Date(last?last.t:t.created).getTime();
+      if(age>3*60000&&(RETRIES[t.id]||0)<2){RETRIES[t.id]=(RETRIES[t.id]||0)+1;INFLIGHT[t.id]=Date.now();running++;var x=clone(t);lg(x,'El plan lo retoma (se había quedado a medias)');put('tasks',t.id,x).then(function(){run(t.id)})}}});
+    var listos=pl.encargos.map(function(e,i){return i}).filter(function(i){return planState(p.id,i).k==='listo'});
+    listos.sort(function(a,b){return (pl.encargos[a].prioridad||9)-(pl.encargos[b].prioridad||9)||a-b});
+    var tomados={};
+    listos.forEach(function(i){var aid=pl.encargos[i].agente;if(running>=MAXPAR||tomados[aid]||agentBusy(aid))return;tomados[aid]=1;running++;launchPlan(p.id,[i],true)});
+    if(pl.encargos.every(function(e,i){return planState(p.id,i).k==='hecho'})&&!pl.terminado){var x=clone(p);x.plan.terminado=now();x.plan.auto=false;put('projects',p.id,x);toast('Plan terminado: «'+clipT(p.name,50)+'»');remember({kind:'decision',title:'Plan terminado: '+p.name,text:'Los '+pl.encargos.length+' encargos del plan están entregados.',project:p.id,agent:'ceo'})}
+  })}
+setInterval(pumpPlans,5000);
 
 // ---------- Memoria ----------
 function memCard(m){var K=MEMK[m.kind]||['Memoria','p-cola'],t=m.task&&S.tasks[m.task],p=proj(m.project);return '<div class="tk mem"><div class="h"><span class="pill '+K[1]+'">'+K[0]+'</span>'+(m.agent&&ag(m.agent)?'<span class="who"><i style="background:'+dep(ag(m.agent).dep).c+'"></i>'+esc(ag(m.agent).n)+'</span>':'')+'<span style="margin-left:auto">'+fmt(m.created)+'</span></div><div class="t">'+esc(m.title)+'</div><div class="md" style="font-size:13px">'+md(m.text)+'</div><div class="row" style="margin-top:6px">'+(t?'<button class="btn sm" type="button" data-t="'+t.id+'">Encargo</button>':'')+(p?'<button class="btn sm" type="button" data-pj2="'+p.id+'">'+esc(clipT(p.name,30))+'</button>':'')+'<button class="btn sm" type="button" data-mdel="'+m.id+'">Borrar</button></div></div>'}

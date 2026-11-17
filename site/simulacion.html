@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Varios · Simulación del cerebro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<style>
+/* Tira de etapas */
+.pipe-wrap{overflow-x:auto;padding:4px 2px 10px;scrollbar-width:thin}
+.pipe{display:flex;align-items:center;min-width:1060px}
+.node{flex:1 1 0;min-width:72px;display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;border:0;background:none;font:inherit;color:var(--ink-muted);padding:4px 0}
+.node .c{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:14px;background:var(--card);border:2px solid var(--hairline);color:var(--ink-muted);transition:all .3s cubic-bezier(.3,1.3,.5,1);font-variant-numeric:tabular-nums}
+.node .l{font-size:12px;font-weight:600;text-align:center;line-height:1.2;max-width:84px}
+.node.done .c{background:var(--accent-tint);border-color:var(--accent);color:var(--accent)}
+.node.on .c{background:var(--wine);border-color:var(--wine);color:var(--on-wine);transform:scale(1.18);box-shadow:0 0 0 6px var(--wine-tint)}
+.node.on .l{color:var(--ink)}
+.node.done .l{color:var(--ink)}
+.node:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:12px}
+.link{flex:0 0 22px;height:2px;background:var(--hairline);position:relative;margin-top:-22px}
+.link::after{content:"";position:absolute;right:-1px;top:-4px;border:5px solid transparent;border-left:7px solid var(--hairline);border-right:0}
+.link.done{background:var(--accent)}.link.done::after{border-left-color:var(--accent)}
+/* Controles */
+.ctrl{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:14px}
+.ctrl .prog{margin-left:auto;font-size:14px;color:var(--ink-muted);font-variant-numeric:tabular-nums}
+.bar-prog{height:6px;border-radius:6px;background:var(--track);margin-top:12px;overflow:hidden}
+.bar-prog i{display:block;height:100%;background:var(--accent);width:0;transition:width .5s cubic-bezier(.3,1,.4,1)}
+.btn[disabled]{opacity:.45;cursor:default}
+/* Escenario */
+.scen{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.scen button{text-align:left;cursor:pointer;font:inherit;color:inherit;background:var(--card);border:1.5px solid var(--hairline);border-radius:var(--r-lg);padding:16px}
+.scen button[aria-pressed=true]{border-color:var(--wine);box-shadow:0 0 0 4px var(--wine-tint)}
+.scen b{display:block;font-size:16px;margin:6px 0 4px}
+.scen span.small{color:var(--ink-muted)}
+@media (max-width:820px){.scen{grid-template-columns:1fr}}
+/* Escenario de trabajo */
+.stage{display:grid;grid-template-columns:1.45fr 1fr;gap:16px;margin-top:16px}
+.stage>*{min-width:0}
+@media (max-width:900px){.stage{grid-template-columns:1fr}}
+.panel{background:var(--card);border:1px solid var(--hairline);border-radius:var(--r-xl);padding:24px;min-height:380px}
+.panel h3{margin-top:2px}
+.fade{animation:fin .45s ease both}
+@keyframes fin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.mail{border:1px solid var(--hairline);border-radius:var(--r-md);overflow:hidden;background:var(--glass-strong)}
+.mail .hd{padding:12px 16px;border-bottom:1px solid var(--hairline);font-size:14px;color:var(--ink-muted);display:grid;gap:2px}
+.mail .hd b{color:var(--ink)}
+.mail .bd{padding:16px;font-size:15.5px}
+.att{display:inline-flex;gap:6px;align-items:center;font-size:13px;padding:6px 10px;border-radius:999px;background:var(--track);margin:8px 6px 0 0}
+.kv{display:grid;grid-template-columns:170px 1fr;gap:0;border-top:1px solid var(--hairline)}
+.kv div{padding:10px 0;border-bottom:1px solid var(--hairline);font-size:15px}
+.kv div:nth-child(odd){color:var(--ink-muted);font-size:13.5px;font-weight:600;padding-right:10px}
+@media (max-width:560px){.kv{grid-template-columns:1fr}.kv div:nth-child(odd){border-bottom:0;padding-bottom:0}}
+.qa{display:grid;gap:10px}
+.qa .q{border-left:0;background:var(--glass-strong);border:1px solid var(--hairline);border-radius:var(--r-md);padding:12px 14px}
+.qa .q b{display:block;font-size:14.5px}
+.qa .q span{font-size:14.5px;color:var(--ink-muted)}
+.meter{display:flex;gap:6px;margin:6px 0 2px}
+.meter i{flex:1;height:10px;border-radius:5px;background:var(--track)}
+.meter.l1 i:nth-child(1){background:var(--good)}
+.meter.l2 i:nth-child(-n+2){background:var(--warn)}
+.meter.l3 i{background:var(--crit)}
+.spaces{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.space{border-radius:var(--r-md);padding:12px 14px;font-size:14.5px;border:1.5px solid var(--hairline);background:var(--glass-strong)}
+.space.ok{border-color:var(--accent);background:var(--accent-tint)}
+.space.no{border-style:dashed;color:var(--ink-muted);background:none}
+.space b{display:block;font-size:13px;letter-spacing:.04em;text-transform:uppercase;margin-bottom:2px}
+@media (max-width:560px){.spaces{grid-template-columns:1fr}}
+/* Plan */
+.dag{display:flex;align-items:stretch;gap:0;overflow-x:auto;padding-bottom:6px}
+.dag .col{display:flex;flex-direction:column;gap:8px;justify-content:center;min-width:150px;flex:1}
+.dag .arr{flex:0 0 26px;display:grid;place-items:center;color:var(--wine)}
+.dag .arr svg{width:18px;height:18px}
+.tk{border-radius:var(--r-md);padding:10px 12px;border:1.5px solid var(--hairline);background:var(--glass-strong);font-size:13.5px;line-height:1.35}
+.tk b{display:block;font-size:12px;color:var(--ink-muted);font-weight:600}
+.tk.ia{border-color:var(--accent);background:var(--accent-tint)}
+.tk.pe{border-color:var(--wine);background:var(--wine-tint)}
+.tk .dep{display:block;font-size:11.5px;color:var(--ink-muted);margin-top:4px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--ink-muted);margin-top:12px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:4px;margin-right:5px;vertical-align:-1px;border:1.5px solid var(--hairline)}
+.legend .ia{background:var(--accent-tint);border-color:var(--accent)}
+.legend .pe{background:var(--wine-tint);border-color:var(--wine)}
+/* Asignación */
+.assign{display:grid;gap:8px}
+.as{display:grid;grid-template-columns:1.2fr 30px 1fr 1.2fr;gap:8px;align-items:center;font-size:14px}
+.as .t{padding:9px 12px;border-radius:12px;background:var(--glass-strong);border:1px solid var(--hairline)}
+.as .a{color:var(--wine);text-align:center}
+.as .d{padding:9px 12px;border-radius:12px;background:var(--ink);color:var(--surface);font-weight:600}
+.as .h{font-size:12.5px;color:var(--ink-muted)}
+@media (max-width:620px){.as{grid-template-columns:1fr}.as .a{display:none}}
+/* Tablero */
+.board{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.bc{background:var(--track);border-radius:var(--r-md);padding:10px;min-height:220px}
+.bc h4{font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-muted);margin:2px 2px 10px}
+.bc .tk{margin-bottom:8px;animation:fin .35s ease both}
+.bc.run{box-shadow:inset 0 0 0 1.5px var(--accent)}
+.bc.wait{box-shadow:inset 0 0 0 1.5px var(--warn)}
+.bc.ok{box-shadow:inset 0 0 0 1.5px var(--good)}
+@media (max-width:760px){.board{grid-template-columns:1fr 1fr}}
+/* CEO */
+.ceo{background:var(--ink);color:var(--surface);border-radius:var(--r-xl);padding:22px;min-height:200px}
+.ceo .hd{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.ceo .av{width:34px;height:34px;border-radius:50%;background:var(--wine);display:grid;place-items:center;color:#fff;font-weight:700;font-size:13px}
+.ceo .hd b{font-size:15px}.ceo .hd span{font-size:12.5px;opacity:.7;display:block}
+.ceo p{font-size:15px;line-height:1.5;margin:0 0 10px;padding-left:12px;border-left:2px solid var(--accent);opacity:0;animation:fin .5s ease forwards}
+.ceo p.dec{border-left-color:var(--wine);font-weight:600}
+.log{margin-top:16px;background:var(--card);border:1px solid var(--hairline);border-radius:var(--r-xl);padding:18px;max-height:340px;overflow:auto}
+.log h4{font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-muted);margin:0 0 8px}
+.log ol{list-style:none;margin:0;padding:0;font-size:13px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.log li{padding:6px 0;border-bottom:1px dashed var(--hairline);color:var(--ink-muted)}
+.log li b{color:var(--ink);font-weight:600}
+.log li.new{animation:fin .4s ease both}
+.deliver{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:560px){.deliver{grid-template-columns:1fr}}
+.stop{background:var(--crit-tint);border:1.5px solid var(--crit);border-radius:var(--r-md);padding:14px 16px;margin-top:12px}
+.stop b{color:var(--crit)}
+</style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <p class="eyebrow">5 · Simulación</p>
+    <h1>Entra un cliente. Así trabaja el cerebro por dentro.</h1>
+    <p class="lede">Elige un caso y avanza paso a paso. Verás qué entiende, cómo piensa el CEO digital, cómo clasifica el riesgo, cómo reparte el trabajo, qué hace cada departamento y qué se comprueba antes de entregar.</p>
+    <p class="small muted">Los tres casos son ejemplos inventados para explicar el funcionamiento. Las empresas, cifras y tiempos no son reales.</p>
+  </section>
+
+  <section style="padding-top:0">
+    <p class="eyebrow">1 · Elige el caso</p>
+    <div class="scen" id="scen"></div>
+  </section>
+
+  <section style="padding-top:20px">
+    <div class="glass">
+      <p class="eyebrow" style="margin-bottom:12px">2 · Recorre los pasos</p>
+      <div class="pipe-wrap"><div class="pipe" id="pipe"></div></div>
+      <div class="bar-prog"><i id="progbar"></i></div>
+      <div class="ctrl">
+        <button class="btn" id="prev" type="button">Anterior</button>
+        <button class="btn primary" id="next-step" type="button">Siguiente paso</button>
+        <button class="btn" id="play" type="button">Reproducir solo</button>
+        <button class="btn" id="reset" type="button">Empezar de nuevo</button>
+        <span class="prog" id="prog"></span>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="panel" id="panel" aria-live="polite"></div>
+      <div>
+        <div class="ceo">
+          <div class="hd"><div class="av">CEO</div><div><b>Cómo piensa el CEO digital</b><span>Razonamiento simplificado de este paso</span></div></div>
+          <div id="thoughts"></div>
+        </div>
+        <div class="log"><h4>Registro de auditoría · horas de ejemplo</h4><ol id="log"></ol></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="grid g3">
+      <div class="card"><span class="tag">Qué hay que fijarse</span><h3>Quién hace cada cosa</h3><p class="muted small">La IA entiende y propone. Las reglas calculan y comprueban. Las personas deciden lo importante. En cada paso está marcado.</p></div>
+      <div class="card"><span class="tag">Qué hay que fijarse</span><h3>El CEO no hace el trabajo</h3><p class="muted small">Solo entiende, pregunta, mide el riesgo, planifica y reparte. Los departamentos ejecutan con herramientas limitadas.</p></div>
+      <div class="card"><span class="tag">Qué hay que fijarse</span><h3>El caso 3 se para</h3><p class="muted small">Con datos de salud, el cerebro no sigue con datos reales hasta que haya una evaluación de impacto aprobada. Saber parar también es parte del producto.</p></div>
+    </div>
+  </section>
+  <div id="next" class="next"></div>
+</main>
+<script src="js/site.js"></script>
+<script>
+(function(){
+var ARROW='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+var STEPS=[
+ ['entrada','Entra la petición'],['entender','Entender'],['aclarar','Preguntar lo que falta'],['clasificar','Clasificar y riesgo'],
+ ['conocimiento','Consultar conocimiento'],['plan','Hacer el plan'],['asignar','Asignar'],['aprobar','Aprobaciones'],
+ ['ejecutar','Ejecutar'],['comprobar','Control de calidad'],['entregar','Entregar'],['registrar','Registro y aprendizaje']
+];
+var TYPE={ia:'IA',re:'Reglas',pe:'Persona'};
+
+var S=[
+{ id:'a', tag:'Seguros · riesgo medio', name:'Correduría: siniestros por correo', short:'Abrir y clasificar los partes que llegan por correo.',
+  entrada:{canal:'Correo al buzón de Varios',de:'Responsable de siniestros · Correduría Ejemplo',asunto:'Nos ahogamos con los partes',
+    texto:'Recibimos unos 600 partes al mes por correo. Dos personas los leen, buscan la póliza y abren el expediente a mano. Tardamos de media dos días en abrirlos y a veces se escapan datos. ¿Podéis ayudarnos?',adj:['parte_ejemplo.pdf','fotos_daños.zip']},
+  entender:[['Intención','Automatizar un proceso que ya existe'],['Objetivo','Abrir antes los expedientes y con menos errores'],['Sector','Seguros · correduría'],['Proceso','Apertura y triaje de siniestros'],['Resultado esperado','Expediente abierto con una ficha revisada']],
+  aclarar:[['¿Dónde se abren hoy los expedientes?','En nuestro gestor de siniestros. Tiene API.'],['¿Quién decide si se abre o se rechaza?','El tramitador.'],['¿Llegan datos de salud?','Sí, en los partes con lesiones.']],
+  clasif:{rows:[['Complejidad','Media: texto libre y documentos variados',2],['Impacto','Medio: afecta a asegurados, sin pagos',2],['Datos','Personales; de salud en lesiones',3],['Volumen','Alto y repetitivo: bueno para automatizar',1]],
+    riesgo:'Medio',nivel:2,ria:'Según el Reglamento Europeo de IA, abrir siniestros no es tarificar ni seleccionar riesgos de vida o salud, así que en principio no es alto riesgo (orientativo). Por RGPD, los datos de salud exigen una evaluación de impacto.'},
+  conoc:{ok:[['Método Varios','Cómo hacemos un piloto'],['Sector seguros','Tipos de siniestro y vocabulario'],['Cliente: Correduría Ejemplo','Solo su espacio'],['Plantillas','Ficha de siniestro y AS-IS']],no:[['Otros clientes','Bloqueado por identidad'],['Fichas en borrador','No aprobadas, no se usan']]},
+  plan:[{id:'T1',t:'Leer el correo y los adjuntos',ty:'ia',d:[]},{id:'T2',t:'Extraer póliza, fecha, daño y asegurado',ty:'ia',d:['T1']},
+    {id:'T3',t:'Comprobar póliza en vigor y cobertura',ty:'re',d:['T2']},{id:'T4',t:'Detectar lesiones y desviarlas a mano',ty:'re',d:['T2']},
+    {id:'T5',t:'Revisión del tramitador',ty:'pe',d:['T3','T4']},{id:'T6',t:'Abrir el expediente en su gestor',ty:'re',d:['T5']}],
+  asignar:[['T1 · Leer correo','Operaciones','Perfil seguros · lector de correo, solo lectura'],['T2 · Extraer datos','Operaciones','Perfil seguros · extractor con esquema fijo'],
+    ['T3 · Póliza y cobertura','Operaciones','Reglas de póliza · consulta al gestor, solo lectura'],['T4 · Lesiones','Legal y cumplimiento','Regla de datos de salud · sin herramientas'],
+    ['T5 · Revisión','Calidad','Prepara la ficha para el tramitador'],['T6 · Abrir expediente','Integraciones','Conector del gestor · escritura con aprobación']],
+  aprobar:[['Abrir un expediente en su sistema','Medio','El tramitador aprueba cada uno durante el piloto'],['Partes con lesiones','Alto','Solo una persona. La IA no los procesa'],['Responder al asegurado','Medio','Fuera del alcance del piloto']],
+  qa:[['La ficha tiene todos los campos',true,'Esquema validado'],['La póliza existe y está en vigor',true,'Comprobado con regla'],['Cada dato cita su fuente',true,'Página 1 del PDF'],
+    ['Fecha del siniestro coherente',false,'"03/11" puede ser 3 de noviembre o 11 de marzo: se marca para el tramitador'],['Ningún dato de otro cliente',true,'Prueba de aislamiento superada']],
+  entrega:{que:'Expediente abierto y ficha revisada, con las pruebas de dónde sale cada dato.',evid:['Correo y PDF originales','Regla de cobertura aplicada','Quién aprobó y cuándo','Aviso de la fecha ambigua'],
+    met:[['Tiempo hasta abrir','Se mide en el piloto frente a los 2 días de partida'],['Fichas sin corregir','% sobre el total'],['Coste por siniestro','Uso de IA + revisión']],lim:['Las fechas ambiguas siempre van a una persona','Los partes con lesiones siguen siendo manuales']},
+  think:{
+   entrada:['Llega un correo de un contacto identificado. Lo asocio a su empresa por su identidad, no por lo que diga el texto.','Nada se ejecuta todavía. Primero hay que entender.'],
+   entender:['Piden automatizar algo que ya hacen: hay volumen, tiempo y errores medibles. Buen candidato.','Sector seguros: activo el perfil de seguros.'],
+   aclarar:['Me faltan tres datos críticos: dónde vive el expediente, quién decide y si hay datos sensibles.','No los invento. Los pregunto.'],
+   clasificar:['La IA solo propone; abrir expedientes toca a asegurados, así que el riesgo es medio.','Los partes con lesiones tienen datos de salud: esos los saco del flujo automático.','Decisión: seguir, con aprobación humana en la escritura.'],
+   conocimiento:['Busco solo en lo que este cliente y nosotros podemos ver.','Los espacios de otros clientes ni aparecen: el filtro va antes de buscar.'],
+   plan:['Divido en seis tareas. Lo que es lenguaje, a la IA. Lo que es exacto, a reglas. La decisión, a una persona.','T3 y T4 pueden ir en paralelo cuando T2 termine.'],
+   asignar:['No creo un agente nuevo: uso Operaciones con el perfil de seguros.','Cada tarea recibe solo las herramientas que necesita. Solo T6 puede escribir.'],
+   aprobar:['Escribir en el sistema del cliente es nivel medio: pido aprobación del tramitador.','Esto se podrá relajar si durante semanas sale bien. No antes.'],
+   ejecutar:['El motor de procesos lanza las tareas por orden y en paralelo cuando se puede.','T5 espera a una persona. El resto sigue.'],
+   comprobar:['Una comprobación falla: la fecha es ambigua.','No la corrijo a ciegas: la marco y se la enseño al tramitador.'],
+   entregar:['Entrego el resultado con sus pruebas y sus límites. Sin prometer cero errores.'],
+   registrar:['Todo queda registrado. Lo aprendido (fechas ambiguas) pasa a borrador de conocimiento para que una persona lo apruebe.']
+  }
+},
+{ id:'b', tag:'Finanzas · riesgo alto en pagos', name:'Gestoría: cuadrar facturas con el banco', short:'Conciliar facturas de proveedores con los movimientos bancarios.',
+  entrada:{canal:'Formulario de la web',de:'Socia directora · Gestoría Ejemplo',asunto:'Conciliación mensual',
+    texto:'Cada mes cuadramos a mano unas 1.200 facturas de proveedores de nuestros clientes con sus movimientos del banco. Es lo que más horas nos come y en cierres de trimestre vamos al límite.',adj:['facturas_muestra.zip','extracto_ejemplo.csv']},
+  entender:[['Intención','Automatizar una tarea repetitiva'],['Objetivo','Reducir horas de conciliación y llegar holgados al cierre'],['Sector','Servicios profesionales · gestoría'],['Proceso','Conciliación de facturas con banco'],['Resultado esperado','Facturas cuadradas y lista de descuadres']],
+  aclarar:[['¿Cómo llegan los movimientos del banco?','Exportamos un fichero de cada banco.'],['¿El sistema hará pagos o asientos?','No queremos que pague nada.'],['¿Quién valida los dudosos?','Un contable del equipo.']],
+  clasif:{rows:[['Complejidad','Media: facturas de formatos distintos',2],['Impacto','Alto si se tocara dinero; aquí solo se propone',3],['Datos','Personales de autónomos y datos económicos',2],['Precisión','Las cifras tienen que ser exactas',3]],
+    riesgo:'Alto en dinero, medio en lectura',nivel:3,ria:'No es un uso de alto riesgo del Reglamento Europeo de IA (orientativo). El riesgo es de negocio: un cuadre mal hecho llega a la contabilidad del cliente. Por eso las cuentas no las hace la IA.'},
+  conoc:{ok:[['Método Varios','Cómo hacemos un piloto'],['Finanzas','Reglas de conciliación'],['Cliente: Gestoría Ejemplo','Solo su espacio'],['Plantillas','Informe de descuadres']],no:[['Otros clientes','Bloqueado por identidad'],['Credenciales bancarias','Nunca entran en el sistema']]},
+  plan:[{id:'T1',t:'Leer las facturas (PDF e imagen)',ty:'ia',d:[]},{id:'T2',t:'Importar el extracto del banco',ty:'re',d:[]},
+    {id:'T3',t:'Cuadre exacto por importe, fecha y NIF',ty:'re',d:['T1','T2']},{id:'T4',t:'Proponer pareja para los dudosos',ty:'ia',d:['T3']},
+    {id:'T5',t:'Revisión del contable',ty:'pe',d:['T4']},{id:'T6',t:'Informe de descuadres',ty:'re',d:['T5']}],
+  asignar:[['T1 · Leer facturas','Finanzas','Extractor con esquema fijo'],['T2 · Importar banco','Integraciones','Lector de fichero, solo lectura'],
+    ['T3 · Cuadre exacto','Finanzas','Reglas: aritmética exacta, sin IA'],['T4 · Dudosos','Finanzas','IA propone y explica por qué'],
+    ['T5 · Revisión','Calidad','Contable del cliente'],['T6 · Informe','Finanzas','Plantilla fija']],
+  aprobar:[['Aceptar un cuadre dudoso','Medio','El contable, uno a uno'],['Cualquier pago o asiento','Alto','Prohibido para el sistema: no tiene esa herramienta'],['Enviar el informe al cliente final','Medio','La gestoría decide']],
+  qa:[['Suma de facturas = cuadradas + pendientes',true,'Cuadre aritmético exacto'],['Ningún importe lo calcula la IA',true,'Todos salen de reglas'],['Cada propuesta explica su motivo',true,'Texto de justificación presente'],
+    ['NIF válido en todas las facturas',false,'2 NIF con formato erróneo: se listan como incidencia'],['Ningún dato de otro cliente',true,'Prueba de aislamiento superada']],
+  entrega:{que:'Facturas cuadradas, propuestas revisadas y un informe de descuadres listo para el cierre.',evid:['Factura y movimiento enlazados','Regla que hizo el cuadre','Quién aceptó cada dudoso','Incidencias de NIF'],
+    met:[['Horas de conciliación','Frente a la medición de partida'],['% cuadrado automático','Sin intervención'],['Errores detectados después','Debe tender a cero']],lim:['No paga ni contabiliza','Formatos de factura nuevos requieren revisión']},
+  think:{
+   entrada:['Petición por la web de una empresa identificada.','Habla de dinero: alerta de precisión desde el principio.'],
+   entender:['El trabajo es de emparejar números: eso es exacto, no es lenguaje.','La IA solo debería leer facturas y ayudar con los casos raros.'],
+   aclarar:['Pregunto si el sistema tendría que pagar o contabilizar. Si dicen que sí, cambia todo el riesgo.','Respuesta: no. Mejor.'],
+   clasificar:['Riesgo alto en lo que toca dinero; medio en leer y proponer.','Decisión: el sistema no tendrá ninguna herramienta de pago ni de contabilidad.'],
+   conocimiento:['Uso reglas de conciliación y el espacio de este cliente.','Las credenciales del banco no entran nunca: trabajamos con ficheros exportados.'],
+   plan:['T1 y T2 van en paralelo. El cuadre exacto lo hacen reglas.','La IA solo entra en los dudosos y siempre explica su propuesta.'],
+   asignar:['Todo cae en Finanzas, con Integraciones para el fichero del banco.','Sin perfil sectorial especial: es un proceso de finanzas general.'],
+   aprobar:['Cada dudoso lo acepta un contable.','Pagos y asientos: no se piden porque el sistema no puede hacerlos.'],
+   ejecutar:['Las tareas exactas terminan rápido. La revisión humana marca el ritmo.'],
+   comprobar:['La comprobación aritmética es la más importante: si no cuadra al céntimo, no se entrega.','Dos NIF raros: incidencia, no corrección automática.'],
+   entregar:['Entrego el informe con cada cuadre enlazado a su factura y su movimiento.'],
+   registrar:['Registro todo. Propongo una regla nueva para NIF mal formados, pendiente de aprobación.']
+  }
+},
+{ id:'c', tag:'Salud · se para', name:'Clínica: resumir historiales', short:'Preparar un resumen del historial antes de cada consulta.',
+  entrada:{canal:'Reunión comercial',de:'Gerente · Clínica Ejemplo',asunto:'Preparar consultas',
+    texto:'Los médicos pierden unos 10 minutos antes de cada consulta leyendo el historial. Queremos un resumen automático de cada paciente.',adj:['ejemplo_historial_anonimizado.pdf']},
+  entender:[['Intención','Ahorrar tiempo de preparación'],['Objetivo','Resumen del historial antes de cada consulta'],['Sector','Salud · clínica privada'],['Proceso','Preparación de consultas'],['Resultado esperado','Resumen fiable que el médico revisa']],
+  aclarar:[['¿El resumen influye en el diagnóstico?','No, solo prepara la consulta. Decide el médico.'],['¿Hay evaluación de impacto de protección de datos para esto?','No, todavía no.'],['¿Dónde están los historiales?','En el programa de la clínica.']],
+  clasif:{rows:[['Complejidad','Alta: lenguaje médico',3],['Impacto','Alto: afecta a pacientes',3],['Datos','De salud: categoría especial del RGPD',3],['Errores','Un resumen que omite algo puede influir en la consulta',3]],
+    riesgo:'Alto',nivel:3,ria:'Los datos de salud son categoría especial (artículo 9 del RGPD) y exigen base legal y evaluación de impacto. Si el sistema llegara a influir en decisiones clínicas, habría que estudiar si es producto sanitario. Orientativo: necesita revisión legal.'},
+  conoc:{ok:[['Método Varios','Cómo hacemos un piloto'],['Sector salud','Vocabulario y normas'],['Cliente: Clínica Ejemplo','Solo documentos de ejemplo anonimizados']],no:[['Historiales reales','Bloqueados hasta evaluación de impacto aprobada'],['Otros clientes','Bloqueado por identidad']]},
+  plan:[{id:'T0',t:'Evaluación de impacto y base legal',ty:'pe',d:[]},{id:'T1',t:'Generar historiales inventados',ty:'re',d:[]},
+    {id:'T2',t:'Resumir los historiales inventados',ty:'ia',d:['T1']},{id:'T3',t:'Revisión de un médico',ty:'pe',d:['T2']},
+    {id:'T4',t:'Informe de viabilidad',ty:'re',d:['T3']},{id:'T5',t:'Procesar historiales reales',ty:'re',d:['T0','T4'],blocked:true}],
+  asignar:[['T0 · Evaluación de impacto','Legal y cumplimiento','La firma el delegado de protección de datos de la clínica'],['T1 · Datos inventados','Datos e IA','Generador, sin datos reales'],
+    ['T2 · Resumir','Operaciones','Perfil salud · resumen con citas'],['T3 · Revisión médica','Calidad','Médico de la clínica'],
+    ['T4 · Viabilidad','Dirección','Informe para decidir'],['T5 · Datos reales','Integraciones','Bloqueada']],
+  aprobar:[['Usar historiales reales','Alto','Solo con evaluación de impacto aprobada'],['Dar el resumen por bueno','Alto','Siempre un médico'],['Prueba con datos inventados','Bajo','Se puede hacer ya']],
+  qa:[['Cada frase cita su origen en el historial',true,'Citas presentes'],['Ningún dato real procesado',true,'Solo datos inventados'],['Alergias y medicación nunca se omiten',false,'En 1 de 20 resúmenes faltaba una alergia: se corrige la instrucción y se repite'],
+    ['Repetición tras la corrección',true,'20 de 20 correctos en esta muestra'],['Revisión médica registrada',true,'Firmada']],
+  entrega:{que:'Informe de viabilidad y demo con datos inventados. No hay sistema en producción.',evid:['Resúmenes de prueba con sus citas','Errores encontrados y corregidos','Revisión del médico','Requisitos legales pendientes'],
+    met:[['Minutos ahorrados por consulta','Estimado en la prueba'],['Omisiones críticas','Objetivo: cero en la muestra'],['Coste por resumen','Uso de IA']],lim:['Bloqueado para datos reales hasta tener la evaluación de impacto','Un médico revisa siempre']},
+  think:{
+   entrada:['Petición en reunión. La registro y la asocio a la clínica.','Aparece la palabra historial: datos de salud.'],
+   entender:['El objetivo es razonable y medible: minutos por consulta.','Pero el material es lo más sensible que hay.'],
+   aclarar:['La pregunta clave es si hay evaluación de impacto. Respuesta: no.','Eso decide el resto.'],
+   clasificar:['Riesgo alto en todos los ejes.','Decisión: no se toca un dato real. Seguimos con datos inventados y en paralelo con la parte legal.'],
+   conocimiento:['Uso solo documentos de ejemplo anonimizados.','Los historiales reales están bloqueados por regla, no por buena voluntad.'],
+   plan:['T0 legal y T1 datos inventados empiezan a la vez.','T5 (datos reales) existe en el plan, pero nace bloqueada.'],
+   asignar:['Legal lleva la evaluación de impacto, con el delegado de protección de datos de la clínica.','Un médico es parte obligatoria del control de calidad.'],
+   aprobar:['Nivel alto: todo pasa por personas.','Lo único que se puede hacer ya es la prueba con datos inventados.'],
+   ejecutar:['T0 queda esperando a la clínica. La prueba avanza.','T5 sigue bloqueada: no hay atajo.'],
+   comprobar:['Falta una alergia en un resumen: es grave aunque sea un ejemplo.','Se corrige la instrucción, se repite y se documenta.'],
+   entregar:['Entrego un informe de viabilidad, no un sistema.','Decir "todavía no" con motivos también es entregar valor.'],
+   registrar:['Todo queda registrado, incluido el error y su corrección.','Cuando llegue la evaluación de impacto, el plan se retoma desde T5.']
+  }
+}];
+
+var cur=0, step=0, timers=[], playing=null;
+var $=function(id){return document.getElementById(id)};
+function clearT(){timers.forEach(clearTimeout);timers=[]}
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// Escenarios
+$('scen').innerHTML=S.map(function(s,i){return '<button type="button" aria-pressed="'+(i===0)+'" data-i="'+i+'"><span class="pill '+(s.id==='c'?'crit':s.id==='b'?'warn':'info')+'">'+s.tag+'</span><b>'+s.name+'</b><span class="small">'+s.short+'</span></button>'}).join('');
+$('scen').querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){
+  $('scen').querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});cur=+b.dataset.i;stopPlay();go(0,true);
+})});
+
+// Tira
+$('pipe').innerHTML=STEPS.map(function(s,i){return (i?'<span class="link" data-l="'+i+'"></span>':'')+'<button class="node" type="button" data-s="'+i+'"><span class="c">'+(i+1)+'</span><span class="l">'+s[1]+'</span></button>'}).join('');
+$('pipe').querySelectorAll('.node').forEach(function(n){n.addEventListener('click',function(){stopPlay();go(+n.dataset.s)})});
+
+function levelOf(plan){var L={};function lv(t){if(L[t.id]!=null)return L[t.id];var m=-1;t.d.forEach(function(x){var p=plan.filter(function(y){return y.id===x})[0];m=Math.max(m,lv(p))});return L[t.id]=m+1}plan.forEach(lv);return L}
+function tkHTML(t,extra){return '<div class="tk '+(t.ty==='ia'?'ia':t.ty==='pe'?'pe':'')+'"><b>'+t.id+' · '+TYPE[t.ty]+'</b>'+t.t+(extra||'')+'</div>'}
+
+function render(){
+  var s=S[cur], k=STEPS[step][0], h='';
+  h+='<p class="eyebrow">Paso '+(step+1)+' · '+STEPS[step][1]+'</p>';
+  if(k==='entrada'){
+    h+='<h3>Llega una petición nueva.</h3><p class="muted">Canal: '+s.entrada.canal+'.</p><div class="mail"><div class="hd"><span>De: <b>'+s.entrada.de+'</b></span><span>Asunto: <b>'+s.entrada.asunto+'</b></span></div><div class="bd">'+s.entrada.texto+'<div>'+s.entrada.adj.map(function(a){return '<span class="att">'+a+'</span>'}).join('')+'</div></div></div>';
+  }else if(k==='entender'){
+    h+='<h3>El CEO resume qué se pide.</h3><p class="muted small">Lo hace la IA leyendo el mensaje. Es una propuesta que se puede corregir.</p><div class="kv">'+s.entender.map(function(r){return '<div>'+r[0]+'</div><div>'+r[1]+'</div>'}).join('')+'</div>';
+  }else if(k==='aclarar'){
+    h+='<h3>Pregunta lo que falta en lugar de inventarlo.</h3><div class="qa">'+s.aclarar.map(function(r){return '<div class="q"><b>Pregunta: '+r[0]+'</b><span>Respuesta del cliente: '+r[1]+'</span></div>'}).join('')+'</div>';
+  }else if(k==='clasificar'){
+    h+='<h3>Mide el riesgo antes de mover nada.</h3><div class="kv">'+s.clasif.rows.map(function(r){return '<div>'+r[0]+'</div><div><div class="meter l'+r[2]+'"><i></i><i></i><i></i></div>'+r[1]+'</div>'}).join('')+'</div>';
+    h+='<p class="mt"><span class="pill '+(s.clasif.nivel===3?'crit':s.clasif.nivel===2?'warn':'good')+'">Riesgo global: '+s.clasif.riesgo+'</span></p><div class="note mt"><span class="tag">Leyes</span><p class="small">'+s.clasif.ria+'</p></div>';
+  }else if(k==='conocimiento'){
+    h+='<h3>Consulta solo lo que puede ver.</h3><p class="muted small">Primero se comprueba la identidad y luego se busca. Lo bloqueado ni siquiera aparece en la búsqueda.</p><div class="spaces">'+s.conoc.ok.map(function(r){return '<div class="space ok"><b>Permitido</b>'+r[0]+'<br><span class="muted small">'+r[1]+'</span></div>'}).join('')+s.conoc.no.map(function(r){return '<div class="space no"><b>Bloqueado</b>'+r[0]+'<br><span class="small">'+r[1]+'</span></div>'}).join('')+'</div>';
+  }else if(k==='plan'){
+    var L=levelOf(s.plan),max=Math.max.apply(null,s.plan.map(function(t){return L[t.id]})),cols='';
+    for(var i=0;i<=max;i++){cols+=(i?'<div class="arr">'+ARROW+'</div>':'')+'<div class="col">'+s.plan.filter(function(t){return L[t.id]===i}).map(function(t){return tkHTML(t,t.d.length?'<span class="dep">después de '+t.d.join(' y ')+'</span>':'<span class="dep">empieza ya</span>')}).join('')+'</div>'}
+    h+='<h3>Divide el encargo en tareas con orden.</h3><p class="muted small">Las flechas marcan qué tiene que terminar antes. Las tareas de la misma columna pueden ir a la vez.</p><div class="dag">'+cols+'</div><div class="legend"><span><i class="ia"></i>IA</span><span><i></i>Reglas</span><span><i class="pe"></i>Persona</span></div>';
+  }else if(k==='asignar'){
+    h+='<h3>Cada tarea va a un departamento con herramientas limitadas.</h3><div class="assign">'+s.asignar.map(function(r){return '<div class="as"><div class="t">'+r[0]+'</div><div class="a">'+ARROW+'</div><div class="d">'+r[1]+'</div><div class="h">'+r[2]+'</div></div>'}).join('')+'</div>';
+  }else if(k==='aprobar'){
+    h+='<h3>Decide qué necesita a una persona.</h3><div class="table-wrap"><table><thead><tr><th>Acción</th><th>Nivel</th><th>Quién aprueba</th></tr></thead><tbody>'+s.aprobar.map(function(r){var c=r[1]==='Alto'?'crit':r[1]==='Medio'?'warn':'good';return '<tr><td>'+r[0]+'</td><td><span class="pill '+c+'">'+r[1]+'</span></td><td>'+r[2]+'</td></tr>'}).join('')+'</tbody></table></div>';
+  }else if(k==='ejecutar'){
+    h+='<h3>El motor de procesos mueve las tareas.</h3><p class="muted small">Mira cómo pasan de columna. Las tareas de una persona esperan su aprobación.</p><div class="board"><div class="bc" id="c-q"><h4>En cola</h4></div><div class="bc run" id="c-r"><h4>En marcha</h4></div><div class="bc wait" id="c-w"><h4>Espera persona</h4></div><div class="bc ok" id="c-d"><h4>Terminada</h4></div></div><div id="blk"></div>';
+  }else if(k==='comprobar'){
+    h+='<h3>Nada se entrega sin pasar los controles.</h3><div class="qa">'+s.qa.map(function(r){return '<div class="q"><b><span class="pill '+(r[1]?'good':'crit')+'">'+(r[1]?'Correcto':'Falla')+'</span> '+r[0]+'</b><span>'+r[2]+'</span></div>'}).join('')+'</div>';
+  }else if(k==='entregar'){
+    h+='<h3>'+s.entrega.que+'</h3><div class="deliver mt"><div class="card"><span class="tag">Pruebas que se entregan</span><ul class="ticks small">'+s.entrega.evid.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul></div><div class="card"><span class="tag">Límites que se avisan</span><ul class="ticks small">'+s.entrega.lim.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul></div></div><div class="kv mt">'+s.entrega.met.map(function(r){return '<div>'+r[0]+'</div><div>'+r[1]+'</div>'}).join('')+'</div>';
+  }else if(k==='registrar'){
+    h+='<h3>Todo queda escrito y el sistema aprende con permiso.</h3><div class="flow mt"><div class="step"><b>Registro</b><span>Fuentes, versiones, decisiones y quién aprobó.</span></div><div class="arrow">'+ARROW+'</div><div class="step"><b>Borrador de aprendizaje</b><span>Lo nuevo se propone como ficha.</span></div><div class="arrow">'+ARROW+'</div><div class="step risk"><b>Una persona aprueba</b><span>Solo entonces pasa al conocimiento.</span></div></div><p class="muted small mt">El registro de la derecha es el que vería un auditor.</p>';
+  }
+  var p=$('panel');p.innerHTML='<div class="fade">'+h+'</div>';
+  if(k==='ejecutar')runBoard(s);
+}
+
+function runBoard(s){
+  var L=levelOf(s.plan),max=0;s.plan.forEach(function(t){max=Math.max(max,L[t.id])});
+  var el={};s.plan.forEach(function(t){var d=document.createElement('div');d.innerHTML=tkHTML(t);el[t.id]=d.firstChild;$('c-q').appendChild(el[t.id])});
+  function mv(id,col){var n=el[id];if(n){n.style.animation='none';void n.offsetWidth;n.style.animation='';$(col).appendChild(n)}}
+  var tEnd=0,dt=reduce?0:900;
+  for(var lv=0;lv<=max;lv++){
+    (function(lv){
+      var ts=s.plan.filter(function(t){return L[t.id]===lv});
+      timers.push(setTimeout(function(){ts.forEach(function(t){if(t.blocked)return;mv(t.id,t.ty==='pe'?'c-w':'c-r')})},(lv*2+1)*dt));
+      timers.push(setTimeout(function(){ts.forEach(function(t){if(t.blocked)return;if(t.ty==='pe'&&s.id==='c'&&t.id==='T0')return;mv(t.id,'c-d')})},(lv*2+2)*dt));
+    })(lv);
+  }
+  var bl=s.plan.filter(function(t){return t.blocked})[0];
+  if(bl)timers.push(setTimeout(function(){var n=el[bl.id];if(n){n.style.borderColor='var(--crit)';n.style.background='var(--crit-tint)';n.querySelector('b').textContent=bl.id+' · Bloqueada'}$('blk').innerHTML='<div class="stop fade"><b>'+bl.id+' bloqueada.</b> '+bl.t+': no se ejecuta hasta que la evaluación de impacto (T0) esté aprobada por la clínica. Es una regla del sistema, no una opción.</div>'},(max*2+2)*dt+200));
+}
+
+function thoughts(){
+  var s=S[cur],k=STEPS[step][0],arr=s.think[k]||[];
+  $('thoughts').innerHTML=arr.map(function(t,i){var dec=/^Decisi/.test(t);return '<p class="'+(dec?'dec':'')+'" style="animation-delay:'+(reduce?0:i*0.55)+'s">'+t+'</p>'}).join('');
+}
+
+var LOG={entrada:'petición recibida · identidad verificada',entender:'intención y proceso propuestos por IA',aclarar:'3 preguntas al cliente · respuestas guardadas',clasificar:'riesgo calculado por reglas',conocimiento:'búsqueda con permisos · espacios bloqueados excluidos',plan:'plan creado · versión 1',asignar:'tareas asignadas · herramientas limitadas',aprobar:'niveles de aprobación fijados',ejecutar:'tareas ejecutadas por el motor de procesos',comprobar:'controles de calidad ejecutados',entregar:'entrega con evidencias',registrar:'caso cerrado · aprendizaje en borrador'};
+function logs(){
+  var o='';for(var i=0;i<=step;i++){var m=9+Math.floor(i*7/60),mm=(i*7)%60;o+='<li class="'+(i===step?'new':'')+'"><b>'+String(m).padStart(2,'0')+':'+String(mm).padStart(2,'0')+'</b> · '+LOG[STEPS[i][0]]+'</li>'}
+  $('log').innerHTML=o;var lg=$('log').parentNode;lg.scrollTop=lg.scrollHeight;
+}
+
+function go(n,force){
+  if(n<0||n>=STEPS.length)return;clearT();step=n;
+  $('pipe').querySelectorAll('.node').forEach(function(x,i){x.classList.toggle('on',i===step);x.classList.toggle('done',i<step);x.setAttribute('aria-current',i===step?'step':'false')});
+  $('pipe').querySelectorAll('.link').forEach(function(x){x.classList.toggle('done',+x.dataset.l<=step)});
+  var on=$('pipe').querySelector('.node.on');if(on&&on.scrollIntoView){try{on.scrollIntoView({block:'nearest',inline:'center',behavior:reduce?'auto':'smooth'})}catch(e){}}
+  $('prog').textContent='Paso '+(step+1)+' de '+STEPS.length;
+  $('progbar').style.width=((step+1)/STEPS.length*100)+'%';
+  $('prev').disabled=step===0;$('next-step').disabled=step===STEPS.length-1;
+  render();thoughts();logs();
+}
+function stopPlay(){if(playing){clearInterval(playing);playing=null;$('play').textContent='Reproducir solo'}}
+$('prev').addEventListener('click',function(){stopPlay();go(step-1)});
+$('next-step').addEventListener('click',function(){stopPlay();go(step+1)});
+$('reset').addEventListener('click',function(){stopPlay();go(0)});
+$('play').addEventListener('click',function(){
+  if(playing){stopPlay();return}
+  if(step===STEPS.length-1)go(0);
+  $('play').textContent='Pausar';
+  playing=setInterval(function(){if(step>=STEPS.length-1){stopPlay();return}go(step+1)},7000);
+});
+document.addEventListener('keydown',function(e){if(e.target.tagName==='INPUT')return;if(e.key==='ArrowRight'){stopPlay();go(step+1)}if(e.key==='ArrowLeft'){stopPlay();go(step-1)}});
+go(0);
+})();
+</script>
+</body>
+</html>

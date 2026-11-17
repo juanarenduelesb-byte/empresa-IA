@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Varios · Plan de 12 semanas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<style>
+.gantt-wrap{overflow-x:auto}
+.gantt{display:grid;grid-template-columns:170px repeat(13,minmax(54px,1fr));gap:4px 3px;min-width:920px;font-size:13px;align-items:center}
+.gantt .wk{text-align:center;color:var(--ink-muted);font-weight:600;font-size:12px;line-height:1.2;padding-bottom:4px}
+.gantt .wk small{display:block;font-weight:400;font-size:11px}
+.gantt .wk.hol{color:var(--warn)}
+.gantt .lab{font-weight:600;font-size:13.5px;padding-right:8px}
+.gantt .bar{height:28px;border-radius:999px;background:var(--accent);color:var(--on-accent);font-size:12px;font-weight:600;display:flex;align-items:center;padding:0 10px;white-space:nowrap;overflow:hidden}
+.gantt .bar.b2{background:var(--s2);color:#fff}
+.gantt .bar.b3{background:var(--s3);color:#fff}
+.gantt .bar.b4{background:var(--ink-muted);color:var(--surface)}
+.gantt .bar.soft{background:var(--accent-tint);color:var(--accent)}
+.gantt .gate{height:28px;display:grid;place-items:center}
+.gantt .gate span{width:22px;height:22px;transform:rotate(45deg);background:var(--ink);border-radius:5px;display:block}
+.gantt .shade{grid-row:1 / span 8;background:var(--warn-tint);border-radius:10px;opacity:.7;z-index:-1;align-self:stretch}
+.wkcard{display:grid;grid-template-columns:150px 1fr 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--hairline)}
+.wkcard:last-child{border-bottom:0}
+.wkcard .when b{display:block;font-size:17px;letter-spacing:-.01em}
+.wkcard .when span{font-size:13px;color:var(--ink-muted)}
+.wkcard ul{margin:0;padding-left:18px;font-size:15px}
+.wkcard li{margin:3px 0}
+.who-h{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:4px}
+.done{grid-column:1/-1;font-size:14px;background:var(--accent-tint);border-radius:12px;padding:8px 12px}
+.done b{color:var(--accent)}
+@media (max-width:760px){.wkcard{grid-template-columns:1fr}}
+.gatebox{border-left:0}
+</style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <p class="eyebrow">9 · Plan de 12 semanas</p>
+    <h1>Del 23 de noviembre al 12 de febrero: del papel al primer cliente.</h1>
+    <p class="lede">Un objetivo, tres controles de paso y tareas semana a semana para cada socio. Con fechas reales, festivos incluidos.</p>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="glass">
+      <p class="eyebrow">El objetivo a 12/02/2027</p>
+      <h2 style="max-width:none">Un diagnóstico de pago entregado y un piloto firmado.</h2>
+      <div class="grid g4 mt">
+        <div class="kpi"><span>Contactos en la lista</span><b>40</b></div>
+        <div class="kpi"><span>Entrevistas de descubrimiento</span><b>15–20</b></div>
+        <div class="kpi"><span>Propuestas enviadas</span><b>3</b></div>
+        <div class="kpi hero"><span>Diagnósticos firmados</span><b>1</b></div>
+      </div>
+      <p class="small muted mt">Son objetivos, no resultados. Se revisan cada viernes contra lo real.</p>
+      <div class="note warm mt">
+        <span class="tag">Supuesto que hay que confirmar</span>
+        <p>El plan supone que cada socio dedica entre 10 y 15 horas a la semana, porque los dos tenéis otra ocupación. Si la dedicación es menor, el plan se alarga; si es mayor, se adelanta el diagnóstico a diciembre. Confirmadlo en la semana 0.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Vista general</p><h2>Cinco líneas de trabajo en paralelo.</h2><p class="lede">Las semanas marcadas en ocre (S5 y S6) son Navidad, con menos actividad. Los rombos son los controles de paso.</p></div>
+    <div class="glass gantt-wrap">
+      <div class="gantt">
+        <div></div>
+        <div class="wk">S0<small>18 nov</small></div>
+        <div class="wk">S1<small>23 nov</small></div>
+        <div class="wk">S2<small>30 nov</small></div>
+        <div class="wk">S3<small>7 dic</small></div>
+        <div class="wk">S4<small>14 dic</small></div>
+        <div class="wk hol">S5<small>21 dic</small></div>
+        <div class="wk hol">S6<small>28 dic</small></div>
+        <div class="wk">S7<small>4 ene</small></div>
+        <div class="wk">S8<small>11 ene</small></div>
+        <div class="wk">S9<small>18 ene</small></div>
+        <div class="wk">S10<small>25 ene</small></div>
+        <div class="wk">S11<small>1 feb</small></div>
+        <div class="wk">S12<small>8 feb</small></div>
+
+        <div class="lab">Socios y empresa</div>
+        <div class="bar b4" style="grid-column:2 / span 1">Pacto</div>
+        <div style="grid-column:3 / span 4"></div>
+        <div class="bar b4" style="grid-column:7 / span 3">Forma jurídica</div>
+        <div style="grid-column:10 / span 5"></div>
+
+        <div class="lab">Cerebro en Claude</div>
+        <div class="bar" style="grid-column:2 / span 2">Pasos 1–5</div>
+        <div class="bar soft" style="grid-column:4 / span 11">Habilidades y rutinas semanales</div>
+
+        <div class="lab">Clientes</div>
+        <div style="grid-column:2"></div>
+        <div class="bar b2" style="grid-column:3 / span 4">Nicho, lista y 15 entrevistas</div>
+        <div class="bar b2" style="grid-column:7 / span 4;opacity:.75">Seguimiento y cierre</div>
+        <div style="grid-column:11 / span 4"></div>
+
+        <div class="lab">Diagnóstico</div>
+        <div style="grid-column:2 / span 4"></div>
+        <div class="bar soft" style="grid-column:6 / span 3">Propuesta y plantillas</div>
+        <div style="grid-column:9"></div>
+        <div class="bar" style="grid-column:10 / span 1">Firma</div>
+        <div class="bar" style="grid-column:11 / span 3">3 semanas en el cliente</div>
+        <div class="bar b3" style="grid-column:14 / span 1">Piloto</div>
+
+        <div class="lab">Prototipo</div>
+        <div style="grid-column:2 / span 5"></div>
+        <div class="bar b3" style="grid-column:7 / span 2">Demo</div>
+        <div style="grid-column:9 / span 4"></div>
+        <div class="bar b3 soft" style="grid-column:13 / span 2">Diseño piloto</div>
+
+        <div class="lab">Controles de paso</div>
+        <div style="grid-column:2 / span 4"></div>
+        <div class="gate" style="grid-column:6" title="Control A, 18/12"><span></span></div>
+        <div style="grid-column:7 / span 3"></div>
+        <div class="gate" style="grid-column:10" title="Control B, 15/01"><span></span></div>
+        <div style="grid-column:11 / span 3"></div>
+        <div class="gate" style="grid-column:14" title="Control C, 12/02"><span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Controles de paso</p><h2>Tres viernes en los que se decide si seguir igual o cambiar.</h2></div>
+    <div class="grid g3">
+      <div class="glass"><span class="tag">Control A · viernes 18/12/2026</span><h3>¿Hay un proceso que duele y alguien interesado?</h3><p class="muted small"><b>Sí si:</b> al menos 12 entrevistas hechas, un proceso que se repite en 3 o más empresas y 2 propuestas de diagnóstico enviadas.</p><p class="small"><b>Si no:</b> cambiar de nicho o entrar por la formación en IA del artículo 4, que es más fácil de vender.</p></div>
+      <div class="glass"><span class="tag">Control B · viernes 15/01/2027</span><h3>¿Hay un diagnóstico firmado?</h3><p class="muted small"><b>Sí si:</b> contrato o aceptación por escrito con fecha de inicio y precio.</p><p class="small"><b>Si no:</b> volver a las entrevistas con lo aprendido y revisar precio y alcance. El plan se desplaza tres semanas.</p></div>
+      <div class="glass"><span class="tag">Control C · viernes 12/02/2027</span><h3>¿Diagnóstico entregado y piloto en la mesa?</h3><p class="muted small"><b>Sí si:</b> el cliente ha recibido el diagnóstico y tiene una propuesta de piloto con la métrica de éxito.</p><p class="small"><b>Siempre:</b> retrospectiva de 12 semanas y plan del siguiente trimestre.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Semana a semana</p><h2>Qué hace cada uno y cuándo está hecho.</h2><p class="lede">Reparto propuesto: Álvaro lleva clientes y relación; Juan lleva producto, cerebro y construcción. Es una propuesta para confirmar en la semana 0.</p></div>
+    <div class="glass">
+      <div class="seg" data-seg="mes" role="group" aria-label="Elegir tramo">
+        <button aria-pressed="true" data-show="m1">Noviembre y diciembre</button>
+        <button aria-pressed="false" data-show="m2">Navidad</button>
+        <button aria-pressed="false" data-show="m3">Enero y febrero</button>
+      </div>
+
+      <div id="m1" class="mt2">
+        <div class="wkcard">
+          <div class="when"><b>S0 · Arranque</b><span>18–22 nov</span></div>
+          <div><div class="who-h">Los dos</div><ul><li>Conversación de socios: roles, horas, reparto, qué pasa si uno lo deja. Dejarlo por escrito.</li><li>Leer esta web juntos y marcar desacuerdos.</li><li>Congelar documentos: no se escribe ninguno nuevo de arquitectura.</li></ul></div>
+          <div><div class="who-h">Juan</div><ul><li>Contratar Claude y hacer los pasos 1 a 5 del cerebro.</li><li>Limpiar el repositorio: una versión de cada documento.</li></ul></div>
+          <div class="done"><b>Hecho cuando:</b> hay acuerdo de socios por escrito y el proyecto de Claude está creado.</div>
+        </div>
+        <div class="wkcard">
+          <div class="when"><b>S1 · Nicho</b><span>23–29 nov</span></div>
+          <div><div class="who-h">Álvaro</div><ul><li>Proponer 3 nichos con contactos reales y elegir uno juntos.</li><li>Lista de 40 contactos: empresa, persona, cargo y cómo llegar.</li><li>Primeros 10 mensajes para pedir 30 minutos.</li></ul></div>
+          <div><div class="who-h">Juan</div><ul><li>Habilidad entrevista-descubrimiento con el guion.</li><li>Ficha de cliente ideal: tamaño, sector, proceso, quién decide.</li></ul></div>
+          <div class="done"><b>Hecho cuando:</b> nicho elegido, 40 contactos y 10 mensajes enviados.</div>
+        </div>
+        <div class="wkcard">
+          <div class="when"><b>S2 · Escuchar</b><span>30 nov – 6 dic</span></div>
+          <div><div class="who-h">Álvaro</div><ul><li>5 entrevistas. No se vende nada: se pregunta por su proceso, volumen, tiempo, errores y coste.</li><li>10 mensajes más.</li></ul></div>
+          <div><div class="who-h">Juan</div><ul><li>Acompañar 2 entrevistas.</li><li>Plantilla de propuesta de diagnóstico.</li><li>Habilidad acta-reunion.</li></ul></div>
+          <div class="done"><b>Hecho cuando:</b> 5 actas en el repositorio.</div>
+        </div>
+        <div class="wkcard">
+          <div class="when"><b>S3 · Patrones</b><span>7–13 dic · festivo el 8</span></div>
+          <div><div class="who-h">Álvaro</div><ul><li>5 o 6 entrevistas más.</li><li>Pedir a los más interesados una segunda reunión con quien hace el trabajo.</li></ul></div>
+          <div><div class="who-h">Juan</div><ul><li>Síntesis: qué proceso se repite y cuánto le cuesta a cada empresa.</li><li>Propuesta de precio del diagnóstico y del piloto, razonada con lo escuchado.</li></ul></div>
+          <div class="done"><b>Hecho cuando:</b> 10–11 entrevistas y una hoja con los procesos que se repiten.</div>
+        </div>
+        <div class="wkcard">
+          <div class="when"><b>S4 · Proponer</b><span>14–20 dic</span></div>
+          <div><div class="who-h">Álvaro</div><ul><li>4 o 5 entrevistas más, hasta 15.</li><li>Enviar 2 o 3 propuestas de diagnóstico antes de vacaciones.</li></ul></div>
+          <div><div class="who-h">Juan</div><ul><li>Elegir el proceso piloto con los datos.</li><li>Preparar la sesión de control A.</li></ul></div>
+          <div class="done"><b>Control A, viernes 18/12.</b> Ver criterios arriba.</div>
+        </div>
+      </div>
+
+      <div id="m2" class="mt2" hidden>
+        <div class="wkcard">
+          <div class="when"><b>S5 · Semana corta</b><span>21–27 dic · festivo el 25</span></div>
+          <div><div class="who-h">Álvaro</div><ul><li>Un seguimiento corto a cada propuesta, sin presionar.</li><li>Consultar con un gestor la forma jurídica y cómo facturar el primer contrato.</li></ul></div>
+          <div><div class="who-h">Juan</div><ul><li>Demo del proceso elegido con datos inventados, para enseñar en enero.</li></ul></div>
+          <div class="done"><b>Hecho cuando:</b> respuesta del gestor y demo que funciona de principio a fin.</div>
+        </div>
+        <div class="wkcard">
+          <div class="when"><b>S6 · Preparar enero</b><span>28 dic – 3 ene · festivo el 1</span></div>
+          <div><div class="who-h">Los dos</div><ul><li>Descansar. Es parte del plan.</li><li>Dejar listas las plantillas del diagnóstico: guion de entrevistas internas, mapa AS-IS y formato de informe.</li></ul></div>
+          <div><div class="who-h">Decisión</div><ul><li>Elegir y empezar los trámites de la forma jurídica para poder facturar en enero.</li></ul></div>
+          <div class="done"><b>Hecho cuando:</b> plantillas en el repositorio y trámites en marcha.</div>
+        </div>
+      </div>
+
+      <div id="m3" class="mt2" hidden>
+        <div class="wkcard">
+          <div class="when"><b>S7 · Reactivar</b><span>4–10 ene · festivo el 6</span></div>
+          <div><div class="who-h">Álvaro</div><ul><li>Llamar a cada empresa con propuesta y enseñar la demo.</li><li>Si ninguna avanza: 5 entrevistas nuevas.</li></ul></div>
+          <div><div class="who-h">Juan</div><ul><li>Ajustar la propuesta según las objeciones.</li></ul></div>
+          <div class="done"><b>Hecho cuando:</b> cada propuesta tiene un sí, un no o una fecha.</div>
+        </div>
+        <div class="wkcard">
+          <div class="when"><b>S8 · Firmar</b><span>11–17 ene</span></div>
+          <div><div class="who-h">Álvaro</div><ul><li>Cerrar el diagnóstico: firma, fecha de inicio y persona responsable en el cliente.</li></ul></div>
+          <div><div class="who-h">Juan</div><ul><li>Revisión de datos y seguridad antes de recibir nada del cliente.</li><li>Reunión de arranque.</li></ul></div>
+          <div class="done"><b>Control B, viernes 15/01.</b> ¿Diagnóstico firmado?</div>
+        </div>
+        <div class="wkcard">
+          <div class="when"><b>S9 · Diagnóstico 1/3</b><span>18–24 ene</span></div>
+          <div><div class="who-h">Álvaro</div><ul><li>Entrevistas dentro del cliente con quien hace el trabajo.</li></ul></div>
+          <div><div class="who-h">Juan</div><ul><li>Mapa del proceso actual: pasos, tiempos, volumen y excepciones.</li></ul></div>
+          <div class="done"><b>Hecho cuando:</b> el cliente valida el mapa AS-IS.</div>
+        </div>
+        <div class="wkcard">
+          <div class="when"><b>S10 · Diagnóstico 2/3</b><span>25–31 ene</span></div>
+          <div><div class="who-h">Álvaro</div><ul><li>Recoger datos de coste y volumen con el cliente.</li></ul></div>
+          <div><div class="who-h">Juan</div><ul><li>Casos de uso puntuados por valor, viabilidad y riesgo.</li><li>Clasificación según el Reglamento Europeo de IA.</li></ul></div>
+          <div class="done"><b>Hecho cuando:</b> lista de casos puntuados con datos.</div>
+        </div>
+        <div class="wkcard">
+          <div class="when"><b>S11 · Diagnóstico 3/3</b><span>1–7 feb</span></div>
+          <div><div class="who-h">Los dos</div><ul><li>Hoja de ruta a 12 meses con presupuesto.</li><li>Propuesta de piloto con métrica de éxito.</li><li>Ensayar la presentación.</li></ul></div>
+          <div><div class="who-h">Juan</div><ul><li>Primer diseño del piloto (TO-BE).</li></ul></div>
+          <div class="done"><b>Hecho cuando:</b> informe final revisado por los dos.</div>
+        </div>
+        <div class="wkcard">
+          <div class="when"><b>S12 · Entregar</b><span>8–14 feb</span></div>
+          <div><div class="who-h">Álvaro</div><ul><li>Presentar el diagnóstico y la propuesta de piloto.</li><li>Pedir permiso para usarlo como caso de referencia.</li></ul></div>
+          <div><div class="who-h">Los dos</div><ul><li>Retrospectiva de 12 semanas.</li><li>Plan del siguiente trimestre.</li></ul></div>
+          <div class="done"><b>Control C, viernes 12/02.</b> ¿Diagnóstico entregado y piloto propuesto?</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Cómo se sigue</p><h2>Cuatro números cada viernes. Nada más.</h2></div>
+    <div class="grid g4">
+      <div class="card"><h4>Reuniones conseguidas</h4><p class="muted small">Mide si el mensaje y la lista funcionan.</p></div>
+      <div class="card"><h4>Entrevistas hechas</h4><p class="muted small">Mide si escuchamos lo suficiente.</p></div>
+      <div class="card"><h4>Propuestas enviadas</h4><p class="muted small">Mide si convertimos lo escuchado en oferta.</p></div>
+      <div class="card"><h4>Euros firmados</h4><p class="muted small">El único número que demuestra que la idea funciona.</p></div>
+    </div>
+    <p class="small muted mt">Festivos nacionales en el periodo: 8/12, 25/12, 1/1 y 6/1. Comprobad también los autonómicos y locales.</p>
+  </section>
+  <div id="next" class="next"></div>
+</main>
+<script src="js/site.js"></script>
+</body>
+</html>

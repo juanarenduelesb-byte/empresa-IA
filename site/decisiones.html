@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Varios · Decisiones y riesgos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<main>
+  <section class="hero">
+    <p class="eyebrow">10 · Decisiones y riesgos</p>
+    <h1>Lo decidido, lo pendiente y lo que puede salir mal.</h1>
+    <p class="lede">Cada decisión importante se apunta con fecha y motivo en DECISIONS.md del repositorio. Así nadie tiene que acordarse y no se discute dos veces lo mismo.</p>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="sec-head"><p class="eyebrow">Ya decidido</p><h2>Seis decisiones registradas el 17/11/2026.</h2></div>
+    <div class="glass">
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>Código</th><th>Decisión</th><th>En pocas palabras</th><th>Estado</th></tr></thead>
+        <tbody>
+          <tr><td>D-001</td><td><b>Orientado a procesos</b></td><td>El valor está en terminar procesos completos. El CEO digital coordina, no lo hace todo.</td><td><span class="pill warn">Propuesta</span></td></tr>
+          <tr><td>D-002</td><td><b>Modelo matricial</b></td><td>Departamentos reutilizables y especialistas de sector que se activan según el caso.</td><td><span class="pill info">Diseño</span></td></tr>
+          <tr><td>D-003</td><td><b>Obsidian como interfaz</b></td><td>Para leer y editar el conocimiento. Los permisos los lleva el servidor.</td><td><span class="pill info">Diseño</span></td></tr>
+          <tr><td>D-004</td><td><b>PostgreSQL como base</b></td><td>Datos de operación en PostgreSQL. Conocimiento no confidencial en texto con historial en GitHub.</td><td><span class="pill info">Diseño</span></td></tr>
+          <tr><td>D-005</td><td><b>Clientes aislados</b></td><td>El cliente se deduce de quién se identifica, y se comprueba antes de buscar nada.</td><td><span class="pill good">Obligatorio</span></td></tr>
+          <tr><td>D-006</td><td><b>Primero un proceso piloto</b></td><td>No construir primero un CEO que lo sabe todo. Empezar por un proceso real y medirlo.</td><td><span class="pill good">Siguiente paso</span></td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Por decidir</p><h2>Nueve decisiones con fecha límite.</h2></div>
+    <div class="glass">
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>Decisión</th><th>Quién</th><th>Antes de</th></tr></thead>
+        <tbody class="tabular">
+          <tr><td><b>Acuerdo entre socios:</b> roles, horas, reparto de la empresa y salida</td><td>Los dos</td><td>22/11/2026</td></tr>
+          <tr><td><b>Plan de Claude</b> que se contrata</td><td>Juan</td><td>22/11/2026</td></tr>
+          <tr><td><b>Nicho</b> de entrada</td><td>Los dos, propone Álvaro</td><td>27/11/2026</td></tr>
+          <tr><td><b>Precio</b> del diagnóstico y del piloto</td><td>Los dos</td><td>11/12/2026</td></tr>
+          <tr><td><b>Proceso piloto</b></td><td>Los dos, con datos de las entrevistas</td><td>18/12/2026</td></tr>
+          <tr><td><b>Forma jurídica</b> y cómo facturar</td><td>Álvaro, con gestor</td><td>08/01/2027</td></tr>
+          <tr><td><b>Dónde se alojan</b> los datos del piloto: región y proveedor</td><td>Juan</td><td>15/01/2027</td></tr>
+          <tr><td><b>Aprobaciones humanas</b> por tipo de acción del piloto</td><td>Juan, con el cliente</td><td>Fase de diseño</td></tr>
+          <tr><td><b>Primer conector</b> con un sistema del cliente</td><td>Juan</td><td>Fase de diseño</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Riesgos</p><h2>Lo que puede tumbar el proyecto, dicho sin rodeos.</h2></div>
+    <div class="grid g2">
+      <div class="card"><span class="pill crit">Alto</span><h3 class="mt">Planificar en vez de vender</h3><p class="muted">Más de 16 documentos de diseño y ninguna conversación con clientes. Es cómodo porque nadie te dice que no.</p><p class="small"><b>Freno:</b> documentos congelados hasta el control A. El número que importa es el de entrevistas.</p></div>
+      <div class="card"><span class="pill crit">Alto</span><h3 class="mt">Querer hacer todo para todos</h3><p class="muted">Diez departamentos y nueve sectores con dos personas a tiempo parcial.</p><p class="small"><b>Freno:</b> un nicho y un proceso hasta tener tres clientes.</p></div>
+      <div class="card"><span class="pill warn">Medio</span><h3 class="mt">Copiar a quien juega en otra liga</h3><p class="muted">Sapira y similares tienen equipo, inversión y acceso a grandes empresas. Copiar su discurso sin eso no convence.</p><p class="small"><b>Freno:</b> empresas medianas, precio cerrado y quien vende es quien ejecuta.</p></div>
+      <div class="card"><span class="pill warn">Medio</span><h3 class="mt">Ciclos de venta largos en sectores regulados</h3><p class="muted">Una aseguradora grande puede tardar meses en decidir y exigir requisitos como los de DORA.</p><p class="small"><b>Freno:</b> empezar por empresas donde decide una persona, como corredurías o gabinetes medianos.</p></div>
+      <div class="card"><span class="pill warn">Medio</span><h3 class="mt">Socios sin acuerdo escrito</h3><p class="muted">Rompe más empresas que la tecnología, sobre todo cuando llega el primer dinero.</p><p class="small"><b>Freno:</b> acuerdo en la semana 0, revisado por un profesional antes de facturar.</p></div>
+      <div class="card"><span class="pill warn">Medio</span><h3 class="mt">Poco tiempo disponible</h3><p class="muted">Con otro trabajo, un diagnóstico de tres semanas puede no caber.</p><p class="small"><b>Freno:</b> confirmar horas reales y ajustar el alcance del primer diagnóstico.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Documentos existentes</p><h2>Qué se queda y qué se archiva.</h2><p class="lede">Propuesta para dejar una sola versión de cada cosa en el repositorio.</p></div>
+    <div class="glass">
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>Documento</th><th>Propuesta</th></tr></thead>
+        <tbody>
+          <tr><td>Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado.docx</td><td><span class="pill good">Mantener</span> pasar a Markdown en docs/</td></tr>
+          <tr><td>Atlas_Evolucion_v1.1_Modelo_Operativo_Procesos_y_Despliegue.docx</td><td><span class="pill good">Mantener</span> pasar a Markdown</td></tr>
+          <tr><td>Atlas_Arquitectura_Digital_Completo.zip y diagramas</td><td><span class="pill good">Mantener</span> imágenes en docs/assets/</td></tr>
+          <tr><td>Marco_Integral_Legal_Ciberseguridad_IA_Espana_UE_2026-11-16.docx</td><td><span class="pill good">Mantener</span> en governance/, actualizado con el ómnibus de 2026</td></tr>
+          <tr><td>ExcluSa_Demo_Interactiva_Siniestros.html y demo comercial de seguros</td><td><span class="pill good">Mantener</span> material de venta</td></tr>
+          <tr><td>Guías v1.0 a v1.3, V3, Cerebro v2, documento temprano de visión, Plan Maestro</td><td><span class="pill info">Archivar</span> en archive/</td></tr>
+          <tr><td>02_flujo_ceo a 09_comunicaciones (enviados por WhatsApp)</td><td><span class="pill warn">Revisar</span> fusionar en los docs del repositorio y no duplicar</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="small muted mt">Muchos documentos antiguos usan el nombre "ExcluSa" y otros "Cauce". El nombre provisional desde el 17/11/2026 es Varios: conviene unificarlo al pasarlos al repositorio.</p>
+    </div>
+  </section>
+  <div id="next" class="next"></div>
+</main>
+<script src="js/site.js"></script>
+</body>
+</html>

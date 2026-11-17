@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Varios · Glosario</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<style>
+.search{width:100%;max-width:420px;padding:13px 18px;border-radius:999px;border:1px solid var(--glass-edge);background:var(--glass-strong);font:16px var(--font);color:var(--ink)}
+.search:focus{outline:2px solid var(--accent);outline-offset:3px}
+dl{margin:0}
+.term{display:grid;grid-template-columns:230px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--hairline)}
+.term:last-child{border-bottom:0}
+dt{font-weight:600}
+dt small{display:block;font-weight:400;color:var(--ink-muted);font-size:13px}
+dd{margin:0;color:var(--ink-muted)}
+@media (max-width:640px){.term{grid-template-columns:1fr;gap:4px}}
+</style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <p class="eyebrow">11 · Glosario</p>
+    <h1>Cada palabra técnica, en una frase.</h1>
+    <p class="lede">Si en alguna página aparece un término que no se entiende, está aquí.</p>
+    <input class="search mt" type="search" id="q" placeholder="Buscar un término" aria-label="Buscar un término">
+  </section>
+  <section style="padding-top:0">
+    <div class="glass">
+      <dl id="list">
+        <div class="term"><dt>Agente</dt><dd>Un programa con IA que puede hacer pasos por su cuenta, como leer, buscar o usar una herramienta. Aquí siempre trabaja dentro de un proceso con límites.</dd></div>
+        <div class="term"><dt>API</dt><dd>La puerta por la que un programa habla con otro. Por ejemplo, nuestro sistema pide algo a un modelo de IA a través de su API.</dd></div>
+        <div class="term"><dt>AS-IS / TO-BE</dt><dd>Cómo se hace hoy un proceso (AS-IS) y cómo se hará después (TO-BE).</dd></div>
+        <div class="term"><dt>Auditoría / trazabilidad</dt><dd>Poder reconstruir después qué se hizo, quién, cuándo y con qué datos.</dd></div>
+        <div class="term"><dt>CEO digital <small>orquestador</small></dt><dd>La pieza que recibe un encargo, lo entiende, hace un plan y reparte el trabajo. Organiza, no ejecuta.</dd></div>
+        <div class="term"><dt>Claude Code</dt><dd>Versión de Claude que trabaja directamente sobre el código de un repositorio: lo escribe, lo prueba y lo cambia.</dd></div>
+        <div class="term"><dt>CLAUDE.md</dt><dd>Archivo de texto en el repositorio con las reglas que Claude Code debe seguir siempre.</dd></div>
+        <div class="term"><dt>Conector <small>MCP</small></dt><dd>Enlace que permite a Claude usar otra aplicación, como Gmail, Google Drive o GitHub.</dd></div>
+        <div class="term"><dt>Control de paso <small>gate</small></dt><dd>Momento en que se decide con datos si se avanza a la siguiente fase.</dd></div>
+        <div class="term"><dt>Docker</dt><dd>Forma de empaquetar un programa para que funcione igual en cualquier ordenador o servidor.</dd></div>
+        <div class="term"><dt>DORA</dt><dd>Reglamento europeo de resiliencia digital para bancos, aseguradoras y otras entidades financieras. Afecta a sus proveedores tecnológicos.</dd></div>
+        <div class="term"><dt>Embeddings / pgvector</dt><dd>Técnica para buscar textos por su significado y no solo por sus palabras. Solo se usará si hace falta.</dd></div>
+        <div class="term"><dt>FastAPI</dt><dd>Herramienta de Python para construir la API del sistema.</dd></div>
+        <div class="term"><dt>Forward Deployed Engineer <small>ingeniero desplegado</small></dt><dd>Ingeniero que trabaja junto al cliente, dentro de su día a día, para construir e integrar la solución.</dd></div>
+        <div class="term"><dt>GitHub / repositorio</dt><dd>Lugar en internet donde se guardan documentos y código con todo su historial de cambios. Nuestro repositorio se llama empresa-ia.</dd></div>
+        <div class="term"><dt>Habilidad <small>skill</small></dt><dd>Receta escrita que Claude sigue para hacer una tarea siempre igual de bien, como redactar un acta.</dd></div>
+        <div class="term"><dt>Human-in-the-loop</dt><dd>Una persona revisa o aprueba antes de que la acción se ejecute.</dd></div>
+        <div class="term"><dt>Idempotencia</dt><dd>Si una acción se repite por error, el resultado es el mismo. Evita, por ejemplo, abrir dos veces el mismo expediente.</dd></div>
+        <div class="term"><dt>Instrucciones escondidas <small>prompt injection</small></dt><dd>Texto dentro de un documento que intenta dar órdenes a la IA. Se defiende tratando todo lo leído como dato.</dd></div>
+        <div class="term"><dt>Integration Hub</dt><dd>La pieza que conecta nuestro sistema con los programas del cliente de forma controlada.</dd></div>
+        <div class="term"><dt>KPI / métrica</dt><dd>Número que dice si algo funciona, como el tiempo medio por siniestro.</dd></div>
+        <div class="term"><dt>LLM <small>modelo de lenguaje</small></dt><dd>El tipo de IA que entiende y escribe texto, como Claude.</dd></div>
+        <div class="term"><dt>Markdown</dt><dd>Formato de texto sencillo con títulos y listas. Se lee bien tanto por personas como por la IA.</dd></div>
+        <div class="term"><dt>Multi-tenant / tenant</dt><dd>Un mismo sistema que sirve a varios clientes (tenants) sin que se mezclen sus datos.</dd></div>
+        <div class="term"><dt>Obsidian</dt><dd>Aplicación para leer y escribir notas en Markdown, enlazadas entre sí.</dd></div>
+        <div class="term"><dt>Piloto</dt><dd>Prueba real con usuarios reales en un perímetro limitado, con una métrica de éxito firmada.</dd></div>
+        <div class="term"><dt>PostgreSQL</dt><dd>Base de datos donde se guardan casos, tareas, permisos y registros.</dd></div>
+        <div class="term"><dt>Process Engine <small>motor de procesos</small></dt><dd>La pieza que lleva la lista de tareas, su orden, sus estados, los reintentos y las aprobaciones.</dd></div>
+        <div class="term"><dt>Proyecto de Claude</dt><dd>Espacio de Claude con instrucciones y documentos propios, que Claude tiene en cuenta en cada conversación de ese proyecto.</dd></div>
+        <div class="term"><dt>RAW / WIKI / SCHEMA</dt><dd>Las tres capas del conocimiento: originales, fichas ordenadas y normas.</dd></div>
+        <div class="term"><dt>Reglamento Europeo de IA <small>AI Act</small></dt><dd>Ley europea que clasifica los sistemas de IA por riesgo y fija obligaciones para cada nivel.</dd></div>
+        <div class="term"><dt>RGPD</dt><dd>Reglamento General de Protección de Datos.</dd></div>
+        <div class="term"><dt>RLS</dt><dd>Regla dentro de la base de datos que impide ver filas de otro cliente. Es una defensa adicional.</dd></div>
+        <div class="term"><dt>ROI</dt><dd>Retorno de la inversión: cuánto se gana o ahorra frente a lo que cuesta.</dd></div>
+        <div class="term"><dt>Tool Gateway</dt><dd>Puerta única por la que pasa cualquier herramienta que use la IA, con lista cerrada y permisos.</dd></div>
+      </dl>
+      <p id="none" class="muted" hidden>No hay ningún término con esa palabra.</p>
+    </div>
+  </section>
+  <div id="next" class="next"></div>
+</main>
+<script src="js/site.js"></script>
+<script>
+var q=document.getElementById('q'),items=document.querySelectorAll('.term'),none=document.getElementById('none');
+q.addEventListener('input',function(){var v=q.value.trim().toLowerCase(),n=0;items.forEach(function(t){var m=!v||t.textContent.toLowerCase().indexOf(v)>-1;t.hidden=!m;if(m)n++});none.hidden=n>0;});
+</script>
+</body>
+</html>

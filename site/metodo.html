@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Varios · Cómo trabajamos con un cliente</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<style>
+.locks{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;align-items:end}
+.lock{border-radius:var(--r-lg);padding:18px;background:var(--glass-strong);border:1px solid var(--glass-edge);position:relative}
+.lock .lvl{position:absolute;left:0;right:0;bottom:0;border-radius:0 0 var(--r-lg) var(--r-lg);background:var(--accent);opacity:.14}
+.lock .gate{display:inline-block;margin-top:10px;font-size:12px;font-weight:600;color:var(--accent);background:var(--accent-tint);padding:5px 9px;border-radius:999px}
+@media (max-width:860px){.locks{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.locks{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <p class="eyebrow">2 · Cómo trabajamos con un cliente</p>
+    <h1>Cuatro fases. Una decisión al final de cada una.</h1>
+    <p class="lede">Como al subir una escalera, solo se sube al siguiente nivel cuando el anterior está asegurado. El cliente decide con datos al final de cada fase y puede parar. Así se evita el piloto eterno.</p>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="locks">
+      <div class="lock" style="min-height:220px"><div class="lvl" style="height:25%"></div><span class="num">1</span><h3>Diagnosticar</h3><p class="muted small">3 semanas</p><p class="small">Entrevistas, mapa de procesos, datos disponibles y usos de IA que ya existen.</p><span class="gate">Decisión: qué casos pasan a diseño</span></div>
+      <div class="lock" style="min-height:260px"><div class="lvl" style="height:45%"></div><span class="num">2</span><h3>Diseñar</h3><p class="muted small">2 semanas</p><p class="small">Cómo será el proceso nuevo, qué modelo de IA, qué controles y la métrica de éxito firmada.</p><span class="gate">Decisión: aprobar diseño y métrica</span></div>
+      <div class="lock" style="min-height:300px"><div class="lvl" style="height:65%"></div><span class="num">3</span><h3>Construir</h3><p class="muted small">4–8 semanas</p><p class="small">Piloto con usuarios reales en un perímetro limitado. Se mide cada semana.</p><span class="gate">Decisión: escalar, ajustar o parar</span></div>
+      <div class="lock" style="min-height:340px"><div class="lvl" style="height:85%"></div><span class="num">4</span><h3>Operar</h3><p class="muted small">Continuo</p><p class="small">Vigilar calidad y costes, actualizar modelos, dar soporte y buscar el siguiente caso.</p><span class="gate">Decisión: revisión trimestral</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <p class="eyebrow">Qué pasa dentro de cada fase</p>
+      <h2>El detalle, fase a fase.</h2>
+    </div>
+    <div class="glass">
+      <div class="seg" data-seg="fases" role="group" aria-label="Elegir fase">
+        <button aria-pressed="true" data-show="f1">1 · Diagnosticar</button>
+        <button aria-pressed="false" data-show="f2">2 · Diseñar</button>
+        <button aria-pressed="false" data-show="f3">3 · Construir</button>
+        <button aria-pressed="false" data-show="f4">4 · Operar</button>
+      </div>
+      <div id="f1" class="grid g3 mt2">
+        <div><span class="tag">Lo que hacemos</span><ul class="ticks"><li>Entrevistar a quien hace el trabajo, no solo al jefe</li><li>Dibujar el proceso tal como es hoy (AS-IS)</li><li>Contar volumen, tiempos, errores y excepciones</li><li>Ver qué datos y sistemas hay</li><li>Puntuar cada caso por valor, viabilidad y riesgo</li></ul></div>
+        <div><span class="tag">Lo que entregamos</span><ul class="ticks"><li>Mapa de casos de uso puntuados</li><li>Clasificación de riesgo de cada uno según el Reglamento Europeo de IA</li><li>Hoja de ruta a 12 meses con presupuesto</li></ul></div>
+        <div><span class="tag">Quién de nuestro lado</span><p>Responsable del despliegue (dirige las entrevistas) y especialista del sector si hace falta.</p><span class="tag mt">Lo que necesitamos del cliente</span><p>Una persona responsable del proceso y acceso a quienes lo ejecutan.</p></div>
+      </div>
+      <div id="f2" class="grid g3 mt2" hidden>
+        <div><span class="tag">Lo que hacemos</span><ul class="ticks"><li>Dibujar el proceso nuevo (TO-BE)</li><li>Decidir qué hace el código fijo, qué hace la IA y qué decide una persona</li><li>Elegir modelo de IA y dónde corre</li><li>Diseñar controles y aprobaciones</li><li>Medir la situación de partida</li></ul></div>
+        <div><span class="tag">Lo que entregamos</span><ul class="ticks"><li>Diseño del proceso nuevo</li><li>Arquitectura y controles de seguridad</li><li>Métrica de éxito firmada por las dos partes</li></ul></div>
+        <div><span class="tag">Ejemplo de métrica firmada</span><p class="muted">"El tiempo medio desde que entra un siniestro hasta que queda clasificado baja de X a Y horas, con un acierto de al menos Z % revisado por una persona." Los valores X, Y y Z salen de la medición de partida.</p></div>
+      </div>
+      <div id="f3" class="grid g3 mt2" hidden>
+        <div><span class="tag">Lo que hacemos</span><ul class="ticks"><li>Prototipo con datos de prueba</li><li>Conectar con un sistema real del cliente</li><li>Pruebas automáticas y revisión humana</li><li>Piloto con usuarios reales y perímetro limitado</li><li>Informe semanal de la métrica</li></ul></div>
+        <div><span class="tag">Lo que entregamos</span><ul class="ticks"><li>Sistema funcionando en producción limitada</li><li>Documentación técnica lista para una auditoría</li><li>Informe final contra la métrica firmada</li></ul></div>
+        <div><span class="tag">Cómo se cobra</span><p>50 % al empezar. El otro 50 % solo si se alcanza la métrica. Si no, entregamos un informe con causas y alternativas.</p></div>
+      </div>
+      <div id="f4" class="grid g3 mt2" hidden>
+        <div><span class="tag">Lo que hacemos</span><ul class="ticks"><li>Vigilar calidad, errores y coste por caso</li><li>Actualizar modelos cuando salgan mejores</li><li>Soporte y gestión de incidencias</li><li>Revisión trimestral de valor</li></ul></div>
+        <div><span class="tag">Lo que entregamos</span><ul class="ticks"><li>Informe mensual de funcionamiento</li><li>Propuesta del siguiente caso de uso</li></ul></div>
+        <div><span class="tag">Alternativa</span><p>Si el cliente prefiere llevarlo él, formamos a su equipo y le entregamos la documentación.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <p class="eyebrow">Los controles de paso</p>
+      <h2>Siete puertas. No se abre una sin cerrar la anterior.</h2>
+      <p class="lede">Son las "gates" del repositorio. Cada puerta tiene una pregunta de sí o no y alguien que la firma.</p>
+    </div>
+    <div class="vflow glass">
+      <div class="row"><div class="rail"><div class="dot">G0</div><div class="line"></div></div><div class="body"><h4>Alcance aprobado</h4><p>¿Sabemos qué proceso, qué objetivo y quién decide en el cliente?</p></div></div>
+      <div class="row"><div class="rail"><div class="dot">G1</div><div class="line"></div></div><div class="body"><h4>Proceso descubierto</h4><p>¿Está dibujado el proceso actual con volumen, tiempos y excepciones?</p></div></div>
+      <div class="row"><div class="rail"><div class="dot">G2</div><div class="line"></div></div><div class="body"><h4>Diseño y riesgos aprobados</h4><p>¿El cliente ha firmado el proceso nuevo, los controles y la métrica?</p></div></div>
+      <div class="row"><div class="rail"><div class="dot">G3</div><div class="line"></div></div><div class="body"><h4>Prototipo validado</h4><p>¿Funciona con datos de prueba y lo ha visto quien hará el trabajo?</p></div></div>
+      <div class="row"><div class="rail"><div class="dot">G4</div><div class="line"></div></div><div class="body"><h4>Integración y pruebas</h4><p>¿Está conectado a un sistema real y pasa las pruebas, incluidas las de no mezclar clientes?</p></div></div>
+      <div class="row"><div class="rail"><div class="dot">G5</div><div class="line"></div></div><div class="body"><h4>Piloto aceptado</h4><p>¿Se ha alcanzado la métrica firmada?</p></div></div>
+      <div class="row"><div class="rail"><div class="dot">G6</div><div class="line"></div></div><div class="body"><h4>Operación continua</h4><p>¿Hay responsables, alertas, copias de seguridad y soporte?</p></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <p class="eyebrow">Roles</p>
+      <h2>Cinco papeles en cada proyecto. Hoy los cubrimos entre dos.</h2>
+    </div>
+    <div class="glass">
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>Papel</th><th>Qué hace</th><th>Quién lo cubre hoy · propuesta</th></tr></thead>
+        <tbody>
+          <tr><td><b>Responsable del despliegue</b></td><td>Lleva la relación, dirige el descubrimiento y diseña el proceso nuevo</td><td>Álvaro, con Juan en el diseño</td></tr>
+          <tr><td><b>Ingeniero desplegado</b></td><td>Construye e integra junto al cliente</td><td>Juan</td></tr>
+          <tr><td><b>Especialista del sector</b></td><td>Conoce las reglas del negocio del cliente</td><td>Lo aporta el cliente o un asesor externo</td></tr>
+          <tr><td><b>Responsable del proceso</b></td><td>Persona del cliente que decide y acepta</td><td>Cliente</td></tr>
+          <tr><td><b>Calidad y riesgo</b></td><td>Revisa resultados, riesgos y cumplimiento</td><td>El socio que no construyó esa parte revisa la del otro</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="small muted mt">El reparto es una propuesta para hablar entre los dos, no una decisión tomada.</p>
+    </div>
+  </section>
+  <div id="next" class="next"></div>
+</main>
+<script src="js/site.js"></script>
+</body>
+</html>

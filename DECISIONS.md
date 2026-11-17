@@ -21,3 +21,28 @@ Tenant derivado de identidad autenticada y autorización antes de recuperar dato
 
 ## D-006 — Primer proceso piloto
 No construir primero un CEO omnisciente; descubrir, diseñar, integrar y medir un proceso real. Estado: siguiente paso recomendado.
+## D-007 — Nombre provisional: Varios
+- Fecha: 2026-11-17
+- Decisión: el proyecto pasa a llamarse "Varios" de forma provisional. Sustituye a ExcluSa / Esclusa / Cauce.
+- Motivo: decisión de los socios.
+- Impacto: web `site/`, documentos nuevos y la habilidad de marca anterior (hay que adaptarla o retirarla). Identidad visual: burdeos, turquesa y champán; tipografía Instrument Sans.
+- Estado: provisional.
+
+## D-008 — Repositorio como memoria oficial y web visual
+- Fecha: 2026-11-17
+- Decisión: este repositorio es la única fuente de verdad. Se añade `site/` (web visual con simulación), `CLAUDE.md` y `claude/instrucciones-proyecto.md` para dar contexto a una cuenta nueva de Claude.
+- Motivo: tener una base de contexto antes de crear la cuenta de Claude del proyecto.
+- Estado: aprobada.
+
+## Decisiones pendientes (con fecha límite)
+| Decisión | Quién | Antes de |
+|---|---|---|
+| Acuerdo entre socios: roles, horas, reparto, salida | Los dos | 22/11/2026 |
+| Plan de Claude | Juan | 22/11/2026 |
+| Nicho de entrada | Los dos, propone Álvaro | 27/11/2026 |
+| Precio del diagnóstico y del piloto | Los dos | 11/12/2026 |
+| Proceso piloto | Los dos | 18/12/2026 |
+| Forma jurídica y facturación | Álvaro, con gestor | 08/01/2027 |
+| Alojamiento y región de datos del piloto | Juan | 15/01/2027 |
+| Aprobaciones humanas por tipo de acción | Juan, con el cliente | Fase de diseño |
+| Primer conector | Juan | Fase de diseño |

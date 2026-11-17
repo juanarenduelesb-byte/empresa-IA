@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Varios · Seguridad y leyes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<style>
+.tl{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.tl .card{padding:16px}
+.tl .d{font-weight:700;font-size:18px;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.tl .now{border:1.5px solid var(--accent)}
+@media (max-width:900px){.tl{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.tl{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <p class="eyebrow">7 · Seguridad y leyes</p>
+    <h1>La seguridad es lo que vendemos, no un extra.</h1>
+    <p class="lede">Nuestros clientes son empresas reguladas. Si un día los datos de un cliente aparecen donde no deben, se acaba la empresa. Por eso estas reglas van antes que cualquier funcionalidad.</p>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="sec-head"><p class="eyebrow">Siete principios</p><h2>Lo que nunca se negocia.</h2></div>
+    <div class="grid g4">
+      <div class="card"><h4>Identidad verificada</h4><p class="muted small">Siempre sabemos quién pide algo.</p></div>
+      <div class="card"><h4>Mínimo privilegio</h4><p class="muted small">Cada persona y cada pieza solo accede a lo imprescindible.</p></div>
+      <div class="card"><h4>Clientes aislados</h4><p class="muted small">Un cliente nunca ve datos de otro. Se prueba a propósito que es imposible.</p></div>
+      <div class="card"><h4>Separación de funciones</h4><p class="muted small">Quien construye no es quien aprueba.</p></div>
+      <div class="card"><h4>Trazabilidad</h4><p class="muted small">Todo queda registrado y se puede auditar.</p></div>
+      <div class="card"><h4>Persona al mando</h4><p class="muted small">Más riesgo, más control humano.</p></div>
+      <div class="card"><h4>Seguridad desde el diseño</h4><p class="muted small">Se piensa antes de construir, no después.</p></div>
+      <div class="card"><h4>Sin secretos en el código</h4><p class="muted small">Contraseñas y claves nunca en GitHub ni en documentos.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Riesgos propios de la IA</p><h2>Ocho formas en que una IA puede fallar, y qué hacemos.</h2></div>
+    <div class="glass">
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>Riesgo</th><th>Qué significa</th><th>Cómo lo frenamos</th></tr></thead>
+        <tbody>
+          <tr><td><b>Instrucciones escondidas</b></td><td>Un documento contiene texto que intenta dar órdenes a la IA</td><td>Todo lo que lee la IA se trata como dato, nunca como orden</td></tr>
+          <tr><td><b>Fuga entre clientes</b></td><td>La IA usa datos de un cliente para otro</td><td>Permisos comprobados antes de buscar y pruebas de acceso cruzado</td></tr>
+          <tr><td><b>Abuso de herramientas</b></td><td>La IA hace algo que no debía, como enviar o borrar</td><td>Puerta de herramientas con lista cerrada y aprobación según riesgo</td></tr>
+          <tr><td><b>Inventarse cosas</b></td><td>Respuesta convincente pero falsa, o con una fuente equivocada</td><td>Citas obligatorias, reglas que comprueban y revisión humana</td></tr>
+          <tr><td><b>Resultado sin validar</b></td><td>Se usa una salida de la IA sin comprobarla</td><td>Toda salida es propuesta hasta pasar las comprobaciones</td></tr>
+          <tr><td><b>Conocimiento envenenado</b></td><td>Entra información falsa en la biblioteca</td><td>Las fichas nuevas las aprueba una persona</td></tr>
+          <tr><td><b>Cambios sin aprobar</b></td><td>Alguien modifica un proceso sin control</td><td>Versiones, registro de decisiones y revisión</td></tr>
+          <tr><td><b>Depender de un proveedor</b></td><td>Si un proveedor de IA cambia o falla, nos para</td><td>Modelo configurable y piezas separadas para poder cambiarlo</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Controles técnicos</p><h2>La lista que se revisa antes de tocar datos reales.</h2></div>
+    <div class="grid g3">
+      <div class="card"><span class="tag">Accesos</span><ul class="ticks small"><li>Doble factor en cuentas con privilegios</li><li>Bases de datos no expuestas a internet</li><li>Almacenamiento privado con enlaces temporales</li></ul></div>
+      <div class="card"><span class="tag">Datos</span><ul class="ticks small"><li>Cifrado</li><li>Registros sin secretos</li><li>Retención y borrado definidos</li><li>Copias de seguridad con restauración probada</li></ul></div>
+      <div class="card"><span class="tag">Entornos</span><ul class="ticks small"><li>Desarrollo, pruebas y producción separados</li><li>Dependencias revisadas</li><li>Planes gratuitos solo con datos inventados</li></ul></div>
+    </div>
+    <div class="note mt">
+      <span class="tag">Antes del primer dato real de un cliente</span>
+      <p>Revisar con cada proveedor (de IA, de nube, de base de datos): contrato de encargo de tratamiento, subprocesadores, región donde se guardan los datos, si los usan para entrenar, copias, controles y gestión de incidentes.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Las leyes que nos aplican</p><h2>Seis marcos. Los tres primeros son obligatorios.</h2></div>
+    <div class="grid g3">
+      <div class="card"><span class="pill crit">Obligatorio</span><h3 class="mt">Reglamento Europeo de IA</h3><p class="muted small">Reglamento (UE) 2024/1689, modificado por el Reglamento (UE) 2026/1744. Clasifica cada sistema por riesgo y exige transparencia, documentación y supervisión humana.</p></div>
+      <div class="card"><span class="pill crit">Obligatorio</span><h3 class="mt">RGPD</h3><p class="muted small">Protección de datos personales: base legal, minimización y evaluación de impacto cuando hay datos sensibles, como los de salud en un siniestro.</p></div>
+      <div class="card"><span class="pill crit">Obligatorio para el cliente</span><h3 class="mt">DORA</h3><p class="muted small">Resiliencia digital de entidades financieras, incluidas aseguradoras. Si vendemos a una, nosotros somos su proveedor tecnológico y nos exigirá contratos y controles.</p></div>
+      <div class="card"><span class="pill info">Voluntario</span><h3 class="mt">ISO/IEC 42001</h3><p class="muted small">Sistema de gestión de IA. Certificable. Útil para vender a empresas grandes más adelante.</p></div>
+      <div class="card"><span class="pill info">Voluntario</span><h3 class="mt">NIST AI RMF</h3><p class="muted small">Marco para mapear, medir y gestionar riesgos de IA.</p></div>
+      <div class="card"><span class="pill info">Voluntario</span><h3 class="mt">OWASP LLM Top 10</h3><p class="muted small">Lista de ataques típicos contra sistemas con modelos de lenguaje. Base de nuestras pruebas de seguridad.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><p class="eyebrow">Calendario del Reglamento Europeo de IA</p><h2>Algunas obligaciones ya se aplican. Otras se han retrasado.</h2><p class="lede">Fechas tras el "ómnibus digital", el Reglamento (UE) 2026/1744, publicado el 24/07/2026.</p></div>
+    <div class="tl">
+      <div class="card"><span class="d">02/02/2025</span><p class="small mt">Prohibiciones y alfabetización en IA (artículo 4). Ya obligatorio.</p></div>
+      <div class="card"><span class="d">02/08/2026</span><p class="small mt">Aplicación general del reglamento, sin aplazamiento global.</p></div>
+      <div class="card now"><span class="d">02/12/2026</span><p class="small mt">Nueva fecha para las obligaciones de marcado y transparencia, según el análisis de ECIJA.</p></div>
+      <div class="card"><span class="d">02/12/2027</span><p class="small mt">Sistemas de alto riesgo del anexo III, que incluye, entre otros, la evaluación de riesgos y precios en seguros de vida y salud.</p></div>
+      <div class="card"><span class="d">02/08/2028</span><p class="small mt">Alto riesgo en productos regulados del anexo I.</p></div>
+    </div>
+    <div class="note warm mt">
+      <span class="tag">Qué significa para nosotros</span>
+      <p>El artículo 4 ya obliga a las empresas a formar a su plantilla en IA: es una venta posible hoy. Y si algún día tocamos tarificación o selección de riesgos en seguros de vida o salud, entramos en alto riesgo. Para el primer piloto conviene elegir un proceso que no lo sea, como la apertura y clasificación de siniestros. Esto es orientativo: no somos abogados y el marco legal debe revisarlo un profesional.</p>
+    </div>
+    <p class="small muted mt">Fuentes: <a href="https://www.cuatrecasas.com/es/spain/propiedad-intelectual/art/se-publica-reglamento-omnibus-digital-ia">Cuatrecasas</a>, <a href="https://files.griddo.ecija.com/ecija-nota-informativa-novedades-ia-omnibus-digital-2026.pdf">ECIJA</a>, <a href="https://www.economistjurist.es/zbloque-1/reglamento-europeo-de-ia-tras-el-omnibus-que-obligaciones-y-sanciones-ya-son-exigibles-en-agosto-de-2026/">Economist &amp; Jurist</a>. Documento interno relacionado: Marco_Integral_Legal_Ciberseguridad_IA_Espana_UE_2026-11-16.docx.</p>
+  </section>
+  <div id="next" class="next"></div>
+</main>
+<script src="js/site.js"></script>
+</body>
+</html>

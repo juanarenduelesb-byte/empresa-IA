@@ -10,3 +10,5 @@ Construye la plataforma, la IA y las integraciones.
 | [Arquitecto de datos e IA](datos-ia.md) | ia | P04, P07, P16, P23 |
 | [Especialista en integraciones](integraciones.md) | int | P21, P30, P36 |
 | [Especialista en evaluación de IA](evaluacion-ia.md) | dat | P09, P20, P23 |
+| [Ingeniero de plataforma y operaciones (DevOps/SRE)](plataforma-operaciones.md) | ops | P15, P17, P25, P26, P28, P30 |
+| [Diseñador de producto y experiencia (UX)](diseno-experiencia.md) | ux | P10, P37 |

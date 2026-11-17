@@ -24,3 +24,4 @@ Hoja de cálculo con fórmulas.
 ## Quién la usa
 
 - [Costes](../../knowledge/agentes/fin.md)
+- [Director financiero](../../knowledge/agentes/cfo.md)

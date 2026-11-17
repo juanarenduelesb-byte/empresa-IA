@@ -29,3 +29,4 @@ Hoja de cálculo con supuestos, cálculos y resumen; nunca cifras sin fórmula.
 - [Propuestas](../../knowledge/agentes/prop.md)
 - [Métricas](../../knowledge/agentes/kpi.md)
 - [Costes](../../knowledge/agentes/fin.md)
+- [Director financiero](../../knowledge/agentes/cfo.md)

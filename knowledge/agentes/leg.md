@@ -82,4 +82,4 @@
 ## Conocimiento de referencia
 
 - [Especialista legal y privacidad](../../knowledge/seguridad-legal/legal-privacidad.md)
-- [Responsable de cumplimiento](../../knowledge/seguridad-legal/cumplimiento.md)
+- [Responsable de cumplimiento normativo](../../knowledge/seguridad-legal/cumplimiento.md)

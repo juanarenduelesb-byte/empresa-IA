@@ -20,8 +20,8 @@ Versión para máquinas: [navigation.json](navigation.json).
 | Diseñar una automatización | [Especialista en automatización](procesos/automatizacion.md), [Arquitecto de procesos](procesos/arquitecto-procesos.md) | [Arquitecto técnico](ingenieria/arquitecto-tecnico.md), [Especialista en ciberseguridad](seguridad-legal/ciberseguridad.md) | [P08](../processes/catalog/P08-ejecucion-de-tareas.md), [P21](../processes/catalog/P21-ejecucion-segura-de-herramientas.md), [P22](../processes/catalog/P22-gestion-de-errores-y-reintentos.md), [P36](../processes/catalog/P36-gestion-del-catalogo-de-conectores.md) | [`integrations/catalog/README.md`](../integrations/catalog/README.md)<br>[`processes/definitions/`](../processes/definitions) | Procesos consulta a Ingeniería antes de diseñar una automatización. |
 | Habilitar una integración o conector | [Especialista en integraciones](ingenieria/integraciones.md) | [Especialista en ciberseguridad](seguridad-legal/ciberseguridad.md), [Especialista legal y privacidad](seguridad-legal/legal-privacidad.md) | [P21](../processes/catalog/P21-ejecucion-segura-de-herramientas.md), [P30](../processes/catalog/P30-gestion-de-identidades-y-secretos.md), [P36](../processes/catalog/P36-gestion-del-catalogo-de-conectores.md) | [`integrations/catalog/README.md`](../integrations/catalog/README.md)<br>[`integrations/contracts/`](../integrations/contracts) | Ingeniería consulta a Seguridad antes de habilitar una integración. |
 | Aprobar un plan o tomar una decisión | [CEO digital](direccion/ceo-digital.md), [Responsable de decisiones y seguimiento](direccion/decisiones-seguimiento.md) | [Especialista en calidad y riesgos](seguridad-legal/calidad-riesgos.md) | [P05](../processes/catalog/P05-diseno-del-plan.md), [P10](../processes/catalog/P10-aprobacion-humana.md) | [`DECISIONS.md`](../DECISIONS.md)<br>[`precedents/`](../precedents) | El CEO consulta precedentes y decisiones antes de aprobar un plan. |
-| Investigar una obligación legal o regulatoria | [Especialista legal y privacidad](seguridad-legal/legal-privacidad.md), [Responsable de cumplimiento](seguridad-legal/cumplimiento.md) | [Coordinación sectorial y seguros](sectores/especialista-sectorial.md), [Bibliotecario / responsable de conocimiento](direccion/bibliotecario.md) | [P19](../processes/catalog/P19-politica-de-uso-y-limites.md), [P24](../processes/catalog/P24-gestion-del-ciclo-de-vida-del-dato.md) | [`docs/fuentes/Marco_Integral_Legal_Ciberseguridad_IA_Espana_UE_2026-11-16.md`](../docs/fuentes/Marco_Integral_Legal_Ciberseguridad_IA_Espana_UE_2026-11-16.md)<br>[`knowledge/fuentes/registro.md`](fuentes/registro.md) | Fuente primaria y vigente; nunca afirmar cumplimiento. |
-| Trabajo en el sector seguros | [Coordinación sectorial y seguros](sectores/especialista-sectorial.md) | [Arquitecto de procesos](procesos/arquitecto-procesos.md), [Responsable de cumplimiento](seguridad-legal/cumplimiento.md) | [P02](../processes/catalog/P02-clasificacion-y-triaje.md), [P32](../processes/catalog/P32-descubrimiento-de-procesos.md), [P33](../processes/catalog/P33-diseno-y-validacion-to-be.md) | [`knowledge/sectores/README.md`](sectores/README.md)<br>[`processes/referencia-seguros-apertura-siniestros/README.md`](../processes/referencia-seguros-apertura-siniestros/README.md) | El especialista de seguros consulta también los procesos transversales. |
+| Investigar una obligación legal o regulatoria | [Especialista legal y privacidad](seguridad-legal/legal-privacidad.md), [Responsable de cumplimiento normativo](seguridad-legal/cumplimiento.md) | [Coordinación sectorial y seguros](sectores/especialista-sectorial.md), [Bibliotecario / responsable de conocimiento](direccion/bibliotecario.md) | [P19](../processes/catalog/P19-politica-de-uso-y-limites.md), [P24](../processes/catalog/P24-gestion-del-ciclo-de-vida-del-dato.md) | [`docs/fuentes/Marco_Integral_Legal_Ciberseguridad_IA_Espana_UE_2026-11-16.md`](../docs/fuentes/Marco_Integral_Legal_Ciberseguridad_IA_Espana_UE_2026-11-16.md)<br>[`knowledge/fuentes/registro.md`](fuentes/registro.md) | Fuente primaria y vigente; nunca afirmar cumplimiento. |
+| Trabajo en el sector seguros | [Coordinación sectorial y seguros](sectores/especialista-sectorial.md) | [Arquitecto de procesos](procesos/arquitecto-procesos.md), [Responsable de cumplimiento normativo](seguridad-legal/cumplimiento.md) | [P02](../processes/catalog/P02-clasificacion-y-triaje.md), [P32](../processes/catalog/P32-descubrimiento-de-procesos.md), [P33](../processes/catalog/P33-diseno-y-validacion-to-be.md) | [`knowledge/sectores/README.md`](sectores/README.md)<br>[`processes/referencia-seguros-apertura-siniestros/README.md`](../processes/referencia-seguros-apertura-siniestros/README.md) | El especialista de seguros consulta también los procesos transversales. |
 | Trabajo en otro sector (sanidad, despachos, finanzas, industria, logística) | [Coordinación sectorial y seguros](sectores/especialista-sectorial.md) | [Experto en sanidad privada](sectores/sector-sanidad.md), [Experto en asesorías, gestorías y despachos](sectores/sector-despachos.md), [Experto en servicios financieros no bancarios](sectores/sector-financiero.md), [Experto en industria manufacturera](sectores/sector-industria.md), [Experto en logística y transporte](sectores/sector-logistica.md) | [P02](../processes/catalog/P02-clasificacion-y-triaje.md), [P32](../processes/catalog/P32-descubrimiento-de-procesos.md), [P33](../processes/catalog/P33-diseno-y-validacion-to-be.md) | [`knowledge/sectores/README.md`](sectores/README.md)<br>[`knowledge/sectores/priorizacion.md`](sectores/priorizacion.md) | La coordinación sectorial elige al experto; el experto consulta a Legal si hay datos sensibles. |
 | Cambiar de modelo o de instrucciones | [Arquitecto de datos e IA](ingenieria/datos-ia.md), [Especialista en evaluación de IA](ingenieria/evaluacion-ia.md) | [Especialista en calidad y riesgos](seguridad-legal/calidad-riesgos.md) | [P16](../processes/catalog/P16-gobierno-de-modelos-e-instrucciones.md), [P23](../processes/catalog/P23-evaluacion-de-agentes-y-modelos.md), [P25](../processes/catalog/P25-gestion-de-cambios-y-versiones.md) | [`docs/atlas/10-cambios-modelos.md`](../docs/atlas/10-cambios-modelos.md)<br>[`processes/tests/README.md`](../processes/tests/README.md) | Sin evaluación superada no hay cambio. |
 | Gestionar un incidente | [Especialista en ciberseguridad](seguridad-legal/ciberseguridad.md), [Especialista en calidad y riesgos](seguridad-legal/calidad-riesgos.md) | [Especialista legal y privacidad](seguridad-legal/legal-privacidad.md) | [P28](../processes/catalog/P28-gestion-de-incidentes.md), [P15](../processes/catalog/P15-observabilidad-e-incidencias.md), [P17](../processes/catalog/P17-seguridad-y-continuidad.md) | [`processes/runbooks/`](../processes/runbooks)<br>[`precedents/incidents/`](../precedents/incidents) | Preservar evidencias antes de corregir. |
@@ -45,13 +45,13 @@ Valida, prospecta, propone y cuida la relación.
 - [Especialista en prospección](comercial/prospeccion.md)
 - [Especialista en marketing y contenido](comercial/marketing-contenido.md)
 - [Especialista en propuestas y licitaciones](comercial/propuestas-licitaciones.md)
-- [Especialista en gestión de clientes](comercial/gestion-clientes.md) · sin puesto en la oficina
+- [Especialista en éxito de cliente](comercial/gestion-clientes.md)
 
 ### [Procesos y operaciones](procesos/README.md)
 Descubre, diseña, implanta y mide procesos.
 
 - [Arquitecto de procesos](procesos/arquitecto-procesos.md)
-- [Responsable de implantación de clientes](procesos/implantacion-clientes.md) · sin puesto en la oficina
+- [Responsable de implantación de clientes](procesos/implantacion-clientes.md)
 - [Especialista en automatización](procesos/automatizacion.md)
 - [Especialista en métricas](procesos/metricas.md)
 
@@ -63,13 +63,15 @@ Construye la plataforma, la IA y las integraciones.
 - [Arquitecto de datos e IA](ingenieria/datos-ia.md)
 - [Especialista en integraciones](ingenieria/integraciones.md)
 - [Especialista en evaluación de IA](ingenieria/evaluacion-ia.md)
+- [Ingeniero de plataforma y operaciones (DevOps/SRE)](ingenieria/plataforma-operaciones.md)
+- [Diseñador de producto y experiencia (UX)](ingenieria/diseno-experiencia.md)
 
 ### [Seguridad, privacidad, legal y cumplimiento](seguridad-legal/README.md)
 Que nada falle, se filtre ni incumpla.
 
 - [Especialista en ciberseguridad](seguridad-legal/ciberseguridad.md)
 - [Especialista legal y privacidad](seguridad-legal/legal-privacidad.md)
-- [Responsable de cumplimiento](seguridad-legal/cumplimiento.md) · sin puesto en la oficina
+- [Responsable de cumplimiento normativo](seguridad-legal/cumplimiento.md)
 - [Especialista en calidad y riesgos](seguridad-legal/calidad-riesgos.md)
 
 ### [Administración y finanzas](administracion-finanzas/README.md)
@@ -78,6 +80,8 @@ Empresa, costes, proveedores y facturación.
 - [Especialista financiero](administracion-finanzas/financiero.md)
 - [Especialista en costes y proveedores](administracion-finanzas/costes-proveedores.md)
 - [Especialista administrativo](administracion-finanzas/administrativo.md)
+- [Especialista en contabilidad y facturación](administracion-finanzas/contabilidad.md)
+- [Director financiero (CFO)](administracion-finanzas/direccion-financiera.md)
 
 ### [Sectores](sectores/README.md)
 Expertos en los sectores donde Varios quiere trabajar: vocabulario, normas, procesos y excepciones de cada uno.

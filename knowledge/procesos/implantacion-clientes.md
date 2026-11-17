@@ -3,7 +3,7 @@
 
 **Departamento:** [Procesos y operaciones](README.md) · **Estado:** draft · **Revisión:** pendiente de un socio · **Fuentes consultadas:** 2026-11-17
 
-**Puestos de la oficina que lo cubren:** ninguno todavía
+**Puestos de la oficina que lo cubren:** `exito`
 
 > Llevar cada cliente por D0–D6 con entregables, riesgos y puertas. Función humana: la responsabilidad final no se delega al LLM (INT-ATLAS §4).
 
@@ -92,4 +92,4 @@ Ver *A quién convoca* y [`knowledge/navigation.json`](../navigation.json).
 - [INT-ATLAS](../fuentes/registro.md#int-atlas) · Atlas Evolución v1.1 · modelo operativo, procesos y despliegue
 
 ## 4. Lagunas conocidas
-- Sin clientes todavía; función prevista desde el 15/02/2027.
+- Sin clientes todavía; función prevista desde el 15/02/2027. En la oficina la cubre Éxito de cliente.

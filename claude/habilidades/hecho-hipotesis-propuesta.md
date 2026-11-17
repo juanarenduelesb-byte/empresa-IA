@@ -37,3 +37,6 @@ Texto con las tres capas distinguibles y una lista final de lo que está [POR CO
 - [Calidad y riesgo](../../knowledge/agentes/calj.md)
 - [Costes](../../knowledge/agentes/fin.md)
 - [Coordinación sectorial · Seguros](../../knowledge/agentes/seg.md)
+- [Director financiero](../../knowledge/agentes/cfo.md)
+- [Contabilidad y facturación](../../knowledge/agentes/conta.md)
+- [Diseño y experiencia](../../knowledge/agentes/ux.md)

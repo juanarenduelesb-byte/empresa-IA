@@ -390,4 +390,202 @@ hab(id="glosario-sector", nombre="Glosario del sector",
     salida="Tabla de glosario.",
     control=["¿Hay definiciones con fuente?"])
 
+# ---------------------------------------------------------------- finanzas y contabilidad
+hab(id="cierre-mensual", nombre="Cierre contable mensual",
+    cuando="Los primeros días de cada mes, sobre el mes anterior.",
+    pasos=["Registrar todas las facturas emitidas y recibidas del mes, con su documento.",
+           "Conciliar el banco partida a partida; cada diferencia, explicada o investigada.",
+           "Periodificar ingresos de proyectos por hito o avance y gastos devengados no facturados.",
+           "Revisar cuentas de clientes y proveedores: vencidos, anticipos y saldos raros.",
+           "Sacar balance de sumas y saldos y cuenta de resultados del mes; comparar con presupuesto.",
+           "Lista de dudas para el gestor."],
+    salida="Paquete de cierre: conciliación, resultados del mes, desviaciones y dudas para el gestor.",
+    control=["¿Cero diferencias de conciliación sin explicar?", "¿Cada apunte tiene documento?", "¿Los ingresos del piloto 50/50 están condicionados a la métrica?"])
+
+hab(id="facturacion-cobro", nombre="Facturación y cobro",
+    cuando="Al cumplirse un hito facturable y cada semana para los vencimientos.",
+    pasos=["Comprobar que el hito está cumplido y aprobado según el contrato.",
+           "Preparar la factura con todos los datos obligatorios del Reglamento de facturación y numeración correlativa.",
+           "Dejarla lista para que un socio la emita (la emisión es una acción externa).",
+           "Registrar vencimiento y condiciones de pago.",
+           "Vencimientos de la semana: recordatorio amable al vencer, segundo aviso a los 15 días, escalado a los socios después."],
+    salida="Factura en borrador lista para emitir y tabla de vencimientos con su acción.",
+    control=["¿El hito está cumplido?", "¿Tiene todos los datos obligatorios?", "¿Algún recordatorio se envía sin un socio? (no debe)"])
+
+hab(id="paquete-gestor", nombre="Paquete trimestral para el gestor",
+    cuando="Al cierre de cada trimestre y del año.",
+    pasos=["Libros de facturas emitidas y recibidas del periodo.",
+           "Resumen de IVA repercutido y soportado, retenciones practicadas y soportadas.",
+           "Operaciones relevantes del periodo (inversiones, préstamos, subvenciones).",
+           "Dudas fiscales concretas y numeradas.",
+           "Calendario de presentación confirmado con el gestor, nunca supuesto."],
+    salida="Carpeta del trimestre con resúmenes y preguntas, lista para enviar (la envía un socio).",
+    control=["¿Las cifras cuadran con el cierre mensual?", "¿Los plazos están confirmados por el gestor?"])
+
+hab(id="prevision-tesoreria", nombre="Previsión de tesorería a 13 semanas",
+    cuando="Cada semana, y antes de cualquier decisión de gasto, contratación o precio.",
+    pasos=["Partir del saldo real de hoy.",
+           "Cobros esperados por hito y fecha, ajustados por probabilidad y por el retraso medio real.",
+           "Pagos comprometidos por fecha (proveedores, impuestos, cuotas, sueldos si los hay).",
+           "Escenario prudente, base y optimista con sus supuestos.",
+           "Semana del saldo mínimo y umbral de alerta."],
+    salida="Hoja semanal con saldo previsto, semana crítica y acciones si se cruza el umbral.",
+    control=["¿Los cobros del 50/50 dependen de la métrica en el escenario prudente?", "¿Cada supuesto está escrito?"])
+
+hab(id="margen-proyecto", nombre="Margen por proyecto y fase",
+    cuando="Al preparar un precio, al cerrar una fase y cada mes en los proyectos abiertos.",
+    pasos=["Ingresos de la fase (y su probabilidad si es un pago condicionado).",
+           "Costes directos: horas de socios al coste interno fijado, modelo, nube, licencias y proveedores.",
+           "Margen de contribución y margen por hora.",
+           "Comparar con el objetivo y con fases anteriores; explicar desviaciones."],
+    salida="Tabla de margen por fase con desviaciones explicadas.",
+    control=["¿Están las horas de los socios?", "¿El coste de revisión humana está incluido?"])
+
+hab(id="financiacion-publica", nombre="Financiación pública y ventajas fiscales",
+    cuando="Al revisar opciones de financiación o una convocatoria.",
+    pasos=["Identificar la línea o ayuda y su fuente oficial (no un blog).",
+           "Requisitos uno por uno y si Varios los cumple hoy, con evidencia.",
+           "Importe, coste real (intereses, cofinanciación, obligaciones) y plazos.",
+           "Calendario de la convocatoria y lo que hay que preparar.",
+           "Recomendación: solicitar, preparar para la próxima o descartar."],
+    salida="Ficha por instrumento con requisitos, encaje, coste y recomendación.",
+    control=["¿La fuente es oficial y de este año?", "¿Se ha contado con algo antes de concederse? (no debe)"])
+
+# ---------------------------------------------------------------- plataforma y operaciones
+hab(id="integracion-continua", nombre="Integración continua",
+    cuando="Al montar o cambiar el pipeline (S1) y ante cada fallo de CI.",
+    pasos=["Cada cambio pasa pruebas, lint y escáner de secretos antes de entrar.",
+           "Tiempo de CI bajo control (objetivo: minutos, no decenas).",
+           "Fallos con causa raíz: nunca se desactiva una prueba para poner verde.",
+           "Rama principal protegida y propuestas de cambios obligatorias."],
+    salida="Pipeline documentado y en verde, con tiempos.",
+    control=["¿Hay escáner de secretos?", "¿Alguna prueba desactivada para pasar?"])
+
+hab(id="copias-restauracion", nombre="Copias y restauración probada",
+    cuando="Al montar la base de datos y antes de cada control de paso (S11).",
+    pasos=["Política: qué se copia, cada cuánto, dónde (al menos una copia fuera) y cuánto tiempo.",
+           "Cifrado y control de acceso de las copias.",
+           "Restauración completa en un entorno limpio, cronometrada.",
+           "Comprobación de integridad de los datos restaurados.",
+           "Runbook con los pasos exactos y el tiempo medido."],
+    salida="Informe de restauración con fecha, tiempo y resultado, más el runbook.",
+    control=["¿Se ha restaurado de verdad?", "¿Hay una copia fuera del entorno principal?"])
+
+hab(id="runbook-incidente", nombre="Runbook y gestión de incidentes",
+    cuando="Al poner algo en marcha y cuando algo falla.",
+    pasos=["Runbook por servicio: cómo arrancar, parar, comprobar, recuperar y a quién avisar.",
+           "En un incidente: detectar, contener, comunicar a los socios, resolver.",
+           "Si hay datos personales afectados, avisar a Legal y Cumplimiento de inmediato (posible notificación en 72 horas: la deciden los socios).",
+           "Postmortem sin culpables: cronología, causa raíz, acciones con responsable y fecha."],
+    salida="Runbook o postmortem con acciones.",
+    control=["¿Cada acción del postmortem tiene responsable y fecha?", "¿Se ha avisado a Legal si había datos personales?"])
+
+hab(id="observabilidad", nombre="Observabilidad y alertas",
+    cuando="Al poner un servicio en marcha.",
+    pasos=["Definir los objetivos de nivel de servicio con los usuarios en mente.",
+           "Registros estructurados sin datos personales ni secretos.",
+           "Métricas y trazas de las llamadas al modelo: coste, latencia, errores.",
+           "Alertas solo para lo que exige actuar, con su runbook."],
+    salida="Panel y alertas documentados.",
+    control=["¿Alguna alerta sin runbook?", "¿Los registros llevan datos personales? (no deben)"])
+
+# ---------------------------------------------------------------- diseño y experiencia
+hab(id="flujo-pantallas", nombre="Flujo y pantallas de una tarea",
+    cuando="Antes de construir una interfaz.",
+    pasos=["Quién hace la tarea, con qué objetivo y en qué contexto.",
+           "Flujo paso a paso, incluidos errores, vacíos y cargas.",
+           "Prototipo de baja fidelidad de cada pantalla.",
+           "Textos de la interfaz en español claro.",
+           "Estados de cada elemento para Backend: normal, cargando, vacío, error, sin permiso."],
+    salida="Flujo, prototipo y especificación de estados.",
+    control=["¿Están los estados de error y vacío?", "¿Lo entendería alguien no técnico?"])
+
+hab(id="prueba-usabilidad", nombre="Prueba de usabilidad",
+    cuando="Con cada prototipo de una tarea crítica.",
+    pasos=["Tareas concretas y criterio de éxito de cada una, fijados antes.",
+           "Cinco personas del perfil por ronda.",
+           "Observar sin ayudar; anotar dónde dudan y se equivocan.",
+           "Priorizar problemas por gravedad y frecuencia.",
+           "Cambiar y volver a probar."],
+    salida="Informe con tareas, tasa de éxito, problemas priorizados y cambios.",
+    control=["¿Los criterios se fijaron antes?", "¿Se ayudó a los participantes? (no debe)"])
+
+hab(id="revision-accesibilidad", nombre="Revisión de accesibilidad",
+    cuando="Antes de entregar cualquier interfaz.",
+    pasos=["Contraste, tamaño y foco visible.",
+           "Todo se puede hacer con teclado.",
+           "Etiquetas y textos alternativos para lectores de pantalla.",
+           "Errores explicados en texto, no solo con color.",
+           "Contraste con los criterios WCAG 2.2 AA y lista de incumplimientos."],
+    salida="Lista de incumplimientos con criterio WCAG y arreglo.",
+    control=["¿Se ha probado con teclado y lector de pantalla?"])
+
+# ---------------------------------------------------------------- éxito de cliente
+hab(id="plan-exito-cliente", nombre="Plan de éxito del cliente",
+    cuando="Al firmar un diagnóstico o un piloto.",
+    pasos=["Objetivo de negocio del cliente con sus palabras.",
+           "Métrica firmada, fórmula y línea base.",
+           "Hitos, responsables de ambas partes y fechas.",
+           "Riesgos y qué haremos si aparecen.",
+           "Ritmo de seguimiento: semanal en el piloto, mensual y trimestral en Operar."],
+    salida="Plan de éxito de una página compartido con el cliente (lo envía un socio).",
+    control=["¿La métrica tiene línea base?", "¿Cada hito tiene responsable del cliente?"])
+
+hab(id="revision-valor", nombre="Revisión de valor con el cliente",
+    cuando="Cada trimestre en Operar y al cerrar un piloto.",
+    pasos=["Valor medido frente a la línea base, con el método.",
+           "Incidencias y cómo se resolvieron.",
+           "Lo que no ha funcionado, dicho primero.",
+           "Próximos pasos y propuesta, si la hay."],
+    salida="Documento o presentación de revisión de valor.",
+    control=["¿Cada cifra tiene método?", "¿Se dice lo que no ha funcionado?"])
+
+hab(id="salud-cuenta", nombre="Salud de la cuenta",
+    cuando="Cada mes por cliente.",
+    pasos=["Uso real, valor medido, incidencias abiertas, relación con los interlocutores y pagos.",
+           "Semáforo con umbrales fijados de antemano.",
+           "Acción concreta para cada amarillo o rojo, con responsable."],
+    salida="Tabla de cuentas con semáforo y acciones.",
+    control=["¿Los umbrales se fijaron antes?"])
+
+# ---------------------------------------------------------------- cumplimiento
+hab(id="inventario-ia", nombre="Inventario y clasificación de sistemas de IA",
+    cuando="Al empezar con un cliente y cada vez que cambia un uso de IA.",
+    pasos=["Cada sistema: para qué se usa, quién lo usa, qué datos y qué decisiones apoya.",
+           "Papel de Varios y del cliente (proveedor o responsable del despliegue).",
+           "Clasificación orientativa de riesgo según el Reglamento de IA, con el artículo y la fecha de aplicación.",
+           "Obligaciones que se derivan (transparencia, supervisión humana, registros, alfabetización).",
+           "Revisión por Legal y, si hace falta, por un abogado."],
+    salida="Fila de inventario por sistema con clasificación y obligaciones.",
+    control=["¿Se distingue lo vigente de lo aplazado por el ómnibus?", "¿Dice que es orientativo?"])
+
+hab(id="registro-tratamientos", nombre="Registro de actividades de tratamiento",
+    cuando="Al definir cualquier tratamiento de datos personales.",
+    pasos=["Finalidad, base jurídica (a validar), categorías de interesados y de datos.",
+           "Destinatarios, encargados y transferencias internacionales.",
+           "Plazos de conservación y medidas de seguridad.",
+           "¿Hace falta evaluación de impacto? Motivo."],
+    salida="Entrada del registro (RGPD art. 30) en borrador para Legal.",
+    control=["¿Están los encargados y su región?", "¿Se ha valorado la evaluación de impacto?"])
+
+hab(id="alfabetizacion-ia", nombre="Programa de alfabetización en IA",
+    cuando="Para Varios y como base de la oferta de formación a clientes.",
+    pasos=["Quién usa o interactúa con IA y para qué.",
+           "Contenidos por perfil: qué es y qué no es la IA, riesgos, límites, datos, supervisión humana y normas internas.",
+           "Formato, duración y evaluación.",
+           "Registro de quién se ha formado y cuándo (evidencia).",
+           "Revisión anual y ante cambios normativos."],
+    salida="Programa con contenidos por perfil y registro de evidencias.",
+    control=["¿Hay evidencia de quién se formó?", "¿Se cita el artículo 4 en su redacción vigente?"])
+
+hab(id="matriz-cumplimiento", nombre="Matriz obligación → control → evidencia",
+    cuando="Por cada norma que aplique a Varios o a un cliente.",
+    pasos=["Obligación concreta con artículo y fecha.",
+           "Control que la cumple y quién lo ejecuta.",
+           "Evidencia y dónde se guarda.",
+           "Estado: cumple, parcial, no cumple, no aplica (con motivo).",
+           "Fecha de la próxima revisión."],
+    salida="Matriz por norma, lista para una auditoría o un cuestionario.",
+    control=["¿Algún «cumple» sin evidencia? (no debe)"])
+
 HABILIDADES = H

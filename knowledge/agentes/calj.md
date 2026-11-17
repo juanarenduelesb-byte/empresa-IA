@@ -79,4 +79,4 @@
 ## Conocimiento de referencia
 
 - [Especialista en calidad y riesgos](../../knowledge/seguridad-legal/calidad-riesgos.md)
-- [Responsable de cumplimiento](../../knowledge/seguridad-legal/cumplimiento.md)
+- [Responsable de cumplimiento normativo](../../knowledge/seguridad-legal/cumplimiento.md)

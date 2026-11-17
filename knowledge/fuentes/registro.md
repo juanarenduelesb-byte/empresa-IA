@@ -60,6 +60,21 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 | [NIS2-DIRECTIVA](#nis2-directiva) | Directiva (UE) 2022/2555 (NIS2) | obligacion-legal | alta | pendiente-transposicion-ES | validated |
 | [UNO-LOGISTICA](#uno-logistica) | Notas de prensa de UNO, organización empresarial de logística y transporte | analisis-terceros | media | vigente | draft |
 | [MAQUINARIA-2023-1230](#maquinaria-2023-1230) | Reglamento (UE) 2023/1230, relativo a las máquinas | obligacion-legal | alta | vigente-aplicacion-diferida | draft |
+| [LIVA-37-1992](#liva-37-1992) | Ley 37/1992, del Impuesto sobre el Valor Añadido | obligacion-legal | alta | vigente | validated |
+| [RD-1619-2012](#rd-1619-2012) | Real Decreto 1619/2012, Reglamento por el que se regulan las obligaciones de facturación | obligacion-legal | alta | vigente | validated |
+| [LIS-27-2014](#lis-27-2014) | Ley 27/2014, del Impuesto sobre Sociedades | obligacion-legal | alta | vigente | validated |
+| [LEY-MOROSIDAD-3-2004](#ley-morosidad-3-2004) | Ley 3/2004, medidas de lucha contra la morosidad en operaciones comerciales | obligacion-legal | alta | vigente | validated |
+| [LEY-STARTUPS-28-2022](#ley-startups-28-2022) | Ley 28/2022, de fomento del ecosistema de las empresas emergentes | obligacion-legal | alta | vigente | validated |
+| [ENISA-2026](#enisa-2026) | ENISA: préstamos participativos (líneas 2026) | prensa-especializada | media | vigente | draft |
+| [CDTI-NEOTEC-2026](#cdti-neotec-2026) | Programa NEOTEC 2026 (CDTI) | ayuda-publica | alta | historico | validated |
+| [W3C-WCAG22](#w3c-wcag22) | Web Content Accessibility Guidelines (WCAG) 2.2 | estandar-voluntario | alta | vigente | validated |
+| [LEY-ACCESIBILIDAD-11-2023](#ley-accesibilidad-11-2023) | Ley 11/2023 (accesibilidad de productos y servicios, transpone la Directiva (UE) 2019/882) | obligacion-legal | alta | vigente | validated |
+| [NNG-HEURISTICAS](#nng-heuristicas) | 10 heurísticas de usabilidad (Jakob Nielsen) | buena-practica | media | vigente | validated |
+| [DORA-DEVOPS](#dora-devops) | Métricas DORA de entrega de software (DevOps Research and Assessment) | buena-practica | media | vigente | validated |
+| [GOOGLE-SRE](#google-sre) | Site Reliability Engineering (libros de Google SRE) | buena-practica | media | vigente | validated |
+| [TWELVE-FACTOR](#twelve-factor) | The Twelve-Factor App | buena-practica | media | vigente | validated |
+| [RIA-ART4-ALFABETIZACION](#ria-art4-alfabetizacion) | Reglamento de IA, artículo 4: alfabetización en IA | obligacion-legal | media | vigente | validated |
+| [RGPD-2016-679](#rgpd-2016-679) | Reglamento (UE) 2016/679, General de Protección de Datos | obligacion-legal | alta | vigente | validated |
 
 <a id="int-guia"></a>
 ### INT-GUIA
@@ -68,7 +83,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **URL:** <../../docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado.md>
 - **Tipo:** interno · **Jurisdicción:** — · **Versión o fecha:** v1.4
 - **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
-- **Especialistas relacionados:** CEO digital, Bibliotecario / responsable de conocimiento, Responsable de decisiones y seguimiento, Arquitecto técnico, Especialista backend, Especialista en evaluación de IA, Especialista en calidad y riesgos
+- **Especialistas relacionados:** CEO digital, Bibliotecario / responsable de conocimiento, Responsable de decisiones y seguimiento, Especialista en éxito de cliente, Arquitecto técnico, Especialista backend, Especialista en evaluación de IA, Especialista en calidad y riesgos
 - **Nota:** Línea base: P01–P30, estados, transiciones, riesgo, puertas L0–L4.
 
 <a id="int-atlas"></a>
@@ -78,7 +93,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **URL:** <../../docs/fuentes/Atlas_Evolucion_v1.1_Modelo_Operativo_Procesos_y_Despliegue.md>
 - **Tipo:** interno · **Jurisdicción:** — · **Versión o fecha:** v1.1
 - **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
-- **Especialistas relacionados:** CEO digital, Bibliotecario / responsable de conocimiento, Director comercial, Especialista en gestión de clientes, Arquitecto de procesos, Responsable de implantación de clientes, Especialista en automatización, Especialista en métricas, Especialista en integraciones
+- **Especialistas relacionados:** CEO digital, Bibliotecario / responsable de conocimiento, Director comercial, Especialista en éxito de cliente, Arquitecto de procesos, Responsable de implantación de clientes, Especialista en automatización, Especialista en métricas, Especialista en integraciones
 - **Nota:** P31–P38, D0–D6, puertas G0–G6, módulos nuevos. Estado de propuesta.
 
 <a id="int-marco"></a>
@@ -107,7 +122,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **URL:** <https://finreg360.com/alerta/el-parlamento-europeo-y-el-consejo-aprueban-la-simplificacion-del-reglamento-de-inteligencia-artificial/>
 - **Tipo:** obligacion-legal · **Jurisdicción:** UE · **Versión o fecha:** DOUE 24/07/2026; en vigor 27/07/2026
 - **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** validated
-- **Especialistas relacionados:** Especialista en marketing y contenido, Experto en industria manufacturera, Especialista legal y privacidad
+- **Especialistas relacionados:** Especialista en marketing y contenido, Experto en industria manufacturera, Especialista legal y privacidad, Responsable de cumplimiento normativo
 - **Nota:** Alto riesgo del anexo III desde el 02/12/2027 y del anexo I desde el 02/08/2028. Contrastado con Cuatrecasas y GlobalSuite. Falta enlazar el texto del DOUE.
 
 <a id="aepd-agentica"></a>
@@ -147,7 +162,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **URL:** <https://webstore.iec.ch/publication/90574>
 - **Tipo:** estandar-voluntario · **Jurisdicción:** Internacional · **Versión o fecha:** 2023-12
 - **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
-- **Especialistas relacionados:** Responsable de cumplimiento
+- **Especialistas relacionados:** Responsable de cumplimiento normativo
 - **Nota:** Certificable. Norma de pago: solo resumen público.
 
 <a id="owasp-llm-2025"></a>
@@ -167,7 +182,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **URL:** <https://www.cuatrecasas.com/es/spain/propiedad-intelectual/art/ciberataques-sectores-criticos-espera-nis2>
 - **Tipo:** prensa-especializada · **Jurisdicción:** ES/UE · **Versión o fecha:** 26/10/2026
 - **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** en-tramitacion · **Estado:** validated
-- **Especialistas relacionados:** Especialista en ciberseguridad, Responsable de cumplimiento
+- **Especialistas relacionados:** Especialista en ciberseguridad, Responsable de cumplimiento normativo
 - **Nota:** Sin ley de transposición; sigue el RDL 12/2018. Anteproyecto aprobado el 14/01/2025. La Comisión llevó a España al TJUE el 08/07/2026.
 
 <a id="nis2-anteproyecto"></a>
@@ -187,7 +202,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **URL:** <https://www.cnmv.es/DocPortal/Ciberseguridad/FAQ_DORA.pdf>
 - **Tipo:** recomendacion-tecnica · **Jurisdicción:** UE/ES · **Versión o fecha:** 10/02/2026
 - **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
-- **Especialistas relacionados:** Especialista en propuestas y licitaciones, Coordinación sectorial y seguros, Experto en servicios financieros no bancarios, Responsable de cumplimiento, Especialista en costes y proveedores
+- **Especialistas relacionados:** Especialista en propuestas y licitaciones, Coordinación sectorial y seguros, Experto en servicios financieros no bancarios, Responsable de cumplimiento normativo, Especialista en costes y proveedores
 - **Nota:** DORA aplicable desde el 17/01/2025. Alcanza a proveedores TIC de entidades financieras e intermediarios de seguros por contrato.
 
 <a id="ens-rd311"></a>
@@ -197,7 +212,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **URL:** <https://www.legiscope.com/blog/esquema-nacional-seguridad-ens-guia.html>
 - **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** RD 311/2022 (BOE 04/05/2022)
 - **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** validated
-- **Especialistas relacionados:** Especialista en propuestas y licitaciones, Especialista en ciberseguridad, Responsable de cumplimiento
+- **Especialistas relacionados:** Especialista en propuestas y licitaciones, Especialista en ciberseguridad, Responsable de cumplimiento normativo, Ingeniero de plataforma y operaciones (DevOps/SRE)
 - **Nota:** Obligatorio para el sector público y sus proveedores privados. Falta enlazar el BOE.
 
 <a id="iso-27001"></a>
@@ -207,7 +222,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **URL:** <https://www.isaca.org/resources/isaca-journal/issues/2024/volume-3/navigating-the-iso-iec-27001-2022-transition-a-90-day-challenge>
 - **Tipo:** estandar-voluntario · **Jurisdicción:** Internacional · **Versión o fecha:** 2022
 - **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** validated
-- **Especialistas relacionados:** Especialista en ciberseguridad, Especialista en calidad y riesgos
+- **Especialistas relacionados:** Especialista en ciberseguridad, Responsable de cumplimiento normativo, Especialista en calidad y riesgos, Ingeniero de plataforma y operaciones (DevOps/SRE)
 - **Nota:** Anexo A con 93 controles en 4 temas.
 
 <a id="verifactu-rdl15"></a>
@@ -217,7 +232,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **URL:** <https://assets.kpmg.com/content/dam/kpmgsites/es/pdf/2025/12/tax-alert-el-real-decreto-ley-15-2025-amplia-plazos-adaptacion-reglamento-verifactu.pdf.coredownload.inline.pdf>
 - **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** BOE 03/12/2025
 - **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** validated
-- **Especialistas relacionados:** Experto en asesorías, gestorías y despachos, Especialista administrativo
+- **Especialistas relacionados:** Experto en asesorías, gestorías y despachos, Especialista administrativo, Especialista en contabilidad y facturación
 - **Nota:** Fecha legal vigente: 01/01/2027 para el Impuesto sobre Sociedades y 01/07/2027 para el resto.
 
 <a id="verifactu-2028"></a>
@@ -227,7 +242,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **URL:** <https://www.fiscal-impuestos.com/node/41920>
 - **Tipo:** prensa-especializada · **Jurisdicción:** ES · **Versión o fecha:** nota del 05/10/2026
 - **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** anunciado-sin-norma · **Estado:** disputed
-- **Especialistas relacionados:** Experto en asesorías, gestorías y despachos, Especialista administrativo
+- **Especialistas relacionados:** Experto en asesorías, gestorías y despachos, Especialista administrativo, Especialista en contabilidad y facturación
 - **Nota:** Anuncio aún no publicado en el BOE. Mientras no haya norma, valen las fechas del RDL 15/2025.
 
 <a id="factura-b2b"></a>
@@ -237,7 +252,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **URL:** <https://www.cuatrecasas.com/resources/reglamento-facturacion-text-69ccd76c3b2f3438807460.pdf>
 - **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** BOE 31/03/2026; en vigor 20/04/2026
 - **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** validated
-- **Especialistas relacionados:** Experto en asesorías, gestorías y despachos, Especialista administrativo
+- **Especialistas relacionados:** Experto en asesorías, gestorías y despachos, Especialista administrativo, Especialista en contabilidad y facturación
 - **Nota:** Calendario activado por la Orden HAC/1028/2026 (BOE 05/10/2026, en vigor el 06/10/2026): obligatoria desde octubre de 2027 para facturación superior a 8 millones de euros y desde octubre de 2028 para el resto. Ver AEAT-FACTURA-CAL.
 
 <a id="pgc-pymes"></a>
@@ -247,7 +262,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **URL:** <https://www.boe.es/eli/es/rd/2007/11/16/1515>
 - **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** consolidado
 - **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
-- **Especialistas relacionados:** Especialista financiero
+- **Especialistas relacionados:** Especialista financiero, Especialista en contabilidad y facturación, Director financiero (CFO)
 - **Nota:** Junto con el RD 1514/2007 (PGC). Las aseguradoras tienen su propio plan (RD 1317/2008).
 
 <a id="lcs-50-1980"></a>
@@ -366,7 +381,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **URL:** <https://opentelemetry.io/docs/specs/semconv/gen-ai/gen-ai-spans/>
 - **Tipo:** estandar-voluntario · **Jurisdicción:** — · **Versión o fecha:** estado Development; desde la v1.42.0 (12/06/2026) en un repositorio propio
 - **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** borrador · **Estado:** validated
-- **Especialistas relacionados:** Arquitecto de datos e IA
+- **Especialistas relacionados:** Arquitecto de datos e IA, Ingeniero de plataforma y operaciones (DevOps/SRE)
 - **Nota:** No estable: puede cambiar. Usar con versión fijada.
 
 <a id="ietf-idempotency"></a>
@@ -536,7 +551,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **URL:** <https://sede.agenciatributaria.gob.es/Sede/eu_es/iva/factura-electronica/calendario-implantacion.html>
 - **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** consultado 17/11/2026
 - **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
-- **Especialistas relacionados:** Experto en asesorías, gestorías y despachos, Especialista administrativo
+- **Especialistas relacionados:** Experto en asesorías, gestorías y despachos, Especialista administrativo, Especialista en contabilidad y facturación
 - **Nota:** Los plazos del RD 238/2026 corren desde el 06/10/2026. Contrastado con Garrigues: octubre de 2027 para facturación superior a 8 millones de euros y octubre de 2028 para el resto.
 
 <a id="holded-asesorias-2026"></a>
@@ -588,4 +603,154 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente-aplicacion-diferida · **Estado:** draft
 - **Especialistas relacionados:** Experto en industria manufacturera
 - **Nota:** Sustituye a la Directiva de máquinas e incluye componentes de seguridad con IA. Fecha general de aplicación: enero de 2027 (por verificar en EUR-Lex). El ómnibus digital sobre IA lo modifica.
+
+<a id="liva-37-1992"></a>
+### LIVA-37-1992
+- **Título:** Ley 37/1992, del Impuesto sobre el Valor Añadido
+- **Autor u organismo:** BOE
+- **URL:** <https://www.boe.es/eli/es/l/1992/12/28/37/con>
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** texto consolidado
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** Especialista en contabilidad y facturación
+- **Nota:** Base del IVA repercutido y soportado; las liquidaciones las presenta el gestor.
+
+<a id="rd-1619-2012"></a>
+### RD-1619-2012
+- **Título:** Real Decreto 1619/2012, Reglamento por el que se regulan las obligaciones de facturación
+- **Autor u organismo:** BOE
+- **URL:** <https://www.boe.es/eli/es/rd/2012/11/30/1619/con>
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** texto consolidado
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** Especialista en contabilidad y facturación
+- **Nota:** Contenido obligatorio de la factura, plazos de expedición y conservación. Modificado por las normas de Verifactu y factura electrónica (ver VERIFACTU-RDL15 y FACTURA-B2B).
+
+<a id="lis-27-2014"></a>
+### LIS-27-2014
+- **Título:** Ley 27/2014, del Impuesto sobre Sociedades
+- **Autor u organismo:** BOE
+- **URL:** <https://www.boe.es/eli/es/l/2014/11/27/27/con>
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** texto consolidado
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** Especialista en contabilidad y facturación, Director financiero (CFO)
+- **Nota:** Aplica solo si la forma jurídica es sociedad (decisión pendiente, 08/01/2027).
+
+<a id="ley-morosidad-3-2004"></a>
+### LEY-MOROSIDAD-3-2004
+- **Título:** Ley 3/2004, medidas de lucha contra la morosidad en operaciones comerciales
+- **Autor u organismo:** BOE
+- **URL:** <https://www.boe.es/eli/es/l/2004/12/29/3/con>
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** texto consolidado
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** Especialista en contabilidad y facturación
+- **Nota:** Plazos máximos de pago entre empresas e intereses de demora. Comprobar el plazo vigente en el texto consolidado antes de citarlo en un contrato.
+
+<a id="ley-startups-28-2022"></a>
+### LEY-STARTUPS-28-2022
+- **Título:** Ley 28/2022, de fomento del ecosistema de las empresas emergentes
+- **Autor u organismo:** BOE
+- **URL:** <https://www.boe.es/eli/es/l/2022/12/21/28/con>
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** texto consolidado
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** Director financiero (CFO)
+- **Nota:** Requisitos para ser empresa emergente y sus ventajas fiscales; requiere acreditación de ENISA. Comprobar si Varios encaja antes de contar con ellas.
+
+<a id="enisa-2026"></a>
+### ENISA-2026
+- **Título:** ENISA: préstamos participativos (líneas 2026)
+- **Autor u organismo:** ENISA / prensa especializada
+- **URL:** <https://ecosistemastartup.com/prestamo-enisa-2026-hasta-15me-sin-ceder-equity/>
+- **Tipo:** prensa-especializada · **Jurisdicción:** ES · **Versión o fecha:** consultado 17/11/2026
+- **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** Director financiero (CFO)
+- **Nota:** Las fuentes secundarias difieren en importes y líneas de 2026 (por ejemplo, Jóvenes Emprendedores hasta 75.000 € según unas y hasta 300.000 € según otras). Confirmar siempre en enisa.es antes de usar una cifra.
+
+<a id="cdti-neotec-2026"></a>
+### CDTI-NEOTEC-2026
+- **Título:** Programa NEOTEC 2026 (CDTI)
+- **Autor u organismo:** Ministerio de Ciencia, Innovación y Universidades
+- **URL:** <https://www.ciencia.gob.es/en/Noticias/2026/abril/MICIU-lanza-convocatoria-NEOTEC-2026.html>
+- **Tipo:** ayuda-publica · **Jurisdicción:** ES · **Versión o fecha:** convocatoria 2026 (cerrada: 14/04–14/05/2026)
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** historico · **Estado:** validated
+- **Especialistas relacionados:** Director financiero (CFO)
+- **Nota:** Subvención para empresas de base tecnológica; 20,38 M€ en 2026. La de 2026 está cerrada: vigilar la de 2027. Exige tecnología propia: valorar si Varios encaja.
+
+<a id="w3c-wcag22"></a>
+### W3C-WCAG22
+- **Título:** Web Content Accessibility Guidelines (WCAG) 2.2
+- **Autor u organismo:** W3C
+- **URL:** <https://www.w3.org/TR/WCAG22/>
+- **Tipo:** estandar-voluntario · **Jurisdicción:** — · **Versión o fecha:** Recomendación W3C de 05/10/2023
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** Diseñador de producto y experiencia (UX)
+- **Nota:** Nivel AA como objetivo razonable. Compatible hacia atrás con 2.1 y 2.0.
+
+<a id="ley-accesibilidad-11-2023"></a>
+### LEY-ACCESIBILIDAD-11-2023
+- **Título:** Ley 11/2023 (accesibilidad de productos y servicios, transpone la Directiva (UE) 2019/882)
+- **Autor u organismo:** BOE
+- **URL:** <https://boe.es/boe/dias/2023/05/09/pdfs/BOE-A-2023-11022.pdf>
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** BOE 09/05/2023
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** Responsable de cumplimiento normativo, Diseñador de producto y experiencia (UX)
+- **Nota:** Obligaciones desde el 28/06/2025 para productos y servicios nuevos (comercio electrónico, banca en línea, entre otros); hasta el 28/06/2030 para los ya existentes. Afecta a clientes, y a Varios si su producto entra en esos servicios: revisar con Legal.
+
+<a id="nng-heuristicas"></a>
+### NNG-HEURISTICAS
+- **Título:** 10 heurísticas de usabilidad (Jakob Nielsen)
+- **Autor u organismo:** Nielsen Norman Group
+- **URL:** <https://www.nngroup.com/articles/ten-usability-heuristics/>
+- **Tipo:** buena-practica · **Jurisdicción:** — · **Versión o fecha:** 1994, actualizada
+- **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** Diseñador de producto y experiencia (UX)
+- **Nota:** Marco de revisión heurística de interfaces.
+
+<a id="dora-devops"></a>
+### DORA-DEVOPS
+- **Título:** Métricas DORA de entrega de software (DevOps Research and Assessment)
+- **Autor u organismo:** Google Cloud / DORA
+- **URL:** <https://dora.dev/>
+- **Tipo:** buena-practica · **Jurisdicción:** — · **Versión o fecha:** informe 2025 (State of AI-assisted Software Development)
+- **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** Ingeniero de plataforma y operaciones (DevOps/SRE)
+- **Nota:** No confundir con el Reglamento DORA de la UE. Frecuencia de despliegue, tiempo de entrega de cambios, tasa de fallo de cambios y tiempo de recuperación; desde 2024 también tasa de retrabajo.
+
+<a id="google-sre"></a>
+### GOOGLE-SRE
+- **Título:** Site Reliability Engineering (libros de Google SRE)
+- **Autor u organismo:** Google
+- **URL:** <https://sre.google/books/>
+- **Tipo:** buena-practica · **Jurisdicción:** — · **Versión o fecha:** consultado 17/11/2026
+- **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** Ingeniero de plataforma y operaciones (DevOps/SRE)
+- **Nota:** Objetivos de nivel de servicio (SLO), presupuesto de errores, gestión de incidentes y postmortems sin culpables.
+
+<a id="twelve-factor"></a>
+### TWELVE-FACTOR
+- **Título:** The Twelve-Factor App
+- **Autor u organismo:** Heroku (Adam Wiggins)
+- **URL:** <https://12factor.net/>
+- **Tipo:** buena-practica · **Jurisdicción:** — · **Versión o fecha:** consultado 17/11/2026
+- **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** Ingeniero de plataforma y operaciones (DevOps/SRE)
+- **Nota:** Configuración en el entorno, paridad entre entornos, procesos sin estado, registros como flujos.
+
+<a id="ria-art4-alfabetizacion"></a>
+### RIA-ART4-ALFABETIZACION
+- **Título:** Reglamento de IA, artículo 4: alfabetización en IA
+- **Autor u organismo:** Unión Europea / despachos
+- **URL:** <https://www.economistjurist.es/zbloque-1/reglamento-europeo-de-ia-tras-el-omnibus-que-obligaciones-y-sanciones-ya-son-exigibles-en-agosto-de-2026/>
+- **Tipo:** obligacion-legal · **Jurisdicción:** UE · **Versión o fecha:** aplicable desde 02/02/2025; reformulado por el Reglamento (UE) 2026/1744 desde 27/07/2026
+- **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** Responsable de cumplimiento normativo
+- **Nota:** La obligación sigue tras el ómnibus, con nueva redacción; supervisión por autoridades nacionales desde agosto de 2026. Es la base de la oferta de formación de Varios. Leer el texto vigente en EUR-Lex antes de citarlo.
+
+<a id="rgpd-2016-679"></a>
+### RGPD-2016-679
+- **Título:** Reglamento (UE) 2016/679, General de Protección de Datos
+- **Autor u organismo:** Unión Europea
+- **URL:** <https://eur-lex.europa.eu/eli/reg/2016/679/oj>
+- **Tipo:** obligacion-legal · **Jurisdicción:** UE · **Versión o fecha:** texto vigente
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** Responsable de cumplimiento normativo
+- **Nota:** Art. 28 (encargado del tratamiento), 30 (registro de actividades), 32 (seguridad), 33 (brechas, 72 h), 35 (evaluación de impacto).
 

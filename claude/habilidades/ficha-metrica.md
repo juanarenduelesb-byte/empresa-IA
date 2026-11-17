@@ -24,3 +24,4 @@ Ficha de métrica.
 ## Quién la usa
 
 - [Métricas](../../knowledge/agentes/kpi.md)
+- [Éxito de cliente](../../knowledge/agentes/exito.md)

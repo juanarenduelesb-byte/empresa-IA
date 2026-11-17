@@ -40,7 +40,7 @@ Responsable de implantación
 
 ## 6. Departamentos y especialistas
 - [Responsable de implantación de clientes](../../knowledge/procesos/implantacion-clientes.md)
-- [Especialista en gestión de clientes](../../knowledge/comercial/gestion-clientes.md)
+- [Especialista en éxito de cliente](../../knowledge/comercial/gestion-clientes.md)
 
 ## 7. Decisiones y reglas
 - Una puerta no se supera por calendario.
@@ -93,4 +93,4 @@ Ninguna todavía.
 - Despliegue no pasa a pilot sin G3.
 
 ---
-Especialistas: Responsable de implantación de clientes, Especialista en gestión de clientes. Definición original: Atlas Evolución v1.1 §10 (propuesta).
+Especialistas: Responsable de implantación de clientes, Especialista en éxito de cliente. Definición original: Atlas Evolución v1.1 §10 (propuesta).

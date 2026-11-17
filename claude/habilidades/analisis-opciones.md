@@ -25,3 +25,4 @@ Tabla de opciones y recomendación en cinco líneas.
 ## Quién la usa
 
 - [Registro de decisiones](../../knowledge/agentes/dec.md)
+- [Director financiero](../../knowledge/agentes/cfo.md)

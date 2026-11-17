@@ -27,3 +27,4 @@ Tabla amenaza · impacto · control · prueba.
 - [Arquitecto técnico](../../knowledge/agentes/ingj.md)
 - [Integraciones](../../knowledge/agentes/int.md)
 - [Seguridad](../../knowledge/agentes/sec.md)
+- [Plataforma y operaciones](../../knowledge/agentes/ops.md)

@@ -2,11 +2,11 @@
 
 Artefacto de Claude "Varios · Oficina de agentes". Archivos: `index.html`, `entregables.js`, `brain.json`, `office.js` y `oficina3d.js` (vista 3D) y `vendor/` (librerías; ver [LICENCIAS](vendor/LICENCIAS.md), D-015 y D-016).
 
-Es una planta isométrica con siete departamentos y 28 agentes alrededor del cerebro. El séptimo departamento es **Sectores**: seis expertos (seguros, sanidad privada, asesorías y despachos, servicios financieros no bancarios, industria y logística). La priorización está en `knowledge/sectores/priorizacion.md`.
+Es una planta isométrica con siete departamentos y 34 agentes alrededor del cerebro. El séptimo departamento es **Sectores**: seis expertos (seguros, sanidad privada, asesorías y despachos, servicios financieros no bancarios, industria y logística). La priorización está en `knowledge/sectores/priorizacion.md`.
 
 ## Qué hace
 
-- **Fichas completas de los 28 agentes** (`agentes.json`, generado desde `tools/org_data/agentes.py`): misión, nivel, responsabilidades, entregables, cómo trabaja, reglas del puesto y de la oficina, habilidades con sus pasos, criterio senior, errores que evita, cómo se mide, con quién trabaja y límites. Se ven en la pestaña Ficha de cada agente y entran en su contexto en cada encargo. Fichas legibles en `knowledge/agentes/` y habilidades en `claude/habilidades/`.
+- **Fichas completas de los 34 agentes** (`agentes.json`, generado desde `tools/org_data/agentes.py`): misión, nivel, responsabilidades, entregables, cómo trabaja, reglas del puesto y de la oficina, habilidades con sus pasos, criterio senior, errores que evita, cómo se mide, con quién trabaja y límites. Se ven en la pestaña Ficha de cada agente y entran en su contexto en cada encargo. Fichas legibles en `knowledge/agentes/` y habilidades en `claude/habilidades/`.
 - **Caso de práctica Atalaya** (`casos/atalaya.json`): diagnóstico completo de la apertura de siniestros en una correduría ficticia, 13 encargos para 12 agentes en 4 fases. Se carga desde Proyectos y se lanza entero con «Lanzar todo el plan»: cada encargo empieza cuando terminan los que necesita, cada agente hace uno a la vez y trabajan hasta 4 en paralelo. Detalle en `precedents/projects/caso-correduria-atalaya/`.
 - **Todo acaba en GitHub (D-017):** cada noche se vuelca lo nuevo (encargos, conversaciones, chats, memoria, reglas y habilidades enseñadas) a `oficina/registro/` y `precedents/oficina/`, y se publica el cerebro nuevo. GitHub Actions comprueba, regenera y avisa sin IA. Instrucciones en `registro/VOLCADO.md`.
 

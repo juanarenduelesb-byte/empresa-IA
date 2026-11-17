@@ -21,6 +21,7 @@ Puertas: G0–G6 = cliente; L0–L4 = técnicas. No confundirlas.
 - No subir secretos, credenciales ni datos reales de clientes. Solo datos inventados en pruebas.
 - No inventar datos, clientes, cifras ni fuentes. Separar hecho, hipótesis y propuesta.
 - Toda decisión estructural se registra en DECISIONS.md (fecha, decisión, motivo, estado).
+- Propuestas de cambios (D-012): al terminar, abre la propuesta y acéptala tú mismo si no tiene conflictos ni pruebas fallidas, y resume en el chat qué has aceptado. Déjala abierta para un socio si marca como aprobada una decisión, cambia CLAUDE.md, toca documentos legales o lleva datos reales o secretos.
 - Proceso antes que agente. Código fijo para reglas y cálculos; IA para lenguaje y ambigüedad.
 - El cliente (tenant) se obtiene de la identidad autenticada, nunca de un dato que envía el usuario.
 - Cualquier acción externa, financiera, legal o contractual requiere aprobación humana.

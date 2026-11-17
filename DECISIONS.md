@@ -56,6 +56,14 @@ No construir primero un CEO omnisciente; descubrir, diseñar, integrar y medir u
 - Impacto: `docs/10-plan-12-semanas.md`, `site/planning.html`.
 - Estado: aprobada.
 
+## D-012 — Las propuestas de cambios de Claude se aceptan solas
+- Fecha: 2026-11-17
+- Decisión: cuando Claude termina un trabajo en el repositorio, abre la propuesta de cambios (pull request) y la acepta él mismo en cuanto no tiene conflictos ni pruebas fallidas. La propuesta queda como registro de qué cambió y por qué.
+- Motivo: decisión de los socios; revisar cada propuesta a mano frenaba el trabajo.
+- Excepciones (se quedan esperando a un socio): marcar como aprobada una decisión de DECISIONS.md, cambiar CLAUDE.md, cambios en documentos legales (`governance/`, Marco legal) y cualquier cambio con datos reales de clientes o secretos, que además está prohibido.
+- Riesgo aceptado: un error llega a la versión principal sin que nadie lo lea antes. Mitigación: cada cambio es una propuesta separada y se puede deshacer; Claude resume en el chat lo que ha aceptado.
+- Estado: aprobada.
+
 ## Decisiones pendientes (con fecha límite)
 | Decisión | Quién | Antes de |
 |---|---|---|

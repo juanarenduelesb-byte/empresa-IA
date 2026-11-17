@@ -104,7 +104,7 @@ def main(dst):
     for base, dirs, names in os.walk(ROOT):
         rel = os.path.relpath(base, ROOT)
         rel = "" if rel == "." else rel + "/"
-        if any(rel.startswith(s) for s in SKIP):
+        if any(rel.startswith(s) for s in SKIP) or any(part.startswith(".") for part in rel.split("/")[:-1]):
             continue
         for n in sorted(names):
             if n.endswith(".md"):

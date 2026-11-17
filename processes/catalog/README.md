@@ -44,4 +44,4 @@ Ciclo completo de un encargo: [diagrams/ciclo-encargo.md](../diagrams/ciclo-enca
 | P35 | [Gestión de instancias y excepciones](P35-gestion-de-instancias-y-excepciones.md) | Atlas v1.1 (propuesta) | MVP | No | Especialista backend, Especialista en automatización |
 | P36 | [Gestión del catálogo de conectores](P36-gestion-del-catalogo-de-conectores.md) | Atlas v1.1 (propuesta) | Antes de automatizar | No | Especialista en integraciones, Especialista en ciberseguridad |
 | P37 | [Medición de rendimiento y valor](P37-medicion-de-rendimiento-y-valor.md) | Atlas v1.1 (propuesta) | MVP | No | Especialista en métricas |
-| P38 | [Gestión de despliegue por cliente](P38-gestion-de-despliegue-por-cliente.md) | Atlas v1.1 (propuesta) | Antes de datos reales | No | Responsable de implantación de clientes, Especialista en gestión de clientes |
+| P38 | [Gestión de despliegue por cliente](P38-gestion-de-despliegue-por-cliente.md) | Atlas v1.1 (propuesta) | Antes de datos reales | No | Responsable de implantación de clientes, Especialista en éxito de cliente |

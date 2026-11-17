@@ -8,3 +8,5 @@ Empresa, costes, proveedores y facturación.
 | [Especialista financiero](financiero.md) | fin | P29 |
 | [Especialista en costes y proveedores](costes-proveedores.md) | fin, prov | P27, P29 |
 | [Especialista administrativo](administrativo.md) | admj | P11 |
+| [Especialista en contabilidad y facturación](contabilidad.md) | conta | P29 |
+| [Director financiero (CFO)](direccion-financiera.md) | cfo | P29, P37 |

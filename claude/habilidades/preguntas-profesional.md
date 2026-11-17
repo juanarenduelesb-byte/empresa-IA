@@ -25,3 +25,4 @@ Lista de preguntas lista para enviar (la envía un socio).
 
 - [Legal y privacidad](../../knowledge/agentes/leg.md)
 - [Administración](../../knowledge/agentes/admj.md)
+- [Contabilidad y facturación](../../knowledge/agentes/conta.md)

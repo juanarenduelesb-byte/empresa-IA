@@ -37,7 +37,7 @@
 
 ### A quién convoca
 - [Arquitecto de procesos](../procesos/arquitecto-procesos.md)
-- [Responsable de cumplimiento](../seguridad-legal/cumplimiento.md)
+- [Responsable de cumplimiento normativo](../seguridad-legal/cumplimiento.md)
 - y el experto del sector del encargo
 
 ### Permisos

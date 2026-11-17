@@ -31,3 +31,5 @@ El mismo contenido, más corto y verificable.
 - [Jefe comercial](../../knowledge/agentes/comj.md)
 - [Propuestas](../../knowledge/agentes/prop.md)
 - [Contenido](../../knowledge/agentes/cont.md)
+- [Diseño y experiencia](../../knowledge/agentes/ux.md)
+- [Éxito de cliente](../../knowledge/agentes/exito.md)

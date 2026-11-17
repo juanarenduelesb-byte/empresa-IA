@@ -138,6 +138,17 @@ No construir primero un CEO omnisciente; descubrir, diseñar, integrar y medir u
 - Riesgo: más coste en tokens y bucles si Calidad es demasiado dura. Mitigación: máximo 4 rondas por versión y escalado al socio.
 - Estado: propuesta.
 
+## D-020 — Seis puestos nuevos en la oficina: CFO, contabilidad, éxito de cliente, plataforma, diseño y cumplimiento
+- Fecha: 2026-11-17
+- Decisión: la oficina pasa de 28 a 34 agentes, cada uno con ficha senior, reglas, habilidades y ficha de conocimiento con fuentes:
+  - Administración: Director financiero (caja, margen, precio, financiación) y Contabilidad y facturación (facturas, cobros, conciliación, cierre, paquete para el gestor).
+  - Comercial: Éxito de cliente (plan de éxito, piloto medido, revisión de valor, renovación).
+  - Ingeniería: Plataforma y operaciones (integración continua, copias con restauración probada, monitorización, incidentes) y Diseño y experiencia (panel usable por no técnicos, accesibilidad WCAG 2.2 AA).
+  - Calidad, seguridad y legal: Cumplimiento normativo (inventario de IA, registro de tratamientos, alfabetización del art. 4, matriz de evidencias).
+- Motivo: cubrir huecos del plan hasta el 12/02/2027 (forma jurídica y facturación, precio, CI y copias, panel de S10) y lo que necesitará el primer cliente regulado. Recursos humanos y alianzas se dejan para cuando haya contrataciones o nicho elegido.
+- Riesgo: más agentes, más coordinación y más tokens. Mitigación: cada puesto tiene límites claros y el CEO solo los convoca cuando el encargo lo pide.
+- Estado: propuesta.
+
 ## Decisiones pendientes (con fecha límite)
 | Decisión | Quién | Antes de |
 |---|---|---|

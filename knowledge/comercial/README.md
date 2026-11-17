@@ -9,4 +9,4 @@ Valida, prospecta, propone y cuida la relación.
 | [Especialista en prospección](prospeccion.md) | pros | P31 |
 | [Especialista en marketing y contenido](marketing-contenido.md) | cont | P31 |
 | [Especialista en propuestas y licitaciones](propuestas-licitaciones.md) | prop | P31, P38 |
-| [Especialista en gestión de clientes](gestion-clientes.md) | — | P11, P37, P38 |
+| [Especialista en éxito de cliente](gestion-clientes.md) | exito | P11, P12, P37, P38 |

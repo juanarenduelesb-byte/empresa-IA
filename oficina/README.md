@@ -1,10 +1,18 @@
 # Oficina de agentes de Varios
 
-Artefacto de Claude "Varios · Oficina de agentes". Archivos: `index.html`, `entregables.js`, `brain.json` y `vendor/` (librerías para generar archivos; ver [LICENCIAS](vendor/LICENCIAS.md) y D-015).
+Artefacto de Claude "Varios · Oficina de agentes". Archivos: `index.html`, `entregables.js`, `brain.json`, `office.js` y `oficina3d.js` (vista 3D) y `vendor/` (librerías; ver [LICENCIAS](vendor/LICENCIAS.md), D-015 y D-016).
 
-Es una planta isométrica con siete departamentos y 29 agentes alrededor del cerebro. El séptimo departamento es **Sectores**: seis expertos (seguros, sanidad privada, asesorías y despachos, servicios financieros no bancarios, industria y logística). La priorización está en `knowledge/sectores/priorizacion.md`.
+Es una planta isométrica con siete departamentos y 28 agentes alrededor del cerebro. El séptimo departamento es **Sectores**: seis expertos (seguros, sanidad privada, asesorías y despachos, servicios financieros no bancarios, industria y logística). La priorización está en `knowledge/sectores/priorizacion.md`.
 
 ## Qué hace
+
+- **Vista 3D (botón 3D/2D):**
+  - la escena es `office.js` tal cual (Three.js r170), con un puesto fijo por agente; `oficina3d.js` pone los datos reales encima;
+  - estados en HTML sobre cada persona: punto verde (trabajando), bocadillo naranja (espera tu OK), bocadillo morado (hablando), punto gris (libre); las píldoras de zona se apartan para no tapar a nadie;
+  - cuando dos agentes hablan de verdad, el emisor se levanta, camina por los pasillos (rejilla de 0,5 m y A*), conversa con bocadillos alternos y vuelve con el documento; como mucho tres paseos a la vez, el resto espera en cola, y si el receptor está ocupado espera en el pasillo;
+  - clic en cualquiera de los dos abre la conversación con sus mensajes reales; clic en una píldora abre la zona con las tarjetas de cada agente («Dar el OK», «Ver detalle») y la lista del departamento;
+  - panel lateral con Hoy, Te esperan y Departamentos; «Simular conversación» ensaya un paseo sin datos reales;
+  - con movimiento reducido, el agente aparece en destino y la ruta se ve punteada un segundo.
 
 - **Proyectos (J) y nuevo proyecto (N):**
   - cada proyecto guarda su informe (objetivo, contexto, alcance, interlocutores, restricciones, criterio de éxito), sus documentos, sus encargos, sus entregables y su memoria;

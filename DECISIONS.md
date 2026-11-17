@@ -90,6 +90,17 @@ No construir primero un CEO omnisciente; descubrir, diseñar, integrar y medir u
 - Riesgo: un formato mal generado o una memoria con lecciones equivocadas. Mitigación: todo sale como borrador; los entregables tienen versiones y las entradas de memoria se pueden borrar. Drive solo lee y pide permiso la primera vez.
 - Estado: propuesta.
 
+## D-016 — Vista 3D de la oficina de agentes con Three.js
+- Fecha: 2026-11-17
+- Decisión:
+  - La oficina de agentes tiene una vista 3D (botón 3D/2D) hecha sobre `oficina/office.js`, la escena de referencia que aportó Juan, sin reescribirla.
+  - Usa Three.js r170 sin modificar en `oficina/vendor/three/` (MIT), solo los módulos que necesita. Se carga únicamente al abrir la vista 3D; si el navegador no tiene WebGL 2, queda el plano 2D.
+  - Los agentes caminan entre mesas cuando hablan entre ellos de verdad (CEO que asigna, consulta al experto de sector, entrega a Calidad, piezas al jefe, reuniones). Las conversaciones muestran las líneas reales del trabajo. El botón «Simular conversación» es un ensayo marcado como simulación, sin datos reales.
+- Motivo: los socios quieren ver la oficina como una oficina real: quién trabaja, quién espera su OK y quién habla con quién, sin que los textos tapen el plano.
+- Alcance: solo la oficina (artifact). No forma parte del stack del piloto.
+- Riesgo: rendimiento en equipos sin GPU y 0,8 MB más de librería. Mitigación: calidad adaptativa (sin oclusión ambiental y sombras más ligeras si baja de 45 FPS), carga bajo demanda y vuelta al 2D.
+- Estado: propuesta.
+
 ## Decisiones pendientes (con fecha límite)
 | Decisión | Quién | Antes de |
 |---|---|---|

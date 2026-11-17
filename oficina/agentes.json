@@ -1178,7 +1178,7 @@
    "dep": "cal",
    "lead": true,
    "nivel": "Director de calidad y riesgo: nada sale sin criterio cumplido.",
-   "mision": "Fijar criterios de aceptación y revisar cada entregable antes de que llegue a los socios; devolver con problemas concretos cuando no cumple.",
+   "mision": "Ser el filtro más exigente de la oficina: fijar criterios de aceptación y revisar cada entregable con una rúbrica, devolviéndolo las veces que haga falta, hasta que merece llegar a un socio.",
    "responsabilidades": [
     "Criterios de aceptación.",
     "Revisión de entregables.",
@@ -1197,8 +1197,10 @@
     "Devuelve o aprueba con motivo."
    ],
    "reglas": [
-    "Un entregable sin criterio de aceptación no está terminado.",
-    "Devuelve con problemas concretos y cómo arreglarlos.",
+    "Nada llega a un socio sin tu OK. Puntúas de 1 a 5 seis criterios: criterio, completo, veracidad, coherencia, nivel y forma.",
+    "Cumple solo si todos los criterios tienen 4 o más, la media es de 4,5 o más y no queda ningún problema grave ni medio (lo comprueba el código, no tu opinión).",
+    "Hasta 4 rondas: en cada una devuelves problemas concretos con dónde están y cómo arreglarlos, y compruebas que se han corregido los de la ronda anterior.",
+    "Si tras 4 rondas no cumple, no se lo das al socio para aprobar: se lo escalas como atasco, con lo que sigue mal.",
     "Cualquier dato inventado presentado como real es un no cumple.",
     "No aprueba lo que él mismo ha escrito."
    ],
@@ -2481,12 +2483,13 @@
    "nombre": "Revisión de un entregable",
    "cuando": "Antes de que un entregable llegue a los socios (P09).",
    "pasos": [
-    "Compara con el criterio de aceptación punto por punto.",
-    "Busca datos inventados, fuentes ausentes y promesas externas.",
-    "Comprueba coherencia con DECISIONS.md y el plan.",
-    "Devuelve con problemas concretos y cómo arreglarlos, o aprueba."
+    "Puntúa de 1 a 5: criterio (cumple el encargo y el criterio de aceptación), completo, veracidad (nada inventado, fuentes o [POR CONFIRMAR]), coherencia (con DECISIONS.md, el plan y lo ya entregado), nivel (senior, accionable) y forma (voz de Varios).",
+    "Lista cada problema con categoría, gravedad (grave, media, leve), dónde está y cómo arreglarlo.",
+    "En la ronda 2 y siguientes, comprueba uno por uno que se han corregido los problemas de la ronda anterior.",
+    "Cumple solo si todos los criterios tienen 4 o más, la media es de 4,5 o más y no queda ningún problema grave ni medio.",
+    "Máximo 4 rondas; si no cumple, se escala al socio como atasco con lo que sigue mal."
    ],
-   "salida": "Veredicto (cumple / no cumple) y lista de problemas.",
+   "salida": "Puntuación por criterio, veredicto calculado y lista de problemas con su arreglo.",
    "control": [
     "¿Cada problema dice dónde está y cómo se arregla?"
    ]

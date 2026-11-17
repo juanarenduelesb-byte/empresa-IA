@@ -125,6 +125,19 @@ No construir primero un CEO omnisciente; descubrir, diseñar, integrar y medir u
 - Riesgo: que una relación INFERIDA se tome como hecho. Mitigación: va etiquetada y con puntuación, y el agente recibe la instrucción de comprobarla.
 - Estado: propuesta.
 
+## D-019 — Calidad exigente, todo pasa por un socio y cada rechazo se rehace aprendiendo
+- Fecha: 2026-11-17
+- Decisión (oficina de agentes):
+  - Calidad revisa cada entrega con una rúbrica de seis criterios (1 a 5). Cumple solo si todos tienen 4 o más, la media es de 4,5 o más y no queda ningún problema grave ni medio; lo calcula el código. Hasta 4 rondas de corrección.
+  - Solo lo que pasa Calidad llega a un socio, y todo lo que la pasa espera su OK, sea cual sea el riesgo. Si no pasa tras 4 rondas, se escala como atasco.
+  - Rechazar exige un motivo y relanza el encargo automáticamente con ese motivo y los rechazos anteriores; descartar es otra acción. Lo que dependía de un encargo rehecho se actualiza solo.
+  - Aprendizaje: cada rechazo y cada atasco quedan en la memoria; los rechazos generales se vuelven reglas del agente; un mismo tipo de fallo de Calidad en dos encargos se vuelve regla «aprendida de Calidad».
+  - Flujo completo en docs/18-flujo-de-calidad-y-aprendizaje.md.
+- Motivo: los socios quieren recibir solo trabajo revisado a fondo y que cada corrección mejore la oficina.
+- Alcance: la oficina interna. La matriz de aprobaciones por riesgo del producto (docs/14) no cambia.
+- Riesgo: más coste en tokens y bucles si Calidad es demasiado dura. Mitigación: máximo 4 rondas por versión y escalado al socio.
+- Estado: propuesta.
+
 ## Decisiones pendientes (con fecha límite)
 | Decisión | Quién | Antes de |
 |---|---|---|

@@ -34,7 +34,7 @@
 
 ## Calidad, seguridad y legal
 
-- [Calidad y riesgo](calj.md) · jefe: Fijar criterios de aceptación y revisar cada entregable antes de que llegue a los socios; devolver con problemas concretos cuando no cumple.
+- [Calidad y riesgo](calj.md) · jefe: Ser el filtro más exigente de la oficina: fijar criterios de aceptación y revisar cada entregable con una rúbrica, devolviéndolo las veces que haga falta, hasta que merece llegar a un socio.
 - [Seguridad](sec.md): Que ningún cliente vea datos de otro, que los secretos no se filtren y que la IA no obedezca instrucciones escondidas.
 - [Legal y privacidad](leg.md): Mapear obligaciones (RGPD, Reglamento de IA, DORA, NIS2 y sectoriales), preparar preguntas para el abogado y borradores de cláusulas para revisión.
 

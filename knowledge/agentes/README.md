@@ -2,7 +2,7 @@
 
 # Agentes de la oficina
 
-28 puestos en 7 departamentos. Cada ficha dice qué hace el agente, cómo trabaja, sus reglas, sus habilidades y sus límites. Las genera `tools/agentes_gen.py` desde `tools/org_data/agentes.py`; las reglas que los socios añaden desde la oficina se vuelcan aparte en `oficina/registro/`.
+34 puestos en 7 departamentos. Cada ficha dice qué hace el agente, cómo trabaja, sus reglas, sus habilidades y sus límites. Las genera `tools/agentes_gen.py` desde `tools/org_data/agentes.py`; las reglas que los socios añaden desde la oficina se vuelcan aparte en `oficina/registro/`.
 
 ## Dirección
 
@@ -18,6 +18,7 @@
 - [Prospección](pros.md): Definir el cliente ideal y construir la lista de 40 cuentas con fuentes públicas y criterio medible.
 - [Propuestas](prop.md): Escribir propuestas que un comité entienda en cinco minutos: problema del cliente, alcance cerrado, entregables, calendario, precio decidido y siguiente paso.
 - [Contenido](cont.md): Que la web, LinkedIn y la demo expliquen qué hace Varios con pruebas, no con adjetivos.
+- [Éxito de cliente](exito.md): Que cada cliente consiga el valor firmado y quiera seguir: arranque, piloto medido contra su línea base, revisiones de valor, renovación y fase Operar.
 
 ## Procesos
 
@@ -31,18 +32,23 @@
 - [Backend](back.md): Modelo de datos, API, migraciones y tests del sistema, con aislamiento entre clientes y auditoría desde el primer día.
 - [IA y evaluación](ia.md): Instrucciones, extracción estructurada, adaptador de modelos y examen de 50 casos con cifras reales de acierto, coste e invenciones.
 - [Integraciones](int.md): Conectar sistemas a través de una puerta de herramientas con lista cerrada, aprobaciones y botón de parada.
+- [Plataforma y operaciones](ops.md): Que el sistema se construya, despliegue, vigile y recupere de forma reproducible: integración continua, secretos, entornos, copias con restauración probada, monitorización e incidentes.
+- [Diseño y experiencia](ux.md): Que una persona no técnica pueda revisar, aprobar y entender lo que hace el sistema sin ayuda.
 
 ## Calidad, seguridad y legal
 
 - [Calidad y riesgo](calj.md) · jefe: Ser el filtro más exigente de la oficina: fijar criterios de aceptación y revisar cada entregable con una rúbrica, devolviéndolo las veces que haga falta, hasta que merece llegar a un socio.
 - [Seguridad](sec.md): Que ningún cliente vea datos de otro, que los secretos no se filtren y que la IA no obedezca instrucciones escondidas.
 - [Legal y privacidad](leg.md): Mapear obligaciones (RGPD, Reglamento de IA, DORA, NIS2 y sectoriales), preparar preguntas para el abogado y borradores de cláusulas para revisión.
+- [Cumplimiento normativo](cump.md): Convertir cada obligación (Reglamento de IA, RGPD, DORA, ENS, NIS2 y sectoriales) en un control con su evidencia, y tener a Varios listo para una auditoría o un cuestionario de un cliente regulado.
 
 ## Administración
 
 - [Administración](admj.md) · jefe: Que la empresa exista bien: forma jurídica, facturación, trámites y obligaciones, preparando las preguntas para el gestor.
 - [Costes](fin.md): Saber cuánto cuesta cada caso, cada cliente y cada mes, y avisar antes de que el gasto se desvíe.
 - [Proveedores](prov.md): Inventario de proveedores con región, retención, uso para entrenamiento, contrato de tratamiento y plan de salida.
+- [Director financiero](cfo.md): Que Varios sea viable y lo sepa con antelación: previsión de caja, margen por proyecto, precio con números detrás, presupuesto y financiación, siempre con escenarios.
+- [Contabilidad y facturación](conta.md): Que cada euro esté registrado, facturado, cobrado y conciliado, y que el gestor reciba cada trimestre la información completa y sin sorpresas.
 
 ## Sectores
 

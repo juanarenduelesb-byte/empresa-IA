@@ -36,7 +36,7 @@
 - Guías de la CNMV y del Banco de España
 
 ### A quién convoca
-- [Responsable de cumplimiento](../seguridad-legal/cumplimiento.md)
+- [Responsable de cumplimiento normativo](../seguridad-legal/cumplimiento.md)
 - [Especialista en ciberseguridad](../seguridad-legal/ciberseguridad.md)
 - [Especialista legal y privacidad](../seguridad-legal/legal-privacidad.md)
 

@@ -29,3 +29,4 @@ Afirmación + fuente primaria + fecha + nivel de confianza.
 - [Proveedores](../../knowledge/agentes/prov.md)
 - [Experto en asesorías y despachos](../../knowledge/agentes/ase.md)
 - [Experto en servicios financieros](../../knowledge/agentes/fnz.md)
+- [Cumplimiento normativo](../../knowledge/agentes/cump.md)

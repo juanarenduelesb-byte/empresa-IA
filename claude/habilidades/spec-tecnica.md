@@ -28,3 +28,4 @@ Especificación de una página.
 - [Arquitecto técnico](../../knowledge/agentes/ingj.md)
 - [Backend](../../knowledge/agentes/back.md)
 - [IA y evaluación](../../knowledge/agentes/ia.md)
+- [Plataforma y operaciones](../../knowledge/agentes/ops.md)

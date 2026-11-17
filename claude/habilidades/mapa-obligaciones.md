@@ -30,3 +30,4 @@ Tabla norma · artículo · obligación · sujeto · evidencia · fecha.
 - [Experto en servicios financieros](../../knowledge/agentes/fnz.md)
 - [Experto en industria](../../knowledge/agentes/ind.md)
 - [Experto en logística](../../knowledge/agentes/logi.md)
+- [Cumplimiento normativo](../../knowledge/agentes/cump.md)

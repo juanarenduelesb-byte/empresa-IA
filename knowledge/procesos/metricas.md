@@ -33,7 +33,7 @@
 
 ### A quién convoca
 - [Arquitecto de procesos](arquitecto-procesos.md)
-- [Especialista en gestión de clientes](../comercial/gestion-clientes.md)
+- [Especialista en éxito de cliente](../comercial/gestion-clientes.md)
 
 ### Permisos
 - Datos agregados

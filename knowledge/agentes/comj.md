@@ -85,4 +85,4 @@
 ## Conocimiento de referencia
 
 - [Director comercial](../../knowledge/comercial/director-comercial.md)
-- [Especialista en gestión de clientes](../../knowledge/comercial/gestion-clientes.md)
+- [Especialista en éxito de cliente](../../knowledge/comercial/gestion-clientes.md)

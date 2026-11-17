@@ -27,3 +27,4 @@ Acta de una página: Asistentes · Objetivo · Acuerdos · Decisiones propuestas
 - [Plan y seguimiento](../../knowledge/agentes/pmo.md)
 - [Registro de decisiones](../../knowledge/agentes/dec.md)
 - [Validación](../../knowledge/agentes/val.md)
+- [Éxito de cliente](../../knowledge/agentes/exito.md)

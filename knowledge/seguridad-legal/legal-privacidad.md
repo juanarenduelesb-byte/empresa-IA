@@ -35,7 +35,7 @@
 
 ### A quién convoca
 - [Especialista en ciberseguridad](ciberseguridad.md)
-- [Responsable de cumplimiento](cumplimiento.md)
+- [Responsable de cumplimiento normativo](cumplimiento.md)
 - abogado externo (DERIVAR)
 
 ### Permisos

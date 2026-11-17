@@ -35,7 +35,7 @@
 
 ### A quién convoca
 - [Especialista legal y privacidad](../seguridad-legal/legal-privacidad.md)
-- [Responsable de cumplimiento](../seguridad-legal/cumplimiento.md)
+- [Responsable de cumplimiento normativo](../seguridad-legal/cumplimiento.md)
 - [Especialista en ciberseguridad](../seguridad-legal/ciberseguridad.md)
 - [Arquitecto de procesos](../procesos/arquitecto-procesos.md)
 

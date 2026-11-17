@@ -1,0 +1,33 @@
+# Mantiene al día lo generado cuando alguien cambia documentos en main (D-017). No usa tokens de Claude.
+name: Regenerar cerebro
+on:
+  push:
+    branches: [main]
+    paths: ["**.md", "tools/**", "DECISIONS.md"]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: regenerar
+  cancel-in-progress: false
+jobs:
+  regenerar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Regenerar
+        run: |
+          python tools/org_gen.py
+          python tools/agentes_gen.py
+          python tools/brain_build.py oficina/brain.json
+      - name: Guardar si ha cambiado
+        run: |
+          if git diff --quiet; then echo "Nada que regenerar"; exit 0; fi
+          git config user.name "varios-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git commit -m "Regenerar cerebro y fichas (automático, sin IA)"
+          git push

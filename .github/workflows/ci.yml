@@ -1,0 +1,26 @@
+# Comprobaciones sin IA en cada cambio (D-017). No usa tokens de Claude.
+name: Comprobaciones
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  comprobar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pytest
+      - name: Pruebas
+        run: python -m pytest -q
+      - name: Revisión del repositorio (enlaces, fichas, agentes, secretos)
+        run: python tools/check_repo.py
+      - name: Generados al día
+        run: |
+          python tools/org_gen.py --check
+          python tools/agentes_gen.py --check
+          python tools/brain_build.py /tmp/brain.json && cmp /tmp/brain.json oficina/brain.json

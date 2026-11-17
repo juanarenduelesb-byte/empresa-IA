@@ -148,7 +148,11 @@ def render(db):
             txt += ["## Claves del sector\n", str(t["sectorNotes"]), ""]
         if t.get("qa"):
             q = t["qa"]
-            txt += ["## Revisión de Calidad\n", f"- Cumple: {'sí' if q.get('cumple') else 'no'} · {q.get('nota', '')}", lista(q.get("problemas") or []), ""]
+            probs = [p if isinstance(p, str) else f"[{p.get('gravedad', '')}] {p.get('problema', '')}" + (f" → {p['arreglo']}" if p.get("arreglo") else "") for p in q.get("problemas") or []]
+            nota = f" · nota {q['media']:.1f}/5".replace(".", ",") if isinstance(q.get("media"), (int, float)) else ""
+            txt += ["## Revisión de Calidad\n", f"- Cumple: {'sí' if q.get('cumple') else 'no'}{nota} · rondas: {t.get('qaRounds', 1)} · {q.get('nota', '')}", lista(probs), ""]
+        if t.get("rejections"):
+            txt += ["## Rechazos de los socios\n", lista(f"Versión {r.get('v')}: {r.get('why')}" for r in t["rejections"]), ""]
         if t.get("result"):
             txt += ["## Resultado\n", str(t["result"]), ""]
         if piezas:

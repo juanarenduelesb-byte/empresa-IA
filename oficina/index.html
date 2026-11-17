@@ -709,16 +709,36 @@ async function work(task,a,extra,brain){
   var r=await S.sample(prompt,{modelTier:task.tier||'default'});
   return r.text;
 }
-async function qa(t,out){
+var QA_MAX=4;
+var QA_CRIT=[['criterio','Cumple el criterio de aceptación y el encargo, punto por punto'],['completo','Está completo: no faltan partes pedidas ni quedan secciones vacías'],['veracidad','No inventa datos, cifras, empresas, personas ni fuentes; lo que falta va como [POR CONFIRMAR]; hecho, hipótesis y propuesta separados'],['coherencia','Es coherente con DECISIONS.md, el plan y lo ya entregado en el proyecto'],['nivel','Nivel de un senior: concreto, accionable, sin relleno ni obviedades'],['forma','Formato y voz de Varios: conclusión primero, estructura clara, español de España, cifras en formato español']];
+var QA_CAT={criterio:'Antes de entregar, repasa el encargo y el criterio de aceptación punto por punto y asegúrate de cubrir cada uno.',completo:'No entregues secciones vacías ni a medias: si algo no se puede completar, di por qué y márcalo [POR CONFIRMAR].',veracidad:'Cada cifra, norma o fuente lleva su origen (ruta del cerebro o documento del proyecto) o se marca [POR CONFIRMAR]; nunca inventes.',coherencia:'Antes de entregar, comprueba que no contradices DECISIONS.md, el plan ni lo ya entregado en el proyecto; si discrepas, dilo explícitamente.',nivel:'Escribe a nivel senior: concreto, con ejemplos y pasos accionables; quita relleno y obviedades.',forma:'Conclusión primero, estructura clara con títulos, frases cortas, español de España y cifras en formato español.',riesgo:'Nunca prometas ni prepares acciones externas (envíos, pagos, firmas) sin marcarlas como pendientes de aprobación humana.'};
+function qaTxt(q){return (q.problemas||[]).map(function(p){return typeof p==='string'?p:p.problema}).join('; ')}
+function fmtN(x){return (Math.round((+x||0)*10)/10).toString().replace('.',',')}
+async function qa(t,out,ronda,prev){
   var q=ag('calj');S.working.calj=1;render();
   try{
-    return await S.sample.json(agentContext(q)+'\n\nRevisa esta entrega antes de que llegue a los socios. Encargo: "'+t.text+'". Criterio de aceptación: "'+((t.ceo&&t.ceo.criterio)||'que responda al encargo')+'".\n\nENTREGA:\n"""'+String(out).slice(0,14000)+'"""\n\nComprueba que cumple el criterio, que no inventa datos ni fuentes, que marca lo que falta como [POR CONFIRMAR] y que no promete acciones externas. Responde SOLO JSON: {"cumple": true|false, "problemas": ["…"], "nota": "una frase"}',{modelTier:'quick'});
+    var r=await S.sample.json(agentContext(q,BRN?brainFor(t.text,4,4000):null)+ctxExtra({project:t.project,text:t.text})+'\n\nERES EL REVISOR MÁS EXIGENTE DE VARIOS. Nada llega a los socios sin tu OK. Revisa esta entrega con la rúbrica, sin regalar puntos: un 5 es impecable, un 4 es bueno sin fallos relevantes, un 3 tiene fallos que un socio vería.\nEncargo: "'+t.text.slice(0,3000)+'"\nCriterio de aceptación: "'+((t.ceo&&t.ceo.criterio)||'que responda al encargo completo')+'"\nRonda '+(ronda||1)+' de '+QA_MAX+'.'+(prev&&prev.length?'\nEn rondas anteriores pediste corregir:\n'+prev.map(function(p,i){return 'Ronda '+(i+1)+': '+p.problemas.map(function(x){return x.problema}).join('; ')}).join('\n')+'\nComprueba uno por uno que están corregidos.':'')+
+      '\n\nRÚBRICA (puntúa cada criterio de 1 a 5):\n'+QA_CRIT.map(function(c){return '- '+c[0]+': '+c[1]}).join('\n')+
+      '\n\nENTREGA:\n"""'+String(out).slice(0,16000)+'"""\n\nResponde SOLO JSON: {"puntos": {"criterio": n, "completo": n, "veracidad": n, "coherencia": n, "nivel": n, "forma": n}, "problemas": [{"categoria": "criterio|completo|veracidad|coherencia|nivel|forma|riesgo", "gravedad": "grave|media|leve", "problema": "qué está mal, concreto", "donde": "sección o frase", "arreglo": "cómo arreglarlo"}], "nota": "una frase"}',{modelTier:'default'});
+    if(!r||typeof r!=='object')return null;
+    var P=r.puntos||{},vals=QA_CRIT.map(function(c){var v=+P[c[0]];return isFinite(v)?Math.max(1,Math.min(5,v)):1}),media=vals.reduce(function(a,b){return a+b},0)/vals.length;
+    var probs=(Array.isArray(r.problemas)?r.problemas:[]).filter(function(x){return x&&(x.problema||typeof x==='string')}).map(function(x){return typeof x==='string'?{categoria:'criterio',gravedad:'media',problema:x}:{categoria:QA_CAT[x.categoria]?x.categoria:'criterio',gravedad:/grave|media|leve/.test(x.gravedad)?x.gravedad:'media',problema:String(x.problema).slice(0,400),donde:String(x.donde||'').slice(0,160),arreglo:String(x.arreglo||'').slice(0,300)}});
+    // Regla fija (código): todos los criterios ≥ 4, media ≥ 4,5 y ningún problema grave ni medio.
+    var cumple=vals.every(function(v){return v>=4})&&media>=4.5&&!probs.some(function(x){return x.gravedad!=='leve'});
+    if(!cumple&&!probs.length)probs=QA_CRIT.filter(function(c,i){return vals[i]<4}).map(function(c,i){return {categoria:c[0],gravedad:'media',problema:'Puntuación baja en '+c[0]+': '+c[1]}});
+    return {cumple:cumple,media:media,puntos:QA_CRIT.reduce(function(o,c,i){o[c[0]]=vals[i];return o},{}),problemas:probs,nota:String(r.nota||'').slice(0,300),ronda:ronda||1};
   }catch(e){return null}finally{delete S.working.calj;render()}
 }
 
-async function qaTalk(t,out,a){
-  var c=a.id!=='calj'?msgStart(a.id,'calj','Lleva la entrega a Calidad',t.id):null;msgLine(c,a.id,'Te traigo la entrega de «'+t.title+'» para que la revises contra el criterio.');
-  try{var r=await qa(t,out);if(r)msgLine(c,'calj',(r.cumple?'Cumple. ':'No cumple del todo. ')+(r.nota||'')+((r.problemas||[]).length?' Problemas: '+r.problemas.join('; '):''));return r}
+// Aprendizaje continuo: si Calidad devuelve a un agente el mismo tipo de fallo en 2 encargos distintos, se convierte en regla fija suya (editable).
+function learnFromQA(aid,qr){if(!qr||qr.cumple||!qr.problemas)return;var R=clone(S.rules[aid]||{agent:aid});R.agent=aid;R.list=R.list||[];R.qa=R.qa||{};var add=[];
+  var cats={};qr.problemas.forEach(function(p){if(p.gravedad!=='leve')cats[p.categoria]=1});
+  Object.keys(cats).forEach(function(k){R.qa[k]=(R.qa[k]||0)+1;var rule=QA_CAT[k]+' (aprendida de Calidad)';if(R.qa[k]>=2&&R.list.indexOf(rule)<0){R.list.push(rule);add.push(rule)}});
+  R.updated=now();put('rules',aid,R);
+  add.forEach(function(r){remember({kind:'leccion',title:'Regla nueva para '+ag(aid).n+' (de Calidad)',text:r,agent:aid});toast(ag(aid).n+' aprende una regla nueva de Calidad')})}
+async function qaTalk(t,out,a,ronda,prev){
+  var c=a.id!=='calj'?msgStart(a.id,'calj','Lleva la entrega a Calidad (ronda '+(ronda||1)+')',t.id):null;msgLine(c,a.id,(ronda>1?'Te traigo la versión corregida de «':'Te traigo la entrega de «')+t.title+'» para que la revises contra el criterio.');
+  try{var r=await qa(t,out,ronda,prev);if(r)msgLine(c,'calj',(r.cumple?'Cumple (nota '+fmtN(r.media)+'/5). ':'No cumple (nota '+fmtN(r.media)+'/5). ')+(r.nota||'')+((r.problemas||[]).length?' Corrige: '+r.problemas.map(function(p){return p.problema}).join('; '):''));return r}
   finally{msgEnd(c)}}
 // ======================= FLUJO DE ENCARGOS =======================
 function wantsTeam(t){return /\ben equipo\b|que lo haga el equipo|todo el equipo/i.test(t)}
@@ -749,7 +769,9 @@ async function addTask(text,opts){
 }
 async function run(id,extra){
   var t=clone(S.tasks[id]);if(!t.id)return;
-  var a=ag(t.agent);if(t.team&&!a.lead&&!t.meeting){a=A.find(function(x){return x.dep===a.dep&&x.lead});t.agent=a.id}t.status='marcha';lg(t,(t.team?a.n+' reparte el trabajo':a.n+' empieza'));await put('tasks',id,t);
+  var a=ag(t.agent);if(t.team&&!a.lead&&!t.meeting){a=A.find(function(x){return x.dep===a.dep&&x.lead});t.agent=a.id}t.status='marcha';lg(t,(t.team?a.n+' reparte el trabajo':a.n+' empieza'));
+  if(t.project){t.inputs={};Object.values(S.tasks).forEach(function(u){if(u.project===t.project&&u.id!==id&&!u.piece&&(u.status==='aprob'||u.status==='hecha'))t.inputs[u.id]=u.version||1})}
+  await put('tasks',id,t);
   S.working[a.id]=1;render();
   var brain=BRN?brainFor(t.text+' '+((t.ceo&&t.ceo.objetivo)||'')+(t.sector?' sector '+SECT[t.sector]:''),6,9000):{txt:'',refs:[]};
   try{
@@ -766,18 +788,28 @@ async function run(id,extra){
     else out=await work(t,a,extra,brain);
     delete S.working[a.id];
     t=clone(S.tasks[id]);t.result=out;t.read=brain.refs;
-    var q=null;
-    if(S.sample&&!t.meeting){
-      t.status='revision';lg(t,'Calidad revisa la entrega contra el criterio');await put('tasks',id,t);
-      q=await qaTalk(t,out,a);
-      if(q&&q.cumple===false&&!extra){
-        t=clone(S.tasks[id]);lg(t,'Calidad la devuelve: '+(q.problemas||[]).join('; '));t.status='marcha';await put('tasks',id,t);
+    var q=null,rondas=[];
+    if(S.sample){
+      // Calidad exigente: hasta QA_MAX rondas. Decide el código (rúbrica), no el modelo. Sin su OK no llega a los socios.
+      for(var ronda=1;ronda<=QA_MAX;ronda++){
+        t=clone(S.tasks[id]);t.result=out;t.status='revision';lg(t,'Calidad revisa (ronda '+ronda+' de '+QA_MAX+')');await put('tasks',id,t);
+        q=await qaTalk(t,out,a,ronda,rondas);
+        if(!q){q={cumple:false,nota:'Calidad no ha podido revisar',problemas:[],media:0,ronda:ronda};break}
+        rondas.push(q);
+        t=clone(S.tasks[id]);lg(t,'Calidad, ronda '+ronda+': '+(q.cumple?'CUMPLE':'NO CUMPLE')+' · nota '+fmtN(q.media)+'/5'+(q.cumple?'':' · '+q.problemas.map(function(p){return '['+p.gravedad+'] '+p.problema}).join('; ').slice(0,600)));await put('tasks',id,t);
+        learnFromQA(a.id,q);
+        if(q.cumple||ronda===QA_MAX)break;
+        t=clone(S.tasks[id]);t.status='marcha';lg(t,a.n+' corrige lo que pide Calidad');await put('tasks',id,t);
         S.working[a.id]=1;render();
-        out=await work(t,a,'CALIDAD HA DEVUELTO TU BORRADOR. Problemas: '+(q.problemas||[]).join('; ')+'\nCorrígelos y entrega la versión completa.\n\nBORRADOR ANTERIOR:\n'+out,brain);
+        out=await work(t,a,'CALIDAD HA DEVUELTO TU BORRADOR (ronda '+ronda+' de '+QA_MAX+'). Corrige TODOS estos problemas, uno por uno, sin introducir otros:\n'+q.problemas.map(function(p,i){return (i+1)+'. ['+p.gravedad+' · '+p.categoria+'] '+p.problema+(p.donde?' (dónde: '+p.donde+')':'')+(p.arreglo?' → Cómo: '+p.arreglo:'')}).join('\n')+'\nEntrega la versión completa corregida, no solo los cambios.\n\nBORRADOR ANTERIOR:\n'+String(out).slice(0,14000)+(extra?'\n\n'+extra:''),brain);
         delete S.working[a.id];
-        t=clone(S.tasks[id]);t.result=out;q=await qaTalk(t,out,a);
       }
+      if(!q.cumple){
+        t=Object.assign(clone(S.tasks[id]),{result:out,read:brain.refs,qa:q,qaRounds:rondas.length,status:'preg',qaBlocked:1,
+          question:'Calidad no lo da por bueno tras '+rondas.length+' rondas (nota '+fmtN(q.media)+'/5). Lo que sigue mal:\n'+(q.problemas||[]).map(function(p){return '- ['+p.gravedad+'] '+p.problema}).join('\n')+'\n\nDime cómo quieres que siga (o qué dato falta) y lo rehace; o descártalo.'});
+        lg(t,'Atascado en Calidad: necesita tu criterio');await put('tasks',id,t);toast('Calidad no da por bueno «'+clipT(t.title,40)+'»: necesita tu criterio');return}
     }
+    t=clone(S.tasks[id]);t.result=out;
     var dv=null,kind=t.format;
     if(S.sample&&kind&&VE.KINDS[kind]&&!t.meeting){
       var tm=clone(S.tasks[id]);tm.status='maqueta';lg(tm,a.n+' lo maqueta como '+VE.KINDS[kind].n.toLowerCase()+' con la plantilla de Varios');await put('tasks',id,tm);
@@ -786,11 +818,11 @@ async function run(id,extra){
       catch(e){var te=clone(S.tasks[id]);lg(te,'No se pudo maquetar: '+((e&&e.code)||'error')+'. Queda la entrega en texto.');await put('tasks',id,te)}
       finally{delete S.working[a.id]}
     }
-    t=Object.assign(clone(S.tasks[id]),{result:out,read:brain.refs,qa:q,done:now()});
+    t=Object.assign(clone(S.tasks[id]),{result:out,read:brain.refs,qa:q,qaRounds:rondas.length,qaBlocked:0,done:now(),version:(S.tasks[id].version||0)+1});
     if(dv){t.deliv=dv.id;lg(t,'Entregable listo: '+VE.KINDS[dv.kind].n+' v'+dv.version)}
-    var needOk=t.forceOk||(t.risk&&t.risk!=='bajo')||t.decision==='ESCALAR'||(q&&q.cumple===false);
-    t.status=needOk?'aprob':'hecha';
-    lg(t,(q?(q.cumple?'Calidad: cumple. ':'Calidad: no cumple del todo. '):'')+(needOk?'Espera aprobación de un socio'+(t.risk?' (riesgo '+t.risk+')':''):'Entregado'));
+    // Todo lo que pasa Calidad llega a un socio: aprueba o rechaza (y si rechaza, se rehace aprendiendo).
+    t.status=S.sample?'aprob':'hecha';
+    lg(t,(q?'Calidad: CUMPLE en la ronda '+rondas.length+' (nota '+fmtN(q.media)+'/5). ':'')+(t.status==='aprob'?'Versión '+t.version+' · espera tu OK':'Entregado'));
     await put('tasks',id,t);
     chatPush(a.id,{role:'assistant',content:'**Entrega: '+t.title+'**\n\n'+out,task:id});
     toast(a.n+' ha entregado: '+t.title);
@@ -862,6 +894,9 @@ async function revise(id,txt){
 }
 async function answer(id,txt){
   var t=clone(S.tasks[id]);
+  if(t.qaBlocked){t.question='';t.qaBlocked=0;lg(t,'Instrucciones del socio tras el atasco en Calidad: '+txt);await put('tasks',id,t);
+    remember({kind:'correccion',title:'Atasco en Calidad: '+t.title,text:'Calidad no lo daba por bueno ('+qaTxt(t.qa||{})+'). El socio indicó: '+txt,task:id,project:t.project,agent:t.agent});
+    run(id,'CALIDAD NO DABA POR BUENA TU ENTREGA. Problemas pendientes: '+qaTxt(t.qa||{})+'\nINSTRUCCIONES DEL SOCIO: '+txt+'\nRehaz la entrega completa aplicándolas.\n\nBORRADOR ANTERIOR:\n'+String(t.result||'').slice(0,14000));return}
   t.text=t.text+'\n\nRespuesta del socio a la pregunta del CEO ('+(t.question||'')+'): '+txt;t.question='';t.decision='CONTINUAR';
   lg(t,'Respuesta del socio: '+txt);await put('tasks',id,t);run(id);
 }
@@ -1191,7 +1226,7 @@ function flowSteps(t){
     ['Experto del sector',t.sector?(ag(t.sector).n+(t.sectorNotes?' aportó las claves del sector':t.sector===t.agent?' hace el encargo':' pendiente')):'No hacía falta',t.sector?(t.sectorNotes||t.sector===t.agent?'ok':stt==='marcha'?'cur':'pend'):'skip'],
     ['Plan y criterio',(c.criterio?'Criterio: '+c.criterio:'Sin criterio explícito')+(t.agent?' · '+ag(t.agent).n+(t.team?' y su equipo':''):''),t.agent&&dec!=='RECHAZAR'?'ok':'pend'],
     ['Ejecutar',stt==='prog'?'Programado para el '+fmt(t.when):stt==='marcha'?'Trabajando':done?'Hecho':'Pendiente',stt==='marcha'?'cur':done?'ok':'pend'],
-    ['Verificar',t.qa?(t.qa.cumple?'Calidad: cumple. '+(t.qa.nota||''):'Calidad: no cumple. '+(t.qa.problemas||[]).join('; ')):stt==='revision'?'Calidad lo revisa':(done&&!S.sample?'Sin Claude no hay revisión':'Pendiente'),t.qa?(t.qa.cumple?'ok':'warn'):stt==='revision'?'cur':'pend'],
+    ['Verificar',t.qa?(t.qa.cumple?'Calidad: cumple. '+(t.qa.nota||''):'Calidad: no cumple. '+qaTxt(t.qa)):stt==='revision'?'Calidad lo revisa':(done&&!S.sample?'Sin Claude no hay revisión':'Pendiente'),t.qa?(t.qa.cumple?'ok':'warn'):stt==='revision'?'cur':'pend'],
     ['Maquetar',t.format&&VE.KINDS[t.format]?(t.deliv&&S.deliverables[t.deliv]?VE.KINDS[t.format].n+' v'+S.deliverables[t.deliv].version+' con la plantilla de Varios':stt==='maqueta'?'Maquetando como '+VE.KINDS[t.format].n.toLowerCase():done?'No se pudo maquetar: queda en texto':'Saldrá como '+VE.KINDS[t.format].n.toLowerCase()):'Solo texto',t.format&&VE.KINDS[t.format]?(t.deliv?'ok':stt==='maqueta'?'cur':done?'warn':'pend'):'skip'],
     ['Aprobación',needOk?(stt==='aprob'?'Espera tu OK':approved?'Aprobado por un socio':stt==='rech'?'Rechazado':'Hará falta tu OK'):'No hace falta (riesgo bajo y Calidad conforme)',needOk?(stt==='aprob'?'cur':approved?'ok':stt==='rech'?'stop':'pend'):'skip'],
     ['Entregar',stt==='hecha'?'Entregado':'Pendiente',stt==='hecha'?'ok':'pend'],
@@ -1201,12 +1236,16 @@ function flowSteps(t){
 }
 function listOr(a){return a&&a.length?'<ul>'+a.map(function(x){return '<li>'+esc(x)+'</li>'}).join('')+'</ul>':'<span class="hint">—</span>'}
 function noteMd(t){var a=ag(t.agent);return '---\ntitulo: "'+String(t.title).replace(/"/g,"'")+'"\nagente: '+a.n+'\nfecha: '+(t.done||t.created).slice(0,10)+'\nestado: '+ST[t.status][0]+'\nleido:\n'+(t.read||[]).map(function(i){return '  - '+refLabel(i)}).join('\n')+'\n---\n\n'+(t.result||'')+'\n'}
-function approveTask(id,w){var t=S.tasks[id];if(!t||t.status!=='aprob')return;var x=clone(t);x.status='hecha';lg(x,'Aprobado por un socio'+(w?': '+w:''));put('tasks',id,x);if(x.deliv&&S.deliverables[x.deliv]){var dd=clone(S.deliverables[x.deliv]);dd.status='aprobado';put('deliverables',dd.id,dd)}remember({kind:'decision',title:'Aprobado: '+t.title,text:'Un socio aprobó la entrega'+(w?'. Motivo: '+w:'.'),task:id,project:t.project,agent:t.agent})}
+async function rejectTask(id,w){var t=S.tasks[id];if(!t)return;var x=clone(t);x.rejections=(x.rejections||[]).concat([{t:now(),v:x.version||1,why:w}]);lg(x,'Rechazado por un socio (versión '+(x.version||1)+'): '+w+' · se rehace');x.status='marcha';await put('tasks',id,x);
+  remember({kind:'correccion',title:'Rechazo: '+t.title,text:'Un socio rechazó la versión '+(t.version||1)+'. Motivo: '+w,task:id,project:t.project,agent:t.agent});
+  toast('Rechazado: '+(ag(t.agent)?ag(t.agent).n:'el agente')+' lo rehace aprendiendo de tu motivo');
+  revise(id,'RECHAZO DEL SOCIO (versión '+(t.version||1)+'): '+w+(x.rejections.length>1?'\nRechazos anteriores de este encargo: '+x.rejections.slice(0,-1).map(function(r){return 'v'+r.v+': '+r.why}).join(' | ')+'. No repitas ninguno de esos fallos.':''))}
+function approveTask(id,w){var t=S.tasks[id];if(!t||t.status!=='aprob')return;var x=clone(t);x.status='hecha';x.approvedVersion=x.version||1;lg(x,'Aprobado por un socio (versión '+(x.version||1)+')'+(w?': '+w:''));put('tasks',id,x);if(x.deliv&&S.deliverables[x.deliv]){var dd=clone(S.deliverables[x.deliv]);dd.status='aprobado';put('deliverables',dd.id,dd)}remember({kind:'decision',title:'Aprobado: '+t.title,text:'Un socio aprobó la entrega'+(w?'. Motivo: '+w:'.'),task:id,project:t.project,agent:t.agent})}
 function openTask(id){
   cur.task=id;var t=S.tasks[id];if(!t)return;var a=t.agent?ag(t.agent):null,d=a?dep(a.dep):null,c=t.ceo||{};
   var h='<div class="dh"><span class="av" style="background:'+(d?d.c:'#6A5A55')+'">'+(a?ini(a.n):'CEO')+'</span><div><h2>'+esc(t.title||'Encargo')+'</h2><small>'+(a?esc(a.n)+' · '+esc(d.n):'Pendiente de asignar')+' · '+ST[t.status][0]+'</small></div><button class="btn x" type="button" id="cx">Cerrar</button></div><div class="db">';
-  if(t.status==='preg')h+='<div class="callout w"><b>El CEO pregunta</b><p>'+esc(t.question||'Necesita más información.')+'</p><textarea id="ans" placeholder="Tu respuesta"></textarea><div class="row" style="margin-top:8px"><button class="btn p" id="bAns" type="button">Responder y seguir</button><button class="btn" id="bDel" type="button">Descartar</button></div></div>';
-  if(t.status==='aprob')h+='<div class="callout w"><b>Tu decisión</b><p class="hint">Riesgo '+esc(t.risk||'—')+(t.qa?(t.qa.cumple?' · Calidad: cumple':' · Calidad ve problemas'):'')+'. Aprobar significa que el borrador vale para usarlo. La oficina no envía nada por ti.</p><input id="okWhy" placeholder="Motivo (opcional; se guarda en la memoria)" style="width:100%;margin-bottom:8px"><div class="row"><button class="btn g" id="bOk" type="button">Aprobar</button><button class="btn w" id="bNo" type="button">Rechazar</button></div></div>';
+  if(t.status==='preg')h+='<div class="callout w"><b>'+(t.qaBlocked?'Atascado en Calidad':'El CEO pregunta')+'</b><p style="white-space:pre-wrap">'+esc(t.question||'Necesita más información.')+'</p><textarea id="ans" placeholder="Tu respuesta"></textarea><div class="row" style="margin-top:8px"><button class="btn p" id="bAns" type="button">Responder y seguir</button><button class="btn" id="bDel" type="button">Descartar</button></div></div>';
+  if(t.status==='aprob')h+='<div class="callout w"><b>Tu decisión</b><p class="hint">Riesgo '+esc(t.risk||'—')+(t.qa?(t.qa.cumple?' · Calidad: cumple':' · Calidad ve problemas'):'')+'. Calidad ya lo ha dado por bueno. Si apruebas, queda como válido; si rechazas, el agente lo rehace con tu motivo, vuelve a pasar Calidad y te llega otra vez. La oficina no envía nada por ti.</p><textarea id="okWhy" placeholder="Para aprobar, opcional: qué te ha gustado. Para rechazar, obligatorio: qué falla y qué esperas. El agente lo rehace con eso y lo aprende." style="width:100%;margin-bottom:8px;min-height:64px"></textarea><div class="row"><button class="btn g" id="bOk" type="button">Aprobar</button><button class="btn w" id="bNo" type="button">Rechazar y rehacer</button><span class="spacer"></span><button class="btn sm" id="bDis" type="button">Descartar</button></div>'+(t.version>1?'<p class="hint" style="margin:6px 0 0">Versión '+t.version+'.</p>':'')+'</div>';
   if(t.project&&proj(t.project))h+='<p class="hint">Proyecto: <a href="#" id="tPj">'+esc(proj(t.project).name)+'</a></p>';
   var dv=t.deliv&&S.deliverables[t.deliv];
   if(dv)h+='<p class="sec">Entregable</p>'+dcard(dv)+'<div class="row" style="margin:6px 0 4px">'+dlButtons(dv)+'</div>';
@@ -1214,7 +1253,8 @@ function openTask(id){
   h+='<p class="sec">Flujo del encargo</p>'+flowSteps(t);
   if(!t.piece)h+='<p class="sec">Contrato de tarea</p><div class="kv"><div>Encargo</div><div style="white-space:pre-wrap">'+esc(t.text)+'</div><div>Objetivo</div><div>'+esc(c.objetivo||'—')+'</div><div>Proceso</div><div>'+(c.proceso?esc(c.proceso+' · '+procName(c.proceso)):'—')+'</div><div>Confirmado</div><div>'+listOr(c.confirmado)+'</div><div>Inferido</div><div>'+listOr(c.inferido)+'</div><div>Desconocido</div><div>'+listOr(c.desconocido)+'</div><div>Criterio</div><div>'+esc(c.criterio||'—')+'</div><div>Riesgo</div><div>'+esc(t.risk||'—')+'</div><div>Decisión</div><div>'+esc(t.decision||'—')+(t.reason?' · '+esc(t.reason):'')+'</div></div>';
   if(t.result)h+='<p class="sec">Entrega</p><div class="md deliv">'+md(t.result)+'</div><div class="row" style="margin-top:8px"><button class="btn" id="bCopy" type="button">Copiar</button><button class="btn" id="bNote" type="button">Descargar nota .md</button>'+(t.piece?'':'<button class="btn" id="bDec" type="button">Proponer como decisión</button>')+'</div>';
-  if(t.qa&&t.qa.problemas&&t.qa.problemas.length)h+='<p class="sec">Lo que vio Calidad</p>'+listOr(t.qa.problemas);
+  if(t.qa){var P=t.qa.puntos;h+='<p class="sec">Calidad'+(t.qaRounds?' · '+t.qaRounds+' ronda'+(t.qaRounds>1?'s':''):'')+(t.qa.media!=null?' · nota '+fmtN(t.qa.media)+'/5':'')+'</p>'+(P?'<p class="hint">'+QA_CRIT.map(function(c){return c[0]+' '+P[c[0]]}).join(' · ')+'</p>':'')+(t.qa.nota?'<p>'+esc(t.qa.nota)+'</p>':'')+((t.qa.problemas||[]).length?listOr(t.qa.problemas.map(function(p){return typeof p==='string'?p:'['+p.gravedad+'] '+p.problema+(p.arreglo?' → '+p.arreglo:'')})):'')}
+  if(t.rejections&&t.rejections.length)h+='<p class="sec">Tus rechazos</p>'+listOr(t.rejections.map(function(r){return 'Versión '+r.v+': '+r.why}));
   if(t.sectorNotes)h+='<p class="sec">Claves del sector · '+esc(ag(t.sector).n)+'</p><div class="md">'+md(t.sectorNotes)+'</div>';
   if(t.hist&&t.hist.length)h+='<p class="sec">Histórico consultado ('+t.hist.length+')</p><div>'+t.hist.map(function(x){return x.k==='encargo'&&S.tasks[x.id]?'<button type="button" class="tag lnk" data-t2="'+x.id+'">Encargo · '+esc(clipT(x.title,60))+'</button>':'<button type="button" class="tag lnk" data-mem="1">'+esc((MEMK[x.k]||['Memoria'])[0])+' · '+esc(clipT(x.title,60))+'</button>'}).join('')+'</div>';
   var rd=t.read||t.ceoRead||[];
@@ -1245,7 +1285,8 @@ function openTask(id){
   if(q('bDec'))q('bDec').onclick=function(){proposeDecision({text:t.title+'\n\n'+t.result,title:t.title,task:id})};
   var why=function(){return q('okWhy')?q('okWhy').value.trim():''};
   if(q('bOk'))q('bOk').onclick=function(){approveTask(id,why());closeAll()};
-  if(q('bNo'))q('bNo').onclick=function(){var w=why(),x=clone(S.tasks[id]);x.status='rech';lg(x,'Rechazado por un socio'+(w?': '+w:''));put('tasks',id,x);remember({kind:'decision',title:'Rechazado: '+t.title,text:'Un socio rechazó la entrega'+(w?'. Motivo: '+w:' sin dar motivo.'),task:id,project:t.project,agent:t.agent});closeAll()};
+  if(q('bNo'))q('bNo').onclick=function(){var w=why();if(w.length<10){toast('Explica qué falla (mínimo una frase): es lo que el agente aprende para rehacerlo');q('okWhy').focus();return}rejectTask(id,w);closeDrawer()};
+  if(q('bDis'))q('bDis').onclick=function(){if(!confirmInline(this,'¿Descartar del todo? Pulsa otra vez'))return;var x=clone(S.tasks[id]);x.status='rech';lg(x,'Descartado por un socio'+(why()?': '+why():''));put('tasks',id,x);remember({kind:'decision',title:'Descartado: '+t.title,text:'Un socio descartó el encargo'+(why()?'. Motivo: '+why():'.'),task:id,project:t.project,agent:t.agent});closeDrawer()};
   if(q('bRev'))q('bRev').onclick=function(){var v=q('rev').value.trim();if(v){revise(id,v);closeAll()}};
 }
 
@@ -1566,9 +1607,9 @@ async function saveDeliv(t,kind,spec,a,prev){
   await put('deliverables',id,d);return d}
 async function remember(m){var id=m.id||('m'+uid());var e=Object.assign({id:id,created:now(),by:S.uid||''},m);e.text=String(e.text||'').slice(0,4000);await put('memory',id,e);return e}
 async function learn(id){
-  var t=S.tasks[id];if(!t||t.piece||t.learned)return;var a=ag(t.agent),dv=t.deliv&&S.deliverables[t.deliv];
-  await remember({id:'p'+id,kind:'precedente',title:t.title,text:'Encargo: '+t.text.slice(0,700)+'\nObjetivo: '+((t.ceo&&t.ceo.objetivo)||'—')+'\nHecho por: '+(a?a.n:'—')+(t.sector?' con el experto de '+SECT[t.sector]:'')+'\nCalidad: '+(t.qa?(t.qa.cumple?'cumple':'no cumple: '+(t.qa.problemas||[]).join('; ')):'sin revisión')+(dv?'\nEntregable: '+VE.KINDS[dv.kind].n+' «'+dv.title+'» v'+dv.version:''),task:id,project:t.project||'',agent:t.agent,sector:t.sector||''});
-  var x=clone(S.tasks[id]);x.learned=1;
+  var t=S.tasks[id];if(!t||t.piece||t.learned===(t.version||1))return;var a=ag(t.agent),dv=t.deliv&&S.deliverables[t.deliv];
+  await remember({id:'p'+id,kind:'precedente',title:t.title,text:'Encargo: '+t.text.slice(0,700)+'\nObjetivo: '+((t.ceo&&t.ceo.objetivo)||'—')+'\nHecho por: '+(a?a.n:'—')+(t.sector?' con el experto de '+SECT[t.sector]:'')+'\nCalidad: '+(t.qa?(t.qa.cumple?'cumple':'no cumple: '+qaTxt(t.qa)):'sin revisión')+(dv?'\nEntregable: '+VE.KINDS[dv.kind].n+' «'+dv.title+'» v'+dv.version:''),task:id,project:t.project||'',agent:t.agent,sector:t.sector||''});
+  var x=clone(S.tasks[id]);x.learned=t.version||1;
   if(S.sample){try{var L=await S.sample.json('Eres el bibliotecario de Varios. De este encargo terminado, extrae lo que conviene recordar para la próxima vez que alguien haga algo parecido. Nada genérico: concreto y útil.\n\nENCARGO: '+t.text.slice(0,2500)+'\nCALIDAD: '+(t.qa?JSON.stringify(t.qa):'—')+'\nENTREGA:\n"""'+String(t.result||'').slice(0,9000)+'"""\n\nResponde SOLO JSON: {"leccion": "una o dos frases", "reutilizable": "qué se puede reutilizar tal cual", "evitar": "qué no repetir o \'\'"}',{modelTier:'quick'});
     if(L&&L.leccion){await remember({id:'l'+id,kind:'leccion',title:'Lección: '+t.title,text:L.leccion+(L.reutilizable?'\nReutilizable: '+L.reutilizable:'')+(L.evitar?'\nEvitar: '+L.evitar:''),task:id,project:t.project||'',agent:t.agent,sector:t.sector||''});lg(x,'Guardado en la memoria: precedente y lección')}}catch(e){lg(x,'Guardado en la memoria como precedente')}}
   else lg(x,'Guardado en la memoria como precedente');
@@ -1649,7 +1690,8 @@ function openProject(id,tab){
       h+='<div><p class="sec" style="margin-top:0">Plan del CEO</p>';
       if(p.plan){var pl=p.plan;h+=(pl.resumen?'<p>'+esc(pl.resumen)+'</p>':'')+(pl.fases&&pl.fases.length?'<ol class="hint" style="padding-left:18px">'+pl.fases.map(function(f){return '<li><b>'+esc(f.nombre)+'</b> · '+esc(f.objetivo||'')+'</li>'}).join('')+'</ol>':'');
         if(pl.auto||pl.terminado){var est=(pl.encargos||[]).map(function(e,i){return planState(id,i).k}),cn=function(k){return est.filter(function(x){return x===k}).length};
-          h+='<div class="callout'+(pl.pausado?' w':'')+'"><b>'+(pl.terminado?'Plan terminado':pl.pausado?'Plan en pausa':'El plan se está ejecutando solo')+'</b><p class="hint" style="margin:4px 0">'+cn('hecho')+' hechos · '+cn('marcha')+' en marcha · '+cn('listo')+' listos para empezar · '+cn('espera')+' esperando a otros · '+cn('bloq')+' bloqueados. Cada agente hace un encargo a la vez y como mucho '+MAXPAR+' trabajan a la vez; cada encargo empieza cuando terminan los que necesita.'+(S.sample?'':' Necesita Claude: con la oficina sin Claude no avanza.')+'</p>'+(pl.terminado?'':'<button class="btn sm" type="button" id="pjPause">'+(pl.pausado?'Reanudar':'Pausar')+'</button>')+'</div>'}
+          var nok=(pl.encargos||[]).filter(function(e){var t=e.lanzado&&S.tasks[e.lanzado];return t&&t.status==='aprob'}).length;
+          h+='<div class="callout'+(pl.pausado?' w':'')+'"><b>'+(pl.terminado?'Plan terminado: todo aprobado':pl.pausado?'Plan en pausa':'El plan se está ejecutando solo')+'</b><p class="hint" style="margin:4px 0">'+cn('hecho')+' entregados ('+nok+' esperan tu OK) · '+cn('marcha')+' en marcha · '+cn('listo')+' listos para empezar · '+cn('espera')+' esperando a otros · '+cn('bloq')+' bloqueados. Cada agente hace un encargo a la vez y como mucho '+MAXPAR+' trabajan a la vez; cada encargo empieza cuando los que necesita han pasado Calidad. Si rechazas uno, se rehace con tu motivo y lo que dependía de él se actualiza solo. El plan termina cuando apruebas todo.'+(S.sample?'':' Necesita Claude: con la oficina sin Claude no avanza.')+'</p>'+(pl.terminado?'':'<button class="btn sm" type="button" id="pjPause">'+(pl.pausado?'Reanudar':'Pausar')+'</button>')+'</div>'}
         h+=(pl.encargos||[]).map(function(e,i){var la=e.lanzado&&S.tasks[e.lanzado],ps=planState(id,i);return '<div class="tk"><div class="h"><span class="pill p-cola">'+esc(FMTN[e.formato]||'Texto')+'</span>'+(ag(e.agente)?'<span class="who"><i style="background:'+dep(ag(e.agente).dep).c+'"></i>'+esc(ag(e.agente).n)+'</span>':'')+(e.fase?'<span style="margin-left:auto">'+esc(e.fase)+'</span>':'')+'</div><div class="t">'+esc(e.titulo)+'</div><p class="hint" style="margin:4px 0">'+esc(clipT(e.encargo,220))+'</p>'+(pl.auto&&!la?'<p class="hint" style="margin:2px 0 6px">'+(ps.k==='listo'?(agentBusy(e.agente)?'Listo: empieza cuando '+esc(ag(e.agente)?ag(e.agente).n:'el agente')+' termine lo que tiene':'Listo para empezar'):esc(ps.why||''))+'</p>':'')+(la?'<button class="btn sm" type="button" data-t="'+e.lanzado+'">Ver encargo · '+esc(ST[la.status][0])+'</button>':pl.auto?'':'<button class="btn sm p" type="button" data-launch="'+i+'">Lanzar</button>')+'</div>'}).join('');
         if(!pl.auto&&!pl.terminado&&(pl.encargos||[]).some(function(e){return !e.lanzado}))h+='<div class="row" style="margin:8px 0"><button class="btn p" type="button" id="pjAuto">Lanzar todo el plan: que se organicen solos</button></div>';
         if(!pl.auto&&(pl.encargos||[]).some(function(e){return !e.lanzado})){var fz=[];(pl.encargos||[]).forEach(function(e){if(!e.lanzado&&e.fase&&fz.indexOf(e.fase)<0)fz.push(e.fase)});
@@ -1710,7 +1752,7 @@ var MAXPAR=4,RUNNING_ST={cola:1,marcha:1,revision:1,maqueta:1};
 function planDeps(pl,i){var e=pl.encargos[i];if(Array.isArray(e.depende))return e.depende;var fz=(pl.fases||[]).map(function(f){return f.nombre}),k=fz.indexOf(e.fase);
   return k<=0?[]:pl.encargos.map(function(x,j){return fz.indexOf(x.fase)<k?j:-1}).filter(function(j){return j>=0})}
 function planState(pid,i){var p=proj(pid),pl=p.plan,e=pl.encargos[i],t=e.lanzado&&S.tasks[e.lanzado];
-  if(t){if(t.status==='hecha'||t.status==='aprob')return {k:'hecho',t:t};if(t.status==='rech')return {k:'bloq',why:'Rechazado'};if(t.status==='preg')return {k:'bloq',why:'Espera tu respuesta'};return {k:'marcha',t:t}}
+  if(t){if(t.status==='hecha'||t.status==='aprob')return {k:'hecho',t:t};if(t.status==='rech')return {k:'bloq',why:'Rechazado'};if(t.status==='preg')return {k:'bloq',why:t.qaBlocked?'Atascado en Calidad: necesita tu criterio':'Espera tu respuesta'};return {k:'marcha',t:t}}
   if(LAUNCHING[pid+'#'+i])return {k:'marcha'};
   var dep=planDeps(pl,i),falta=dep.filter(function(j){return planState(pid,j).k!=='hecho'});
   if(falta.some(function(j){return planState(pid,j).k==='bloq'}))return {k:'bloq',why:'Bloqueado por un encargo anterior'};
@@ -1722,11 +1764,20 @@ function pumpPlans(){if(!S.sample)return;var running=Object.keys(INFLIGHT).filte
     // reanudar encargos que se quedaron a medias al cerrar la oficina
     pl.encargos.forEach(function(e){var t=e.lanzado&&S.tasks[e.lanzado];if(t&&RUNNING_ST[t.status]&&!INFLIGHT[t.id]&&running<MAXPAR&&!agentBusy(t.agent)){var last=(t.log||[]).slice(-1)[0],age=Date.now()-new Date(last?last.t:t.created).getTime();
       if(age>3*60000&&(RETRIES[t.id]||0)<2){RETRIES[t.id]=(RETRIES[t.id]||0)+1;INFLIGHT[t.id]=Date.now();running++;var x=clone(t);lg(x,'El plan lo retoma (se había quedado a medias)');put('tasks',t.id,x).then(function(){run(t.id)})}}});
+    // si cambia (se rehace) un encargo del que depende otro ya entregado, ese otro se actualiza solo
+    // un encargo está pendiente de actualizar si alguno de los suyos ha cambiado o lo está; se actualiza solo cuando todo lo de antes está al día (una vez, no en cascada repetida)
+    var memo={},changed=function(i){var t=pl.encargos[i].lanzado&&S.tasks[pl.encargos[i].lanzado];return planDeps(pl,i).filter(function(j){var u=pl.encargos[j].lanzado&&S.tasks[pl.encargos[j].lanzado];return u&&t&&t.inputs&&t.inputs[u.id]!=null&&t.inputs[u.id]<(u.version||1)})},
+      pending=function(i){if(memo[i]!=null)return memo[i];memo[i]=false;var t=pl.encargos[i].lanzado&&S.tasks[pl.encargos[i].lanzado];memo[i]=!!t&&(!(t.status==='aprob'||t.status==='hecha')||changed(i).length>0||planDeps(pl,i).some(pending));return memo[i]};
+    pl.encargos.forEach(function(e,i){var t=e.lanzado&&S.tasks[e.lanzado];if(!t||!(t.status==='aprob'||t.status==='hecha')||INFLIGHT[t.id]||running>=MAXPAR||agentBusy(t.agent))return;
+      if(planDeps(pl,i).some(pending))return;
+      var cambio=planDeps(pl,i).map(function(j){var u=pl.encargos[j].lanzado&&S.tasks[pl.encargos[j].lanzado];return u&&(u.status==='aprob'||u.status==='hecha')&&t.inputs&&t.inputs[u.id]!=null&&t.inputs[u.id]<(u.version||1)?u:null}).filter(Boolean);
+      if(!cambio.length)return;INFLIGHT[t.id]=Date.now();running++;var x=clone(t);lg(x,'Se actualiza porque han cambiado: '+cambio.map(function(u){return '«'+u.title+'» (versión '+(u.version||1)+')'}).join(', '));
+      put('tasks',t.id,x).then(function(){run(t.id,'ACTUALIZA TU ENTREGA: han cambiado encargos de los que dependes ('+cambio.map(function(u){return '«'+u.title+'», ahora versión '+(u.version||1)}).join('; ')+'). Lee su versión nueva en lo ya entregado del proyecto, ajusta tu entrega a ella y conserva lo que siga valiendo.\n\nTU ENTREGA ACTUAL:\n'+String(t.result||'').slice(0,14000))})});
     var listos=pl.encargos.map(function(e,i){return i}).filter(function(i){return planState(p.id,i).k==='listo'});
     listos.sort(function(a,b){return (pl.encargos[a].prioridad||9)-(pl.encargos[b].prioridad||9)||a-b});
     var tomados={};
     listos.forEach(function(i){var aid=pl.encargos[i].agente;if(running>=MAXPAR||tomados[aid]||agentBusy(aid))return;tomados[aid]=1;running++;launchPlan(p.id,[i],true)});
-    if(pl.encargos.every(function(e,i){return planState(p.id,i).k==='hecho'})&&!pl.terminado){var x=clone(p);x.plan.terminado=now();x.plan.auto=false;put('projects',p.id,x);toast('Plan terminado: «'+clipT(p.name,50)+'»');remember({kind:'decision',title:'Plan terminado: '+p.name,text:'Los '+pl.encargos.length+' encargos del plan están entregados.',project:p.id,agent:'ceo'})}
+    if(pl.encargos.every(function(e){var t=e.lanzado&&S.tasks[e.lanzado];return t&&t.status==='hecha'})&&!pl.terminado){var x=clone(p);x.plan.terminado=now();x.plan.auto=false;put('projects',p.id,x);toast('Plan terminado: «'+clipT(p.name,50)+'»');remember({kind:'decision',title:'Plan terminado: '+p.name,text:'Los '+pl.encargos.length+' encargos del plan han pasado Calidad y están aprobados por un socio.',project:p.id,agent:'ceo'})}
   })}
 setInterval(pumpPlans,5000);
 

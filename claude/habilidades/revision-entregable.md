@@ -8,14 +8,15 @@
 
 ## Pasos
 
-1. Compara con el criterio de aceptación punto por punto.
-2. Busca datos inventados, fuentes ausentes y promesas externas.
-3. Comprueba coherencia con DECISIONS.md y el plan.
-4. Devuelve con problemas concretos y cómo arreglarlos, o aprueba.
+1. Puntúa de 1 a 5: criterio (cumple el encargo y el criterio de aceptación), completo, veracidad (nada inventado, fuentes o [POR CONFIRMAR]), coherencia (con DECISIONS.md, el plan y lo ya entregado), nivel (senior, accionable) y forma (voz de Varios).
+2. Lista cada problema con categoría, gravedad (grave, media, leve), dónde está y cómo arreglarlo.
+3. En la ronda 2 y siguientes, comprueba uno por uno que se han corregido los problemas de la ronda anterior.
+4. Cumple solo si todos los criterios tienen 4 o más, la media es de 4,5 o más y no queda ningún problema grave ni medio.
+5. Máximo 4 rondas; si no cumple, se escala al socio como atasco con lo que sigue mal.
 
 ## Resultado
 
-Veredicto (cumple / no cumple) y lista de problemas.
+Puntuación por criterio, veredicto calculado y lista de problemas con su arreglo.
 
 ## Lista de control
 

@@ -322,9 +322,12 @@ hab(id="criterio-aceptacion", nombre="Criterio de aceptación",
 
 hab(id="revision-entregable", nombre="Revisión de un entregable",
     cuando="Antes de que un entregable llegue a los socios (P09).",
-    pasos=["Compara con el criterio de aceptación punto por punto.", "Busca datos inventados, fuentes ausentes y promesas externas.",
-           "Comprueba coherencia con DECISIONS.md y el plan.", "Devuelve con problemas concretos y cómo arreglarlos, o aprueba."],
-    salida="Veredicto (cumple / no cumple) y lista de problemas.",
+    pasos=["Puntúa de 1 a 5: criterio (cumple el encargo y el criterio de aceptación), completo, veracidad (nada inventado, fuentes o [POR CONFIRMAR]), coherencia (con DECISIONS.md, el plan y lo ya entregado), nivel (senior, accionable) y forma (voz de Varios).",
+           "Lista cada problema con categoría, gravedad (grave, media, leve), dónde está y cómo arreglarlo.",
+           "En la ronda 2 y siguientes, comprueba uno por uno que se han corregido los problemas de la ronda anterior.",
+           "Cumple solo si todos los criterios tienen 4 o más, la media es de 4,5 o más y no queda ningún problema grave ni medio.",
+           "Máximo 4 rondas; si no cumple, se escala al socio como atasco con lo que sigue mal."],
+    salida="Puntuación por criterio, veredicto calculado y lista de problemas con su arreglo.",
     control=["¿Cada problema dice dónde está y cómo se arregla?"])
 
 hab(id="modelo-amenazas", nombre="Modelo de amenazas",

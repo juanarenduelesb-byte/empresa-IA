@@ -12,7 +12,7 @@ Hay dos cerebros y no se mezclan:
 3. **Proyecto "Varios · Cerebro".** Instrucciones en `claude/instrucciones-proyecto.md`; este repositorio conectado como conocimiento.
 4. **Habilidades.** Ver lista en `claude/instrucciones-proyecto.md`. Se crea una cuando la tarea se ha hecho dos veces a mano.
 5. **Conectores.** Gmail, Google Calendar, Google Drive y GitHub. Claude pide confirmación antes de enviar o crear.
-6. **Claude Code.** Trabaja sobre este repositorio siguiendo `CLAUDE.md`. Se usa desde el piloto.
+6. **Claude Code.** Trabaja sobre este repositorio siguiendo `CLAUDE.md`. Se usa desde la semana 1 del plan de construcción.
 7. **Rutinas.** Tras cada reunión: acta al repo (15 min). Cada viernes: revisión de 45 min y actualizar el plan. Cada decisión: una línea en `DECISIONS.md`.
 8. **Comprobar.** 3–4 casos de prueba por habilidad; se repiten si cambia.
 

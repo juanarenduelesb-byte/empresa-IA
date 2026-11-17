@@ -4,7 +4,7 @@
     ['index.html','Inicio'],['negocio.html','La idea'],['metodo.html','Método'],
     ['cerebro.html','El cerebro'],['flujos.html','Flujos'],['simulacion.html','Simulación'],['atlas.html','Atlas'],
     ['procesos.html','Procesos'],['conocimiento.html','Conocimiento'],['seguridad.html','Seguridad'],['legal.html','Leyes'],
-    ['claude.html','Construir en Claude'],['planning.html','Plan 12 semanas'],['decisiones.html','Decisiones'],['glosario.html','Glosario']
+    ['claude.html','Construir en Claude'],['planning.html','Plan de construcción'],['decisiones.html','Decisiones'],['glosario.html','Glosario']
   ];
   var here=(location.pathname.split('/').pop()||'index.html');
   if(here.indexOf('.html')<0) here='index.html';

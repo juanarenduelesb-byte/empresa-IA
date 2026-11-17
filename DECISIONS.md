@@ -48,15 +48,23 @@ No construir primero un CEO omnisciente; descubrir, diseñar, integrar y medir u
 - Uso: `python3 tools/gen.py site/js/atlas-data.js docs/atlas`
 - Estado: aprobada.
 
+## D-011 — Construir primero, clientes desde el 15/02/2027
+- Fecha: 2026-11-17
+- Decisión: hasta el 12/02/2027 se construye el sistema siguiendo el orden de la Guía v1.4 (§16), con un proceso de referencia y datos inventados. Los clientes empiezan el 15/02/2027.
+- Motivo: decisión de los socios. Sustituye al plan anterior, que priorizaba entrevistas comerciales.
+- Riesgo aceptado: construir algo que nadie pague. Mitigación: una conversación de validación por semana desde S2, sin vender.
+- Impacto: `docs/10-plan-12-semanas.md`, `site/planning.html`.
+- Estado: aprobada.
+
 ## Decisiones pendientes (con fecha límite)
 | Decisión | Quién | Antes de |
 |---|---|---|
 | Acuerdo entre socios: roles, horas, reparto, salida | Los dos | 22/11/2026 |
 | Plan de Claude | Juan | 22/11/2026 |
-| Nicho de entrada | Los dos, propone Álvaro | 27/11/2026 |
-| Precio del diagnóstico y del piloto | Los dos | 11/12/2026 |
-| Proceso piloto | Los dos | 18/12/2026 |
+| Proceso de referencia (por defecto: siniestros en corredurías) | Los dos | 22/11/2026 |
 | Forma jurídica y facturación | Álvaro, con gestor | 08/01/2027 |
-| Alojamiento y región de datos del piloto | Juan | 15/01/2027 |
-| Aprobaciones humanas por tipo de acción | Juan, con el cliente | Fase de diseño |
-| Primer conector | Juan | Fase de diseño |
+| Umbral de acierto del examen | Los dos | 22/01/2027 |
+| Precio del diagnóstico y del piloto | Los dos | 29/01/2027 |
+| Alojamiento de la demo y región de datos | Juan | 05/02/2027 |
+| Nicho comercial para salir a vender | Los dos | 12/02/2027 |
+| Proveedor de identidad para producción | Juan | Antes de L2 |

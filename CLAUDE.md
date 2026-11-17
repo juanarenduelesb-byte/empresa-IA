@@ -6,8 +6,8 @@ Contiene visión, arquitectura, procesos, decisiones, el plan de 12 semanas y un
 
 ## Contexto rápido
 - Oferta en cuatro fases: Diagnosticar (3 semanas) · Diseñar (2) · Construir (4–8, piloto con pago 50/50 según métrica firmada) · Operar (cuota mensual).
-- Prioridad actual: conseguir el primer cliente de pago. Ver `docs/10-plan-12-semanas.md`.
-- Estado: 0 clientes, 0 líneas de código. No construir el "CEO digital" completo antes del primer proceso piloto (D-006).
+- Prioridad actual (D-011): construir hasta el 12/02/2027 el proceso de referencia con datos inventados, siguiendo `docs/10-plan-12-semanas.md`. Clientes desde el 15/02/2027. Ningún dato real.
+- Estado: 0 clientes, 0 líneas de código. No construir el "CEO digital" generalista: solo el CEO limitado que necesita el proceso de referencia (D-006).
 
 ## Documentos base (por orden de autoridad)
 1. `DECISIONS.md`

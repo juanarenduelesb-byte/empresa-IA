@@ -1,0 +1,14 @@
+- Id:
+- Título:
+- Autor u organismo:
+- URL:
+- Tipo: obligacion-legal | estandar-voluntario | recomendacion-tecnica | buena-practica | documentacion-producto | prensa-especializada
+- Fecha de publicación y de actualización:
+- Versión:
+- Jurisdicción:
+- Fecha de consulta:
+- Autoridad: alta | media | baja
+- Especialistas relacionados:
+- Vigencia: vigente | en-tramitacion | anunciado-sin-norma | borrador | historico
+- Estado: draft | validated | disputed
+- Conclusiones relevantes (con tus palabras):

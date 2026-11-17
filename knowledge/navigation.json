@@ -1,0 +1,950 @@
+{
+ "generado_por": "tools/org_gen.py",
+ "consulta_fuentes": "2026-11-17",
+ "siempre": [
+  "DECISIONS.md",
+  "CLAUDE.md",
+  "knowledge/INDEX.md",
+  "precedents/README.md"
+ ],
+ "tareas": [
+  {
+   "id": "propuesta-comercial",
+   "tarea": "Preparar una propuesta o responder a un pliego",
+   "responsables": [
+    "propuestas-licitaciones",
+    "director-comercial"
+   ],
+   "consultar_a": [
+    "legal-privacidad",
+    "ciberseguridad",
+    "costes-proveedores"
+   ],
+   "procesos": [
+    "P31",
+    "P38"
+   ],
+   "leer": [
+    "docs/00-negocio.md",
+    "knowledge/comercial/",
+    "knowledge/seguridad-legal/"
+   ],
+   "regla_cruzada": "Comercial consulta a Legal antes de cualquier cláusula contractual."
+  },
+  {
+   "id": "validacion",
+   "tarea": "Preparar o resumir una conversación de validación",
+   "responsables": [
+    "director-comercial"
+   ],
+   "consultar_a": [
+    "arquitecto-procesos",
+    "especialista-sectorial"
+   ],
+   "procesos": [
+    "P32"
+   ],
+   "leer": [
+    "processes/referencia-seguros-apertura-siniestros/README.md",
+    "docs/10-plan-12-semanas.md"
+   ],
+   "regla_cruzada": "Se escucha, no se vende (D-011)."
+  },
+  {
+   "id": "descubrir-proceso",
+   "tarea": "Descubrir o diseñar un proceso de cliente",
+   "responsables": [
+    "arquitecto-procesos"
+   ],
+   "consultar_a": [
+    "especialista-sectorial",
+    "metricas",
+    "legal-privacidad"
+   ],
+   "procesos": [
+    "P32",
+    "P33",
+    "P34"
+   ],
+   "leer": [
+    "processes/templates/proceso-cliente.md",
+    "knowledge/procesos/sectores.md"
+   ],
+   "regla_cruzada": "Validar con quien ejecuta el proceso."
+  },
+  {
+   "id": "automatizacion",
+   "tarea": "Diseñar una automatización",
+   "responsables": [
+    "automatizacion",
+    "arquitecto-procesos"
+   ],
+   "consultar_a": [
+    "arquitecto-tecnico",
+    "ciberseguridad"
+   ],
+   "procesos": [
+    "P08",
+    "P21",
+    "P22",
+    "P36"
+   ],
+   "leer": [
+    "integrations/catalog/README.md",
+    "processes/definitions/"
+   ],
+   "regla_cruzada": "Procesos consulta a Ingeniería antes de diseñar una automatización."
+  },
+  {
+   "id": "integracion",
+   "tarea": "Habilitar una integración o conector",
+   "responsables": [
+    "integraciones"
+   ],
+   "consultar_a": [
+    "ciberseguridad",
+    "legal-privacidad"
+   ],
+   "procesos": [
+    "P21",
+    "P30",
+    "P36"
+   ],
+   "leer": [
+    "integrations/catalog/README.md",
+    "integrations/contracts/"
+   ],
+   "regla_cruzada": "Ingeniería consulta a Seguridad antes de habilitar una integración."
+  },
+  {
+   "id": "aprobar-plan",
+   "tarea": "Aprobar un plan o tomar una decisión",
+   "responsables": [
+    "ceo-digital",
+    "decisiones-seguimiento"
+   ],
+   "consultar_a": [
+    "calidad-riesgos"
+   ],
+   "procesos": [
+    "P05",
+    "P10"
+   ],
+   "leer": [
+    "DECISIONS.md",
+    "precedents/"
+   ],
+   "regla_cruzada": "El CEO consulta precedentes y decisiones antes de aprobar un plan."
+  },
+  {
+   "id": "regulatorio",
+   "tarea": "Investigar una obligación legal o regulatoria",
+   "responsables": [
+    "legal-privacidad",
+    "cumplimiento"
+   ],
+   "consultar_a": [
+    "especialista-sectorial",
+    "bibliotecario"
+   ],
+   "procesos": [
+    "P19",
+    "P24"
+   ],
+   "leer": [
+    "docs/fuentes/Marco_Integral_Legal_Ciberseguridad_IA_Espana_UE_2026-11-16.md",
+    "knowledge/fuentes/registro.md"
+   ],
+   "regla_cruzada": "Fuente primaria y vigente; nunca afirmar cumplimiento."
+  },
+  {
+   "id": "sector-seguros",
+   "tarea": "Trabajo en el sector seguros",
+   "responsables": [
+    "especialista-sectorial"
+   ],
+   "consultar_a": [
+    "arquitecto-procesos",
+    "cumplimiento"
+   ],
+   "procesos": [
+    "P02",
+    "P32",
+    "P33"
+   ],
+   "leer": [
+    "knowledge/procesos/sectores.md",
+    "processes/referencia-seguros-apertura-siniestros/README.md"
+   ],
+   "regla_cruzada": "El especialista de seguros consulta también los procesos transversales."
+  },
+  {
+   "id": "cambio-modelo",
+   "tarea": "Cambiar de modelo o de instrucciones",
+   "responsables": [
+    "datos-ia",
+    "evaluacion-ia"
+   ],
+   "consultar_a": [
+    "calidad-riesgos"
+   ],
+   "procesos": [
+    "P16",
+    "P23",
+    "P25"
+   ],
+   "leer": [
+    "docs/atlas/10-cambios-modelos.md",
+    "processes/tests/README.md"
+   ],
+   "regla_cruzada": "Sin evaluación superada no hay cambio."
+  },
+  {
+   "id": "incidente",
+   "tarea": "Gestionar un incidente",
+   "responsables": [
+    "ciberseguridad",
+    "calidad-riesgos"
+   ],
+   "consultar_a": [
+    "legal-privacidad"
+   ],
+   "procesos": [
+    "P28",
+    "P15",
+    "P17"
+   ],
+   "leer": [
+    "processes/runbooks/",
+    "precedents/incidents/"
+   ],
+   "regla_cruzada": "Preservar evidencias antes de corregir."
+  },
+  {
+   "id": "conocimiento",
+   "tarea": "Añadir o actualizar conocimiento",
+   "responsables": [
+    "bibliotecario"
+   ],
+   "consultar_a": [
+    "el dueño del tema"
+   ],
+   "procesos": [
+    "P13",
+    "P04"
+   ],
+   "leer": [
+    "knowledge/metodologias-transversales/",
+    "knowledge/fuentes/registro.md"
+   ],
+   "regla_cruzada": "Buscar antes de crear; draft hasta revisión."
+  },
+  {
+   "id": "proveedor",
+   "tarea": "Dar de alta un proveedor o herramienta",
+   "responsables": [
+    "costes-proveedores"
+   ],
+   "consultar_a": [
+    "legal-privacidad",
+    "ciberseguridad",
+    "arquitecto-tecnico"
+   ],
+   "procesos": [
+    "P27",
+    "P29"
+   ],
+   "leer": [
+    "integrations/catalog/README.md",
+    "knowledge/plantillas/ficha-proveedor.md"
+   ],
+   "regla_cruzada": "Licencia, datos, región, retención, salida."
+  },
+  {
+   "id": "facturacion",
+   "tarea": "Facturar o preparar trámites",
+   "responsables": [
+    "administrativo",
+    "financiero"
+   ],
+   "consultar_a": [],
+   "procesos": [
+    "P11"
+   ],
+   "leer": [
+    "knowledge/administracion-finanzas/"
+   ],
+   "regla_cruzada": "Fechas de Verifactu y factura electrónica según norma vigente."
+  }
+ ],
+ "especialistas": {
+  "ceo-digital": {
+   "nombre": "CEO digital",
+   "departamento": "direccion",
+   "ficha": "knowledge/direccion/ceo-digital.md",
+   "oficina": [
+    "ceo"
+   ],
+   "procesos": [
+    "P01",
+    "P02",
+    "P03",
+    "P05",
+    "P06",
+    "P10",
+    "P11",
+    "P31"
+   ],
+   "leer": [
+    "DECISIONS.md",
+    "CLAUDE.md",
+    "knowledge/INDEX.md",
+    "precedents/README.md",
+    "docs/03-ceo-digital-y-orquestacion.md",
+    "docs/14-reglas-del-ceo.md",
+    "docs/atlas/02-flujo-ceo.md",
+    "docs/atlas/03-decisiones-ceo.md",
+    "processes/catalog/README.md",
+    "precedents/"
+   ],
+   "convoca": [
+    "decisiones-seguimiento",
+    "bibliotecario",
+    "calidad-riesgos",
+    "y"
+   ]
+  },
+  "bibliotecario": {
+   "nombre": "Bibliotecario / responsable de conocimiento",
+   "departamento": "direccion",
+   "ficha": "knowledge/direccion/bibliotecario.md",
+   "oficina": [
+    "bib"
+   ],
+   "procesos": [
+    "P04",
+    "P07",
+    "P13"
+   ],
+   "leer": [
+    "DECISIONS.md",
+    "CLAUDE.md",
+    "knowledge/INDEX.md",
+    "precedents/README.md",
+    "docs/04-motor-de-conocimiento.md",
+    "docs/atlas/07-conocimiento.md",
+    "knowledge/fuentes/registro.md",
+    "knowledge/metodologias-transversales/"
+   ],
+   "convoca": [
+    "legal-privacidad",
+    "el"
+   ]
+  },
+  "decisiones-seguimiento": {
+   "nombre": "Responsable de decisiones y seguimiento",
+   "departamento": "direccion",
+   "ficha": "knowledge/direccion/decisiones-seguimiento.md",
+   "oficina": [
+    "pmo",
+    "dec"
+   ],
+   "procesos": [
+    "P05",
+    "P12",
+    "P15",
+    "P18",
+    "P25"
+   ],
+   "leer": [
+    "DECISIONS.md",
+    "CLAUDE.md",
+    "knowledge/INDEX.md",
+    "precedents/README.md",
+    "docs/10-plan-12-semanas.md",
+    "docs/08-roadmap-y-decisiones.md",
+    "site/planning.html"
+   ],
+   "convoca": [
+    "ceo-digital",
+    "socios"
+   ]
+  },
+  "director-comercial": {
+   "nombre": "Director comercial",
+   "departamento": "comercial",
+   "ficha": "knowledge/comercial/director-comercial.md",
+   "oficina": [
+    "comj",
+    "val"
+   ],
+   "procesos": [
+    "P31",
+    "P32",
+    "P38"
+   ],
+   "leer": [
+    "DECISIONS.md",
+    "CLAUDE.md",
+    "knowledge/INDEX.md",
+    "precedents/README.md",
+    "docs/00-negocio.md",
+    "docs/10-plan-12-semanas.md",
+    "processes/referencia-seguros-apertura-siniestros/README.md",
+    "knowledge/comercial/"
+   ],
+   "convoca": [
+    "arquitecto-procesos",
+    "especialista-sectorial",
+    "legal-privacidad"
+   ]
+  },
+  "prospeccion": {
+   "nombre": "Especialista en prospección",
+   "departamento": "comercial",
+   "ficha": "knowledge/comercial/prospeccion.md",
+   "oficina": [
+    "pros"
+   ],
+   "procesos": [
+    "P31"
+   ],
+   "leer": [
+    "DECISIONS.md",
+    "CLAUDE.md",
+    "knowledge/INDEX.md",
+    "precedents/README.md",
+    "docs/00-negocio.md",
+    "knowledge/comercial/"
+   ],
+   "convoca": [
+    "director-comercial",
+    "legal-privacidad"
+   ]
+  },
+  "marketing-contenido": {
+   "nombre": "Especialista en marketing y contenido",
+   "departamento": "comercial",
+   "ficha": "knowledge/comercial/marketing-contenido.md",
+   "oficina": [
+    "cont"
+   ],
+   "procesos": [
+    "P31"
+   ],
+   "leer": [
+    "DECISIONS.md",
+    "CLAUDE.md",
+    "knowledge/INDEX.md",
+    "precedents/README.md",
+    "docs/00-negocio.md",
+    "site/negocio.html"
+   ],
+   "convoca": [
+    "director-comercial",
+    "legal-privacidad"
+   ]
+  },
+  "propuestas-licitaciones": {
+   "nombre": "Especialista en propuestas y licitaciones",
+   "departamento": "comercial",
+   "ficha": "knowledge/comercial/propuestas-licitaciones.md",
+   "oficina": [
+    "prop"
+   ],
+   "procesos": [
+    "P31",
+    "P38"
+   ],
+   "leer": [
+    "DECISIONS.md",
+    "CLAUDE.md",
+    "knowledge/INDEX.md",
+    "precedents/README.md",
+    "docs/00-negocio.md",
+    "knowledge/seguridad-legal/",
+    "knowledge/plantillas/"
+   ],
+   "convoca": [
+    "legal-privacidad",
+    "ciberseguridad",
+    "costes-proveedores"
+   ]
+  },
+  "gestion-clientes": {
+   "nombre": "Especialista en gestión de clientes",
+   "departamento": "comercial",
+   "ficha": "knowledge/comercial/gestion-clientes.md",
+   "oficina": [],
+   "procesos": [
+    "P11",
+    "P37",
+    "P38"
+   ],
+   "leer": [
+    "DECISIONS.md",
+    "CLAUDE.md",
+    "knowledge/INDEX.md",
+    "precedents/README.md",
+    "processes/catalog/P37-medicion-de-rendimiento-y-valor.md",
+    "processes/catalog/P38-gestion-de-despliegue-por-cliente.md"
+   ],
+   "convoca": [
+    "metricas",
+    "implantacion-clientes"
+   ]
+  },
+  "arquitecto-procesos": {
+   "nombre": "Arquitecto de procesos",
+   "departamento": "procesos",
+   "ficha": "knowledge/procesos/arquitecto-procesos.md",
+   "oficina": [
+    "proj"
+   ],
+   "procesos": [
+    "P32",
+    "P33",
+    "P34",
+    "P35"
+   ],
+   "leer": [
+    "DECISIONS.md",
+    "CLAUDE.md",
+    "knowledge/INDEX.md",
+    "precedents/README.md",
+    "processes/README.md",
+    "processes/catalog/",
+    "processes/templates/proceso-cliente.md",
+    "docs/atlas/12-ciclo-proyecto.md",
+    "processes/referencia-seguros-apertura-siniestros/README.md"
+   ],
+   "convoca": [
+    "especialista-sectorial",
+    "arquitecto-tecnico",
+    "metricas",
+    "legal-privacidad"
+   ]
+  },
+  "implantacion-clientes": {
+   "nombre": "Responsable de implantación de clientes",
+   "departamento": "procesos",
+   "ficha": "knowledge/procesos/implantacion-clientes.md",
+   "oficina": [],
+   "procesos": [
+    "P38",
+    "P11",
+    "P12"
+   ],
+   "leer": [
+    "DECISIONS.md",
+    "CLAUDE.md",
+    "knowledge/INDEX.md",
+    "precedents/README.md",
+    "docs/atlas/12-ciclo-proyecto.md",
+    "processes/catalog/P38-gestion-de-despliegue-por-cliente.md"
+   ],
+   "convoca": [
+    "arquitecto-procesos",
+    "arquitecto-tecnico",
+    "ciberseguridad",
+    "legal-privacidad",
+    "calidad-riesgos"
+   ]
+  },
+  "automatizacion": {
+   "nombre": "Especialista en automatización",
+   "departamento": "procesos",
+   "ficha": "knowledge/procesos/automatizacion.md",
+   "oficina": [
+    "int"
+   ],
+   "procesos": [
+    "P08",
+    "P21",
+    "P22",
+    "P36"
+   ],
+   "leer": [
+    "DECISIONS.md",
+    "CLAUDE.md",
+    "knowledge/INDEX.md",
+    "precedents/README.md",
+    "integrations/catalog/README.md",
+    "processes/definitions/",
+    "docs/atlas/05-gateway.md"
+   ],
+   "convoca": [
+    "arquitecto-tecnico",
+    "ciberseguridad",
+    "integraciones"
+   ]
+  },
+  "metricas": {
+   "nombre": "Especialista en métricas",
+   "departamento": "procesos",
+   "ficha": "knowledge/procesos/metricas.md",
+   "oficina": [
+    "kpi"
+   ],
+   "procesos": [
+    "P18",
+    "P29",
+    "P37"
+   ],
+   "leer": [
+    "DECISIONS.md",
+    "CLAUDE.md",
+    "knowledge/INDEX.md",
+    "precedents/README.md",
+    "processes/catalog/P37-medicion-de-rendimiento-y-valor.md",
+    "docs/07-calidad-infraestructura-y-operacion.md"
+   ],
+   "convoca": [
+    "arquitecto-procesos",
+    "gestion-clientes"
+   ]
+  },
+  "especialista-sectorial": {
+   "nombre": "Especialistas sectoriales",
+   "departamento": "procesos",
+   "ficha": "knowledge/procesos/especialista-sectorial.md",
+   "oficina": [
+    "seg"
+   ],
+   "procesos": [
+    "P02",
+    "P32",
+    "P33"
+   ],
+   "leer": [
+    "DECISIONS.md",
+    "CLAUDE.md",
+    "knowledge/INDEX.md",
+    "precedents/README.md",
+    "knowledge/procesos/sectores.md",
+    "processes/referencia-seguros-apertura-siniestros/README.md"
+   ],
+   "convoca": [
+    "arquitecto-procesos",
+    "cumplimiento"
+   ]
+  },
+  "arquitecto-tecnico": {
+   "nombre": "Arquitecto técnico",
+   "departamento": "ingenieria",
+   "ficha": "knowledge/ingenieria/arquitecto-tecnico.md",
+   "oficina": [
+    "ingj"
+   ],
+   "procesos": [
+    "P12",
+    "P25",
+    "P27",
+    "P34"
+   ],
+   "leer": [
+    "DECISIONS.md",
+    "CLAUDE.md",
+    "knowledge/INDEX.md",
+    "precedents/README.md",
+    "docs/02-arquitectura-general.md",
+    "docs/atlas/00-arquitectura.md",
+    "docs/atlas/11-infraestructura.md",
+    "integrations/catalog/README.md"
+   ],
+   "convoca": [
+    "ciberseguridad",
+    "backend",
+    "datos-ia"
+   ]
+  },
+  "backend": {
+   "nombre": "Especialista backend",
+   "departamento": "ingenieria",
+   "ficha": "knowledge/ingenieria/backend.md",
+   "oficina": [
+    "back"
+   ],
+   "procesos": [
+    "P08",
+    "P14",
+    "P22",
+    "P35"
+   ],
+   "leer": [
+    "DECISIONS.md",
+    "CLAUDE.md",
+    "knowledge/INDEX.md",
+    "precedents/README.md",
+    "processes/definitions/",
+    "src/varios/procesos/",
+    "docs/13-procesos-y-estados.md"
+   ],
+   "convoca": [
+    "ciberseguridad",
+    "arquitecto-tecnico"
+   ]
+  },
+  "datos-ia": {
+   "nombre": "Arquitecto de datos e IA",
+   "departamento": "ingenieria",
+   "ficha": "knowledge/ingenieria/datos-ia.md",
+   "oficina": [
+    "ia"
+   ],
+   "procesos": [
+    "P04",
+    "P07",
+    "P16",
+    "P23"
+   ],
+   "leer": [
+    "DECISIONS.md",
+    "CLAUDE.md",
+    "knowledge/INDEX.md",
+    "precedents/README.md",
+    "docs/04-motor-de-conocimiento.md",
+    "docs/atlas/10-cambios-modelos.md",
+    "integrations/catalog/README.md"
+   ],
+   "convoca": [
+    "evaluacion-ia",
+    "legal-privacidad",
+    "ciberseguridad"
+   ]
+  },
+  "integraciones": {
+   "nombre": "Especialista en integraciones",
+   "departamento": "ingenieria",
+   "ficha": "knowledge/ingenieria/integraciones.md",
+   "oficina": [
+    "int"
+   ],
+   "procesos": [
+    "P21",
+    "P30",
+    "P36"
+   ],
+   "leer": [
+    "DECISIONS.md",
+    "CLAUDE.md",
+    "knowledge/INDEX.md",
+    "precedents/README.md",
+    "integrations/catalog/README.md",
+    "integrations/contracts/",
+    "docs/atlas/05-gateway.md"
+   ],
+   "convoca": [
+    "ciberseguridad",
+    "backend"
+   ]
+  },
+  "evaluacion-ia": {
+   "nombre": "Especialista en evaluación de IA",
+   "departamento": "ingenieria",
+   "ficha": "knowledge/ingenieria/evaluacion-ia.md",
+   "oficina": [
+    "dat"
+   ],
+   "procesos": [
+    "P09",
+    "P20",
+    "P23"
+   ],
+   "leer": [
+    "DECISIONS.md",
+    "CLAUDE.md",
+    "knowledge/INDEX.md",
+    "precedents/README.md",
+    "processes/tests/README.md",
+    "docs/atlas/09-calidad.md"
+   ],
+   "convoca": [
+    "datos-ia",
+    "calidad-riesgos",
+    "ciberseguridad"
+   ]
+  },
+  "ciberseguridad": {
+   "nombre": "Especialista en ciberseguridad",
+   "departamento": "seguridad-legal",
+   "ficha": "knowledge/seguridad-legal/ciberseguridad.md",
+   "oficina": [
+    "sec"
+   ],
+   "procesos": [
+    "P14",
+    "P17",
+    "P20",
+    "P21",
+    "P26",
+    "P28",
+    "P30"
+   ],
+   "leer": [
+    "DECISIONS.md",
+    "CLAUDE.md",
+    "knowledge/INDEX.md",
+    "precedents/README.md",
+    "docs/06-seguridad-y-gobierno.md",
+    "docs/atlas/08-seguridad.md",
+    "docs/atlas/14-incidentes.md",
+    "knowledge/seguridad-legal/"
+   ],
+   "convoca": [
+    "legal-privacidad",
+    "backend",
+    "integraciones"
+   ]
+  },
+  "legal-privacidad": {
+   "nombre": "Especialista legal y privacidad",
+   "departamento": "seguridad-legal",
+   "ficha": "knowledge/seguridad-legal/legal-privacidad.md",
+   "oficina": [
+    "leg"
+   ],
+   "procesos": [
+    "P19",
+    "P24",
+    "P27",
+    "P28"
+   ],
+   "leer": [
+    "DECISIONS.md",
+    "CLAUDE.md",
+    "knowledge/INDEX.md",
+    "precedents/README.md",
+    "docs/fuentes/Marco_Integral_Legal_Ciberseguridad_IA_Espana_UE_2026-11-16.md",
+    "knowledge/seguridad-legal/",
+    "site/legal.html"
+   ],
+   "convoca": [
+    "ciberseguridad",
+    "cumplimiento",
+    "abogado"
+   ]
+  },
+  "cumplimiento": {
+   "nombre": "Responsable de cumplimiento",
+   "departamento": "seguridad-legal",
+   "ficha": "knowledge/seguridad-legal/cumplimiento.md",
+   "oficina": [],
+   "procesos": [
+    "P19",
+    "P27",
+    "P38"
+   ],
+   "leer": [
+    "DECISIONS.md",
+    "CLAUDE.md",
+    "knowledge/INDEX.md",
+    "precedents/README.md",
+    "knowledge/seguridad-legal/",
+    "knowledge/procesos/sectores.md"
+   ],
+   "convoca": [
+    "legal-privacidad",
+    "ciberseguridad",
+    "especialista-sectorial"
+   ]
+  },
+  "calidad-riesgos": {
+   "nombre": "Especialista en calidad y riesgos",
+   "departamento": "seguridad-legal",
+   "ficha": "knowledge/seguridad-legal/calidad-riesgos.md",
+   "oficina": [
+    "calj"
+   ],
+   "procesos": [
+    "P09",
+    "P10",
+    "P15",
+    "P18",
+    "P28"
+   ],
+   "leer": [
+    "DECISIONS.md",
+    "CLAUDE.md",
+    "knowledge/INDEX.md",
+    "precedents/README.md",
+    "docs/07-calidad-infraestructura-y-operacion.md",
+    "docs/atlas/09-calidad.md",
+    "precedents/incidents/"
+   ],
+   "convoca": [
+    "evaluacion-ia",
+    "ciberseguridad"
+   ]
+  },
+  "financiero": {
+   "nombre": "Especialista financiero",
+   "departamento": "administracion-finanzas",
+   "ficha": "knowledge/administracion-finanzas/financiero.md",
+   "oficina": [
+    "fin"
+   ],
+   "procesos": [
+    "P29"
+   ],
+   "leer": [
+    "DECISIONS.md",
+    "CLAUDE.md",
+    "knowledge/INDEX.md",
+    "precedents/README.md",
+    "docs/00-negocio.md",
+    "knowledge/administracion-finanzas/"
+   ],
+   "convoca": [
+    "costes-proveedores",
+    "administrativo"
+   ]
+  },
+  "costes-proveedores": {
+   "nombre": "Especialista en costes y proveedores",
+   "departamento": "administracion-finanzas",
+   "ficha": "knowledge/administracion-finanzas/costes-proveedores.md",
+   "oficina": [
+    "fin",
+    "prov"
+   ],
+   "procesos": [
+    "P27",
+    "P29"
+   ],
+   "leer": [
+    "DECISIONS.md",
+    "CLAUDE.md",
+    "knowledge/INDEX.md",
+    "precedents/README.md",
+    "integrations/catalog/README.md",
+    "knowledge/administracion-finanzas/"
+   ],
+   "convoca": [
+    "legal-privacidad",
+    "ciberseguridad"
+   ]
+  },
+  "administrativo": {
+   "nombre": "Especialista administrativo",
+   "departamento": "administracion-finanzas",
+   "ficha": "knowledge/administracion-finanzas/administrativo.md",
+   "oficina": [
+    "admj"
+   ],
+   "procesos": [
+    "P11"
+   ],
+   "leer": [
+    "DECISIONS.md",
+    "CLAUDE.md",
+    "knowledge/INDEX.md",
+    "precedents/README.md",
+    "knowledge/administracion-finanzas/"
+   ],
+   "convoca": [
+    "financiero"
+   ]
+  }
+ }
+}

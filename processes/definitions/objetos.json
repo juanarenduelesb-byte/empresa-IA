@@ -1,0 +1,505 @@
+{
+ "version": "1.0.0",
+ "estado": "draft",
+ "nota": "Estados por objeto de docs/13 y Atlas Evolución §10.1. El Atlas dice: implementar como enums y transiciones autorizadas; los nombres finales se fijan en los contratos de software.",
+ "objetos": [
+  {
+   "id": "tarea",
+   "inicial": "queued",
+   "estados": [
+    "queued",
+    "running",
+    "needs_approval",
+    "succeeded",
+    "blocked",
+    "failed",
+    "cancelled"
+   ],
+   "transiciones": [
+    {
+     "de": "queued",
+     "a": [
+      "running"
+     ],
+     "origen": "orden de docs/13"
+    },
+    {
+     "de": "running",
+     "a": [
+      "needs_approval"
+     ],
+     "origen": "orden de docs/13"
+    },
+    {
+     "de": "needs_approval",
+     "a": [
+      "succeeded"
+     ],
+     "origen": "orden de docs/13"
+    },
+    {
+     "de": "running",
+     "a": [
+      "succeeded",
+      "blocked",
+      "failed"
+     ],
+     "origen": "derivada de docs/13 (confirmar)"
+    },
+    {
+     "de": "blocked",
+     "a": [
+      "running",
+      "cancelled"
+     ],
+     "origen": "derivada de docs/13 (confirmar)"
+    },
+    {
+     "de": "needs_approval",
+     "a": [
+      "running",
+      "cancelled"
+     ],
+     "origen": "derivada de docs/13 (confirmar)"
+    },
+    {
+     "de": "queued",
+     "a": [
+      "cancelled"
+     ],
+     "origen": "derivada de docs/13 (confirmar)"
+    }
+   ]
+  },
+  {
+   "id": "instancia_proceso",
+   "inicial": "created",
+   "estados": [
+    "created",
+    "ready",
+    "running",
+    "completed",
+    "waiting_external",
+    "waiting_human",
+    "exception",
+    "failed",
+    "cancelled"
+   ],
+   "transiciones": [
+    {
+     "de": "created",
+     "a": [
+      "ready"
+     ],
+     "origen": "orden de Atlas §10.1"
+    },
+    {
+     "de": "ready",
+     "a": [
+      "running"
+     ],
+     "origen": "orden de Atlas §10.1"
+    },
+    {
+     "de": "running",
+     "a": [
+      "completed"
+     ],
+     "origen": "orden de Atlas §10.1"
+    },
+    {
+     "de": "running",
+     "a": [
+      "waiting_external",
+      "waiting_human",
+      "exception",
+      "failed",
+      "cancelled"
+     ],
+     "origen": "derivada de Atlas §10.1 (confirmar)"
+    },
+    {
+     "de": "waiting_external",
+     "a": [
+      "running",
+      "exception"
+     ],
+     "origen": "derivada de Atlas §10.1 (confirmar)"
+    },
+    {
+     "de": "waiting_human",
+     "a": [
+      "running",
+      "cancelled"
+     ],
+     "origen": "derivada de Atlas §10.1 (confirmar)"
+    },
+    {
+     "de": "exception",
+     "a": [
+      "running",
+      "failed",
+      "cancelled"
+     ],
+     "origen": "derivada de Atlas §10.1 (confirmar)"
+    }
+   ]
+  },
+  {
+   "id": "definicion_proceso",
+   "inicial": "draft",
+   "estados": [
+    "draft",
+    "under_review",
+    "approved",
+    "active",
+    "deprecated",
+    "retired"
+   ],
+   "transiciones": [
+    {
+     "de": "draft",
+     "a": [
+      "under_review"
+     ],
+     "origen": "orden de Atlas §10.1"
+    },
+    {
+     "de": "under_review",
+     "a": [
+      "approved"
+     ],
+     "origen": "orden de Atlas §10.1"
+    },
+    {
+     "de": "approved",
+     "a": [
+      "active"
+     ],
+     "origen": "orden de Atlas §10.1"
+    },
+    {
+     "de": "active",
+     "a": [
+      "deprecated"
+     ],
+     "origen": "orden de Atlas §10.1"
+    },
+    {
+     "de": "deprecated",
+     "a": [
+      "retired"
+     ],
+     "origen": "orden de Atlas §10.1"
+    },
+    {
+     "de": "under_review",
+     "a": [
+      "draft"
+     ],
+     "origen": "derivada de Atlas §10.1 (confirmar)"
+    }
+   ]
+  },
+  {
+   "id": "conector",
+   "inicial": "draft",
+   "estados": [
+    "draft",
+    "tested",
+    "approved",
+    "active",
+    "retired",
+    "degraded",
+    "suspended"
+   ],
+   "transiciones": [
+    {
+     "de": "draft",
+     "a": [
+      "tested"
+     ],
+     "origen": "orden de Atlas §10.1"
+    },
+    {
+     "de": "tested",
+     "a": [
+      "approved"
+     ],
+     "origen": "orden de Atlas §10.1"
+    },
+    {
+     "de": "approved",
+     "a": [
+      "active"
+     ],
+     "origen": "orden de Atlas §10.1"
+    },
+    {
+     "de": "active",
+     "a": [
+      "retired"
+     ],
+     "origen": "orden de Atlas §10.1"
+    },
+    {
+     "de": "active",
+     "a": [
+      "degraded",
+      "suspended"
+     ],
+     "origen": "derivada de Atlas §10.1 (confirmar)"
+    },
+    {
+     "de": "degraded",
+     "a": [
+      "active",
+      "suspended"
+     ],
+     "origen": "derivada de Atlas §10.1 (confirmar)"
+    },
+    {
+     "de": "suspended",
+     "a": [
+      "active",
+      "retired"
+     ],
+     "origen": "derivada de Atlas §10.1 (confirmar)"
+    }
+   ]
+  },
+  {
+   "id": "despliegue",
+   "inicial": "qualified",
+   "estados": [
+    "qualified",
+    "discovery",
+    "design",
+    "prototype",
+    "pilot",
+    "production",
+    "operating",
+    "paused",
+    "terminated"
+   ],
+   "transiciones": [
+    {
+     "de": "qualified",
+     "a": [
+      "discovery"
+     ],
+     "origen": "orden de Atlas §10.1"
+    },
+    {
+     "de": "discovery",
+     "a": [
+      "design"
+     ],
+     "origen": "orden de Atlas §10.1"
+    },
+    {
+     "de": "design",
+     "a": [
+      "prototype"
+     ],
+     "origen": "orden de Atlas §10.1"
+    },
+    {
+     "de": "prototype",
+     "a": [
+      "pilot"
+     ],
+     "origen": "orden de Atlas §10.1"
+    },
+    {
+     "de": "pilot",
+     "a": [
+      "production"
+     ],
+     "origen": "orden de Atlas §10.1"
+    },
+    {
+     "de": "production",
+     "a": [
+      "operating"
+     ],
+     "origen": "orden de Atlas §10.1"
+    },
+    {
+     "de": "qualified",
+     "a": [
+      "paused",
+      "terminated"
+     ],
+     "origen": "derivada de Atlas §10.1 (confirmar)"
+    },
+    {
+     "de": "discovery",
+     "a": [
+      "paused",
+      "terminated"
+     ],
+     "origen": "derivada de Atlas §10.1 (confirmar)"
+    },
+    {
+     "de": "design",
+     "a": [
+      "paused",
+      "terminated"
+     ],
+     "origen": "derivada de Atlas §10.1 (confirmar)"
+    },
+    {
+     "de": "prototype",
+     "a": [
+      "paused",
+      "terminated"
+     ],
+     "origen": "derivada de Atlas §10.1 (confirmar)"
+    },
+    {
+     "de": "pilot",
+     "a": [
+      "paused",
+      "terminated"
+     ],
+     "origen": "derivada de Atlas §10.1 (confirmar)"
+    },
+    {
+     "de": "production",
+     "a": [
+      "paused",
+      "terminated"
+     ],
+     "origen": "derivada de Atlas §10.1 (confirmar)"
+    },
+    {
+     "de": "operating",
+     "a": [
+      "paused",
+      "terminated"
+     ],
+     "origen": "derivada de Atlas §10.1 (confirmar)"
+    },
+    {
+     "de": "paused",
+     "a": [
+      "qualified",
+      "discovery",
+      "design",
+      "prototype",
+      "pilot",
+      "production",
+      "operating",
+      "terminated"
+     ],
+     "origen": "derivada de Atlas §10.1 (confirmar)"
+    }
+   ]
+  },
+  {
+   "id": "ficha_conocimiento",
+   "inicial": "raw",
+   "estados": [
+    "raw",
+    "draft",
+    "validated",
+    "approved",
+    "deprecated",
+    "disputed"
+   ],
+   "transiciones": [
+    {
+     "de": "raw",
+     "a": [
+      "draft"
+     ],
+     "origen": "orden de docs/13"
+    },
+    {
+     "de": "draft",
+     "a": [
+      "validated"
+     ],
+     "origen": "orden de docs/13"
+    },
+    {
+     "de": "validated",
+     "a": [
+      "approved"
+     ],
+     "origen": "orden de docs/13"
+    },
+    {
+     "de": "approved",
+     "a": [
+      "deprecated"
+     ],
+     "origen": "orden de docs/13"
+    },
+    {
+     "de": "draft",
+     "a": [
+      "disputed"
+     ],
+     "origen": "derivada de docs/13 (confirmar)"
+    },
+    {
+     "de": "validated",
+     "a": [
+      "disputed"
+     ],
+     "origen": "derivada de docs/13 (confirmar)"
+    },
+    {
+     "de": "approved",
+     "a": [
+      "disputed"
+     ],
+     "origen": "derivada de docs/13 (confirmar)"
+    },
+    {
+     "de": "disputed",
+     "a": [
+      "draft",
+      "deprecated"
+     ],
+     "origen": "derivada de docs/13 (confirmar)"
+    }
+   ]
+  },
+  {
+   "id": "capacidad",
+   "inicial": "draft",
+   "estados": [
+    "draft",
+    "tested",
+    "approved",
+    "deprecated"
+   ],
+   "transiciones": [
+    {
+     "de": "draft",
+     "a": [
+      "tested"
+     ],
+     "origen": "orden de Atlas §5"
+    },
+    {
+     "de": "tested",
+     "a": [
+      "approved"
+     ],
+     "origen": "orden de Atlas §5"
+    },
+    {
+     "de": "approved",
+     "a": [
+      "deprecated"
+     ],
+     "origen": "orden de Atlas §5"
+    }
+   ]
+  }
+ ]
+}

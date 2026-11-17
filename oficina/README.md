@@ -7,7 +7,7 @@ Es una planta isométrica con siete departamentos y 28 agentes alrededor del cer
 ## Qué hace
 
 - **Fichas completas de los 28 agentes** (`agentes.json`, generado desde `tools/org_data/agentes.py`): misión, nivel, responsabilidades, entregables, cómo trabaja, reglas del puesto y de la oficina, habilidades con sus pasos, criterio senior, errores que evita, cómo se mide, con quién trabaja y límites. Se ven en la pestaña Ficha de cada agente y entran en su contexto en cada encargo. Fichas legibles en `knowledge/agentes/` y habilidades en `claude/habilidades/`.
-- **Caso de práctica Atalaya** (`casos/atalaya.json`): diagnóstico completo de la apertura de siniestros en una correduría ficticia, 13 encargos para 12 agentes en 4 fases. Se carga desde Proyectos y se lanza fase a fase; cada encargo lee lo ya entregado en el proyecto. Detalle en `precedents/projects/caso-correduria-atalaya/`.
+- **Caso de práctica Atalaya** (`casos/atalaya.json`): diagnóstico completo de la apertura de siniestros en una correduría ficticia, 13 encargos para 12 agentes en 4 fases. Se carga desde Proyectos y se lanza entero con «Lanzar todo el plan»: cada encargo empieza cuando terminan los que necesita, cada agente hace uno a la vez y trabajan hasta 4 en paralelo. Detalle en `precedents/projects/caso-correduria-atalaya/`.
 - **Todo acaba en GitHub (D-017):** cada noche se vuelca lo nuevo (encargos, conversaciones, chats, memoria, reglas y habilidades enseñadas) a `oficina/registro/` y `precedents/oficina/`, y se publica el cerebro nuevo. GitHub Actions comprueba, regenera y avisa sin IA. Instrucciones en `registro/VOLCADO.md`.
 
 - **Vista 3D (botón 3D/2D):**

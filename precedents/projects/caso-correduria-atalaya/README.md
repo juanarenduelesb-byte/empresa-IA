@@ -30,4 +30,4 @@ Lo define [`proyecto.py`](proyecto.py), que genera `proyecto.json` para cargarlo
 | 4 · Proponer | Presentación al comité | Jefe comercial | PowerPoint |
 
 ## Cómo se lanza
-En la oficina: **Proyectos → Atalaya → Lanzar «1 · Preparar»**, y cuando terminen, la fase siguiente. Cada encargo lee lo ya entregado en el proyecto. Lo que pase (encargos, conversaciones, entregables y lecciones) se vuelca cada noche al repositorio en `oficina/registro/` (D-017).
+En la oficina: **Proyectos → Atalaya → «Lanzar todo el plan»**. Los agentes se organizan solos: cada encargo empieza cuando terminan los que necesita (campo `depende` de `proyecto.py`), cada agente hace un encargo a la vez en orden de prioridad y trabajan hasta 4 a la vez. Cada encargo lee lo ya entregado en el proyecto. También se puede lanzar fase a fase. Lo que pase (encargos, conversaciones, entregables y lecciones) se vuelca cada noche al repositorio en `oficina/registro/` (D-017).

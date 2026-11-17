@@ -80,8 +80,14 @@ def docs():
     return out
 
 
+# Qué necesita cada encargo antes de empezar (índices de ENCARGOS). Lo que no depende de nada empieza a la vez.
+DEPENDE = {0: [], 1: [], 2: [], 3: [0], 4: [3], 5: [0, 3], 6: [3, 4, 5], 7: [1, 6], 8: [6], 9: [4, 6], 10: [1, 4, 9], 11: [6, 8], 12: [3, 4, 6, 7, 10, 11]}
+for _i, _e in enumerate(ENCARGOS):
+    _e["depende"] = DEPENDE[_i]
+
+
 def main():
-    plan = {"resumen": "Diagnóstico de tres semanas en cuatro fases para la correduría ficticia Atalaya. Lanza fase a fase: cada encargo lee lo que ya han entregado los anteriores. Trabajan 12 agentes de los 7 departamentos, más el CEO, que asigna, y Calidad, que revisa cada entrega; el experto de seguros aporta las claves del sector a cada encargo.",
+    plan = {"resumen": "Diagnóstico de tres semanas en cuatro fases para la correduría ficticia Atalaya. Con «Lanzar todo el plan» se organizan solos: cada encargo empieza cuando terminan los que necesita, cada agente hace uno a la vez y trabajan varios en paralelo; cada encargo lee lo que ya han entregado los anteriores. Trabajan 12 agentes de los 7 departamentos, más el CEO, que asigna, y Calidad, que revisa cada entrega; el experto de seguros aporta las claves del sector a cada encargo.",
             "fases": [{"nombre": n, "objetivo": o} for n, o in FASES], "encargos": ENCARGOS,
             "preguntas": ["Precio del diagnóstico y del piloto (lo deciden los socios).", "¿Se confirma la apertura de siniestros en corredurías como proceso de referencia? (vence el 22/11/2026)"],
             "riesgos": ["Que las cifras ficticias se tomen como reales: todo lleva la marca de ficticio.", "Que la IA quiera decidir coberturas: queda fuera por diseño."],

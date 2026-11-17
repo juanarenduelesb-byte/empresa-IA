@@ -64,6 +64,20 @@ No construir primero un CEO omnisciente; descubrir, diseñar, integrar y medir u
 - Riesgo aceptado: un error llega a la versión principal sin que nadie lo lea antes. Mitigación: cada cambio es una propuesta separada y se puede deshacer; Claude resume en el chat lo que ha aceptado.
 - Estado: aprobada.
 
+## D-013 — Conocimiento y catálogo de procesos generados desde datos
+- Fecha: 2026-11-17
+- Decisión: las fichas de especialistas (`knowledge/<departamento>/`), el índice de navegación, el registro de fuentes y las fichas P01–P38 se generan con `python3 tools/org_gen.py` desde `tools/org_data/`. No se editan a mano; `--check` falla si están desactualizadas.
+- Motivo: 25 fichas, 38 procesos y 40 fuentes a mano se contradicen enseguida. Es el mismo patrón que D-010 para los diagramas.
+- Riesgo: editar Python para cambiar un texto es menos cómodo. Mitigación: los textos libres (metodologías, plantillas, precedentes) siguen siendo Markdown normal.
+- Estado: propuesta.
+
+## D-014 — Adelantar un prototipo mínimo del motor de procesos
+- Fecha: 2026-11-17
+- Decisión: `src/varios/procesos/` contiene ya un motor en memoria (estados, transiciones, aprobación humana, QA, reintentos, idempotencia y validación de definiciones) con pruebas en `tests/`. Solo Python estándar, pytest y Ruff, que ya están en el stack. Sin FastAPI, PostgreSQL ni persistencia todavía.
+- Motivo: fijar en código y pruebas las reglas que hoy solo están en documentos (nadie se aprueba a sí mismo, el tenant sale de la identidad, la IA no cambia estados). Las semanas 1–5 del plan lo sustituirán por la versión persistente.
+- Riesgo: parecer más avanzado de lo que está. No es el piloto: no hay base de datos, ni API, ni aislamiento real entre clientes.
+- Estado: propuesta.
+
 ## Decisiones pendientes (con fecha límite)
 | Decisión | Quién | Antes de |
 |---|---|---|

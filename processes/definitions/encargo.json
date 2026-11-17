@@ -1,0 +1,164 @@
+{
+ "id": "encargo",
+ "version": "1.0.0",
+ "estado": "draft",
+ "fuente": "docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado.md §4 y Estados mínimos",
+ "inicial": "RECIBIDO",
+ "finales": [
+  "CERRADO",
+  "RECHAZADO",
+  "CANCELADO"
+ ],
+ "estados": [
+  "RECIBIDO",
+  "EN_CLASIFICACION",
+  "PENDIENTE_INFO",
+  "PLANIFICADO",
+  "EN_EJECUCION",
+  "EN_QA",
+  "PENDIENTE_APROBACION",
+  "ENTREGADO",
+  "CERRADO",
+  "BLOQUEADO",
+  "ESCALADO",
+  "RETRABAJO",
+  "RECHAZADO",
+  "CANCELADO",
+  "REABIERTO"
+ ],
+ "transiciones": [
+  {
+   "de": "RECIBIDO",
+   "a": [
+    "EN_CLASIFICACION"
+   ],
+   "regla": "Validar identidad, tenant y registro.",
+   "origen": "Guía v1.4 §4"
+  },
+  {
+   "de": "EN_CLASIFICACION",
+   "a": [
+    "PENDIENTE_INFO",
+    "PLANIFICADO",
+    "ESCALADO",
+    "RECHAZADO"
+   ],
+   "regla": "Decisión del CEO con razones.",
+   "origen": "Guía v1.4 §4"
+  },
+  {
+   "de": "PENDIENTE_INFO",
+   "a": [
+    "EN_CLASIFICACION"
+   ],
+   "regla": "Solo reanudar al recibir respuesta; conservar historial.",
+   "origen": "Guía v1.4 §4"
+  },
+  {
+   "de": "PENDIENTE_INFO",
+   "a": [
+    "CANCELADO"
+   ],
+   "regla": "Sin respuesta tras el segundo recordatorio (P03).",
+   "origen": "añadida (hueco de la Guía; confirmar)"
+  },
+  {
+   "de": "PLANIFICADO",
+   "a": [
+    "EN_EJECUCION"
+   ],
+   "regla": "Plan aprobado según riesgo y presupuesto.",
+   "origen": "Guía v1.4 §4"
+  },
+  {
+   "de": "EN_EJECUCION",
+   "a": [
+    "BLOQUEADO",
+    "EN_QA",
+    "ESCALADO"
+   ],
+   "regla": "Registrar salida, error o dependencia.",
+   "origen": "Guía v1.4 §4"
+  },
+  {
+   "de": "BLOQUEADO",
+   "a": [
+    "EN_EJECUCION",
+    "CANCELADO",
+    "ESCALADO"
+   ],
+   "regla": "Resolver causa y registrar quién autoriza reanudar.",
+   "origen": "Guía v1.4 §4"
+  },
+  {
+   "de": "EN_QA",
+   "a": [
+    "RETRABAJO",
+    "PENDIENTE_APROBACION",
+    "ENTREGADO"
+   ],
+   "regla": "QA no puede aprobar lo que no ha comprobado.",
+   "origen": "Guía v1.4 §4"
+  },
+  {
+   "de": "PENDIENTE_APROBACION",
+   "a": [
+    "ENTREGADO",
+    "RECHAZADO",
+    "RETRABAJO"
+   ],
+   "regla": "Aprobador autorizado, acción, alcance y versión exactos.",
+   "origen": "Guía v1.4 §4"
+  },
+  {
+   "de": "ENTREGADO",
+   "a": [
+    "CERRADO",
+    "REABIERTO"
+   ],
+   "regla": "Cierre tras aceptación o regla contractual.",
+   "origen": "Guía v1.4 §4"
+  },
+  {
+   "de": "CERRADO",
+   "a": [
+    "REABIERTO"
+   ],
+   "regla": "Solo con motivo, autorización y nueva versión.",
+   "origen": "Guía v1.4 §4"
+  },
+  {
+   "de": "RETRABAJO",
+   "a": [
+    "EN_EJECUCION"
+   ],
+   "regla": "Vuelve a ejecución con las observaciones de QA o del aprobador.",
+   "origen": "añadida (hueco de la Guía; confirmar)"
+  },
+  {
+   "de": "ESCALADO",
+   "a": [
+    "EN_CLASIFICACION",
+    "PLANIFICADO",
+    "RECHAZADO",
+    "CANCELADO"
+   ],
+   "regla": "Una persona identificada decide cómo seguir.",
+   "origen": "añadida (hueco de la Guía; confirmar)"
+  },
+  {
+   "de": "REABIERTO",
+   "a": [
+    "EN_CLASIFICACION"
+   ],
+   "regla": "Se vuelve a clasificar con la nueva versión.",
+   "origen": "añadida (hueco de la Guía; confirmar)"
+  }
+ ],
+ "reglas_motor": [
+  "El LLM nunca cambia estados: propone, el motor valida.",
+  "ENTREGADO desde EN_QA solo con riesgo bajo y QA conforme.",
+  "PENDIENTE_APROBACION → ENTREGADO exige aprobación de una persona distinta del autor y de la misma versión.",
+  "Toda transición registra actor, fecha, estado anterior y nuevo, motivo, versión de workflow, evidencia y correlación."
+ ]
+}

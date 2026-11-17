@@ -1,0 +1,83 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "varios/encargo",
+ "title": "Encargo",
+ "type": "object",
+ "required": [
+  "id",
+  "tenant",
+  "titulo",
+  "objetivo",
+  "estado",
+  "riesgo",
+  "creado_por",
+  "version_definicion"
+ ],
+ "properties": {
+  "id": {
+   "type": "string"
+  },
+  "tenant": {
+   "type": "string",
+   "description": "Se obtiene de la identidad autenticada, nunca del cuerpo de la petición"
+  },
+  "titulo": {
+   "type": "string"
+  },
+  "objetivo": {
+   "type": "string"
+  },
+  "confirmado": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "inferido": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "desconocido": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "estado": {
+   "type": "string"
+  },
+  "decision": {
+   "enum": [
+    "CONTINUAR",
+    "PREGUNTAR",
+    "ESCALAR",
+    "DERIVAR",
+    "RECHAZAR"
+   ]
+  },
+  "riesgo": {
+   "enum": [
+    "bajo",
+    "medio",
+    "alto",
+    "critico"
+   ]
+  },
+  "proceso": {
+   "type": "string",
+   "pattern": "^P[0-9]{2}$"
+  },
+  "criterio_aceptacion": {
+   "type": "string"
+  },
+  "creado_por": {
+   "type": "string"
+  },
+  "version_definicion": {
+   "type": "string"
+  }
+ },
+ "additionalProperties": false
+}

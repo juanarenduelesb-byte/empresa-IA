@@ -57,6 +57,18 @@
   </section>
 
   <section>
+    <div class="sec-head"><p class="eyebrow">Ya en el repositorio</p><h2>38 procesos con 20 apartados y un motor que ya aplica las reglas.</h2></div>
+    <div class="grid g3">
+      <div class="card"><h3>Catálogo P01–P38</h3><p class="muted">Cada proceso con inicio, tareas, responsables, aprobaciones, timeouts, evidencias, KPI y pruebas.</p><p class="small"><a href="https://github.com/juanarenduelesb-byte/empresa-IA/tree/main/processes/catalog">Abrir en GitHub</a></p></div>
+      <div class="card"><h3>Ciclo del encargo</h3><p class="muted">De la recepción a la entrega, con QA, aprobación humana y reintentos.</p><p class="small"><a href="https://github.com/juanarenduelesb-byte/empresa-IA/tree/main/processes/diagrams/ciclo-encargo.md">Abrir en GitHub</a></p></div>
+      <div class="card"><h3>Definiciones ejecutables</h3><p class="muted">Estados y workflow en JSON que el motor valida.</p><p class="small"><a href="https://github.com/juanarenduelesb-byte/empresa-IA/tree/main/processes/definitions">Abrir en GitHub</a></p></div>
+      <div class="card"><h3>Motor mínimo</h3><p class="muted">Python con 36 pruebas: nadie se aprueba a sí mismo y el cliente sale de la identidad. Sin base de datos todavía.</p><p class="small"><a href="https://github.com/juanarenduelesb-byte/empresa-IA/tree/main/src/varios/procesos">Abrir en GitHub</a></p></div>
+      <div class="card"><h3>Runbooks</h3><p class="muted">Caída del proveedor, fuga, credencial, workflow fallido, coste y restauración. Sin ensayar.</p><p class="small"><a href="https://github.com/juanarenduelesb-byte/empresa-IA/tree/main/processes/runbooks">Abrir en GitHub</a></p></div>
+      <div class="card"><h3>Proceso de referencia</h3><p class="muted">Apertura de siniestros en corredurías: hipótesis y preguntas para validar.</p><p class="small"><a href="https://github.com/juanarenduelesb-byte/empresa-IA/tree/main/processes/referencia-seguros-apertura-siniestros">Abrir en GitHub</a></p></div>
+    </div>
+  </section>
+
+  <section>
     <div class="sec-head"><p class="eyebrow">Estados</p><h2>Cada cosa tiene su propia lista de estados. No se mezclan.</h2><p class="lede">Los documentos originales usaban tres listas distintas sin decir a qué objeto se refería cada una. Aquí van separadas. Los nombres en código se fijarán en el software; las flechas indican el camino normal.</p></div>
     <div class="grid" style="gap:12px">
       <div class="card"><h4>Encargo <span class="muted small">· lo que pide un cliente</span></h4><div class="chain"><span>Recibido</span><i>→</i><span>En clasificación</span><i>→</i><span>Pendiente de información</span><i>→</i><span>Planificado</span><i>→</i><span>En ejecución</span><i>→</i><span>En QA</span><i>→</i><span>Pendiente de aprobación</span><i>→</i><span>Entregado</span><i>→</i><span>Cerrado</span></div><p class="small muted mt">Alternativos: Bloqueado, Escalado, Retrabajo, Rechazado, Cancelado, Reabierto. Diagrama completo en el <a href="atlas.html#estados">Atlas, mapa 16</a>.</p></div>

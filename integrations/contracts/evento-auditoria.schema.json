@@ -1,0 +1,59 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "varios/evento-auditoria",
+ "title": "Evento de auditoría",
+ "type": "object",
+ "required": [
+  "id",
+  "momento",
+  "tenant",
+  "actor",
+  "accion",
+  "objeto",
+  "antes",
+  "despues"
+ ],
+ "properties": {
+  "id": {
+   "type": "string"
+  },
+  "momento": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "tenant": {
+   "type": "string"
+  },
+  "actor": {
+   "type": "string"
+  },
+  "accion": {
+   "type": "string"
+  },
+  "objeto": {
+   "type": "string"
+  },
+  "antes": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "despues": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "motivo": {
+   "type": "string"
+  },
+  "version_definicion": {
+   "type": "string"
+  },
+  "clave_idempotencia": {
+   "type": "string"
+  }
+ },
+ "additionalProperties": false
+}

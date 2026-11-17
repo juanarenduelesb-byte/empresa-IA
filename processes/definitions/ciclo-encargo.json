@@ -1,0 +1,220 @@
+{
+ "id": "ciclo-encargo",
+ "version": "0.1.0",
+ "estado": "draft",
+ "dueno": "ceo-digital",
+ "proposito": "Ciclo completo de un encargo interno con datos inventados (MVP de la Guía v1.4)",
+ "disparador": "Petición autenticada (P01)",
+ "objeto_estado": "encargo",
+ "tareas": [
+  {
+   "id": "alta",
+   "proceso": "P01",
+   "tipo": "sistema",
+   "responsable_logico": "ceo-digital",
+   "timeout_s": 30,
+   "max_intentos": 1,
+   "reintentar_solo": [
+    "transitorio",
+    "dependencia_externa"
+   ],
+   "criterio_aceptacion": "Encargo registrado con tenant de la identidad"
+  },
+  {
+   "id": "clasificar",
+   "proceso": "P02",
+   "tipo": "ia",
+   "responsable_logico": "ceo-digital",
+   "timeout_s": 120,
+   "max_intentos": 2,
+   "reintentar_solo": [
+    "transitorio",
+    "dependencia_externa"
+   ],
+   "criterio_aceptacion": "Contrato de tarea y una de las cinco decisiones con motivo"
+  },
+  {
+   "id": "aclarar",
+   "proceso": "P03",
+   "tipo": "humano",
+   "responsable_logico": "ceo-digital",
+   "timeout_s": 259200,
+   "max_intentos": 1,
+   "reintentar_solo": [
+    "transitorio",
+    "dependencia_externa"
+   ],
+   "criterio_aceptacion": "Respuesta registrada o cancelación tras dos recordatorios"
+  },
+  {
+   "id": "recuperar",
+   "proceso": "P04",
+   "tipo": "sistema",
+   "responsable_logico": "bibliotecario",
+   "timeout_s": 60,
+   "max_intentos": 3,
+   "reintentar_solo": [
+    "transitorio",
+    "dependencia_externa"
+   ],
+   "criterio_aceptacion": "Secciones con procedencia y ACL aplicada"
+  },
+  {
+   "id": "planificar",
+   "proceso": "P05",
+   "tipo": "ia",
+   "responsable_logico": "ceo-digital",
+   "timeout_s": 180,
+   "max_intentos": 2,
+   "reintentar_solo": [
+    "transitorio",
+    "dependencia_externa"
+   ],
+   "criterio_aceptacion": "Cada tarea con criterio de aceptación verificable",
+   "aprobacion": {
+    "si_riesgo": [
+     "medio",
+     "alto"
+    ],
+    "rol": "socio"
+   }
+  },
+  {
+   "id": "asignar",
+   "proceso": "P06",
+   "tipo": "regla",
+   "responsable_logico": "ceo-digital",
+   "timeout_s": 30,
+   "max_intentos": 3,
+   "reintentar_solo": [
+    "transitorio",
+    "dependencia_externa"
+   ],
+   "criterio_aceptacion": "Tareas asignadas a capacidades approved"
+  },
+  {
+   "id": "ejecutar",
+   "proceso": "P08",
+   "tipo": "sistema",
+   "responsable_logico": "capacidad asignada",
+   "timeout_s": 900,
+   "max_intentos": 3,
+   "reintentar_solo": [
+    "transitorio",
+    "dependencia_externa"
+   ],
+   "criterio_aceptacion": "Salida que cumple su esquema"
+  },
+  {
+   "id": "qa",
+   "proceso": "P09",
+   "tipo": "ia",
+   "responsable_logico": "calidad-riesgos",
+   "timeout_s": 300,
+   "max_intentos": 1,
+   "reintentar_solo": [
+    "transitorio",
+    "dependencia_externa"
+   ],
+   "criterio_aceptacion": "Veredicto con evidencia, por alguien distinto del autor"
+  },
+  {
+   "id": "aprobar",
+   "proceso": "P10",
+   "tipo": "humano",
+   "responsable_logico": "socio",
+   "timeout_s": 604800,
+   "max_intentos": 1,
+   "reintentar_solo": [
+    "transitorio",
+    "dependencia_externa"
+   ],
+   "criterio_aceptacion": "Aprobación de la versión exacta por una persona distinta del autor",
+   "aprobacion": {
+    "si_riesgo": [
+     "medio",
+     "alto",
+     "critico"
+    ],
+    "rol": "socio"
+   }
+  },
+  {
+   "id": "entregar",
+   "proceso": "P11",
+   "tipo": "sistema",
+   "responsable_logico": "ceo-digital",
+   "timeout_s": 60,
+   "max_intentos": 3,
+   "reintentar_solo": [
+    "transitorio",
+    "dependencia_externa"
+   ],
+   "criterio_aceptacion": "Entrega con limitaciones y precedente propuesto"
+  }
+ ],
+ "flujo": [
+  [
+   "alta",
+   "clasificar"
+  ],
+  [
+   "clasificar",
+   "aclarar"
+  ],
+  [
+   "aclarar",
+   "clasificar"
+  ],
+  [
+   "clasificar",
+   "recuperar"
+  ],
+  [
+   "recuperar",
+   "planificar"
+  ],
+  [
+   "planificar",
+   "asignar"
+  ],
+  [
+   "asignar",
+   "ejecutar"
+  ],
+  [
+   "ejecutar",
+   "qa"
+  ],
+  [
+   "qa",
+   "ejecutar"
+  ],
+  [
+   "qa",
+   "aprobar"
+  ],
+  [
+   "qa",
+   "entregar"
+  ],
+  [
+   "aprobar",
+   "entregar"
+  ],
+  [
+   "aprobar",
+   "ejecutar"
+  ]
+ ],
+ "errores": {
+  "no_reintentar": [
+   "autorizacion",
+   "seguridad",
+   "politica",
+   "permanente"
+  ],
+  "agotados": "BLOQUEADO o ESCALADO con evidencia y alternativa manual"
+ },
+ "compensacion": "No hay acciones externas en el MVP; cuando las haya, cada una declara su compensación o que es irreversible (y entonces requiere aprobación)."
+}

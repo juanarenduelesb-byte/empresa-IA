@@ -46,7 +46,7 @@ CEO digital
 
 ## 6. Departamentos y especialistas
 - [CEO digital](../../knowledge/direccion/ceo-digital.md)
-- [Especialistas sectoriales](../../knowledge/procesos/especialista-sectorial.md)
+- [Coordinación sectorial y seguros](../../knowledge/sectores/especialista-sectorial.md)
 
 ## 7. Decisiones y reglas
 - La confianza del modelo no sustituye reglas ni aprobaciones.
@@ -108,4 +108,4 @@ Decisión registrada con motivo.
 - Encargo con datos personales sensibles: riesgo alto y ESCALADO.
 
 ---
-Especialistas: CEO digital, Especialistas sectoriales. Definición original: Guía de Arranque v1.4 (Anexo I y II).
+Especialistas: CEO digital, Coordinación sectorial y seguros. Definición original: Guía de Arranque v1.4 (Anexo I y II).

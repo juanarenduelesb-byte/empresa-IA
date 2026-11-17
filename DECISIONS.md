@@ -78,6 +78,18 @@ No construir primero un CEO omnisciente; descubrir, diseñar, integrar y medir u
 - Riesgo: parecer más avanzado de lo que está. No es el piloto: no hay base de datos, ni API, ni aislamiento real entre clientes.
 - Estado: propuesta.
 
+## D-015 — Entregables en archivos reales, memoria y Google Drive en la oficina de agentes
+- Fecha: 2026-11-17
+- Decisión:
+  - La oficina de agentes genera entregables en `.pptx`, `.xlsx`, `.docx` y diagramas de proceso, con una única plantilla de marca de Varios.
+  - Guarda una memoria de encargos, lecciones, correcciones y decisiones que se consulta antes de cada encargo.
+  - Puede leer (no escribir) carpetas de Google Drive con el conector del usuario.
+  - Para generar y leer archivos usa cinco librerías de navegador sin modificar en `oficina/vendor/`: PptxGenJS, ExcelJS y docx (MIT), JSZip (MIT) y PDF.js (Apache-2.0). Se cargan solo cuando hacen falta.
+- Motivo: los socios necesitan entregables utilizables, no solo texto, y que lo hecho sirva para lo siguiente. Las librerías son estándar, se ejecutan en local y no envían datos a terceros.
+- Alcance: solo la oficina (artifact). No forman parte del stack del piloto (Python, FastAPI…); si el piloto necesita generar archivos, se decidirá aparte.
+- Riesgo: un formato mal generado o una memoria con lecciones equivocadas. Mitigación: todo sale como borrador; los entregables tienen versiones y las entradas de memoria se pueden borrar. Drive solo lee y pide permiso la primera vez.
+- Estado: propuesta.
+
 ## Decisiones pendientes (con fecha límite)
 | Decisión | Quién | Antes de |
 |---|---|---|

@@ -68,7 +68,7 @@
    ],
    "leer": [
     "processes/templates/proceso-cliente.md",
-    "knowledge/procesos/sectores.md"
+    "knowledge/sectores/README.md"
    ],
    "regla_cruzada": "Validar con quien ejecuta el proceso."
   },
@@ -173,10 +173,34 @@
     "P33"
    ],
    "leer": [
-    "knowledge/procesos/sectores.md",
+    "knowledge/sectores/README.md",
     "processes/referencia-seguros-apertura-siniestros/README.md"
    ],
    "regla_cruzada": "El especialista de seguros consulta también los procesos transversales."
+  },
+  {
+   "id": "sector",
+   "tarea": "Trabajo en otro sector (sanidad, despachos, finanzas, industria, logística)",
+   "responsables": [
+    "especialista-sectorial"
+   ],
+   "consultar_a": [
+    "sector-sanidad",
+    "sector-despachos",
+    "sector-financiero",
+    "sector-industria",
+    "sector-logistica"
+   ],
+   "procesos": [
+    "P02",
+    "P32",
+    "P33"
+   ],
+   "leer": [
+    "knowledge/sectores/README.md",
+    "knowledge/sectores/priorizacion.md"
+   ],
+   "regla_cruzada": "La coordinación sectorial elige al experto; el experto consulta a Legal si hay datos sensibles."
   },
   {
    "id": "cambio-modelo",
@@ -605,9 +629,9 @@
    ]
   },
   "especialista-sectorial": {
-   "nombre": "Especialistas sectoriales",
-   "departamento": "procesos",
-   "ficha": "knowledge/procesos/especialista-sectorial.md",
+   "nombre": "Coordinación sectorial y seguros",
+   "departamento": "sectores",
+   "ficha": "knowledge/sectores/especialista-sectorial.md",
    "oficina": [
     "seg"
    ],
@@ -621,12 +645,152 @@
     "CLAUDE.md",
     "knowledge/INDEX.md",
     "precedents/README.md",
-    "knowledge/procesos/sectores.md",
+    "knowledge/sectores/README.md",
+    "knowledge/sectores/priorizacion.md",
     "processes/referencia-seguros-apertura-siniestros/README.md"
    ],
    "convoca": [
     "arquitecto-procesos",
-    "cumplimiento"
+    "cumplimiento",
+    "y"
+   ]
+  },
+  "sector-sanidad": {
+   "nombre": "Experto en sanidad privada",
+   "departamento": "sectores",
+   "ficha": "knowledge/sectores/sector-sanidad.md",
+   "oficina": [
+    "sal"
+   ],
+   "procesos": [
+    "P02",
+    "P32",
+    "P33",
+    "P19"
+   ],
+   "leer": [
+    "DECISIONS.md",
+    "CLAUDE.md",
+    "knowledge/INDEX.md",
+    "precedents/README.md",
+    "knowledge/sectores/README.md",
+    "knowledge/sectores/priorizacion.md"
+   ],
+   "convoca": [
+    "legal-privacidad",
+    "cumplimiento",
+    "ciberseguridad",
+    "arquitecto-procesos"
+   ]
+  },
+  "sector-despachos": {
+   "nombre": "Experto en asesorías, gestorías y despachos",
+   "departamento": "sectores",
+   "ficha": "knowledge/sectores/sector-despachos.md",
+   "oficina": [
+    "ase"
+   ],
+   "procesos": [
+    "P02",
+    "P32",
+    "P33"
+   ],
+   "leer": [
+    "DECISIONS.md",
+    "CLAUDE.md",
+    "knowledge/INDEX.md",
+    "precedents/README.md",
+    "knowledge/sectores/README.md",
+    "knowledge/sectores/priorizacion.md",
+    "knowledge/administracion-finanzas/"
+   ],
+   "convoca": [
+    "administrativo",
+    "legal-privacidad",
+    "arquitecto-procesos"
+   ]
+  },
+  "sector-financiero": {
+   "nombre": "Experto en servicios financieros no bancarios",
+   "departamento": "sectores",
+   "ficha": "knowledge/sectores/sector-financiero.md",
+   "oficina": [
+    "fnz"
+   ],
+   "procesos": [
+    "P02",
+    "P32",
+    "P33",
+    "P27",
+    "P24"
+   ],
+   "leer": [
+    "DECISIONS.md",
+    "CLAUDE.md",
+    "knowledge/INDEX.md",
+    "precedents/README.md",
+    "knowledge/sectores/README.md",
+    "knowledge/sectores/priorizacion.md",
+    "knowledge/seguridad-legal/"
+   ],
+   "convoca": [
+    "cumplimiento",
+    "ciberseguridad",
+    "legal-privacidad"
+   ]
+  },
+  "sector-industria": {
+   "nombre": "Experto en industria manufacturera",
+   "departamento": "sectores",
+   "ficha": "knowledge/sectores/sector-industria.md",
+   "oficina": [
+    "ind"
+   ],
+   "procesos": [
+    "P02",
+    "P32",
+    "P33",
+    "P21"
+   ],
+   "leer": [
+    "DECISIONS.md",
+    "CLAUDE.md",
+    "knowledge/INDEX.md",
+    "precedents/README.md",
+    "knowledge/sectores/README.md",
+    "knowledge/sectores/priorizacion.md"
+   ],
+   "convoca": [
+    "arquitecto-procesos",
+    "integraciones",
+    "ciberseguridad"
+   ]
+  },
+  "sector-logistica": {
+   "nombre": "Experto en logística y transporte",
+   "departamento": "sectores",
+   "ficha": "knowledge/sectores/sector-logistica.md",
+   "oficina": [
+    "logi"
+   ],
+   "procesos": [
+    "P02",
+    "P32",
+    "P33",
+    "P22"
+   ],
+   "leer": [
+    "DECISIONS.md",
+    "CLAUDE.md",
+    "knowledge/INDEX.md",
+    "precedents/README.md",
+    "knowledge/sectores/README.md",
+    "knowledge/sectores/priorizacion.md"
+   ],
+   "convoca": [
+    "arquitecto-procesos",
+    "integraciones",
+    "legal-privacidad"
    ]
   },
   "arquitecto-tecnico": {
@@ -841,7 +1005,7 @@
     "knowledge/INDEX.md",
     "precedents/README.md",
     "knowledge/seguridad-legal/",
-    "knowledge/procesos/sectores.md"
+    "knowledge/sectores/README.md"
    ],
    "convoca": [
     "legal-privacidad",

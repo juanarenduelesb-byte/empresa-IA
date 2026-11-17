@@ -113,6 +113,18 @@ No construir primero un CEO omnisciente; descubrir, diseñar, integrar y medir u
 - Riesgo: un volcado con datos que no debían subir. Mitigación: filtros en el script, aceptación con revisión según D-012 y escáner de secretos en `check_repo.py`.
 - Estado: propuesta.
 
+## D-018 — El cerebro pasa a ser un grafo de conocimiento con relaciones explicadas
+- Fecha: 2026-11-17
+- Decisión:
+  - `tools/brain_build.py` añade al cerebro un grafo (`tools/grafo.py`) con nodos tipados (documentos, secciones, decisiones, procesos, agentes, especialistas, habilidades, fuentes, puertas y departamentos) y relaciones con etiqueta de confianza: EXTRACTADA (escrita en la fuente, 1,0), INFERIDA (mismo tema; 0,85, 0,75 o 0,65) y AMBIGUA (varios destinos posibles, 0,5).
+  - Calcula comunidades de temas (Louvain), nodos centrales, puentes, conexiones sorprendentes, huecos (decisiones que nadie cita, referencias rotas, procesos sin responsable) y preguntas sugeridas, y lo escribe en `knowledge/grafo/INFORME.md`.
+  - La oficina da a cada agente, además de las secciones que encajan, lo que esas secciones citan (decisiones con su estado, procesos, fuentes) y hasta tres secciones relacionadas marcadas como INFERIDAS. La vista del cerebro enseña el informe y permite trazar el camino entre dos cosas con la confianza de su eslabón más débil.
+- Motivo: la búsqueda por texto encontraba secciones sueltas, pero no lo que las sostiene (la decisión que las justifica, el proceso al que pertenecen). Las ideas vienen de Graphify (Apache-2.0); el código es propio.
+- Alternativas descartadas: usar Graphify tal cual (orientado a código; necesita NetworkX, Leiden y un modelo para leer documentos, lo que añade dependencias y tokens); base de datos de grafos (no hace falta con 3.400 nodos).
+- Tecnología nueva: ninguna. Python estándar.
+- Riesgo: que una relación INFERIDA se tome como hecho. Mitigación: va etiquetada y con puntuación, y el agente recibe la instrucción de comprobarla.
+- Estado: propuesta.
+
 ## Decisiones pendientes (con fecha límite)
 | Decisión | Quién | Antes de |
 |---|---|---|

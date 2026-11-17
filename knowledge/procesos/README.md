@@ -9,6 +9,5 @@ Descubre, diseña, implanta y mide procesos.
 | [Responsable de implantación de clientes](implantacion-clientes.md) | — | P38, P11, P12 |
 | [Especialista en automatización](automatizacion.md) | int | P08, P21, P22, P36 |
 | [Especialista en métricas](metricas.md) | kpi | P18, P29, P37 |
-| [Especialistas sectoriales](especialista-sectorial.md) | seg | P02, P32, P33 |
 
-Fichas por sector: [sectores.md](sectores.md).
+El conocimiento de cada sector está en el departamento de [Sectores](../sectores/README.md).

@@ -8,7 +8,7 @@ Ciclo completo de un encargo: [diagrams/ciclo-encargo.md](../diagrams/ciclo-enca
 | Id | Proceso | Origen | Cuándo | Implementado | Especialistas |
 |---|---|---|---|---|---|
 | P01 | [Alta y recepción de petición](P01-alta-y-recepcion-de-peticion.md) | Guía v1.4 | MVP | Parcial | CEO digital |
-| P02 | [Clasificación y triaje](P02-clasificacion-y-triaje.md) | Guía v1.4 | MVP | No | CEO digital, Especialistas sectoriales |
+| P02 | [Clasificación y triaje](P02-clasificacion-y-triaje.md) | Guía v1.4 | MVP | No | CEO digital, Coordinación sectorial y seguros |
 | P03 | [Gestión de aclaraciones](P03-gestion-de-aclaraciones.md) | Guía v1.4 | MVP | No | CEO digital |
 | P04 | [Recuperación de conocimiento](P04-recuperacion-de-conocimiento.md) | Guía v1.4 | MVP | Prototipo | Bibliotecario / responsable de conocimiento, Arquitecto de datos e IA |
 | P05 | [Diseño del plan](P05-diseno-del-plan.md) | Guía v1.4 | MVP | No | CEO digital, Responsable de decisiones y seguimiento |
@@ -38,7 +38,7 @@ Ciclo completo de un encargo: [diagrams/ciclo-encargo.md](../diagrams/ciclo-enca
 | P29 | [Gestión de costes y capacidad](P29-gestion-de-costes-y-capacidad.md) | Guía v1.4 | Antes de automatizar | No | Especialista en costes y proveedores, Especialista en métricas |
 | P30 | [Gestión de identidades y secretos](P30-gestion-de-identidades-y-secretos.md) | Guía v1.4 | Antes de datos reales | No | Especialista en ciberseguridad, Especialista en integraciones |
 | P31 | [Calificación de oportunidad](P31-calificacion-de-oportunidad.md) | Atlas v1.1 (propuesta) | MVP | No | Director comercial, Especialista en prospección |
-| P32 | [Descubrimiento de procesos](P32-descubrimiento-de-procesos.md) | Atlas v1.1 (propuesta) | MVP | No | Arquitecto de procesos, Especialistas sectoriales, Especialista en métricas |
+| P32 | [Descubrimiento de procesos](P32-descubrimiento-de-procesos.md) | Atlas v1.1 (propuesta) | MVP | No | Arquitecto de procesos, Coordinación sectorial y seguros, Especialista en métricas |
 | P33 | [Diseño y validación TO-BE](P33-diseno-y-validacion-to-be.md) | Atlas v1.1 (propuesta) | MVP | No | Arquitecto de procesos, Especialista en ciberseguridad, Especialista legal y privacidad, Especialista en métricas |
 | P34 | [Gestión de definiciones de proceso](P34-gestion-de-definiciones-de-proceso.md) | Atlas v1.1 (propuesta) | MVP | Sí | Arquitecto de procesos, Especialista backend |
 | P35 | [Gestión de instancias y excepciones](P35-gestion-de-instancias-y-excepciones.md) | Atlas v1.1 (propuesta) | MVP | No | Especialista backend, Especialista en automatización |

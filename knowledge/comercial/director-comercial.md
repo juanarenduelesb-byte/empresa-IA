@@ -35,7 +35,7 @@
 
 ### A quién convoca
 - [Arquitecto de procesos](../procesos/arquitecto-procesos.md)
-- [Especialistas sectoriales](../procesos/especialista-sectorial.md)
+- [Coordinación sectorial y seguros](../sectores/especialista-sectorial.md)
 - [Especialista legal y privacidad](../seguridad-legal/legal-privacidad.md) (antes de propuestas contractuales)
 
 ### Permisos

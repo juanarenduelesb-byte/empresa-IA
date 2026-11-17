@@ -20,7 +20,7 @@
 - [`knowledge/INDEX.md`](../INDEX.md)
 - [`precedents/README.md`](../../precedents/README.md)
 - [`knowledge/seguridad-legal/`](.)
-- [`knowledge/procesos/sectores.md`](../procesos/sectores.md)
+- [`knowledge/sectores/README.md`](../sectores/README.md)
 
 ### Procesos que puede ejecutar
 - [P19 · Política de uso y límites](../../processes/catalog/P19-politica-de-uso-y-limites.md)
@@ -33,7 +33,7 @@
 ### A quién convoca
 - [Especialista legal y privacidad](legal-privacidad.md)
 - [Especialista en ciberseguridad](ciberseguridad.md)
-- [Especialistas sectoriales](../procesos/especialista-sectorial.md)
+- [Coordinación sectorial y seguros](../sectores/especialista-sectorial.md)
 
 ### Permisos
 - Lectura

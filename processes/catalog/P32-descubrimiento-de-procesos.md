@@ -43,7 +43,7 @@ Arquitecto de procesos
 
 ## 6. Departamentos y especialistas
 - [Arquitecto de procesos](../../knowledge/procesos/arquitecto-procesos.md)
-- [Especialistas sectoriales](../../knowledge/procesos/especialista-sectorial.md)
+- [Coordinación sectorial y seguros](../../knowledge/sectores/especialista-sectorial.md)
 - [Especialista en métricas](../../knowledge/procesos/metricas.md)
 
 ## 7. Decisiones y reglas
@@ -97,4 +97,4 @@ AS-IS validado.
 - Muestreo de casos reales contra el mapa.
 
 ---
-Especialistas: Arquitecto de procesos, Especialistas sectoriales, Especialista en métricas. Definición original: Atlas Evolución v1.1 §10 (propuesta).
+Especialistas: Arquitecto de procesos, Coordinación sectorial y seguros, Especialista en métricas. Definición original: Atlas Evolución v1.1 §10 (propuesta).

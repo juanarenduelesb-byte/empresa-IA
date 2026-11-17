@@ -27,6 +27,7 @@ Puertas: G0–G6 = cliente; L0–L4 = técnicas. No confundirlas.
 - Antes de añadir una tecnología nueva, justificar por qué en DECISIONS.md.
 - Si cambias algo de `docs/`, revisa si la web de `site/` dice lo mismo.
 - Los diagramas se editan solo en `tools/atlas_data.py` y se regeneran con `python3 tools/gen.py site/js/atlas-data.js docs/atlas`.
+- Si cambias documentos, regenera el cerebro de la oficina con `python3 tools/brain_build.py oficina/brain.json`.
 
 ## Estructura
 - `docs/` documentación funcional y técnica (empieza por `00-negocio.md`)

@@ -608,8 +608,15 @@ var BRN=null,IDX=null,DOCMAP={};
 function norm(s){return String(s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'')}
 var STOP={};('de la que el en y a los se del las un por con no una su para es al lo como mas o pero sus le ya este si porque esta entre cuando muy sin sobre tambien me hasta hay donde quien desde todo nos durante todos uno les ni contra otros ese eso ante ellos esto antes algunos unos otro otras otra tanto esa estos mucho quienes nada muchos cual poco ella estar estas algunas algo cada son ser fue han hace hacer debe puede sea tiene tienen segun prepara preparar haz dame quiero necesito').split(' ').forEach(function(w){STOP[w]=1});
 function toks(s){var m=norm(s).match(/[a-z0-9]{3,}/g)||[];return m.filter(function(w){return !STOP[w]}).map(function(w){return w.length>5?w.replace(/(es|s)$/,''):w})}
+var GR=null;
+function loadGraph(g){if(!g)return null;var A={},key=function(x){return x>=0?'n'+x:'c'+(-1-x)};
+  g.aristas.forEach(function(e){var a=key(e[0]),b=key(e[1]),r=g.rels[e[2]],sc=e[3]/100,t=g.tags[e[4]];(A[a]=A[a]||[]).push([b,r,sc,t,1]);(A[b]=A[b]||[]).push([a,r,sc,t,0])});
+  var byId={};g.nodos.forEach(function(n,i){byId[n[0]]=i});return {g:g,A:A,byId:byId}}
+function gLabel(k){if(!GR)return k;if(k[0]==='c'){var c=BRN.chunks[+k.slice(1)];return c?(DOCMAP[c.d]?DOCMAP[c.d].t:'')+(c.h?' › '+c.h:''):k}var n=GR.g.nodos[+k.slice(1)];return n?n[2]:k}
+function gType(k){if(k[0]==='c')return 'seccion';var n=GR.g.nodos[+k.slice(1)];return n?GR.g.tipos[n[1]]:''}
+function gDocKey(did){return GR&&GR.byId[did]!=null?'n'+GR.byId[did]:null}
 function loadBrain(b){
-  BRN=b;DOCMAP={};b.docs.forEach(function(d){DOCMAP[d.id]=d});
+  BRN=b;DOCMAP={};b.docs.forEach(function(d){DOCMAP[d.id]=d});GR=loadGraph(b.graph);
   DOCS=b.docs.map(function(d){return [d.id,d.t,d.g,d.s,d.p]});LINKS=b.links;
   var df={},tot=0;
   IDX=b.chunks.map(function(c,i){var d=DOCMAP[c.d],tf={},T=toks(c.t),H=toks(c.h+' '+d.t+' '+d.p);T.forEach(function(w){tf[w]=(tf[w]||0)+1});H.forEach(function(w){tf[w]=(tf[w]||0)+3});var L=T.length+H.length*3;tot+=L;Object.keys(tf).forEach(function(w){df[w]=(df[w]||0)+1});return {i:i,tf:tf,len:L||1}});
@@ -624,10 +631,31 @@ function search(q,k){
   return out;
 }
 function brainFor(q,k,max){
-  var ids=search(q,k||6),o='',refs=[];
-  ids.forEach(function(i){var c=BRN.chunks[i],piece='['+refLabel(i)+']\n'+c.t.slice(0,2400)+'\n\n';if(o.length+piece.length>(max||9000))return;o+=piece;refs.push(i)});
-  return {txt:o,refs:refs};
+  max=max||9000;var ids=search(q,k||6),o='',refs=[];
+  var room=GR?Math.round(max*0.72):max;
+  ids.forEach(function(i){var c=BRN.chunks[i],piece='['+refLabel(i)+']\n'+c.t.slice(0,2400)+'\n\n';if(o.length+piece.length>room)return;o+=piece;refs.push(i)});
+  if(!GR||!refs.length)return {txt:o,refs:refs};
+  // Lo conectado en el grafo a esas secciones: decisiones, procesos y fuentes que citan (EXTRACTADA) y secciones relacionadas (INFERIDA ≥ 0,75)
+  var seen={},ent=[],rel=[],mapa=[];refs.forEach(function(i){seen['c'+i]=1});
+  refs.forEach(function(i){(GR.A['c'+i]||[]).slice().sort(function(a,b){return b[2]-a[2]}).forEach(function(e){var x=e[0];if(seen[x])return;var ty=gType(x);
+    if(e[3]==='EXTRACTADA'&&/decision|proceso|fuente/.test(ty)){seen[x]=1;ent.push([x,ty]);mapa.push('['+refLabel(i)+'] --'+e[1]+'--> '+gLabel(x)+' ['+e[3]+']')}
+    else if(ty==='seccion'&&e[3]==='INFERIDA'&&e[2]>=0.75&&rel.length<3){seen[x]=1;rel.push([+x.slice(1),e[2]]);mapa.push('['+refLabel(i)+'] --relacionada--> ['+refLabel(+x.slice(1))+'] [INFERIDA '+String(e[2]).replace('.',',')+']')}})});
+  var g='';
+  if(ent.length){g+='LO QUE ESAS SECCIONES CITAN (relación EXTRACTADA, escrita en la fuente):\n'+ent.slice(0,10).map(function(x){var ty=x[1],lab=gLabel(x[0]);
+    if(ty==='decision'){var id=lab.split(' · ')[0],d=(BRN.decisions||[]).find(function(y){return y.id===id});return '- '+lab+(d?' — '+(d.f['Decisión']||'').slice(0,260)+' (estado: '+(d.f.Estado||'?')+')':'')}
+    return '- '+lab}).join('\n')+'\n\n'}
+  rel.forEach(function(r){var c=BRN.chunks[r[0]],piece='['+refLabel(r[0])+'] (relacionada por tema, INFERIDA '+String(r[1]).replace('.',',')+': compruébala antes de apoyarte en ella)\n'+c.t.slice(0,900)+'\n\n';if(o.length+g.length+piece.length>max)return;g+=piece;refs.push(r[0])});
+  if(mapa.length&&o.length+g.length<max-200)g+='CÓMO SE CONECTA (grafo del cerebro):\n'+mapa.slice(0,8).join('\n')+'\n';
+  return {txt:o+g,refs:refs};
 }
+function gFind(q){if(!GR)return [];var nq=norm(q).trim(),out=[];if(!nq)return out;
+  GR.g.nodos.forEach(function(n,i){var l=norm(n[2]),t=GR.g.tipos[n[1]],pr={decision:4,proceso:4,agente:3.5,especialista:3,habilidad:3,fuente:3,puerta:3,departamento:2,documento:2}[t]||0;
+    if(l===nq||n[0].toLowerCase()===nq||l.indexOf(nq+' ·')===0)out.push([100+pr,'n'+i]);else if(l.indexOf(nq)>=0)out.push([10+pr-l.length/100,'n'+i])});
+  out.sort(function(a,b){return b[0]-a[0]});return out.slice(0,8).map(function(x){return x[1]})}
+function gPath(a,b){var dist={},prev={},done={},Q=[[0,a]];dist[a]=0;
+  while(Q.length){Q.sort(function(x,y){return x[0]-y[0]});var cur=Q.shift(),u=cur[1];if(done[u])continue;done[u]=1;if(u===b)break;
+    (GR.A[u]||[]).forEach(function(e){var nd=cur[0]+1+(1-e[2])*2;if(nd<(dist[e[0]]==null?1e9:dist[e[0]])){dist[e[0]]=nd;prev[e[0]]=[u,e[1],e[2],e[3],e[4]];Q.push([nd,e[0]])}})}
+  if(!prev[b])return null;var P=[],u=b;while(u!==a){var p=prev[u];P.unshift([p[0],p[1],p[2],p[3],u,p[4]]);u=p[0]}return P}
 function refLabel(i){var c=BRN&&BRN.chunks[i];if(!c)return 'sección '+i;var d=DOCMAP[c.d];return d.p+(c.h?' › '+c.h:'')}
 var GH='https://github.com/juanarenduelesb-byte/empresa-IA/blob/main/';
 
@@ -1378,6 +1406,27 @@ function openCal(){
 }
 
 // ---------- Cerebro ----------
+var GPATH={a:'',b:''};
+function docGraph(did){var k=gDocKey(did);if(!k)return '';var seen={},L=[];
+  var add=function(e){if(seen[e[0]]||e[1]==='parte_de')return;var ty=gType(e[0]);if(ty==='seccion'&&e[3]!=='INFERIDA')return;seen[e[0]]=1;L.push([e,ty])};
+  (GR.A[k]||[]).forEach(add);BRN.chunks.forEach(function(c,i){if(c.d===did)(GR.A['c'+i]||[]).forEach(function(e){if(e[0][0]!=='c'||BRN.chunks[+e[0].slice(1)].d!==did)add(e)})});
+  if(!L.length)return '';L.sort(function(a,b){return (a[1]==='seccion')-(b[1]==='seccion')||b[0][2]-a[0][2]});
+  return '<p class="sec">En el grafo ('+L.length+')</p><ul class="fx">'+L.slice(0,24).map(function(x){var e=x[0];return '<li>'+(e[4]?esc(e[1])+' →':'← '+esc(e[1]))+' '+esc(gLabel(e[0]))+' <span class="hint">('+x[1]+' · '+e[3]+(e[3]!=='EXTRACTADA'?' '+String(e[2]).replace('.',','):'')+')</span></li>'}).join('')+'</ul>'}
+function grafoPanel(){if(!GR)return '';var g=GR.g,L=function(i){return esc(g.nodos[i][2])};
+  var h='<p class="sec">Grafo de conocimiento</p><p class="hint" style="margin-top:0">'+g.nodos.length+' nodos (decisiones, procesos, agentes, fuentes…) y '+g.aristas.length.toLocaleString('es-ES')+' relaciones: EXTRACTADAS (escritas en la fuente), INFERIDAS (mismo tema, con puntuación) y AMBIGUAS (para revisar). Informe completo: <code>knowledge/grafo/INFORME.md</code>.</p>';
+  h+='<p class="sec">Camino entre dos cosas</p><div class="row" style="gap:6px"><input id="gA" placeholder="Ej.: D-011" value="'+esc(GPATH.a)+'" style="flex:1;min-width:0"><input id="gB" placeholder="Ej.: Experto en sanidad privada" value="'+esc(GPATH.b)+'" style="flex:1;min-width:0"><button class="btn sm" type="button" id="gGo">Ver</button></div><div id="gOut"></div>';
+  h+='<details class="skd"><summary><b>Nodos centrales</b></summary><ol class="fx">'+g.centrales.slice(0,10).map(function(c){return '<li>'+L(c[0])+' · '+c[1]+' conexiones</li>'}).join('')+'</ol></details>';
+  h+='<details class="skd"><summary><b>Comunidades de temas ('+g.comunidades.length+')</b></summary><ul class="fx">'+g.comunidades.map(function(c){return '<li><b>'+esc(c.etiqueta)+'</b> · '+c.n+' nodos · cohesión '+String(c.cohesion).replace('.',',')+'</li>'}).join('')+'</ul></details>';
+  h+='<details class="skd"><summary><b>Puentes entre temas</b></summary><ul class="fx">'+g.puentes.map(function(p){return '<li>'+L(p[0])+' · une '+(p[2].length+1)+' comunidades</li>'}).join('')+'</ul></details>';
+  var hu=g.huecos;h+='<details class="skd"><summary><b>Huecos</b></summary><ul class="fx"><li>Decisiones que nadie cita: '+(esc(hu.decisiones_sin_citar.join(', '))||'ninguna')+'</li><li>Documentos sin relaciones: '+hu.documentos_sin_enlaces.length+'</li><li>Procesos sin responsable: '+(esc(hu.procesos_sin_responsable.join(', '))||'ninguno')+'</li><li>Fuentes sin citar: '+(esc(hu.fuentes_sin_citar.join(', '))||'ninguna')+'</li><li>Referencias rotas: '+(esc(Object.keys(hu.referencias_rotas).join(', '))||'ninguna')+'</li></ul></details>';
+  h+='<details class="skd" open><summary><b>Preguntas sugeridas</b></summary><ul class="fx">'+g.preguntas.map(function(p){return '<li>'+esc(p[0])+' <span class="hint">'+esc(p[1])+'</span></li>'}).join('')+'</ul></details>';
+  return h}
+function bindGrafo(){if(!q('gGo'))return;var run=function(){GPATH.a=q('gA').value.trim();GPATH.b=q('gB').value.trim();var out=q('gOut');if(!GPATH.a||!GPATH.b){out.innerHTML='';return}
+    var A=gFind(GPATH.a),B=gFind(GPATH.b);if(!A.length||!B.length){out.innerHTML='<p class="hint">No encuentro «'+esc(!A.length?GPATH.a:GPATH.b)+'».</p>';return}
+    var P=gPath(A[0],B[0]);if(!P){out.innerHTML='<p class="hint">No hay camino entre '+esc(gLabel(A[0]))+' y '+esc(gLabel(B[0]))+'.</p>';return}
+    var mn=Math.min.apply(null,P.map(function(x){return x[2]}));
+    out.innerHTML='<ol class="fx">'+P.map(function(x){return '<li>'+esc(gLabel(x[0]))+' <span class="hint">('+gType(x[0])+')</span> '+(x[5]?'—'+esc(x[1])+'→':'←'+esc(x[1])+'—')+' '+esc(gLabel(x[4]))+' <span class="hint">('+gType(x[4])+') · '+x[3]+' '+String(x[2]).replace('.',',')+'</span></li>'}).join('')+'</ol><p class="hint">Confianza del camino: '+String(mn).replace('.',',')+' (la del eslabón más débil).'+(A.length>1||B.length>1?' Si no es lo que buscabas, sé más concreto: había varios candidatos.':'')+'</p>'};
+  q('gGo').onclick=run;[q('gA'),q('gB')].forEach(function(x){x.onkeydown=function(e){if(e.key==='Enter')run()}});if(GPATH.a&&GPATH.b)run()}
 function openBrain(opt){
   opt=opt||{};var sel=opt.chunk!=null&&BRN?BRN.chunks[opt.chunk].d:null,openChunk=opt.chunk!=null?opt.chunk:null,qtxt='',hov=null;
   var draw=function(){
@@ -1396,11 +1445,12 @@ function openBrain(opt){
       var rel=LINKS.filter(function(l){return l[0]===sel||l[1]===sel}).map(function(l){return l[0]===sel?l[1]:l[0]});
       var by=Object.values(S.tasks).filter(function(t){return (t.read||[]).some(function(i){return BRN.chunks[i]&&BRN.chunks[i].d===sel})});
       side='<button class="btn sm" type="button" id="bBack">Volver</button><p class="sec">Documento</p><h3 style="margin:0 0 4px">'+esc(d.t)+'</h3><p class="hint" style="margin:0"><code>'+esc(d.p)+'</code> · <a href="'+GH+encodeURI(d.p)+'" target="_blank" rel="noopener">Abrir en GitHub</a></p><p>'+esc(d.s)+'</p><p class="sec">Secciones ('+secs.length+')</p>'+secs.map(function(x){return '<details class="skd"'+(x[1]===openChunk?' open':'')+'><summary>'+esc(x[0].h||'(inicio)')+'</summary><div class="md">'+md(x[0].t)+'</div></details>'}).join('')+'<p class="sec">Enlazado con</p>'+(rel.map(function(r){return '<button type="button" class="tag lnk" data-go="'+r+'">'+esc(DOCMAP[r].t)+'</button>'}).join('')||'<span class="hint">Ningún enlace explícito.</span>')+'<p class="sec">Lo han leído</p>'+(by.map(card).join('')||'<p class="hint">Ningún encargo todavía.</p>');
+      side+=docGraph(sel);
     }else{
       var res=qtxt&&BRN?search(qtxt,8):[];
       side='<p class="sec" style="margin-top:0">Qué es</p><p>El cerebro es el repositorio <b>empresa-ia</b>: '+(BRN?BRN.docs.length+' documentos troceados en '+BRN.chunks.length+' secciones, con '+BRN.links.length+' enlaces. Generado el '+BRN.built.split('-').reverse().join('/')+'.':'no se ha podido cargar; los agentes usan solo el resumen fijo.')+' Antes de trabajar, cada agente recibe las secciones que mejor encajan con su encargo. Los cuadrados de colores del borde son entregas, enlazadas a lo que leyeron.</p>'+
       (BRN?'<p class="sec">Buscar en el cerebro</p><input type="text" id="bq" placeholder="Lo mismo que harían los agentes: escribe un tema" value="'+esc(qtxt)+'">'+(qtxt?'<div style="margin-top:8px">'+(res.map(function(i){return '<button type="button" class="tag lnk" data-ch="'+i+'">'+esc(refLabel(i))+'</button>'}).join('')||'<p class="hint">Nada encaja.</p>')+'</div>':''):'')+
-      '<p class="sec">Leyenda</p><p><span class="tag"><i class="lg" style="background:var(--ink)"></i>Raíz</span><span class="tag"><i class="lg" style="background:var(--accent)"></i>docs/</span><span class="tag"><i class="lg" style="background:var(--wine)"></i>Atlas</span><span class="tag"><i class="lg" style="background:var(--ochre)"></i>Fuentes</span><span class="tag"><i class="lg" style="background:var(--ink-muted)"></i>Otros</span></p><p class="hint">El cerebro se regenera desde el repositorio con <code>python3 tools/brain_build.py oficina/brain.json</code>. Lo que hace la oficina no se escribe en GitHub: descarga la nota de una entrega y súbela vosotros.</p>';
+      grafoPanel()+'<p class="sec">Leyenda</p><p><span class="tag"><i class="lg" style="background:var(--ink)"></i>Raíz</span><span class="tag"><i class="lg" style="background:var(--accent)"></i>docs/</span><span class="tag"><i class="lg" style="background:var(--wine)"></i>Atlas</span><span class="tag"><i class="lg" style="background:var(--ochre)"></i>Fuentes</span><span class="tag"><i class="lg" style="background:var(--ink-muted)"></i>Otros</span></p><p class="hint">El cerebro se regenera desde el repositorio con <code>python3 tools/brain_build.py oficina/brain.json</code>. Lo que hace la oficina llega a GitHub con el volcado de cada noche (D-017).</p>';
     }
     var f=q('full');
     f.innerHTML='<div class="dh"><div><h2>Cerebro · empresa-ia</h2><small>'+DOCS.length+' documentos y cómo se enlazan · pasa por encima para ver sus enlaces</small></div><div class="spacer"></div><button class="btn" id="bMemB" type="button">Memoria ('+memList().length+')</button><button class="btn x" id="cx" type="button">Cerrar</button></div><div class="brainview"><svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Mapa de documentos del repositorio">'+o+'</svg><div class="brainside">'+side+'</div></div>';
@@ -1410,7 +1460,7 @@ function openBrain(opt){
     f.querySelectorAll('[data-t]').forEach(function(b){b.onclick=function(){openTask(b.dataset.t)}});
     f.querySelectorAll('[data-go]').forEach(function(b){b.onclick=function(){sel=b.dataset.go;openChunk=null;draw()}});
     f.querySelectorAll('[data-ch]').forEach(function(b){b.onclick=function(){openChunk=+b.dataset.ch;sel=BRN.chunks[openChunk].d;draw()}});
-    if(q('bBack'))q('bBack').onclick=function(){sel=null;draw()};
+    if(q('bBack'))q('bBack').onclick=function(){sel=null;draw()};bindGrafo();
     if(q('bq')){q('bq').onkeydown=function(e){if(e.key==='Enter'){qtxt=q('bq').value.trim();draw();setTimeout(function(){var x=q('bq');if(x){x.focus();x.setSelectionRange(x.value.length,x.value.length)}},0)}}}
   };
   openFull('',null);draw();
@@ -1796,7 +1846,7 @@ function set3D(on){
   try{localStorage.setItem('varios-vista',O3?'3d':'2d')}catch(e){}
   if(!O3)setTimeout(fit,30);render();
 }
-q('z3d').onclick=function(){set3D(!O3)};q('zSim').onclick=simTalk;window.VARIOS3D.msg={start:msgStart,line:msgLine,end:msgEnd,sim:simTalk};window.VARIOS3D.debug=function(){return O3&&O3.debug()};
+q('z3d').onclick=function(){set3D(!O3)};q('zSim').onclick=simTalk;window.VARIOS3D.msg={start:msgStart,line:msgLine,end:msgEnd,sim:simTalk};window.VARIOS3D.brainFor=function(t){return brainFor(t,6,9000)};window.VARIOS3D.debug=function(){return O3&&O3.debug()};
 function start3D(){if(want3D)set3D(true)}
 if(window.__o3dMount)setTimeout(start3D,0);else{window.addEventListener('o3d-ready',start3D);window.addEventListener('o3d-fail',function(){q('z3d').hidden=true})}
 function renderToday(){var L=q('todayL');if(!L)return;var d0=new Date();d0.setHours(0,0,0,0);

@@ -12,8 +12,10 @@ import os
 import re
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SKIP = ("archive/", "site/", "oficina/", ".git/", "node_modules/")
+SKIP = ("archive/", "site/", "oficina/", ".git/", "node_modules/", "knowledge/grafo/")
 MAX = 2200
 
 
@@ -132,10 +134,19 @@ def main(dst):
     pt = open(os.path.join(ROOT, "docs/13-procesos-y-estados.md"), encoding="utf-8").read()
     for m in re.finditer(r"^\|\s*(P\d{2})\s*\|\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|", pt, re.M):
         procs.append([m.group(1), m.group(2), m.group(3)])
-    out = {"built": __import__("datetime").date.today().isoformat(), "docs": docs, "links": sorted(links), "chunks": chunks, "decisions": dec, "pending": pend, "processes": procs}
+    import grafo
+
+    G, rotas = grafo.construir(docs, chunks, sorted(links), dec)
+    A = grafo.analizar(G, chunks, rotas, dec)
+    os.makedirs(os.path.join(ROOT, "knowledge", "grafo"), exist_ok=True)
+    with open(os.path.join(ROOT, "knowledge", "grafo", "INFORME.md"), "w", encoding="utf-8") as fh:
+        fh.write(grafo.informe(G, A, chunks))
+    out = {"built": __import__("datetime").date.today().isoformat(), "docs": docs, "links": sorted(links), "chunks": chunks, "decisions": dec, "pending": pend,
+           "processes": procs, "graph": grafo.a_json(G, A)}
     with open(dst, "w", encoding="utf-8") as fh:
         json.dump(out, fh, ensure_ascii=False, separators=(",", ":"))
-    print("%d documentos, %d secciones, %d enlaces, %d decisiones, %d pendientes" % (len(docs), len(chunks), len(links), len(dec), len(pend)))
+    print("%d documentos, %d secciones, %d enlaces, %d decisiones, %d pendientes · grafo: %d nodos, %d relaciones, %d comunidades" % (
+        len(docs), len(chunks), len(links), len(dec), len(pend), len(G.nodes), len(out["graph"]["aristas"]), len(out["graph"]["comunidades"])))
 
 
 if __name__ == "__main__":

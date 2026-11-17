@@ -71,6 +71,7 @@ No hay ninguno construido. Hay 6 previstos en el catálogo. Los portales de aseg
 - **Langfuse:** la auditoría solo está en la edición Enterprise.
 - **Presidio:** necesita configuración para español.
 - **Pendiente:** revisar los avisos de seguridad (CVE) de cada proyecto.
+- **Graphify** (Apache-2.0), revisado el 17/11/2026: no se adopta como dependencia (está pensado para código y necesita NetworkX, Leiden y un modelo para los documentos). Se reimplementan sus mejores ideas en `tools/grafo.py`, sin dependencias ni IA (D-018): relaciones con etiqueta de confianza, comunidades con etiqueta sin IA, nodos centrales, puentes, conexiones sorprendentes, preguntas sugeridas, informe del grafo, consulta con presupuesto y camino con la confianza del eslabón más débil.
 
 ## 9. Pruebas
 Hay 36 pruebas automáticas que cubren:
@@ -113,6 +114,7 @@ Se ejecutan con `python3 -m pytest` y `ruff check src tests tools/check_repo.py`
 
 ## 14. Cómo mantenerlo
 - Cambiar datos en `tools/org_data/`.
-- Ejecutar `python3 tools/org_gen.py`.
-- Ejecutar `python3 tools/brain_build.py oficina/brain.json`.
+- Ejecutar `python3 tools/org_gen.py` y `python3 tools/agentes_gen.py`.
+- Ejecutar `python3 tools/brain_build.py oficina/brain.json`: genera el cerebro con su grafo de conocimiento y el informe `knowledge/grafo/INFORME.md` (D-018). GitHub Actions lo hace solo cuando cambian documentos en `main`.
+- Explorar el grafo: `python3 tools/grafo.py consulta "pregunta"`, `camino "A" "B"`, `explica "X"`.
 - Ejecutar `python3 -m pytest`.

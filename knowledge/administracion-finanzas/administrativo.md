@@ -46,7 +46,7 @@ Todavía no hay precedentes de este tipo.
 
 ### Fundamentos y terminología
 - Verifactu exigible el 01/01/2027 para el Impuesto sobre Sociedades y el 01/07/2027 para el resto según el RDL 15/2025 ([VERIFACTU-RDL15](../fuentes/registro.md#verifactu-rdl15)). Hacienda anunció el 05/10/2026 pasarlo a octubre de 2028, sin norma publicada ([VERIFACTU-2028](../fuentes/registro.md#verifactu-2028)).
-- Factura electrónica B2B: RD 238/2026 en vigor desde el 20/04/2026; aplicación efectiva pendiente de orden ministerial ([FACTURA-B2B](../fuentes/registro.md#factura-b2b)).
+- Factura electrónica B2B: RD 238/2026 en vigor desde el 20/04/2026; con la Orden HAC/1028/2026 es obligatoria desde octubre de 2027 si se facturan más de 8 millones de euros y desde octubre de 2028 para el resto ([FACTURA-B2B](../fuentes/registro.md#factura-b2b), AEAT-FACTURA-CAL).
 
 ### Metodologías y marcos
 - Elegir un software de facturación que ya cumpla Verifactu, no construirlo.
@@ -84,6 +84,7 @@ Ver *A quién convoca* y [`knowledge/navigation.json`](../navigation.json).
 - [VERIFACTU-RDL15](../fuentes/registro.md#verifactu-rdl15) · Real Decreto-ley 15/2025: plazos de Verifactu
 - [VERIFACTU-2028](../fuentes/registro.md#verifactu-2028) · Hacienda anuncia el aplazamiento de Verifactu a octubre de 2028
 - [FACTURA-B2B](../fuentes/registro.md#factura-b2b) · Real Decreto 238/2026, factura electrónica obligatoria entre empresas
+- [AEAT-FACTURA-CAL](../fuentes/registro.md#aeat-factura-cal) · Factura electrónica obligatoria: calendario de implantación
 
 ## 4. Lagunas conocidas
 - Forma jurídica y facturación pendientes (08/01/2027, Álvaro con gestor).

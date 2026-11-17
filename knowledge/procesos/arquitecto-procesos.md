@@ -37,7 +37,7 @@
 - Plantilla de proceso
 
 ### A quién convoca
-- [Especialistas sectoriales](especialista-sectorial.md)
+- [Coordinación sectorial y seguros](../sectores/especialista-sectorial.md)
 - [Arquitecto técnico](../ingenieria/arquitecto-tecnico.md) (antes de diseñar una automatización)
 - [Especialista en métricas](metricas.md)
 - [Especialista legal y privacidad](../seguridad-legal/legal-privacidad.md)

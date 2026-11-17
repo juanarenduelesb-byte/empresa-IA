@@ -47,6 +47,19 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 | [OSS-PRESIDIO](#oss-presidio) | Microsoft Presidio (detección y anonimización de datos personales) | documentacion-producto | alta | vigente | validated |
 | [OSS-LANGFUSE](#oss-langfuse) | Langfuse (observabilidad de LLM) | documentacion-producto | media | vigente | validated |
 | [OSS-PROMPTFOO](#oss-promptfoo) | promptfoo (evaluación y pruebas adversariales de LLM) | documentacion-producto | media | vigente | validated |
+| [INE-TIC-2026](#ine-tic-2026) | Encuesta sobre el uso de TIC y del comercio electrónico en las empresas, año 2025 y primer trimestre de 2026 | estadistica-oficial | alta | vigente | validated |
+| [DGSFP-MEDIACION](#dgsfp-mediacion) | Informe estadístico anual de mediación de seguros 2024 | estadistica-oficial | media | vigente | draft |
+| [PL-MA-CORREDURIAS](#pl-ma-corredurias) | Fusiones y adquisiciones de corredurías de seguros en España: tendencias y situación en 2025 | analisis-terceros | media | vigente | validated |
+| [IDIS-2026](#idis-2026) | Observatorio del sector sanitario privado 2026 | analisis-terceros | media | vigente | validated |
+| [EEDS-2025-327](#eeds-2025-327) | Reglamento (UE) 2025/327, Espacio Europeo de Datos de Salud | obligacion-legal | alta | vigente-aplicacion-diferida | draft |
+| [SANIDAD-IA-OMNIBUS](#sanidad-ia-omnibus) | IA en el SNS: ómnibus digital sobre IA y simplificación MDR/IVDR | recomendacion-tecnica | alta | vigente | validated |
+| [MDR-2017-745](#mdr-2017-745) | Reglamento (UE) 2017/745, productos sanitarios (en el anexo I del Reglamento de IA) | obligacion-legal | alta | vigente | validated |
+| [AEAT-FACTURA-CAL](#aeat-factura-cal) | Factura electrónica obligatoria: calendario de implantación | obligacion-legal | alta | vigente | validated |
+| [HOLDED-ASESORIAS-2026](#holded-asesorias-2026) | Impacto normativo 2026-2027 en asesorías y despachos | analisis-terceros | baja | vigente | draft |
+| [CNMV-DORA-AUTOEVAL](#cnmv-dora-autoeval) | Informe sobre la autoevaluación de la preparación para DORA | estadistica-oficial | alta | vigente | validated |
+| [NIS2-DIRECTIVA](#nis2-directiva) | Directiva (UE) 2022/2555 (NIS2) | obligacion-legal | alta | pendiente-transposicion-ES | validated |
+| [UNO-LOGISTICA](#uno-logistica) | Notas de prensa de UNO, organización empresarial de logística y transporte | analisis-terceros | media | vigente | draft |
+| [MAQUINARIA-2023-1230](#maquinaria-2023-1230) | Reglamento (UE) 2023/1230, relativo a las máquinas | obligacion-legal | alta | vigente-aplicacion-diferida | draft |
 
 <a id="int-guia"></a>
 ### INT-GUIA
@@ -75,7 +88,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **URL:** <../../docs/fuentes/Marco_Integral_Legal_Ciberseguridad_IA_Espana_UE_2026-11-16.md>
 - **Tipo:** interno · **Jurisdicción:** ES/UE · **Versión o fecha:** 2026-11-16
 - **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** validated
-- **Especialistas relacionados:** Especialista legal y privacidad
+- **Especialistas relacionados:** Experto en sanidad privada, Especialista legal y privacidad
 - **Nota:** Documento de trabajo, no asesoría jurídica.
 
 <a id="int-dec"></a>
@@ -94,7 +107,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **URL:** <https://finreg360.com/alerta/el-parlamento-europeo-y-el-consejo-aprueban-la-simplificacion-del-reglamento-de-inteligencia-artificial/>
 - **Tipo:** obligacion-legal · **Jurisdicción:** UE · **Versión o fecha:** DOUE 24/07/2026; en vigor 27/07/2026
 - **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** validated
-- **Especialistas relacionados:** Especialista en marketing y contenido, Especialista legal y privacidad
+- **Especialistas relacionados:** Especialista en marketing y contenido, Experto en industria manufacturera, Especialista legal y privacidad
 - **Nota:** Alto riesgo del anexo III desde el 02/12/2027 y del anexo I desde el 02/08/2028. Contrastado con Cuatrecasas y GlobalSuite. Falta enlazar el texto del DOUE.
 
 <a id="aepd-agentica"></a>
@@ -174,7 +187,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **URL:** <https://www.cnmv.es/DocPortal/Ciberseguridad/FAQ_DORA.pdf>
 - **Tipo:** recomendacion-tecnica · **Jurisdicción:** UE/ES · **Versión o fecha:** 10/02/2026
 - **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
-- **Especialistas relacionados:** Especialista en propuestas y licitaciones, Especialistas sectoriales, Responsable de cumplimiento, Especialista en costes y proveedores
+- **Especialistas relacionados:** Especialista en propuestas y licitaciones, Coordinación sectorial y seguros, Experto en servicios financieros no bancarios, Responsable de cumplimiento, Especialista en costes y proveedores
 - **Nota:** DORA aplicable desde el 17/01/2025. Alcanza a proveedores TIC de entidades financieras e intermediarios de seguros por contrato.
 
 <a id="ens-rd311"></a>
@@ -204,7 +217,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **URL:** <https://assets.kpmg.com/content/dam/kpmgsites/es/pdf/2025/12/tax-alert-el-real-decreto-ley-15-2025-amplia-plazos-adaptacion-reglamento-verifactu.pdf.coredownload.inline.pdf>
 - **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** BOE 03/12/2025
 - **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** validated
-- **Especialistas relacionados:** Especialista administrativo
+- **Especialistas relacionados:** Experto en asesorías, gestorías y despachos, Especialista administrativo
 - **Nota:** Fecha legal vigente: 01/01/2027 para el Impuesto sobre Sociedades y 01/07/2027 para el resto.
 
 <a id="verifactu-2028"></a>
@@ -214,7 +227,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **URL:** <https://www.fiscal-impuestos.com/node/41920>
 - **Tipo:** prensa-especializada · **Jurisdicción:** ES · **Versión o fecha:** nota del 05/10/2026
 - **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** anunciado-sin-norma · **Estado:** disputed
-- **Especialistas relacionados:** Especialista administrativo
+- **Especialistas relacionados:** Experto en asesorías, gestorías y despachos, Especialista administrativo
 - **Nota:** Anuncio aún no publicado en el BOE. Mientras no haya norma, valen las fechas del RDL 15/2025.
 
 <a id="factura-b2b"></a>
@@ -224,8 +237,8 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **URL:** <https://www.cuatrecasas.com/resources/reglamento-facturacion-text-69ccd76c3b2f3438807460.pdf>
 - **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** BOE 31/03/2026; en vigor 20/04/2026
 - **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** validated
-- **Especialistas relacionados:** Especialista administrativo
-- **Nota:** La fecha de aplicación efectiva depende de una orden ministerial aún en borrador.
+- **Especialistas relacionados:** Experto en asesorías, gestorías y despachos, Especialista administrativo
+- **Nota:** Calendario activado por la Orden HAC/1028/2026 (BOE 05/10/2026, en vigor el 06/10/2026): obligatoria desde octubre de 2027 para facturación superior a 8 millones de euros y desde octubre de 2028 para el resto. Ver AEAT-FACTURA-CAL.
 
 <a id="pgc-pymes"></a>
 ### PGC-PYMES
@@ -244,7 +257,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **URL:** <https://www.congreso.es/constitucion/ficheros/leyes_espa/l_050_1980.pdf>
 - **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** texto original de 1980; consultar el consolidado del BOE
 - **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
-- **Especialistas relacionados:** Especialistas sectoriales
+- **Especialistas relacionados:** Coordinación sectorial y seguros
 - **Nota:** Art. 16: comunicar el siniestro en 7 días como máximo desde que se conoce, salvo plazo mayor en la póliza. Art. 18 y 20: pago e intereses de demora. Contrastado con Revista CEF.
 
 <a id="rdl-3-2020"></a>
@@ -254,7 +267,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **URL:** <https://BOE.ES/boe/dias/2024/04/27/pdfs/BOE-A-2024-8516.pdf>
 - **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** BOE 27/04/2024
 - **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
-- **Especialistas relacionados:** Especialistas sectoriales
+- **Especialistas relacionados:** Coordinación sectorial y seguros
 - **Nota:** Transpone la Directiva (UE) 2016/97 (IDD). Libro II, título I: distribuidores y corredores.
 
 <a id="rd-287-2021"></a>
@@ -264,7 +277,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **URL:** <https://BOE.ES/boe/dias/2021/04/21/pdfs/BOE-A-2021-6309.pdf>
 - **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** BOE 21/04/2021
 - **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
-- **Especialistas relacionados:** Especialistas sectoriales
+- **Especialistas relacionados:** Coordinación sectorial y seguros
 - **Nota:** Obligaciones contables y de información de los corredores (art. 17–20).
 
 <a id="cide-cicos"></a>
@@ -274,7 +287,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **URL:** <https://documentacion.fundacionmapfre.org/documentacion/es/media/group/1066013.do>
 - **Tipo:** buena-practica · **Jurisdicción:** ES · **Versión o fecha:** sin fecha visible
 - **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
-- **Especialistas relacionados:** Especialistas sectoriales
+- **Especialistas relacionados:** Coordinación sectorial y seguros
 - **Nota:** Convenios entre aseguradoras para daños materiales de automóvil. TIREA da soporte técnico. Confirmar el estado actual con TIREA o UNESPA.
 
 <a id="ccs"></a>
@@ -284,7 +297,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **URL:** <https://www.consumoresponde.es/art%C3%ADculos/el_consorcio_de_compensacion_de_seguros>
 - **Tipo:** recomendacion-tecnica · **Jurisdicción:** ES · **Versión o fecha:** consultado 17/11/2026
 - **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
-- **Especialistas relacionados:** Especialistas sectoriales
+- **Especialistas relacionados:** Coordinación sectorial y seguros
 - **Nota:** La solicitud la puede presentar el asegurado, su aseguradora o su mediador. Según el propio CCS, las declaraciones llegan mayoritariamente a través de agentes y corredores.
 
 <a id="ccs-mediador"></a>
@@ -445,4 +458,134 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** Especialista en evaluación de IA
 - **Nota:** MIT. Herramienta en Node.js: añade un entorno de ejecución fuera del stack Python.
+
+<a id="ine-tic-2026"></a>
+### INE-TIC-2026
+- **Título:** Encuesta sobre el uso de TIC y del comercio electrónico en las empresas, año 2025 y primer trimestre de 2026
+- **Autor u organismo:** INE
+- **URL:** <https://ine.es/dyngs/Prensa/ETICCE20251T2026.pdf>
+- **Tipo:** estadistica-oficial · **Jurisdicción:** ES · **Versión o fecha:** datos definitivos, 22/10/2026
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** Coordinación sectorial y seguros, Experto en asesorías, gestorías y despachos, Experto en servicios financieros no bancarios, Experto en industria manufacturera, Experto en logística y transporte
+- **Nota:** El 33,6 % de las empresas de 10 o más empleados usó IA en el primer trimestre de 2026 (21,1 % un año antes). Servicios 38,2 %, industria 29,1 %, construcción 22,6 %. Por tamaño, terceros citan el 48,9 % en las de 50 a 249 empleados: confirmar en INEbase.
+
+<a id="dgsfp-mediacion"></a>
+### DGSFP-MEDIACION
+- **Título:** Informe estadístico anual de mediación de seguros 2024
+- **Autor u organismo:** DGSFP (citado por Expansión)
+- **URL:** <https://www.once.es/grupo-social-once/oncecom/20261009/archivos/N03ninestar-es-10223403_82932.txt>
+- **Tipo:** estadistica-oficial · **Jurisdicción:** ES · **Versión o fecha:** registro a 21/11/2025
+- **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** Coordinación sectorial y seguros
+- **Nota:** 3.445 corredores inscritos en el registro de la DGSFP: 884 personas físicas y 2.561 sociedades. Cita indirecta: localizar el informe original en la web de la DGSFP.
+
+<a id="pl-ma-corredurias"></a>
+### PL-MA-CORREDURIAS
+- **Título:** Fusiones y adquisiciones de corredurías de seguros en España: tendencias y situación en 2025
+- **Autor u organismo:** Pérez-Llorca
+- **URL:** <https://www.perezllorca.com/wp-content/uploads/2026/01/Nota-Juridica-Fusiones-y-adquisiciones-MA-de-corredurias-de-seguros-en-Espana.pdf>
+- **Tipo:** analisis-terceros · **Jurisdicción:** ES · **Versión o fecha:** 22/01/2026
+- **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** Coordinación sectorial y seguros
+- **Nota:** Consolidación acelerada por escala, sucesión generacional y requisitos regulatorios. Distribuidores registrados: 57.467 en 2024, 2.566 menos que el año anterior (datos DGSFP).
+
+<a id="idis-2026"></a>
+### IDIS-2026
+- **Título:** Observatorio del sector sanitario privado 2026
+- **Autor u organismo:** Fundación IDIS (elaborado por PwC)
+- **URL:** <https://www.fundacionidis.com/uploads/informes/Observatorio_S._S._privado_IDIS_2026_V20260518_sin_CCAA.pdf>
+- **Tipo:** analisis-terceros · **Jurisdicción:** ES · **Versión o fecha:** mayo de 2026
+- **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** Experto en sanidad privada
+- **Nota:** Gasto sanitario privado de 37.048 millones de euros en 2025 (2,47 % del PIB, 26,8 % del gasto sanitario total), según la prensa que lo cita. El Observatorio 2025 contaba 431 hospitales privados (56 % del total). Fuente de la patronal: contrastar con el Ministerio de Sanidad.
+
+<a id="eeds-2025-327"></a>
+### EEDS-2025-327
+- **Título:** Reglamento (UE) 2025/327, Espacio Europeo de Datos de Salud
+- **Autor u organismo:** Ministerio de Sanidad (resumen)
+- **URL:** <https://vsf-iwsold-pre-portal.sanidad.gob.es/areas/saludDigital/espacioEuropeoDS/docs/EEDS_WEB.pdf>
+- **Tipo:** obligacion-legal · **Jurisdicción:** UE · **Versión o fecha:** 2025
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente-aplicacion-diferida · **Estado:** draft
+- **Especialistas relacionados:** Experto en sanidad privada
+- **Nota:** Regula el uso primario y secundario de datos sanitarios electrónicos y los requisitos de sistemas de historia clínica. Aplicación diferida por capítulos: falta fijar las fechas exactas con el DOUE.
+
+<a id="sanidad-ia-omnibus"></a>
+### SANIDAD-IA-OMNIBUS
+- **Título:** IA en el SNS: ómnibus digital sobre IA y simplificación MDR/IVDR
+- **Autor u organismo:** Ministerio de Sanidad
+- **URL:** <https://www.sanidad.gob.es/areas/saludDigital/estrategiaIASNS/doc/IASNS_OmnibusAI_SimplificacionMDR-IVDR_Nov2026.pdf>
+- **Tipo:** recomendacion-tecnica · **Jurisdicción:** UE/ES · **Versión o fecha:** noviembre de 2026
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** Experto en sanidad privada
+- **Nota:** Transparencia del art. 50 desde el 02/08/2026. Alto riesgo del anexo III desde el 02/12/2027 y del anexo I (productos sanitarios con IA) desde el 02/08/2028.
+
+<a id="mdr-2017-745"></a>
+### MDR-2017-745
+- **Título:** Reglamento (UE) 2017/745, productos sanitarios (en el anexo I del Reglamento de IA)
+- **Autor u organismo:** Comisión Europea (AI Act Service Desk)
+- **URL:** <https://ai-act-service-desk.ec.europa.eu/es/ai-act/annex-1>
+- **Tipo:** obligacion-legal · **Jurisdicción:** UE · **Versión o fecha:** consolidado
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** Experto en sanidad privada
+- **Nota:** El software con IA de finalidad médica puede ser producto sanitario. Junto con el 2017/746 (diagnóstico in vitro), está en el anexo I del Reglamento de IA.
+
+<a id="aeat-factura-cal"></a>
+### AEAT-FACTURA-CAL
+- **Título:** Factura electrónica obligatoria: calendario de implantación
+- **Autor u organismo:** Agencia Tributaria
+- **URL:** <https://sede.agenciatributaria.gob.es/Sede/eu_es/iva/factura-electronica/calendario-implantacion.html>
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** consultado 17/11/2026
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** Experto en asesorías, gestorías y despachos, Especialista administrativo
+- **Nota:** Los plazos del RD 238/2026 corren desde el 06/10/2026. Contrastado con Garrigues: octubre de 2027 para facturación superior a 8 millones de euros y octubre de 2028 para el resto.
+
+<a id="holded-asesorias-2026"></a>
+### HOLDED-ASESORIAS-2026
+- **Título:** Impacto normativo 2026-2027 en asesorías y despachos
+- **Autor u organismo:** Holded (encuesta a 194 despachos)
+- **URL:** <https://www.holded.com/es/blog/verifactu-coste-invisible-asesorias>
+- **Tipo:** analisis-terceros · **Jurisdicción:** ES · **Versión o fecha:** abril a julio de 2026
+- **Consultada:** 2026-11-17 · **Autoridad:** baja · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** Experto en asesorías, gestorías y despachos
+- **Nota:** Encuesta de un proveedor de software, sin muestra representativa. El 81 % dice tener trabajo extra no facturable por los cambios normativos; el 60 % espera un impacto alto o muy alto. Útil como señal, no como dato de mercado.
+
+<a id="cnmv-dora-autoeval"></a>
+### CNMV-DORA-AUTOEVAL
+- **Título:** Informe sobre la autoevaluación de la preparación para DORA
+- **Autor u organismo:** CNMV
+- **URL:** <https://cnmv.es/DocPortal/Ciberseguridad/Informe-autoevaluacion-DORA-2024_es.pdf>
+- **Tipo:** estadistica-oficial · **Jurisdicción:** ES · **Versión o fecha:** 2024
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** Experto en servicios financieros no bancarios
+- **Nota:** Entidades bajo competencia de la CNMV en el ejercicio: 190 empresas de servicios de inversión, 112 gestoras y 26 plataformas de financiación participativa (328 en total). Las gestoras de fondos alternativos por debajo de umbrales quedan fuera de DORA.
+
+<a id="nis2-directiva"></a>
+### NIS2-DIRECTIVA
+- **Título:** Directiva (UE) 2022/2555 (NIS2)
+- **Autor u organismo:** Parlamento Europeo y Consejo
+- **URL:** <https://eur-lex.europa.eu/eli/dir/2022/2555/oj>
+- **Tipo:** obligacion-legal · **Jurisdicción:** UE · **Versión o fecha:** DOUE 27/12/2022
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** pendiente-transposicion-ES · **Estado:** validated
+- **Especialistas relacionados:** Experto en sanidad privada, Experto en servicios financieros no bancarios, Experto en industria manufacturera, Experto en logística y transporte
+- **Nota:** Anexo I (alta criticidad): energía, transporte, banca, sanidad, agua, infraestructura digital, entre otros. Anexo II: fabricación (productos sanitarios, electrónica, maquinaria, vehículos), alimentación, química, servicios postales y mensajería. Alcanza a medianas empresas de estos sectores. En España, ver NIS2-ES.
+
+<a id="uno-logistica"></a>
+### UNO-LOGISTICA
+- **Título:** Notas de prensa de UNO, organización empresarial de logística y transporte
+- **Autor u organismo:** UNO Logística
+- **URL:** <https://unologistica.org/wp-content/uploads/2026/06/NP_El-95-de-las-logisticas-acelera-automatizacion-y-transformacion-digital-en-2026-para-recuperar-rentabilidad.pdf>
+- **Tipo:** analisis-terceros · **Jurisdicción:** ES · **Versión o fecha:** junio de 2026
+- **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** Experto en logística y transporte
+- **Nota:** Sector del 8 % del PIB según UNO. En 2024 UNO citaba que solo el 9,6 % de las empresas de logística y transporte usaba IA. La rentabilidad bruta bajó un 2,86 % en 2025 según el Banco de España, citado por UNO. Fuente de patronal.
+
+<a id="maquinaria-2023-1230"></a>
+### MAQUINARIA-2023-1230
+- **Título:** Reglamento (UE) 2023/1230, relativo a las máquinas
+- **Autor u organismo:** Parlamento Europeo y Consejo
+- **URL:** <https://eur-lex.europa.eu/eli/reg/2023/1230/oj>
+- **Tipo:** obligacion-legal · **Jurisdicción:** UE · **Versión o fecha:** DOUE 29/06/2023
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente-aplicacion-diferida · **Estado:** draft
+- **Especialistas relacionados:** Experto en industria manufacturera
+- **Nota:** Sustituye a la Directiva de máquinas e incluye componentes de seguridad con IA. Fecha general de aplicación: enero de 2027 (por verificar en EUR-Lex). El ómnibus digital sobre IA lo modifica.
 

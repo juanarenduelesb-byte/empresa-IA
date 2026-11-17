@@ -4,6 +4,12 @@
 
 Este documento dice qué había, qué se ha construido y qué falta. Separa hecho, hipótesis y propuesta.
 
+> **Actualización del 17/11/2026 (tarde):**
+> - Nuevo departamento de [Sectores](../knowledge/sectores/README.md) con seis expertos y una [priorización](../knowledge/sectores/priorizacion.md) en estado de propuesta. Ahora son 30 especialistas en 7 departamentos.
+> - 13 fuentes más, 53 en total. La de factura electrónica B2B ya tiene calendario oficial.
+> - La oficina de agentes tiene proyectos, entregables en archivos reales, memoria y lectura de Google Drive (D-015, propuesta).
+> - Las cifras de abajo son las del primer informe.
+
 ## 1. Estado antes
 - **Documentación:** 52 documentos y 12 decisiones (D-001 a D-012).
 - **Oficina de agentes:** artifact con su cerebro (`oficina/brain.json`).

@@ -1,3 +1,16 @@
+---
+tipo: "especialista"
+id: "contabilidad"
+departamento: "administracion-finanzas"
+puestos:
+  - "conta"
+procesos:
+  - "P29"
+estado: "draft"
+tags:
+  - "especialista"
+  - "area/administracion-finanzas"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # Especialista en contabilidad y facturación
 

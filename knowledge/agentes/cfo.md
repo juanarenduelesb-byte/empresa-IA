@@ -1,3 +1,15 @@
+---
+tipo: "agente"
+puesto: "cfo"
+departamento: "Administración"
+jefe: false
+rol: "CFO"
+estado: "draft"
+habilidades: 7
+tags:
+  - "agente"
+  - "dep/adm"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Director financiero

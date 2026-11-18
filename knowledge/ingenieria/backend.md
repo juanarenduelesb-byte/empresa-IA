@@ -1,3 +1,19 @@
+---
+tipo: "especialista"
+id: "backend"
+departamento: "ingenieria"
+puestos:
+  - "back"
+procesos:
+  - "P08"
+  - "P14"
+  - "P22"
+  - "P35"
+estado: "draft"
+tags:
+  - "especialista"
+  - "area/ingenieria"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # Especialista backend
 

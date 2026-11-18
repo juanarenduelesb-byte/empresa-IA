@@ -25,7 +25,7 @@ jobs:
           python tools/brain_build.py oficina/brain.json
       - name: Guardar si ha cambiado
         run: |
-          if git diff --quiet; then echo "Nada que regenerar"; exit 0; fi
+          if [ -z "$(git status --porcelain)" ]; then echo "Nada que regenerar"; exit 0; fi
           git config user.name "varios-bot"
           git config user.email "actions@users.noreply.github.com"
           git add -A

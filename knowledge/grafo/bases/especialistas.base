@@ -1,0 +1,16 @@
+# Generado por tools/obsidian_gen.py. No editar a mano.
+filters:
+  and:
+    - 'tipo == "especialista"'
+views:
+  - type: table
+    name: "Especialistas"
+    order:
+      - file.name
+      - departamento
+      - puestos
+      - procesos
+      - estado
+    groupBy:
+      property: departamento
+      direction: ASC

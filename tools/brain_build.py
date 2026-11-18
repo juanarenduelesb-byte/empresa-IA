@@ -15,7 +15,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SKIP = ("archive/", "site/", "oficina/", ".git/", "node_modules/", "knowledge/grafo/")
+SKIP = ("archive/", "site/", "oficina/", ".git/", "node_modules/", "knowledge/grafo/", "Inicio.md")
 MAX = 2200
 
 
@@ -117,6 +117,9 @@ def main(dst):
     names = {os.path.basename(p): p for p in files}
     for p in files:
         text = open(os.path.join(ROOT, p), encoding="utf-8").read()
+        if text.startswith("---\n"):  # propiedades de Obsidian: no son contenido
+            fin = text.find("\n---\n", 4)
+            text = text[fin + 5:] if fin > 0 else text
         docs.append({"id": ids[p], "p": p, "t": title_of(p, text), "g": group(p), "s": summary_of(text), "n": len(text)})
         for h, body in chunks_of(text):
             chunks.append({"d": ids[p], "h": h, "t": body})
@@ -141,6 +144,8 @@ def main(dst):
     os.makedirs(os.path.join(ROOT, "knowledge", "grafo"), exist_ok=True)
     with open(os.path.join(ROOT, "knowledge", "grafo", "INFORME.md"), "w", encoding="utf-8") as fh:
         fh.write(grafo.informe(G, A, chunks))
+    import obsidian_gen
+    obsidian_gen.generar(G, A, dec)
     out = {"built": __import__("datetime").date.today().isoformat(), "docs": docs, "links": sorted(links), "chunks": chunks, "decisions": dec, "pending": pend,
            "processes": procs, "graph": grafo.a_json(G, A)}
     with open(dst, "w", encoding="utf-8") as fh:

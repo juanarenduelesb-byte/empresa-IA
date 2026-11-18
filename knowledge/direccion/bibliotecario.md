@@ -1,3 +1,18 @@
+---
+tipo: "especialista"
+id: "bibliotecario"
+departamento: "direccion"
+puestos:
+  - "bib"
+procesos:
+  - "P04"
+  - "P07"
+  - "P13"
+estado: "draft"
+tags:
+  - "especialista"
+  - "area/direccion"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # Bibliotecario / responsable de conocimiento
 

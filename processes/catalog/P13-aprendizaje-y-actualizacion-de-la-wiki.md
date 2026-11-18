@@ -1,3 +1,13 @@
+---
+tipo: "proceso"
+id: "P13"
+nombre: "Aprendizaje y actualización de la wiki"
+estado: "draft"
+especialistas:
+  - "bibliotecario"
+tags:
+  - "proceso"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # P13 · Aprendizaje y actualización de la wiki
 

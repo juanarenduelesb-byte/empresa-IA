@@ -1,3 +1,13 @@
+---
+tipo: "proceso"
+id: "P25"
+nombre: "Gestión de cambios y versiones"
+estado: "draft"
+especialistas:
+  - "arquitecto-tecnico"
+tags:
+  - "proceso"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # P25 · Gestión de cambios y versiones
 

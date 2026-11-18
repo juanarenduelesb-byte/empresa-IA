@@ -1,3 +1,15 @@
+---
+tipo: "agente"
+puesto: "sal"
+departamento: "Sectores"
+jefe: false
+rol: "Sanidad privada"
+estado: "draft"
+habilidades: 3
+tags:
+  - "agente"
+  - "dep/sect"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Experto en sanidad privada

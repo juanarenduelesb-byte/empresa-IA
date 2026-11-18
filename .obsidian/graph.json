@@ -1,0 +1,94 @@
+{
+  "search": "-path:archive -path:site -path:oficina",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": true,
+  "showOrphans": false,
+  "colorGroups": [
+    {
+      "query": "path:knowledge/grafo/decisiones",
+      "color": {
+        "a": 1,
+        "rgb": 12071474
+      }
+    },
+    {
+      "query": "path:knowledge/grafo/fuentes",
+      "color": {
+        "a": 1,
+        "rgb": 8278541
+      }
+    },
+    {
+      "query": "path:knowledge/grafo/mapas",
+      "color": {
+        "a": 1,
+        "rgb": 791574
+      }
+    },
+    {
+      "query": "path:knowledge/agentes",
+      "color": {
+        "a": 1,
+        "rgb": 682870
+      }
+    },
+    {
+      "query": "path:claude/habilidades",
+      "color": {
+        "a": 1,
+        "rgb": 6214600
+      }
+    },
+    {
+      "query": "path:processes",
+      "color": {
+        "a": 1,
+        "rgb": 4873156
+      }
+    },
+    {
+      "query": "path:docs/fuentes",
+      "color": {
+        "a": 1,
+        "rgb": 5661802
+      }
+    },
+    {
+      "query": "path:docs",
+      "color": {
+        "a": 1,
+        "rgb": 1469243
+      }
+    },
+    {
+      "query": "path:knowledge",
+      "color": {
+        "a": 1,
+        "rgb": 8838355
+      }
+    },
+    {
+      "query": "path:governance",
+      "color": {
+        "a": 1,
+        "rgb": 11692860
+      }
+    },
+    {
+      "query": "path:precedents",
+      "color": {
+        "a": 1,
+        "rgb": 11123967
+      }
+    }
+  ],
+  "showArrow": true,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1.1,
+  "lineSizeMultiplier": 1,
+  "centerStrength": 0.5,
+  "repelStrength": 12,
+  "linkStrength": 1,
+  "linkDistance": 160
+}

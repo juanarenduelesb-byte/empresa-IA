@@ -1,3 +1,15 @@
+---
+tipo: "agente"
+puesto: "sec"
+departamento: "Calidad, seguridad y legal"
+jefe: false
+rol: "Amenazas y aislamiento"
+estado: "draft"
+habilidades: 3
+tags:
+  - "agente"
+  - "dep/cal"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Seguridad

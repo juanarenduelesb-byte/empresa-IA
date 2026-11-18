@@ -1,3 +1,11 @@
+---
+tipo: "habilidad"
+id: "consultar-historico"
+usan: 1
+estado: "draft"
+tags:
+  - "habilidad"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Consultar el histórico antes de hacer

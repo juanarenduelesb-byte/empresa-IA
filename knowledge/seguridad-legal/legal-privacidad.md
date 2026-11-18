@@ -1,3 +1,19 @@
+---
+tipo: "especialista"
+id: "legal-privacidad"
+departamento: "seguridad-legal"
+puestos:
+  - "leg"
+procesos:
+  - "P19"
+  - "P24"
+  - "P27"
+  - "P28"
+estado: "draft"
+tags:
+  - "especialista"
+  - "area/seguridad-legal"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # Especialista legal y privacidad
 

@@ -1,3 +1,15 @@
+---
+tipo: "agente"
+puesto: "logi"
+departamento: "Sectores"
+jefe: false
+rol: "Logística y transporte"
+estado: "draft"
+habilidades: 3
+tags:
+  - "agente"
+  - "dep/sect"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Experto en logística

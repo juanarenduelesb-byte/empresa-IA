@@ -1,3 +1,16 @@
+---
+tipo: "especialista"
+id: "financiero"
+departamento: "administracion-finanzas"
+puestos:
+  - "fin"
+procesos:
+  - "P29"
+estado: "draft"
+tags:
+  - "especialista"
+  - "area/administracion-finanzas"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # Especialista financiero
 

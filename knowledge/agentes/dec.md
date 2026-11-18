@@ -1,3 +1,15 @@
+---
+tipo: "agente"
+puesto: "dec"
+departamento: "Dirección"
+jefe: false
+rol: "Secretaría"
+estado: "draft"
+habilidades: 4
+tags:
+  - "agente"
+  - "dep/dir"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Registro de decisiones

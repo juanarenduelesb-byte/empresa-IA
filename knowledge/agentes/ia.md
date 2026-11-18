@@ -1,3 +1,15 @@
+---
+tipo: "agente"
+puesto: "ia"
+departamento: "Ingeniería"
+jefe: false
+rol: "Modelos y examen"
+estado: "draft"
+habilidades: 4
+tags:
+  - "agente"
+  - "dep/ing"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # IA y evaluación

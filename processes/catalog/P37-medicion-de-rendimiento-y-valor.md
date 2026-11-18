@@ -1,3 +1,13 @@
+---
+tipo: "proceso"
+id: "P37"
+nombre: "Medición de rendimiento y valor"
+estado: "draft"
+especialistas:
+  - "metricas"
+tags:
+  - "proceso"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # P37 · Medición de rendimiento y valor
 

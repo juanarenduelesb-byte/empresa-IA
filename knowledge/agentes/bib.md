@@ -1,3 +1,15 @@
+---
+tipo: "agente"
+puesto: "bib"
+departamento: "Dirección"
+jefe: false
+rol: "Conocimiento"
+estado: "draft"
+habilidades: 4
+tags:
+  - "agente"
+  - "dep/dir"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Bibliotecario

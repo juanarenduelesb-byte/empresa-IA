@@ -1,3 +1,14 @@
+---
+tipo: "proceso"
+id: "P08"
+nombre: "Ejecución de tareas"
+estado: "draft"
+especialistas:
+  - "backend"
+  - "automatizacion"
+tags:
+  - "proceso"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # P08 · Ejecución de tareas
 

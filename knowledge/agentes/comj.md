@@ -1,3 +1,15 @@
+---
+tipo: "agente"
+puesto: "comj"
+departamento: "Comercial y clientes"
+jefe: true
+rol: "Comercial"
+estado: "draft"
+habilidades: 5
+tags:
+  - "agente"
+  - "dep/com"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Jefe comercial

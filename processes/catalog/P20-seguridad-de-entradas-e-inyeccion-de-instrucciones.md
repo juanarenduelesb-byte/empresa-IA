@@ -1,3 +1,14 @@
+---
+tipo: "proceso"
+id: "P20"
+nombre: "Seguridad de entradas e inyección de instrucciones"
+estado: "draft"
+especialistas:
+  - "ciberseguridad"
+  - "evaluacion-ia"
+tags:
+  - "proceso"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # P20 · Seguridad de entradas e inyección de instrucciones
 

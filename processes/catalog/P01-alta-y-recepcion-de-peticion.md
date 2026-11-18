@@ -1,3 +1,13 @@
+---
+tipo: "proceso"
+id: "P01"
+nombre: "Alta y recepción de petición"
+estado: "draft"
+especialistas:
+  - "ceo-digital"
+tags:
+  - "proceso"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # P01 · Alta y recepción de petición
 

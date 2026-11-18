@@ -1,3 +1,15 @@
+---
+tipo: "agente"
+puesto: "exito"
+departamento: "Comercial y clientes"
+jefe: false
+rol: "Customer success y entrega"
+estado: "draft"
+habilidades: 6
+tags:
+  - "agente"
+  - "dep/com"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Éxito de cliente

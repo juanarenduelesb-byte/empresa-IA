@@ -1,0 +1,27 @@
+# Generado por tools/obsidian_gen.py. No editar a mano.
+filters:
+  and:
+    - 'tipo == "decision"'
+views:
+  - type: table
+    name: "Decisiones"
+    order:
+      - id
+      - titulo
+      - fecha
+      - estado
+      - citada
+    groupBy:
+      property: estado
+      direction: ASC
+  - type: table
+    name: "En propuesta"
+    filters:
+      and:
+        - 'estado == "propuesta"'
+    order:
+      - id
+      - titulo
+      - fecha
+      - estado
+      - citada

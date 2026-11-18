@@ -1,3 +1,14 @@
+---
+tipo: "proceso"
+id: "P10"
+nombre: "Aprobación humana"
+estado: "draft"
+especialistas:
+  - "ceo-digital"
+  - "calidad-riesgos"
+tags:
+  - "proceso"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # P10 · Aprobación humana
 

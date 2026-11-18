@@ -118,3 +118,7 @@ Se ejecutan con `python3 -m pytest` y `ruff check src tests tools/check_repo.py`
 - Ejecutar `python3 tools/brain_build.py oficina/brain.json`: genera el cerebro con su grafo de conocimiento y el informe `knowledge/grafo/INFORME.md` (D-018). GitHub Actions lo hace solo cuando cambian documentos en `main`.
 - Explorar el grafo: `python3 tools/grafo.py consulta "pregunta"`, `camino "A" "B"`, `explica "X"`.
 - Ejecutar `python3 -m pytest`.
+
+## Obsidian
+
+El repositorio se abre como vault de Obsidian: notas por decisión y fuente, mapas del grafo y tablas de Bases, generados por `tools/obsidian_gen.py`. Montaje y reglas en [19-obsidian.md](19-obsidian.md) (D-021).

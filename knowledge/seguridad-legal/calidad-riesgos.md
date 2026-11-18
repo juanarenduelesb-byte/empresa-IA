@@ -1,3 +1,20 @@
+---
+tipo: "especialista"
+id: "calidad-riesgos"
+departamento: "seguridad-legal"
+puestos:
+  - "calj"
+procesos:
+  - "P09"
+  - "P10"
+  - "P15"
+  - "P18"
+  - "P28"
+estado: "draft"
+tags:
+  - "especialista"
+  - "area/seguridad-legal"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # Especialista en calidad y riesgos
 

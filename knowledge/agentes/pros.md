@@ -1,3 +1,15 @@
+---
+tipo: "agente"
+puesto: "pros"
+departamento: "Comercial y clientes"
+jefe: false
+rol: "Contactos"
+estado: "draft"
+habilidades: 3
+tags:
+  - "agente"
+  - "dep/com"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Prospección

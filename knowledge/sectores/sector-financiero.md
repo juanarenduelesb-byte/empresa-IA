@@ -1,3 +1,20 @@
+---
+tipo: "especialista"
+id: "sector-financiero"
+departamento: "sectores"
+puestos:
+  - "fnz"
+procesos:
+  - "P02"
+  - "P32"
+  - "P33"
+  - "P27"
+  - "P24"
+estado: "draft"
+tags:
+  - "especialista"
+  - "area/sectores"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # Experto en servicios financieros no bancarios
 

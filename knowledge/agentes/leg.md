@@ -1,3 +1,15 @@
+---
+tipo: "agente"
+puesto: "leg"
+departamento: "Calidad, seguridad y legal"
+jefe: false
+rol: "RGPD y Reglamento IA"
+estado: "draft"
+habilidades: 4
+tags:
+  - "agente"
+  - "dep/cal"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Legal y privacidad

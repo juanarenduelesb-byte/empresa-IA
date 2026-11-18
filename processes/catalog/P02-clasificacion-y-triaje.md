@@ -1,3 +1,14 @@
+---
+tipo: "proceso"
+id: "P02"
+nombre: "Clasificación y triaje"
+estado: "draft"
+especialistas:
+  - "ceo-digital"
+  - "especialista-sectorial"
+tags:
+  - "proceso"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # P02 · Clasificación y triaje
 

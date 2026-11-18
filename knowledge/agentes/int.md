@@ -1,3 +1,15 @@
+---
+tipo: "agente"
+puesto: "int"
+departamento: "Ingeniería"
+jefe: false
+rol: "Puerta de herramientas"
+estado: "draft"
+habilidades: 3
+tags:
+  - "agente"
+  - "dep/ing"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Integraciones

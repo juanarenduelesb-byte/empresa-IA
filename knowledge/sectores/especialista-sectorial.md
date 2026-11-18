@@ -1,3 +1,18 @@
+---
+tipo: "especialista"
+id: "especialista-sectorial"
+departamento: "sectores"
+puestos:
+  - "seg"
+procesos:
+  - "P02"
+  - "P32"
+  - "P33"
+estado: "draft"
+tags:
+  - "especialista"
+  - "area/sectores"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # Coordinación sectorial y seguros
 

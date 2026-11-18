@@ -1,0 +1,32 @@
+# Generado por tools/obsidian_gen.py. No editar a mano.
+filters:
+  and:
+    - 'tipo == "fuente"'
+views:
+  - type: table
+    name: "Fuentes"
+    order:
+      - id
+      - titulo
+      - organismo
+      - autoridad
+      - vigencia
+      - estado
+      - citada
+    groupBy:
+      property: vigencia
+      direction: ASC
+  - type: table
+    name: "Por revisar"
+    filters:
+      or:
+        - 'vigencia != "vigente"'
+        - 'estado != "validated"'
+    order:
+      - id
+      - titulo
+      - organismo
+      - autoridad
+      - vigencia
+      - estado
+      - citada

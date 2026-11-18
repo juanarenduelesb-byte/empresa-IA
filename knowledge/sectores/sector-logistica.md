@@ -1,3 +1,19 @@
+---
+tipo: "especialista"
+id: "sector-logistica"
+departamento: "sectores"
+puestos:
+  - "logi"
+procesos:
+  - "P02"
+  - "P32"
+  - "P33"
+  - "P22"
+estado: "draft"
+tags:
+  - "especialista"
+  - "area/sectores"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # Experto en logística y transporte
 

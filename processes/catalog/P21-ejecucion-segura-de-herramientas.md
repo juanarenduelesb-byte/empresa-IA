@@ -1,3 +1,14 @@
+---
+tipo: "proceso"
+id: "P21"
+nombre: "Ejecución segura de herramientas"
+estado: "draft"
+especialistas:
+  - "integraciones"
+  - "ciberseguridad"
+tags:
+  - "proceso"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # P21 · Ejecución segura de herramientas
 

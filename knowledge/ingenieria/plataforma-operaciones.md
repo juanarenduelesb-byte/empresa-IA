@@ -1,3 +1,21 @@
+---
+tipo: "especialista"
+id: "plataforma-operaciones"
+departamento: "ingenieria"
+puestos:
+  - "ops"
+procesos:
+  - "P15"
+  - "P17"
+  - "P25"
+  - "P26"
+  - "P28"
+  - "P30"
+estado: "draft"
+tags:
+  - "especialista"
+  - "area/ingenieria"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # Ingeniero de plataforma y operaciones (DevOps/SRE)
 

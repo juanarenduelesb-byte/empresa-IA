@@ -23,4 +23,4 @@ jobs:
         run: |
           python tools/org_gen.py --check
           python tools/agentes_gen.py --check
-          python tools/brain_build.py /tmp/brain.json && python -c "import json;a=json.load(open('/tmp/brain.json'));b=json.load(open('oficina/brain.json'));a.pop('built');b.pop('built');assert a==b, 'oficina/brain.json desactualizado: python3 tools/brain_build.py oficina/brain.json'" && git diff --exit-code knowledge/grafo/INFORME.md
+          python tools/brain_build.py /tmp/brain.json && python -c "import json;a=json.load(open('/tmp/brain.json'));b=json.load(open('oficina/brain.json'));a.pop('built');b.pop('built');assert a==b, 'oficina/brain.json desactualizado: python3 tools/brain_build.py oficina/brain.json'" && git diff --exit-code knowledge/grafo/ && test -z "$(git status --porcelain knowledge/grafo/)"

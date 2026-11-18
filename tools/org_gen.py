@@ -26,6 +26,20 @@ TIPO = {"regla": "Regla (código)", "ia": "IA propone", "humano": "Persona", "si
 OUT = {}
 
 
+
+def fm(d):
+    """Propiedades de Obsidian (YAML plano) al principio de la nota."""
+    def v(x):
+        if isinstance(x, bool):
+            return " true" if x else " false"
+        if isinstance(x, (int, float)):
+            return " " + str(x)
+        if isinstance(x, list):
+            return "\n" + "".join("  - " + json.dumps(str(i), ensure_ascii=False) + "\n" for i in x) if x else " []"
+        return " " + json.dumps(str(x), ensure_ascii=False)
+    return "---\n" + "".join(k + ":" + (v(x) if isinstance(x, list) else v(x)) + ("" if isinstance(x, list) and x else "\n") for k, x in d.items()) + "---\n"
+
+
 def slug(t):
     t = t.lower()
     for a, b in (("á", "a"), ("é", "e"), ("í", "i"), ("ó", "o"), ("ú", "u"), ("ñ", "n"), ("ü", "u")):
@@ -77,7 +91,7 @@ def path_link(frm, p):
 def ficha(e):
     fn = efile(e)
     d = DEP[e["dep"]]
-    s = AVISO + "# %s\n\n" % e["nombre"]
+    s = fm({"tipo": "especialista", "id": e["id"], "departamento": e["dep"], "puestos": e.get("oficina", []), "procesos": e.get("procesos", []), "estado": "draft", "tags": ["especialista", "area/" + e["dep"]]}) + AVISO + "# %s\n\n" % e["nombre"]
     s += "**Departamento:** [%s](README.md) · **Estado:** draft · **Revisión:** pendiente de un socio · **Fuentes consultadas:** %s\n\n" % (d[1], CONSULTA)
     s += "**Puestos de la oficina que lo cubren:** %s\n\n" % (", ".join("`%s`" % o for o in e["oficina"]) or "ninguno todavía")
     s += "> %s\n\n" % e["mision"]
@@ -209,7 +223,7 @@ def mermaid(p):
 def proceso(p):
     fn = pfile(p)
     nombres = [ESP[e]["nombre"] for e in p["especialistas"]]
-    s = AVISO + "# %s · %s\n\n" % (p["id"], p["nombre"])
+    s = fm({"tipo": "proceso", "id": p["id"], "nombre": p["nombre"], "estado": "draft", "especialistas": p.get("especialistas", []) or [], "tags": ["proceso"]}) + AVISO + "# %s · %s\n\n" % (p["id"], p["nombre"])
     s += "**Origen:** %s · **Cuándo implantar:** %s · **Estado de la ficha:** draft · **Implementado:** %s\n\n" % (p["origen"], p["cuando"], p["implementado"])
     s += "```mermaid\n%s\n```\n\nLeyenda: rectángulo, regla en código · paralelogramo, la IA propone · doble barra, persona · redondeado, sistema.\n\n" % mermaid(p)
     vals = [

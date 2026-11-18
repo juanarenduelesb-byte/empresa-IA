@@ -1,3 +1,11 @@
+---
+tipo: "habilidad"
+id: "prevision-tesoreria"
+usan: 1
+estado: "draft"
+tags:
+  - "habilidad"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Previsión de tesorería a 13 semanas

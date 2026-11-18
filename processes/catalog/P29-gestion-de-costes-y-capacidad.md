@@ -1,3 +1,14 @@
+---
+tipo: "proceso"
+id: "P29"
+nombre: "Gestión de costes y capacidad"
+estado: "draft"
+especialistas:
+  - "costes-proveedores"
+  - "metricas"
+tags:
+  - "proceso"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # P29 · Gestión de costes y capacidad
 

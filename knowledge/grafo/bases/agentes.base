@@ -1,0 +1,17 @@
+# Generado por tools/obsidian_gen.py. No editar a mano.
+filters:
+  and:
+    - 'tipo == "agente"'
+views:
+  - type: table
+    name: "Agentes de la oficina"
+    order:
+      - file.name
+      - departamento
+      - rol
+      - jefe
+      - habilidades
+      - estado
+    groupBy:
+      property: departamento
+      direction: ASC

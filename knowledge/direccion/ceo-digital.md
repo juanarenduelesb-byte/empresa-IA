@@ -1,3 +1,23 @@
+---
+tipo: "especialista"
+id: "ceo-digital"
+departamento: "direccion"
+puestos:
+  - "ceo"
+procesos:
+  - "P01"
+  - "P02"
+  - "P03"
+  - "P05"
+  - "P06"
+  - "P10"
+  - "P11"
+  - "P31"
+estado: "draft"
+tags:
+  - "especialista"
+  - "area/direccion"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # CEO digital
 

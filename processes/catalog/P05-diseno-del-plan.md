@@ -1,3 +1,14 @@
+---
+tipo: "proceso"
+id: "P05"
+nombre: "Diseño del plan"
+estado: "draft"
+especialistas:
+  - "ceo-digital"
+  - "decisiones-seguimiento"
+tags:
+  - "proceso"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # P05 · Diseño del plan
 

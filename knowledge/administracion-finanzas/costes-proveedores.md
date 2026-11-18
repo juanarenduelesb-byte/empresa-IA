@@ -1,3 +1,18 @@
+---
+tipo: "especialista"
+id: "costes-proveedores"
+departamento: "administracion-finanzas"
+puestos:
+  - "fin"
+  - "prov"
+procesos:
+  - "P27"
+  - "P29"
+estado: "draft"
+tags:
+  - "especialista"
+  - "area/administracion-finanzas"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # Especialista en costes y proveedores
 

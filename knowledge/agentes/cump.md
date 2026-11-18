@@ -1,3 +1,15 @@
+---
+tipo: "agente"
+puesto: "cump"
+departamento: "Calidad, seguridad y legal"
+jefe: false
+rol: "Compliance"
+estado: "draft"
+habilidades: 6
+tags:
+  - "agente"
+  - "dep/cal"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Cumplimiento normativo

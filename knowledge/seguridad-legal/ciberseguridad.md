@@ -1,3 +1,22 @@
+---
+tipo: "especialista"
+id: "ciberseguridad"
+departamento: "seguridad-legal"
+puestos:
+  - "sec"
+procesos:
+  - "P14"
+  - "P17"
+  - "P20"
+  - "P21"
+  - "P26"
+  - "P28"
+  - "P30"
+estado: "draft"
+tags:
+  - "especialista"
+  - "area/seguridad-legal"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # Especialista en ciberseguridad
 

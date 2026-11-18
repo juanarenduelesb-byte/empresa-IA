@@ -1,0 +1,11 @@
+# Generado por tools/obsidian_gen.py. No editar a mano.
+filters:
+  and:
+    - 'tipo == "habilidad"'
+views:
+  - type: table
+    name: "Habilidades"
+    order:
+      - file.name
+      - usan
+      - estado

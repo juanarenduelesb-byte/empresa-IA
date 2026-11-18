@@ -1,3 +1,18 @@
+---
+tipo: "especialista"
+id: "evaluacion-ia"
+departamento: "ingenieria"
+puestos:
+  - "dat"
+procesos:
+  - "P09"
+  - "P20"
+  - "P23"
+estado: "draft"
+tags:
+  - "especialista"
+  - "area/ingenieria"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # Especialista en evaluación de IA
 

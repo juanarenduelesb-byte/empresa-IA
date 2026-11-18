@@ -4,3 +4,14 @@ __pycache__/
 .ruff_cache/
 .env
 .env.*
+# Obsidian: estado local de cada persona (se versionan app.json, core-plugins.json y graph.json)
+.obsidian/workspace*.json
+.obsidian/plugins/
+.obsidian/themes/
+.obsidian/snippets/
+.obsidian/appearance.json
+.obsidian/hotkeys.json
+.obsidian/community-plugins.json
+.obsidian/cache
+.trash/
+.DS_Store

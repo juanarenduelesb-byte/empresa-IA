@@ -1,3 +1,19 @@
+---
+tipo: "especialista"
+id: "cumplimiento"
+departamento: "seguridad-legal"
+puestos:
+  - "cump"
+procesos:
+  - "P19"
+  - "P24"
+  - "P27"
+  - "P38"
+estado: "draft"
+tags:
+  - "especialista"
+  - "area/seguridad-legal"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # Responsable de cumplimiento normativo
 

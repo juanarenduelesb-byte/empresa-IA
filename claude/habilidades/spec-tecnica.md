@@ -1,3 +1,11 @@
+---
+tipo: "habilidad"
+id: "spec-tecnica"
+usan: 4
+estado: "draft"
+tags:
+  - "habilidad"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Especificación para Claude Code

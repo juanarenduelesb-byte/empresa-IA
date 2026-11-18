@@ -1,3 +1,14 @@
+---
+tipo: "proceso"
+id: "P36"
+nombre: "Gestión del catálogo de conectores"
+estado: "draft"
+especialistas:
+  - "integraciones"
+  - "ciberseguridad"
+tags:
+  - "proceso"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # P36 · Gestión del catálogo de conectores
 

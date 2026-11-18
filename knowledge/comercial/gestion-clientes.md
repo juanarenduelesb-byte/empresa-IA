@@ -1,3 +1,19 @@
+---
+tipo: "especialista"
+id: "gestion-clientes"
+departamento: "comercial"
+puestos:
+  - "exito"
+procesos:
+  - "P11"
+  - "P12"
+  - "P37"
+  - "P38"
+estado: "draft"
+tags:
+  - "especialista"
+  - "area/comercial"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # Especialista en éxito de cliente
 

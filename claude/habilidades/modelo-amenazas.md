@@ -1,3 +1,11 @@
+---
+tipo: "habilidad"
+id: "modelo-amenazas"
+usan: 4
+estado: "draft"
+tags:
+  - "habilidad"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Modelo de amenazas

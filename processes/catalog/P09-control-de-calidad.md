@@ -1,3 +1,14 @@
+---
+tipo: "proceso"
+id: "P09"
+nombre: "Control de calidad"
+estado: "draft"
+especialistas:
+  - "calidad-riesgos"
+  - "evaluacion-ia"
+tags:
+  - "proceso"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # P09 · Control de calidad
 

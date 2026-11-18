@@ -1,3 +1,14 @@
+---
+tipo: "proceso"
+id: "P14"
+nombre: "Gestión de permisos y aislamiento"
+estado: "draft"
+especialistas:
+  - "ciberseguridad"
+  - "backend"
+tags:
+  - "proceso"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # P14 · Gestión de permisos y aislamiento
 

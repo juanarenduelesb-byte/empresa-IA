@@ -1,3 +1,16 @@
+---
+tipo: "proceso"
+id: "P33"
+nombre: "Diseño y validación TO-BE"
+estado: "draft"
+especialistas:
+  - "arquitecto-procesos"
+  - "ciberseguridad"
+  - "legal-privacidad"
+  - "metricas"
+tags:
+  - "proceso"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # P33 · Diseño y validación TO-BE
 

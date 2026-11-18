@@ -1,0 +1,13 @@
+{
+  "userIgnoreFilters": [
+    "site/",
+    "oficina/vendor/",
+    "archive/",
+    "node_modules/",
+    ".github/"
+  ],
+  "showUnsupportedFiles": false,
+  "alwaysUpdateLinks": true,
+  "newLinkFormat": "relative",
+  "useMarkdownLinks": false
+}

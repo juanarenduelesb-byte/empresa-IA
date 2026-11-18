@@ -1,3 +1,17 @@
+---
+tipo: "especialista"
+id: "diseno-experiencia"
+departamento: "ingenieria"
+puestos:
+  - "ux"
+procesos:
+  - "P10"
+  - "P37"
+estado: "draft"
+tags:
+  - "especialista"
+  - "area/ingenieria"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # Diseñador de producto y experiencia (UX)
 

@@ -1,3 +1,13 @@
+---
+tipo: "proceso"
+id: "P23"
+nombre: "Evaluación de agentes y modelos"
+estado: "draft"
+especialistas:
+  - "evaluacion-ia"
+tags:
+  - "proceso"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # P23 · Evaluación de agentes y modelos
 

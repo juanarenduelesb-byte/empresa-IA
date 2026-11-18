@@ -1,3 +1,15 @@
+---
+tipo: "agente"
+puesto: "conta"
+departamento: "Administración"
+jefe: false
+rol: "Contable"
+estado: "draft"
+habilidades: 5
+tags:
+  - "agente"
+  - "dep/adm"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Contabilidad y facturación

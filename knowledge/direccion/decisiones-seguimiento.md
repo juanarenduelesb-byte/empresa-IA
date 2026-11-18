@@ -1,3 +1,21 @@
+---
+tipo: "especialista"
+id: "decisiones-seguimiento"
+departamento: "direccion"
+puestos:
+  - "pmo"
+  - "dec"
+procesos:
+  - "P05"
+  - "P12"
+  - "P15"
+  - "P18"
+  - "P25"
+estado: "draft"
+tags:
+  - "especialista"
+  - "area/direccion"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # Responsable de decisiones y seguimiento
 

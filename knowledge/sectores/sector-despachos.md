@@ -1,3 +1,18 @@
+---
+tipo: "especialista"
+id: "sector-despachos"
+departamento: "sectores"
+puestos:
+  - "ase"
+procesos:
+  - "P02"
+  - "P32"
+  - "P33"
+estado: "draft"
+tags:
+  - "especialista"
+  - "area/sectores"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # Experto en asesorías, gestorías y despachos
 

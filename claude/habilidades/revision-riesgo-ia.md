@@ -1,3 +1,11 @@
+---
+tipo: "habilidad"
+id: "revision-riesgo-ia"
+usan: 1
+estado: "draft"
+tags:
+  - "habilidad"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Revisión de riesgo de IA y datos

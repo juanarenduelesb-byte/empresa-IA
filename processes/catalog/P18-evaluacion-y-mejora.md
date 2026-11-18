@@ -1,3 +1,14 @@
+---
+tipo: "proceso"
+id: "P18"
+nombre: "Evaluación y mejora"
+estado: "draft"
+especialistas:
+  - "metricas"
+  - "decisiones-seguimiento"
+tags:
+  - "proceso"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # P18 · Evaluación y mejora
 

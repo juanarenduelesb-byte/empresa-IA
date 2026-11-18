@@ -1,3 +1,13 @@
+---
+tipo: "proceso"
+id: "P17"
+nombre: "Seguridad y continuidad"
+estado: "draft"
+especialistas:
+  - "ciberseguridad"
+tags:
+  - "proceso"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # P17 · Seguridad y continuidad
 

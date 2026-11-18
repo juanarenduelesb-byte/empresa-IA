@@ -1,3 +1,15 @@
+---
+tipo: "agente"
+puesto: "seg"
+departamento: "Sectores"
+jefe: true
+rol: "Seguros y mediación"
+estado: "draft"
+habilidades: 4
+tags:
+  - "agente"
+  - "dep/sect"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Coordinación sectorial · Seguros

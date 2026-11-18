@@ -1,3 +1,18 @@
+---
+tipo: "especialista"
+id: "implantacion-clientes"
+departamento: "procesos"
+puestos:
+  - "exito"
+procesos:
+  - "P38"
+  - "P11"
+  - "P12"
+estado: "draft"
+tags:
+  - "especialista"
+  - "area/procesos"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # Responsable de implantación de clientes
 

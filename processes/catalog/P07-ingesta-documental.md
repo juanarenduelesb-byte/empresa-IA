@@ -1,3 +1,15 @@
+---
+tipo: "proceso"
+id: "P07"
+nombre: "Ingesta documental"
+estado: "draft"
+especialistas:
+  - "bibliotecario"
+  - "datos-ia"
+  - "legal-privacidad"
+tags:
+  - "proceso"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # P07 · Ingesta documental
 

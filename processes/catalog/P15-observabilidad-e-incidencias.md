@@ -1,3 +1,14 @@
+---
+tipo: "proceso"
+id: "P15"
+nombre: "Observabilidad e incidencias"
+estado: "draft"
+especialistas:
+  - "calidad-riesgos"
+  - "backend"
+tags:
+  - "proceso"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # P15 · Observabilidad e incidencias
 

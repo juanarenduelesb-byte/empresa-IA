@@ -1,3 +1,19 @@
+---
+tipo: "especialista"
+id: "arquitecto-procesos"
+departamento: "procesos"
+puestos:
+  - "proj"
+procesos:
+  - "P32"
+  - "P33"
+  - "P34"
+  - "P35"
+estado: "draft"
+tags:
+  - "especialista"
+  - "area/procesos"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # Arquitecto de procesos
 

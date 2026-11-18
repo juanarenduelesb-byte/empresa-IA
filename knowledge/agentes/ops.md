@@ -1,3 +1,15 @@
+---
+tipo: "agente"
+puesto: "ops"
+departamento: "Ingeniería"
+jefe: false
+rol: "DevOps y SRE"
+estado: "draft"
+habilidades: 6
+tags:
+  - "agente"
+  - "dep/ing"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Plataforma y operaciones

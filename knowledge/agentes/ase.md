@@ -1,3 +1,15 @@
+---
+tipo: "agente"
+puesto: "ase"
+departamento: "Sectores"
+jefe: false
+rol: "Asesorías, gestorías y despachos"
+estado: "draft"
+habilidades: 4
+tags:
+  - "agente"
+  - "dep/sect"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Experto en asesorías y despachos

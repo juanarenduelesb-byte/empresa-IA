@@ -1,3 +1,15 @@
+---
+tipo: "agente"
+puesto: "cont"
+departamento: "Comercial y clientes"
+jefe: false
+rol: "Web y LinkedIn"
+estado: "draft"
+habilidades: 3
+tags:
+  - "agente"
+  - "dep/com"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Contenido

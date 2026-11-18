@@ -1,3 +1,19 @@
+---
+tipo: "especialista"
+id: "sector-industria"
+departamento: "sectores"
+puestos:
+  - "ind"
+procesos:
+  - "P02"
+  - "P32"
+  - "P33"
+  - "P21"
+estado: "draft"
+tags:
+  - "especialista"
+  - "area/sectores"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # Experto en industria manufacturera
 

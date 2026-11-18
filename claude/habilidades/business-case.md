@@ -1,3 +1,11 @@
+---
+tipo: "habilidad"
+id: "business-case"
+usan: 5
+estado: "draft"
+tags:
+  - "habilidad"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Caso de negocio

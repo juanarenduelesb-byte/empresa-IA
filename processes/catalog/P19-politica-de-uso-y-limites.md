@@ -1,3 +1,14 @@
+---
+tipo: "proceso"
+id: "P19"
+nombre: "Política de uso y límites"
+estado: "draft"
+especialistas:
+  - "legal-privacidad"
+  - "calidad-riesgos"
+tags:
+  - "proceso"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # P19 · Política de uso y límites
 

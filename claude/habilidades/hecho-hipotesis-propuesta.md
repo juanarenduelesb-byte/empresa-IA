@@ -1,3 +1,11 @@
+---
+tipo: "habilidad"
+id: "hecho-hipotesis-propuesta"
+usan: 17
+estado: "draft"
+tags:
+  - "habilidad"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Separar hecho, hipótesis y propuesta

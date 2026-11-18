@@ -1,3 +1,15 @@
+---
+tipo: "agente"
+puesto: "admj"
+departamento: "Administración"
+jefe: true
+rol: "Empresa"
+estado: "draft"
+habilidades: 3
+tags:
+  - "agente"
+  - "dep/adm"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Administración

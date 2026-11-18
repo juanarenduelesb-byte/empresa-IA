@@ -1,3 +1,11 @@
+---
+tipo: "habilidad"
+id: "cierre-mensual"
+usan: 1
+estado: "draft"
+tags:
+  - "habilidad"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Cierre contable mensual

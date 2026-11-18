@@ -1,3 +1,14 @@
+---
+tipo: "proceso"
+id: "P24"
+nombre: "Gestión del ciclo de vida del dato"
+estado: "draft"
+especialistas:
+  - "legal-privacidad"
+  - "backend"
+tags:
+  - "proceso"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # P24 · Gestión del ciclo de vida del dato
 

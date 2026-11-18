@@ -1,3 +1,11 @@
+---
+tipo: "habilidad"
+id: "matriz-ia-regla-persona"
+usan: 1
+estado: "draft"
+tags:
+  - "habilidad"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Matriz IA · regla · persona

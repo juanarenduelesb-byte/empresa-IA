@@ -1,3 +1,16 @@
+---
+tipo: "especialista"
+id: "administrativo"
+departamento: "administracion-finanzas"
+puestos:
+  - "admj"
+procesos:
+  - "P11"
+estado: "draft"
+tags:
+  - "especialista"
+  - "area/administracion-finanzas"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # Especialista administrativo
 

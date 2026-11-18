@@ -1,3 +1,14 @@
+---
+tipo: "proceso"
+id: "P31"
+nombre: "Calificación de oportunidad"
+estado: "draft"
+especialistas:
+  - "director-comercial"
+  - "prospeccion"
+tags:
+  - "proceso"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # P31 · Calificación de oportunidad
 

@@ -1,3 +1,15 @@
+---
+tipo: "agente"
+puesto: "prop"
+departamento: "Comercial y clientes"
+jefe: false
+rol: "Ofertas"
+estado: "draft"
+habilidades: 4
+tags:
+  - "agente"
+  - "dep/com"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Propuestas

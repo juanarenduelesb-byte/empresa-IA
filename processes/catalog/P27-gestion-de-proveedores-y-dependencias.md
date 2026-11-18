@@ -1,3 +1,14 @@
+---
+tipo: "proceso"
+id: "P27"
+nombre: "Gestión de proveedores y dependencias"
+estado: "draft"
+especialistas:
+  - "costes-proveedores"
+  - "legal-privacidad"
+tags:
+  - "proceso"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # P27 · Gestión de proveedores y dependencias
 

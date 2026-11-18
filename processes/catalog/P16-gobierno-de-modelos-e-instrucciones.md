@@ -1,3 +1,14 @@
+---
+tipo: "proceso"
+id: "P16"
+nombre: "Gobierno de modelos e instrucciones"
+estado: "draft"
+especialistas:
+  - "datos-ia"
+  - "evaluacion-ia"
+tags:
+  - "proceso"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # P16 · Gobierno de modelos e instrucciones
 

@@ -1,3 +1,15 @@
+---
+tipo: "agente"
+puesto: "ind"
+departamento: "Sectores"
+jefe: false
+rol: "Industria manufacturera"
+estado: "draft"
+habilidades: 3
+tags:
+  - "agente"
+  - "dep/sect"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Experto en industria

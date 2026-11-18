@@ -1,0 +1,12 @@
+# Generado por tools/obsidian_gen.py. No editar a mano.
+filters:
+  and:
+    - 'tipo == "proceso"'
+views:
+  - type: table
+    name: "Procesos"
+    order:
+      - id
+      - nombre
+      - especialistas
+      - estado

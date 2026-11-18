@@ -1,3 +1,11 @@
+---
+tipo: "habilidad"
+id: "preguntas-profesional"
+usan: 3
+estado: "draft"
+tags:
+  - "habilidad"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Preguntas para un profesional externo

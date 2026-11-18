@@ -1,3 +1,16 @@
+---
+tipo: "especialista"
+id: "marketing-contenido"
+departamento: "comercial"
+puestos:
+  - "cont"
+procesos:
+  - "P31"
+estado: "draft"
+tags:
+  - "especialista"
+  - "area/comercial"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # Especialista en marketing y contenido
 

@@ -1,3 +1,11 @@
+---
+tipo: "habilidad"
+id: "mapa-obligaciones"
+usan: 8
+estado: "draft"
+tags:
+  - "habilidad"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Mapa de obligaciones

@@ -24,6 +24,20 @@ HB = {h["id"]: h for h in HABILIDADES}
 ESP = {e["id"]: e for e in ESPECIALISTAS}
 
 
+
+def fm(d):
+    """Propiedades de Obsidian (YAML plano) al principio de la nota."""
+    def v(x):
+        if isinstance(x, bool):
+            return " true" if x else " false"
+        if isinstance(x, (int, float)):
+            return " " + str(x)
+        if isinstance(x, list):
+            return "\n" + "".join("  - " + json.dumps(str(i), ensure_ascii=False) + "\n" for i in x) if x else " []"
+        return " " + json.dumps(str(x), ensure_ascii=False)
+    return "---\n" + "".join(k + ":" + (v(x) if isinstance(x, list) else v(x)) + ("" if isinstance(x, list) and x else "\n") for k, x in d.items()) + "---\n"
+
+
 def validar():
     errores = []
     if len(AG) != len(AGENTES):
@@ -64,7 +78,8 @@ def usan(hid):
 
 
 def ficha_md(a):
-    out = [AVISO, f"# {a['nombre']}\n",
+    out = [fm({"tipo": "agente", "puesto": a["id"], "departamento": DEPS[a["dep"]], "jefe": a["lead"], "rol": a["rol"], "estado": "draft",
+               "habilidades": len(a["habilidades"]), "tags": ["agente", "dep/" + a["dep"]]}) + AVISO, f"# {a['nombre']}\n",
            f"**Departamento:** {DEPS[a['dep']]}{' · **Jefe del departamento**' if a['lead'] else ''} · **Puesto en la oficina:** `{a['id']}` · **Estado:** draft, pendiente de revisión de un socio\n",
            f"> {a['mision']}\n",
            f"**Nivel:** {a['nivel']}\n",
@@ -100,7 +115,7 @@ def readme_agentes():
 
 def hab_md(h):
     u = usan(h["id"])
-    return "\n".join([AVISO, f"# {h['nombre']}\n", f"`{h['id']}` · **Estado:** draft\n",
+    return "\n".join([fm({"tipo": "habilidad", "id": h["id"], "usan": len(u), "estado": "draft", "tags": ["habilidad"]}) + AVISO, f"# {h['nombre']}\n", f"`{h['id']}` · **Estado:** draft\n",
                       f"**Cuándo se usa:** {h['cuando']}\n", "## Pasos\n",
                       "\n".join(f"{i}. {p}" for i, p in enumerate(h["pasos"], 1)), "",
                       f"## Resultado\n\n{h['salida']}\n", "## Lista de control\n", lista(h["control"]), "",

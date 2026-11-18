@@ -1,3 +1,19 @@
+---
+tipo: "especialista"
+id: "arquitecto-tecnico"
+departamento: "ingenieria"
+puestos:
+  - "ingj"
+procesos:
+  - "P12"
+  - "P25"
+  - "P27"
+  - "P34"
+estado: "draft"
+tags:
+  - "especialista"
+  - "area/ingenieria"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # Arquitecto técnico
 

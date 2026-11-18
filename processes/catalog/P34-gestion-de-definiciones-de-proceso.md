@@ -1,3 +1,14 @@
+---
+tipo: "proceso"
+id: "P34"
+nombre: "Gestión de definiciones de proceso"
+estado: "draft"
+especialistas:
+  - "arquitecto-procesos"
+  - "backend"
+tags:
+  - "proceso"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # P34 · Gestión de definiciones de proceso
 

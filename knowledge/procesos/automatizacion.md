@@ -1,3 +1,19 @@
+---
+tipo: "especialista"
+id: "automatizacion"
+departamento: "procesos"
+puestos:
+  - "int"
+procesos:
+  - "P08"
+  - "P21"
+  - "P22"
+  - "P36"
+estado: "draft"
+tags:
+  - "especialista"
+  - "area/procesos"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # Especialista en automatización
 

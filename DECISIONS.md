@@ -149,6 +149,19 @@ No construir primero un CEO omnisciente; descubrir, diseñar, integrar y medir u
 - Riesgo: más agentes, más coordinación y más tokens. Mitigación: cada puesto tiene límites claros y el CEO solo los convoca cuando el encargo lo pide.
 - Estado: propuesta.
 
+## D-021 — El cerebro se abre en Obsidian: el repositorio es el vault
+- Fecha: 2026-11-18
+- Decisión: desarrolla D-003. El repositorio entero se abre como vault de Obsidian, sin copia aparte:
+  - Las fichas generadas (agentes, habilidades, especialistas, procesos) llevan propiedades YAML planas (tipo, departamento, estado…).
+  - tools/obsidian_gen.py, llamado desde tools/brain_build.py, escribe en knowledge/grafo/ una nota por decisión y por fuente con quién las cita, un mapa por comunidad del grafo, el Mapa del cerebro y seis vistas de Bases (tablas nativas de Obsidian 1.9 o posterior).
+  - .obsidian/ versiona solo app.json, core-plugins.json y graph.json (colores por carpeta); el estado local de cada persona queda fuera por .gitignore.
+  - Sincronización con el plugin de la comunidad Obsidian Git: traer cambios al abrir y cada pocos minutos; subir cambios a mano. La autenticación con GitHub la hace cada socio en su equipo; no se guarda ningún token en el repositorio.
+  - Guía en docs/19-obsidian.md.
+- Motivo: los socios quieren navegar y editar el cerebro con un editor cómodo y ver el grafo, sin un servicio nuevo ni coste de tokens.
+- Tecnología nueva: Obsidian (aplicación de escritorio gratuita, ya instalada por un socio) y su plugin Obsidian Git. No entra en el stack del piloto ni en producción; los datos siguen siendo Markdown en Git.
+- Riesgo: que alguien edite a mano un archivo generado y CI lo pise o falle. Mitigación: Inicio.md y cada nota generada dicen qué no se edita; CI comprueba que lo generado está al día.
+- Estado: propuesta.
+
 ## Decisiones pendientes (con fecha límite)
 | Decisión | Quién | Antes de |
 |---|---|---|

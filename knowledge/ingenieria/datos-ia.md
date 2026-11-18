@@ -1,3 +1,19 @@
+---
+tipo: "especialista"
+id: "datos-ia"
+departamento: "ingenieria"
+puestos:
+  - "ia"
+procesos:
+  - "P04"
+  - "P07"
+  - "P16"
+  - "P23"
+estado: "draft"
+tags:
+  - "especialista"
+  - "area/ingenieria"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # Arquitecto de datos e IA
 

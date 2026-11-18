@@ -1,3 +1,14 @@
+---
+tipo: "proceso"
+id: "P11"
+nombre: "Entrega y cierre"
+estado: "draft"
+especialistas:
+  - "ceo-digital"
+  - "bibliotecario"
+tags:
+  - "proceso"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # P11 · Entrega y cierre
 

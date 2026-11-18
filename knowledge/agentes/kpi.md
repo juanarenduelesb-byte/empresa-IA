@@ -1,3 +1,15 @@
+---
+tipo: "agente"
+puesto: "kpi"
+departamento: "Procesos"
+jefe: false
+rol: "Línea base"
+estado: "draft"
+habilidades: 4
+tags:
+  - "agente"
+  - "dep/pro"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Métricas

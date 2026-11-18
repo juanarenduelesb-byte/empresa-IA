@@ -1,3 +1,15 @@
+---
+tipo: "agente"
+puesto: "ingj"
+departamento: "Ingeniería"
+jefe: true
+rol: "Ingeniería"
+estado: "draft"
+habilidades: 5
+tags:
+  - "agente"
+  - "dep/ing"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Arquitecto técnico

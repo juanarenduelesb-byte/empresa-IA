@@ -1,3 +1,18 @@
+---
+tipo: "especialista"
+id: "metricas"
+departamento: "procesos"
+puestos:
+  - "kpi"
+procesos:
+  - "P18"
+  - "P29"
+  - "P37"
+estado: "draft"
+tags:
+  - "especialista"
+  - "area/procesos"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # Especialista en métricas
 

@@ -1,3 +1,14 @@
+---
+tipo: "proceso"
+id: "P22"
+nombre: "Gestión de errores y reintentos"
+estado: "draft"
+especialistas:
+  - "backend"
+  - "automatizacion"
+tags:
+  - "proceso"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # P22 · Gestión de errores y reintentos
 

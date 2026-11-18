@@ -1,3 +1,15 @@
+---
+tipo: "agente"
+puesto: "proj"
+departamento: "Procesos"
+jefe: true
+rol: "Procesos"
+estado: "draft"
+habilidades: 5
+tags:
+  - "agente"
+  - "dep/pro"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Arquitecto de procesos

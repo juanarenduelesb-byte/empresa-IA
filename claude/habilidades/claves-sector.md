@@ -1,3 +1,11 @@
+---
+tipo: "habilidad"
+id: "claves-sector"
+usan: 6
+estado: "draft"
+tags:
+  - "habilidad"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Claves del sector para un encargo

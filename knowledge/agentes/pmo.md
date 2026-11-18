@@ -1,3 +1,15 @@
+---
+tipo: "agente"
+puesto: "pmo"
+departamento: "Dirección"
+jefe: false
+rol: "PMO"
+estado: "draft"
+habilidades: 5
+tags:
+  - "agente"
+  - "dep/dir"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Plan y seguimiento

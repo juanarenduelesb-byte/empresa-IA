@@ -1,3 +1,15 @@
+---
+tipo: "agente"
+puesto: "prov"
+departamento: "Administración"
+jefe: false
+rol: "Inventario"
+estado: "draft"
+habilidades: 2
+tags:
+  - "agente"
+  - "dep/adm"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Proveedores

@@ -1,3 +1,15 @@
+---
+tipo: "agente"
+puesto: "ux"
+departamento: "Ingeniería"
+jefe: false
+rol: "Diseñador UX"
+estado: "draft"
+habilidades: 5
+tags:
+  - "agente"
+  - "dep/ing"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Diseño y experiencia

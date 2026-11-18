@@ -1,3 +1,15 @@
+---
+tipo: "proceso"
+id: "P32"
+nombre: "Descubrimiento de procesos"
+estado: "draft"
+especialistas:
+  - "arquitecto-procesos"
+  - "especialista-sectorial"
+  - "metricas"
+tags:
+  - "proceso"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # P32 · Descubrimiento de procesos
 

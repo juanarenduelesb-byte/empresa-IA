@@ -1,3 +1,15 @@
+---
+tipo: "agente"
+puesto: "fin"
+departamento: "Administración"
+jefe: false
+rol: "Presupuesto"
+estado: "draft"
+habilidades: 3
+tags:
+  - "agente"
+  - "dep/adm"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # Costes

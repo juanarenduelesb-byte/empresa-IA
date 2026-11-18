@@ -1,3 +1,14 @@
+---
+tipo: "proceso"
+id: "P30"
+nombre: "Gestión de identidades y secretos"
+estado: "draft"
+especialistas:
+  - "ciberseguridad"
+  - "integraciones"
+tags:
+  - "proceso"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # P30 · Gestión de identidades y secretos
 

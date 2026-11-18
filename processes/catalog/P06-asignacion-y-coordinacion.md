@@ -1,3 +1,13 @@
+---
+tipo: "proceso"
+id: "P06"
+nombre: "Asignación y coordinación"
+estado: "draft"
+especialistas:
+  - "ceo-digital"
+tags:
+  - "proceso"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # P06 · Asignación y coordinación
 

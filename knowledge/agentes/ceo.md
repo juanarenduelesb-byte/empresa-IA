@@ -1,3 +1,15 @@
+---
+tipo: "agente"
+puesto: "ceo"
+departamento: "Dirección"
+jefe: true
+rol: "Orquestador"
+estado: "draft"
+habilidades: 6
+tags:
+  - "agente"
+  - "dep/dir"
+---
 <!-- Generado por tools/agentes_gen.py desde tools/org_data/. No editar a mano. -->
 
 # CEO digital

@@ -1,3 +1,15 @@
+---
+tipo: "proceso"
+id: "P28"
+nombre: "Gestión de incidentes"
+estado: "draft"
+especialistas:
+  - "ciberseguridad"
+  - "calidad-riesgos"
+  - "legal-privacidad"
+tags:
+  - "proceso"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # P28 · Gestión de incidentes
 

@@ -1,3 +1,17 @@
+---
+tipo: "especialista"
+id: "direccion-financiera"
+departamento: "administracion-finanzas"
+puestos:
+  - "cfo"
+procesos:
+  - "P29"
+  - "P37"
+estado: "draft"
+tags:
+  - "especialista"
+  - "area/administracion-finanzas"
+---
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # Director financiero (CFO)
 

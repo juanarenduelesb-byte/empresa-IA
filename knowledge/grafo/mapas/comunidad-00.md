@@ -1,22 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 0
-miembros: 109
+miembros: 105
 cohesion: 0.05
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 0 · claude/habilidades · Legal y privacidad y Arquitecto de procesos
+# Comunidad 0 · Habilidades · Legal y privacidad y Arquitecto de procesos
 
-109 nodos agrupados por el algoritmo de Louvain. Cohesión 0.05.
-
-## Documentos
-
-- [[claude/habilidades/contrato-de-tarea|Contrato de tarea]]
-- [[claude/habilidades/observabilidad|Observabilidad y alertas]]
-- [[claude/habilidades/registro-tratamientos|Registro de actividades de tratamiento]]
-- [[claude/habilidades/alfabetizacion-ia|Programa de alfabetización en IA]]
+105 nodos agrupados por el algoritmo de Louvain. Cohesión 0.05.
 
 ## Agentes
 
@@ -55,10 +48,6 @@ tags:
 - [[knowledge/agentes/ind|Experto en industria]]
 - [[knowledge/agentes/logi|Experto en logística]]
 
-## Especialistas
-
-- [[knowledge/comercial/marketing-contenido|Especialista en marketing y contenido]]
-
 ## Habilidades
 
 - [[claude/habilidades/hecho-hipotesis-propuesta|Separar hecho, hipótesis y propuesta]]
@@ -85,8 +74,8 @@ tags:
 - [[claude/habilidades/cierre-mensual|Cierre contable mensual]]
 - [[claude/habilidades/cinco-decisiones|Las cinco decisiones del CEO]]
 - [[claude/habilidades/citar-cerebro|Leer y citar el cerebro]]
-- [[claude/habilidades/consultar-historico|Consultar el histórico antes de hacer]]
 - [[claude/habilidades/contrato-de-tarea|Contrato de tarea]]
+- [[claude/habilidades/copias-restauracion|Copias y restauración probada]]
 - [[claude/habilidades/criterio-aceptacion|Criterio de aceptación]]
 - [[claude/habilidades/cualificacion-oportunidad|Cualificación de oportunidad]]
 - [[claude/habilidades/diseno-to-be|Diseño del proceso nuevo (TO-BE)]]
@@ -121,4 +110,4 @@ tags:
 - [[claude/habilidades/registro-tratamientos|Registro de actividades de tratamiento]]
 - [[claude/habilidades/revision-accesibilidad|Revisión de accesibilidad]]
 - [[claude/habilidades/revision-riesgo-ia|Revisión de riesgo de IA y datos]]
-- … y 3 más
+- … y 4 más

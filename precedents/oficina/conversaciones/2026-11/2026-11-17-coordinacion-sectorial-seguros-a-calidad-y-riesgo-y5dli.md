@@ -1,0 +1,9 @@
+<!-- Generado por tools/registro_oficina.py desde la oficina de agentes. No editar a mano. -->
+
+# Coordinación sectorial · Seguros → Calidad y riesgo
+
+**Motivo:** Lleva la entrega a Calidad · **Fecha:** 2026-11-17 · **Encargo:** Claves del sector seguros para Atalaya
+
+**Coordinación sectorial · Seguros:** Te traigo la entrega de «Claves del sector seguros para Atalaya» para que la revises contra el criterio.
+
+**Calidad y riesgo:** No cumple del todo. El documento cumple en lo esencial (fuentes normativas, glosario en tabla, sin datos reales, sin afirmaciones de cumplimiento), pero mezcla una práctica no sourced con un hecho normativo y atribuye una definición a una fuente que no la contiene; hay que corregirlo antes de llegar a los socios. Problemas: Sección 1, fila 'Riesgos extraordinarios': la frase 'en la práctica, suele llegar por agentes y corredores' se presenta bajo 'Hecho según el extracto', pero el extracto solo dice que el mediador puede presentar la solicitud. Hay que separar esa frase, marcarla como práctica no sourced (Desconocida o [POR CONFIRMAR]) y dejar como hecho solo lo que consta.; Glosario, fila 'Tomador': la definición 'Quien contrata la póliza' se atribuye a 'Extracto README (LCS art. 16)', pero ese extracto solo recoge que el tomador comunica el siniestro. Hay que atribuir la definición a 'Uso general [POR CONFIRMAR]' o citar la fuente que la contenga.; Sección 2, párrafo final: las cifras de Atalaya (320 siniestros al mes, 25-40 minutos, 30 % de partes rehechos) no llevan referencia al documento del caso que las contiene. Hay que citar el archivo y el apartado, o marcarlas [POR CONFIRMAR].; Las referencias a casos concretos (AT-0001, AT-0003, AT-0005, AT-0006, AT-0008, AT-0009) y a documentos 01 a 04 no se pueden verificar desde esta revisión, porque el propio documento reconoce que no ha abierto la muestra completa. Hay que indicar que su contenido se ha comprobado o marcarlo como pendiente de verificación.

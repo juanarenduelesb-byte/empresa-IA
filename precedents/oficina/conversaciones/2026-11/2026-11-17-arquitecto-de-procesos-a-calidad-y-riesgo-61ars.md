@@ -1,0 +1,9 @@
+<!-- Generado por tools/registro_oficina.py desde la oficina de agentes. No editar a mano. -->
+
+# Arquitecto de procesos → Calidad y riesgo
+
+**Motivo:** Lleva la entrega a Calidad · **Fecha:** 2026-11-17 · **Encargo:** AS-IS de apertura de siniestros · Atalaya
+
+**Arquitecto de procesos:** Te traigo la entrega de «AS-IS de apertura de siniestros · Atalaya» para que la revises contra el criterio.
+
+**Calidad y riesgo:** No cumple del todo. El AS-IS cubre los ocho actores, los pasos P0 a P7 con rol, sistema, entrada, salida, tiempo marcado y ruta, y las excepciones E1 a E7 con los duplicados marcados como desconocidos, pero la fila E7 está malformada, el documento queda incompleto y hay una referencia a una sección inexistente. Problemas: La fila E7 del catálogo de excepciones está rota: tiene 6 celdas frente a las 7 columnas de la cabecera y faltan la ruta, el ejemplo y los problemas. Hay que completarla con 'Ruta actual: DESCONOCIDA', 'Ejemplo en la muestra: no consta' y 'Problemas: sin registros para medir frecuencia'.; El documento termina en la sección 5 y no tiene cierre. Falta una sección final de conclusiones y puntos [POR CONFIRMAR] con su responsable.; La sección 4 remite a 'la sección 7' para medir el retrabajo, pero la sección 7 no existe. Hay que crearla con la métrica y la línea base, o cambiar la referencia.; La conclusión del resumen dice que 'el dolor se concentra en pedir documentación, copiar al portal y avisar al cliente' como afirmación de hecho. Debe marcarse como DICHO o HIPÓTESIS con su fuente, porque se basa en las notas y no en una medición.; Las referencias a archivos (02-notas..., 03-muestra..., 04-sistemas...) no se pueden comprobar desde este encargo. El borrador lo reconoce en 'Sobre las fuentes', pero las citas por ruta deben quedar [POR CONFIRMAR] en cada aparición, o reemplazarse por la fuente exacta una vez verificada.

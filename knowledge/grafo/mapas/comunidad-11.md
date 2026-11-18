@@ -1,38 +1,32 @@
 ---
 tipo: "mapa"
 comunidad: 11
-miembros: 14
-cohesion: 0.21
+miembros: 17
+cohesion: 0.18
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 11 · claude/habilidades · Ingeniero de plataforma y operaciones (DevOps/SRE) y Plataforma y operaciones
+# Comunidad 11 · knowledge/plantillas · Índice del conocimiento de Varios y Plantillas
 
-14 nodos agrupados por el algoritmo de Louvain. Cohesión 0.21.
+17 nodos agrupados por el algoritmo de Louvain. Cohesión 0.18.
 
 ## Documentos
 
-- [[knowledge/ingenieria/plataforma-operaciones|Ingeniero de plataforma y operaciones (DevOps/SRE)]]
-- [[knowledge/agentes/ops|Plataforma y operaciones]]
-- [[claude/habilidades/copias-restauracion|Copias y restauración probada]]
-- [[claude/habilidades/integracion-continua|Integración continua]]
-- [[claude/habilidades/runbook-incidente|Runbook y gestión de incidentes]]
-
-## Especialistas
-
-- [[knowledge/ingenieria/plataforma-operaciones|Ingeniero de plataforma y operaciones (DevOps/SRE)]]
-
-## Habilidades
-
-- [[claude/habilidades/copias-restauracion|Copias y restauración probada]]
-- [[claude/habilidades/runbook-incidente|Runbook y gestión de incidentes]]
-
-## Fuentes
-
-- [[knowledge/grafo/fuentes/ENS-RD311|ENS-RD311 · Real Decreto 311/2022, Esquema Nacional de Seguridad]]
-- [[knowledge/grafo/fuentes/ISO-27001|ISO-27001 · ISO/IEC 27001:2022 (transición desde 2013 terminada el 31/10/2025)]]
-- [[knowledge/grafo/fuentes/OTEL-GENAI|OTEL-GENAI · OpenTelemetry: convenciones semánticas para IA generativa]]
-- [[knowledge/grafo/fuentes/DORA-DEVOPS|DORA-DEVOPS · Métricas DORA de entrega de software (DevOps Research and Assessment)]]
-- [[knowledge/grafo/fuentes/GOOGLE-SRE|GOOGLE-SRE · Site Reliability Engineering (libros de Google SRE)]]
-- [[knowledge/grafo/fuentes/TWELVE-FACTOR|TWELVE-FACTOR · The Twelve-Factor App]]
+- [[knowledge/INDEX|Índice del conocimiento de Varios]]
+- [[knowledge/plantillas/README|Plantillas]]
+- [[integrations/README|Integraciones]]
+- [[integrations/catalog/README|Catálogo de integraciones]]
+- [[knowledge/metodologias-transversales/consultar-historico|Protocolo: consultar el histórico antes de empezar]]
+- [[knowledge/metodologias-transversales/guardar|Protocolo: guardar el conocimiento]]
+- [[integrations/contracts/README|Contratos de datos]]
+- [[knowledge/metodologias-transversales/README|Metodologías transversales]]
+- [[integrations/tests/README|Pruebas de integración]]
+- [[knowledge/plantillas/ficha-proveedor|Proveedor: <nombre>]]
+- [[integrations/connectors/README|Conectores]]
+- [[precedents/plantilla-precedente|<título>]]
+- [[knowledge/plantillas/entrada-decision|Entrada-decision]]
+- [[knowledge/plantillas/ficha-kpi|KPI: <nombre>]]
+- [[knowledge/plantillas/ficha-conocimiento|Título]]
+- [[knowledge/plantillas/ficha-oportunidad|Oportunidad: <empresa> (ejemplo inventado hasta que exista una real)]]
+- [[knowledge/plantillas/ficha-investigacion|Investigación: <pregunta>]]

@@ -2,60 +2,54 @@
 tipo: "mapa"
 comunidad: 5
 miembros: 37
-cohesion: 0.18
+cohesion: 0.47
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 5 · knowledge/administracion-finanzas · Registro de fuentes y Experto en asesorías, gestorías y despachos
+# Comunidad 5 · processes/catalog · P22 · Gestión de errores y reintentos y Catálogo de procesos P01–P38
 
-37 nodos agrupados por el algoritmo de Louvain. Cohesión 0.18.
+37 nodos agrupados por el algoritmo de Louvain. Cohesión 0.47.
 
 ## Documentos
 
-- [[knowledge/fuentes/registro|Registro de fuentes]]
-- [[knowledge/sectores/sector-despachos|Experto en asesorías, gestorías y despachos]]
-- [[knowledge/administracion-finanzas/contabilidad|Especialista en contabilidad y facturación]]
-- [[knowledge/administracion-finanzas/direccion-financiera|Director financiero (CFO)]]
-- [[knowledge/administracion-finanzas/costes-proveedores|Especialista en costes y proveedores]]
-- [[knowledge/administracion-finanzas/administrativo|Especialista administrativo]]
-- [[knowledge/administracion-finanzas/financiero|Especialista financiero]]
-- [[knowledge/plantillas/ficha-fuente|Ficha-fuente]]
-- [[knowledge/administracion-finanzas/README|Administración y finanzas]]
-- [[knowledge/metodologias-transversales/investigar|Protocolo: investigar fuera]]
-- [[processes/runbooks/coste-anomalo|Coste anómalo]]
+- [[processes/catalog/README|Catálogo de procesos P01–P38]]
+- [[processes/catalog/P22-gestion-de-errores-y-reintentos|P22 · Gestión de errores y reintentos]]
+- [[processes/catalog/P27-gestion-de-proveedores-y-dependencias|P27 · Gestión de proveedores y dependencias]]
+- [[processes/catalog/P05-diseno-del-plan|P05 · Diseño del plan]]
+- [[processes/catalog/P02-clasificacion-y-triaje|P02 · Clasificación y triaje]]
+- [[processes/catalog/P11-entrega-y-cierre|P11 · Entrega y cierre]]
+- [[processes/catalog/P30-gestion-de-identidades-y-secretos|P30 · Gestión de identidades y secretos]]
+- [[processes/catalog/P12-gestion-de-cambios|P12 · Gestión de cambios]]
+- [[processes/catalog/P16-gobierno-de-modelos-e-instrucciones|P16 · Gobierno de modelos e instrucciones]]
+- [[processes/catalog/P21-ejecucion-segura-de-herramientas|P21 · Ejecución segura de herramientas]]
+- [[processes/catalog/P08-ejecucion-de-tareas|P08 · Ejecución de tareas]]
+- [[processes/catalog/P13-aprendizaje-y-actualizacion-de-la-wiki|P13 · Aprendizaje y actualización de la wiki]]
+- [[processes/catalog/P25-gestion-de-cambios-y-versiones|P25 · Gestión de cambios y versiones]]
+- [[processes/catalog/P23-evaluacion-de-agentes-y-modelos|P23 · Evaluación de agentes y modelos]]
+- [[processes/catalog/P29-gestion-de-costes-y-capacidad|P29 · Gestión de costes y capacidad]]
+- [[processes/catalog/P18-evaluacion-y-mejora|P18 · Evaluación y mejora]]
+- [[processes/catalog/P28-gestion-de-incidentes|P28 · Gestión de incidentes]]
+- [[processes/catalog/P01-alta-y-recepcion-de-peticion|P01 · Alta y recepción de petición]]
+- [[processes/catalog/P15-observabilidad-e-incidencias|P15 · Observabilidad e incidencias]]
+- [[processes/catalog/P09-control-de-calidad|P09 · Control de calidad]]
+- [[processes/catalog/P10-aprobacion-humana|P10 · Aprobación humana]]
+- [[processes/catalog/P19-politica-de-uso-y-limites|P19 · Política de uso y límites]]
+- [[processes/catalog/P24-gestion-del-ciclo-de-vida-del-dato|P24 · Gestión del ciclo de vida del dato]]
+- [[processes/catalog/P20-seguridad-de-entradas-e-inyeccion-de-instrucciones|P20 · Seguridad de entradas e inyección de instrucciones]]
+- [[processes/catalog/P36-gestion-del-catalogo-de-conectores|P36 · Gestión del catálogo de conectores]]
+- [[processes/catalog/P14-gestion-de-permisos-y-aislamiento|P14 · Gestión de permisos y aislamiento]]
+- [[processes/catalog/P04-recuperacion-de-conocimiento|P04 · Recuperación de conocimiento]]
+- [[processes/catalog/P17-seguridad-y-continuidad|P17 · Seguridad y continuidad]]
+- [[processes/catalog/P06-asignacion-y-coordinacion|P06 · Asignación y coordinación]]
+- [[processes/catalog/P07-ingesta-documental|P07 · Ingesta documental]]
+- [[processes/catalog/P26-continuidad-y-recuperacion|P26 · Continuidad y recuperación]]
+- [[processes/catalog/P03-gestion-de-aclaraciones|P03 · Gestión de aclaraciones]]
+- [[processes/runbooks/fuga-sospechada|Fuga de datos sospechada]]
+- [[processes/runbooks/workflow-fallido|Workflow bloqueado o fallido]]
 
 ## Procesos
 
-- [[processes/catalog/P29-gestion-de-costes-y-capacidad|P29 · Gestión de costes y capacidad]]
-- [[processes/catalog/P27-gestion-de-proveedores-y-dependencias|P27 · Gestión de proveedores y dependencias]]
-
-## Especialistas
-
-- [[knowledge/administracion-finanzas/contabilidad|Especialista en contabilidad y facturación]]
-- [[knowledge/administracion-finanzas/costes-proveedores|Especialista en costes y proveedores]]
-- [[knowledge/sectores/sector-despachos|Experto en asesorías, gestorías y despachos]]
-- [[knowledge/administracion-finanzas/direccion-financiera|Director financiero (CFO)]]
-- [[knowledge/administracion-finanzas/administrativo|Especialista administrativo]]
-- [[knowledge/administracion-finanzas/financiero|Especialista financiero]]
-
-## Fuentes
-
-- [[knowledge/grafo/fuentes/AEAT-FACTURA-CAL|AEAT-FACTURA-CAL · Factura electrónica obligatoria: calendario de implantación]]
-- [[knowledge/grafo/fuentes/PGC-PYMES|PGC-PYMES · Real Decreto 1515/2007, Plan General de Contabilidad de Pymes]]
-- [[knowledge/grafo/fuentes/VERIFACTU-2028|VERIFACTU-2028 · Hacienda anuncia el aplazamiento de Verifactu a octubre de 2028]]
-- [[knowledge/grafo/fuentes/VERIFACTU-RDL15|VERIFACTU-RDL15 · Real Decreto-ley 15/2025: plazos de Verifactu]]
-- [[knowledge/grafo/fuentes/FACTURA-B2B|FACTURA-B2B · Real Decreto 238/2026, factura electrónica obligatoria entre empresas]]
-- [[knowledge/grafo/fuentes/LIS-27-2014|LIS-27-2014 · Ley 27/2014, del Impuesto sobre Sociedades]]
-- [[knowledge/grafo/fuentes/OSS-CAMUNDA|OSS-CAMUNDA · Camunda 8: licencia para Self-Managed]]
-- [[knowledge/grafo/fuentes/OSS-N8N|OSS-N8N · n8n: Sustainable Use License]]
-- [[knowledge/grafo/fuentes/HOLDED-ASESORIAS-2026|HOLDED-ASESORIAS-2026 · Impacto normativo 2026-2027 en asesorías y despachos]]
-- [[knowledge/grafo/fuentes/OSS-LANGFUSE|OSS-LANGFUSE · Langfuse (observabilidad de LLM)]]
-- [[knowledge/grafo/fuentes/RD-1619-2012|RD-1619-2012 · Real Decreto 1619/2012, Reglamento por el que se regulan las obligaciones de facturación]]
-- [[knowledge/grafo/fuentes/CDTI-NEOTEC-2026|CDTI-NEOTEC-2026 · Programa NEOTEC 2026 (CDTI)]]
-- [[knowledge/grafo/fuentes/ENISA-2026|ENISA-2026 · ENISA: préstamos participativos (líneas 2026)]]
-- [[knowledge/grafo/fuentes/LEY-MOROSIDAD-3-2004|LEY-MOROSIDAD-3-2004 · Ley 3/2004, medidas de lucha contra la morosidad en operaciones comerciales]]
-- [[knowledge/grafo/fuentes/LEY-STARTUPS-28-2022|LEY-STARTUPS-28-2022 · Ley 28/2022, de fomento del ecosistema de las empresas emergentes]]
-- [[knowledge/grafo/fuentes/LIVA-37-1992|LIVA-37-1992 · Ley 37/1992, del Impuesto sobre el Valor Añadido]]
-- [[knowledge/grafo/fuentes/CCS-MEDIADOR|CCS-MEDIADOR · Aprendizajes del CCS en la gestión de catástrofes]]
-- [[knowledge/grafo/fuentes/NIS2-ANTEPROYECTO|NIS2-ANTEPROYECTO · Anteproyecto de Ley de Coordinación y Gobernanza de la Ciberseguridad]]
+- [[processes/catalog/P22-gestion-de-errores-y-reintentos|P22 · Gestión de errores y reintentos]]
+- [[processes/catalog/P28-gestion-de-incidentes|P28 · Gestión de incidentes]]
+- [[processes/catalog/P13-aprendizaje-y-actualizacion-de-la-wiki|P13 · Aprendizaje y actualización de la wiki]]

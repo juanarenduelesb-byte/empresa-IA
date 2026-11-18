@@ -1,64 +1,46 @@
 ---
 tipo: "mapa"
 comunidad: 7
-miembros: 37
-cohesion: 0.16
+miembros: 33
+cohesion: 0.32
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 7 · knowledge/comercial · Varios · empresa-ia y P38 · Gestión de despliegue por cliente
+# Comunidad 7 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Flujo ceo
 
-37 nodos agrupados por el algoritmo de Louvain. Cohesión 0.16.
+33 nodos agrupados por el algoritmo de Louvain. Cohesión 0.32.
 
 ## Documentos
 
-- [[CLAUDE|Varios · empresa-ia]]
-- [[knowledge/comercial/director-comercial|Director comercial]]
-- [[knowledge/comercial/gestion-clientes|Especialista en éxito de cliente]]
-- [[knowledge/procesos/implantacion-clientes|Responsable de implantación de clientes]]
-- [[knowledge/procesos/metricas|Especialista en métricas]]
-- [[knowledge/comercial/propuestas-licitaciones|Especialista en propuestas y licitaciones]]
-- [[knowledge/agentes/exito|Éxito de cliente]]
-- [[knowledge/procesos/README|Procesos y operaciones]]
-- [[knowledge/comercial/marketing-contenido|Especialista en marketing y contenido]]
-- [[knowledge/comercial/prospeccion|Especialista en prospección]]
-- [[processes/referencia-seguros-apertura-siniestros/README|Seguros · Apertura de siniestros en corredurías (proceso de referencia)]]
-- [[docs/00-negocio|Negocio]]
-- [[knowledge/comercial/README|Comercial y clientes]]
-- [[precedents/projects/caso-correduria-atalaya/README|Caso de práctica · Atalaya Correduría de Seguros (ficticia)]]
-- [[precedents/projects/caso-correduria-atalaya/documentos/01-ficha-del-cliente|Ficha del cliente · Atalaya Correduría de Seguros (FICTICIA)]]
-- [[claude/habilidades/ficha-metrica|Ficha de métrica]]
-- [[claude/habilidades/plan-exito-cliente|Plan de éxito del cliente]]
-- [[claude/habilidades/revision-valor|Revisión de valor con el cliente]]
-- [[claude/habilidades/salud-cuenta|Salud de la cuenta]]
-- [[precedents/projects/caso-correduria-atalaya/documentos/02-notas-del-proceso-actual|Notas de la sesión de arranque · proceso actual de apertura de siniestros (FICTICIO)]]
-- [[knowledge/plantillas/ficha-kpi|KPI: <nombre>]]
-- [[precedents/projects/caso-correduria-atalaya/documentos/04-sistemas-y-restricciones|Sistemas, datos y restricciones · Atalaya (FICTICIO)]]
-
-## Decisiones
-
-- [[knowledge/grafo/decisiones/D-011|D-011 · Construir primero, clientes desde el 15/02/2027]]
-- [[knowledge/grafo/decisiones/D-006|D-006 · Primer proceso piloto]]
-
-## Procesos
-
-- [[processes/catalog/P38-gestion-de-despliegue-por-cliente|P38 · Gestión de despliegue por cliente]]
-- [[processes/catalog/P31-calificacion-de-oportunidad|P31 · Calificación de oportunidad]]
-- [[processes/catalog/P37-medicion-de-rendimiento-y-valor|P37 · Medición de rendimiento y valor]]
-- [[processes/catalog/P18-evaluacion-y-mejora|P18 · Evaluación y mejora]]
-
-## Especialistas
-
-- [[knowledge/procesos/metricas|Especialista en métricas]]
-- [[knowledge/comercial/gestion-clientes|Especialista en éxito de cliente]]
-- [[knowledge/comercial/director-comercial|Director comercial]]
-- [[knowledge/procesos/implantacion-clientes|Responsable de implantación de clientes]]
-- [[knowledge/comercial/propuestas-licitaciones|Especialista en propuestas y licitaciones]]
-- [[knowledge/comercial/prospeccion|Especialista en prospección]]
-
-## Fuentes
-
-- [[knowledge/grafo/fuentes/INT-ATLAS|INT-ATLAS · Atlas Evolución v1.1 · modelo operativo, procesos y despliegue]]
-- [[knowledge/grafo/fuentes/CCS|CCS · Consorcio de Compensación de Seguros: riesgos extraordinarios]]
-- [[knowledge/grafo/fuentes/MEDDICC|MEDDICC · MEDDIC/MEDDPICC: método de cualificación B2B]]
+- [[docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado|Guia de Arranque Proyecto v1.4 Diseno Cerrado]]
+- [[docs/fuentes/02_02_flujo_ceo|Flujo ceo]]
+- [[docs/fuentes/04_04_ejecucion_agentes|Ejecucion agentes]]
+- [[docs/fuentes/03_03_motor_conocimiento_obsidian|Motor conocimiento obsidian]]
+- [[docs/fuentes/09_09_comunicaciones_estados|Comunicaciones estados]]
+- [[docs/atlas/12-ciclo-proyecto|12 · Ciclo de vida de un proyecto con cliente]]
+- [[docs/fuentes/05_05_seguridad_clientes|Seguridad clientes]]
+- [[docs/fuentes/08_08_ciclo_vida_proyecto|Ciclo vida proyecto]]
+- [[docs/atlas/07-conocimiento|07 · Motor de conocimiento con Obsidian]]
+- [[docs/atlas/08-seguridad|08 · Seguridad, identidad y aislamiento de clientes]]
+- [[docs/fuentes/06_06_calidad_gobierno|Calidad gobierno]]
+- [[docs/fuentes/Marco_Integral_Legal_Ciberseguridad_IA_Espana_UE_2026-11-16|Marco Integral Legal Ciberseguridad IA Espana UE 2026-11-16]]
+- [[docs/atlas/README|Atlas de diagramas]]
+- [[docs/atlas/16-estados|16 · Estados de un encargo]]
+- [[docs/fuentes/07_07_infraestructura_portabilidad|Infraestructura portabilidad]]
+- [[docs/atlas/02-flujo-ceo|02 · Flujo completo del CEO digital]]
+- [[docs/atlas/05-gateway|05 · Puerta de herramientas]]
+- [[docs/atlas/04-ejecucion|04 · Ejecución: motor de procesos, agentes y herramientas]]
+- [[docs/atlas/09-calidad|09 · Calidad, evaluación y aprobación humana]]
+- [[docs/atlas/03-decisiones-ceo|03 · Las cinco decisiones del CEO]]
+- [[docs/atlas/00-arquitectura|00 · Arquitectura del cerebro digital]]
+- [[docs/atlas/14-incidentes|14 · Operación y respuesta a incidentes]]
+- [[docs/atlas/01-organizacion|01 · Organización: modelo matricial]]
+- [[docs/atlas/11-infraestructura|11 · Infraestructura, desarrollo y portabilidad]]
+- [[docs/atlas/15-componentes|15 · Conversación entre componentes]]
+- [[docs/atlas/10-cambios-modelos|10 · Cambios y elección de modelos de IA]]
+- [[docs/14-reglas-del-ceo|Reglas del CEO digital]]
+- [[docs/04-motor-de-conocimiento|Motor de conocimiento]]
+- [[docs/atlas/13-ciclo-dato|13 · Ciclo de vida de un dato]]
+- [[docs/atlas/06-fallos|06 · Fallos, reintentos y recuperación]]
+- [[knowledge/README|Conocimiento]]

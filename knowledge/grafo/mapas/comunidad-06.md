@@ -1,61 +1,58 @@
 ---
 tipo: "mapa"
 comunidad: 6
-miembros: 37
+miembros: 36
 cohesion: 0.18
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 6 · knowledge/sectores · Coordinación sectorial y seguros y Experto en sanidad privada
+# Comunidad 6 · processes/catalog · Arquitecto de procesos y P38 · Gestión de despliegue por cliente
 
-37 nodos agrupados por el algoritmo de Louvain. Cohesión 0.18.
+36 nodos agrupados por el algoritmo de Louvain. Cohesión 0.18.
 
 ## Documentos
 
-- [[knowledge/sectores/especialista-sectorial|Coordinación sectorial y seguros]]
-- [[knowledge/sectores/sector-sanidad|Experto en sanidad privada]]
-- [[knowledge/sectores/sector-financiero|Experto en servicios financieros no bancarios]]
-- [[knowledge/sectores/sector-logistica|Experto en logística y transporte]]
-- [[knowledge/sectores/sector-industria|Experto en industria manufacturera]]
-- [[knowledge/sectores/priorizacion|Priorización de sectores]]
-- [[knowledge/sectores/README|Sectores]]
-- [[integrations/README|Integraciones]]
-- [[integrations/contracts/README|Contratos de datos]]
-- [[integrations/tests/README|Pruebas de integración]]
-- [[integrations/connectors/README|Conectores]]
-- [[knowledge/procesos/sectores|Especialistas sectoriales]]
+- [[knowledge/procesos/arquitecto-procesos|Arquitecto de procesos]]
+- [[processes/catalog/P33-diseno-y-validacion-to-be|P33 · Diseño y validación TO-BE]]
+- [[processes/catalog/P32-descubrimiento-de-procesos|P32 · Descubrimiento de procesos]]
+- [[processes/catalog/P38-gestion-de-despliegue-por-cliente|P38 · Gestión de despliegue por cliente]]
+- [[processes/catalog/P37-medicion-de-rendimiento-y-valor|P37 · Medición de rendimiento y valor]]
+- [[knowledge/procesos/implantacion-clientes|Responsable de implantación de clientes]]
+- [[knowledge/procesos/metricas|Especialista en métricas]]
+- [[processes/catalog/P31-calificacion-de-oportunidad|P31 · Calificación de oportunidad]]
+- [[processes/catalog/P34-gestion-de-definiciones-de-proceso|P34 · Gestión de definiciones de proceso]]
+- [[knowledge/comercial/propuestas-licitaciones|Especialista en propuestas y licitaciones]]
+- [[processes/catalog/P35-gestion-de-instancias-y-excepciones|P35 · Gestión de instancias y excepciones]]
+- [[knowledge/procesos/README|Procesos y operaciones]]
+- [[knowledge/agentes/kpi|Métricas]]
+- [[knowledge/comercial/README|Comercial y clientes]]
+- [[processes/templates/proceso-cliente|<sector> · <proceso>]]
+- [[precedents/plantilla-incidente|Incidente: <título>]]
+- [[claude/habilidades/linea-base|Línea base]]
+- [[precedents/incidents/2026-11-pr1-fusionado-antes-del-ultimo-push|Incidente: PR #1 fusionado antes del último push]]
 
 ## Procesos
 
-- [[processes/catalog/P32-descubrimiento-de-procesos|P32 · Descubrimiento de procesos]]
-- [[processes/catalog/P02-clasificacion-y-triaje|P02 · Clasificación y triaje]]
-- [[processes/catalog/P33-diseno-y-validacion-to-be|P33 · Diseño y validación TO-BE]]
+- [[processes/catalog/P38-gestion-de-despliegue-por-cliente|P38 · Gestión de despliegue por cliente]]
+- [[processes/catalog/P31-calificacion-de-oportunidad|P31 · Calificación de oportunidad]]
+- [[processes/catalog/P37-medicion-de-rendimiento-y-valor|P37 · Medición de rendimiento y valor]]
+- [[processes/catalog/P34-gestion-de-definiciones-de-proceso|P34 · Gestión de definiciones de proceso]]
+- [[processes/catalog/P18-evaluacion-y-mejora|P18 · Evaluación y mejora]]
+- [[processes/catalog/P35-gestion-de-instancias-y-excepciones|P35 · Gestión de instancias y excepciones]]
 
 ## Especialistas
 
-- [[knowledge/sectores/especialista-sectorial|Coordinación sectorial y seguros]]
-- [[knowledge/sectores/sector-sanidad|Experto en sanidad privada]]
-- [[knowledge/sectores/sector-financiero|Experto en servicios financieros no bancarios]]
-- [[knowledge/sectores/sector-industria|Experto en industria manufacturera]]
-- [[knowledge/sectores/sector-logistica|Experto en logística y transporte]]
+- [[knowledge/procesos/arquitecto-procesos|Arquitecto de procesos]]
+- [[knowledge/procesos/metricas|Especialista en métricas]]
+- [[knowledge/comercial/gestion-clientes|Especialista en éxito de cliente]]
+- [[knowledge/comercial/director-comercial|Director comercial]]
+- [[knowledge/procesos/implantacion-clientes|Responsable de implantación de clientes]]
+- [[knowledge/comercial/propuestas-licitaciones|Especialista en propuestas y licitaciones]]
+- [[knowledge/comercial/prospeccion|Especialista en prospección]]
 
 ## Fuentes
 
-- [[knowledge/grafo/fuentes/DORA-CNMV|DORA-CNMV · Preguntas frecuentes sobre el Reglamento (UE) 2022/2554 (DORA)]]
-- [[knowledge/grafo/fuentes/INE-TIC-2026|INE-TIC-2026 · Encuesta sobre el uso de TIC y del comercio electrónico en las empresas, año 2025 y primer trimestre de 2026]]
-- [[knowledge/grafo/fuentes/NIS2-DIRECTIVA|NIS2-DIRECTIVA · Directiva (UE) 2022/2555 (NIS2)]]
-- [[knowledge/grafo/fuentes/INT-MARCO|INT-MARCO · Marco integral legal, ciberseguridad e IA (España/UE) 16/11/2026]]
-- [[knowledge/grafo/fuentes/CIDE-CICOS|CIDE-CICOS · Convenios CIDE/ASCIDE y Centro Informático de Compensación de Siniestros (CICOS)]]
-- [[knowledge/grafo/fuentes/CNMV-DORA-AUTOEVAL|CNMV-DORA-AUTOEVAL · Informe sobre la autoevaluación de la preparación para DORA]]
-- [[knowledge/grafo/fuentes/PL-MA-CORREDURIAS|PL-MA-CORREDURIAS · Fusiones y adquisiciones de corredurías de seguros en España: tendencias y situación en 2025]]
-- [[knowledge/grafo/fuentes/UNO-LOGISTICA|UNO-LOGISTICA · Notas de prensa de UNO, organización empresarial de logística y transporte]]
-- [[knowledge/grafo/fuentes/DGSFP-MEDIACION|DGSFP-MEDIACION · Informe estadístico anual de mediación de seguros 2024]]
-- [[knowledge/grafo/fuentes/IDIS-2026|IDIS-2026 · Observatorio del sector sanitario privado 2026]]
-- [[knowledge/grafo/fuentes/LCS-50-1980|LCS-50-1980 · Ley 50/1980, de Contrato de Seguro]]
-- [[knowledge/grafo/fuentes/MAQUINARIA-2023-1230|MAQUINARIA-2023-1230 · Reglamento (UE) 2023/1230, relativo a las máquinas]]
-- [[knowledge/grafo/fuentes/MDR-2017-745|MDR-2017-745 · Reglamento (UE) 2017/745, productos sanitarios (en el anexo I del Reglamento de IA)]]
-- [[knowledge/grafo/fuentes/RD-287-2021|RD-287-2021 · Real Decreto 287/2021: formación y libros-registro de distribuidores de seguros]]
-- [[knowledge/grafo/fuentes/SANIDAD-IA-OMNIBUS|SANIDAD-IA-OMNIBUS · IA en el SNS: ómnibus digital sobre IA y simplificación MDR/IVDR]]
-- [[knowledge/grafo/fuentes/EEDS-2025-327|EEDS-2025-327 · Reglamento (UE) 2025/327, Espacio Europeo de Datos de Salud]]
-- [[knowledge/grafo/fuentes/RDL-3-2020|RDL-3-2020 · Real Decreto-ley 3/2020 (distribución de seguros): actualización de importes por la DGSFP]]
+- [[knowledge/grafo/fuentes/INT-ATLAS|INT-ATLAS · Atlas Evolución v1.1 · modelo operativo, procesos y despliegue]]
+- [[knowledge/grafo/fuentes/BPMN-OMG|BPMN-OMG · BPMN 2.0.2 (ISO/IEC 19510)]]
+- [[knowledge/grafo/fuentes/PM-MANIFESTO|PM-MANIFESTO · Process Mining Manifesto]]

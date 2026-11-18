@@ -2,7 +2,7 @@
 
 Repositorio maestro de Varios (nombre provisional), consultora de IA para empresas medianas y reguladas. Socios: Juan (producto y construcción) y Álvaro (clientes y relación); reparto pendiente de confirmar.
 
-Contiene visión, arquitectura, procesos, decisiones, el plan de 12 semanas y una web visual en `site/`. Todavía no contiene código del sistema.
+Contiene visión, arquitectura, procesos, decisiones, el plan de 12 semanas y una web visual en `site/`. Contiene un prototipo mínimo del motor de procesos en `src/` (D-014, propuesta), sin base de datos.
 
 ## Contexto rápido
 - Oferta en cuatro fases: Diagnosticar (3 semanas) · Diseñar (2) · Construir (4–8, piloto con pago 50/50 según métrica firmada) · Operar (cuota mensual).
@@ -29,14 +29,19 @@ Puertas: G0–G6 = cliente; L0–L4 = técnicas. No confundirlas.
 - Si cambias algo de `docs/`, revisa si la web de `site/` dice lo mismo.
 - Los diagramas se editan solo en `tools/atlas_data.py` y se regeneran con `python3 tools/gen.py site/js/atlas-data.js docs/atlas`.
 - Si cambias documentos, regenera el cerebro de la oficina con `python3 tools/brain_build.py oficina/brain.json`.
+- Antes de cualquier trabajo, sigue `knowledge/metodologias-transversales/consultar-historico.md`.
+- Las fichas de especialistas, fuentes y procesos se editan en `tools/org_data/` y se regeneran con `python3 tools/org_gen.py`.
 
 ## Estructura
 - `docs/` documentación funcional y técnica (empieza por `00-negocio.md`)
 - `site/` web visual del proyecto, HTML estático
 - `claude/` instrucciones del proyecto de Claude y habilidades previstas
-- `processes/` catálogo de procesos (uno por carpeta, con AS-IS, TO-BE y métricas)
-- `knowledge/` principios y plantillas de conocimiento
-- `governance/` seguridad, calidad, legal
+- `knowledge/` especialistas por departamento, fuentes, protocolos y plantillas (generado con `tools/org_gen.py`, D-013)
+- `processes/` catálogo P01–P38 (`catalog/`), definiciones, runbooks y una carpeta por proceso de cliente
+- `integrations/` catálogo de conectores y contratos de datos
+- `precedents/` proyectos, soluciones, incidentes y lecciones
+- `src/` y `tests/` motor mínimo y pruebas (`python3 -m pytest`)
+- `governance/` seguridad, calidad, legal y políticas
 - `archive/` versiones antiguas y contexto
 
 ## Stack previsto para el piloto

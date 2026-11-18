@@ -1,22 +1,23 @@
 ---
 tipo: "mapa"
 comunidad: 0
-miembros: 109
-cohesion: 0.05
+miembros: 94
+cohesion: 0.06
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 0 · claude/habilidades · Legal y privacidad y Arquitecto de procesos
 
-109 nodos agrupados por el algoritmo de Louvain. Cohesión 0.05.
+94 nodos agrupados por el algoritmo de Louvain. Cohesión 0.06.
 
 ## Documentos
 
-- [[claude/habilidades/contrato-de-tarea|Contrato de tarea]]
+- [[claude/habilidades/consultar-historico|Consultar el histórico antes de hacer]]
 - [[claude/habilidades/observabilidad|Observabilidad y alertas]]
 - [[claude/habilidades/registro-tratamientos|Registro de actividades de tratamiento]]
-- [[claude/habilidades/alfabetizacion-ia|Programa de alfabetización en IA]]
+- [[claude/habilidades/analisis-opciones|Análisis de opciones para decidir]]
+- [[claude/habilidades/citar-cerebro|Leer y citar el cerebro]]
 
 ## Agentes
 
@@ -79,46 +80,32 @@ tags:
 - [[claude/habilidades/coste-unitario|Coste unitario]]
 - [[claude/habilidades/ficha-metrica|Ficha de métrica]]
 - [[claude/habilidades/revision-entregable|Revisión de un entregable]]
-- [[claude/habilidades/adr|Decisión de arquitectura]]
-- [[claude/habilidades/alfabetizacion-ia|Programa de alfabetización en IA]]
 - [[claude/habilidades/casos-sinteticos|Casos de prueba inventados]]
 - [[claude/habilidades/cierre-mensual|Cierre contable mensual]]
 - [[claude/habilidades/cinco-decisiones|Las cinco decisiones del CEO]]
 - [[claude/habilidades/citar-cerebro|Leer y citar el cerebro]]
 - [[claude/habilidades/consultar-historico|Consultar el histórico antes de hacer]]
 - [[claude/habilidades/contrato-de-tarea|Contrato de tarea]]
-- [[claude/habilidades/criterio-aceptacion|Criterio de aceptación]]
 - [[claude/habilidades/cualificacion-oportunidad|Cualificación de oportunidad]]
-- [[claude/habilidades/diseno-to-be|Diseño del proceso nuevo (TO-BE)]]
 - [[claude/habilidades/entrevista-descubrimiento|Entrevista de descubrimiento]]
 - [[claude/habilidades/evaluacion-modelos|Evaluación de modelos]]
 - [[claude/habilidades/facturacion-cobro|Facturación y cobro]]
 - [[claude/habilidades/ficha-conocimiento|Ficha de conocimiento]]
 - [[claude/habilidades/ficha-integracion|Ficha de integración]]
 - [[claude/habilidades/ficha-proveedor|Ficha de proveedor]]
-- [[claude/habilidades/financiacion-publica|Financiación pública y ventajas fiscales]]
 - [[claude/habilidades/flujo-pantallas|Flujo y pantallas de una tarea]]
-- [[claude/habilidades/icp|Cliente ideal (ICP)]]
-- [[claude/habilidades/informe-as-is-to-be|Informe AS-IS / TO-BE]]
 - [[claude/habilidades/integracion-continua|Integración continua]]
 - [[claude/habilidades/inventario-ia|Inventario y clasificación de sistemas de IA]]
 - [[claude/habilidades/investigacion-cuenta|Investigación previa de una cuenta]]
 - [[claude/habilidades/linea-base|Línea base]]
-- [[claude/habilidades/mapeo-as-is|Mapa del proceso actual (AS-IS)]]
-- [[claude/habilidades/margen-proyecto|Margen por proyecto y fase]]
 - [[claude/habilidades/matriz-cumplimiento|Matriz obligación → control → evidencia]]
-- [[claude/habilidades/matriz-ia-regla-persona|Matriz IA · regla · persona]]
-- [[claude/habilidades/mensaje-posicionamiento|Mensaje y posicionamiento]]
 - [[claude/habilidades/modelo-datos|Modelo de datos]]
 - [[claude/habilidades/observabilidad|Observabilidad y alertas]]
-- [[claude/habilidades/paquete-gestor|Paquete trimestral para el gestor]]
 - [[claude/habilidades/plan-exito-cliente|Plan de éxito del cliente]]
 - [[claude/habilidades/plan-semanal|Seguimiento semanal del plan]]
 - [[claude/habilidades/prevision-tesoreria|Previsión de tesorería a 13 semanas]]
-- [[claude/habilidades/propuesta-diagnostico|Propuesta de diagnóstico]]
-- [[claude/habilidades/prueba-usabilidad|Prueba de usabilidad]]
-- [[claude/habilidades/raid|Registro RAID]]
 - [[claude/habilidades/registro-tratamientos|Registro de actividades de tratamiento]]
-- [[claude/habilidades/revision-accesibilidad|Revisión de accesibilidad]]
 - [[claude/habilidades/revision-riesgo-ia|Revisión de riesgo de IA y datos]]
-- … y 3 más
+- [[claude/habilidades/revision-valor|Revisión de valor con el cliente]]
+- [[claude/habilidades/salud-cuenta|Salud de la cuenta]]
+- [[claude/habilidades/sintesis-entrevistas|Síntesis de entrevistas]]

@@ -1,61 +1,75 @@
 ---
 tipo: "mapa"
 comunidad: 5
-miembros: 37
-cohesion: 0.18
+miembros: 54
+cohesion: 0.17
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 5 · knowledge/administracion-finanzas · Registro de fuentes y Experto en asesorías, gestorías y despachos
+# Comunidad 5 · precedents/oficina · Propuesta de proceso de referencia: siniestros en corredurías y Conversaciones con Coordinación sectorial · Seguros
 
-37 nodos agrupados por el algoritmo de Louvain. Cohesión 0.18.
+54 nodos agrupados por el algoritmo de Louvain. Cohesión 0.17.
 
 ## Documentos
 
-- [[knowledge/fuentes/registro|Registro de fuentes]]
-- [[knowledge/sectores/sector-despachos|Experto en asesorías, gestorías y despachos]]
-- [[knowledge/administracion-finanzas/contabilidad|Especialista en contabilidad y facturación]]
-- [[knowledge/administracion-finanzas/direccion-financiera|Director financiero (CFO)]]
-- [[knowledge/administracion-finanzas/costes-proveedores|Especialista en costes y proveedores]]
-- [[knowledge/administracion-finanzas/administrativo|Especialista administrativo]]
-- [[knowledge/administracion-finanzas/financiero|Especialista financiero]]
-- [[knowledge/plantillas/ficha-fuente|Ficha-fuente]]
-- [[knowledge/administracion-finanzas/README|Administración y finanzas]]
-- [[knowledge/metodologias-transversales/investigar|Protocolo: investigar fuera]]
-- [[processes/runbooks/coste-anomalo|Coste anómalo]]
+- [[precedents/oficina/encargos/2026-11/2026-11-17-propuesta-de-proceso-de-referencia-siniestros-en-c-tcpkm|Propuesta de proceso de referencia: siniestros en corredurías]]
+- [[precedents/oficina/chats/coordinacion-sectorial-seguros|Conversaciones con Coordinación sectorial · Seguros]]
+- [[precedents/oficina/encargos/2026-11/2026-11-17-guion-de-validacion-semanal-apertura-de-siniestros-zmgmn|Guion de validación semanal: apertura de siniestros]]
+- [[precedents/oficina/chats/arquitecto-de-procesos|Conversaciones con Arquitecto de procesos]]
+- [[precedents/oficina/memoria|Memoria de la oficina]]
+- [[precedents/oficina/encargos/2026-11/2026-11-17-linea-base-y-fichas-de-metricas-atalaya-23vgx|Línea base y fichas de métricas · Atalaya]]
+- [[precedents/oficina/encargos/2026-11/2026-11-17-claves-del-sector-seguros-para-atalaya-5h5ie|Claves del sector seguros para Atalaya]]
+- [[precedents/oficina/encargos/2026-11/2026-11-17-as-is-de-apertura-de-siniestros-atalaya-nau7x|AS-IS de apertura de siniestros · Atalaya]]
+- [[precedents/oficina/encargos/2026-11/2026-11-17-mapa-de-obligaciones-rgpd-ia-y-corredor-atalaya-bh693|Mapa de obligaciones RGPD, IA y corredor · Atalaya]]
+- [[precedents/oficina/chats/jefe-comercial|Conversaciones con Jefe comercial]]
+- [[precedents/oficina/encargos/2026-11/2026-11-17-guiones-de-diagnostico-de-apertura-de-siniestros-a-mwles|Guiones de diagnóstico de apertura de siniestros (Atalaya)]]
+- [[precedents/oficina/encargos/2026-11/2026-11-17-examen-de-25-casos-ficticios-para-atalaya-qq164|Examen de 25 casos ficticios para Atalaya]]
+- [[precedents/oficina/chats/validacion|Conversaciones con Validación]]
+- [[precedents/oficina/chats/metricas|Conversaciones con Métricas]]
+- [[precedents/oficina/chats/datos-de-prueba|Conversaciones con Datos de prueba]]
+- [[processes/referencia-seguros-apertura-siniestros/README|Seguros · Apertura de siniestros en corredurías (proceso de referencia)]]
+- [[precedents/oficina/encargos/2026-11/2026-11-17-guion-y-8-preguntas-de-validacion-semanal-aq2vk|Guion y 8 preguntas de validación semanal]]
+- [[precedents/oficina/chats/legal-y-privacidad|Conversaciones con Legal y privacidad]]
+- [[precedents/oficina/conversaciones/2026-11/2026-11-17-legal-y-privacidad-a-coordinacion-sectorial-seguros-b188o|Legal y privacidad → Coordinación sectorial · Seguros]]
+- [[precedents/oficina/conversaciones/2026-11/2026-11-17-metricas-a-coordinacion-sectorial-seguros-utv9x|Métricas → Coordinación sectorial · Seguros]]
+- [[precedents/oficina/README|Registro de la oficina de agentes]]
+- [[precedents/projects/caso-correduria-atalaya/documentos/01-ficha-del-cliente|Ficha del cliente · Atalaya Correduría de Seguros (FICTICIA)]]
+- [[precedents/projects/caso-correduria-atalaya/documentos/02-notas-del-proceso-actual|Notas de la sesión de arranque · proceso actual de apertura de siniestros (FICTICIO)]]
+- [[precedents/oficina/proyectos/diagnostico-de-apertura-de-siniestros-atalaya-fict|Diagnóstico de apertura de siniestros · Atalaya (ficticia)]]
+- [[precedents/projects/caso-correduria-atalaya/documentos/04-sistemas-y-restricciones|Sistemas, datos y restricciones · Atalaya (FICTICIO)]]
+- [[docs/12-simulacion|Simulación del cerebro]]
+- [[precedents/oficina/conversaciones/2026-11/2026-11-17-datos-de-prueba-a-coordinacion-sectorial-seguros-j4rxd|Datos de prueba → Coordinación sectorial · Seguros]]
+- [[precedents/oficina/conversaciones/2026-11/2026-11-17-metricas-a-calidad-y-riesgo-7jvup|Métricas → Calidad y riesgo]]
+- [[precedents/oficina/conversaciones/2026-11/2026-11-17-arquitecto-de-procesos-a-coordinacion-sectorial-seguros-hh6fv|Arquitecto de procesos → Coordinación sectorial · Seguros]]
+- [[precedents/oficina/conversaciones/2026-11/2026-11-17-validacion-a-coordinacion-sectorial-seguros-3yt5x|Validación → Coordinación sectorial · Seguros]]
+- [[precedents/oficina/conversaciones/2026-11/2026-11-17-validacion-a-calidad-y-riesgo-u2br2|Validación → Calidad y riesgo]]
+- [[claude/habilidades/revision-riesgo-ia|Revisión de riesgo de IA y datos]]
+- [[precedents/oficina/conversaciones/2026-11/2026-11-17-legal-y-privacidad-a-calidad-y-riesgo-7k9sg|Legal y privacidad → Calidad y riesgo]]
+- [[precedents/oficina/conversaciones/2026-11/2026-11-17-datos-de-prueba-a-calidad-y-riesgo-dvsoz|Datos de prueba → Calidad y riesgo]]
+- [[precedents/projects/caso-correduria-atalaya/README|Caso de práctica · Atalaya Correduría de Seguros (ficticia)]]
+- [[precedents/oficina/conversaciones/2026-11/2026-11-17-ceo-digital-a-coordinacion-sectorial-seguros-fws4y|CEO digital → Coordinación sectorial · Seguros]]
+- [[precedents/oficina/conversaciones/2026-11/2026-11-17-ceo-digital-a-metricas-sj6cp|CEO digital → Métricas]]
+- [[precedents/oficina/conversaciones/2026-11/2026-11-17-metricas-a-calidad-y-riesgo-4xyvo|Métricas → Calidad y riesgo]]
+- [[precedents/oficina/conversaciones/2026-11/2026-11-17-arquitecto-de-procesos-a-calidad-y-riesgo-61ars|Arquitecto de procesos → Calidad y riesgo]]
+- [[precedents/oficina/conversaciones/2026-11/2026-11-17-ceo-digital-a-legal-y-privacidad-wknhu|CEO digital → Legal y privacidad]]
+- [[precedents/oficina/conversaciones/2026-11/2026-11-17-ceo-digital-a-arquitecto-de-procesos-oqbwj|CEO digital → Arquitecto de procesos]]
+- [[precedents/oficina/conversaciones/2026-11/2026-11-17-coordinacion-sectorial-seguros-a-calidad-y-riesgo-6aum5|Coordinación sectorial · Seguros → Calidad y riesgo]]
+- [[precedents/oficina/conversaciones/2026-11/2026-11-17-coordinacion-sectorial-seguros-a-calidad-y-riesgo-y5dli|Coordinación sectorial · Seguros → Calidad y riesgo]]
+- [[precedents/oficina/conversaciones/2026-11/2026-11-17-legal-y-privacidad-a-calidad-y-riesgo-bn4hp|Legal y privacidad → Calidad y riesgo]]
+- [[precedents/oficina/conversaciones/2026-11/2026-11-17-validacion-a-calidad-y-riesgo-n73cv|Validación → Calidad y riesgo]]
+- [[precedents/oficina/conversaciones/2026-11/2026-11-17-datos-de-prueba-a-calidad-y-riesgo-6agmw|Datos de prueba → Calidad y riesgo]]
+- [[precedents/oficina/conversaciones/2026-11/2026-11-17-arquitecto-de-procesos-a-calidad-y-riesgo-jsrqq|Arquitecto de procesos → Calidad y riesgo]]
+- [[precedents/oficina/conversaciones/2026-11/2026-11-17-ceo-digital-a-datos-de-prueba-3hi0e|CEO digital → Datos de prueba]]
+- [[precedents/oficina/conversaciones/2026-11/2026-11-17-ceo-digital-a-validacion-ccsjr|CEO digital → Validación]]
+- [[precedents/oficina/decisiones|Decisiones de la oficina]]
+- [[precedents/oficina/reglas-y-habilidades|Reglas y habilidades enseñadas en la oficina]]
 
-## Procesos
+## Decisiones
 
-- [[processes/catalog/P29-gestion-de-costes-y-capacidad|P29 · Gestión de costes y capacidad]]
-- [[processes/catalog/P27-gestion-de-proveedores-y-dependencias|P27 · Gestión de proveedores y dependencias]]
-
-## Especialistas
-
-- [[knowledge/administracion-finanzas/contabilidad|Especialista en contabilidad y facturación]]
-- [[knowledge/administracion-finanzas/costes-proveedores|Especialista en costes y proveedores]]
-- [[knowledge/sectores/sector-despachos|Experto en asesorías, gestorías y despachos]]
-- [[knowledge/administracion-finanzas/direccion-financiera|Director financiero (CFO)]]
-- [[knowledge/administracion-finanzas/administrativo|Especialista administrativo]]
-- [[knowledge/administracion-finanzas/financiero|Especialista financiero]]
+- [[knowledge/grafo/decisiones/D-011|D-011 · Construir primero, clientes desde el 15/02/2027]]
 
 ## Fuentes
 
-- [[knowledge/grafo/fuentes/AEAT-FACTURA-CAL|AEAT-FACTURA-CAL · Factura electrónica obligatoria: calendario de implantación]]
-- [[knowledge/grafo/fuentes/PGC-PYMES|PGC-PYMES · Real Decreto 1515/2007, Plan General de Contabilidad de Pymes]]
-- [[knowledge/grafo/fuentes/VERIFACTU-2028|VERIFACTU-2028 · Hacienda anuncia el aplazamiento de Verifactu a octubre de 2028]]
-- [[knowledge/grafo/fuentes/VERIFACTU-RDL15|VERIFACTU-RDL15 · Real Decreto-ley 15/2025: plazos de Verifactu]]
-- [[knowledge/grafo/fuentes/FACTURA-B2B|FACTURA-B2B · Real Decreto 238/2026, factura electrónica obligatoria entre empresas]]
-- [[knowledge/grafo/fuentes/LIS-27-2014|LIS-27-2014 · Ley 27/2014, del Impuesto sobre Sociedades]]
-- [[knowledge/grafo/fuentes/OSS-CAMUNDA|OSS-CAMUNDA · Camunda 8: licencia para Self-Managed]]
-- [[knowledge/grafo/fuentes/OSS-N8N|OSS-N8N · n8n: Sustainable Use License]]
-- [[knowledge/grafo/fuentes/HOLDED-ASESORIAS-2026|HOLDED-ASESORIAS-2026 · Impacto normativo 2026-2027 en asesorías y despachos]]
-- [[knowledge/grafo/fuentes/OSS-LANGFUSE|OSS-LANGFUSE · Langfuse (observabilidad de LLM)]]
-- [[knowledge/grafo/fuentes/RD-1619-2012|RD-1619-2012 · Real Decreto 1619/2012, Reglamento por el que se regulan las obligaciones de facturación]]
-- [[knowledge/grafo/fuentes/CDTI-NEOTEC-2026|CDTI-NEOTEC-2026 · Programa NEOTEC 2026 (CDTI)]]
-- [[knowledge/grafo/fuentes/ENISA-2026|ENISA-2026 · ENISA: préstamos participativos (líneas 2026)]]
-- [[knowledge/grafo/fuentes/LEY-MOROSIDAD-3-2004|LEY-MOROSIDAD-3-2004 · Ley 3/2004, medidas de lucha contra la morosidad en operaciones comerciales]]
-- [[knowledge/grafo/fuentes/LEY-STARTUPS-28-2022|LEY-STARTUPS-28-2022 · Ley 28/2022, de fomento del ecosistema de las empresas emergentes]]
-- [[knowledge/grafo/fuentes/LIVA-37-1992|LIVA-37-1992 · Ley 37/1992, del Impuesto sobre el Valor Añadido]]
-- [[knowledge/grafo/fuentes/CCS-MEDIADOR|CCS-MEDIADOR · Aprendizajes del CCS en la gestión de catástrofes]]
-- [[knowledge/grafo/fuentes/NIS2-ANTEPROYECTO|NIS2-ANTEPROYECTO · Anteproyecto de Ley de Coordinación y Gobernanza de la Ciberseguridad]]
+- [[knowledge/grafo/fuentes/CCS|CCS · Consorcio de Compensación de Seguros: riesgos extraordinarios]]
+- [[knowledge/grafo/fuentes/CIDE-CICOS|CIDE-CICOS · Convenios CIDE/ASCIDE y Centro Informático de Compensación de Siniestros (CICOS)]]

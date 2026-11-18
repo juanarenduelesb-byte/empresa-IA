@@ -1,42 +1,45 @@
 ---
 tipo: "mapa"
 comunidad: 9
-miembros: 23
-cohesion: 0.24
+miembros: 21
+cohesion: 0.23
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 9 · processes/catalog · Arquitecto de procesos y P33 · Diseño y validación TO-BE
+# Comunidad 9 · knowledge/direccion · CEO digital y Responsable de decisiones y seguimiento
 
-23 nodos agrupados por el algoritmo de Louvain. Cohesión 0.24.
+21 nodos agrupados por el algoritmo de Louvain. Cohesión 0.23.
 
 ## Documentos
 
-- [[knowledge/procesos/arquitecto-procesos|Arquitecto de procesos]]
-- [[processes/catalog/P33-diseno-y-validacion-to-be|P33 · Diseño y validación TO-BE]]
-- [[processes/catalog/P32-descubrimiento-de-procesos|P32 · Descubrimiento de procesos]]
-- [[processes/catalog/P38-gestion-de-despliegue-por-cliente|P38 · Gestión de despliegue por cliente]]
-- [[processes/catalog/P37-medicion-de-rendimiento-y-valor|P37 · Medición de rendimiento y valor]]
-- [[processes/catalog/P31-calificacion-de-oportunidad|P31 · Calificación de oportunidad]]
-- [[processes/catalog/P34-gestion-de-definiciones-de-proceso|P34 · Gestión de definiciones de proceso]]
-- [[processes/catalog/P35-gestion-de-instancias-y-excepciones|P35 · Gestión de instancias y excepciones]]
-- [[docs/08-roadmap-y-decisiones|Roadmap y decisiones]]
-- [[processes/templates/proceso-cliente|<sector> · <proceso>]]
-- [[precedents/plantilla-incidente|Incidente: <título>]]
-- [[precedents/incidents/2026-11-pr1-fusionado-antes-del-ultimo-push|Incidente: PR #1 fusionado antes del último push]]
+- [[knowledge/direccion/ceo-digital|CEO digital]]
+- [[knowledge/direccion/decisiones-seguimiento|Responsable de decisiones y seguimiento]]
+- [[knowledge/direccion/bibliotecario|Bibliotecario / responsable de conocimiento]]
+- [[knowledge/direccion/README|Dirección y gobierno]]
+- [[processes/tests/README|Plan de pruebas de procesos]]
+- [[processes/README|Procesos]]
+- [[claude/habilidades/cinco-decisiones|Las cinco decisiones del CEO]]
+- [[processes/definitions/README|Definiciones ejecutables]]
 
 ## Procesos
 
-- [[processes/catalog/P34-gestion-de-definiciones-de-proceso|P34 · Gestión de definiciones de proceso]]
-- [[processes/catalog/P35-gestion-de-instancias-y-excepciones|P35 · Gestión de instancias y excepciones]]
+- [[processes/catalog/P11-entrega-y-cierre|P11 · Entrega y cierre]]
+- [[processes/catalog/P01-alta-y-recepcion-de-peticion|P01 · Alta y recepción de petición]]
+- [[processes/catalog/P12-gestion-de-cambios|P12 · Gestión de cambios]]
+- [[processes/catalog/P25-gestion-de-cambios-y-versiones|P25 · Gestión de cambios y versiones]]
+- [[processes/catalog/P05-diseno-del-plan|P05 · Diseño del plan]]
+- [[processes/catalog/P06-asignacion-y-coordinacion|P06 · Asignación y coordinación]]
+- [[processes/catalog/P03-gestion-de-aclaraciones|P03 · Gestión de aclaraciones]]
 
 ## Especialistas
 
-- [[knowledge/procesos/arquitecto-procesos|Arquitecto de procesos]]
+- [[knowledge/direccion/ceo-digital|CEO digital]]
+- [[knowledge/direccion/decisiones-seguimiento|Responsable de decisiones y seguimiento]]
+- [[knowledge/ingenieria/arquitecto-tecnico|Arquitecto técnico]]
+- [[knowledge/procesos/implantacion-clientes|Responsable de implantación de clientes]]
 
 ## Fuentes
 
-- [[knowledge/grafo/fuentes/APQC-PCF|APQC-PCF · APQC Process Classification Framework, versión intersectorial]]
-- [[knowledge/grafo/fuentes/BPMN-OMG|BPMN-OMG · BPMN 2.0.2 (ISO/IEC 19510)]]
-- [[knowledge/grafo/fuentes/PM-MANIFESTO|PM-MANIFESTO · Process Mining Manifesto]]
+- [[knowledge/grafo/fuentes/NIST-AI-600-1|NIST-AI-600-1 · AI RMF: Generative Artificial Intelligence Profile (NIST AI 600-1)]]
+- [[knowledge/grafo/fuentes/INT-DEC|INT-DEC · Registro de decisiones]]

@@ -18,7 +18,7 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 - [[knowledge/grafo/mapas/comunidad-05|Comunidad 5 · precedents/oficina · Propuesta de proceso de referencia: siniestros en corredurías y Conversaciones con Coordinación sectorial · Seguros]] (54 nodos)
 - [[knowledge/grafo/mapas/comunidad-06|Comunidad 6 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue]] (54 nodos)
 - [[knowledge/grafo/mapas/comunidad-07|Comunidad 7 · processes/catalog · P22 · Gestión de errores y reintentos y Catálogo de procesos P01–P38]] (40 nodos)
-- [[knowledge/grafo/mapas/comunidad-08|Comunidad 8 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Registro de decisiones]] (37 nodos)
+- [[knowledge/grafo/mapas/comunidad-08|Comunidad 8 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Registro de decisiones]] (39 nodos)
 - [[knowledge/grafo/mapas/comunidad-09|Comunidad 9 · knowledge/direccion · CEO digital y Responsable de decisiones y seguimiento]] (21 nodos)
 - [[knowledge/grafo/mapas/comunidad-10|Comunidad 10 · knowledge/administracion-finanzas · Director financiero (CFO) y P29 · Gestión de costes y capacidad]] (17 nodos)
 - [[knowledge/grafo/mapas/comunidad-11|Comunidad 11 · integrations · Integraciones y Contratos de datos]] (4 nodos)
@@ -35,7 +35,7 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 - [[processes/catalog/P28-gestion-de-incidentes|P28 · Gestión de incidentes]] · 61 vecinos
 - L2 (puerta técnica) · 59 vecinos
 - [[knowledge/direccion/ceo-digital|CEO digital]] · 59 vecinos
-- [[CLAUDE|Varios · empresa-ia]] · 54 vecinos
+- [[CLAUDE|Varios · empresa-ia]] · 55 vecinos
 - [[knowledge/procesos/arquitecto-procesos|Arquitecto de procesos]] · 50 vecinos
 - [[knowledge/seguridad-legal/ciberseguridad|Especialista en ciberseguridad]] · 50 vecinos
 - [[processes/catalog/P22-gestion-de-errores-y-reintentos|P22 · Gestión de errores y reintentos]] · 47 vecinos
@@ -57,7 +57,7 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 ## Preguntas abiertas
 
 - ¿Por qué «Registro de fuentes» conecta la comunidad 2 con las comunidades 1, 3, 4, 5?  
-  Intermediación alta (0.166): es un puente entre temas.
+  Intermediación alta (0.165): es un puente entre temas.
 - ¿Por qué «Habilidades de los agentes» conecta la comunidad 1 con las comunidades 3, 4, 5, 9?  
   Intermediación alta (0.098): es un puente entre temas.
 - ¿Por qué «Registro de decisiones» conecta la comunidad 8 con las comunidades 1, 2, 3, 4?  

@@ -5,8 +5,8 @@ Cómo está conectado el cerebro de Varios: qué sostiene todo, qué temas forma
 
 ## Resumen
 
-- 4539 nodos: seccion 3924, documento 336, fuente 68, habilidad 65, proceso 38, especialista 34, agente 34, decision 21, puerta 12, departamento 7.
-- 6077 relaciones: 60 % EXTRACTADAS (escritas en la fuente), 40 % INFERIDAS (temas compartidos, con puntuación) y 0 AMBIGUAS (para revisar).
+- 4548 nodos: seccion 3931, documento 338, fuente 68, habilidad 65, proceso 38, especialista 34, agente 34, decision 21, puerta 12, departamento 7.
+- 6084 relaciones: 60 % EXTRACTADAS (escritas en la fuente), 40 % INFERIDAS (temas compartidos, con puntuación) y 0 AMBIGUAS (para revisar).
 - 12 comunidades de temas.
 
 ## Nodos centrales
@@ -23,21 +23,21 @@ Lo que más cosas conecta. Si cambia, cambia mucho.
 8. **P28 · Gestión de incidentes** · 61 conexiones
 9. **L2 (puerta técnica)** · 59 conexiones
 10. **CEO digital** (`knowledge/direccion/ceo-digital.md`) · 59 conexiones
-11. **Varios · empresa-ia** (`CLAUDE.md`) · 54 conexiones
+11. **Varios · empresa-ia** (`CLAUDE.md`) · 55 conexiones
 12. **Arquitecto de procesos** (`knowledge/procesos/arquitecto-procesos.md`) · 50 conexiones
 
 ## Puentes entre temas
 
 Nodos por los que pasa el camino entre comunidades distintas (intermediación).
 
-- **Registro de fuentes** · intermediación 0.166 · une la comunidad 2 con 1, 3, 4, 5, 6, 7
+- **Registro de fuentes** · intermediación 0.165 · une la comunidad 2 con 1, 3, 4, 5, 6, 7
 - **Habilidades de los agentes** · intermediación 0.098 · une la comunidad 1 con 3, 4, 5, 9
 - **Registro de decisiones** · intermediación 0.097 · une la comunidad 8 con 1, 2, 3, 4, 5, 6
 - **Índice del conocimiento de Varios** · intermediación 0.06 · une la comunidad 3 con 2, 4, 5, 6, 7, 8
 - **L2 (puerta técnica)** · intermediación 0.052 · une la comunidad 8 con 1, 2, 3, 4, 5, 6
 - **Guia de Arranque Proyecto v1.4 Diseno Cerrado** · intermediación 0.048 · une la comunidad 6 con 1, 2, 3, 4, 7, 8
 - **CEO digital** · intermediación 0.025 · une la comunidad 9 con 1, 2, 3, 4, 6, 7
-- **P31 · Calificación de oportunidad** · intermediación 0.022 · une la comunidad 3 con 1, 2, 4, 6, 7, 8
+- **P31 · Calificación de oportunidad** · intermediación 0.021 · une la comunidad 3 con 1, 2, 4, 6, 7, 8
 - **D-011 · Construir primero, clientes desde el 15/02/2027** · intermediación 0.021 · une la comunidad 5 con 1, 2, 3, 4, 6, 8
 - **Experto en asesorías y despachos** · intermediación 0.02 · une la comunidad 1 con 0, 2, 6, 8
 
@@ -92,7 +92,7 @@ Cohesión 0.44 · 40 nodos: P22 · Gestión de errores y reintentos; Catálogo d
 
 ### 8 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Registro de decisiones
 
-Cohesión 0.15 · 37 nodos: Acta de protección de la IA y examen de 50 casos; L2 (puerta técnica); Registro de decisiones; Conversaciones con IA y evaluación; Reunión: IA y evaluación y Seguridad; Conversaciones con CEO digital; 17 · Cerebro, conocimiento y procesos: auditoría e informe; Conversaciones con Plan y seguimiento (y 29 más)
+Cohesión 0.14 · 39 nodos: Acta de protección de la IA y examen de 50 casos; L2 (puerta técnica); Registro de decisiones; Conversaciones con IA y evaluación; Reunión: IA y evaluación y Seguridad; Conversaciones con CEO digital; 17 · Cerebro, conocimiento y procesos: auditoría e informe; Conversaciones con Plan y seguimiento (y 31 más)
 
 ### 9 · knowledge/direccion · CEO digital y Responsable de decisiones y seguimiento
 
@@ -120,7 +120,7 @@ Cohesión 0.83 · 4 nodos: Integraciones; Contratos de datos; Pruebas de integra
 _Preguntas que este grafo ayuda a responder o que conviene decidir:_
 
 - **¿Por qué «Registro de fuentes» conecta la comunidad 2 con las comunidades 1, 3, 4, 5?**
-  _Intermediación alta (0.166): es un puente entre temas._
+  _Intermediación alta (0.165): es un puente entre temas._
 - **¿Por qué «Habilidades de los agentes» conecta la comunidad 1 con las comunidades 3, 4, 5, 9?**
   _Intermediación alta (0.098): es un puente entre temas._
 - **¿Por qué «Registro de decisiones» conecta la comunidad 8 con las comunidades 1, 2, 3, 4?**

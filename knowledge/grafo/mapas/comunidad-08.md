@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 8
-miembros: 39
-cohesion: 0.14
+miembros: 37
+cohesion: 0.15
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 8 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Registro de decisiones
 
-39 nodos agrupados por el algoritmo de Louvain. Cohesión 0.14.
+37 nodos agrupados por el algoritmo de Louvain. Cohesión 0.15.
 
 ## Documentos
 
@@ -26,11 +26,9 @@ tags:
 - [[docs/19-obsidian|Obsidian: el cerebro abierto en tu equipo]]
 - [[precedents/oficina/chats/seguridad|Conversaciones con Seguridad]]
 - [[Inicio|Inicio · cerebro de Varios]]
-- [[precedents/oficina/encargos/2026-11/2026-11-23-lee-el-plan-de-construccion-y-prepara-la-lista-de-uqvwy|Lee el plan de construcción y prepara la lista de tareas de]]
 - [[docs/11-cerebro-en-claude|Cerebro en Claude]]
 - [[claude/instrucciones-proyecto|Instrucciones del proyecto "Varios · Cerebro" en Claude]]
 - [[docs/18-flujo-de-calidad-y-aprendizaje|18 · Flujo de calidad y aprendizaje continuo en la oficina]]
-- [[precedents/oficina/conversaciones/2026-11/2026-11-23-ceo-digital-a-plan-y-seguimiento-bywjc|CEO digital → Plan y seguimiento]]
 
 ## Decisiones
 

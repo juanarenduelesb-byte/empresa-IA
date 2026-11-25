@@ -5,8 +5,8 @@ Cómo está conectado el cerebro de Varios: qué sostiene todo, qué temas forma
 
 ## Resumen
 
-- 4548 nodos: seccion 3931, documento 338, fuente 68, habilidad 65, proceso 38, especialista 34, agente 34, decision 21, puerta 12, departamento 7.
-- 6084 relaciones: 60 % EXTRACTADAS (escritas en la fuente), 40 % INFERIDAS (temas compartidos, con puntuación) y 0 AMBIGUAS (para revisar).
+- 4553 nodos: seccion 3935, documento 339, fuente 68, habilidad 65, proceso 38, especialista 34, agente 34, decision 21, puerta 12, departamento 7.
+- 6092 relaciones: 60 % EXTRACTADAS (escritas en la fuente), 40 % INFERIDAS (temas compartidos, con puntuación) y 0 AMBIGUAS (para revisar).
 - 12 comunidades de temas.
 
 ## Nodos centrales
@@ -33,12 +33,12 @@ Nodos por los que pasa el camino entre comunidades distintas (intermediación).
 - **Registro de fuentes** · intermediación 0.165 · une la comunidad 2 con 1, 3, 4, 5, 6, 7
 - **Habilidades de los agentes** · intermediación 0.098 · une la comunidad 1 con 3, 4, 5, 9
 - **Registro de decisiones** · intermediación 0.097 · une la comunidad 8 con 1, 2, 3, 4, 5, 6
-- **Índice del conocimiento de Varios** · intermediación 0.06 · une la comunidad 3 con 2, 4, 5, 6, 7, 8
-- **L2 (puerta técnica)** · intermediación 0.052 · une la comunidad 8 con 1, 2, 3, 4, 5, 6
-- **Guia de Arranque Proyecto v1.4 Diseno Cerrado** · intermediación 0.048 · une la comunidad 6 con 1, 2, 3, 4, 7, 8
-- **CEO digital** · intermediación 0.025 · une la comunidad 9 con 1, 2, 3, 4, 6, 7
-- **P31 · Calificación de oportunidad** · intermediación 0.021 · une la comunidad 3 con 1, 2, 4, 6, 7, 8
-- **D-011 · Construir primero, clientes desde el 15/02/2027** · intermediación 0.021 · une la comunidad 5 con 1, 2, 3, 4, 6, 8
+- **Índice del conocimiento de Varios** · intermediación 0.06 · une la comunidad 4 con 2, 3, 5, 6, 7, 8
+- **L2 (puerta técnica)** · intermediación 0.053 · une la comunidad 8 con 1, 2, 3, 4, 5, 6
+- **Guia de Arranque Proyecto v1.4 Diseno Cerrado** · intermediación 0.048 · une la comunidad 6 con 1, 2, 4, 5, 7, 8
+- **CEO digital** · intermediación 0.025 · une la comunidad 9 con 1, 2, 4, 5, 6, 7
+- **P31 · Calificación de oportunidad** · intermediación 0.021 · une la comunidad 4 con 1, 2, 5, 6, 7, 8
+- **D-011 · Construir primero, clientes desde el 15/02/2027** · intermediación 0.021 · une la comunidad 3 con 1, 2, 4, 5, 6, 8
 - **Experto en asesorías y despachos** · intermediación 0.02 · une la comunidad 1 con 0, 2, 6, 8
 
 ## Conexiones sorprendentes
@@ -70,17 +70,17 @@ Cohesión 0.09 · 97 nodos: Habilidades de los agentes; Administración; Experto
 
 Cohesión 0.1 · 73 nodos: Registro de fuentes; Responsable de cumplimiento normativo; Coordinación sectorial y seguros; Experto en sanidad privada; Ingeniero de plataforma y operaciones (DevOps/SRE); Experto en servicios financieros no bancarios; Experto en asesorías, gestorías y despachos; Especialista legal y privacidad (y 65 más)
 
-### 3 · processes/catalog · Índice del conocimiento de Varios y Arquitecto de procesos
+### 3 · precedents/oficina · Propuesta de proceso de referencia: siniestros en corredurías y Conversaciones con Coordinación sectorial · Seguros
+
+Cohesión 0.16 · 57 nodos: Propuesta de proceso de referencia: siniestros en corredurías; Conversaciones con Coordinación sectorial · Seguros; Guion de validación semanal: apertura de siniestros; Conversaciones con Arquitecto de procesos; Memoria de la oficina; Línea base y fichas de métricas · Atalaya; D-011 · Construir primero, clientes desde el 15/02/2027; Claves del sector seguros para Atalaya (y 49 más)
+
+### 4 · processes/catalog · Índice del conocimiento de Varios y Arquitecto de procesos
 
 Cohesión 0.14 · 56 nodos: Índice del conocimiento de Varios; Arquitecto de procesos; P32 · Descubrimiento de procesos; Director comercial; P33 · Diseño y validación TO-BE; P38 · Gestión de despliegue por cliente; P31 · Calificación de oportunidad; Especialista en éxito de cliente (y 48 más)
 
-### 4 · knowledge/ingenieria · Dependencias entre procesos y Especialista en ciberseguridad
+### 5 · knowledge/ingenieria · Dependencias entre procesos y Especialista en ciberseguridad
 
 Cohesión 0.17 · 55 nodos: Dependencias entre procesos; Especialista en ciberseguridad; Varios · empresa-ia; Procesos y estados; Arquitecto de datos e IA; Biblioteca de precedentes; Especialista en automatización; Arquitecto técnico (y 47 más)
-
-### 5 · precedents/oficina · Propuesta de proceso de referencia: siniestros en corredurías y Conversaciones con Coordinación sectorial · Seguros
-
-Cohesión 0.17 · 54 nodos: Propuesta de proceso de referencia: siniestros en corredurías; Conversaciones con Coordinación sectorial · Seguros; Guion de validación semanal: apertura de siniestros; Conversaciones con Arquitecto de procesos; Memoria de la oficina; Línea base y fichas de métricas · Atalaya; D-011 · Construir primero, clientes desde el 15/02/2027; Claves del sector seguros para Atalaya (y 46 más)
 
 ### 6 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue
 
@@ -92,7 +92,7 @@ Cohesión 0.44 · 40 nodos: P22 · Gestión de errores y reintentos; Catálogo d
 
 ### 8 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Registro de decisiones
 
-Cohesión 0.14 · 39 nodos: Acta de protección de la IA y examen de 50 casos; L2 (puerta técnica); Registro de decisiones; Conversaciones con IA y evaluación; Reunión: IA y evaluación y Seguridad; Conversaciones con CEO digital; 17 · Cerebro, conocimiento y procesos: auditoría e informe; Conversaciones con Plan y seguimiento (y 31 más)
+Cohesión 0.15 · 37 nodos: Acta de protección de la IA y examen de 50 casos; L2 (puerta técnica); Registro de decisiones; Conversaciones con IA y evaluación; Reunión: IA y evaluación y Seguridad; Conversaciones con CEO digital; 17 · Cerebro, conocimiento y procesos: auditoría e informe; Conversaciones con Plan y seguimiento (y 29 más)
 
 ### 9 · knowledge/direccion · CEO digital y Responsable de decisiones y seguimiento
 

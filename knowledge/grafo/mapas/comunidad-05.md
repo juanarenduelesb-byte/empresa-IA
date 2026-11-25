@@ -1,75 +1,78 @@
 ---
 tipo: "mapa"
 comunidad: 5
-miembros: 54
+miembros: 55
 cohesion: 0.17
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 5 · precedents/oficina · Propuesta de proceso de referencia: siniestros en corredurías y Conversaciones con Coordinación sectorial · Seguros
+# Comunidad 5 · knowledge/ingenieria · Dependencias entre procesos y Especialista en ciberseguridad
 
-54 nodos agrupados por el algoritmo de Louvain. Cohesión 0.17.
+55 nodos agrupados por el algoritmo de Louvain. Cohesión 0.17.
 
 ## Documentos
 
-- [[precedents/oficina/encargos/2026-11/2026-11-17-propuesta-de-proceso-de-referencia-siniestros-en-c-tcpkm|Propuesta de proceso de referencia: siniestros en corredurías]]
-- [[precedents/oficina/chats/coordinacion-sectorial-seguros|Conversaciones con Coordinación sectorial · Seguros]]
-- [[precedents/oficina/encargos/2026-11/2026-11-17-guion-de-validacion-semanal-apertura-de-siniestros-zmgmn|Guion de validación semanal: apertura de siniestros]]
-- [[precedents/oficina/chats/arquitecto-de-procesos|Conversaciones con Arquitecto de procesos]]
-- [[precedents/oficina/memoria|Memoria de la oficina]]
-- [[precedents/oficina/encargos/2026-11/2026-11-17-linea-base-y-fichas-de-metricas-atalaya-23vgx|Línea base y fichas de métricas · Atalaya]]
-- [[precedents/oficina/encargos/2026-11/2026-11-17-claves-del-sector-seguros-para-atalaya-5h5ie|Claves del sector seguros para Atalaya]]
-- [[precedents/oficina/encargos/2026-11/2026-11-17-as-is-de-apertura-de-siniestros-atalaya-nau7x|AS-IS de apertura de siniestros · Atalaya]]
-- [[precedents/oficina/encargos/2026-11/2026-11-17-mapa-de-obligaciones-rgpd-ia-y-corredor-atalaya-bh693|Mapa de obligaciones RGPD, IA y corredor · Atalaya]]
-- [[precedents/oficina/chats/jefe-comercial|Conversaciones con Jefe comercial]]
-- [[precedents/oficina/encargos/2026-11/2026-11-17-guiones-de-diagnostico-de-apertura-de-siniestros-a-mwles|Guiones de diagnóstico de apertura de siniestros (Atalaya)]]
-- [[precedents/oficina/encargos/2026-11/2026-11-17-examen-de-25-casos-ficticios-para-atalaya-qq164|Examen de 25 casos ficticios para Atalaya]]
-- [[precedents/oficina/chats/validacion|Conversaciones con Validación]]
-- [[precedents/oficina/chats/metricas|Conversaciones con Métricas]]
-- [[precedents/oficina/chats/datos-de-prueba|Conversaciones con Datos de prueba]]
-- [[processes/referencia-seguros-apertura-siniestros/README|Seguros · Apertura de siniestros en corredurías (proceso de referencia)]]
-- [[precedents/oficina/encargos/2026-11/2026-11-17-guion-y-8-preguntas-de-validacion-semanal-aq2vk|Guion y 8 preguntas de validación semanal]]
-- [[precedents/oficina/chats/legal-y-privacidad|Conversaciones con Legal y privacidad]]
-- [[precedents/oficina/README|Registro de la oficina de agentes]]
-- [[precedents/oficina/conversaciones/2026-11/2026-11-17-legal-y-privacidad-a-coordinacion-sectorial-seguros-b188o|Legal y privacidad → Coordinación sectorial · Seguros]]
-- [[precedents/oficina/conversaciones/2026-11/2026-11-17-metricas-a-coordinacion-sectorial-seguros-utv9x|Métricas → Coordinación sectorial · Seguros]]
-- [[precedents/projects/caso-correduria-atalaya/documentos/01-ficha-del-cliente|Ficha del cliente · Atalaya Correduría de Seguros (FICTICIA)]]
-- [[precedents/projects/caso-correduria-atalaya/documentos/02-notas-del-proceso-actual|Notas de la sesión de arranque · proceso actual de apertura de siniestros (FICTICIO)]]
-- [[precedents/oficina/proyectos/diagnostico-de-apertura-de-siniestros-atalaya-fict|Diagnóstico de apertura de siniestros · Atalaya (ficticia)]]
-- [[precedents/projects/caso-correduria-atalaya/documentos/04-sistemas-y-restricciones|Sistemas, datos y restricciones · Atalaya (FICTICIO)]]
-- [[docs/12-simulacion|Simulación del cerebro]]
-- [[precedents/oficina/conversaciones/2026-11/2026-11-17-datos-de-prueba-a-coordinacion-sectorial-seguros-j4rxd|Datos de prueba → Coordinación sectorial · Seguros]]
-- [[precedents/oficina/conversaciones/2026-11/2026-11-17-metricas-a-calidad-y-riesgo-7jvup|Métricas → Calidad y riesgo]]
-- [[precedents/oficina/conversaciones/2026-11/2026-11-17-arquitecto-de-procesos-a-coordinacion-sectorial-seguros-hh6fv|Arquitecto de procesos → Coordinación sectorial · Seguros]]
-- [[precedents/oficina/conversaciones/2026-11/2026-11-17-validacion-a-coordinacion-sectorial-seguros-3yt5x|Validación → Coordinación sectorial · Seguros]]
-- [[precedents/oficina/conversaciones/2026-11/2026-11-17-validacion-a-calidad-y-riesgo-u2br2|Validación → Calidad y riesgo]]
-- [[claude/habilidades/revision-riesgo-ia|Revisión de riesgo de IA y datos]]
-- [[precedents/oficina/conversaciones/2026-11/2026-11-17-legal-y-privacidad-a-calidad-y-riesgo-7k9sg|Legal y privacidad → Calidad y riesgo]]
-- [[precedents/oficina/conversaciones/2026-11/2026-11-17-datos-de-prueba-a-calidad-y-riesgo-dvsoz|Datos de prueba → Calidad y riesgo]]
-- [[precedents/projects/caso-correduria-atalaya/README|Caso de práctica · Atalaya Correduría de Seguros (ficticia)]]
-- [[precedents/oficina/conversaciones/2026-11/2026-11-17-ceo-digital-a-coordinacion-sectorial-seguros-fws4y|CEO digital → Coordinación sectorial · Seguros]]
-- [[precedents/oficina/conversaciones/2026-11/2026-11-17-ceo-digital-a-metricas-sj6cp|CEO digital → Métricas]]
-- [[precedents/oficina/conversaciones/2026-11/2026-11-17-metricas-a-calidad-y-riesgo-4xyvo|Métricas → Calidad y riesgo]]
-- [[precedents/oficina/conversaciones/2026-11/2026-11-17-arquitecto-de-procesos-a-calidad-y-riesgo-61ars|Arquitecto de procesos → Calidad y riesgo]]
-- [[precedents/oficina/conversaciones/2026-11/2026-11-17-ceo-digital-a-legal-y-privacidad-wknhu|CEO digital → Legal y privacidad]]
-- [[precedents/oficina/conversaciones/2026-11/2026-11-17-ceo-digital-a-arquitecto-de-procesos-oqbwj|CEO digital → Arquitecto de procesos]]
-- [[precedents/oficina/conversaciones/2026-11/2026-11-17-coordinacion-sectorial-seguros-a-calidad-y-riesgo-6aum5|Coordinación sectorial · Seguros → Calidad y riesgo]]
-- [[precedents/oficina/conversaciones/2026-11/2026-11-17-coordinacion-sectorial-seguros-a-calidad-y-riesgo-y5dli|Coordinación sectorial · Seguros → Calidad y riesgo]]
-- [[precedents/oficina/conversaciones/2026-11/2026-11-17-legal-y-privacidad-a-calidad-y-riesgo-bn4hp|Legal y privacidad → Calidad y riesgo]]
-- [[precedents/oficina/conversaciones/2026-11/2026-11-17-validacion-a-calidad-y-riesgo-n73cv|Validación → Calidad y riesgo]]
-- [[precedents/oficina/conversaciones/2026-11/2026-11-17-datos-de-prueba-a-calidad-y-riesgo-6agmw|Datos de prueba → Calidad y riesgo]]
-- [[precedents/oficina/conversaciones/2026-11/2026-11-17-arquitecto-de-procesos-a-calidad-y-riesgo-jsrqq|Arquitecto de procesos → Calidad y riesgo]]
-- [[precedents/oficina/conversaciones/2026-11/2026-11-17-ceo-digital-a-datos-de-prueba-3hi0e|CEO digital → Datos de prueba]]
-- [[precedents/oficina/conversaciones/2026-11/2026-11-17-ceo-digital-a-validacion-ccsjr|CEO digital → Validación]]
-- [[precedents/oficina/decisiones|Decisiones de la oficina]]
-- [[precedents/oficina/reglas-y-habilidades|Reglas y habilidades enseñadas en la oficina]]
+- [[processes/diagrams/dependencias|Dependencias entre procesos]]
+- [[knowledge/seguridad-legal/ciberseguridad|Especialista en ciberseguridad]]
+- [[CLAUDE|Varios · empresa-ia]]
+- [[docs/13-procesos-y-estados|Procesos y estados]]
+- [[knowledge/ingenieria/datos-ia|Arquitecto de datos e IA]]
+- [[precedents/README|Biblioteca de precedentes]]
+- [[knowledge/procesos/automatizacion|Especialista en automatización]]
+- [[knowledge/ingenieria/arquitecto-tecnico|Arquitecto técnico]]
+- [[knowledge/ingenieria/backend|Especialista backend]]
+- [[knowledge/seguridad-legal/calidad-riesgos|Especialista en calidad y riesgos]]
+- [[knowledge/ingenieria/README|Ingeniería y tecnología]]
+- [[knowledge/ingenieria/evaluacion-ia|Especialista en evaluación de IA]]
+- [[knowledge/ingenieria/integraciones|Especialista en integraciones]]
+- [[processes/diagrams/ciclo-encargo|Ciclo completo de un encargo (P01 → P11)]]
+- [[knowledge/seguridad-legal/README|Seguridad, privacidad, legal y cumplimiento]]
+- [[integrations/catalog/README|Catálogo de integraciones]]
+- [[processes/runbooks/caida-proveedor-ia|Caída del proveedor de IA]]
 
-## Decisiones
+## Procesos
 
-- [[knowledge/grafo/decisiones/D-011|D-011 · Construir primero, clientes desde el 15/02/2027]]
+- [[processes/catalog/P30-gestion-de-identidades-y-secretos|P30 · Gestión de identidades y secretos]]
+- [[processes/catalog/P21-ejecucion-segura-de-herramientas|P21 · Ejecución segura de herramientas]]
+- [[processes/catalog/P10-aprobacion-humana|P10 · Aprobación humana]]
+- [[processes/catalog/P15-observabilidad-e-incidencias|P15 · Observabilidad e incidencias]]
+- [[processes/catalog/P23-evaluacion-de-agentes-y-modelos|P23 · Evaluación de agentes y modelos]]
+- [[processes/catalog/P04-recuperacion-de-conocimiento|P04 · Recuperación de conocimiento]]
+- [[processes/catalog/P07-ingesta-documental|P07 · Ingesta documental]]
+- [[processes/catalog/P08-ejecucion-de-tareas|P08 · Ejecución de tareas]]
+- [[processes/catalog/P14-gestion-de-permisos-y-aislamiento|P14 · Gestión de permisos y aislamiento]]
+- [[processes/catalog/P20-seguridad-de-entradas-e-inyeccion-de-instrucciones|P20 · Seguridad de entradas e inyección de instrucciones]]
+- [[processes/catalog/P18-evaluacion-y-mejora|P18 · Evaluación y mejora]]
+- [[processes/catalog/P09-control-de-calidad|P09 · Control de calidad]]
+- [[processes/catalog/P19-politica-de-uso-y-limites|P19 · Política de uso y límites]]
+- [[processes/catalog/P16-gobierno-de-modelos-e-instrucciones|P16 · Gobierno de modelos e instrucciones]]
+- [[processes/catalog/P17-seguridad-y-continuidad|P17 · Seguridad y continuidad]]
+- [[processes/catalog/P24-gestion-del-ciclo-de-vida-del-dato|P24 · Gestión del ciclo de vida del dato]]
+- [[processes/catalog/P36-gestion-del-catalogo-de-conectores|P36 · Gestión del catálogo de conectores]]
+- [[processes/catalog/P26-continuidad-y-recuperacion|P26 · Continuidad y recuperación]]
+
+## Especialistas
+
+- [[knowledge/seguridad-legal/ciberseguridad|Especialista en ciberseguridad]]
+- [[knowledge/ingenieria/backend|Especialista backend]]
+- [[knowledge/seguridad-legal/legal-privacidad|Especialista legal y privacidad]]
+- [[knowledge/procesos/automatizacion|Especialista en automatización]]
+- [[knowledge/seguridad-legal/calidad-riesgos|Especialista en calidad y riesgos]]
+- [[knowledge/ingenieria/datos-ia|Arquitecto de datos e IA]]
+- [[knowledge/ingenieria/evaluacion-ia|Especialista en evaluación de IA]]
+- [[knowledge/direccion/bibliotecario|Bibliotecario / responsable de conocimiento]]
+- [[knowledge/ingenieria/integraciones|Especialista en integraciones]]
 
 ## Fuentes
 
-- [[knowledge/grafo/fuentes/CCS|CCS · Consorcio de Compensación de Seguros: riesgos extraordinarios]]
-- [[knowledge/grafo/fuentes/CIDE-CICOS|CIDE-CICOS · Convenios CIDE/ASCIDE y Centro Informático de Compensación de Siniestros (CICOS)]]
+- [[knowledge/grafo/fuentes/INT-GUIA|INT-GUIA · Guía de Arranque v1.4 (diseño cerrado)]]
+- [[knowledge/grafo/fuentes/OWASP-LLM-2025|OWASP-LLM-2025 · OWASP Top 10 for LLM Applications 2025]]
+- [[knowledge/grafo/fuentes/AEPD-AGENTICA|AEPD-AGENTICA · Inteligencia artificial agéntica desde la perspectiva de protección de datos]]
+- [[knowledge/grafo/fuentes/IETF-IDEMPOTENCY|IETF-IDEMPOTENCY · The Idempotency-Key HTTP Header Field (borrador 07)]]
+- [[knowledge/grafo/fuentes/PG-RLS|PG-RLS · Recomendaciones de seguridad a nivel de fila para SaaS multicliente]]
+- [[knowledge/grafo/fuentes/OSS-TEMPORAL|OSS-TEMPORAL · Temporal (motor de ejecución duradera)]]
+- [[knowledge/grafo/fuentes/OSS-DOCLING|OSS-DOCLING · Docling (conversión de documentos)]]
+- [[knowledge/grafo/fuentes/OSS-PRESIDIO|OSS-PRESIDIO · Microsoft Presidio (detección y anonimización de datos personales)]]
+- [[knowledge/grafo/fuentes/OSS-PROMPTFOO|OSS-PROMPTFOO · promptfoo (evaluación y pruebas adversariales de LLM)]]
+- [[knowledge/grafo/fuentes/OSS-SPIFF|OSS-SPIFF · SpiffWorkflow (motor BPMN/DMN en Python)]]

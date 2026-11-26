@@ -167,7 +167,7 @@ No construir primero un CEO omnisciente; descubrir, diseñar, integrar y medir u
 - Decisión: Claude trabaja de noche sobre una lista que Juan elige cada día (`docs/21-trabajo-nocturno.md`) y deja un informe a las 07:50 en docs/informes/. El plan hasta el 28/02/2027, el ritual diario y el formato del informe están en `docs/22-plan-hasta-febrero.md`. Solo se programan las tandas de la noche siguiente, nunca semanas por adelantado. Lo nocturno entra directamente en main, por petición de Juan; esta excepción a D-012 no se aplica a CLAUDE.md ni a decisiones aprobadas.
 - Motivo: avanzar el plan de 12 semanas y los cinco pilares (producto, oficina, cerebro, entregables, web y empresa) con horas de Claude que no compiten con las de los socios.
 - Riesgo: trabajo sin revisión que se acumula o se aleja del plan. Mitigación: cada tarea tiene un «hecho cuando» y sus pruebas, el informe dice qué comprobar y lo que falla, y Juan elige cada día.
-- Estado: propuesta.
+- Estado: aprobada (Juan, 26/11/2026, al fusionar la propuesta de cambios).
 
 ## D-023 — Base de datos real: PostgreSQL con RLS, auditoría inmutable y conocimiento con citas
 - Fecha: 2026-11-26
@@ -184,14 +184,14 @@ No construir primero un CEO omnisciente; descubrir, diseñar, integrar y medir u
 - Tecnología nueva dentro del stack ya decidido: SQLAlchemy 2 (base de Alembic), psycopg 3 (controlador de PostgreSQL), uvicorn (servidor de FastAPI) y pydantic-settings (configuración por entorno). No añaden servicios ni coste.
 - Motivo: los socios pidieron una base de datos real esta noche, y el aislamiento entre clientes es la regla que más daño hace si falla. Mejor fijarla en la base de datos desde el primer día que añadirla después.
 - Riesgo: adelantar código antes de validar el proceso. Mitigación: el modelo es genérico (encargos, tareas, aprobaciones) y no depende del sector. El motor en memoria (D-014) sigue igual hasta S5.
-- Estado: propuesta.
+- Estado: aprobada (Juan, 26/11/2026, al fusionar la propuesta de cambios).
 
 ## D-024 — Paquete de dominio de seguros con un archivo máquina como fuente de las reglas
 - Fecha: 2026-11-26
 - Decisión: el conocimiento del sector del proceso de referencia vive en `knowledge/sectores/seguros/`: normas con artículo y fuente oficial, glosario, catálogo de excepciones y `dominio.json` con plazos, excepciones, campos mínimos del expediente y términos. El código fijo del proceso leerá los plazos y los disparadores de `dominio.json`; los Markdown son la explicación para personas, y una prueba (`tests/test_dominio_seguros.py`) comprueba que coinciden y que todo cita una fuente del registro. Mientras un abogado no fije la base jurídica, el proceso de referencia no guarda datos de salud.
 - Motivo: «código fijo para reglas y cálculos». Una sola fuente de las reglas evita que el motor, las pruebas de C1 y la documentación digan cosas distintas.
 - Riesgo: que una norma cambie y el archivo quede viejo. Mitigación: cada plazo lleva su fuente con fecha de lectura y las fuentes en `draft` están marcadas; revisar antes de usar con un cliente.
-- Estado: propuesta.
+- Estado: aprobada (Juan, 26/11/2026, al fusionar la propuesta de cambios).
 
 ## D-025 — La oficina se organiza en siete secciones y se abre en Inicio
 - Fecha: 2026-11-26

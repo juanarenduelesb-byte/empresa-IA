@@ -164,7 +164,7 @@ No construir primero un CEO omnisciente; descubrir, diseñar, integrar y medir u
 
 ## D-022 — Trabajo nocturno de Claude con plan diario e informe de la mañana
 - Fecha: 2026-11-26
-- Decisión: Claude trabaja de noche sobre una lista que Juan elige cada día ([docs/21-trabajo-nocturno.md](docs/21-trabajo-nocturno.md)) y deja un informe a las 07:50 en docs/informes/. El plan hasta el 28/02/2027, el ritual diario y el formato del informe están en [docs/22-plan-hasta-febrero.md](docs/22-plan-hasta-febrero.md). Solo se programan las tandas de la noche siguiente, nunca semanas por adelantado. Lo nocturno entra directamente en main, por petición de Juan; esta excepción a D-012 no se aplica a CLAUDE.md ni a decisiones aprobadas.
+- Decisión: Claude trabaja de noche sobre una lista que Juan elige cada día (`docs/21-trabajo-nocturno.md`) y deja un informe a las 07:50 en docs/informes/. El plan hasta el 28/02/2027, el ritual diario y el formato del informe están en `docs/22-plan-hasta-febrero.md`. Solo se programan las tandas de la noche siguiente, nunca semanas por adelantado. Lo nocturno entra directamente en main, por petición de Juan; esta excepción a D-012 no se aplica a CLAUDE.md ni a decisiones aprobadas.
 - Motivo: avanzar el plan de 12 semanas y los cinco pilares (producto, oficina, cerebro, entregables, web y empresa) con horas de Claude que no compiten con las de los socios.
 - Riesgo: trabajo sin revisión que se acumula o se aleja del plan. Mitigación: cada tarea tiene un «hecho cuando» y sus pruebas, el informe dice qué comprobar y lo que falla, y Juan elige cada día.
 - Estado: propuesta.

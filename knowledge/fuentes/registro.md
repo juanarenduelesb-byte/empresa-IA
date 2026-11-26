@@ -1,7 +1,7 @@
 <!-- Generado por tools/org_gen.py desde tools/org_data/. No editar a mano. -->
 # Registro de fuentes
 
-Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recomendación técnica, buena práctica, documentación de producto, prensa especializada e interno. Estado: validated (contrastada con dos fuentes), draft (una fuente o secundaria), disputed (contradictoria o anunciada sin norma).
+Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: obligación legal, estándar voluntario, recomendación técnica, buena práctica, documentación de producto, prensa especializada e interno. Estado: validated (contrastada con dos fuentes), draft (una fuente o secundaria), disputed (contradictoria o anunciada sin norma).
 
 > Las fuentes secundarias (despachos, blogs) se marcan como tales. Antes de usar una afirmación legal en un documento para un cliente, ve al texto oficial.
 
@@ -804,7 +804,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** BOE
 - **URL:** <https://www.boe.es/boe/dias/2024/04/27/pdfs/BOE-A-2024-8516.pdf>
 - **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** BOE 27/04/2024; efectos desde el 09/10/2024
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
 - **Nota:** Aplica el Reglamento Delegado (UE) 2024/896. Capacidad financiera mínima 23.480 euros; RC profesional 1.564.610 euros por siniestro y 2.315.610 euros al año. Una sola lectura.
 
@@ -814,7 +814,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** BOE
 - **URL:** <https://www.boe.es/eli/es/l/2025/12/26/10/con>
 - **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** BOE núm. 312, 27/12/2025 (BOE-A-2025-26698); en vigor el 28/12/2025; consolidado leído el 26/11/2026
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** Coordinación sectorial y seguros
 - **Nota:** Art. 2.5: los servicios financieros se rigen por su norma sectorial y esta ley es supletoria; no se les aplican el art. 13.8 ni los art. 18, 19, 21, 22 y 23. Art. 8: atención personalizada por una persona a petición del cliente, también desde un bot. Art. 17.1: 15 días hábiles salvo plazo sectorial distinto. Disposición transitoria única: 12 meses de adaptación (hasta el 28/12/2026; el preámbulo dice 6, manda el articulado). Disposición derogatoria: art. 6 y 9–16 de la Orden ECO/734/2004. Disposición final segunda: nuevos art. 29–31 de la Ley 44/2002 (corredores y aseguradoras, un mes para resolver; DGSFP 90 días naturales). Contrastado con KPMG, Gómez-Acebo & Pombo y Comunidad de Madrid.
 
@@ -824,7 +824,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** BOE
 - **URL:** <https://www.boe.es/eli/es/o/2004/03/11/eco734/con>
 - **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** consolidado, última actualización 27/12/2025 (BOE-A-2004-5290)
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** —
 - **Nota:** Art. 2 i): incluye a las sociedades de correduría de seguros. Los art. 6 y 9–16 (entre ellos el plazo de dos meses del art. 10) están derogados por la Ley 10/2025.
 
@@ -834,7 +834,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** Gómez-Acebo & Pombo
 - **URL:** <https://ga-p.com/publicaciones/como-afecta-a-las-aseguradoras-la-ley-10-2025-de-26-de-diciembre-por-la-que-se-regulan-los-servicios-de-atencion-a-la-clientela/>
 - **Tipo:** prensa-especializada · **Jurisdicción:** ES · **Versión o fecha:** 29/01/2026
-- **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Consultada:** 2026-11-26 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
 - **Nota:** Fuente secundaria. Confirma los doce meses de adaptación.
 
@@ -844,7 +844,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** La Moncloa (nota de prensa)
 - **URL:** <https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/economia-comercio-empresa/paginas/2026/240726-autoridad-deensa-cliente-financiero.aspx>
 - **Tipo:** prensa-especializada · **Jurisdicción:** ES · **Versión o fecha:** 24/07/2026
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** en-tramitacion · **Estado:** draft
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** en-tramitacion · **Estado:** draft
 - **Especialistas relacionados:** —
 - **Nota:** La autoridad no está creada; mientras tanto reclama la DGSFP (art. 30 de la Ley 44/2002). Sin comprobar avances después de julio de 2026.
 
@@ -854,7 +854,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** BOE
 - **URL:** <https://www.boe.es/eli/es/rdlg/2004/10/29/8/con>
 - **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** consolidado, última actualización 18/02/2026 (BOE-A-2004-18911)
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** Coordinación sectorial y seguros
 - **Nota:** Art. 7.2: oferta motivada o respuesta motivada en 3 meses desde la reclamación del perjudicado. Título IV y anexo: sistema de valoración (baremo), introducido por la Ley 35/2015. Art. 49: actualización anual. El texto sin /con es el original de 2004: no usarlo.
 
@@ -864,7 +864,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** BOE
 - **URL:** <https://www.boe.es/eli/es/l/2015/09/22/35>
 - **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** BOE 23/09/2015 (BOE-A-2015-10197); en vigor 01/01/2016 (DF 5.ª)
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** —
 - **Nota:** Modifica el RDLeg 8/2004 e introduce el baremo vigente. Para el texto actual, usar el consolidado de RDLEG-8-2004.
 
@@ -874,7 +874,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** BOE
 - **URL:** <https://www.boe.es/eli/es/l/2025/07/24/5>
 - **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** BOE 25/07/2025 (BOE-A-2025-15424); en vigor 26/07/2025, con excepciones (DF 9.ª)
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** —
 - **Nota:** Nuevo art. 7: la reclamación extrajudicial no tiene que ir cuantificada (7.1) y la oferta motivada incluye el informe médico pericial definitivo, sin el cual no podrá aportarse después en juicio (7.3 c). Art. 37.3: la oferta sin ese informe no es válida. Art. 49: actualización automática con el IPC cada 1 de enero. Contrastado con el ICAM.
 
@@ -884,7 +884,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** BOE
 - **URL:** <https://www.boe.es/boe/dias/2026/02/18/pdfs/BOE-A-2026-3803.pdf>
 - **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** BOE 18/02/2026 (BOE-A-2026-3803); efecto 01/01/2026
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** Coordinación sectorial y seguros
 - **Nota:** Actualización del 2,9 % (IPC de 2025). Las tablas no van en el BOE: se publican en la web de la DGSFP. Contrastado con Sepin (09/03/2026).
 
@@ -894,7 +894,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** BOE
 - **URL:** <https://www.boe.es/buscar/pdf/2004/BOE-A-2004-18910-consolidado.pdf>
 - **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** consolidado, última modificación 07/05/2020
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** —
 - **Nota:** Art. 6: riesgos extraordinarios en España. Art. 8: el CCS paga si se pagó el recargo y el riesgo no está cubierto por otra póliza o la aseguradora no puede pagar. Contrastado con Consumo Responde.
 
@@ -904,7 +904,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** BOE
 - **URL:** <https://www.boe.es/buscar/pdf/2004/BOE-A-2004-3373-consolidado.pdf>
 - **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** consolidado, última actualización 02/12/2015
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** Coordinación sectorial y seguros
 - **Nota:** Art. 1.1: fenómenos de la naturaleza (terremoto y maremoto, inundación extraordinaria, erupción volcánica, tempestad ciclónica atípica con vientos de más de 120 km/h, caída de cuerpos siderales), terrorismo y alteraciones del orden, y actuaciones de las Fuerzas Armadas o de Seguridad en tiempo de paz. Art. 8.1: carencia de 7 días en fenómenos de la naturaleza, salvo daños personales.
 
@@ -914,7 +914,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** Consorcio de Compensación de Seguros
 - **URL:** <https://www.consorseguros.es/ambitos-de-actividad/seguros-de-riesgos-extraordinarios/solicitud-de-indemnizacion>
 - **Tipo:** recomendacion-tecnica · **Jurisdicción:** ES · **Versión o fecha:** consultado 26/11/2026
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** Coordinación sectorial y seguros
 - **Nota:** Teléfono 900 222 665 o formulario web. Daños materiales: asegurado, tomador, beneficiario o sus representantes; daños personales: también la aseguradora o el mediador. Pago solo por transferencia al beneficiario. Contrastado con La Moncloa (22/10/2026).
 
@@ -924,7 +924,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** Consorcio de Compensación de Seguros
 - **URL:** <https://www.consorseguros.es/preguntas-frecuentes/seguros-de-riesgos-extraodinarios>
 - **Tipo:** recomendacion-tecnica · **Jurisdicción:** ES · **Versión o fecha:** consultado 26/11/2026
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** —
 - **Nota:** Franquicia del 7 % de los daños indemnizables en bienes; no se aplica a vehículos con póliza de automóviles, viviendas ni comunidades de propietarios de viviendas. Desde julio de 2016 las pólizas de automóvil solo de RC también llevan recargo. Contrastado con el condicionado de Chubb.
 
@@ -934,7 +934,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** BOE
 - **URL:** <https://www.boe.es/eli/es/l/2015/07/14/20/con>
 - **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** consolidado (fecha no visible; leído el 26/11/2026)
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** Coordinación sectorial y seguros
 - **Nota:** Art. 99.2: las aseguradoras pueden tratar datos de salud sin consentimiento para determinar la asistencia sanitaria y la indemnización que deban pagar, informando al interesado. Habilita a las aseguradoras, no a los mediadores. Una sola lectura del BOE.
 
@@ -944,7 +944,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** BOE
 - **URL:** <https://www.boe.es/eli/es/lo/2018/12/05/3/con>
 - **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** consolidado (BOE-A-2018-16673)
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
 - **Nota:** Los tratamientos de datos de salud regulados en las leyes que enumera, entre ellas la Ley 20/2015, se amparan en el art. 9.2 g), h), i) y j) del RGPD. Falta leer el texto en el BOE.
 
@@ -954,7 +954,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** AEPD
 - **URL:** <https://www.aepd.es/documento/2018-0151.pdf>
 - **Tipo:** recomendacion-tecnica · **Jurisdicción:** ES · **Versión o fecha:** 2018
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** —
 - **Nota:** Base en el art. 6.1 b) y c) del RGPD. No trata datos de salud. Coincide con el informe 2017-0232 de la AEPD sobre el anteproyecto de distribución.
 
@@ -964,7 +964,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** AEPD
 - **URL:** <https://www.aepd.es/documento/2026-0021.pdf>
 - **Tipo:** recomendacion-tecnica · **Jurisdicción:** ES · **Versión o fecha:** 2026 (sin fecha en el texto)
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
 - **Nota:** Señala que el art. 99 no fija una base del art. 6 del RGPD y propone revisar los art. 99, 100 y 130. Anteproyecto, no norma.
 
@@ -974,7 +974,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** UNESPA
 - **URL:** <https://www.unespa.es/main-files/uploads/2026/10/2026-CONVENIO-INDEMNIZACION-DIRECTA-DANOS-MATERIALES-A-VEHICULOS_Abril_2026_def.pdf>
 - **Tipo:** buena-practica · **Jurisdicción:** ES · **Versión o fecha:** abril de 2026; fecha de entrada en vigor no indicada
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** Coordinación sectorial y seguros
 - **Nota:** Colisión directa entre dos vehículos con seguro obligatorio, solo daños materiales al vehículo. Art. 6: la responsabilidad se fija con la declaración amistosa o, sin ella, con las declaraciones de los asegurados. TIREA gestiona CICOS (art. 22). Tiene su base en el art. 8 del RDLeg 8/2004. Contrastado con la CNMC (2014) y el manual de la DGT (2026).
 
@@ -984,7 +984,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** UNESPA
 - **URL:** <https://www.unespa.es/convenios/sistema-sdm-siniestros-danos-materiales/>
 - **Tipo:** buena-practica · **Jurisdicción:** ES · **Versión o fecha:** reglamento de 01/01/2014; página de UNESPA consultada 26/11/2026
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
 - **Nota:** Cubre lo que no va por el convenio de indemnización directa: más de dos vehículos, sin colisión directa, cargas desprendidas, daños a otros bienes. UNESPA lo sigue publicando y el convenio de 2026 no lo sustituye (refunde CIDE y ASCIDE, no el SDM). No se ha encontrado una declaración expresa de vigencia; TIREA no se pudo consultar.
 
@@ -994,7 +994,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** CNMC
 - **URL:** <https://www.cnmc.es/sites/default/files/501990_0.pdf>
 - **Tipo:** recomendacion-tecnica · **Jurisdicción:** ES · **Versión o fecha:** 25/09/2014
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** historico · **Estado:** validated
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** historico · **Estado:** validated
 - **Especialistas relacionados:** —
 - **Nota:** Historia: CIDE (1988), ASCIDE (1990, sin declaración amistosa o defectuosa), CICOS (1993, gestionado por TIREA desde 1998).
 
@@ -1004,7 +1004,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** DGT
 - **URL:** <https://sede.dgt.gob.es/export/sites/dgt/.galleries/permisos-de-conducir/certificacion-aptitud-profesores-formacion-vial/2026/MANUAL-X-Seguro-del-automovil.pdf>
 - **Tipo:** recomendacion-tecnica · **Jurisdicción:** ES · **Versión o fecha:** 2026
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
 - **Nota:** El asegurador facilita ejemplares de la declaración amistosa y debe adherirse a los convenios de indemnización directa. Material formativo, no norma.
 
@@ -1014,7 +1014,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** Nielsen Norman Group (Pernice y Budiu)
 - **URL:** <https://www.nngroup.com/articles/hamburger-menus/>
 - **Tipo:** buena-practica · **Jurisdicción:** — · **Versión o fecha:** 26/06/2016
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** —
 - **Nota:** Estudio con 179 participantes: la navegación oculta reduce la descubribilidad más de un 20 % y hace las tareas al menos un 39 % más lentas; en escritorio, navegación visible. Coincide con NN/g, navegación vertical (16/05/2021).
 
@@ -1024,7 +1024,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** Apple
 - **URL:** <https://developer.apple.com/design/human-interface-guidelines/tab-bars>
 - **Tipo:** buena-practica · **Jurisdicción:** — · **Versión o fecha:** actualizada 08/06/2026
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** —
 - **Nota:** Pestañas para navegar, no para acciones; siempre visibles; badges solo para información crítica; cinco o menos por defecto. Material Design 3 (navigation rail) admite de 3 a 7 destinos.
 
@@ -1034,7 +1034,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** Linear
 - **URL:** <https://linear.app/docs/triage>
 - **Tipo:** documentacion-producto · **Jurisdicción:** — · **Versión o fecha:** consultado 26/11/2026
-- **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** validated
+- **Consultada:** 2026-11-26 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** —
 - **Nota:** Bandeja para lo que llega de fuera con acciones de una tecla: aceptar, rechazar con motivo, duplicado y posponer. Inbox separado de My Issues. Ver también https://linear.app/docs/inbox.
 
@@ -1044,7 +1044,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** 37signals
 - **URL:** <https://basecamp.com/5>
 - **Tipo:** documentacion-producto · **Jurisdicción:** — · **Versión o fecha:** 2026
-- **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Consultada:** 2026-11-26 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
 - **Nota:** Inicio con proyectos recientes y actividad; menú universal (Shift+J); «New for you» separado de la actividad. Atajos en https://basecamp.com/keyboard.
 
@@ -1054,7 +1054,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** GitHub
 - **URL:** <https://docs.github.com/en/subscriptions-and-notifications/how-tos/viewing-and-triaging-notifications/managing-notifications-from-your-inbox>
 - **Tipo:** documentacion-producto · **Jurisdicción:** — · **Versión o fecha:** consultado 26/11/2026
-- **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** validated
+- **Consultada:** 2026-11-26 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** —
 - **Nota:** Filtros por defecto: asignado, participando, revisión pedida y menciones. Projects muestra los mismos datos como tabla, tablero o calendario.
 
@@ -1064,7 +1064,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** Zapier
 - **URL:** <https://help.zapier.com/hc/en-us/articles/38731463206029-Request-approval-to-keep-your-workflow-running-with-Human-in-the-Loop>
 - **Tipo:** documentacion-producto · **Jurisdicción:** — · **Versión o fecha:** actualizada 26/10/2026
-- **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** validated
+- **Consultada:** 2026-11-26 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** —
 - **Nota:** El flujo se pausa; el revisor aprueba, rechaza o edita con nota; caducidad con acción por defecto; registro de auditoría. Coincide con las aprobaciones de Power Automate (19/08/2026).
 
@@ -1074,7 +1074,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** Parlamento Europeo y Consejo (DOUE)
 - **URL:** <https://eur-lex.europa.eu/eli/reg/2024/1689/oj?locale=es>
 - **Tipo:** obligacion-legal · **Jurisdicción:** UE · **Versión o fecha:** DOUE 12/07/2024; modificado por el Reglamento (UE) 2026/1744
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** —
 - **Nota:** Art. 3.3 proveedor y 3.4 responsable del despliegue. Art. 50: informar de que se interactúa con una IA y marcar el contenido sintético (desde 02/08/2026). Anexo III 5 c): alto riesgo la evaluación de riesgos y la fijación de precios de personas físicas en seguros de vida y salud (desde 02/12/2027 tras el ómnibus). La apertura de siniestros no figura en el anexo III. Contrastado con UE-RIA-OMNIBUS.
 
@@ -1084,7 +1084,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** Comisión Europea (DOUE)
 - **URL:** <https://eur-lex.europa.eu/eli/dec_impl/2021/915/oj>
 - **Tipo:** recomendacion-tecnica · **Jurisdicción:** UE · **Versión o fecha:** 04/06/2021; DOUE L 199 de 07/06/2021
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** —
 - **Nota:** Cláusulas tipo del art. 28.7 RGPD: secciones I–III y anexos I (partes), II (descripción del tratamiento), III (medidas técnicas y organizativas, concretas) y IV (subencargados). Cláusula 7.7: autorización específica o general de subencargados con un preaviso que fijan las partes. Uso voluntario. Contrastado con las directrices de la AEPD.
 
@@ -1094,7 +1094,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** AEPD
 - **URL:** <https://aepd.es/guias/guia-directrices-contratos.pdf>
 - **Tipo:** recomendacion-tecnica · **Jurisdicción:** ES · **Versión o fecha:** sin fecha impresa (PDF de 2017, anterior a las cláusulas tipo de 2021)
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
 - **Nota:** Incluye un modelo orientativo de cláusulas (anexo I) que la propia AEPD dice que no son cláusulas tipo.
 
@@ -1104,7 +1104,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** Comité Europeo de Protección de Datos
 - **URL:** <https://www.edpb.europa.eu/system/files/2023-10/edpb_guidelines_202007_controllerprocessor_final_es.pdf>
 - **Tipo:** recomendacion-tecnica · **Jurisdicción:** UE · **Versión o fecha:** versión 2.0, adoptada el 07/07/2021
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** —
 - **Nota:** Cuándo se es responsable, corresponsable o encargado; contenido del contrato del art. 28.
 
@@ -1114,7 +1114,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** Parlamento Europeo y Consejo (DOUE)
 - **URL:** <https://eur-lex.europa.eu/eli/reg/2022/2554/oj/spa>
 - **Tipo:** obligacion-legal · **Jurisdicción:** UE · **Versión o fecha:** DOUE L 333 de 27/12/2022; aplicable desde 17/01/2025
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** —
 - **Nota:** Art. 2.3 e): no se aplica a los intermediarios de seguros que sean micro, pequeñas o medianas empresas. Art. 2.3 b) solo excluye a las aseguradoras del art. 4 de Solvencia II: una aseguradora mediana sujeta a Solvencia II sí está sujeta a DORA. Art. 30.2: contenido mínimo de todo contrato TIC; art. 30.3: extras si sustenta funciones esenciales o importantes. Contrastado con DORA-CNMV.
 
@@ -1124,7 +1124,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** BOE
 - **URL:** <https://www.boe.es/eli/es/l/2019/02/20/1/con>
 - **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** consolidado, sin modificaciones desde 21/02/2019
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
 - **Nota:** Art. 1.1: secreto, valor empresarial por ser secreto y medidas razonables del titular para mantenerlo en secreto. Una sola lectura.
 
@@ -1134,7 +1134,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** BOE
 - **URL:** <https://www.boe.es/eli/es/rd/1889/07/24/(1)/con>
 - **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** consolidado, última actualización 03/01/2025
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
 - **Nota:** Art. 1101–1107: responsabilidad contractual. Art. 1102: la responsabilidad por dolo no se puede renunciar. Una sola lectura.
 
@@ -1144,7 +1144,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** BOE
 - **URL:** <https://www.boe.es/buscar/act.php?id=BOE-A-2002-13758>
 - **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** consolidado, última actualización 23/01/2025
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** —
 - **Nota:** Art. 10.1: denominación, domicilio, correo, Registro Mercantil, NIF y, si hay precios, si incluyen impuestos; se cumple poniéndolo en la propia web (10.2). Art. 22.2: consentimiento para cookies no exentas tras información clara y completa. Contrastado con la guía de cookies de la AEPD.
 
@@ -1154,7 +1154,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** AEPD
 - **URL:** <https://www.aepd.es/guias/guia-cookies.pdf>
 - **Tipo:** recomendacion-tecnica · **Jurisdicción:** ES · **Versión o fecha:** mayo de 2024 (adaptada a las directrices 03/2022 del CEPD en julio de 2023)
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** —
 - **Nota:** Rechazar debe ofrecerse en la misma capa y al mismo nivel que aceptar; la primera capa incluye la petición de consentimiento. Las cookies técnicas exentas no necesitan consentimiento.
 
@@ -1164,7 +1164,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** Resumen de Sachin Rekhi
 - **URL:** <https://sachinrekhi.com/the-mom-test-rob-fitzpatrick>
 - **Tipo:** buena-practica · **Jurisdicción:** — · **Versión o fecha:** libro de 2013; resumen consultado 26/11/2026
-- **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Consultada:** 2026-11-26 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
 - **Nota:** Reglas: hablar de su vida y no de tu idea; preguntar por hechos concretos del pasado, no por opiniones ni por el futuro; escuchar más que hablar. Los cumplidos no valen; el avance se mide por compromisos (tiempo, reputación o dinero). Fuente secundaria; coincide con el resumen de Yevgeniy Brikman (2023).
 
@@ -1174,7 +1174,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** Lean Enterprise Institute
 - **URL:** <https://www.lean.org/lexicon-terms/value-stream-mapping/>
 - **Tipo:** buena-practica · **Jurisdicción:** — · **Versión o fecha:** consultado 26/11/2026
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
 - **Nota:** Mapa del flujo de material e información de un proceso; separa el tiempo de proceso del tiempo total (lead time). Base de la medición AS-IS: trabajo activo frente a espera.
 
@@ -1184,7 +1184,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** BOE
 - **URL:** <https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24701>
 - **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** BOE núm. 293, 25/11/2026; en vigor 26/11/2026; convalidación del Congreso pendiente (30 días)
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** Experto en asesorías, gestorías y despachos, Especialista administrativo, Especialista en contabilidad y facturación
 - **Nota:** Disposición final primera: la adaptación coincide con el último plazo del RD 238/2026. Según la AEAT, sistemas adaptados antes del 06/10/2028 para todos, sin distinguir contribuyentes del Impuesto sobre Sociedades. Contrastado con la nota de la AEAT del 25/11/2026. Si no se convalidara, volverían las fechas del RDL 15/2025.
 
@@ -1194,7 +1194,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** BOE
 - **URL:** <https://www.boe.es/buscar/act.php?id=BOE-A-2010-10544>
 - **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** consolidado, actualizado 03/01/2025; art. 4 según la Ley 18/2022, vigente desde 19/10/2022
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** —
 - **Nota:** Capital mínimo de la SL: 1 euro. Mientras no llegue a 3.000 euros, al menos el 20 % del beneficio va a reserva legal; en liquidación, los socios responden solidariamente de la diferencia hasta 3.000 euros. Contrastado con la Ley 18/2022 (BOE-A-2022-15818).
 
@@ -1204,7 +1204,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** Agencia Tributaria
 - **URL:** <https://sede.agenciatributaria.gob.es/Sede/impuesto-sobre-sociedades/que-base-imponible-se-determina-sociedades/tipo-impositivo.html>
 - **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** consultado 26/11/2026
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** —
 - **Nota:** General 25 %. Microempresa (cifra de negocio menor de 1 millón): 2026, 19 % hasta 50.000 euros de base y 21 % el resto; 2027, 17 % y 20 %. Reducida dimensión: 23 % en 2026 y 22 % en 2027. Entidades de nueva creación: 15 % el primer periodo con base positiva y el siguiente (folleto de actividades económicas). Contrastado con el Manual de Sociedades 2025 (Ley 7/2024).
 
@@ -1214,7 +1214,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** Seguridad Social
 - **URL:** <https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/CotizacionRecaudacionTrabajadores/10721/10724/1320/1322>
 - **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** datos de 2026; consultado 26/11/2026
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
 - **Nota:** Cotización por rendimientos reales en 15 tramos (Orden PJC/297/2026, BOE-A-2026-7296). Cuota reducida para nuevos autónomos 12 meses, ampliable 12 más si los rendimientos no llegan al SMI; el importe de 2026 no se ha encontrado en fuente oficial. Pluriactividad: reintegro del 50 % del exceso sobre 17.323,68 euros. Socios con control efectivo (al menos la mitad del capital; se presume con un tercio, o un cuarto con funciones de dirección) van al RETA (art. 305.2 b LGSS).
 
@@ -1224,7 +1224,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** Resumen de Will Larson
 - **URL:** <https://lethain.com/pyramid-principle/>
 - **Tipo:** buena-practica · **Jurisdicción:** — · **Versión o fecha:** libro de 1987; resumen consultado 26/11/2026
-- **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Consultada:** 2026-11-26 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
 - **Nota:** Empezar por la conclusión, agrupar los argumentos que la sostienen y abrir con situación, complicación y pregunta. Fuente secundaria; coincide con otros resúmenes (BetterUp, Think Insights).
 
@@ -1234,7 +1234,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** Carnegie Mellon University, Eberly Center
 - **URL:** <https://www.cmu.edu/teaching/assessment/assesslearning/rubrics.html>
 - **Tipo:** buena-practica · **Jurisdicción:** — · **Versión o fecha:** consultado 26/11/2026
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
 - **Nota:** Rúbrica analítica: criterios por niveles de desempeño, con un descriptor concreto en cada celda para que dos evaluadores puntúen igual. Base de la rúbrica de entregables (C3).
 

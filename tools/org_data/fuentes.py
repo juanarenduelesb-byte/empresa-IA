@@ -1,4 +1,4 @@
-"""Registro de fuentes. Consultadas el 17/11/2026 salvo que se indique otra fecha.
+"""Registro de fuentes. Consultadas el 17/11/2026 salvo las añadidas la noche del 26/11/2026 (ver CONSULTA_26).
 
 tipo: obligacion-legal | ayuda-publica | estandar-voluntario | recomendacion-tecnica | buena-practica | documentacion-producto | prensa-especializada | interno
 autoridad: alta (organismo emisor o texto oficial) | media (despacho, asociación, editorial técnica) | baja (blog o proveedor con interés comercial)
@@ -139,3 +139,23 @@ FUENTES = [
     dict(id="MINTO-PIRAMIDE", titulo="The Pyramid Principle (Barbara Minto): la respuesta primero y la estructura situación, complicación, pregunta y respuesta", organismo="Resumen de Will Larson", url="https://lethain.com/pyramid-principle/", tipo="buena-practica", jurisdiccion="—", version="libro de 1987; resumen consultado 26/11/2026", autoridad="media", vigencia="vigente", estado="draft", nota="Empezar por la conclusión, agrupar los argumentos que la sostienen y abrir con situación, complicación y pregunta. Fuente secundaria; coincide con otros resúmenes (BetterUp, Think Insights)."),
     dict(id="CMU-RUBRICAS", titulo="Creating and Using Rubrics", organismo="Carnegie Mellon University, Eberly Center", url="https://www.cmu.edu/teaching/assessment/assesslearning/rubrics.html", tipo="buena-practica", jurisdiccion="—", version="consultado 26/11/2026", autoridad="alta", vigencia="vigente", estado="draft", nota="Rúbrica analítica: criterios por niveles de desempeño, con un descriptor concreto en cada celda para que dos evaluadores puntúen igual. Base de la rúbrica de entregables (C3)."),
 ]
+
+# Fuentes añadidas la noche del 26/11/2026 (B2, D2, F1, F2, E1, C3). Antes salían con la fecha
+# general (17/11), que es anterior a su publicación en algunos casos (RDL 43/2026, BOE del 25/11).
+CONSULTA_26 = "2026-11-26"
+NUEVAS_26 = {
+    "ADCF-MONCLOA-2026", "AEAT-IS-TIPOS", "AEPD-CORREDOR-2018", "AEPD-DIRECTRICES-ENCARGO",
+    "AEPD-GUIA-COOKIES", "AEPD-INF-2026-0021", "APPLE-HIG-TAB-BARS", "BAREMO-2026",
+    "BASECAMP-5", "CCS-FAQ", "CCS-SOLICITUD", "CCT-ENCARGO-2021-915",
+    "CMU-RUBRICAS", "CNMC-CIDE-2014", "CODIGO-CIVIL", "DGSFP-IMPORTES-2024",
+    "DGT-MANUAL-SEGURO-2026", "DORA-2022-2554", "EDPB-GL-07-2020", "GAP-LEY10-ASEG",
+    "GITHUB-NOTIF-INBOX", "LEI-VSM", "LEY-1-2019-SECRETOS", "LEY-10-2025",
+    "LEY-35-2015", "LEY-5-2025", "LINEAR-TRIAGE", "LOPDGDD-DA17",
+    "LOSSEAR-ART99", "LSC-ART4", "LSSI-34-2002", "MINTO-PIRAMIDE",
+    "MOM-TEST", "NNG-HIDDEN-NAV", "ORDEN-ECO-734-2004", "RD-300-2004",
+    "RDLEG-7-2004-CCS", "RDLEG-8-2004", "RIA-2024-1689", "SEGSOC-RETA-2026",
+    "UNESPA-CONVENIO-2026", "UNESPA-SDM", "VERIFACTU-RDL43", "ZAPIER-HITL",
+}
+for _f in FUENTES:
+    if _f["id"] in NUEVAS_26:
+        _f.setdefault("consultada", CONSULTA_26)

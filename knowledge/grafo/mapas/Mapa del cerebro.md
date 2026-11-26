@@ -27,9 +27,9 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 
 ## Nodos centrales
 
-- [[knowledge/fuentes/registro|Registro de fuentes]] · 198 vecinos
+- [[knowledge/fuentes/registro|Registro de fuentes]] · 200 vecinos
 - [[knowledge/INDEX|Índice del conocimiento de Varios]] · 117 vecinos
-- [[DECISIONS|Registro de decisiones]] · 106 vecinos
+- [[DECISIONS|Registro de decisiones]] · 105 vecinos
 - [[docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado|Guia de Arranque Proyecto v1.4 Diseno Cerrado]] · 84 vecinos
 - [[processes/catalog/README|Catálogo de procesos P01–P38]] · 82 vecinos
 - [[claude/habilidades/README|Habilidades de los agentes]] · 68 vecinos
@@ -59,9 +59,9 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 ## Preguntas abiertas
 
 - ¿Por qué «Registro de fuentes» conecta la comunidad 1 con las comunidades 2, 3, 4, 5?  
-  Intermediación alta (0.262): es un puente entre temas.
+  Intermediación alta (0.265): es un puente entre temas.
 - ¿Por qué «Registro de decisiones» conecta la comunidad 3 con las comunidades 1, 2, 4, 5?  
-  Intermediación alta (0.094): es un puente entre temas.
+  Intermediación alta (0.093): es un puente entre temas.
 - ¿Por qué «Habilidades de los agentes» conecta la comunidad 2 con las comunidades 4, 5, 6, 10?  
   Intermediación alta (0.079): es un puente entre temas.
 - ¿Se aprueba D-013 · Conocimiento y catálogo de procesos generados desde datos? Sigue en propuesta y la citan 12 secciones.  

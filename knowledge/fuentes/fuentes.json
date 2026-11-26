@@ -896,7 +896,8 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "draft",
-   "nota": "Aplica el Reglamento Delegado (UE) 2024/896. Capacidad financiera mínima 23.480 euros; RC profesional 1.564.610 euros por siniestro y 2.315.610 euros al año. Una sola lectura."
+   "nota": "Aplica el Reglamento Delegado (UE) 2024/896. Capacidad financiera mínima 23.480 euros; RC profesional 1.564.610 euros por siniestro y 2.315.610 euros al año. Una sola lectura.",
+   "consultada": "2026-11-26"
   },
   {
    "id": "LEY-10-2025",
@@ -909,7 +910,8 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "validated",
-   "nota": "Art. 2.5: los servicios financieros se rigen por su norma sectorial y esta ley es supletoria; no se les aplican el art. 13.8 ni los art. 18, 19, 21, 22 y 23. Art. 8: atención personalizada por una persona a petición del cliente, también desde un bot. Art. 17.1: 15 días hábiles salvo plazo sectorial distinto. Disposición transitoria única: 12 meses de adaptación (hasta el 28/12/2026; el preámbulo dice 6, manda el articulado). Disposición derogatoria: art. 6 y 9–16 de la Orden ECO/734/2004. Disposición final segunda: nuevos art. 29–31 de la Ley 44/2002 (corredores y aseguradoras, un mes para resolver; DGSFP 90 días naturales). Contrastado con KPMG, Gómez-Acebo & Pombo y Comunidad de Madrid."
+   "nota": "Art. 2.5: los servicios financieros se rigen por su norma sectorial y esta ley es supletoria; no se les aplican el art. 13.8 ni los art. 18, 19, 21, 22 y 23. Art. 8: atención personalizada por una persona a petición del cliente, también desde un bot. Art. 17.1: 15 días hábiles salvo plazo sectorial distinto. Disposición transitoria única: 12 meses de adaptación (hasta el 28/12/2026; el preámbulo dice 6, manda el articulado). Disposición derogatoria: art. 6 y 9–16 de la Orden ECO/734/2004. Disposición final segunda: nuevos art. 29–31 de la Ley 44/2002 (corredores y aseguradoras, un mes para resolver; DGSFP 90 días naturales). Contrastado con KPMG, Gómez-Acebo & Pombo y Comunidad de Madrid.",
+   "consultada": "2026-11-26"
   },
   {
    "id": "ORDEN-ECO-734-2004",
@@ -922,7 +924,8 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "validated",
-   "nota": "Art. 2 i): incluye a las sociedades de correduría de seguros. Los art. 6 y 9–16 (entre ellos el plazo de dos meses del art. 10) están derogados por la Ley 10/2025."
+   "nota": "Art. 2 i): incluye a las sociedades de correduría de seguros. Los art. 6 y 9–16 (entre ellos el plazo de dos meses del art. 10) están derogados por la Ley 10/2025.",
+   "consultada": "2026-11-26"
   },
   {
    "id": "GAP-LEY10-ASEG",
@@ -935,7 +938,8 @@
    "autoridad": "media",
    "vigencia": "vigente",
    "estado": "draft",
-   "nota": "Fuente secundaria. Confirma los doce meses de adaptación."
+   "nota": "Fuente secundaria. Confirma los doce meses de adaptación.",
+   "consultada": "2026-11-26"
   },
   {
    "id": "ADCF-MONCLOA-2026",
@@ -948,7 +952,8 @@
    "autoridad": "alta",
    "vigencia": "en-tramitacion",
    "estado": "draft",
-   "nota": "La autoridad no está creada; mientras tanto reclama la DGSFP (art. 30 de la Ley 44/2002). Sin comprobar avances después de julio de 2026."
+   "nota": "La autoridad no está creada; mientras tanto reclama la DGSFP (art. 30 de la Ley 44/2002). Sin comprobar avances después de julio de 2026.",
+   "consultada": "2026-11-26"
   },
   {
    "id": "RDLEG-8-2004",
@@ -961,7 +966,8 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "validated",
-   "nota": "Art. 7.2: oferta motivada o respuesta motivada en 3 meses desde la reclamación del perjudicado. Título IV y anexo: sistema de valoración (baremo), introducido por la Ley 35/2015. Art. 49: actualización anual. El texto sin /con es el original de 2004: no usarlo."
+   "nota": "Art. 7.2: oferta motivada o respuesta motivada en 3 meses desde la reclamación del perjudicado. Título IV y anexo: sistema de valoración (baremo), introducido por la Ley 35/2015. Art. 49: actualización anual. El texto sin /con es el original de 2004: no usarlo.",
+   "consultada": "2026-11-26"
   },
   {
    "id": "LEY-35-2015",
@@ -974,7 +980,8 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "validated",
-   "nota": "Modifica el RDLeg 8/2004 e introduce el baremo vigente. Para el texto actual, usar el consolidado de RDLEG-8-2004."
+   "nota": "Modifica el RDLeg 8/2004 e introduce el baremo vigente. Para el texto actual, usar el consolidado de RDLEG-8-2004.",
+   "consultada": "2026-11-26"
   },
   {
    "id": "LEY-5-2025",
@@ -987,7 +994,8 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "validated",
-   "nota": "Nuevo art. 7: la reclamación extrajudicial no tiene que ir cuantificada (7.1) y la oferta motivada incluye el informe médico pericial definitivo, sin el cual no podrá aportarse después en juicio (7.3 c). Art. 37.3: la oferta sin ese informe no es válida. Art. 49: actualización automática con el IPC cada 1 de enero. Contrastado con el ICAM."
+   "nota": "Nuevo art. 7: la reclamación extrajudicial no tiene que ir cuantificada (7.1) y la oferta motivada incluye el informe médico pericial definitivo, sin el cual no podrá aportarse después en juicio (7.3 c). Art. 37.3: la oferta sin ese informe no es válida. Art. 49: actualización automática con el IPC cada 1 de enero. Contrastado con el ICAM.",
+   "consultada": "2026-11-26"
   },
   {
    "id": "BAREMO-2026",
@@ -1000,7 +1008,8 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "validated",
-   "nota": "Actualización del 2,9 % (IPC de 2025). Las tablas no van en el BOE: se publican en la web de la DGSFP. Contrastado con Sepin (09/03/2026)."
+   "nota": "Actualización del 2,9 % (IPC de 2025). Las tablas no van en el BOE: se publican en la web de la DGSFP. Contrastado con Sepin (09/03/2026).",
+   "consultada": "2026-11-26"
   },
   {
    "id": "RDLEG-7-2004-CCS",
@@ -1013,7 +1022,8 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "validated",
-   "nota": "Art. 6: riesgos extraordinarios en España. Art. 8: el CCS paga si se pagó el recargo y el riesgo no está cubierto por otra póliza o la aseguradora no puede pagar. Contrastado con Consumo Responde."
+   "nota": "Art. 6: riesgos extraordinarios en España. Art. 8: el CCS paga si se pagó el recargo y el riesgo no está cubierto por otra póliza o la aseguradora no puede pagar. Contrastado con Consumo Responde.",
+   "consultada": "2026-11-26"
   },
   {
    "id": "RD-300-2004",
@@ -1026,7 +1036,8 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "validated",
-   "nota": "Art. 1.1: fenómenos de la naturaleza (terremoto y maremoto, inundación extraordinaria, erupción volcánica, tempestad ciclónica atípica con vientos de más de 120 km/h, caída de cuerpos siderales), terrorismo y alteraciones del orden, y actuaciones de las Fuerzas Armadas o de Seguridad en tiempo de paz. Art. 8.1: carencia de 7 días en fenómenos de la naturaleza, salvo daños personales."
+   "nota": "Art. 1.1: fenómenos de la naturaleza (terremoto y maremoto, inundación extraordinaria, erupción volcánica, tempestad ciclónica atípica con vientos de más de 120 km/h, caída de cuerpos siderales), terrorismo y alteraciones del orden, y actuaciones de las Fuerzas Armadas o de Seguridad en tiempo de paz. Art. 8.1: carencia de 7 días en fenómenos de la naturaleza, salvo daños personales.",
+   "consultada": "2026-11-26"
   },
   {
    "id": "CCS-SOLICITUD",
@@ -1039,7 +1050,8 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "validated",
-   "nota": "Teléfono 900 222 665 o formulario web. Daños materiales: asegurado, tomador, beneficiario o sus representantes; daños personales: también la aseguradora o el mediador. Pago solo por transferencia al beneficiario. Contrastado con La Moncloa (22/10/2026)."
+   "nota": "Teléfono 900 222 665 o formulario web. Daños materiales: asegurado, tomador, beneficiario o sus representantes; daños personales: también la aseguradora o el mediador. Pago solo por transferencia al beneficiario. Contrastado con La Moncloa (22/10/2026).",
+   "consultada": "2026-11-26"
   },
   {
    "id": "CCS-FAQ",
@@ -1052,7 +1064,8 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "validated",
-   "nota": "Franquicia del 7 % de los daños indemnizables en bienes; no se aplica a vehículos con póliza de automóviles, viviendas ni comunidades de propietarios de viviendas. Desde julio de 2016 las pólizas de automóvil solo de RC también llevan recargo. Contrastado con el condicionado de Chubb."
+   "nota": "Franquicia del 7 % de los daños indemnizables en bienes; no se aplica a vehículos con póliza de automóviles, viviendas ni comunidades de propietarios de viviendas. Desde julio de 2016 las pólizas de automóvil solo de RC también llevan recargo. Contrastado con el condicionado de Chubb.",
+   "consultada": "2026-11-26"
   },
   {
    "id": "LOSSEAR-ART99",
@@ -1065,7 +1078,8 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "draft",
-   "nota": "Art. 99.2: las aseguradoras pueden tratar datos de salud sin consentimiento para determinar la asistencia sanitaria y la indemnización que deban pagar, informando al interesado. Habilita a las aseguradoras, no a los mediadores. Una sola lectura del BOE."
+   "nota": "Art. 99.2: las aseguradoras pueden tratar datos de salud sin consentimiento para determinar la asistencia sanitaria y la indemnización que deban pagar, informando al interesado. Habilita a las aseguradoras, no a los mediadores. Una sola lectura del BOE.",
+   "consultada": "2026-11-26"
   },
   {
    "id": "LOPDGDD-DA17",
@@ -1078,7 +1092,8 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "draft",
-   "nota": "Los tratamientos de datos de salud regulados en las leyes que enumera, entre ellas la Ley 20/2015, se amparan en el art. 9.2 g), h), i) y j) del RGPD. Falta leer el texto en el BOE."
+   "nota": "Los tratamientos de datos de salud regulados en las leyes que enumera, entre ellas la Ley 20/2015, se amparan en el art. 9.2 g), h), i) y j) del RGPD. Falta leer el texto en el BOE.",
+   "consultada": "2026-11-26"
   },
   {
    "id": "AEPD-CORREDOR-2018",
@@ -1091,7 +1106,8 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "validated",
-   "nota": "Base en el art. 6.1 b) y c) del RGPD. No trata datos de salud. Coincide con el informe 2017-0232 de la AEPD sobre el anteproyecto de distribución."
+   "nota": "Base en el art. 6.1 b) y c) del RGPD. No trata datos de salud. Coincide con el informe 2017-0232 de la AEPD sobre el anteproyecto de distribución.",
+   "consultada": "2026-11-26"
   },
   {
    "id": "AEPD-INF-2026-0021",
@@ -1104,7 +1120,8 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "draft",
-   "nota": "Señala que el art. 99 no fija una base del art. 6 del RGPD y propone revisar los art. 99, 100 y 130. Anteproyecto, no norma."
+   "nota": "Señala que el art. 99 no fija una base del art. 6 del RGPD y propone revisar los art. 99, 100 y 130. Anteproyecto, no norma.",
+   "consultada": "2026-11-26"
   },
   {
    "id": "UNESPA-CONVENIO-2026",
@@ -1117,7 +1134,8 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "validated",
-   "nota": "Colisión directa entre dos vehículos con seguro obligatorio, solo daños materiales al vehículo. Art. 6: la responsabilidad se fija con la declaración amistosa o, sin ella, con las declaraciones de los asegurados. TIREA gestiona CICOS (art. 22). Tiene su base en el art. 8 del RDLeg 8/2004. Contrastado con la CNMC (2014) y el manual de la DGT (2026)."
+   "nota": "Colisión directa entre dos vehículos con seguro obligatorio, solo daños materiales al vehículo. Art. 6: la responsabilidad se fija con la declaración amistosa o, sin ella, con las declaraciones de los asegurados. TIREA gestiona CICOS (art. 22). Tiene su base en el art. 8 del RDLeg 8/2004. Contrastado con la CNMC (2014) y el manual de la DGT (2026).",
+   "consultada": "2026-11-26"
   },
   {
    "id": "UNESPA-SDM",
@@ -1130,7 +1148,8 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "draft",
-   "nota": "Cubre lo que no va por el convenio de indemnización directa: más de dos vehículos, sin colisión directa, cargas desprendidas, daños a otros bienes. UNESPA lo sigue publicando y el convenio de 2026 no lo sustituye (refunde CIDE y ASCIDE, no el SDM). No se ha encontrado una declaración expresa de vigencia; TIREA no se pudo consultar."
+   "nota": "Cubre lo que no va por el convenio de indemnización directa: más de dos vehículos, sin colisión directa, cargas desprendidas, daños a otros bienes. UNESPA lo sigue publicando y el convenio de 2026 no lo sustituye (refunde CIDE y ASCIDE, no el SDM). No se ha encontrado una declaración expresa de vigencia; TIREA no se pudo consultar.",
+   "consultada": "2026-11-26"
   },
   {
    "id": "CNMC-CIDE-2014",
@@ -1143,7 +1162,8 @@
    "autoridad": "alta",
    "vigencia": "historico",
    "estado": "validated",
-   "nota": "Historia: CIDE (1988), ASCIDE (1990, sin declaración amistosa o defectuosa), CICOS (1993, gestionado por TIREA desde 1998)."
+   "nota": "Historia: CIDE (1988), ASCIDE (1990, sin declaración amistosa o defectuosa), CICOS (1993, gestionado por TIREA desde 1998).",
+   "consultada": "2026-11-26"
   },
   {
    "id": "DGT-MANUAL-SEGURO-2026",
@@ -1156,7 +1176,8 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "draft",
-   "nota": "El asegurador facilita ejemplares de la declaración amistosa y debe adherirse a los convenios de indemnización directa. Material formativo, no norma."
+   "nota": "El asegurador facilita ejemplares de la declaración amistosa y debe adherirse a los convenios de indemnización directa. Material formativo, no norma.",
+   "consultada": "2026-11-26"
   },
   {
    "id": "NNG-HIDDEN-NAV",
@@ -1169,7 +1190,8 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "validated",
-   "nota": "Estudio con 179 participantes: la navegación oculta reduce la descubribilidad más de un 20 % y hace las tareas al menos un 39 % más lentas; en escritorio, navegación visible. Coincide con NN/g, navegación vertical (16/05/2021)."
+   "nota": "Estudio con 179 participantes: la navegación oculta reduce la descubribilidad más de un 20 % y hace las tareas al menos un 39 % más lentas; en escritorio, navegación visible. Coincide con NN/g, navegación vertical (16/05/2021).",
+   "consultada": "2026-11-26"
   },
   {
    "id": "APPLE-HIG-TAB-BARS",
@@ -1182,7 +1204,8 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "validated",
-   "nota": "Pestañas para navegar, no para acciones; siempre visibles; badges solo para información crítica; cinco o menos por defecto. Material Design 3 (navigation rail) admite de 3 a 7 destinos."
+   "nota": "Pestañas para navegar, no para acciones; siempre visibles; badges solo para información crítica; cinco o menos por defecto. Material Design 3 (navigation rail) admite de 3 a 7 destinos.",
+   "consultada": "2026-11-26"
   },
   {
    "id": "LINEAR-TRIAGE",
@@ -1195,7 +1218,8 @@
    "autoridad": "media",
    "vigencia": "vigente",
    "estado": "validated",
-   "nota": "Bandeja para lo que llega de fuera con acciones de una tecla: aceptar, rechazar con motivo, duplicado y posponer. Inbox separado de My Issues. Ver también https://linear.app/docs/inbox."
+   "nota": "Bandeja para lo que llega de fuera con acciones de una tecla: aceptar, rechazar con motivo, duplicado y posponer. Inbox separado de My Issues. Ver también https://linear.app/docs/inbox.",
+   "consultada": "2026-11-26"
   },
   {
    "id": "BASECAMP-5",
@@ -1208,7 +1232,8 @@
    "autoridad": "media",
    "vigencia": "vigente",
    "estado": "draft",
-   "nota": "Inicio con proyectos recientes y actividad; menú universal (Shift+J); «New for you» separado de la actividad. Atajos en https://basecamp.com/keyboard."
+   "nota": "Inicio con proyectos recientes y actividad; menú universal (Shift+J); «New for you» separado de la actividad. Atajos en https://basecamp.com/keyboard.",
+   "consultada": "2026-11-26"
   },
   {
    "id": "GITHUB-NOTIF-INBOX",
@@ -1221,7 +1246,8 @@
    "autoridad": "media",
    "vigencia": "vigente",
    "estado": "validated",
-   "nota": "Filtros por defecto: asignado, participando, revisión pedida y menciones. Projects muestra los mismos datos como tabla, tablero o calendario."
+   "nota": "Filtros por defecto: asignado, participando, revisión pedida y menciones. Projects muestra los mismos datos como tabla, tablero o calendario.",
+   "consultada": "2026-11-26"
   },
   {
    "id": "ZAPIER-HITL",
@@ -1234,7 +1260,8 @@
    "autoridad": "media",
    "vigencia": "vigente",
    "estado": "validated",
-   "nota": "El flujo se pausa; el revisor aprueba, rechaza o edita con nota; caducidad con acción por defecto; registro de auditoría. Coincide con las aprobaciones de Power Automate (19/08/2026)."
+   "nota": "El flujo se pausa; el revisor aprueba, rechaza o edita con nota; caducidad con acción por defecto; registro de auditoría. Coincide con las aprobaciones de Power Automate (19/08/2026).",
+   "consultada": "2026-11-26"
   },
   {
    "id": "RIA-2024-1689",
@@ -1247,7 +1274,8 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "validated",
-   "nota": "Art. 3.3 proveedor y 3.4 responsable del despliegue. Art. 50: informar de que se interactúa con una IA y marcar el contenido sintético (desde 02/08/2026). Anexo III 5 c): alto riesgo la evaluación de riesgos y la fijación de precios de personas físicas en seguros de vida y salud (desde 02/12/2027 tras el ómnibus). La apertura de siniestros no figura en el anexo III. Contrastado con UE-RIA-OMNIBUS."
+   "nota": "Art. 3.3 proveedor y 3.4 responsable del despliegue. Art. 50: informar de que se interactúa con una IA y marcar el contenido sintético (desde 02/08/2026). Anexo III 5 c): alto riesgo la evaluación de riesgos y la fijación de precios de personas físicas en seguros de vida y salud (desde 02/12/2027 tras el ómnibus). La apertura de siniestros no figura en el anexo III. Contrastado con UE-RIA-OMNIBUS.",
+   "consultada": "2026-11-26"
   },
   {
    "id": "CCT-ENCARGO-2021-915",
@@ -1260,7 +1288,8 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "validated",
-   "nota": "Cláusulas tipo del art. 28.7 RGPD: secciones I–III y anexos I (partes), II (descripción del tratamiento), III (medidas técnicas y organizativas, concretas) y IV (subencargados). Cláusula 7.7: autorización específica o general de subencargados con un preaviso que fijan las partes. Uso voluntario. Contrastado con las directrices de la AEPD."
+   "nota": "Cláusulas tipo del art. 28.7 RGPD: secciones I–III y anexos I (partes), II (descripción del tratamiento), III (medidas técnicas y organizativas, concretas) y IV (subencargados). Cláusula 7.7: autorización específica o general de subencargados con un preaviso que fijan las partes. Uso voluntario. Contrastado con las directrices de la AEPD.",
+   "consultada": "2026-11-26"
   },
   {
    "id": "AEPD-DIRECTRICES-ENCARGO",
@@ -1273,7 +1302,8 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "draft",
-   "nota": "Incluye un modelo orientativo de cláusulas (anexo I) que la propia AEPD dice que no son cláusulas tipo."
+   "nota": "Incluye un modelo orientativo de cláusulas (anexo I) que la propia AEPD dice que no son cláusulas tipo.",
+   "consultada": "2026-11-26"
   },
   {
    "id": "EDPB-GL-07-2020",
@@ -1286,7 +1316,8 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "validated",
-   "nota": "Cuándo se es responsable, corresponsable o encargado; contenido del contrato del art. 28."
+   "nota": "Cuándo se es responsable, corresponsable o encargado; contenido del contrato del art. 28.",
+   "consultada": "2026-11-26"
   },
   {
    "id": "DORA-2022-2554",
@@ -1299,7 +1330,8 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "validated",
-   "nota": "Art. 2.3 e): no se aplica a los intermediarios de seguros que sean micro, pequeñas o medianas empresas. Art. 2.3 b) solo excluye a las aseguradoras del art. 4 de Solvencia II: una aseguradora mediana sujeta a Solvencia II sí está sujeta a DORA. Art. 30.2: contenido mínimo de todo contrato TIC; art. 30.3: extras si sustenta funciones esenciales o importantes. Contrastado con DORA-CNMV."
+   "nota": "Art. 2.3 e): no se aplica a los intermediarios de seguros que sean micro, pequeñas o medianas empresas. Art. 2.3 b) solo excluye a las aseguradoras del art. 4 de Solvencia II: una aseguradora mediana sujeta a Solvencia II sí está sujeta a DORA. Art. 30.2: contenido mínimo de todo contrato TIC; art. 30.3: extras si sustenta funciones esenciales o importantes. Contrastado con DORA-CNMV.",
+   "consultada": "2026-11-26"
   },
   {
    "id": "LEY-1-2019-SECRETOS",
@@ -1312,7 +1344,8 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "draft",
-   "nota": "Art. 1.1: secreto, valor empresarial por ser secreto y medidas razonables del titular para mantenerlo en secreto. Una sola lectura."
+   "nota": "Art. 1.1: secreto, valor empresarial por ser secreto y medidas razonables del titular para mantenerlo en secreto. Una sola lectura.",
+   "consultada": "2026-11-26"
   },
   {
    "id": "CODIGO-CIVIL",
@@ -1325,7 +1358,8 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "draft",
-   "nota": "Art. 1101–1107: responsabilidad contractual. Art. 1102: la responsabilidad por dolo no se puede renunciar. Una sola lectura."
+   "nota": "Art. 1101–1107: responsabilidad contractual. Art. 1102: la responsabilidad por dolo no se puede renunciar. Una sola lectura.",
+   "consultada": "2026-11-26"
   },
   {
    "id": "LSSI-34-2002",
@@ -1338,7 +1372,8 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "validated",
-   "nota": "Art. 10.1: denominación, domicilio, correo, Registro Mercantil, NIF y, si hay precios, si incluyen impuestos; se cumple poniéndolo en la propia web (10.2). Art. 22.2: consentimiento para cookies no exentas tras información clara y completa. Contrastado con la guía de cookies de la AEPD."
+   "nota": "Art. 10.1: denominación, domicilio, correo, Registro Mercantil, NIF y, si hay precios, si incluyen impuestos; se cumple poniéndolo en la propia web (10.2). Art. 22.2: consentimiento para cookies no exentas tras información clara y completa. Contrastado con la guía de cookies de la AEPD.",
+   "consultada": "2026-11-26"
   },
   {
    "id": "AEPD-GUIA-COOKIES",
@@ -1351,7 +1386,8 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "validated",
-   "nota": "Rechazar debe ofrecerse en la misma capa y al mismo nivel que aceptar; la primera capa incluye la petición de consentimiento. Las cookies técnicas exentas no necesitan consentimiento."
+   "nota": "Rechazar debe ofrecerse en la misma capa y al mismo nivel que aceptar; la primera capa incluye la petición de consentimiento. Las cookies técnicas exentas no necesitan consentimiento.",
+   "consultada": "2026-11-26"
   },
   {
    "id": "MOM-TEST",
@@ -1364,7 +1400,8 @@
    "autoridad": "media",
    "vigencia": "vigente",
    "estado": "draft",
-   "nota": "Reglas: hablar de su vida y no de tu idea; preguntar por hechos concretos del pasado, no por opiniones ni por el futuro; escuchar más que hablar. Los cumplidos no valen; el avance se mide por compromisos (tiempo, reputación o dinero). Fuente secundaria; coincide con el resumen de Yevgeniy Brikman (2023)."
+   "nota": "Reglas: hablar de su vida y no de tu idea; preguntar por hechos concretos del pasado, no por opiniones ni por el futuro; escuchar más que hablar. Los cumplidos no valen; el avance se mide por compromisos (tiempo, reputación o dinero). Fuente secundaria; coincide con el resumen de Yevgeniy Brikman (2023).",
+   "consultada": "2026-11-26"
   },
   {
    "id": "LEI-VSM",
@@ -1377,7 +1414,8 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "draft",
-   "nota": "Mapa del flujo de material e información de un proceso; separa el tiempo de proceso del tiempo total (lead time). Base de la medición AS-IS: trabajo activo frente a espera."
+   "nota": "Mapa del flujo de material e información de un proceso; separa el tiempo de proceso del tiempo total (lead time). Base de la medición AS-IS: trabajo activo frente a espera.",
+   "consultada": "2026-11-26"
   },
   {
    "id": "VERIFACTU-RDL43",
@@ -1390,7 +1428,8 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "validated",
-   "nota": "Disposición final primera: la adaptación coincide con el último plazo del RD 238/2026. Según la AEAT, sistemas adaptados antes del 06/10/2028 para todos, sin distinguir contribuyentes del Impuesto sobre Sociedades. Contrastado con la nota de la AEAT del 25/11/2026. Si no se convalidara, volverían las fechas del RDL 15/2025."
+   "nota": "Disposición final primera: la adaptación coincide con el último plazo del RD 238/2026. Según la AEAT, sistemas adaptados antes del 06/10/2028 para todos, sin distinguir contribuyentes del Impuesto sobre Sociedades. Contrastado con la nota de la AEAT del 25/11/2026. Si no se convalidara, volverían las fechas del RDL 15/2025.",
+   "consultada": "2026-11-26"
   },
   {
    "id": "LSC-ART4",
@@ -1403,7 +1442,8 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "validated",
-   "nota": "Capital mínimo de la SL: 1 euro. Mientras no llegue a 3.000 euros, al menos el 20 % del beneficio va a reserva legal; en liquidación, los socios responden solidariamente de la diferencia hasta 3.000 euros. Contrastado con la Ley 18/2022 (BOE-A-2022-15818)."
+   "nota": "Capital mínimo de la SL: 1 euro. Mientras no llegue a 3.000 euros, al menos el 20 % del beneficio va a reserva legal; en liquidación, los socios responden solidariamente de la diferencia hasta 3.000 euros. Contrastado con la Ley 18/2022 (BOE-A-2022-15818).",
+   "consultada": "2026-11-26"
   },
   {
    "id": "AEAT-IS-TIPOS",
@@ -1416,7 +1456,8 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "validated",
-   "nota": "General 25 %. Microempresa (cifra de negocio menor de 1 millón): 2026, 19 % hasta 50.000 euros de base y 21 % el resto; 2027, 17 % y 20 %. Reducida dimensión: 23 % en 2026 y 22 % en 2027. Entidades de nueva creación: 15 % el primer periodo con base positiva y el siguiente (folleto de actividades económicas). Contrastado con el Manual de Sociedades 2025 (Ley 7/2024)."
+   "nota": "General 25 %. Microempresa (cifra de negocio menor de 1 millón): 2026, 19 % hasta 50.000 euros de base y 21 % el resto; 2027, 17 % y 20 %. Reducida dimensión: 23 % en 2026 y 22 % en 2027. Entidades de nueva creación: 15 % el primer periodo con base positiva y el siguiente (folleto de actividades económicas). Contrastado con el Manual de Sociedades 2025 (Ley 7/2024).",
+   "consultada": "2026-11-26"
   },
   {
    "id": "SEGSOC-RETA-2026",
@@ -1429,7 +1470,8 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "draft",
-   "nota": "Cotización por rendimientos reales en 15 tramos (Orden PJC/297/2026, BOE-A-2026-7296). Cuota reducida para nuevos autónomos 12 meses, ampliable 12 más si los rendimientos no llegan al SMI; el importe de 2026 no se ha encontrado en fuente oficial. Pluriactividad: reintegro del 50 % del exceso sobre 17.323,68 euros. Socios con control efectivo (al menos la mitad del capital; se presume con un tercio, o un cuarto con funciones de dirección) van al RETA (art. 305.2 b LGSS)."
+   "nota": "Cotización por rendimientos reales en 15 tramos (Orden PJC/297/2026, BOE-A-2026-7296). Cuota reducida para nuevos autónomos 12 meses, ampliable 12 más si los rendimientos no llegan al SMI; el importe de 2026 no se ha encontrado en fuente oficial. Pluriactividad: reintegro del 50 % del exceso sobre 17.323,68 euros. Socios con control efectivo (al menos la mitad del capital; se presume con un tercio, o un cuarto con funciones de dirección) van al RETA (art. 305.2 b LGSS).",
+   "consultada": "2026-11-26"
   },
   {
    "id": "MINTO-PIRAMIDE",
@@ -1442,7 +1484,8 @@
    "autoridad": "media",
    "vigencia": "vigente",
    "estado": "draft",
-   "nota": "Empezar por la conclusión, agrupar los argumentos que la sostienen y abrir con situación, complicación y pregunta. Fuente secundaria; coincide con otros resúmenes (BetterUp, Think Insights)."
+   "nota": "Empezar por la conclusión, agrupar los argumentos que la sostienen y abrir con situación, complicación y pregunta. Fuente secundaria; coincide con otros resúmenes (BetterUp, Think Insights).",
+   "consultada": "2026-11-26"
   },
   {
    "id": "CMU-RUBRICAS",
@@ -1455,7 +1498,8 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "draft",
-   "nota": "Rúbrica analítica: criterios por niveles de desempeño, con un descriptor concreto en cada celda para que dos evaluadores puntúen igual. Base de la rúbrica de entregables (C3)."
+   "nota": "Rúbrica analítica: criterios por niveles de desempeño, con un descriptor concreto en cada celda para que dos evaluadores puntúen igual. Base de la rúbrica de entregables (C3).",
+   "consultada": "2026-11-26"
   }
  ]
 }

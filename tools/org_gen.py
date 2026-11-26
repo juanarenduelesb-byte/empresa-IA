@@ -179,7 +179,7 @@ def navegacion():
 # ---------------- Fuentes ----------------
 def fuentes():
     fn = "knowledge/fuentes/registro.md"
-    s = AVISO + "# Registro de fuentes\n\nConsultadas el %s. Tipos: obligación legal, estándar voluntario, recomendación técnica, buena práctica, documentación de producto, prensa especializada e interno. Estado: validated (contrastada con dos fuentes), draft (una fuente o secundaria), disputed (contradictoria o anunciada sin norma).\n\n" % CONSULTA
+    s = AVISO + "# Registro de fuentes\n\nConsultadas el %s salvo las que indican otra fecha en su ficha. Tipos: obligación legal, estándar voluntario, recomendación técnica, buena práctica, documentación de producto, prensa especializada e interno. Estado: validated (contrastada con dos fuentes), draft (una fuente o secundaria), disputed (contradictoria o anunciada sin norma).\n\n" % CONSULTA
     s += "> Las fuentes secundarias (despachos, blogs) se marcan como tales. Antes de usar una afirmación legal en un documento para un cliente, ve al texto oficial.\n\n"
     s += "| Id | Fuente | Tipo | Autoridad | Vigencia | Estado |\n|---|---|---|---|---|---|\n"
     for f in FUENTES:
@@ -187,7 +187,7 @@ def fuentes():
     s += "\n"
     for f in FUENTES:
         url = f["url"] if f["url"].startswith("http") else rel(fn, f["url"])
-        s += '<a id="%s"></a>\n### %s\n- **Título:** %s\n- **Autor u organismo:** %s\n- **URL:** <%s>\n- **Tipo:** %s · **Jurisdicción:** %s · **Versión o fecha:** %s\n- **Consultada:** %s · **Autoridad:** %s · **Vigencia:** %s · **Estado:** %s\n' % (f["id"].lower(), f["id"], f["titulo"], f["organismo"], url, f["tipo"], f["jurisdiccion"], f["version"], CONSULTA, f["autoridad"], f["vigencia"], f["estado"])
+        s += '<a id="%s"></a>\n### %s\n- **Título:** %s\n- **Autor u organismo:** %s\n- **URL:** <%s>\n- **Tipo:** %s · **Jurisdicción:** %s · **Versión o fecha:** %s\n- **Consultada:** %s · **Autoridad:** %s · **Vigencia:** %s · **Estado:** %s\n' % (f["id"].lower(), f["id"], f["titulo"], f["organismo"], url, f["tipo"], f["jurisdiccion"], f["version"], f.get("consultada", CONSULTA), f["autoridad"], f["vigencia"], f["estado"])
         usos = [e["nombre"] for e in ESPECIALISTAS if f["id"] in e["fuentes"]]
         s += "- **Especialistas relacionados:** %s\n" % (", ".join(usos) or "—")
         if f["nota"]:

@@ -129,7 +129,7 @@ El marco completo ya existe en [el marco legal](fuentes/Marco_Integral_Legal_Cib
 | ID | Capacidad | Hoy | Objetivo 28/02 | P | Quién |
 |---|---|---|---|---|---|
 | M-040 | Auditoría de agentes y procesos: qué sobra, qué falta ([docs/28](28-auditoria-agentes.md), D-026 propuesta) | 34 agentes | Cada agente unido a procesos, con métrica y nivel de autonomía; los que no lo estén, fusionados o retirados | P0 | Noche (semana 2) |
-| M-041 | La oficina sobre la API y la base de datos | Almacén del artefacto | Encargos, tareas, aprobaciones y memoria en PostgreSQL con auditoría | P1 | Noche (semanas 2–5) |
+| M-041 | La oficina sobre la API y la base de datos (encargos, tareas y aprobaciones hechos el 26/11 en N3a y N3b, [docs/24](24-base-de-datos.md); falta la memoria) | Almacén del artefacto | Encargos, tareas, aprobaciones y memoria en PostgreSQL con auditoría | P1 | Noche (semanas 2–5) |
 | M-042 | Chat con el CEO: clasificar, preguntar, planificar y repartir | En el artefacto | CEO limitado de S4 con las cinco decisiones y el banco de 25 encargos | P1 | Noche (semana 4) |
 | M-043 | Agentes que colaboran: plan → tareas → agentes → calidad → aprobación | Modo «En equipo» | Sobre el motor persistente, con dependencias y reintentos | P1 | Noche (semana 5) |
 | M-044 | Bucle de mejora diaria: histórico → lecciones → reglas → pruebas | Memoria y lecciones (D-019) | Cada regla nueva entra con su prueba; puntuación del examen por semana | P1 | Noche (semanas 4 y 9) |

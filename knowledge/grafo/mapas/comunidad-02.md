@@ -29,18 +29,19 @@ tags:
 - [[knowledge/sectores/priorizacion|Priorización de sectores]]
 - [[knowledge/sectores/README|Sectores]]
 - [[knowledge/plantillas/ficha-fuente|Ficha-fuente]]
-- [[knowledge/metodologias-transversales/investigar|Protocolo: investigar fuera]]
 - [[knowledge/procesos/sectores|Especialistas sectoriales]]
 
 ## Procesos
 
 - [[processes/catalog/P02-clasificacion-y-triaje|P02 · Clasificación y triaje]]
 - [[processes/catalog/P33-diseno-y-validacion-to-be|P33 · Diseño y validación TO-BE]]
+- [[processes/catalog/P19-politica-de-uso-y-limites|P19 · Política de uso y límites]]
 
 ## Especialistas
 
 - [[knowledge/seguridad-legal/cumplimiento|Responsable de cumplimiento normativo]]
 - [[knowledge/sectores/especialista-sectorial|Coordinación sectorial y seguros]]
+- [[knowledge/seguridad-legal/legal-privacidad|Especialista legal y privacidad]]
 - [[knowledge/ingenieria/plataforma-operaciones|Ingeniero de plataforma y operaciones (DevOps/SRE)]]
 - [[knowledge/administracion-finanzas/contabilidad|Especialista en contabilidad y facturación]]
 - [[knowledge/sectores/sector-sanidad|Experto en sanidad privada]]
@@ -92,7 +93,6 @@ tags:
 - [[knowledge/grafo/fuentes/TWELVE-FACTOR|TWELVE-FACTOR · The Twelve-Factor App]]
 - [[knowledge/grafo/fuentes/W3C-WCAG22|W3C-WCAG22 · Web Content Accessibility Guidelines (WCAG) 2.2]]
 - [[knowledge/grafo/fuentes/EEDS-2025-327|EEDS-2025-327 · Reglamento (UE) 2025/327, Espacio Europeo de Datos de Salud]]
-- [[knowledge/grafo/fuentes/OSS-PROMPTFOO|OSS-PROMPTFOO · promptfoo (evaluación y pruebas adversariales de LLM)]]
 - [[knowledge/grafo/fuentes/RDL-3-2020|RDL-3-2020 · Real Decreto-ley 3/2020 (distribución de seguros): actualización de importes por la DGSFP]]
 - [[knowledge/grafo/fuentes/CCS-MEDIADOR|CCS-MEDIADOR · Aprendizajes del CCS en la gestión de catástrofes]]
 - [[knowledge/grafo/fuentes/NIS2-ANTEPROYECTO|NIS2-ANTEPROYECTO · Anteproyecto de Ley de Coordinación y Gobernanza de la Ciberseguridad]]

@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 7
-miembros: 39
-cohesion: 0.46
+miembros: 40
+cohesion: 0.44
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 7 · processes/catalog · P22 · Gestión de errores y reintentos y Catálogo de procesos P01–P38
 
-39 nodos agrupados por el algoritmo de Louvain. Cohesión 0.46.
+40 nodos agrupados por el algoritmo de Louvain. Cohesión 0.44.
 
 ## Documentos
 
@@ -22,8 +22,8 @@ tags:
 - [[processes/catalog/P13-aprendizaje-y-actualizacion-de-la-wiki|P13 · Aprendizaje y actualización de la wiki]]
 - [[processes/catalog/P09-control-de-calidad|P09 · Control de calidad]]
 - [[processes/catalog/P23-evaluacion-de-agentes-y-modelos|P23 · Evaluación de agentes y modelos]]
-- [[processes/catalog/P12-gestion-de-cambios|P12 · Gestión de cambios]]
 - [[processes/catalog/P21-ejecucion-segura-de-herramientas|P21 · Ejecución segura de herramientas]]
+- [[processes/catalog/P12-gestion-de-cambios|P12 · Gestión de cambios]]
 - [[processes/catalog/P30-gestion-de-identidades-y-secretos|P30 · Gestión de identidades y secretos]]
 - [[processes/catalog/P08-ejecucion-de-tareas|P08 · Ejecución de tareas]]
 - [[processes/catalog/P19-politica-de-uso-y-limites|P19 · Política de uso y límites]]
@@ -55,3 +55,4 @@ tags:
 
 - [[processes/catalog/P22-gestion-de-errores-y-reintentos|P22 · Gestión de errores y reintentos]]
 - [[processes/catalog/P28-gestion-de-incidentes|P28 · Gestión de incidentes]]
+- [[processes/catalog/P13-aprendizaje-y-actualizacion-de-la-wiki|P13 · Aprendizaje y actualización de la wiki]]

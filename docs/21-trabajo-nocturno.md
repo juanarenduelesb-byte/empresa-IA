@@ -12,12 +12,14 @@ Cada tanda:
 4. Marca la tarea `[x]`, añade una línea al **Registro** (fecha, tanda, qué se hizo, qué queda) y sube a `main` (los socios lo pidieron así el 26/11/2026).
 5. Si una tarea necesita una decisión de un socio, la deja en **Preguntas para los socios** y pasa a la siguiente.
 
+Si al subir hay conflicto en archivos generados (`oficina/brain.json`, `knowledge/grafo/`), no los edites a mano: quédate con los tuyos, ejecuta `python3 tools/brain_build.py oficina/brain.json` y continúa el rebase. El robot de GitHub (`regenerar.yml`) los regenera tras cada subida.
+
 Reglas que no cambian: **no reinventar la rueda** (antes de construir, mira cómo lo resuelve alguien que lo hace bien, con fuente, y adáptalo; ver [23-plan-maestro.md](23-plan-maestro.md)); **si detectas algo anterior mal, arréglalo** en la misma tarea y dilo en el registro; nada de datos reales, cifras ni fuentes inventadas; todo lo legal es borrador para abogado; toda decisión estructural va a `DECISIONS.md` como «propuesta».
 
 ## Lista de esta noche (hazlas en este orden)
 
 - [x] B1 · Conocimiento en la base de datos: fuentes y fichas con estado (draft, validated, deprecated), búsqueda de texto con permisos por cliente y cita obligatoria; carga de `knowledge/` y del registro de fuentes. *Hecho cuando:* una búsqueda desde el cliente A nunca devuelve nada del B y todo resultado trae su fuente.
-- [ ] B2 · Paquete de dominio de seguros y corredurías: normas con fuente oficial verificada (LCS, distribución de seguros, libros-registro, baremo, convenios entre aseguradoras, Consorcio, atención al cliente, datos de salud), glosario de siniestros y catálogo de excepciones.
+- [~] (en curso, sesión principal, 02:45) B2 · Paquete de dominio de seguros y corredurías: normas con fuente oficial verificada (LCS, distribución de seguros, libros-registro, baremo, convenios entre aseguradoras, Consorcio, atención al cliente, datos de salud), glosario de siniestros y catálogo de excepciones.
 - [ ] F1 · Portal interno: auditoría de la oficina actual (`oficina/`) frente a referencias de gestión de trabajo con éxito, con fuente. Propuesta de distribución (inicio con lo que espera tu OK, encargos, proyectos, clientes, cerebro, calendario, agentes y la vista 3D como una vista más) y mejoras aplicadas sin romper lo que funciona. Si no puedes publicar el artefacto, deja los archivos listos y dilo en el informe.
 - [ ] C1 · 20 siniestros inventados con su resultado esperado (esquema, casos y pruebas que validan los casos).
 - [ ] D1 · Legal (borradores para abogado): contrato marco de servicios, encargo de tratamiento (art. 28 RGPD), acuerdo de confidencialidad, anexo de uso de IA (Reglamento de IA) y matriz de aprobaciones.

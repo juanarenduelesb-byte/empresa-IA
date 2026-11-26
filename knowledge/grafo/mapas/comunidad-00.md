@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 0
-miembros: 105
+miembros: 106
 cohesion: 0.05
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 0 · Habilidades · Legal y privacidad y Arquitecto de procesos
 
-105 nodos agrupados por el algoritmo de Louvain. Cohesión 0.05.
+106 nodos agrupados por el algoritmo de Louvain. Cohesión 0.05.
 
 ## Agentes
 
@@ -74,6 +74,7 @@ tags:
 - [[claude/habilidades/cierre-mensual|Cierre contable mensual]]
 - [[claude/habilidades/cinco-decisiones|Las cinco decisiones del CEO]]
 - [[claude/habilidades/citar-cerebro|Leer y citar el cerebro]]
+- [[claude/habilidades/consultar-historico|Consultar el histórico antes de hacer]]
 - [[claude/habilidades/contrato-de-tarea|Contrato de tarea]]
 - [[claude/habilidades/copias-restauracion|Copias y restauración probada]]
 - [[claude/habilidades/criterio-aceptacion|Criterio de aceptación]]
@@ -109,5 +110,4 @@ tags:
 - [[claude/habilidades/raid|Registro RAID]]
 - [[claude/habilidades/registro-tratamientos|Registro de actividades de tratamiento]]
 - [[claude/habilidades/revision-accesibilidad|Revisión de accesibilidad]]
-- [[claude/habilidades/revision-riesgo-ia|Revisión de riesgo de IA y datos]]
-- … y 4 más
+- … y 5 más

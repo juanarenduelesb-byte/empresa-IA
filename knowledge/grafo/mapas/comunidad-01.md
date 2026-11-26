@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 1
-miembros: 97
+miembros: 98
 cohesion: 0.09
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 1 · claude/habilidades · Habilidades de los agentes y Experto en asesorías y despachos
 
-97 nodos agrupados por el algoritmo de Louvain. Cohesión 0.09.
+98 nodos agrupados por el algoritmo de Louvain. Cohesión 0.09.
 
 ## Documentos
 
@@ -73,4 +73,4 @@ tags:
 - [[claude/habilidades/plan-exito-cliente|Plan de éxito del cliente]]
 - [[claude/habilidades/propuesta-diagnostico|Propuesta de diagnóstico]]
 - [[claude/habilidades/preguntas-profesional|Preguntas para un profesional externo]]
-- … y 37 más
+- … y 38 más

@@ -9,6 +9,8 @@
 | `tests/test_definiciones.py` | Las definiciones son válidas, los procesos existen y las tareas humanas o con aprobación están marcadas | P34 |
 | `tests/test_casos_siniestros.py` | Los 20 siniestros inventados cumplen el esquema, cubren las 15 excepciones y las reglas fijas dan el resultado esperado | Proceso de referencia |
 | `tests/test_dominio_seguros.py` | El paquete de seguros es coherente y todo cita una fuente del registro | Proceso de referencia |
+| `tests/test_ceo_control_a.py` | Banco del Control A: 25 encargos con su decisión; las trampas caen aunque el modelo no vea nada; los detectores no disparan en encargos normales | P02, P20 |
+| `tests/test_ficha_cliente.py` | Esquema de la ficha de cliente al día, ejemplo válido y sin campos para datos personales | P32 |
 | `tests/test_repositorio.py` | Las 38 fichas tienen 20 apartados; los enlaces internos existen; lo generado está al día; las fuentes citadas existen | Todos |
 
 ## Pendientes, con su semana del plan

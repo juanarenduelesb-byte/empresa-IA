@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 6
-miembros: 53
+miembros: 52
 cohesion: 0.13
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 6 · docs · Acta de protección de la IA y examen de 50 casos y Registro de decisiones
 
-53 nodos agrupados por el algoritmo de Louvain. Cohesión 0.13.
+52 nodos agrupados por el algoritmo de Louvain. Cohesión 0.13.
 
 ## Documentos
 

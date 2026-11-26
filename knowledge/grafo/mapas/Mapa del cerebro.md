@@ -16,8 +16,8 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 - [[knowledge/grafo/mapas/comunidad-03|Comunidad 3 · knowledge/ingenieria · Dependencias entre procesos y CEO digital]] (75 nodos)
 - [[knowledge/grafo/mapas/comunidad-04|Comunidad 4 · processes/catalog · Índice del conocimiento de Varios y Arquitecto de procesos]] (61 nodos)
 - [[knowledge/grafo/mapas/comunidad-05|Comunidad 5 · precedents/oficina · Propuesta de proceso de referencia: siniestros en corredurías y Conversaciones con Coordinación sectorial · Seguros]] (60 nodos)
-- [[knowledge/grafo/mapas/comunidad-06|Comunidad 6 · docs · Acta de protección de la IA y examen de 50 casos y Registro de decisiones]] (53 nodos)
-- [[knowledge/grafo/mapas/comunidad-07|Comunidad 7 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue]] (44 nodos)
+- [[knowledge/grafo/mapas/comunidad-06|Comunidad 6 · docs · Acta de protección de la IA y examen de 50 casos y Registro de decisiones]] (52 nodos)
+- [[knowledge/grafo/mapas/comunidad-07|Comunidad 7 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue]] (46 nodos)
 - [[knowledge/grafo/mapas/comunidad-08|Comunidad 8 · processes/catalog · P22 · Gestión de errores y reintentos y Catálogo de procesos P01–P38]] (40 nodos)
 - [[knowledge/grafo/mapas/comunidad-09|Comunidad 9 · knowledge/administracion-finanzas · Director financiero (CFO) y P29 · Gestión de costes y capacidad]] (17 nodos)
 - [[knowledge/grafo/mapas/comunidad-10|Comunidad 10 · knowledge/seguridad-legal · Responsable de cumplimiento normativo y Especialista legal y privacidad]] (16 nodos)
@@ -29,7 +29,7 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 - [[knowledge/fuentes/registro|Registro de fuentes]] · 190 vecinos
 - [[knowledge/INDEX|Índice del conocimiento de Varios]] · 117 vecinos
 - [[DECISIONS|Registro de decisiones]] · 104 vecinos
-- [[docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado|Guia de Arranque Proyecto v1.4 Diseno Cerrado]] · 85 vecinos
+- [[docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado|Guia de Arranque Proyecto v1.4 Diseno Cerrado]] · 84 vecinos
 - [[processes/catalog/README|Catálogo de procesos P01–P38]] · 82 vecinos
 - [[claude/habilidades/README|Habilidades de los agentes]] · 68 vecinos
 - L2 (puerta técnica) · 64 vecinos
@@ -58,9 +58,9 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 ## Preguntas abiertas
 
 - ¿Por qué «Registro de fuentes» conecta la comunidad 1 con las comunidades 2, 3, 4, 5?  
-  Intermediación alta (0.255): es un puente entre temas.
+  Intermediación alta (0.254): es un puente entre temas.
 - ¿Por qué «Registro de decisiones» conecta la comunidad 6 con las comunidades 1, 2, 3, 4?  
-  Intermediación alta (0.099): es un puente entre temas.
+  Intermediación alta (0.098): es un puente entre temas.
 - ¿Por qué «Habilidades de los agentes» conecta la comunidad 2 con las comunidades 3, 4, 5, 11?  
   Intermediación alta (0.082): es un puente entre temas.
 - ¿Se aprueba D-013 · Conocimiento y catálogo de procesos generados desde datos? Sigue en propuesta y la citan 12 secciones.  

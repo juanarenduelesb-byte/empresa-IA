@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 7
-miembros: 44
-cohesion: 0.23
+miembros: 46
+cohesion: 0.22
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 7 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue
 
-44 nodos agrupados por el algoritmo de Louvain. Cohesión 0.23.
+46 nodos agrupados por el algoritmo de Louvain. Cohesión 0.22.
 
 ## Documentos
 
@@ -45,14 +45,15 @@ tags:
 - [[docs/atlas/10-cambios-modelos|10 · Cambios y elección de modelos de IA]]
 - [[docs/atlas/13-ciclo-dato|13 · Ciclo de vida de un dato]]
 - [[docs/04-motor-de-conocimiento|Motor de conocimiento]]
-- [[docs/01-vision-y-modelo-operativo|Visión y modelo operativo]]
 - [[docs/14-reglas-del-ceo|Reglas del CEO digital]]
+- [[docs/01-vision-y-modelo-operativo|Visión y modelo operativo]]
 - [[docs/06-seguridad-y-gobierno|Seguridad, privacidad y gobierno]]
 - [[docs/07-calidad-infraestructura-y-operacion|Calidad, infraestructura y operación]]
 - [[docs/atlas/06-fallos|06 · Fallos, reintentos y recuperación]]
 - [[governance/README|Gobierno, seguridad y legal]]
 - [[docs/02-arquitectura-general|Arquitectura general]]
 - [[docs/03-ceo-digital-y-orquestacion|CEO digital y orquestación]]
+- [[processes/ceo-control-a/README|Banco del Control A: 25 encargos para el CEO limitado (C2)]]
 - [[knowledge/README|Conocimiento]]
 - [[docs/informes/README|Informes de la mañana]]
 - [[docs/09-inventario-documental|Inventario documental]]

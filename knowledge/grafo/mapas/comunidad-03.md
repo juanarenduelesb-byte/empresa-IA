@@ -2,14 +2,14 @@
 tipo: "mapa"
 comunidad: 3
 miembros: 75
-cohesion: 0.13
+cohesion: 0.14
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 3 · knowledge/ingenieria · Dependencias entre procesos y CEO digital
 
-75 nodos agrupados por el algoritmo de Louvain. Cohesión 0.13.
+75 nodos agrupados por el algoritmo de Louvain. Cohesión 0.14.
 
 ## Documentos
 
@@ -31,8 +31,8 @@ tags:
 - [[knowledge/direccion/README|Dirección y gobierno]]
 - [[processes/diagrams/ciclo-encargo|Ciclo completo de un encargo (P01 → P11)]]
 - [[knowledge/seguridad-legal/README|Seguridad, privacidad, legal y cumplimiento]]
-- [[processes/README|Procesos]]
 - [[processes/tests/README|Plan de pruebas de procesos]]
+- [[processes/README|Procesos]]
 - [[integrations/catalog/README|Catálogo de integraciones]]
 - [[claude/habilidades/cinco-decisiones|Las cinco decisiones del CEO]]
 - [[processes/definitions/README|Definiciones ejecutables]]
@@ -51,13 +51,13 @@ tags:
 - [[processes/catalog/P01-alta-y-recepcion-de-peticion|P01 · Alta y recepción de petición]]
 - [[processes/catalog/P11-entrega-y-cierre|P11 · Entrega y cierre]]
 - [[processes/catalog/P15-observabilidad-e-incidencias|P15 · Observabilidad e incidencias]]
+- [[processes/catalog/P20-seguridad-de-entradas-e-inyeccion-de-instrucciones|P20 · Seguridad de entradas e inyección de instrucciones]]
 - [[processes/catalog/P23-evaluacion-de-agentes-y-modelos|P23 · Evaluación de agentes y modelos]]
 - [[processes/catalog/P04-recuperacion-de-conocimiento|P04 · Recuperación de conocimiento]]
 - [[processes/catalog/P07-ingesta-documental|P07 · Ingesta documental]]
 - [[processes/catalog/P08-ejecucion-de-tareas|P08 · Ejecución de tareas]]
 - [[processes/catalog/P12-gestion-de-cambios|P12 · Gestión de cambios]]
 - [[processes/catalog/P14-gestion-de-permisos-y-aislamiento|P14 · Gestión de permisos y aislamiento]]
-- [[processes/catalog/P20-seguridad-de-entradas-e-inyeccion-de-instrucciones|P20 · Seguridad de entradas e inyección de instrucciones]]
 - [[processes/catalog/P18-evaluacion-y-mejora|P18 · Evaluación y mejora]]
 - [[processes/catalog/P25-gestion-de-cambios-y-versiones|P25 · Gestión de cambios y versiones]]
 - [[processes/catalog/P05-diseno-del-plan|P05 · Diseño del plan]]

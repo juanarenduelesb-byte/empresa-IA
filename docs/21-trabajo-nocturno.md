@@ -41,7 +41,7 @@ Elegidas por Juan el 26/11 a las 09:40 a partir del apartado 8 del informe del 2
 
 ### De reserva (solo si sobra tiempo, en este orden)
 - [x] N4 · Oficina: editar antes de aprobar, posponer y caducidad de las aprobaciones de Inicio (pendiente de F1, docs/25).
-- [ ] N5 · Inventario de la web actual (`site/`) frente a la estructura de la web para clientes (docs/26): qué se queda, qué se mueve y qué se borra. Sin borrar nada.
+- [~] (en curso, tanda 22:00, 23:01) N5 · Inventario de la web actual (`site/`) frente a la estructura de la web para clientes (docs/26): qué se queda, qué se mueve y qué se borra. Sin borrar nada.
 
 ### Noche anterior (25 al 26/11): 15 de 15 hechas
 A1–A4, B1–B3, C1–C3, D1–D2, E1, F1–F2 y el plan maestro. Detalle en el Registro y en [informes/2026-11-26.md](informes/2026-11-26.md).

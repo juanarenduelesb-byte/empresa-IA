@@ -28,6 +28,8 @@ flowchart TD
 | Dependencias | Orquestador del plan | Un encargo empieza cuando los que necesita han pasado Calidad. Si uno se rehace, los que dependían de él se actualizan solos y vuelven a pasar Calidad. |
 | Fin del plan | — | Cuando un socio ha aprobado todos los encargos. |
 
+Para los entregables al cliente, los descriptores de cada nivel y las listas de comprobación por tipo están en [knowledge/plantillas/entregables/rubrica.md](../knowledge/plantillas/entregables/rubrica.md). La misma regla está en código en `src/varios/calidad/rubrica.py` (C3).
+
 ## Qué aprende y dónde queda
 - **Cada rechazo** queda en la memoria como corrección. Si el CEO lo clasifica como general, se convierte en una regla fija del agente.
 - **Cada atasco en Calidad** queda en la memoria con lo que indicó el socio.

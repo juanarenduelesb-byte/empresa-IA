@@ -1443,6 +1443,19 @@
    "vigencia": "vigente",
    "estado": "draft",
    "nota": "Empezar por la conclusión, agrupar los argumentos que la sostienen y abrir con situación, complicación y pregunta. Fuente secundaria; coincide con otros resúmenes (BetterUp, Think Insights)."
+  },
+  {
+   "id": "CMU-RUBRICAS",
+   "titulo": "Creating and Using Rubrics",
+   "organismo": "Carnegie Mellon University, Eberly Center",
+   "url": "https://www.cmu.edu/teaching/assessment/assesslearning/rubrics.html",
+   "tipo": "buena-practica",
+   "jurisdiccion": "—",
+   "version": "consultado 26/11/2026",
+   "autoridad": "alta",
+   "vigencia": "vigente",
+   "estado": "draft",
+   "nota": "Rúbrica analítica: criterios por niveles de desempeño, con un descriptor concreto en cada celda para que dos evaluadores puntúen igual. Base de la rúbrica de entregables (C3)."
   }
  ]
 }

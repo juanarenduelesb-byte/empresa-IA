@@ -1,41 +1,47 @@
 ---
 tipo: "mapa"
 comunidad: 9
-miembros: 17
-cohesion: 0.27
+miembros: 33
+cohesion: 0.18
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 9 · knowledge/administracion-finanzas · Director financiero (CFO) y P29 · Gestión de costes y capacidad
+# Comunidad 9 · knowledge/plantillas · Plan maestro: la empresa completa, sin que se escape nada y Matriz de aprobaciones · BORRADOR
 
-17 nodos agrupados por el algoritmo de Louvain. Cohesión 0.27.
+33 nodos agrupados por el algoritmo de Louvain. Cohesión 0.18.
 
 ## Documentos
 
-- [[knowledge/administracion-finanzas/direccion-financiera|Director financiero (CFO)]]
-- [[knowledge/administracion-finanzas/costes-proveedores|Especialista en costes y proveedores]]
-- [[knowledge/administracion-finanzas/financiero|Especialista financiero]]
-- [[knowledge/administracion-finanzas/README|Administración y finanzas]]
-- [[processes/runbooks/coste-anomalo|Coste anómalo]]
+- [[docs/23-plan-maestro|Plan maestro: la empresa completa, sin que se escape nada]]
+- [[governance/legal/borradores/05-matriz-aprobaciones|Matriz de aprobaciones · BORRADOR]]
+- [[knowledge/plantillas/entregables/README|Plantillas de entregables al cliente (E1)]]
+- [[docs/08-roadmap-y-decisiones|Roadmap y decisiones]]
+- [[knowledge/plantillas/entregables/rubrica|Rúbrica de calidad de entregables y listas de comprobación (C3)]]
+- [[knowledge/plantillas/entregables/02-informe-diagnostico|Informe de diagnóstico · (Cliente) · (Proceso)]]
+- [[knowledge/plantillas/ficha-cliente|Plantilla · Ficha de cliente]]
+- [[knowledge/plantillas/entregables/03-diseno-to-be|Diseño del proceso nuevo (TO-BE) · (Cliente) · (Proceso)]]
+- [[knowledge/plantillas/entregables/04-plan-piloto|Plan de piloto · (Cliente) · (Proceso)]]
+- [[knowledge/plantillas/entregables/01-propuesta-diagnostico|Propuesta de diagnóstico · (Cliente)]]
+- [[knowledge/metodologias-transversales/cuestionario-descubrimiento|Cuestionario de descubrimiento por puertas (G0–G2)]]
+- [[knowledge/metodologias-transversales/guion-validacion-semanal|Guion de la conversación semanal de validación]]
+- [[knowledge/plantillas/entregables/05-informe-mensual-operacion|Informe mensual de operación · (Cliente) · (Mes)]]
+- [[knowledge/metodologias-transversales/README|Metodologías transversales]]
+- [[knowledge/metodologias-transversales/contrastar|Protocolo: contrastar el conocimiento interno y el externo]]
+- [[knowledge/plantillas/entregables/06-acta-reunion|Acta de reunión · (Cliente) · (Tema) · (Fecha)]]
+- [[docs/18-flujo-de-calidad-y-aprendizaje|18 · Flujo de calidad y aprendizaje continuo en la oficina]]
+- [[precedents/lessons-learned/2026-11-correcciones-documentales|Lección: los documentos base también tienen errores]]
 
-## Procesos
+## Decisiones
 
-- [[processes/catalog/P29-gestion-de-costes-y-capacidad|P29 · Gestión de costes y capacidad]]
-- [[processes/catalog/P27-gestion-de-proveedores-y-dependencias|P27 · Gestión de proveedores y dependencias]]
-
-## Especialistas
-
-- [[knowledge/administracion-finanzas/costes-proveedores|Especialista en costes y proveedores]]
-- [[knowledge/administracion-finanzas/direccion-financiera|Director financiero (CFO)]]
-- [[knowledge/administracion-finanzas/financiero|Especialista financiero]]
+- [[knowledge/grafo/decisiones/D-019|D-019 · Calidad exigente, todo pasa por un socio y cada rechazo se rehace aprendiendo]]
+- [[knowledge/grafo/decisiones/D-009|D-009 · Unificación de puertas y estados]]
+- [[knowledge/grafo/decisiones/D-015|D-015 · Entregables en archivos reales, memoria y Google Drive en la oficina de agentes]]
+- [[knowledge/grafo/decisiones/D-007|D-007 · Nombre provisional: Varios]]
 
 ## Fuentes
 
-- [[knowledge/grafo/fuentes/PGC-PYMES|PGC-PYMES · Real Decreto 1515/2007, Plan General de Contabilidad de Pymes]]
-- [[knowledge/grafo/fuentes/OSS-CAMUNDA|OSS-CAMUNDA · Camunda 8: licencia para Self-Managed]]
-- [[knowledge/grafo/fuentes/OSS-N8N|OSS-N8N · n8n: Sustainable Use License]]
-- [[knowledge/grafo/fuentes/OSS-LANGFUSE|OSS-LANGFUSE · Langfuse (observabilidad de LLM)]]
-- [[knowledge/grafo/fuentes/CDTI-NEOTEC-2026|CDTI-NEOTEC-2026 · Programa NEOTEC 2026 (CDTI)]]
-- [[knowledge/grafo/fuentes/ENISA-2026|ENISA-2026 · ENISA: préstamos participativos (líneas 2026)]]
-- [[knowledge/grafo/fuentes/LEY-STARTUPS-28-2022|LEY-STARTUPS-28-2022 · Ley 28/2022, de fomento del ecosistema de las empresas emergentes]]
+- [[knowledge/grafo/fuentes/LEI-VSM|LEI-VSM · Value Stream Mapping (léxico del Lean Enterprise Institute)]]
+- [[knowledge/grafo/fuentes/MOM-TEST|MOM-TEST · The Mom Test (Rob Fitzpatrick): cómo hablar con clientes sin que te mientan]]
+- [[knowledge/grafo/fuentes/CMU-RUBRICAS|CMU-RUBRICAS · Creating and Using Rubrics]]
+- [[knowledge/grafo/fuentes/MINTO-PIRAMIDE|MINTO-PIRAMIDE · The Pyramid Principle (Barbara Minto): la respuesta primero y la estructura situación, complicación, pregunta y respuesta]]

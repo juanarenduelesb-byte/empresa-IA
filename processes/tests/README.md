@@ -11,6 +11,8 @@
 | `tests/test_dominio_seguros.py` | El paquete de seguros es coherente y todo cita una fuente del registro | Proceso de referencia |
 | `tests/test_ceo_control_a.py` | Banco del Control A: 25 encargos con su decisión; las trampas caen aunque el modelo no vea nada; los detectores no disparan en encargos normales | P02, P20 |
 | `tests/test_ficha_cliente.py` | Esquema de la ficha de cliente al día, ejemplo válido y sin campos para datos personales | P32 |
+| `tests/test_rubrica_entregables.py` | La rúbrica decide con la regla de D-019 (todos ≥ 4, media ≥ 4,5, sin problemas graves o medios) y la lista de comprobación de cada tipo bloquea | P09 |
+| `tests/test_plantillas_entregables.py` | Las seis plantillas de entregables mantienen la estructura común | P11 |
 | `tests/test_repositorio.py` | Las 38 fichas tienen 20 apartados; los enlaces internos existen; lo generado está al día; las fuentes citadas existen | Todos |
 
 ## Pendientes, con su semana del plan

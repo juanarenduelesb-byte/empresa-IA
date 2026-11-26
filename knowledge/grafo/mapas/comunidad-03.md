@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 3
-miembros: 74
+miembros: 75
 cohesion: 0.14
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 3 · knowledge/ingenieria · Dependencias entre procesos y CEO digital
 
-74 nodos agrupados por el algoritmo de Louvain. Cohesión 0.14.
+75 nodos agrupados por el algoritmo de Louvain. Cohesión 0.14.
 
 ## Documentos
 
@@ -64,6 +64,7 @@ tags:
 - [[processes/catalog/P09-control-de-calidad|P09 · Control de calidad]]
 - [[processes/catalog/P16-gobierno-de-modelos-e-instrucciones|P16 · Gobierno de modelos e instrucciones]]
 - [[processes/catalog/P17-seguridad-y-continuidad|P17 · Seguridad y continuidad]]
+- [[processes/catalog/P24-gestion-del-ciclo-de-vida-del-dato|P24 · Gestión del ciclo de vida del dato]]
 - [[processes/catalog/P06-asignacion-y-coordinacion|P06 · Asignación y coordinación]]
 - [[processes/catalog/P36-gestion-del-catalogo-de-conectores|P36 · Gestión del catálogo de conectores]]
 - [[processes/catalog/P26-continuidad-y-recuperacion|P26 · Continuidad y recuperación]]

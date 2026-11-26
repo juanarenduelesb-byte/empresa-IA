@@ -118,6 +118,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 | [AEAT-IS-TIPOS](#aeat-is-tipos) | Impuesto sobre Sociedades: tipo impositivo (microempresas, reducida dimensión y general) | obligacion-legal | alta | vigente | validated |
 | [SEGSOC-RETA-2026](#segsoc-reta-2026) | Cotización de trabajadores autónomos 2026 y encuadramiento de socios con control efectivo | obligacion-legal | alta | vigente | draft |
 | [MINTO-PIRAMIDE](#minto-piramide) | The Pyramid Principle (Barbara Minto): la respuesta primero y la estructura situación, complicación, pregunta y respuesta | buena-practica | media | vigente | draft |
+| [CMU-RUBRICAS](#cmu-rubricas) | Creating and Using Rubrics | buena-practica | alta | vigente | draft |
 
 <a id="int-guia"></a>
 ### INT-GUIA
@@ -1226,4 +1227,14 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
 - **Nota:** Empezar por la conclusión, agrupar los argumentos que la sostienen y abrir con situación, complicación y pregunta. Fuente secundaria; coincide con otros resúmenes (BetterUp, Think Insights).
+
+<a id="cmu-rubricas"></a>
+### CMU-RUBRICAS
+- **Título:** Creating and Using Rubrics
+- **Autor u organismo:** Carnegie Mellon University, Eberly Center
+- **URL:** <https://www.cmu.edu/teaching/assessment/assesslearning/rubrics.html>
+- **Tipo:** buena-practica · **Jurisdicción:** — · **Versión o fecha:** consultado 26/11/2026
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** Rúbrica analítica: criterios por niveles de desempeño, con un descriptor concreto en cada celda para que dos evaluadores puntúen igual. Base de la rúbrica de entregables (C3).
 

@@ -1,0 +1,96 @@
+{
+ "version": "2026-11-26",
+ "estado": "draft",
+ "escala": {
+  "1": "Inaceptable",
+  "2": "Insuficiente",
+  "3": "Aceptable con cambios",
+  "4": "Bien",
+  "5": "Excelente"
+ },
+ "nota_niveles": "Los descriptores describen 1, 2, 4 y 5; el 3 es «entre 2 y 4». Ver CMU-RUBRICAS.",
+ "regla": {
+  "minimo_por_criterio": 4,
+  "media_minima": 4.5,
+  "gravedades_que_bloquean": [
+   "grave",
+   "medio"
+  ],
+  "fuente": "D-019 (docs/18-flujo-de-calidad-y-aprendizaje.md)"
+ },
+ "criterios": [
+  {
+   "id": "criterio",
+   "nombre": "Criterio",
+   "pregunta": "¿Responde a lo que se pidió y a la decisión que el cliente tiene que tomar?",
+   "niveles": {
+    "1": "No responde al encargo o no pide ninguna decisión",
+    "2": "Responde a medias; la decisión pedida es vaga",
+    "4": "Responde al encargo y pide una decisión concreta, con quién y cuándo",
+    "5": "Además, la recomendación está razonada y se ven las alternativas"
+   }
+  },
+  {
+   "id": "completo",
+   "nombre": "Completo",
+   "pregunta": "¿Están todos los apartados de la plantilla y nada importante falta?",
+   "niveles": {
+    "1": "Faltan apartados de la estructura común",
+    "2": "Están los apartados pero alguno vacío sin decir por qué",
+    "4": "Todos los apartados con contenido; lo que falta está marcado [por medir] con cómo se medirá",
+    "5": "Además, anexos y fuentes permiten a otro reproducirlo"
+   }
+  },
+  {
+   "id": "veracidad",
+   "nombre": "Veracidad",
+   "pregunta": "¿Cada afirmación es cierta y dice de dónde sale?",
+   "niveles": {
+    "1": "Hay cifras, clientes, fuentes o normas inventadas",
+    "2": "Hay afirmaciones sin fuente o fuentes sin fecha",
+    "4": "Cada cifra tiene base (medido, declarado o hipótesis) y cada norma su fuente vigente",
+    "5": "Además, se contrastó con una segunda fuente lo importante"
+   }
+  },
+  {
+   "id": "coherencia",
+   "nombre": "Coherencia",
+   "pregunta": "¿Cuadra consigo mismo y con lo ya entregado o decidido?",
+   "niveles": {
+    "1": "Contradice decisiones registradas o entregables aprobados",
+    "2": "Pequeñas contradicciones internas (cifras o nombres que no cuadran)",
+    "4": "Sin contradicciones; las cifras coinciden en todo el documento",
+    "5": "Además, se citan las versiones anteriores que cambia"
+   }
+  },
+  {
+   "id": "nivel",
+   "nombre": "Nivel",
+   "pregunta": "¿Lo firmaría un profesional senior del sector?",
+   "niveles": {
+    "1": "Genérico; podría ser de cualquier empresa",
+    "2": "Correcto pero superficial; no usa el vocabulario del sector",
+    "4": "Concreto para este cliente y proceso, con el vocabulario del sector",
+    "5": "Además, anticipa objeciones y riesgos que el cliente no había visto"
+   }
+  },
+  {
+   "id": "forma",
+   "nombre": "Forma",
+   "pregunta": "¿Se lee rápido y sin errores?",
+   "niveles": {
+    "1": "Errores de ortografía, formato roto o datos personales en el cuerpo",
+    "2": "Frases largas, jerga o formato irregular",
+    "4": "Claro, con la respuesta primero, sin errores y con la plantilla de marca",
+    "5": "Además, una persona ocupada entiende la decisión leyendo solo el resumen"
+   }
+  }
+ ],
+ "bloqueantes": [
+  "Cifra, cliente, fuente o norma inventada",
+  "Datos personales de terceros en el cuerpo",
+  "Afirmar cumplimiento legal sin revisión competente",
+  "Enviar o proponer enviar algo sin aprobación de un socio",
+  "Una decisión que solo puede tomar una persona presentada como tomada por la IA"
+ ]
+}

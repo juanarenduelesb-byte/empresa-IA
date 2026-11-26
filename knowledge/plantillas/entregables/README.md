@@ -32,4 +32,4 @@ Basada en el principio de la pirámide: **primero la respuesta**, y después lo 
 - Nada de cifras sin origen. Si no se ha medido, se pone `[por medir]` y se dice cómo se medirá.
 - Sin datos personales en el cuerpo. Las personas se nombran por rol.
 - Toda afirmación legal es orientativa y lleva «no es asesoría jurídica».
-- Antes de enviar: rúbrica de calidad (C3) y aprobación de un socio, porque enviar es una acción externa.
+- Antes de enviar: [rúbrica de calidad y lista de comprobación](rubrica.md) (C3) y aprobación de un socio, porque enviar es una acción externa.

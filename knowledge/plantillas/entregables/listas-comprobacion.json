@@ -1,0 +1,176 @@
+{
+ "version": "2026-11-26",
+ "estado": "draft",
+ "comunes": [
+  {
+   "id": "C01",
+   "texto": "Cabecera completa: versión, fecha, autor y revisor por rol, estado, clasificación y datos usados (L0–L4)"
+  },
+  {
+   "id": "C02",
+   "texto": "El resumen cabe en cinco líneas y dice qué decisión se pide, a quién y para cuándo"
+  },
+  {
+   "id": "C03",
+   "texto": "Cada cifra tiene base (medido, declarado o hipótesis) y origen; lo no medido va como [por medir]"
+  },
+  {
+   "id": "C04",
+   "texto": "Cada norma citada tiene fuente vigente del registro y, si es legal, «no es asesoría jurídica»"
+  },
+  {
+   "id": "C05",
+   "texto": "Sin datos personales de terceros: personas por rol"
+  },
+  {
+   "id": "C06",
+   "texto": "Hechos, hipótesis y propuestas separados"
+  },
+  {
+   "id": "C07",
+   "texto": "Siguientes pasos con quién (rol) y cuándo"
+  },
+  {
+   "id": "C08",
+   "texto": "Nada se envía sin el OK de un socio (acción externa)"
+  }
+ ],
+ "tipos": {
+  "propuesta-diagnostico": {
+   "nombre": "Propuesta de diagnóstico",
+   "plantilla": "01-propuesta-diagnostico.md",
+   "puntos": [
+    {
+     "id": "PD1",
+     "texto": "Qué entra y qué no entra, por escrito"
+    },
+    {
+     "id": "PD2",
+     "texto": "Qué necesitamos del cliente (personas, horas, acceso)"
+    },
+    {
+     "id": "PD3",
+     "texto": "Precio sin IVA o hueco [precio] si aún no está decidido; nunca un precio inventado"
+    },
+    {
+     "id": "PD4",
+     "texto": "Dice que en esta fase no se usan datos reales de sus clientes"
+    }
+   ]
+  },
+  "informe-diagnostico": {
+   "nombre": "Informe de diagnóstico",
+   "plantilla": "02-informe-diagnostico.md",
+   "puntos": [
+    {
+     "id": "ID1",
+     "texto": "AS-IS validado por quien hace el proceso, con fecha"
+    },
+    {
+     "id": "ID2",
+     "texto": "Línea base con cómo se midió y en qué periodo"
+    },
+    {
+     "id": "ID3",
+     "texto": "Excepciones con su frecuencia observada"
+    },
+    {
+     "id": "ID4",
+     "texto": "Casos de uso puntuados con el mismo criterio para todos"
+    },
+    {
+     "id": "ID5",
+     "texto": "Riesgo según el Reglamento de IA, datos personales y DORA, marcado como orientativo"
+    }
+   ]
+  },
+  "diseno-to-be": {
+   "nombre": "Diseño TO-BE",
+   "plantilla": "03-diseno-to-be.md",
+   "puntos": [
+    {
+     "id": "DT1",
+     "texto": "Cada paso dice qué es regla fija, qué propone la IA y qué decide una persona"
+    },
+    {
+     "id": "DT2",
+     "texto": "Cada excepción del catálogo tiene detector, acción y responsable"
+    },
+    {
+     "id": "DT3",
+     "texto": "Métrica con línea base, umbral, cómo se mide, periodo y quién la certifica"
+    },
+    {
+     "id": "DT4",
+     "texto": "Matriz de aprobaciones y forma de volver al proceso manual"
+    },
+    {
+     "id": "DT5",
+     "texto": "Validado con los casos de prueba inventados (por ejemplo C1)"
+    }
+   ]
+  },
+  "plan-piloto": {
+   "nombre": "Plan de piloto",
+   "plantilla": "04-plan-piloto.md",
+   "puntos": [
+    {
+     "id": "PP1",
+     "texto": "Datos reales solo tras L2 y con el encargo del tratamiento firmado"
+    },
+    {
+     "id": "PP2",
+     "texto": "Criterios de parada y qué pasa si se activan"
+    },
+    {
+     "id": "PP3",
+     "texto": "Cómo y quién mide la métrica firmada"
+    },
+    {
+     "id": "PP4",
+     "texto": "Formación de los usuarios (Reglamento de IA, art. 4) prevista"
+    }
+   ]
+  },
+  "informe-mensual": {
+   "nombre": "Informe mensual de operación",
+   "plantilla": "05-informe-mensual-operacion.md",
+   "puntos": [
+    {
+     "id": "IM1",
+     "texto": "La métrica firmada frente al umbral y a la línea base"
+    },
+    {
+     "id": "IM2",
+     "texto": "Todas las incidencias del mes, con causa y prueba añadida"
+    },
+    {
+     "id": "IM3",
+     "texto": "Cambios de reglas, instrucciones o modelo con sus pruebas"
+    },
+    {
+     "id": "IM4",
+     "texto": "Coste de uso del modelo"
+    }
+   ]
+  },
+  "acta": {
+   "nombre": "Acta de reunión",
+   "plantilla": "06-acta-reunion.md",
+   "puntos": [
+    {
+     "id": "AC1",
+     "texto": "Decisiones tomadas separadas de las abiertas"
+    },
+    {
+     "id": "AC2",
+     "texto": "Cada tarea con quién y cuándo"
+    },
+    {
+     "id": "AC3",
+     "texto": "Plazo para confirmar el acta"
+    }
+   ]
+  }
+ }
+}

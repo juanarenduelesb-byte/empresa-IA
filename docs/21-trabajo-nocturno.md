@@ -3,7 +3,7 @@
 Lista de trabajo que Claude hace solo, en tandas, mientras los socios no están. Cada tanda:
 
 1. Lee este archivo, `CLAUDE.md` y `DECISIONS.md`.
-2. Coge la **primera tarea sin marcar** de la lista (en orden) y la termina entera antes de pasar a la siguiente. Mejor una tarea bien hecha que tres a medias.
+2. Coge la **primera tarea sin marcar** de la lista (en orden). Al empezarla, cámbiala a `[~] (en curso, tanda N, hora)` y sube ese cambio enseguida: así dos tandas no hacen lo mismo. Una tarea `[~]` de hace menos de 3 horas está ocupada; sáltala. Termina cada tarea entera antes de pasar a la siguiente: mejor una bien hecha que tres a medias.
 3. Antes de subir: `python -m pytest -q`, `python tools/check_repo.py`, generados al día (`python3 tools/org_gen.py --check`, `python3 tools/agentes_gen.py --check`) y `python3 tools/brain_build.py oficina/brain.json` si cambió algún documento.
 4. Marca la tarea `[x]`, añade una línea al **Registro** (fecha, tanda, qué se hizo, qué queda) y sube a `main` (los socios lo pidieron así el 26/11/2026).
 5. Si una tarea necesita una decisión de un socio, la deja en **Preguntas para los socios** y pasa a la siguiente.

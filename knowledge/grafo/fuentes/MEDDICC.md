@@ -8,7 +8,7 @@ version: "consultado 17/11/2026"
 autoridad: "baja"
 vigencia: "vigente"
 estado: "validated"
-citada: 2
+citada: 3
 tags:
   - "fuente"
   - "vigencia/vigente"
@@ -24,3 +24,4 @@ tags:
 
 - [[knowledge/comercial/director-comercial|Director comercial]]
 - [[knowledge/comercial/prospeccion|Especialista en prospección]]
+- [[knowledge/plantillas/ficha-cliente|Plantilla · Ficha de cliente]]

@@ -1,48 +1,55 @@
 ---
 tipo: "mapa"
 comunidad: 6
-miembros: 54
-cohesion: 0.09
+miembros: 53
+cohesion: 0.13
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 6 · docs · Registro de decisiones y Varios · empresa-ia
+# Comunidad 6 · docs · Acta de protección de la IA y examen de 50 casos y Registro de decisiones
 
-54 nodos agrupados por el algoritmo de Louvain. Cohesión 0.09.
+53 nodos agrupados por el algoritmo de Louvain. Cohesión 0.13.
 
 ## Documentos
 
+- [[precedents/oficina/encargos/2026-11/2026-11-17-acta-de-proteccion-de-la-ia-y-examen-de-50-casos-6sxjn|Acta de protección de la IA y examen de 50 casos]]
 - [[DECISIONS|Registro de decisiones]]
+- [[precedents/oficina/chats/ia-y-evaluacion|Conversaciones con IA y evaluación]]
 - [[CLAUDE|Varios · empresa-ia]]
-- [[knowledge/seguridad-legal/ciberseguridad|Especialista en ciberseguridad]]
-- [[knowledge/ingenieria/plataforma-operaciones|Ingeniero de plataforma y operaciones (DevOps/SRE)]]
-- [[knowledge/ingenieria/datos-ia|Arquitecto de datos e IA]]
+- [[precedents/oficina/encargos/2026-11/2026-11-17-reunion-ia-y-evaluacion-y-seguridad-zyn2w|Reunión: IA y evaluación y Seguridad]]
+- [[precedents/oficina/chats/ceo-digital|Conversaciones con CEO digital]]
 - [[docs/17-cerebro-y-procesos|17 · Cerebro, conocimiento y procesos: auditoría e informe]]
-- [[knowledge/ingenieria/arquitecto-tecnico|Arquitecto técnico]]
-- [[knowledge/ingenieria/backend|Especialista backend]]
-- [[knowledge/seguridad-legal/calidad-riesgos|Especialista en calidad y riesgos]]
-- [[knowledge/ingenieria/evaluacion-ia|Especialista en evaluación de IA]]
+- [[precedents/oficina/chats/plan-y-seguimiento|Conversaciones con Plan y seguimiento]]
+- [[precedents/oficina/chats/registro-de-decisiones|Conversaciones con Registro de decisiones]]
+- [[precedents/oficina/chats/bibliotecario|Conversaciones con Bibliotecario]]
+- [[docs/10-plan-12-semanas|Plan de construcción · 18/11/2026 → 12/02/2027]]
 - [[docs/23-plan-maestro|Plan maestro: la empresa completa, sin que se escape nada]]
-- [[knowledge/agentes/ops|Plataforma y operaciones]]
+- [[governance/legal/borradores/05-matriz-aprobaciones|Matriz de aprobaciones · BORRADOR]]
+- [[docs/22-plan-hasta-febrero|Plan de trabajo diario · 26/11/2026 → 28/02/2027]]
 - [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]]
+- [[docs/08-roadmap-y-decisiones|Roadmap y decisiones]]
 - [[docs/19-obsidian|Obsidian: el cerebro abierto en tu equipo]]
+- [[precedents/oficina/chats/seguridad|Conversaciones con Seguridad]]
 - [[Inicio|Inicio · cerebro de Varios]]
+- [[knowledge/metodologias-transversales/contrastar|Protocolo: contrastar el conocimiento interno y el externo]]
 - [[docs/11-cerebro-en-claude|Cerebro en Claude]]
 - [[claude/instrucciones-proyecto|Instrucciones del proyecto "Varios · Cerebro" en Claude]]
 - [[docs/18-flujo-de-calidad-y-aprendizaje|18 · Flujo de calidad y aprendizaje continuo en la oficina]]
-- [[claude/habilidades/integracion-continua|Integración continua]]
+- [[precedents/lessons-learned/2026-11-correcciones-documentales|Lección: los documentos base también tienen errores]]
 
 ## Decisiones
 
+- [[knowledge/grafo/decisiones/D-013|D-013 · Conocimiento y catálogo de procesos generados desde datos]]
 - [[knowledge/grafo/decisiones/D-012|D-012 · Las propuestas de cambios de Claude se aceptan solas]]
+- [[knowledge/grafo/decisiones/D-017|D-017 · La oficina se vuelca cada noche a GitHub y las automatizaciones van por GitHub Actions]]
 - [[knowledge/grafo/decisiones/D-014|D-014 · Adelantar un prototipo mínimo del motor de procesos]]
 - [[knowledge/grafo/decisiones/D-019|D-019 · Calidad exigente, todo pasa por un socio y cada rechazo se rehace aprendiendo]]
 - [[knowledge/grafo/decisiones/D-003|D-003 · Obsidian como interfaz humana]]
 - [[knowledge/grafo/decisiones/D-021|D-021 · El cerebro se abre en Obsidian: el repositorio es el vault]]
+- [[knowledge/grafo/decisiones/D-009|D-009 · Unificación de puertas y estados]]
 - [[knowledge/grafo/decisiones/D-010|D-010 · Diagramas como código]]
 - [[knowledge/grafo/decisiones/D-024|D-024 · Paquete de dominio de seguros con un archivo máquina como fuente de las reglas]]
-- [[knowledge/grafo/decisiones/D-004|D-004 · PostgreSQL como fuente operativa]]
 - [[knowledge/grafo/decisiones/D-006|D-006 · Primer proceso piloto]]
 - [[knowledge/grafo/decisiones/D-018|D-018 · El cerebro pasa a ser un grafo de conocimiento con relaciones explicadas]]
 - [[knowledge/grafo/decisiones/D-022|D-022 · Trabajo nocturno de Claude con plan diario e informe de la mañana]]
@@ -55,23 +62,3 @@ tags:
 - [[knowledge/grafo/decisiones/D-008|D-008 · Repositorio como memoria oficial y web visual]]
 - [[knowledge/grafo/decisiones/D-016|D-016 · Vista 3D de la oficina de agentes con Three.js]]
 - [[knowledge/grafo/decisiones/D-020|D-020 · Seis puestos nuevos en la oficina: CFO, contabilidad, éxito de cliente, plataforma, diseño y cumplimiento]]
-
-## Especialistas
-
-- [[knowledge/ingenieria/plataforma-operaciones|Ingeniero de plataforma y operaciones (DevOps/SRE)]]
-
-## Fuentes
-
-- [[knowledge/grafo/fuentes/INT-GUIA|INT-GUIA · Guía de Arranque v1.4 (diseño cerrado)]]
-- [[knowledge/grafo/fuentes/ENS-RD311|ENS-RD311 · Real Decreto 311/2022, Esquema Nacional de Seguridad]]
-- [[knowledge/grafo/fuentes/ISO-27001|ISO-27001 · ISO/IEC 27001:2022 (transición desde 2013 terminada el 31/10/2025)]]
-- [[knowledge/grafo/fuentes/OWASP-LLM-2025|OWASP-LLM-2025 · OWASP Top 10 for LLM Applications 2025]]
-- [[knowledge/grafo/fuentes/OTEL-GENAI|OTEL-GENAI · OpenTelemetry: convenciones semánticas para IA generativa]]
-- [[knowledge/grafo/fuentes/AEPD-AGENTICA|AEPD-AGENTICA · Inteligencia artificial agéntica desde la perspectiva de protección de datos]]
-- [[knowledge/grafo/fuentes/PG-RLS|PG-RLS · Recomendaciones de seguridad a nivel de fila para SaaS multicliente]]
-- [[knowledge/grafo/fuentes/DORA-DEVOPS|DORA-DEVOPS · Métricas DORA de entrega de software (DevOps Research and Assessment)]]
-- [[knowledge/grafo/fuentes/GOOGLE-SRE|GOOGLE-SRE · Site Reliability Engineering (libros de Google SRE)]]
-- [[knowledge/grafo/fuentes/OSS-DOCLING|OSS-DOCLING · Docling (conversión de documentos)]]
-- [[knowledge/grafo/fuentes/OSS-PRESIDIO|OSS-PRESIDIO · Microsoft Presidio (detección y anonimización de datos personales)]]
-- [[knowledge/grafo/fuentes/TWELVE-FACTOR|TWELVE-FACTOR · The Twelve-Factor App]]
-- [[knowledge/grafo/fuentes/OSS-PROMPTFOO|OSS-PROMPTFOO · promptfoo (evaluación y pruebas adversariales de LLM)]]

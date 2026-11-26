@@ -9,6 +9,7 @@
 | [ficha-oportunidad.md](ficha-oportunidad.md) | P31, calificación de oportunidad |
 | [ficha-kpi.md](ficha-kpi.md) | P37, medición |
 | [ficha-proveedor.md](ficha-proveedor.md) | P27, proveedores |
+| [ficha-cliente.md](ficha-cliente.md) | Un cliente: interlocutores por rol, procesos medidos, cualificación y conversaciones (esquema JSON y ejemplo inventado) |
 | [proceso-cliente.md](../../processes/templates/proceso-cliente.md) | P32 y P33 |
 | [plantilla-precedente.md](../../precedents/plantilla-precedente.md) | Biblioteca de precedentes |
 | [plantilla-incidente.md](../../precedents/plantilla-incidente.md) | P28 |

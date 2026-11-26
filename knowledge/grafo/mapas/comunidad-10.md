@@ -1,30 +1,40 @@
 ---
 tipo: "mapa"
 comunidad: 10
-miembros: 14
-cohesion: 0.47
+miembros: 16
+cohesion: 0.25
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 10 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Conversaciones con IA y evaluación
+# Comunidad 10 · knowledge/seguridad-legal · Responsable de cumplimiento normativo y Especialista legal y privacidad
 
-14 nodos agrupados por el algoritmo de Louvain. Cohesión 0.47.
+16 nodos agrupados por el algoritmo de Louvain. Cohesión 0.25.
 
 ## Documentos
 
-- [[precedents/oficina/encargos/2026-11/2026-11-17-acta-de-proteccion-de-la-ia-y-examen-de-50-casos-6sxjn|Acta de protección de la IA y examen de 50 casos]]
-- [[precedents/oficina/chats/ia-y-evaluacion|Conversaciones con IA y evaluación]]
-- [[precedents/oficina/encargos/2026-11/2026-11-17-reunion-ia-y-evaluacion-y-seguridad-zyn2w|Reunión: IA y evaluación y Seguridad]]
-- [[precedents/oficina/chats/ceo-digital|Conversaciones con CEO digital]]
-- [[precedents/oficina/chats/plan-y-seguimiento|Conversaciones con Plan y seguimiento]]
-- [[precedents/oficina/chats/registro-de-decisiones|Conversaciones con Registro de decisiones]]
-- [[precedents/oficina/chats/bibliotecario|Conversaciones con Bibliotecario]]
-- [[docs/10-plan-12-semanas|Plan de construcción · 18/11/2026 → 12/02/2027]]
-- [[docs/22-plan-hasta-febrero|Plan de trabajo diario · 26/11/2026 → 28/02/2027]]
-- [[precedents/oficina/chats/seguridad|Conversaciones con Seguridad]]
+- [[knowledge/seguridad-legal/cumplimiento|Responsable de cumplimiento normativo]]
+- [[knowledge/seguridad-legal/legal-privacidad|Especialista legal y privacidad]]
+- [[knowledge/ingenieria/diseno-experiencia|Diseñador de producto y experiencia (UX)]]
 
-## Decisiones
+## Procesos
 
-- [[knowledge/grafo/decisiones/D-013|D-013 · Conocimiento y catálogo de procesos generados desde datos]]
-- [[knowledge/grafo/decisiones/D-017|D-017 · La oficina se vuelca cada noche a GitHub y las automatizaciones van por GitHub Actions]]
+- [[processes/catalog/P19-politica-de-uso-y-limites|P19 · Política de uso y límites]]
+
+## Especialistas
+
+- [[knowledge/seguridad-legal/cumplimiento|Responsable de cumplimiento normativo]]
+- [[knowledge/seguridad-legal/legal-privacidad|Especialista legal y privacidad]]
+- [[knowledge/ingenieria/diseno-experiencia|Diseñador de producto y experiencia (UX)]]
+
+## Fuentes
+
+- [[knowledge/grafo/fuentes/UE-RIA-OMNIBUS|UE-RIA-OMNIBUS · Reglamento (UE) 2026/1744 (ómnibus digital sobre IA), que modifica el Reglamento (UE) 2024/1689]]
+- [[knowledge/grafo/fuentes/LEY-ACCESIBILIDAD-11-2023|LEY-ACCESIBILIDAD-11-2023 · Ley 11/2023 (accesibilidad de productos y servicios, transpone la Directiva (UE) 2019/882)]]
+- [[knowledge/grafo/fuentes/NIS2-ES|NIS2-ES · Estado de la transposición de NIS2 en España]]
+- [[knowledge/grafo/fuentes/INT-MARCO|INT-MARCO · Marco integral legal, ciberseguridad e IA (España/UE) 16/11/2026]]
+- [[knowledge/grafo/fuentes/RIA-ART4-ALFABETIZACION|RIA-ART4-ALFABETIZACION · Reglamento de IA, artículo 4: alfabetización en IA]]
+- [[knowledge/grafo/fuentes/AEPD-RIA-ART5|AEPD-RIA-ART5 · La AEPD recuerda que ya puede actuar ante sistemas de IA]]
+- [[knowledge/grafo/fuentes/ISO-42001|ISO-42001 · ISO/IEC 42001:2023 Sistema de gestión de IA]]
+- [[knowledge/grafo/fuentes/NNG-HEURISTICAS|NNG-HEURISTICAS · 10 heurísticas de usabilidad (Jakob Nielsen)]]
+- [[knowledge/grafo/fuentes/W3C-WCAG22|W3C-WCAG22 · Web Content Accessibility Guidelines (WCAG) 2.2]]

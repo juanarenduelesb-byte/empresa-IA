@@ -111,6 +111,8 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 | [CODIGO-CIVIL](#codigo-civil) | Código Civil (Real Decreto de 24 de julio de 1889) | obligacion-legal | alta | vigente | draft |
 | [LSSI-34-2002](#lssi-34-2002) | Ley 34/2002, de servicios de la sociedad de la información y de comercio electrónico (LSSI-CE) | obligacion-legal | alta | vigente | validated |
 | [AEPD-GUIA-COOKIES](#aepd-guia-cookies) | Guía sobre el uso de las cookies | recomendacion-tecnica | alta | vigente | validated |
+| [MOM-TEST](#mom-test) | The Mom Test (Rob Fitzpatrick): cómo hablar con clientes sin que te mientan | buena-practica | media | vigente | draft |
+| [LEI-VSM](#lei-vsm) | Value Stream Mapping (léxico del Lean Enterprise Institute) | buena-practica | alta | vigente | draft |
 
 <a id="int-guia"></a>
 ### INT-GUIA
@@ -1149,4 +1151,24 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** —
 - **Nota:** Rechazar debe ofrecerse en la misma capa y al mismo nivel que aceptar; la primera capa incluye la petición de consentimiento. Las cookies técnicas exentas no necesitan consentimiento.
+
+<a id="mom-test"></a>
+### MOM-TEST
+- **Título:** The Mom Test (Rob Fitzpatrick): cómo hablar con clientes sin que te mientan
+- **Autor u organismo:** Resumen de Sachin Rekhi
+- **URL:** <https://sachinrekhi.com/the-mom-test-rob-fitzpatrick>
+- **Tipo:** buena-practica · **Jurisdicción:** — · **Versión o fecha:** libro de 2013; resumen consultado 26/11/2026
+- **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** Reglas: hablar de su vida y no de tu idea; preguntar por hechos concretos del pasado, no por opiniones ni por el futuro; escuchar más que hablar. Los cumplidos no valen; el avance se mide por compromisos (tiempo, reputación o dinero). Fuente secundaria; coincide con el resumen de Yevgeniy Brikman (2023).
+
+<a id="lei-vsm"></a>
+### LEI-VSM
+- **Título:** Value Stream Mapping (léxico del Lean Enterprise Institute)
+- **Autor u organismo:** Lean Enterprise Institute
+- **URL:** <https://www.lean.org/lexicon-terms/value-stream-mapping/>
+- **Tipo:** buena-practica · **Jurisdicción:** — · **Versión o fecha:** consultado 26/11/2026
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** Mapa del flujo de material e información de un proceso; separa el tiempo de proceso del tiempo total (lead time). Base de la medición AS-IS: trabajo activo frente a espera.
 

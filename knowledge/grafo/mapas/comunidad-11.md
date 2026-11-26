@@ -1,26 +1,40 @@
 ---
 tipo: "mapa"
 comunidad: 11
-miembros: 5
-cohesion: 0.7
+miembros: 16
+cohesion: 0.17
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 11 · knowledge/ingenieria · Diseñador de producto y experiencia (UX) y Diseñador de producto y experiencia (UX)
+# Comunidad 11 · claude/habilidades · Ingeniero de plataforma y operaciones (DevOps/SRE) y Plataforma y operaciones
 
-5 nodos agrupados por el algoritmo de Louvain. Cohesión 0.7.
+16 nodos agrupados por el algoritmo de Louvain. Cohesión 0.17.
 
 ## Documentos
 
-- [[knowledge/ingenieria/diseno-experiencia|Diseñador de producto y experiencia (UX)]]
+- [[knowledge/ingenieria/plataforma-operaciones|Ingeniero de plataforma y operaciones (DevOps/SRE)]]
+- [[knowledge/agentes/ops|Plataforma y operaciones]]
+- [[claude/habilidades/observabilidad|Observabilidad y alertas]]
+- [[claude/habilidades/copias-restauracion|Copias y restauración probada]]
+- [[claude/habilidades/integracion-continua|Integración continua]]
+- [[claude/habilidades/runbook-incidente|Runbook y gestión de incidentes]]
 
 ## Especialistas
 
-- [[knowledge/ingenieria/diseno-experiencia|Diseñador de producto y experiencia (UX)]]
+- [[knowledge/ingenieria/plataforma-operaciones|Ingeniero de plataforma y operaciones (DevOps/SRE)]]
+
+## Habilidades
+
+- [[claude/habilidades/copias-restauracion|Copias y restauración probada]]
+- [[claude/habilidades/integracion-continua|Integración continua]]
+- [[claude/habilidades/observabilidad|Observabilidad y alertas]]
+- [[claude/habilidades/runbook-incidente|Runbook y gestión de incidentes]]
 
 ## Fuentes
 
-- [[knowledge/grafo/fuentes/LEY-ACCESIBILIDAD-11-2023|LEY-ACCESIBILIDAD-11-2023 · Ley 11/2023 (accesibilidad de productos y servicios, transpone la Directiva (UE) 2019/882)]]
-- [[knowledge/grafo/fuentes/NNG-HEURISTICAS|NNG-HEURISTICAS · 10 heurísticas de usabilidad (Jakob Nielsen)]]
-- [[knowledge/grafo/fuentes/W3C-WCAG22|W3C-WCAG22 · Web Content Accessibility Guidelines (WCAG) 2.2]]
+- [[knowledge/grafo/fuentes/ENS-RD311|ENS-RD311 · Real Decreto 311/2022, Esquema Nacional de Seguridad]]
+- [[knowledge/grafo/fuentes/OTEL-GENAI|OTEL-GENAI · OpenTelemetry: convenciones semánticas para IA generativa]]
+- [[knowledge/grafo/fuentes/DORA-DEVOPS|DORA-DEVOPS · Métricas DORA de entrega de software (DevOps Research and Assessment)]]
+- [[knowledge/grafo/fuentes/GOOGLE-SRE|GOOGLE-SRE · Site Reliability Engineering (libros de Google SRE)]]
+- [[knowledge/grafo/fuentes/TWELVE-FACTOR|TWELVE-FACTOR · The Twelve-Factor App]]

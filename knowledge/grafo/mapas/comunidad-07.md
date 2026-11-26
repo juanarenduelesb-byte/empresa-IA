@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 7
-miembros: 54
-cohesion: 0.18
+miembros: 44
+cohesion: 0.23
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 7 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue
 
-54 nodos agrupados por el algoritmo de Louvain. Cohesión 0.18.
+44 nodos agrupados por el algoritmo de Louvain. Cohesión 0.23.
 
 ## Documentos
 
@@ -28,17 +28,15 @@ tags:
 - [[docs/atlas/08-seguridad|08 · Seguridad, identidad y aislamiento de clientes]]
 - [[docs/fuentes/08_08_ciclo_vida_proyecto|Ciclo vida proyecto]]
 - [[docs/atlas/07-conocimiento|07 · Motor de conocimiento con Obsidian]]
-- [[governance/legal/borradores/05-matriz-aprobaciones|Matriz de aprobaciones · BORRADOR]]
 - [[docs/atlas/README|Atlas de diagramas]]
 - [[docs/atlas/02-flujo-ceo|02 · Flujo completo del CEO digital]]
-- [[docs/atlas/16-estados|16 · Estados de un encargo]]
 - [[docs/atlas/05-gateway|05 · Puerta de herramientas]]
+- [[docs/atlas/16-estados|16 · Estados de un encargo]]
 - [[docs/fuentes/07_07_infraestructura_portabilidad|Infraestructura portabilidad]]
-- [[docs/08-roadmap-y-decisiones|Roadmap y decisiones]]
 - [[docs/atlas/04-ejecucion|04 · Ejecución: motor de procesos, agentes y herramientas]]
 - [[docs/atlas/00-arquitectura|00 · Arquitectura del cerebro digital]]
-- [[docs/atlas/09-calidad|09 · Calidad, evaluación y aprobación humana]]
 - [[docs/atlas/15-componentes|15 · Conversación entre componentes]]
+- [[docs/atlas/09-calidad|09 · Calidad, evaluación y aprobación humana]]
 - [[docs/atlas/03-decisiones-ceo|03 · Las cinco decisiones del CEO]]
 - [[docs/atlas/14-incidentes|14 · Operación y respuesta a incidentes]]
 - [[docs/05-agentes-procesos-e-integraciones|Agentes, procesos e integraciones]]
@@ -49,7 +47,6 @@ tags:
 - [[docs/04-motor-de-conocimiento|Motor de conocimiento]]
 - [[docs/01-vision-y-modelo-operativo|Visión y modelo operativo]]
 - [[docs/14-reglas-del-ceo|Reglas del CEO digital]]
-- [[knowledge/metodologias-transversales/contrastar|Protocolo: contrastar el conocimiento interno y el externo]]
 - [[docs/06-seguridad-y-gobierno|Seguridad, privacidad y gobierno]]
 - [[docs/07-calidad-infraestructura-y-operacion|Calidad, infraestructura y operación]]
 - [[docs/atlas/06-fallos|06 · Fallos, reintentos y recuperación]]
@@ -58,9 +55,4 @@ tags:
 - [[docs/03-ceo-digital-y-orquestacion|CEO digital y orquestación]]
 - [[knowledge/README|Conocimiento]]
 - [[docs/informes/README|Informes de la mañana]]
-- [[precedents/lessons-learned/2026-11-correcciones-documentales|Lección: los documentos base también tienen errores]]
 - [[docs/09-inventario-documental|Inventario documental]]
-
-## Decisiones
-
-- [[knowledge/grafo/decisiones/D-009|D-009 · Unificación de puertas y estados]]

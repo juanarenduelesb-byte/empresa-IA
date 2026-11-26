@@ -1,0 +1,599 @@
+{
+ "$defs": {
+  "Conversacion": {
+   "additionalProperties": false,
+   "properties": {
+    "fecha": {
+     "format": "date",
+     "title": "Fecha",
+     "type": "string"
+    },
+    "tipo": {
+     "enum": [
+      "descubrimiento",
+      "validacion_semanal",
+      "presentacion",
+      "decision"
+     ],
+     "title": "Tipo",
+     "type": "string"
+    },
+    "con": {
+     "description": "Roles",
+     "items": {
+      "type": "string"
+     },
+     "title": "Con",
+     "type": "array"
+    },
+    "aprendido": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Aprendido",
+     "type": "array"
+    },
+    "compromiso": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "description": "Lo que pone el cliente: tiempo, reputación o dinero",
+     "title": "Compromiso"
+    },
+    "siguiente_paso": {
+     "title": "Siguiente Paso",
+     "type": "string"
+    },
+    "cambia": {
+     "default": [],
+     "description": "Qué archivos o decisiones cambian por lo aprendido",
+     "items": {
+      "type": "string"
+     },
+     "title": "Cambia",
+     "type": "array"
+    }
+   },
+   "required": [
+    "fecha",
+    "tipo",
+    "con",
+    "aprendido",
+    "siguiente_paso"
+   ],
+   "title": "Conversacion",
+   "type": "object"
+  },
+  "Cualificacion": {
+   "additionalProperties": false,
+   "description": "MEDDPICC (registro: MEDDICC). Cada campo es un Dato para separar lo dicho de lo supuesto.",
+   "properties": {
+    "metricas": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/Dato"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null
+    },
+    "comprador_economico": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/Dato"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "description": "Rol que firma el gasto"
+    },
+    "criterios_decision": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/Dato"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null
+    },
+    "proceso_decision": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/Dato"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null
+    },
+    "proceso_compra": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/Dato"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null
+    },
+    "dolor": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/Dato"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null
+    },
+    "impulsor": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/Dato"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "description": "Rol que empuja dentro"
+    },
+    "competencia": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/Dato"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null
+    }
+   },
+   "title": "Cualificacion",
+   "type": "object"
+  },
+  "Dato": {
+   "additionalProperties": false,
+   "description": "Un valor con su procedencia. Sin procedencia no entra en la ficha.",
+   "properties": {
+    "valor": {
+     "title": "Valor",
+     "type": "string"
+    },
+    "base": {
+     "enum": [
+      "medido",
+      "declarado",
+      "hipotesis"
+     ],
+     "title": "Base",
+     "type": "string"
+    },
+    "fuente": {
+     "description": "De dónde sale: conversación del día, documento del cliente o id del registro",
+     "title": "Fuente",
+     "type": "string"
+    }
+   },
+   "required": [
+    "valor",
+    "base",
+    "fuente"
+   ],
+   "title": "Dato",
+   "type": "object"
+  },
+  "Hito": {
+   "additionalProperties": false,
+   "properties": {
+    "fecha": {
+     "format": "date",
+     "title": "Fecha",
+     "type": "string"
+    },
+    "puerta": {
+     "enum": [
+      "G0",
+      "G1",
+      "G2",
+      "G3",
+      "G4",
+      "G5",
+      "G6"
+     ],
+     "title": "Puerta",
+     "type": "string"
+    },
+    "decision": {
+     "title": "Decision",
+     "type": "string"
+    },
+    "quien": {
+     "description": "Rol",
+     "title": "Quien",
+     "type": "string"
+    }
+   },
+   "required": [
+    "fecha",
+    "puerta",
+    "decision",
+    "quien"
+   ],
+   "title": "Hito",
+   "type": "object"
+  },
+  "Interlocutor": {
+   "additionalProperties": false,
+   "properties": {
+    "rol": {
+     "description": "Cargo o función, nunca el nombre de la persona",
+     "title": "Rol",
+     "type": "string"
+    },
+    "decide": {
+     "default": false,
+     "title": "Decide",
+     "type": "boolean"
+    },
+    "hace_el_proceso": {
+     "default": false,
+     "title": "Hace El Proceso",
+     "type": "boolean"
+    },
+    "impulsor_interno": {
+     "default": false,
+     "title": "Impulsor Interno",
+     "type": "boolean"
+    }
+   },
+   "required": [
+    "rol"
+   ],
+   "title": "Interlocutor",
+   "type": "object"
+  },
+  "ProcesoCandidato": {
+   "additionalProperties": false,
+   "properties": {
+    "nombre": {
+     "title": "Nombre",
+     "type": "string"
+    },
+    "volumen_mes": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/Dato"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null
+    },
+    "tiempo_activo_min": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/Dato"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null
+    },
+    "tiempo_total": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/Dato"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "description": "Lead time: desde que llega hasta que termina, con esperas"
+    },
+    "retrabajo": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/Dato"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null
+    },
+    "dolor": {
+     "anyOf": [
+      {
+       "enum": [
+        1,
+        2,
+        3,
+        4,
+        5
+       ],
+       "type": "integer"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "description": "Cuánto les duele, según su propio relato (1–5)",
+     "title": "Dolor"
+    },
+    "riesgo": {
+     "anyOf": [
+      {
+       "enum": [
+        "bajo",
+        "medio",
+        "alto"
+       ],
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Riesgo"
+    },
+    "datos_sensibles": {
+     "default": "por_confirmar",
+     "enum": [
+      "si",
+      "no",
+      "por_confirmar"
+     ],
+     "title": "Datos Sensibles",
+     "type": "string"
+    },
+    "elegido": {
+     "default": false,
+     "title": "Elegido",
+     "type": "boolean"
+    }
+   },
+   "required": [
+    "nombre"
+   ],
+   "title": "ProcesoCandidato",
+   "type": "object"
+  },
+  "Sistema": {
+   "additionalProperties": false,
+   "properties": {
+    "tipo": {
+     "description": "Programa de gestión, portal de aseguradora, correo…",
+     "title": "Tipo",
+     "type": "string"
+    },
+    "uso": {
+     "title": "Uso",
+     "type": "string"
+    },
+    "integracion": {
+     "default": "por_confirmar",
+     "enum": [
+      "api",
+      "exportacion",
+      "portal_manual",
+      "ninguna",
+      "por_confirmar"
+     ],
+     "title": "Integracion",
+     "type": "string"
+    }
+   },
+   "required": [
+    "tipo",
+    "uso"
+   ],
+   "title": "Sistema",
+   "type": "object"
+  }
+ },
+ "additionalProperties": false,
+ "properties": {
+  "id": {
+   "title": "Id",
+   "type": "string"
+  },
+  "nombre": {
+   "title": "Nombre",
+   "type": "string"
+  },
+  "ficticio": {
+   "title": "Ficticio",
+   "type": "boolean"
+  },
+  "estado": {
+   "default": "draft",
+   "enum": [
+    "draft",
+    "validated"
+   ],
+   "title": "Estado",
+   "type": "string"
+  },
+  "actualizada": {
+   "format": "date",
+   "title": "Actualizada",
+   "type": "string"
+  },
+  "sector": {
+   "enum": [
+    "seg",
+    "sal",
+    "ase",
+    "fnz",
+    "ind",
+    "log",
+    "otro"
+   ],
+   "title": "Sector",
+   "type": "string"
+  },
+  "tipo_entidad": {
+   "description": "Correduría, aseguradora, agencia… según el sector",
+   "title": "Tipo Entidad",
+   "type": "string"
+  },
+  "plantilla": {
+   "default": "por_confirmar",
+   "enum": [
+    "1-9",
+    "10-49",
+    "50-249",
+    "250+",
+    "por_confirmar"
+   ],
+   "title": "Plantilla",
+   "type": "string"
+  },
+  "sujeto_dora": {
+   "default": "por_confirmar",
+   "enum": [
+    "si",
+    "no",
+    "por_confirmar"
+   ],
+   "title": "Sujeto Dora",
+   "type": "string"
+  },
+  "puerta": {
+   "default": "G0",
+   "enum": [
+    "G0",
+    "G1",
+    "G2",
+    "G3",
+    "G4",
+    "G5",
+    "G6"
+   ],
+   "title": "Puerta",
+   "type": "string"
+  },
+  "nivel_datos": {
+   "default": "L0",
+   "enum": [
+    "L0",
+    "L1",
+    "L2",
+    "L3",
+    "L4"
+   ],
+   "title": "Nivel Datos",
+   "type": "string"
+  },
+  "interlocutores": {
+   "default": [],
+   "items": {
+    "$ref": "#/$defs/Interlocutor"
+   },
+   "title": "Interlocutores",
+   "type": "array"
+  },
+  "sistemas": {
+   "default": [],
+   "items": {
+    "$ref": "#/$defs/Sistema"
+   },
+   "title": "Sistemas",
+   "type": "array"
+  },
+  "procesos": {
+   "default": [],
+   "items": {
+    "$ref": "#/$defs/ProcesoCandidato"
+   },
+   "title": "Procesos",
+   "type": "array"
+  },
+  "cualificacion": {
+   "$ref": "#/$defs/Cualificacion",
+   "default": {
+    "metricas": null,
+    "comprador_economico": null,
+    "criterios_decision": null,
+    "proceso_decision": null,
+    "proceso_compra": null,
+    "dolor": null,
+    "impulsor": null,
+    "competencia": null
+   }
+  },
+  "restricciones": {
+   "default": [],
+   "items": {
+    "type": "string"
+   },
+   "title": "Restricciones",
+   "type": "array"
+  },
+  "normas": {
+   "default": [],
+   "description": "Ids del registro de fuentes que aplican",
+   "items": {
+    "type": "string"
+   },
+   "title": "Normas",
+   "type": "array"
+  },
+  "hitos": {
+   "default": [],
+   "items": {
+    "$ref": "#/$defs/Hito"
+   },
+   "title": "Hitos",
+   "type": "array"
+  },
+  "conversaciones": {
+   "default": [],
+   "items": {
+    "$ref": "#/$defs/Conversacion"
+   },
+   "title": "Conversaciones",
+   "type": "array"
+  },
+  "preguntas_abiertas": {
+   "default": [],
+   "items": {
+    "type": "string"
+   },
+   "title": "Preguntas Abiertas",
+   "type": "array"
+  }
+ },
+ "required": [
+  "id",
+  "nombre",
+  "ficticio",
+  "actualizada",
+  "sector",
+  "tipo_entidad"
+ ],
+ "title": "FichaCliente",
+ "type": "object"
+}

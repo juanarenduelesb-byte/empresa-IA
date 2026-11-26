@@ -1352,6 +1352,32 @@
    "vigencia": "vigente",
    "estado": "validated",
    "nota": "Rechazar debe ofrecerse en la misma capa y al mismo nivel que aceptar; la primera capa incluye la petición de consentimiento. Las cookies técnicas exentas no necesitan consentimiento."
+  },
+  {
+   "id": "MOM-TEST",
+   "titulo": "The Mom Test (Rob Fitzpatrick): cómo hablar con clientes sin que te mientan",
+   "organismo": "Resumen de Sachin Rekhi",
+   "url": "https://sachinrekhi.com/the-mom-test-rob-fitzpatrick",
+   "tipo": "buena-practica",
+   "jurisdiccion": "—",
+   "version": "libro de 2013; resumen consultado 26/11/2026",
+   "autoridad": "media",
+   "vigencia": "vigente",
+   "estado": "draft",
+   "nota": "Reglas: hablar de su vida y no de tu idea; preguntar por hechos concretos del pasado, no por opiniones ni por el futuro; escuchar más que hablar. Los cumplidos no valen; el avance se mide por compromisos (tiempo, reputación o dinero). Fuente secundaria; coincide con el resumen de Yevgeniy Brikman (2023)."
+  },
+  {
+   "id": "LEI-VSM",
+   "titulo": "Value Stream Mapping (léxico del Lean Enterprise Institute)",
+   "organismo": "Lean Enterprise Institute",
+   "url": "https://www.lean.org/lexicon-terms/value-stream-mapping/",
+   "tipo": "buena-practica",
+   "jurisdiccion": "—",
+   "version": "consultado 26/11/2026",
+   "autoridad": "alta",
+   "vigencia": "vigente",
+   "estado": "draft",
+   "nota": "Mapa del flujo de material e información de un proceso; separa el tiempo de proceso del tiempo total (lead time). Base de la medición AS-IS: trabajo activo frente a espera."
   }
  ]
 }

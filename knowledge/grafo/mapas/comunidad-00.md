@@ -1,21 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 0
-miembros: 109
+miembros: 102
 cohesion: 0.05
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 0 · claude/habilidades · Legal y privacidad y Arquitecto de procesos
+# Comunidad 0 · Habilidades · Legal y privacidad y Arquitecto de procesos
 
-109 nodos agrupados por el algoritmo de Louvain. Cohesión 0.05.
-
-## Documentos
-
-- [[claude/habilidades/observabilidad|Observabilidad y alertas]]
-- [[claude/habilidades/copias-restauracion|Copias y restauración probada]]
-- [[claude/habilidades/runbook-incidente|Runbook y gestión de incidentes]]
+102 nodos agrupados por el algoritmo de Louvain. Cohesión 0.05.
 
 ## Agentes
 
@@ -82,7 +76,6 @@ tags:
 - [[claude/habilidades/citar-cerebro|Leer y citar el cerebro]]
 - [[claude/habilidades/consultar-historico|Consultar el histórico antes de hacer]]
 - [[claude/habilidades/contrato-de-tarea|Contrato de tarea]]
-- [[claude/habilidades/copias-restauracion|Copias y restauración probada]]
 - [[claude/habilidades/criterio-aceptacion|Criterio de aceptación]]
 - [[claude/habilidades/cualificacion-oportunidad|Cualificación de oportunidad]]
 - [[claude/habilidades/diseno-to-be|Diseño del proceso nuevo (TO-BE)]]
@@ -96,7 +89,6 @@ tags:
 - [[claude/habilidades/flujo-pantallas|Flujo y pantallas de una tarea]]
 - [[claude/habilidades/icp|Cliente ideal (ICP)]]
 - [[claude/habilidades/informe-as-is-to-be|Informe AS-IS / TO-BE]]
-- [[claude/habilidades/integracion-continua|Integración continua]]
 - [[claude/habilidades/inventario-ia|Inventario y clasificación de sistemas de IA]]
 - [[claude/habilidades/investigacion-cuenta|Investigación previa de una cuenta]]
 - [[claude/habilidades/linea-base|Línea base]]
@@ -106,7 +98,6 @@ tags:
 - [[claude/habilidades/matriz-ia-regla-persona|Matriz IA · regla · persona]]
 - [[claude/habilidades/mensaje-posicionamiento|Mensaje y posicionamiento]]
 - [[claude/habilidades/modelo-datos|Modelo de datos]]
-- [[claude/habilidades/observabilidad|Observabilidad y alertas]]
 - [[claude/habilidades/paquete-gestor|Paquete trimestral para el gestor]]
 - [[claude/habilidades/plan-exito-cliente|Plan de éxito del cliente]]
 - [[claude/habilidades/plan-semanal|Seguimiento semanal del plan]]
@@ -116,4 +107,7 @@ tags:
 - [[claude/habilidades/raid|Registro RAID]]
 - [[claude/habilidades/registro-tratamientos|Registro de actividades de tratamiento]]
 - [[claude/habilidades/revision-accesibilidad|Revisión de accesibilidad]]
-- … y 5 más
+- [[claude/habilidades/revision-riesgo-ia|Revisión de riesgo de IA y datos]]
+- [[claude/habilidades/revision-valor|Revisión de valor con el cliente]]
+- [[claude/habilidades/salud-cuenta|Salud de la cuenta]]
+- … y 1 más

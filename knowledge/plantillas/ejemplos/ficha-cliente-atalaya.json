@@ -1,0 +1,130 @@
+{
+ "id": "atalaya",
+ "nombre": "Correduría Atalaya (inventada)",
+ "ficticio": true,
+ "estado": "draft",
+ "actualizada": "2026-11-26",
+ "sector": "seg",
+ "tipo_entidad": "Sociedad de correduría de seguros",
+ "plantilla": "10-49",
+ "sujeto_dora": "no",
+ "puerta": "G1",
+ "nivel_datos": "L0",
+ "interlocutores": [
+  {
+   "rol": "Gerente",
+   "decide": true
+  },
+  {
+   "rol": "Responsable de siniestros",
+   "impulsor_interno": true
+  },
+  {
+   "rol": "Tramitadora de siniestros",
+   "hace_el_proceso": true
+  }
+ ],
+ "sistemas": [
+  {
+   "tipo": "Programa de gestión de la correduría",
+   "uso": "Cartera, recibos y expedientes",
+   "integracion": "exportacion"
+  },
+  {
+   "tipo": "Portales web de las aseguradoras",
+   "uso": "Dar de alta el parte",
+   "integracion": "portal_manual"
+  },
+  {
+   "tipo": "Correo y WhatsApp",
+   "uso": "Entrada de avisos de siniestro",
+   "integracion": "por_confirmar"
+  }
+ ],
+ "procesos": [
+  {
+   "nombre": "Apertura de siniestros",
+   "volumen_mes": {
+    "valor": "[por medir]",
+    "base": "hipotesis",
+    "fuente": "inventado para el ejemplo"
+   },
+   "tiempo_activo_min": {
+    "valor": "[por medir con cronómetro en la sesión de observación]",
+    "base": "hipotesis",
+    "fuente": "inventado para el ejemplo"
+   },
+   "tiempo_total": {
+    "valor": "[por medir desde los registros]",
+    "base": "hipotesis",
+    "fuente": "inventado para el ejemplo"
+   },
+   "dolor": 4,
+   "riesgo": "medio",
+   "datos_sensibles": "si",
+   "elegido": true
+  },
+  {
+   "nombre": "Renovaciones",
+   "dolor": 2,
+   "riesgo": "bajo",
+   "datos_sensibles": "no"
+  }
+ ],
+ "cualificacion": {
+  "metricas": {
+   "valor": "Tiempo desde el aviso hasta el parte registrado",
+   "base": "hipotesis",
+   "fuente": "processes/referencia-seguros-apertura-siniestros/README.md"
+  },
+  "comprador_economico": {
+   "valor": "Gerente",
+   "base": "declarado",
+   "fuente": "inventado para el ejemplo"
+  },
+  "dolor": {
+   "valor": "Los lunes se acumulan avisos del fin de semana",
+   "base": "declarado",
+   "fuente": "inventado para el ejemplo"
+  }
+ },
+ "restricciones": [
+  "Solo datos inventados hasta L2 (D-011)",
+  "Daños personales: sin datos de salud hasta que el abogado fije la base (D-024)"
+ ],
+ "normas": [
+  "LCS-50-1980",
+  "RDL-3-2020",
+  "RD-287-2021",
+  "LEY-10-2025",
+  "RGPD-2016-679"
+ ],
+ "hitos": [
+  {
+   "fecha": "2026-11-20",
+   "puerta": "G0",
+   "decision": "Elegir la apertura de siniestros como caso",
+   "quien": "Gerente"
+  }
+ ],
+ "conversaciones": [
+  {
+   "fecha": "2026-11-24",
+   "tipo": "validacion_semanal",
+   "con": [
+    "Tramitadora de siniestros"
+   ],
+   "aprendido": [
+    "Ejemplo inventado: los avisos por WhatsApp llegan sin número de póliza"
+   ],
+   "compromiso": "Nos deja observar una mañana de trabajo (tiempo)",
+   "siguiente_paso": "Sesión de observación con cronómetro",
+   "cambia": [
+    "knowledge/sectores/seguros/excepciones.md (EX-13)"
+   ]
+  }
+ ],
+ "preguntas_abiertas": [
+  "¿Cuántos portales de aseguradoras usan y cómo se entra en cada uno?"
+ ]
+}

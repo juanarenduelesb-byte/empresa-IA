@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 1
-miembros: 107
+miembros: 99
 cohesion: 0.07
 tags:
   - "mapa"
@@ -9,17 +9,15 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 1 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros
 
-107 nodos agrupados por el algoritmo de Louvain. Cohesión 0.07.
+99 nodos agrupados por el algoritmo de Louvain. Cohesión 0.07.
 
 ## Documentos
 
 - [[knowledge/fuentes/registro|Registro de fuentes]]
 - [[knowledge/sectores/especialista-sectorial|Coordinación sectorial y seguros]]
 - [[knowledge/sectores/sector-sanidad|Experto en sanidad privada]]
-- [[knowledge/seguridad-legal/cumplimiento|Responsable de cumplimiento normativo]]
 - [[knowledge/sectores/sector-financiero|Experto en servicios financieros no bancarios]]
 - [[knowledge/sectores/sector-despachos|Experto en asesorías, gestorías y despachos]]
-- [[knowledge/seguridad-legal/legal-privacidad|Especialista legal y privacidad]]
 - [[knowledge/sectores/sector-logistica|Experto en logística y transporte]]
 - [[knowledge/administracion-finanzas/contabilidad|Especialista en contabilidad y facturación]]
 - [[knowledge/sectores/sector-industria|Experto en industria manufacturera]]
@@ -38,6 +36,7 @@ tags:
 - [[knowledge/plantillas/ficha-fuente|Ficha-fuente]]
 - [[governance/legal/borradores/03-acuerdo-confidencialidad|Acuerdo de confidencialidad (mutuo) · BORRADOR PARA ABOGADO]]
 - [[docs/26-web-clientes|Web para clientes: estudio de referencias, estructura y textos (F2)]]
+- [[knowledge/metodologias-transversales/investigar|Protocolo: investigar fuera]]
 - [[knowledge/procesos/sectores|Especialistas sectoriales]]
 
 ## Decisiones
@@ -51,7 +50,6 @@ tags:
 ## Especialistas
 
 - [[knowledge/sectores/especialista-sectorial|Coordinación sectorial y seguros]]
-- [[knowledge/seguridad-legal/cumplimiento|Responsable de cumplimiento normativo]]
 - [[knowledge/administracion-finanzas/contabilidad|Especialista en contabilidad y facturación]]
 - [[knowledge/sectores/sector-sanidad|Experto en sanidad privada]]
 - [[knowledge/sectores/sector-despachos|Experto en asesorías, gestorías y despachos]]
@@ -63,7 +61,6 @@ tags:
 ## Fuentes
 
 - [[knowledge/grafo/fuentes/DORA-CNMV|DORA-CNMV · Preguntas frecuentes sobre el Reglamento (UE) 2022/2554 (DORA)]]
-- [[knowledge/grafo/fuentes/UE-RIA-OMNIBUS|UE-RIA-OMNIBUS · Reglamento (UE) 2026/1744 (ómnibus digital sobre IA), que modifica el Reglamento (UE) 2024/1689]]
 - [[knowledge/grafo/fuentes/INE-TIC-2026|INE-TIC-2026 · Encuesta sobre el uso de TIC y del comercio electrónico en las empresas, año 2025 y primer trimestre de 2026]]
 - [[knowledge/grafo/fuentes/LCS-50-1980|LCS-50-1980 · Ley 50/1980, de Contrato de Seguro]]
 - [[knowledge/grafo/fuentes/AEAT-FACTURA-CAL|AEAT-FACTURA-CAL · Factura electrónica obligatoria: calendario de implantación]]
@@ -75,9 +72,7 @@ tags:
 - [[knowledge/grafo/fuentes/LEY-10-2025|LEY-10-2025 · Ley 10/2025, de 26 de diciembre, por la que se regulan los servicios de atención a la clientela]]
 - [[knowledge/grafo/fuentes/RD-287-2021|RD-287-2021 · Real Decreto 287/2021, sobre formación y remisión de la información estadístico-contable de los distribuidores de seguros y reaseguros]]
 - [[knowledge/grafo/fuentes/UNESPA-CONVENIO-2026|UNESPA-CONVENIO-2026 · Convenio entre entidades aseguradoras de automóviles para la indemnización directa de daños materiales a vehículos (refunde CIDE, ASCIDE y CICOS)]]
-- [[knowledge/grafo/fuentes/NIS2-ES|NIS2-ES · Estado de la transposición de NIS2 en España]]
 - [[knowledge/grafo/fuentes/RGPD-2016-679|RGPD-2016-679 · Reglamento (UE) 2016/679, General de Protección de Datos]]
-- [[knowledge/grafo/fuentes/INT-MARCO|INT-MARCO · Marco integral legal, ciberseguridad e IA (España/UE) 16/11/2026]]
 - [[knowledge/grafo/fuentes/LIS-27-2014|LIS-27-2014 · Ley 27/2014, del Impuesto sobre Sociedades]]
 - [[knowledge/grafo/fuentes/RDLEG-8-2004|RDLEG-8-2004 · Real Decreto Legislativo 8/2004, texto refundido de la Ley sobre responsabilidad civil y seguro en la circulación de vehículos a motor]]
 - [[knowledge/grafo/fuentes/INT-DEC|INT-DEC · Registro de decisiones]]
@@ -92,13 +87,10 @@ tags:
 - [[knowledge/grafo/fuentes/LOSSEAR-ART99|LOSSEAR-ART99 · Ley 20/2015, de ordenación, supervisión y solvencia de las entidades aseguradoras y reaseguradoras, art. 99]]
 - [[knowledge/grafo/fuentes/PL-MA-CORREDURIAS|PL-MA-CORREDURIAS · Fusiones y adquisiciones de corredurías de seguros en España: tendencias y situación en 2025]]
 - [[knowledge/grafo/fuentes/RD-1619-2012|RD-1619-2012 · Real Decreto 1619/2012, Reglamento por el que se regulan las obligaciones de facturación]]
-- [[knowledge/grafo/fuentes/RIA-ART4-ALFABETIZACION|RIA-ART4-ALFABETIZACION · Reglamento de IA, artículo 4: alfabetización en IA]]
 - [[knowledge/grafo/fuentes/UNO-LOGISTICA|UNO-LOGISTICA · Notas de prensa de UNO, organización empresarial de logística y transporte]]
-- [[knowledge/grafo/fuentes/AEPD-RIA-ART5|AEPD-RIA-ART5 · La AEPD recuerda que ya puede actuar ante sistemas de IA]]
 - [[knowledge/grafo/fuentes/CCS-FAQ|CCS-FAQ · CCS: preguntas frecuentes del seguro de riesgos extraordinarios]]
 - [[knowledge/grafo/fuentes/DGSFP-IMPORTES-2024|DGSFP-IMPORTES-2024 · Resolución de la DGSFP de 19/04/2024: actualización de importes de capacidad financiera y RC profesional de los mediadores]]
 - [[knowledge/grafo/fuentes/DGSFP-MEDIACION|DGSFP-MEDIACION · Informe estadístico anual de mediación de seguros 2024]]
-- [[knowledge/grafo/fuentes/ISO-42001|ISO-42001 · ISO/IEC 42001:2023 Sistema de gestión de IA]]
 - [[knowledge/grafo/fuentes/LIVA-37-1992|LIVA-37-1992 · Ley 37/1992, del Impuesto sobre el Valor Añadido]]
 - [[knowledge/grafo/fuentes/MAQUINARIA-2023-1230|MAQUINARIA-2023-1230 · Reglamento (UE) 2023/1230, relativo a las máquinas]]
 - [[knowledge/grafo/fuentes/MDR-2017-745|MDR-2017-745 · Reglamento (UE) 2017/745, productos sanitarios (en el anexo I del Reglamento de IA)]]
@@ -122,4 +114,10 @@ tags:
 - [[knowledge/grafo/fuentes/GITHUB-NOTIF-INBOX|GITHUB-NOTIF-INBOX · GitHub: gestionar notificaciones desde el inbox]]
 - [[knowledge/grafo/fuentes/LEY-1-2019-SECRETOS|LEY-1-2019-SECRETOS · Ley 1/2019, de 20 de febrero, de Secretos Empresariales]]
 - [[knowledge/grafo/fuentes/LEY-35-2015|LEY-35-2015 · Ley 35/2015, de reforma del sistema para la valoración de los daños y perjuicios causados a las personas en accidentes de circulación]]
-- … y 10 más
+- [[knowledge/grafo/fuentes/LEY-5-2025|LEY-5-2025 · Ley 5/2025, de 24 de julio, que modifica el texto refundido de responsabilidad civil y seguro de vehículos a motor y la Ley 20/2015]]
+- [[knowledge/grafo/fuentes/LOPDGDD-DA17|LOPDGDD-DA17 · Ley Orgánica 3/2018 (LOPDGDD), disposición adicional decimoséptima: tratamientos de datos de salud]]
+- [[knowledge/grafo/fuentes/LSSI-34-2002|LSSI-34-2002 · Ley 34/2002, de servicios de la sociedad de la información y de comercio electrónico (LSSI-CE)]]
+- [[knowledge/grafo/fuentes/NNG-HIDDEN-NAV|NNG-HIDDEN-NAV · Hamburger Menus and Hidden Navigation Hurt UX Metrics]]
+- [[knowledge/grafo/fuentes/ORDEN-ECO-734-2004|ORDEN-ECO-734-2004 · Orden ECO/734/2004, sobre los departamentos y servicios de atención al cliente y el defensor del cliente de las entidades financieras]]
+- [[knowledge/grafo/fuentes/RIA-2024-1689|RIA-2024-1689 · Reglamento (UE) 2024/1689, de inteligencia artificial]]
+- … y 4 más

@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 6
-miembros: 52
+miembros: 50
 cohesion: 0.13
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 6 · docs · Acta de protección de la IA y examen de 50 casos y Registro de decisiones
+# Comunidad 6 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Registro de decisiones
 
-52 nodos agrupados por el algoritmo de Louvain. Cohesión 0.13.
+50 nodos agrupados por el algoritmo de Louvain. Cohesión 0.13.
 
 ## Documentos
 
@@ -27,7 +27,6 @@ tags:
 - [[docs/23-plan-maestro|Plan maestro: la empresa completa, sin que se escape nada]]
 - [[governance/legal/borradores/05-matriz-aprobaciones|Matriz de aprobaciones · BORRADOR]]
 - [[docs/22-plan-hasta-febrero|Plan de trabajo diario · 26/11/2026 → 28/02/2027]]
-- [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]]
 - [[docs/08-roadmap-y-decisiones|Roadmap y decisiones]]
 - [[docs/19-obsidian|Obsidian: el cerebro abierto en tu equipo]]
 - [[precedents/oficina/chats/seguridad|Conversaciones con Seguridad]]
@@ -49,14 +48,12 @@ tags:
 - [[knowledge/grafo/decisiones/D-021|D-021 · El cerebro se abre en Obsidian: el repositorio es el vault]]
 - [[knowledge/grafo/decisiones/D-009|D-009 · Unificación de puertas y estados]]
 - [[knowledge/grafo/decisiones/D-010|D-010 · Diagramas como código]]
-- [[knowledge/grafo/decisiones/D-024|D-024 · Paquete de dominio de seguros con un archivo máquina como fuente de las reglas]]
 - [[knowledge/grafo/decisiones/D-006|D-006 · Primer proceso piloto]]
 - [[knowledge/grafo/decisiones/D-018|D-018 · El cerebro pasa a ser un grafo de conocimiento con relaciones explicadas]]
 - [[knowledge/grafo/decisiones/D-022|D-022 · Trabajo nocturno de Claude con plan diario e informe de la mañana]]
 - [[knowledge/grafo/decisiones/D-001|D-001 · Arquitectura orientada a procesos]]
 - [[knowledge/grafo/decisiones/D-007|D-007 · Nombre provisional: Varios]]
 - [[knowledge/grafo/decisiones/D-015|D-015 · Entregables en archivos reales, memoria y Google Drive en la oficina de agentes]]
-- [[knowledge/grafo/decisiones/D-025|D-025 · La oficina se organiza en siete secciones y se abre en Inicio]]
 - [[knowledge/grafo/decisiones/D-002|D-002 · Modelo matricial]]
 - [[knowledge/grafo/decisiones/D-005|D-005 · Aislamiento multi-cliente]]
 - [[knowledge/grafo/decisiones/D-008|D-008 · Repositorio como memoria oficial y web visual]]

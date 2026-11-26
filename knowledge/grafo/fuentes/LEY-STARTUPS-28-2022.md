@@ -8,7 +8,7 @@ version: "texto consolidado"
 autoridad: "alta"
 vigencia: "vigente"
 estado: "validated"
-citada: 1
+citada: 2
 tags:
   - "fuente"
   - "vigencia/vigente"
@@ -22,4 +22,5 @@ tags:
 
 ## Citada en
 
+- [[docs/27-finanzas|Finanzas: forma jurídica, facturación, precio y caja (D2)]]
 - [[knowledge/administracion-finanzas/direccion-financiera|Director financiero (CFO)]]

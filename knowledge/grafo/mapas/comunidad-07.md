@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 7
-miembros: 46
+miembros: 45
 cohesion: 0.22
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 7 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue
 
-46 nodos agrupados por el algoritmo de Louvain. Cohesión 0.22.
+45 nodos agrupados por el algoritmo de Louvain. Cohesión 0.22.
 
 ## Documentos
 
@@ -20,8 +20,8 @@ tags:
 - [[docs/fuentes/03_03_motor_conocimiento_obsidian|Motor conocimiento obsidian]]
 - [[docs/fuentes/Marco_Integral_Legal_Ciberseguridad_IA_Espana_UE_2026-11-16|Marco Integral Legal Ciberseguridad IA Espana UE 2026-11-16]]
 - [[README|Varios — repositorio maestro]]
-- [[docs/fuentes/09_09_comunicaciones_estados|Comunicaciones estados]]
 - [[docs/atlas/12-ciclo-proyecto|12 · Ciclo de vida de un proyecto con cliente]]
+- [[docs/fuentes/09_09_comunicaciones_estados|Comunicaciones estados]]
 - [[docs/16-correcciones|Registro de correcciones a los documentos recibidos el 17/11/2026]]
 - [[docs/fuentes/06_06_calidad_gobierno|Calidad gobierno]]
 - [[docs/fuentes/05_05_seguridad_clientes|Seguridad clientes]]

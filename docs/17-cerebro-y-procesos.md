@@ -46,7 +46,7 @@ Tres especialistas no tienen puesto en la oficina (gestión de clientes, implant
 **Hipótesis:** 25 especialistas son más de los que dos socios pueden mantener. Es probable que en el piloto actúen 6–8.
 
 ## 4. Fuentes
-Hay 40 fuentes con organismo, URL, versión, autoridad, vigencia y estado. **Disputada:** el calendario de Verifactu (VERIFACTU-2028), porque hay información contradictoria sobre los plazos. Las fuentes de software libre se consultaron el 17/11/2026.
+Hay 40 fuentes con organismo, URL, versión, autoridad, vigencia y estado. **Calendario de Verifactu:** estuvo disputado (VERIFACTU-2028) hasta que el RDL 43/2026, publicado el 25/11/2026, fijó el 06/10/2028 (VERIFACTU-RDL43, pendiente de convalidación). Las fuentes de software libre se consultaron el 17/11/2026.
 
 ## 5. Procesos P01–P38
 - **P01–P30** salen de la Guía v1.4. **P31–P38** salen del Atlas de Evolución y siguen como propuesta.

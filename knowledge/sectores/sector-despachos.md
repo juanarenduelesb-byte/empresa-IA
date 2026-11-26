@@ -68,7 +68,7 @@ Todavía no hay precedentes de este tipo.
 ## 2. Conocimiento profesional
 
 ### Fundamentos y terminología
-- Verifactu es exigible el 01/01/2027 para quienes tributan por el Impuesto sobre Sociedades y el 01/07/2027 para el resto ([VERIFACTU-RDL15](../fuentes/registro.md#verifactu-rdl15)). Hay un anuncio de aplazamiento sin norma publicada ([VERIFACTU-2028](../fuentes/registro.md#verifactu-2028)).
+- Verifactu: el RDL 43/2026 (BOE 25/11/2026) aplaza la adaptación al 06/10/2028 para todos; está pendiente de convalidación y, si no se convalida, vuelven el 01/01/2027 y el 01/07/2027 del RDL 15/2025 ([VERIFACTU-RDL43](../fuentes/registro.md#verifactu-rdl43), [VERIFACTU-RDL15](../fuentes/registro.md#verifactu-rdl15)).
 - La factura electrónica entre empresas es obligatoria desde octubre de 2027 para facturación superior a 8 millones de euros y desde octubre de 2028 para el resto (AEAT-FACTURA-CAL).
 - En una encuesta de un proveedor de software a 194 despachos, el 81 % declaró trabajo extra no facturable por los cambios normativos (HOLDED-ASESORIAS-2026; señal, no dato de mercado).
 
@@ -108,6 +108,7 @@ Todavía no hay precedentes de este tipo.
 Ver *A quién convoca* y [`knowledge/navigation.json`](../navigation.json).
 
 ## 3. Fuentes
+- [VERIFACTU-RDL43](../fuentes/registro.md#verifactu-rdl43) · Real Decreto-ley 43/2026: aplazamiento de la adaptación de los sistemas informáticos de facturación (Verifactu)
 - [VERIFACTU-RDL15](../fuentes/registro.md#verifactu-rdl15) · Real Decreto-ley 15/2025: plazos de Verifactu
 - [VERIFACTU-2028](../fuentes/registro.md#verifactu-2028) · Hacienda anuncia el aplazamiento de Verifactu a octubre de 2028
 - [FACTURA-B2B](../fuentes/registro.md#factura-b2b) · Real Decreto 238/2026, factura electrónica obligatoria entre empresas

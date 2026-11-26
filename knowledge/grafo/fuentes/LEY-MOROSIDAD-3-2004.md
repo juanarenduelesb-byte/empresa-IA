@@ -8,7 +8,7 @@ version: "texto consolidado"
 autoridad: "alta"
 vigencia: "vigente"
 estado: "validated"
-citada: 2
+citada: 3
 tags:
   - "fuente"
   - "vigencia/vigente"
@@ -22,5 +22,6 @@ tags:
 
 ## Citada en
 
+- [[docs/27-finanzas|Finanzas: forma jurídica, facturación, precio y caja (D2)]]
 - [[governance/legal/borradores/01-contrato-marco-servicios|Contrato marco de prestación de servicios · BORRADOR PARA ABOGADO]]
 - [[knowledge/administracion-finanzas/contabilidad|Especialista en contabilidad y facturación]]

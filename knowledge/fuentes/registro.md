@@ -22,8 +22,8 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 | [DORA-CNMV](#dora-cnmv) | Preguntas frecuentes sobre el Reglamento (UE) 2022/2554 (DORA) | recomendacion-tecnica | alta | vigente | validated |
 | [ENS-RD311](#ens-rd311) | Real Decreto 311/2022, Esquema Nacional de Seguridad | obligacion-legal | media | vigente | validated |
 | [ISO-27001](#iso-27001) | ISO/IEC 27001:2022 (transición desde 2013 terminada el 31/10/2025) | estandar-voluntario | media | vigente | validated |
-| [VERIFACTU-RDL15](#verifactu-rdl15) | Real Decreto-ley 15/2025: plazos de Verifactu | obligacion-legal | media | vigente | validated |
-| [VERIFACTU-2028](#verifactu-2028) | Hacienda anuncia el aplazamiento de Verifactu a octubre de 2028 | prensa-especializada | media | anunciado-sin-norma | disputed |
+| [VERIFACTU-RDL15](#verifactu-rdl15) | Real Decreto-ley 15/2025: plazos de Verifactu | obligacion-legal | media | historico | validated |
+| [VERIFACTU-2028](#verifactu-2028) | Hacienda anuncia el aplazamiento de Verifactu a octubre de 2028 | prensa-especializada | media | historico | validated |
 | [FACTURA-B2B](#factura-b2b) | Real Decreto 238/2026, factura electrónica obligatoria entre empresas | obligacion-legal | media | vigente | validated |
 | [PGC-PYMES](#pgc-pymes) | Real Decreto 1515/2007, Plan General de Contabilidad de Pymes | obligacion-legal | alta | vigente | validated |
 | [LCS-50-1980](#lcs-50-1980) | Ley 50/1980, de Contrato de Seguro | obligacion-legal | alta | vigente | validated |
@@ -113,6 +113,10 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 | [AEPD-GUIA-COOKIES](#aepd-guia-cookies) | Guía sobre el uso de las cookies | recomendacion-tecnica | alta | vigente | validated |
 | [MOM-TEST](#mom-test) | The Mom Test (Rob Fitzpatrick): cómo hablar con clientes sin que te mientan | buena-practica | media | vigente | draft |
 | [LEI-VSM](#lei-vsm) | Value Stream Mapping (léxico del Lean Enterprise Institute) | buena-practica | alta | vigente | draft |
+| [VERIFACTU-RDL43](#verifactu-rdl43) | Real Decreto-ley 43/2026: aplazamiento de la adaptación de los sistemas informáticos de facturación (Verifactu) | obligacion-legal | alta | vigente | validated |
+| [LSC-ART4](#lsc-art4) | Ley de Sociedades de Capital (RDLeg 1/2010), art. 4: capital mínimo | obligacion-legal | alta | vigente | validated |
+| [AEAT-IS-TIPOS](#aeat-is-tipos) | Impuesto sobre Sociedades: tipo impositivo (microempresas, reducida dimensión y general) | obligacion-legal | alta | vigente | validated |
+| [SEGSOC-RETA-2026](#segsoc-reta-2026) | Cotización de trabajadores autónomos 2026 y encuadramiento de socios con control efectivo | obligacion-legal | alta | vigente | draft |
 
 <a id="int-guia"></a>
 ### INT-GUIA
@@ -269,9 +273,9 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** KPMG (alerta fiscal)
 - **URL:** <https://assets.kpmg.com/content/dam/kpmgsites/es/pdf/2025/12/tax-alert-el-real-decreto-ley-15-2025-amplia-plazos-adaptacion-reglamento-verifactu.pdf.coredownload.inline.pdf>
 - **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** BOE 03/12/2025
-- **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** validated
+- **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** historico · **Estado:** validated
 - **Especialistas relacionados:** Experto en asesorías, gestorías y despachos, Especialista administrativo, Especialista en contabilidad y facturación
-- **Nota:** Fecha legal vigente: 01/01/2027 para el Impuesto sobre Sociedades y 01/07/2027 para el resto.
+- **Nota:** Fijaba el 01/01/2027 para el Impuesto sobre Sociedades y el 01/07/2027 para el resto. Desplazado por el RDL 43/2026 (VERIFACTU-RDL43), en vigor desde el 26/11/2026. Vuelve a regir si el RDL 43/2026 no se convalida.
 
 <a id="verifactu-2028"></a>
 ### VERIFACTU-2028
@@ -279,9 +283,9 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Autor u organismo:** Ministerio de Hacienda (resumen de Fiscal-Impuestos)
 - **URL:** <https://www.fiscal-impuestos.com/node/41920>
 - **Tipo:** prensa-especializada · **Jurisdicción:** ES · **Versión o fecha:** nota del 05/10/2026
-- **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** anunciado-sin-norma · **Estado:** disputed
+- **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** historico · **Estado:** validated
 - **Especialistas relacionados:** Experto en asesorías, gestorías y despachos, Especialista administrativo, Especialista en contabilidad y facturación
-- **Nota:** Anuncio aún no publicado en el BOE. Mientras no haya norma, valen las fechas del RDL 15/2025.
+- **Nota:** El anuncio se convirtió en norma con el RDL 43/2026 (VERIFACTU-RDL43), publicado en el BOE el 25/11/2026.
 
 <a id="factura-b2b"></a>
 ### FACTURA-B2B
@@ -1171,4 +1175,44 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
 - **Nota:** Mapa del flujo de material e información de un proceso; separa el tiempo de proceso del tiempo total (lead time). Base de la medición AS-IS: trabajo activo frente a espera.
+
+<a id="verifactu-rdl43"></a>
+### VERIFACTU-RDL43
+- **Título:** Real Decreto-ley 43/2026: aplazamiento de la adaptación de los sistemas informáticos de facturación (Verifactu)
+- **Autor u organismo:** BOE
+- **URL:** <https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24701>
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** BOE núm. 293, 25/11/2026; en vigor 26/11/2026; convalidación del Congreso pendiente (30 días)
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** Experto en asesorías, gestorías y despachos, Especialista administrativo, Especialista en contabilidad y facturación
+- **Nota:** Disposición final primera: la adaptación coincide con el último plazo del RD 238/2026. Según la AEAT, sistemas adaptados antes del 06/10/2028 para todos, sin distinguir contribuyentes del Impuesto sobre Sociedades. Contrastado con la nota de la AEAT del 25/11/2026. Si no se convalidara, volverían las fechas del RDL 15/2025.
+
+<a id="lsc-art4"></a>
+### LSC-ART4
+- **Título:** Ley de Sociedades de Capital (RDLeg 1/2010), art. 4: capital mínimo
+- **Autor u organismo:** BOE
+- **URL:** <https://www.boe.es/buscar/act.php?id=BOE-A-2010-10544>
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** consolidado, actualizado 03/01/2025; art. 4 según la Ley 18/2022, vigente desde 19/10/2022
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** —
+- **Nota:** Capital mínimo de la SL: 1 euro. Mientras no llegue a 3.000 euros, al menos el 20 % del beneficio va a reserva legal; en liquidación, los socios responden solidariamente de la diferencia hasta 3.000 euros. Contrastado con la Ley 18/2022 (BOE-A-2022-15818).
+
+<a id="aeat-is-tipos"></a>
+### AEAT-IS-TIPOS
+- **Título:** Impuesto sobre Sociedades: tipo impositivo (microempresas, reducida dimensión y general)
+- **Autor u organismo:** Agencia Tributaria
+- **URL:** <https://sede.agenciatributaria.gob.es/Sede/impuesto-sobre-sociedades/que-base-imponible-se-determina-sociedades/tipo-impositivo.html>
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** consultado 26/11/2026
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** —
+- **Nota:** General 25 %. Microempresa (cifra de negocio menor de 1 millón): 2026, 19 % hasta 50.000 euros de base y 21 % el resto; 2027, 17 % y 20 %. Reducida dimensión: 23 % en 2026 y 22 % en 2027. Entidades de nueva creación: 15 % el primer periodo con base positiva y el siguiente (folleto de actividades económicas). Contrastado con el Manual de Sociedades 2025 (Ley 7/2024).
+
+<a id="segsoc-reta-2026"></a>
+### SEGSOC-RETA-2026
+- **Título:** Cotización de trabajadores autónomos 2026 y encuadramiento de socios con control efectivo
+- **Autor u organismo:** Seguridad Social
+- **URL:** <https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/CotizacionRecaudacionTrabajadores/10721/10724/1320/1322>
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** datos de 2026; consultado 26/11/2026
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** Cotización por rendimientos reales en 15 tramos (Orden PJC/297/2026, BOE-A-2026-7296). Cuota reducida para nuevos autónomos 12 meses, ampliable 12 más si los rendimientos no llegan al SMI; el importe de 2026 no se ha encontrado en fuente oficial. Pluriactividad: reintegro del 50 % del exceso sobre 17.323,68 euros. Socios con control efectivo (al menos la mitad del capital; se presume con un tercio, o un cuarto con funciones de dirección) van al RETA (art. 305.2 b LGSS).
 

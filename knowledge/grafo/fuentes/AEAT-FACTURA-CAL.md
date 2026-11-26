@@ -8,7 +8,7 @@ version: "consultado 17/11/2026"
 autoridad: "alta"
 vigencia: "vigente"
 estado: "validated"
-citada: 4
+citada: 5
 tags:
   - "fuente"
   - "vigencia/vigente"
@@ -22,6 +22,7 @@ tags:
 
 ## Citada en
 
+- [[docs/27-finanzas|Finanzas: forma jurídica, facturación, precio y caja (D2)]]
 - [[knowledge/administracion-finanzas/administrativo|Especialista administrativo]]
 - [[knowledge/administracion-finanzas/contabilidad|Especialista en contabilidad y facturación]]
 - [[knowledge/sectores/priorizacion|Priorización de sectores]]

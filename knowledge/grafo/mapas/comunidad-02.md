@@ -21,8 +21,8 @@ tags:
 - [[knowledge/agentes/proj|Arquitecto de procesos]]
 - [[knowledge/agentes/cfo|Director financiero]]
 - [[knowledge/agentes/comj|Jefe comercial]]
-- [[knowledge/agentes/ingj|Arquitecto técnico]]
 - [[knowledge/agentes/conta|Contabilidad y facturación]]
+- [[knowledge/agentes/ingj|Arquitecto técnico]]
 - [[knowledge/agentes/leg|Legal y privacidad]]
 - [[knowledge/agentes/ceo|CEO digital]]
 - [[knowledge/agentes/prop|Propuestas]]
@@ -72,5 +72,5 @@ tags:
 - [[claude/habilidades/plan-exito-cliente|Plan de éxito del cliente]]
 - [[claude/habilidades/propuesta-diagnostico|Propuesta de diagnóstico]]
 - [[claude/habilidades/preguntas-profesional|Preguntas para un profesional externo]]
-- [[claude/habilidades/mapeo-as-is|Mapa del proceso actual (AS-IS)]]
+- [[claude/habilidades/facturacion-cobro|Facturación y cobro]]
 - … y 33 más

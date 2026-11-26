@@ -205,9 +205,9 @@
    "jurisdiccion": "ES",
    "version": "BOE 03/12/2025",
    "autoridad": "media",
-   "vigencia": "vigente",
+   "vigencia": "historico",
    "estado": "validated",
-   "nota": "Fecha legal vigente: 01/01/2027 para el Impuesto sobre Sociedades y 01/07/2027 para el resto."
+   "nota": "Fijaba el 01/01/2027 para el Impuesto sobre Sociedades y el 01/07/2027 para el resto. Desplazado por el RDL 43/2026 (VERIFACTU-RDL43), en vigor desde el 26/11/2026. Vuelve a regir si el RDL 43/2026 no se convalida."
   },
   {
    "id": "VERIFACTU-2028",
@@ -218,9 +218,9 @@
    "jurisdiccion": "ES",
    "version": "nota del 05/10/2026",
    "autoridad": "media",
-   "vigencia": "anunciado-sin-norma",
-   "estado": "disputed",
-   "nota": "Anuncio aún no publicado en el BOE. Mientras no haya norma, valen las fechas del RDL 15/2025."
+   "vigencia": "historico",
+   "estado": "validated",
+   "nota": "El anuncio se convirtió en norma con el RDL 43/2026 (VERIFACTU-RDL43), publicado en el BOE el 25/11/2026."
   },
   {
    "id": "FACTURA-B2B",
@@ -1378,6 +1378,58 @@
    "vigencia": "vigente",
    "estado": "draft",
    "nota": "Mapa del flujo de material e información de un proceso; separa el tiempo de proceso del tiempo total (lead time). Base de la medición AS-IS: trabajo activo frente a espera."
+  },
+  {
+   "id": "VERIFACTU-RDL43",
+   "titulo": "Real Decreto-ley 43/2026: aplazamiento de la adaptación de los sistemas informáticos de facturación (Verifactu)",
+   "organismo": "BOE",
+   "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24701",
+   "tipo": "obligacion-legal",
+   "jurisdiccion": "ES",
+   "version": "BOE núm. 293, 25/11/2026; en vigor 26/11/2026; convalidación del Congreso pendiente (30 días)",
+   "autoridad": "alta",
+   "vigencia": "vigente",
+   "estado": "validated",
+   "nota": "Disposición final primera: la adaptación coincide con el último plazo del RD 238/2026. Según la AEAT, sistemas adaptados antes del 06/10/2028 para todos, sin distinguir contribuyentes del Impuesto sobre Sociedades. Contrastado con la nota de la AEAT del 25/11/2026. Si no se convalidara, volverían las fechas del RDL 15/2025."
+  },
+  {
+   "id": "LSC-ART4",
+   "titulo": "Ley de Sociedades de Capital (RDLeg 1/2010), art. 4: capital mínimo",
+   "organismo": "BOE",
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2010-10544",
+   "tipo": "obligacion-legal",
+   "jurisdiccion": "ES",
+   "version": "consolidado, actualizado 03/01/2025; art. 4 según la Ley 18/2022, vigente desde 19/10/2022",
+   "autoridad": "alta",
+   "vigencia": "vigente",
+   "estado": "validated",
+   "nota": "Capital mínimo de la SL: 1 euro. Mientras no llegue a 3.000 euros, al menos el 20 % del beneficio va a reserva legal; en liquidación, los socios responden solidariamente de la diferencia hasta 3.000 euros. Contrastado con la Ley 18/2022 (BOE-A-2022-15818)."
+  },
+  {
+   "id": "AEAT-IS-TIPOS",
+   "titulo": "Impuesto sobre Sociedades: tipo impositivo (microempresas, reducida dimensión y general)",
+   "organismo": "Agencia Tributaria",
+   "url": "https://sede.agenciatributaria.gob.es/Sede/impuesto-sobre-sociedades/que-base-imponible-se-determina-sociedades/tipo-impositivo.html",
+   "tipo": "obligacion-legal",
+   "jurisdiccion": "ES",
+   "version": "consultado 26/11/2026",
+   "autoridad": "alta",
+   "vigencia": "vigente",
+   "estado": "validated",
+   "nota": "General 25 %. Microempresa (cifra de negocio menor de 1 millón): 2026, 19 % hasta 50.000 euros de base y 21 % el resto; 2027, 17 % y 20 %. Reducida dimensión: 23 % en 2026 y 22 % en 2027. Entidades de nueva creación: 15 % el primer periodo con base positiva y el siguiente (folleto de actividades económicas). Contrastado con el Manual de Sociedades 2025 (Ley 7/2024)."
+  },
+  {
+   "id": "SEGSOC-RETA-2026",
+   "titulo": "Cotización de trabajadores autónomos 2026 y encuadramiento de socios con control efectivo",
+   "organismo": "Seguridad Social",
+   "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/CotizacionRecaudacionTrabajadores/10721/10724/1320/1322",
+   "tipo": "obligacion-legal",
+   "jurisdiccion": "ES",
+   "version": "datos de 2026; consultado 26/11/2026",
+   "autoridad": "alta",
+   "vigencia": "vigente",
+   "estado": "draft",
+   "nota": "Cotización por rendimientos reales en 15 tramos (Orden PJC/297/2026, BOE-A-2026-7296). Cuota reducida para nuevos autónomos 12 meses, ampliable 12 más si los rendimientos no llegan al SMI; el importe de 2026 no se ha encontrado en fuente oficial. Pluriactividad: reintegro del 50 % del exceso sobre 17.323,68 euros. Socios con control efectivo (al menos la mitad del capital; se presume con un tercio, o un cuarto con funciones de dirección) van al RETA (art. 305.2 b LGSS)."
   }
  ]
 }

@@ -8,7 +8,7 @@ version: "BOE 31/03/2026; en vigor 20/04/2026"
 autoridad: "media"
 vigencia: "vigente"
 estado: "validated"
-citada: 3
+citada: 4
 tags:
   - "fuente"
   - "vigencia/vigente"
@@ -22,6 +22,7 @@ tags:
 
 ## Citada en
 
+- [[docs/27-finanzas|Finanzas: forma jurídica, facturación, precio y caja (D2)]]
 - [[knowledge/administracion-finanzas/administrativo|Especialista administrativo]]
 - [[knowledge/administracion-finanzas/contabilidad|Especialista en contabilidad y facturación]]
 - [[knowledge/sectores/sector-despachos|Experto en asesorías, gestorías y despachos]]

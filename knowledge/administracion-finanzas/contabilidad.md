@@ -123,6 +123,7 @@ Ver *A quién convoca* y [`knowledge/navigation.json`](../navigation.json).
 - [RD-1619-2012](../fuentes/registro.md#rd-1619-2012) · Real Decreto 1619/2012, Reglamento por el que se regulan las obligaciones de facturación
 - [LIS-27-2014](../fuentes/registro.md#lis-27-2014) · Ley 27/2014, del Impuesto sobre Sociedades
 - [LEY-MOROSIDAD-3-2004](../fuentes/registro.md#ley-morosidad-3-2004) · Ley 3/2004, medidas de lucha contra la morosidad en operaciones comerciales
+- [VERIFACTU-RDL43](../fuentes/registro.md#verifactu-rdl43) · Real Decreto-ley 43/2026: aplazamiento de la adaptación de los sistemas informáticos de facturación (Verifactu)
 - [VERIFACTU-RDL15](../fuentes/registro.md#verifactu-rdl15) · Real Decreto-ley 15/2025: plazos de Verifactu
 - [VERIFACTU-2028](../fuentes/registro.md#verifactu-2028) · Hacienda anuncia el aplazamiento de Verifactu a octubre de 2028
 - [FACTURA-B2B](../fuentes/registro.md#factura-b2b) · Real Decreto 238/2026, factura electrónica obligatoria entre empresas

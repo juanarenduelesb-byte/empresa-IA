@@ -6,19 +6,19 @@ organismo: "Ministerio de Hacienda (resumen de Fiscal-Impuestos)"
 fuente_tipo: "prensa-especializada"
 version: "nota del 05/10/2026"
 autoridad: "media"
-vigencia: "anunciado-sin-norma"
-estado: "disputed"
+vigencia: "historico"
+estado: "validated"
 citada: 4
 tags:
   - "fuente"
-  - "vigencia/anunciado-sin-norma"
+  - "vigencia/historico"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # VERIFACTU-2028 · Hacienda anuncia el aplazamiento de Verifactu a octubre de 2028
 
 - Origen: <https://www.fiscal-impuestos.com/node/41920>
 - Registro: [[knowledge/fuentes/registro|registro de fuentes]]
-- Nota: Anuncio aún no publicado en el BOE. Mientras no haya norma, valen las fechas del RDL 15/2025.
+- Nota: El anuncio se convirtió en norma con el RDL 43/2026 (VERIFACTU-RDL43), publicado en el BOE el 25/11/2026.
 
 ## Citada en
 

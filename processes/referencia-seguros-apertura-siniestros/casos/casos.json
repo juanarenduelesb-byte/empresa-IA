@@ -1,0 +1,487 @@
+{
+ "aviso": "Casos INVENTADOS (D-011). Ninguna persona, póliza ni hecho es real. Validar con tramitadores antes de tomarlos como representativos.",
+ "version": "2026-11-26",
+ "casos": [
+  {
+   "id": "S01",
+   "titulo": "Fuga de agua en la cocina, sin incidencias",
+   "canal": "correo",
+   "fecha_recepcion": "2026-11-20",
+   "mensaje": "Buenos días, soy Lucía Inventada, póliza FIC-HOG-001. Ayer por la tarde se rompió el latiguillo del fregadero y se ha mojado el suelo de la cocina. Os mando fotos. Mi teléfono es el de siempre.",
+   "hechos": {
+    "poliza_numero": "FIC-HOG-001",
+    "ramo": "hogar",
+    "causa": "agua",
+    "fecha_ocurrencia": "2026-11-19",
+    "fecha_conocimiento": "2026-11-19"
+   },
+   "esperado": {
+    "excepciones": [],
+    "accion": "preparar_parte",
+    "tambien": [],
+    "anotar_libro_siniestros": true
+   },
+   "por_que": "Caso limpio: póliza vigente, en plazo, datos completos. Se prepara el parte y el envío espera aprobación."
+  },
+  {
+   "id": "S02",
+   "titulo": "Daños por agua comunicados tarde",
+   "canal": "telefono",
+   "fecha_recepcion": "2026-11-20",
+   "mensaje": "Llama Andrés Ficticio, póliza FIC-HOG-001: volvió de viaje el día 6 y encontró una mancha de humedad en el techo del dormitorio por una fuga del piso de arriba. No llamó antes porque pensaba arreglarlo él.",
+   "hechos": {
+    "poliza_numero": "FIC-HOG-001",
+    "ramo": "hogar",
+    "causa": "agua",
+    "fecha_ocurrencia": "2026-11-04",
+    "fecha_conocimiento": "2026-11-06"
+   },
+   "esperado": {
+    "excepciones": [
+     "EX-01"
+    ],
+    "accion": "preparar_parte",
+    "tambien": [],
+    "anotar_libro_siniestros": true
+   },
+   "por_que": "14 días desde que lo conoció: se avisa del retraso, pero no se rechaza ni se deja de abrir (LCS art. 16)."
+  },
+  {
+   "id": "S03",
+   "titulo": "Comercio con plazo de póliza más amplio",
+   "canal": "correo",
+   "fecha_recepcion": "2026-11-20",
+   "mensaje": "Somos Papelería Inventada, póliza FIC-COM-001. El día 10 se fundió el motor de la persiana del local por una subida de tensión. Adjuntamos la factura del técnico.",
+   "hechos": {
+    "poliza_numero": "FIC-COM-001",
+    "ramo": "comercio",
+    "causa": "danos_electricos",
+    "fecha_ocurrencia": "2026-11-10",
+    "fecha_conocimiento": "2026-11-10"
+   },
+   "esperado": {
+    "excepciones": [],
+    "accion": "preparar_parte",
+    "tambien": [],
+    "anotar_libro_siniestros": true
+   },
+   "por_que": "Han pasado 10 días, pero la póliza da 15: no salta EX-01. Comprueba que se usa el plazo de la póliza."
+  },
+  {
+   "id": "S04",
+   "titulo": "Inundación extraordinaria",
+   "canal": "whatsapp",
+   "fecha_recepcion": "2026-11-20",
+   "mensaje": "Hola, soy Rosa Ficticia, FIC-HOG-001. Con la riada de anteayer entró agua y barro en el bajo, se ha estropeado el mobiliario. Dicen en las noticias que es una inundación extraordinaria.",
+   "hechos": {
+    "poliza_numero": "FIC-HOG-001",
+    "ramo": "hogar",
+    "causa": "inundacion_extraordinaria",
+    "fecha_ocurrencia": "2026-11-18",
+    "fecha_conocimiento": "2026-11-18"
+   },
+   "esperado": {
+    "excepciones": [
+     "EX-03"
+    ],
+    "accion": "pasar_a_persona",
+    "tambien": [],
+    "anotar_libro_siniestros": true
+   },
+   "por_que": "La causa está en la lista del RD 300/2004: posible vía CCS. Decide y presenta una persona."
+  },
+  {
+   "id": "S05",
+   "titulo": "Tempestad atípica a los tres días de contratar",
+   "canal": "correo",
+   "fecha_recepcion": "2026-11-19",
+   "mensaje": "Buenas, póliza FIC-HOG-004 que contratamos hace nada. El día 18 un tornado nos arrancó parte del tejado del garaje. Hay vídeos de los vecinos.",
+   "hechos": {
+    "poliza_numero": "FIC-HOG-004",
+    "ramo": "hogar",
+    "causa": "tempestad_ciclonica_atipica",
+    "fecha_ocurrencia": "2026-11-18",
+    "fecha_conocimiento": "2026-11-18"
+   },
+   "esperado": {
+    "excepciones": [
+     "EX-03"
+    ],
+    "accion": "pasar_a_persona",
+    "tambien": [],
+    "anotar_libro_siniestros": true
+   },
+   "por_que": "Riesgo extraordinario dentro de la carencia de 7 días desde el efecto: el detalle lo señala para la persona."
+  },
+  {
+   "id": "S06",
+   "titulo": "Colisión de dos coches con declaración amistosa",
+   "canal": "formulario",
+   "fecha_recepcion": "2026-11-21",
+   "mensaje": "Formulario web. Tomador: Jorge Inventado, póliza FIC-AUT-001. Golpe por alcance en una rotonda el 20/11. Solo chapa. Firmamos el parte amistoso los dos conductores; adjunto foto.",
+   "hechos": {
+    "poliza_numero": "FIC-AUT-001",
+    "ramo": "automovil",
+    "causa": "colision",
+    "fecha_ocurrencia": "2026-11-20",
+    "fecha_conocimiento": "2026-11-20",
+    "vehiculos": 2,
+    "colision_directa": true,
+    "declaracion_amistosa": true
+   },
+   "esperado": {
+    "excepciones": [
+     "EX-05"
+    ],
+    "accion": "preparar_parte",
+    "tambien": [],
+    "anotar_libro_siniestros": true
+   },
+   "por_que": "Dos vehículos, colisión directa, solo daños materiales: posible convenio de indemnización directa. Con declaración amistosa no hay que pedirla."
+  },
+  {
+   "id": "S07",
+   "titulo": "Colisión en cadena de tres vehículos",
+   "canal": "telefono",
+   "fecha_recepcion": "2026-11-21",
+   "mensaje": "Llama Marta Ficticia, FIC-AUT-002. Atasco en la autovía, el de atrás le empujó contra el de delante. Tres coches, nadie herido. No hicieron parte amistoso.",
+   "hechos": {
+    "poliza_numero": "FIC-AUT-002",
+    "ramo": "automovil",
+    "causa": "colision",
+    "fecha_ocurrencia": "2026-11-21",
+    "fecha_conocimiento": "2026-11-21",
+    "vehiculos": 3,
+    "colision_directa": true,
+    "declaracion_amistosa": false
+   },
+   "esperado": {
+    "excepciones": [
+     "EX-05"
+    ],
+    "accion": "preparar_parte",
+    "tambien": [],
+    "anotar_libro_siniestros": true
+   },
+   "por_que": "Más de dos vehículos: no es convenio sino posible SDM, así que no se pide declaración amistosa."
+  },
+  {
+   "id": "S08",
+   "titulo": "Colisión con el conductor herido",
+   "canal": "correo",
+   "fecha_recepcion": "2026-11-21",
+   "mensaje": "Soy Pablo Inventado, FIC-AUT-003. Ayer me embistió otro coche en un cruce. Me llevaron a urgencias con dolor cervical y me han dado un informe. El coche tiene el lateral hundido.",
+   "hechos": {
+    "poliza_numero": "FIC-AUT-003",
+    "ramo": "automovil",
+    "causa": "colision",
+    "fecha_ocurrencia": "2026-11-20",
+    "fecha_conocimiento": "2026-11-20",
+    "vehiculos": 2,
+    "colision_directa": true,
+    "danos_personales": true
+   },
+   "esperado": {
+    "excepciones": [
+     "EX-04"
+    ],
+    "accion": "pasar_a_persona",
+    "tambien": [],
+    "anotar_libro_siniestros": true
+   },
+   "por_que": "Hay daños personales: no se guardan datos de salud y decide una persona. No salta EX-05 porque no son solo daños materiales."
+  },
+  {
+   "id": "S09",
+   "titulo": "Un vecino perjudicado reclama",
+   "canal": "correo",
+   "fecha_recepcion": "2026-11-22",
+   "mensaje": "Me llamo Elena Ficticia, vivo en el piso de abajo de un cliente vuestro (póliza FIC-HOG-001). Su lavadora me ha inundado el baño el día 21. Quiero que su seguro me pague la reparación.",
+   "hechos": {
+    "remitente": "tercero",
+    "poliza_numero": "FIC-HOG-001",
+    "ramo": "hogar",
+    "causa": "agua",
+    "fecha_ocurrencia": "2026-11-21",
+    "fecha_conocimiento": "2026-11-21"
+   },
+   "esperado": {
+    "excepciones": [
+     "EX-06"
+    ],
+    "accion": "trasladar_a_aseguradora",
+    "tambien": [],
+    "anotar_libro_siniestros": false
+   },
+   "por_que": "Escribe un tercero perjudicado (acción directa, LCS art. 76): se traslada a la aseguradora; no es un parte del cliente."
+  },
+  {
+   "id": "S10",
+   "titulo": "Siniestro nuevo con queja por el anterior",
+   "canal": "correo",
+   "fecha_recepcion": "2026-11-22",
+   "mensaje": "Soy Lucía Inventada, FIC-HOG-001 otra vez. Primero, quiero quejarme: del siniestro de agua todavía no sé nada y nadie me contesta. Y además ahora se ha roto el cristal de la mampara del baño (hoy).",
+   "hechos": {
+    "poliza_numero": "FIC-HOG-001",
+    "ramo": "hogar",
+    "causa": "rotura_cristales",
+    "fecha_ocurrencia": "2026-11-22",
+    "fecha_conocimiento": "2026-11-22",
+    "queja": true
+   },
+   "esperado": {
+    "excepciones": [
+     "EX-07"
+    ],
+    "accion": "preparar_parte",
+    "tambien": [
+     "abrir_reclamacion"
+    ],
+    "anotar_libro_siniestros": true
+   },
+   "por_que": "Se abre el siniestro nuevo y, aparte, la queja va al servicio de atención al cliente (un mes para resolver)."
+  },
+  {
+   "id": "S11",
+   "titulo": "Pide hablar con una persona",
+   "canal": "whatsapp",
+   "fecha_recepcion": "2026-11-22",
+   "mensaje": "FIC-HOG-005. Se me ha caído la tele al suelo esta mañana. Prefiero hablar con alguien de la correduría, no con un robot, por favor.",
+   "hechos": {
+    "poliza_numero": "FIC-HOG-005",
+    "ramo": "hogar",
+    "causa": "danos_accidentales",
+    "fecha_ocurrencia": "2026-11-22",
+    "fecha_conocimiento": "2026-11-22",
+    "pide_persona": true
+   },
+   "esperado": {
+    "excepciones": [
+     "EX-08"
+    ],
+    "accion": "pasar_a_persona",
+    "tambien": [],
+    "anotar_libro_siniestros": true
+   },
+   "por_que": "El cliente pide una persona: se le pasa sin más preguntas (Ley 10/2025, art. 8)."
+  },
+  {
+   "id": "S12",
+   "titulo": "Fechas incoherentes",
+   "canal": "correo",
+   "fecha_recepcion": "2026-11-23",
+   "mensaje": "Siniestro de robo en vivienda, póliza FIC-HOG-005, el 10/11. Adjunto la factura del televisor robado, con fecha 15/11.",
+   "hechos": {
+    "poliza_numero": "FIC-HOG-005",
+    "ramo": "hogar",
+    "causa": "robo",
+    "fecha_ocurrencia": "2026-11-10",
+    "fecha_conocimiento": "2026-11-10",
+    "incoherencias": [
+     "La factura del bien robado es posterior al robo"
+    ]
+   },
+   "esperado": {
+    "excepciones": [
+     "EX-01",
+     "EX-09"
+    ],
+    "accion": "pasar_a_persona",
+    "tambien": [],
+    "anotar_libro_siniestros": true
+   },
+   "por_que": "Hay una incoherencia concreta: se señala sin calificarla; no se acusa ni se rechaza. Además llega a los 13 días."
+  },
+  {
+   "id": "S13",
+   "titulo": "Daño antiguo cerca de la prescripción",
+   "canal": "correo",
+   "fecha_recepcion": "2026-11-23",
+   "mensaje": "Hola, FIC-HOG-001. En marzo de 2025 tuvimos una filtración de la terraza y nunca lo declaramos. ¿Todavía se puede?",
+   "hechos": {
+    "poliza_numero": "FIC-HOG-001",
+    "ramo": "hogar",
+    "causa": "agua",
+    "fecha_ocurrencia": "2025-03-15",
+    "fecha_conocimiento": "2025-03-15"
+   },
+   "esperado": {
+    "excepciones": [
+     "EX-01",
+     "EX-02",
+     "EX-10"
+    ],
+    "accion": "pasar_a_persona",
+    "tambien": [],
+    "anotar_libro_siniestros": true
+   },
+   "por_que": "Más de 18 meses en un seguro de daños (aviso propio, la prescripción es a 2 años) y además el siniestro es anterior al efecto de la póliza actual."
+  },
+  {
+   "id": "S14",
+   "titulo": "Dos pólizas para el mismo daño",
+   "canal": "correo",
+   "fecha_recepcion": "2026-11-23",
+   "mensaje": "Tengo dos seguros de hogar, el FIC-HOG-005 con vosotros y otro de mi banco. Ayer un cortocircuito quemó la placa de la cocina.",
+   "hechos": {
+    "poliza_numero": "FIC-HOG-005",
+    "ramo": "hogar",
+    "causa": "danos_electricos",
+    "fecha_ocurrencia": "2026-11-22",
+    "fecha_conocimiento": "2026-11-22",
+    "otras_polizas": true
+   },
+   "esperado": {
+    "excepciones": [
+     "EX-11"
+    ],
+    "accion": "pasar_a_persona",
+    "tambien": [],
+    "anotar_libro_siniestros": true
+   },
+   "por_que": "Posible concurrencia de seguros: lo decide un tramitador."
+  },
+  {
+   "id": "S15",
+   "titulo": "Pide que la correduría adelante el dinero",
+   "canal": "telefono",
+   "fecha_recepcion": "2026-11-23",
+   "mensaje": "Llama Andrés Ficticio, FIC-HOG-001: se le ha roto el termo hoy. Pide que la correduría le adelante el dinero del técnico y ya lo cobraréis de la aseguradora.",
+   "hechos": {
+    "poliza_numero": "FIC-HOG-001",
+    "ramo": "hogar",
+    "causa": "averia_equipos",
+    "fecha_ocurrencia": "2026-11-23",
+    "fecha_conocimiento": "2026-11-23",
+    "movimiento_dinero": true
+   },
+   "esperado": {
+    "excepciones": [
+     "EX-12"
+    ],
+    "accion": "pasar_a_persona",
+    "tambien": [],
+    "anotar_libro_siniestros": true
+   },
+   "por_que": "Hay dinero de por medio: cuentas de clientes separadas y aprobación humana."
+  },
+  {
+   "id": "S16",
+   "titulo": "Faltan la póliza y la fecha",
+   "canal": "whatsapp",
+   "fecha_recepcion": "2026-11-24",
+   "mensaje": "Hola, se me ha inundado el baño, ¿qué tengo que hacer?",
+   "hechos": {
+    "ramo": "hogar",
+    "causa": "agua",
+    "hay_contacto": true
+   },
+   "esperado": {
+    "excepciones": [
+     "EX-13"
+    ],
+    "accion": "pedir_documentacion",
+    "tambien": [],
+    "anotar_libro_siniestros": false
+   },
+   "por_que": "Faltan el número de póliza y la fecha: se prepara la petición de documentación y la envía una persona."
+  },
+  {
+   "id": "S17",
+   "titulo": "Póliza vencida",
+   "canal": "correo",
+   "fecha_recepcion": "2026-11-24",
+   "mensaje": "Póliza FIC-HOG-002. El día 22 se nos cayó una rama del árbol del vecino sobre el tejado.",
+   "hechos": {
+    "poliza_numero": "FIC-HOG-002",
+    "ramo": "hogar",
+    "causa": "caida_objetos",
+    "fecha_ocurrencia": "2026-11-22",
+    "fecha_conocimiento": "2026-11-22"
+   },
+   "esperado": {
+    "excepciones": [
+     "EX-02"
+    ],
+    "accion": "pasar_a_persona",
+    "tambien": [],
+    "anotar_libro_siniestros": true
+   },
+   "por_que": "La póliza venció el 19/11: no se abre parte en el portal; lo revisa una persona."
+  },
+  {
+   "id": "S18",
+   "titulo": "Recibo pendiente",
+   "canal": "correo",
+   "fecha_recepcion": "2026-11-24",
+   "mensaje": "Soy de la póliza FIC-HOG-003. Ayer se rompió una tubería del jardín.",
+   "hechos": {
+    "poliza_numero": "FIC-HOG-003",
+    "ramo": "hogar",
+    "causa": "agua",
+    "fecha_ocurrencia": "2026-11-23",
+    "fecha_conocimiento": "2026-11-23"
+   },
+   "esperado": {
+    "excepciones": [
+     "EX-02"
+    ],
+    "accion": "pasar_a_persona",
+    "tambien": [],
+    "anotar_libro_siniestros": true
+   },
+   "por_que": "El recibo está pendiente; las consecuencias del impago (LCS art. 15) las valora una persona."
+  },
+  {
+   "id": "S19",
+   "titulo": "Robo con denuncia policial",
+   "canal": "presencial",
+   "fecha_recepcion": "2026-11-24",
+   "mensaje": "Viene a la oficina Jorge Inventado con la denuncia de la policía: el día 23 le robaron la bici del trastero. Póliza FIC-HOG-005.",
+   "hechos": {
+    "poliza_numero": "FIC-HOG-005",
+    "ramo": "hogar",
+    "causa": "robo",
+    "fecha_ocurrencia": "2026-11-23",
+    "fecha_conocimiento": "2026-11-23",
+    "reclamacion_judicial_o_atestado": true
+   },
+   "esperado": {
+    "excepciones": [
+     "EX-14"
+    ],
+    "accion": "pasar_a_persona",
+    "tambien": [],
+    "anotar_libro_siniestros": true
+   },
+   "por_que": "Hay denuncia: se anota en el libro de siniestros (RD 287/2021, art. 15 c) y lo lleva una persona."
+  },
+  {
+   "id": "S20",
+   "titulo": "Fallecimiento en un seguro de accidentes",
+   "canal": "correo",
+   "fecha_recepcion": "2026-11-25",
+   "mensaje": "Escribo como hija de un asegurado de la póliza FIC-ACC-001. Mi padre falleció el día 20 en un accidente de tráfico. No sé qué documentos necesitáis.",
+   "hechos": {
+    "remitente": "beneficiario",
+    "poliza_numero": "FIC-ACC-001",
+    "ramo": "accidentes",
+    "causa": "accidente",
+    "fecha_ocurrencia": "2026-11-20",
+    "fecha_conocimiento": "2026-11-20",
+    "danos_personales": true,
+    "vulnerable_o_fallecimiento": true
+   },
+   "esperado": {
+    "excepciones": [
+     "EX-04",
+     "EX-15"
+    ],
+    "accion": "pasar_a_persona",
+    "tambien": [],
+    "anotar_libro_siniestros": true
+   },
+   "por_que": "Fallecimiento: prioridad, trato cuidadoso y ningún dato de salud guardado. Lo lleva una persona."
+  }
+ ]
+}

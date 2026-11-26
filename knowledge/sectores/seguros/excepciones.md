@@ -37,7 +37,7 @@ tags:
 - **Base:** con fuente · [LCS-50-1980](../../fuentes/registro.md#lcs-50-1980)
 
 ## EX-02 · Póliza no encontrada, no vigente o con recibo impagado
-- **Disparador:** no hay póliza que case, o fecha_siniestro fuera de vigencia, o recibo pendiente.
+- **Disparador:** hay número de póliza pero no casa con la cartera, la fecha de ocurrencia cae fuera de la vigencia o el recibo está pendiente.
 - **Regla:** No abrir parte en el portal; pasar a un tramitador. Las consecuencias del impago (LCS art. 15) no se han leído esta noche.
 - **IA:** Propone la póliza más probable con su confianza; no la elige.
 - **Decide:** persona.
@@ -58,7 +58,7 @@ tags:
 - **Base:** con fuente · [RGPD-2016-679](../../fuentes/registro.md#rgpd-2016-679), [LOSSEAR-ART99](../../fuentes/registro.md#lossear-art99), [AEPD-CORREDOR-2018](../../fuentes/registro.md#aepd-corredor-2018)
 
 ## EX-05 · Colisión de dos vehículos con daños materiales
-- **Disparador:** ramo automóviles, dos vehículos, colisión directa, solo daños materiales.
+- **Disparador:** ramo automóviles, dos o más vehículos y solo daños materiales: con dos vehículos y colisión directa, posible convenio; si no, posible SDM.
 - **Regla:** Pedir la declaración amistosa si existe; marcar posible convenio de indemnización directa. Si hay más de dos vehículos o no hubo colisión directa, marcar posible SDM.
 - **IA:** Extrae vehículos, matrículas y si hay declaración amistosa.
 - **Decide:** aseguradora.
@@ -114,7 +114,7 @@ tags:
 - **Base:** con fuente · [RDL-3-2020](../../fuentes/registro.md#rdl-3-2020), [INT-DEC](../../fuentes/registro.md#int-dec)
 
 ## EX-13 · Faltan datos mínimos
-- **Disparador:** falta alguno de: póliza, fecha de ocurrencia, descripción, contacto.
+- **Disparador:** falta alguno de: número de póliza, fecha de ocurrencia, descripción, contacto.
 - **Regla:** Preparar la petición de documentación; enviarla es una acción externa que aprueba una persona.
 - **IA:** Redacta la petición con la lista de lo que falta.
 - **Decide:** persona.

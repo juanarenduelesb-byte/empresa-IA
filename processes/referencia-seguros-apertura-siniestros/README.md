@@ -46,5 +46,8 @@ flowchart TD
 
 La cobertura y la indemnización no las decide la IA (Atlas §5).
 
+## Casos de prueba
+20 siniestros inventados con su resultado esperado y las reglas fijas que los resuelven: [casos/](casos/README.md) (C1).
+
 ## Métrica de éxito candidata
 Tiempo desde la comunicación hasta el parte registrado, con la línea base de las entrevistas. El umbral del examen está pendiente de decidir (22/01/2027).

@@ -5,8 +5,8 @@ Cómo está conectado el cerebro de Varios: qué sostiene todo, qué temas forma
 
 ## Resumen
 
-- 4717 nodos: seccion 4058, documento 349, fuente 95, habilidad 65, proceso 38, especialista 34, agente 34, decision 25, puerta 12, departamento 7.
-- 6357 relaciones: 61 % EXTRACTADAS (escritas en la fuente), 39 % INFERIDAS (temas compartidos, con puntuación) y 0 AMBIGUAS (para revisar).
+- 4722 nodos: seccion 4062, documento 350, fuente 95, habilidad 65, proceso 38, especialista 34, agente 34, decision 25, puerta 12, departamento 7.
+- 6364 relaciones: 61 % EXTRACTADAS (escritas en la fuente), 39 % INFERIDAS (temas compartidos, con puntuación) y 0 AMBIGUAS (para revisar).
 - 12 comunidades de temas.
 
 ## Nodos centrales
@@ -36,10 +36,10 @@ Nodos por los que pasa el camino entre comunidades distintas (intermediación).
 - **Índice del conocimiento de Varios** · intermediación 0.056 · une la comunidad 5 con 2, 3, 4, 6, 7, 8
 - **L2 (puerta técnica)** · intermediación 0.048 · une la comunidad 7 con 1, 2, 3, 4, 5, 6
 - **Guia de Arranque Proyecto v1.4 Diseno Cerrado** · intermediación 0.043 · une la comunidad 6 con 1, 3, 5, 7, 8, 9
-- **CEO digital** · intermediación 0.025 · une la comunidad 3 con 1, 2, 5, 6, 7, 8
+- **CEO digital** · intermediación 0.024 · une la comunidad 3 con 1, 2, 5, 6, 7, 8
 - **Experto en asesorías y despachos** · intermediación 0.022 · une la comunidad 1 con 0, 2, 4, 6, 7
+- **D-011 · Construir primero, clientes desde el 15/02/2027** · intermediación 0.021 · une la comunidad 4 con 1, 2, 5, 6, 7, 11
 - **P31 · Calificación de oportunidad** · intermediación 0.021 · une la comunidad 5 con 1, 2, 3, 6, 7, 8
-- **D-011 · Construir primero, clientes desde el 15/02/2027** · intermediación 0.02 · une la comunidad 4 con 1, 2, 5, 6, 7, 11
 
 ## Conexiones sorprendentes
 
@@ -76,7 +76,7 @@ Cohesión 0.13 · 75 nodos: Dependencias entre procesos; CEO digital; Especialis
 
 ### 4 · precedents/oficina · Propuesta de proceso de referencia: siniestros en corredurías y Conversaciones con Coordinación sectorial · Seguros
 
-Cohesión 0.16 · 58 nodos: Propuesta de proceso de referencia: siniestros en corredurías; Conversaciones con Coordinación sectorial · Seguros; Guion de validación semanal: apertura de siniestros; Conversaciones con Arquitecto de procesos; Memoria de la oficina; Línea base y fichas de métricas · Atalaya; CCS · Consorcio de Compensación de Seguros: riesgos extraordinarios; D-011 · Construir primero, clientes desde el 15/02/2027 (y 50 más)
+Cohesión 0.15 · 59 nodos: Propuesta de proceso de referencia: siniestros en corredurías; Conversaciones con Coordinación sectorial · Seguros; Guion de validación semanal: apertura de siniestros; Conversaciones con Arquitecto de procesos; Memoria de la oficina; Línea base y fichas de métricas · Atalaya; D-011 · Construir primero, clientes desde el 15/02/2027; CCS · Consorcio de Compensación de Seguros: riesgos extraordinarios (y 51 más)
 
 ### 5 · processes/catalog · Índice del conocimiento de Varios y Arquitecto de procesos
 

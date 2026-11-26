@@ -14,7 +14,7 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 - [[knowledge/grafo/mapas/comunidad-01|Comunidad 1 · claude/habilidades · Habilidades de los agentes y Experto en asesorías y despachos]] (98 nodos)
 - [[knowledge/grafo/mapas/comunidad-02|Comunidad 2 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros]] (88 nodos)
 - [[knowledge/grafo/mapas/comunidad-03|Comunidad 3 · knowledge/ingenieria · Dependencias entre procesos y CEO digital]] (75 nodos)
-- [[knowledge/grafo/mapas/comunidad-04|Comunidad 4 · precedents/oficina · Propuesta de proceso de referencia: siniestros en corredurías y Conversaciones con Coordinación sectorial · Seguros]] (58 nodos)
+- [[knowledge/grafo/mapas/comunidad-04|Comunidad 4 · precedents/oficina · Propuesta de proceso de referencia: siniestros en corredurías y Conversaciones con Coordinación sectorial · Seguros]] (59 nodos)
 - [[knowledge/grafo/mapas/comunidad-05|Comunidad 5 · processes/catalog · Índice del conocimiento de Varios y Arquitecto de procesos]] (56 nodos)
 - [[knowledge/grafo/mapas/comunidad-06|Comunidad 6 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue]] (52 nodos)
 - [[knowledge/grafo/mapas/comunidad-07|Comunidad 7 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Registro de decisiones]] (46 nodos)
@@ -51,8 +51,8 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 - [[docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado|Guia de Arranque Proyecto v1.4 Diseno Cerrado]] · conecta las comunidades 1, 3, 5, 7, 8, 9
 - [[knowledge/direccion/ceo-digital|CEO digital]] · conecta las comunidades 1, 2, 5, 6, 7, 8
 - [[knowledge/agentes/ase|Experto en asesorías y despachos]] · conecta las comunidades 0, 2, 4, 6, 7
-- [[processes/catalog/P31-calificacion-de-oportunidad|P31 · Calificación de oportunidad]] · conecta las comunidades 1, 2, 3, 6, 7, 8
 - [[knowledge/grafo/decisiones/D-011|D-011 · Construir primero, clientes desde el 15/02/2027]] · conecta las comunidades 1, 2, 5, 6, 7, 11
+- [[processes/catalog/P31-calificacion-de-oportunidad|P31 · Calificación de oportunidad]] · conecta las comunidades 1, 2, 3, 6, 7, 8
 
 ## Preguntas abiertas
 

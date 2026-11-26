@@ -1,0 +1,294 @@
+{
+ "$defs": {
+  "Hechos": {
+   "additionalProperties": false,
+   "description": "Lo que un extractor perfecto sacaría del mensaje. Es la «verdad» contra la que se medirá la IA.",
+   "properties": {
+    "remitente": {
+     "default": "asegurado",
+     "enum": [
+      "asegurado",
+      "tomador",
+      "beneficiario",
+      "tercero"
+     ],
+     "title": "Remitente",
+     "type": "string"
+    },
+    "poliza_numero": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Poliza Numero"
+    },
+    "ramo": {
+     "anyOf": [
+      {
+       "enum": [
+        "hogar",
+        "comercio",
+        "automovil",
+        "responsabilidad_civil",
+        "accidentes",
+        "vida",
+        "salud"
+       ],
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Ramo"
+    },
+    "causa": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Causa"
+    },
+    "fecha_ocurrencia": {
+     "anyOf": [
+      {
+       "format": "date",
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Fecha Ocurrencia"
+    },
+    "fecha_conocimiento": {
+     "anyOf": [
+      {
+       "format": "date",
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Fecha Conocimiento"
+    },
+    "hay_descripcion": {
+     "default": true,
+     "title": "Hay Descripcion",
+     "type": "boolean"
+    },
+    "hay_contacto": {
+     "default": true,
+     "title": "Hay Contacto",
+     "type": "boolean"
+    },
+    "danos_personales": {
+     "default": false,
+     "title": "Danos Personales",
+     "type": "boolean"
+    },
+    "vehiculos": {
+     "anyOf": [
+      {
+       "type": "integer"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Vehiculos"
+    },
+    "colision_directa": {
+     "anyOf": [
+      {
+       "type": "boolean"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Colision Directa"
+    },
+    "declaracion_amistosa": {
+     "anyOf": [
+      {
+       "type": "boolean"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Declaracion Amistosa"
+    },
+    "queja": {
+     "default": false,
+     "title": "Queja",
+     "type": "boolean"
+    },
+    "pide_persona": {
+     "default": false,
+     "title": "Pide Persona",
+     "type": "boolean"
+    },
+    "incoherencias": {
+     "default": [],
+     "items": {
+      "type": "string"
+     },
+     "title": "Incoherencias",
+     "type": "array"
+    },
+    "otras_polizas": {
+     "default": false,
+     "title": "Otras Polizas",
+     "type": "boolean"
+    },
+    "movimiento_dinero": {
+     "default": false,
+     "title": "Movimiento Dinero",
+     "type": "boolean"
+    },
+    "reclamacion_judicial_o_atestado": {
+     "default": false,
+     "title": "Reclamacion Judicial O Atestado",
+     "type": "boolean"
+    },
+    "vulnerable_o_fallecimiento": {
+     "default": false,
+     "title": "Vulnerable O Fallecimiento",
+     "type": "boolean"
+    }
+   },
+   "title": "Hechos",
+   "type": "object"
+  },
+  "Resultado": {
+   "additionalProperties": false,
+   "properties": {
+    "excepciones": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Excepciones",
+     "type": "array"
+    },
+    "accion": {
+     "enum": [
+      "preparar_parte",
+      "pedir_documentacion",
+      "trasladar_a_aseguradora",
+      "pasar_a_persona"
+     ],
+     "title": "Accion",
+     "type": "string"
+    },
+    "tambien": {
+     "default": [],
+     "items": {
+      "enum": [
+       "abrir_reclamacion",
+       "pedir_declaracion_amistosa"
+      ],
+      "type": "string"
+     },
+     "title": "Tambien",
+     "type": "array"
+    },
+    "anotar_libro_siniestros": {
+     "title": "Anotar Libro Siniestros",
+     "type": "boolean"
+    },
+    "detalle": {
+     "additionalProperties": {
+      "type": "string"
+     },
+     "default": {},
+     "title": "Detalle",
+     "type": "object"
+    },
+    "requiere_aprobacion_humana": {
+     "default": true,
+     "title": "Requiere Aprobacion Humana",
+     "type": "boolean"
+    }
+   },
+   "required": [
+    "excepciones",
+    "accion",
+    "anotar_libro_siniestros"
+   ],
+   "title": "Resultado",
+   "type": "object"
+  }
+ },
+ "additionalProperties": false,
+ "properties": {
+  "id": {
+   "title": "Id",
+   "type": "string"
+  },
+  "titulo": {
+   "title": "Titulo",
+   "type": "string"
+  },
+  "canal": {
+   "enum": [
+    "correo",
+    "telefono",
+    "whatsapp",
+    "formulario",
+    "presencial"
+   ],
+   "title": "Canal",
+   "type": "string"
+  },
+  "fecha_recepcion": {
+   "format": "date",
+   "title": "Fecha Recepcion",
+   "type": "string"
+  },
+  "mensaje": {
+   "title": "Mensaje",
+   "type": "string"
+  },
+  "hechos": {
+   "$ref": "#/$defs/Hechos"
+  },
+  "esperado": {
+   "$ref": "#/$defs/Resultado"
+  },
+  "por_que": {
+   "title": "Por Que",
+   "type": "string"
+  }
+ },
+ "required": [
+  "id",
+  "titulo",
+  "canal",
+  "fecha_recepcion",
+  "mensaje",
+  "hechos",
+  "esperado",
+  "por_que"
+ ],
+ "title": "Caso",
+ "type": "object"
+}

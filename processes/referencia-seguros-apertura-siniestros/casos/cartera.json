@@ -1,0 +1,84 @@
+{
+ "aviso": "Cartera INVENTADA para pruebas (D-011). Ninguna póliza, aseguradora ni persona es real.",
+ "polizas": [
+  {
+   "numero": "FIC-HOG-001",
+   "ramo": "hogar",
+   "aseguradora": "Aseguradora Ficticia Norte",
+   "efecto": "2026-01-01",
+   "vencimiento": "2026-12-31"
+  },
+  {
+   "numero": "FIC-HOG-002",
+   "ramo": "hogar",
+   "aseguradora": "Aseguradora Ficticia Sur",
+   "efecto": "2025-11-20",
+   "vencimiento": "2026-11-19"
+  },
+  {
+   "numero": "FIC-HOG-003",
+   "ramo": "hogar",
+   "aseguradora": "Aseguradora Ficticia Norte",
+   "efecto": "2026-03-01",
+   "vencimiento": "2027-02-28",
+   "recibo_pagado": false
+  },
+  {
+   "numero": "FIC-HOG-004",
+   "ramo": "hogar",
+   "aseguradora": "Aseguradora Ficticia Sur",
+   "efecto": "2026-11-15",
+   "vencimiento": "2027-11-14"
+  },
+  {
+   "numero": "FIC-HOG-005",
+   "ramo": "hogar",
+   "aseguradora": "Aseguradora Ficticia Sur",
+   "efecto": "2026-06-01",
+   "vencimiento": "2027-05-31"
+  },
+  {
+   "numero": "FIC-COM-001",
+   "ramo": "comercio",
+   "aseguradora": "Aseguradora Ficticia Norte",
+   "efecto": "2026-01-01",
+   "vencimiento": "2026-12-31",
+   "plazo_comunicacion_dias": 15
+  },
+  {
+   "numero": "FIC-AUT-001",
+   "ramo": "automovil",
+   "aseguradora": "Aseguradora Ficticia Norte",
+   "efecto": "2026-02-01",
+   "vencimiento": "2027-01-31"
+  },
+  {
+   "numero": "FIC-AUT-002",
+   "ramo": "automovil",
+   "aseguradora": "Aseguradora Ficticia Sur",
+   "efecto": "2026-05-10",
+   "vencimiento": "2027-05-09"
+  },
+  {
+   "numero": "FIC-AUT-003",
+   "ramo": "automovil",
+   "aseguradora": "Aseguradora Ficticia Norte",
+   "efecto": "2026-09-01",
+   "vencimiento": "2027-08-31"
+  },
+  {
+   "numero": "FIC-RC-001",
+   "ramo": "responsabilidad_civil",
+   "aseguradora": "Aseguradora Ficticia Sur",
+   "efecto": "2026-01-01",
+   "vencimiento": "2026-12-31"
+  },
+  {
+   "numero": "FIC-ACC-001",
+   "ramo": "accidentes",
+   "aseguradora": "Aseguradora Ficticia Norte",
+   "efecto": "2022-01-01",
+   "vencimiento": "2026-12-31"
+  }
+ ]
+}

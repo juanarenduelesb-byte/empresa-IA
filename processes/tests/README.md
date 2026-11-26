@@ -7,6 +7,8 @@
 | `tests/test_motor.py` | Transición inválida rechazada; auditoría completa; nadie se aprueba a sí mismo; aprobación de otra versión rechazada; QA directo solo con riesgo bajo | P09, P10, P35 |
 | `tests/test_reintentos.py` | Solo se reintentan los transitorios; la espera crece; la idempotencia evita duplicados | P22 |
 | `tests/test_definiciones.py` | Las definiciones son válidas, los procesos existen y las tareas humanas o con aprobación están marcadas | P34 |
+| `tests/test_casos_siniestros.py` | Los 20 siniestros inventados cumplen el esquema, cubren las 15 excepciones y las reglas fijas dan el resultado esperado | Proceso de referencia |
+| `tests/test_dominio_seguros.py` | El paquete de seguros es coherente y todo cita una fuente del registro | Proceso de referencia |
 | `tests/test_repositorio.py` | Las 38 fichas tienen 20 apartados; los enlaces internos existen; lo generado está al día; las fuentes citadas existen | Todos |
 
 ## Pendientes, con su semana del plan

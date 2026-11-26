@@ -124,7 +124,7 @@
   {
    "id": "EX-02",
    "nombre": "Póliza no encontrada, no vigente o con recibo impagado",
-   "disparador": "no hay póliza que case, o fecha_siniestro fuera de vigencia, o recibo pendiente",
+   "disparador": "hay número de póliza pero no casa con la cartera, la fecha de ocurrencia cae fuera de la vigencia o el recibo está pendiente",
    "regla": "No abrir parte en el portal; pasar a un tramitador. Las consecuencias del impago (LCS art. 15) no se han leído esta noche.",
    "decide": "persona",
    "ia": "Propone la póliza más probable con su confianza; no la elige.",
@@ -165,7 +165,7 @@
   {
    "id": "EX-05",
    "nombre": "Colisión de dos vehículos con daños materiales",
-   "disparador": "ramo automóviles, dos vehículos, colisión directa, solo daños materiales",
+   "disparador": "ramo automóviles, dos o más vehículos y solo daños materiales: con dos vehículos y colisión directa, posible convenio; si no, posible SDM",
    "regla": "Pedir la declaración amistosa si existe; marcar posible convenio de indemnización directa. Si hay más de dos vehículos o no hubo colisión directa, marcar posible SDM.",
    "decide": "aseguradora",
    "ia": "Extrae vehículos, matrículas y si hay declaración amistosa.",
@@ -266,7 +266,7 @@
   {
    "id": "EX-13",
    "nombre": "Faltan datos mínimos",
-   "disparador": "falta alguno de: póliza, fecha de ocurrencia, descripción, contacto",
+   "disparador": "falta alguno de: número de póliza, fecha de ocurrencia, descripción, contacto",
    "regla": "Preparar la petición de documentación; enviarla es una acción externa que aprueba una persona.",
    "decide": "persona",
    "ia": "Redacta la petición con la lista de lo que falta.",
@@ -374,5 +374,63 @@
   "atencion-personalizada",
   "datos-de-salud",
   "responsable-del-tratamiento"
- ]
+ ],
+ "reglas": {
+  "causas_extraordinarias": {
+   "fuente": "RD-300-2004",
+   "lista": [
+    "terremoto",
+    "maremoto",
+    "inundacion_extraordinaria",
+    "erupcion_volcanica",
+    "tempestad_ciclonica_atipica",
+    "caida_cuerpos_siderales",
+    "terrorismo",
+    "rebelion",
+    "sedicion",
+    "motin",
+    "tumulto_popular",
+    "actuacion_fuerzas_armadas_o_seguridad"
+   ]
+  },
+  "causas_naturales_con_carencia": {
+   "fuente": "RD-300-2004",
+   "lista": [
+    "terremoto",
+    "maremoto",
+    "inundacion_extraordinaria",
+    "erupcion_volcanica",
+    "tempestad_ciclonica_atipica",
+    "caida_cuerpos_siderales"
+   ]
+  },
+  "ramos_de_personas": {
+   "fuente": "LCS-50-1980",
+   "lista": [
+    "vida",
+    "accidentes",
+    "salud"
+   ]
+  },
+  "aviso_prescripcion_meses": {
+   "base": "hipotesis",
+   "danos": 18,
+   "personas": 54
+  },
+  "bloquean": {
+   "base": "hipotesis",
+   "nota": "Excepciones que pasan el caso a una persona antes de preparar nada.",
+   "lista": [
+    "EX-02",
+    "EX-03",
+    "EX-04",
+    "EX-09",
+    "EX-10",
+    "EX-11",
+    "EX-12",
+    "EX-14",
+    "EX-15"
+   ]
+  }
+ }
 }

@@ -1424,11 +1424,11 @@
    "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24701",
    "tipo": "obligacion-legal",
    "jurisdiccion": "ES",
-   "version": "BOE núm. 293, 25/11/2026; en vigor 26/11/2026; convalidación del Congreso pendiente (30 días)",
+   "version": "BOE núm. 293, 25/11/2026; en vigor 26/11/2026; convalidación pendiente en la Diputación Permanente (30 días; Cortes disueltas por el RD 806/2026)",
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "validated",
-   "nota": "Disposición final primera: la adaptación coincide con el último plazo del RD 238/2026. Según la AEAT, sistemas adaptados antes del 06/10/2028 para todos, sin distinguir contribuyentes del Impuesto sobre Sociedades. Contrastado con la nota de la AEAT del 25/11/2026. Si no se convalidara, volverían las fechas del RDL 15/2025.",
+   "nota": "Disposición final primera: la adaptación coincide con el último plazo del RD 238/2026. Según la AEAT, sistemas adaptados antes del 06/10/2028 para todos, sin distinguir contribuyentes del Impuesto sobre Sociedades. Contrastado con la nota de la AEAT del 25/11/2026. Si no se convalidara, volverían las fechas del RDL 15/2025. Releído en el BOE el 26/11 por la mañana: la exposición de motivos (apartado VI) cita el Real Decreto 806/2026 de disolución del Congreso y del Senado, así que la convalidación, si llega, la vota la Diputación Permanente (art. 78.2 y 86.2 de la Constitución).",
    "consultada": "2026-11-26"
   },
   {
@@ -1485,6 +1485,20 @@
    "vigencia": "vigente",
    "estado": "draft",
    "nota": "Empezar por la conclusión, agrupar los argumentos que la sostienen y abrir con situación, complicación y pregunta. Fuente secundaria; coincide con otros resúmenes (BetterUp, Think Insights).",
+   "consultada": "2026-11-26"
+  },
+  {
+   "id": "LANGFUSE-CLOUD",
+   "titulo": "Langfuse Cloud: planes y precios",
+   "organismo": "Langfuse",
+   "url": "https://langfuse.com/pricing",
+   "tipo": "documentacion-producto",
+   "jurisdiccion": "—",
+   "version": "consultado 26/11/2026",
+   "autoridad": "media",
+   "vigencia": "vigente",
+   "estado": "draft",
+   "nota": "Hobby gratis (50.000 unidades al mes, 30 días de datos), Core 29 $/mes y Pro 199 $/mes (100.000 unidades incluidas, 8 $ cada 100.000 más; 90 días y 3 años de datos), Enterprise 2.499 $/mes. Región de datos a elegir entre EE. UU., UE y Japón en los planes de pago y en Hobby. Precios sin IVA, en dólares.",
    "consultada": "2026-11-26"
   },
   {

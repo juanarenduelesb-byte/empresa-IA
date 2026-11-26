@@ -5,16 +5,16 @@ Cómo está conectado el cerebro de Varios: qué sostiene todo, qué temas forma
 
 ## Resumen
 
-- 4957 nodos: seccion 4258, documento 372, fuente 112, habilidad 65, proceso 38, especialista 34, agente 34, decision 25, puerta 12, departamento 7.
-- 6706 relaciones: 62 % EXTRACTADAS (escritas en la fuente), 38 % INFERIDAS (temas compartidos, con puntuación) y 0 AMBIGUAS (para revisar).
+- 4961 nodos: seccion 4261, documento 372, fuente 113, habilidad 65, proceso 38, especialista 34, agente 34, decision 25, puerta 12, departamento 7.
+- 6715 relaciones: 62 % EXTRACTADAS (escritas en la fuente), 38 % INFERIDAS (temas compartidos, con puntuación) y 0 AMBIGUAS (para revisar).
 - 14 comunidades de temas.
 
 ## Nodos centrales
 
 Lo que más cosas conecta. Si cambia, cambia mucho.
 
-1. **Registro de fuentes** (`knowledge/fuentes/registro.md`) · 200 conexiones
-2. **Índice del conocimiento de Varios** (`knowledge/INDEX.md`) · 117 conexiones
+1. **Registro de fuentes** (`knowledge/fuentes/registro.md`) · 201 conexiones
+2. **Índice del conocimiento de Varios** (`knowledge/INDEX.md`) · 118 conexiones
 3. **Registro de decisiones** (`DECISIONS.md`) · 105 conexiones
 4. **Guia de Arranque Proyecto v1.4 Diseno Cerrado** (`docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado.md`) · 84 conexiones
 5. **Catálogo de procesos P01–P38** (`processes/catalog/README.md`) · 82 conexiones
@@ -23,20 +23,20 @@ Lo que más cosas conecta. Si cambia, cambia mucho.
 8. **P22 · Gestión de errores y reintentos** · 62 conexiones
 9. **P28 · Gestión de incidentes** · 61 conexiones
 10. **Varios · empresa-ia** (`CLAUDE.md`) · 61 conexiones
-11. **CEO digital** (`knowledge/direccion/ceo-digital.md`) · 60 conexiones
+11. **CEO digital** (`knowledge/direccion/ceo-digital.md`) · 59 conexiones
 12. **Arquitecto de procesos** (`knowledge/procesos/arquitecto-procesos.md`) · 50 conexiones
 
 ## Puentes entre temas
 
 Nodos por los que pasa el camino entre comunidades distintas (intermediación).
 
-- **Registro de fuentes** · intermediación 0.265 · une la comunidad 1 con 2, 3, 4, 5, 6, 7
-- **Registro de decisiones** · intermediación 0.093 · une la comunidad 3 con 1, 2, 4, 5, 6, 8
+- **Registro de fuentes** · intermediación 0.267 · une la comunidad 1 con 2, 3, 4, 5, 6, 7
+- **Registro de decisiones** · intermediación 0.092 · une la comunidad 3 con 1, 2, 4, 5, 6, 8
 - **Habilidades de los agentes** · intermediación 0.079 · une la comunidad 2 con 4, 5, 6, 10
-- **L2 (puerta técnica)** · intermediación 0.054 · une la comunidad 11 con 1, 2, 3, 4, 5, 7
-- **Índice del conocimiento de Varios** · intermediación 0.05 · une la comunidad 6 con 1, 3, 4, 5, 7, 8
+- **L2 (puerta técnica)** · intermediación 0.053 · une la comunidad 11 con 1, 2, 3, 4, 5, 7
+- **Índice del conocimiento de Varios** · intermediación 0.051 · une la comunidad 6 con 1, 3, 4, 5, 7, 8
 - **Guia de Arranque Proyecto v1.4 Diseno Cerrado** · intermediación 0.04 · une la comunidad 8 con 2, 3, 4, 7, 9
-- **CEO digital** · intermediación 0.024 · une la comunidad 4 con 1, 2, 3, 6, 7, 8
+- **CEO digital** · intermediación 0.023 · une la comunidad 4 con 1, 2, 3, 6, 7, 8
 - **D-011 · Construir primero, clientes desde el 15/02/2027** · intermediación 0.021 · une la comunidad 5 con 1, 2, 3, 6, 11, 13
 - **Administración** · intermediación 0.021 · une la comunidad 2 con 0, 1, 9, 10, 11
 - **Experto en asesorías y despachos** · intermediación 0.02 · une la comunidad 2 con 0, 1, 8, 10, 11
@@ -46,8 +46,8 @@ Nodos por los que pasa el camino entre comunidades distintas (intermediación).
 Secciones de carpetas y comunidades distintas que tratan lo mismo y no se enlazan. Relación INFERIDA: compruébala.
 
 - `DECISIONS.md` › D-005 — Aislamiento multi-cliente  ↔  `docs/06-seguridad-y-gobierno.md` › Multi-tenancy  [INFERIDA 0.85]
+- `governance/legal/borradores/03-acuerdo-confidencialidad.md` › Acuerdo de confidencialidad (mutuo) · BORRADOR PARA ABOGADO  ↔  `knowledge/plantillas/entregables/01-propuesta-diagnostico.md` › 6. Siguientes pasos  [INFERIDA 0.75]
 - `governance/legal/borradores/04-anexo-uso-ia.md` › 1. Qué sistema es y para qué se usa  ↔  `knowledge/agentes/proj.md` › Reglas del puesto  [INFERIDA 0.75]
-- `governance/legal/borradores/04-anexo-uso-ia.md` › 4. Clasificación del riesgo  ↔  `knowledge/fuentes/registro.md` › RIA-2024-1689  [INFERIDA 0.75]
 - `governance/legal/borradores/05-matriz-aprobaciones.md` › 4. Reglas de la aprobación  ↔  `knowledge/fuentes/registro.md` › ZAPIER-HITL  [INFERIDA 0.75]
 - `integrations/tests/README.md` › Pruebas de integración  ↔  `knowledge/ingenieria/integraciones.md` › Especialista en integraciones  [INFERIDA 0.75]
 - `claude/habilidades/contrato-de-tarea.md` › Pasos  ↔  `docs/03-ceo-digital-y-orquestacion.md` › Contrato de tarea  [INFERIDA 0.75]
@@ -64,7 +64,7 @@ Cohesión 0.05 · 104 nodos: Legal y privacidad; Arquitecto de procesos; Segurid
 
 ### 1 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros
 
-Cohesión 0.07 · 99 nodos: Registro de fuentes; Coordinación sectorial y seguros; Experto en sanidad privada; Experto en servicios financieros no bancarios; Experto en asesorías, gestorías y despachos; Experto en logística y transporte; Especialista en contabilidad y facturación; Experto en industria manufacturera (y 91 más)
+Cohesión 0.08 · 94 nodos: Registro de fuentes; Coordinación sectorial y seguros; Experto en sanidad privada; Experto en servicios financieros no bancarios; Experto en asesorías, gestorías y despachos; Experto en logística y transporte; Especialista en contabilidad y facturación; Experto en industria manufacturera (y 86 más)
 
 ### 2 · claude/habilidades · Habilidades de los agentes y Administración
 
@@ -72,7 +72,7 @@ Cohesión 0.1 · 93 nodos: Habilidades de los agentes; Administración; Experto 
 
 ### 3 · docs · Registro de decisiones y Varios · empresa-ia
 
-Cohesión 0.1 · 75 nodos: Registro de decisiones; Varios · empresa-ia; Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue; 17 · Cerebro, conocimiento y procesos: auditoría e informe; Informe de la mañana · 26/11/2026; Plan de construcción · 18/11/2026 → 12/02/2027; Trabajo nocturno de Claude; G0 (puerta de cliente) (y 67 más)
+Cohesión 0.09 · 81 nodos: Registro de decisiones; Varios · empresa-ia; Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue; Informe de la mañana · 26/11/2026; 17 · Cerebro, conocimiento y procesos: auditoría e informe; Trabajo nocturno de Claude; Plan de construcción · 18/11/2026 → 12/02/2027; G0 (puerta de cliente) (y 73 más)
 
 ### 4 · knowledge/ingenieria · Dependencias entre procesos y CEO digital
 
@@ -128,9 +128,9 @@ Cohesión 0.83 · 4 nodos: Integraciones; Contratos de datos; Pruebas de integra
 _Preguntas que este grafo ayuda a responder o que conviene decidir:_
 
 - **¿Por qué «Registro de fuentes» conecta la comunidad 1 con las comunidades 2, 3, 4, 5?**
-  _Intermediación alta (0.265): es un puente entre temas._
+  _Intermediación alta (0.267): es un puente entre temas._
 - **¿Por qué «Registro de decisiones» conecta la comunidad 3 con las comunidades 1, 2, 4, 5?**
-  _Intermediación alta (0.093): es un puente entre temas._
+  _Intermediación alta (0.092): es un puente entre temas._
 - **¿Por qué «Habilidades de los agentes» conecta la comunidad 2 con las comunidades 4, 5, 6, 10?**
   _Intermediación alta (0.079): es un puente entre temas._
 - **¿Se aprueba D-013 · Conocimiento y catálogo de procesos generados desde datos? Sigue en propuesta y la citan 12 secciones.**
@@ -141,7 +141,7 @@ _Preguntas que este grafo ayuda a responder o que conviene decidir:_
   _Una decisión en propuesta que ya sostiene mucho contenido._
 - **¿Deberían enlazarse «DECISIONS.md» y «docs/06-seguridad-y-gobierno.md»?**
   _Tratan lo mismo (relación INFERIDA 0.85) pero no se citan._
-- **¿Deberían enlazarse «governance/legal/borradores/04-anexo-uso-ia.md» y «knowledge/agentes/proj.md»?**
+- **¿Deberían enlazarse «governance/legal/borradores/03-acuerdo-confidencialidad.md» y «knowledge/plantillas/entregables/01-propuesta-diagnostico.md»?**
   _Tratan lo mismo (relación INFERIDA 0.75) pero no se citan._
 - **¿Siguen vigentes D-008, D-016, D-020? Ningún documento las cita.**
   _Decisiones que nadie menciona._

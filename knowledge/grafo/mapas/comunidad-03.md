@@ -1,25 +1,25 @@
 ---
 tipo: "mapa"
 comunidad: 3
-miembros: 75
-cohesion: 0.1
+miembros: 81
+cohesion: 0.09
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 3 · docs · Registro de decisiones y Varios · empresa-ia
 
-75 nodos agrupados por el algoritmo de Louvain. Cohesión 0.1.
+81 nodos agrupados por el algoritmo de Louvain. Cohesión 0.09.
 
 ## Documentos
 
 - [[DECISIONS|Registro de decisiones]]
 - [[CLAUDE|Varios · empresa-ia]]
 - [[docs/fuentes/Atlas_Evolucion_v1.1_Modelo_Operativo_Procesos_y_Despliegue|Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue]]
-- [[docs/17-cerebro-y-procesos|17 · Cerebro, conocimiento y procesos: auditoría e informe]]
 - [[docs/informes/2026-11-26|Informe de la mañana · 26/11/2026]]
-- [[docs/10-plan-12-semanas|Plan de construcción · 18/11/2026 → 12/02/2027]]
+- [[docs/17-cerebro-y-procesos|17 · Cerebro, conocimiento y procesos: auditoría e informe]]
 - [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]]
+- [[docs/10-plan-12-semanas|Plan de construcción · 18/11/2026 → 12/02/2027]]
 - [[docs/23-plan-maestro|Plan maestro: la empresa completa, sin que se escape nada]]
 - [[README|Varios — repositorio maestro]]
 - [[docs/22-plan-hasta-febrero|Plan de trabajo diario · 26/11/2026 → 28/02/2027]]
@@ -31,13 +31,13 @@ tags:
 - [[knowledge/plantillas/ficha-cliente|Plantilla · Ficha de cliente]]
 - [[docs/19-obsidian|Obsidian: el cerebro abierto en tu equipo]]
 - [[knowledge/plantillas/entregables/03-diseno-to-be|Diseño del proceso nuevo (TO-BE) · (Cliente) · (Proceso)]]
+- [[docs/25-portal-interno|Portal interno: auditoría de la oficina y distribución propuesta (F1)]]
 - [[knowledge/plantillas/entregables/04-plan-piloto|Plan de piloto · (Cliente) · (Proceso)]]
 - [[knowledge/plantillas/entregables/01-propuesta-diagnostico|Propuesta de diagnóstico · (Cliente)]]
 - [[processes/templates/proceso-cliente|<sector> · <proceso>]]
 - [[knowledge/metodologias-transversales/cuestionario-descubrimiento|Cuestionario de descubrimiento por puertas (G0–G2)]]
 - [[knowledge/metodologias-transversales/guion-validacion-semanal|Guion de la conversación semanal de validación]]
 - [[docs/05-agentes-procesos-e-integraciones|Agentes, procesos e integraciones]]
-- [[governance/legal/borradores/04-anexo-uso-ia|Anexo de uso de inteligencia artificial · BORRADOR PARA ABOGADO]]
 - [[Inicio|Inicio · cerebro de Varios]]
 - [[knowledge/plantillas/entregables/05-informe-mensual-operacion|Informe mensual de operación · (Cliente) · (Mes)]]
 - [[knowledge/glosario/README|Glosario]]
@@ -79,8 +79,14 @@ tags:
 
 ## Fuentes
 
+- [[knowledge/grafo/fuentes/LANGFUSE-CLOUD|LANGFUSE-CLOUD · Langfuse Cloud: planes y precios]]
+- [[knowledge/grafo/fuentes/BASECAMP-5|BASECAMP-5 · Basecamp 5: inicio orientado a la acción]]
 - [[knowledge/grafo/fuentes/LEI-VSM|LEI-VSM · Value Stream Mapping (léxico del Lean Enterprise Institute)]]
+- [[knowledge/grafo/fuentes/LINEAR-TRIAGE|LINEAR-TRIAGE · Linear: Triage e Inbox]]
 - [[knowledge/grafo/fuentes/MOM-TEST|MOM-TEST · The Mom Test (Rob Fitzpatrick): cómo hablar con clientes sin que te mientan]]
+- [[knowledge/grafo/fuentes/ZAPIER-HITL|ZAPIER-HITL · Zapier: Human in the Loop (pedir aprobación para seguir)]]
+- [[knowledge/grafo/fuentes/APPLE-HIG-TAB-BARS|APPLE-HIG-TAB-BARS · Human Interface Guidelines: Tab bars]]
 - [[knowledge/grafo/fuentes/CMU-RUBRICAS|CMU-RUBRICAS · Creating and Using Rubrics]]
+- [[knowledge/grafo/fuentes/GITHUB-NOTIF-INBOX|GITHUB-NOTIF-INBOX · GitHub: gestionar notificaciones desde el inbox]]
 - [[knowledge/grafo/fuentes/MINTO-PIRAMIDE|MINTO-PIRAMIDE · The Pyramid Principle (Barbara Minto): la respuesta primero y la estructura situación, complicación, pregunta y respuesta]]
-- [[knowledge/grafo/fuentes/RIA-2024-1689|RIA-2024-1689 · Reglamento (UE) 2024/1689, de inteligencia artificial]]
+- [[knowledge/grafo/fuentes/NNG-HIDDEN-NAV|NNG-HIDDEN-NAV · Hamburger Menus and Hidden Navigation Hurt UX Metrics]]

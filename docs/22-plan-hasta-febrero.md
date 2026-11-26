@@ -23,6 +23,8 @@ Del 15 al 28 de febrero, primeros clientes (D-011) y pulido con lo que digan.
 4. **Claude prepara la noche.** Pone esas tareas en la lista de la noche ([21-trabajo-nocturno.md](21-trabajo-nocturno.md)) y programa **solo las tandas de esa noche**. Nada queda programado para otros días.
 5. **De noche · Claude trabaja.** Empieza en la conversación y sigue en tandas. Cada tarea se sube a `main` con las pruebas en verde.
 
+6. **Durante el día · permisos.** Lo que de noche pidió una aprobación queda en «Pendiente de tu aprobación» ([21-trabajo-nocturno.md](21-trabajo-nocturno.md)). Juan da el permiso desde el móvil o el ordenador y Claude lo termina en ese momento.
+
 Si un día Juan no elige nada, no se programa nada esa noche.
 
 ## Formato del informe de la mañana

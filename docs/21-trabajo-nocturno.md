@@ -16,6 +16,15 @@ Cada tanda:
 
 Si al subir hay conflicto en archivos generados (`oficina/brain.json`, `knowledge/grafo/`), no los edites a mano: quédate con los tuyos, ejecuta `python3 tools/brain_build.py oficina/brain.json` y continúa el rebase. El robot de GitHub (`regenerar.yml`) los regenera tras cada subida.
 
+**Si algo pide una aprobación que nadie puede dar de noche** (leer una web, usar una herramienta, un permiso, una cuenta), no se insiste ni se busca un rodeo: se apunta en **Pendiente de tu aprobación** (abajo) con qué es, para qué tarea, por qué hace falta y qué tiene que hacer Juan exactamente (desde el móvil o desde el ordenador), y la tanda sigue con lo que pueda. El informe de la mañana lo repite en «Lo que tienes que hacer tú hoy» y el aviso al móvil lo menciona. Durante el día Juan da los permisos y Claude lo termina; lo hecho se tacha aquí y se dice en el informe siguiente.
+
+**Orden en GitHub.** El repositorio es la memoria de la empresa: tiene que estar limpio y sin errores.
+- Cada subida pasa `bash tools/comprobar.sh` en verde. Nada en rojo llega a `main`; si CI falla después, la siguiente tanda lo arregla antes de cualquier otra cosa.
+- Un commit por tarea (o por paso estable de una tarea grande), con un mensaje en español que empieza por el código de la tarea («N2: …») y dice qué cambia. Nada de commits de prueba, «wip» ni archivos sueltos.
+- Cada archivo en su carpeta según la estructura de `CLAUDE.md`. Nada de archivos temporales, copias («-v2», «-final») ni salidas de pruebas en el repositorio. Lo que se sustituye se mueve a `archive/` o se borra en el mismo commit, y se dice en el Registro.
+- Los documentos nuevos se enlazan desde su índice (`docs/09-inventario-documental.md`, `knowledge/INDEX.md` o el README de su carpeta) y lo que cambie en `docs/` se revisa contra `site/`.
+- No se crean ramas sueltas: el trabajo nocturno va directo a `main` (decisión de Juan del 26/11). Las ramas de propuestas se borran al fusionarse.
+
 Reglas que no cambian: **no reinventar la rueda** (antes de construir, mira cómo lo resuelve alguien que lo hace bien, con fuente, y adáptalo; ver [23-plan-maestro.md](23-plan-maestro.md)); **si detectas algo anterior mal, arréglalo** en la misma tarea y dilo en el registro; nada de datos reales, cifras ni fuentes inventadas; todo lo legal es borrador para abogado; toda decisión estructural va a `DECISIONS.md` como «propuesta».
 
 ## Lista de esta noche (hazlas en este orden)
@@ -47,7 +56,16 @@ Están detalladas en [23-plan-maestro.md](23-plan-maestro.md), sección 6. Las t
 5. **Oportunidad (B2).** Las corredurías tienen hasta el 28/12/2026 para adaptar su atención al cliente a la Ley 10/2025 (un mes para resolver reclamaciones y persona a petición del cliente, también en bots). ¿Lo usamos en las conversaciones de validación o como argumento comercial?
 
 6. **Abogado (D1).** Las seis preguntas de `governance/legal/borradores/README.md`: cláusulas tipo de la Comisión tal cual o contrato propio, tope de responsabilidad y seguro de RC, datos de salud, propiedad de lo construido, DORA si el cliente es una aseguradora y jurisdicción.
-7. **Gestor (D2).** Llevar las cuatro preguntas de `docs/27-finanzas.md` a la reunión sobre la forma jurídica (antes del 08/01/2027). Comprobar antes del 26/12/2026 si el Congreso ha convalidado el RDL 43/2026: si no, Verifactu vuelve a 2027.
+7. **Gestor (D2).** Llevar las cuatro preguntas de `docs/27-finanzas.md` a la reunión sobre la forma jurídica (antes del 08/01/2027). Comprobar antes del 26/12/2026 si la Diputación Permanente ha convalidado el RDL 43/2026 (las Cortes están disueltas por el RD 806/2026): si no, Verifactu vuelve a 2027.
+
+## Pendiente de tu aprobación
+Lo que una tanda no pudo hacer porque pedía un permiso. Juan lo da durante el día y se tacha.
+
+| Desde | Qué | Para qué tarea | Qué tienes que hacer | Estado |
+|---|---|---|---|---|
+| 26/11 02:50 | Leer el BOE (RDL 43/2026 y otras normas) | B2, D2 | Nada: el 26/11 por la mañana se leyó con Juan delante | ~~Hecho 26/11~~ |
+| 26/11 06:10 | Leer los precios de Langfuse Cloud | Informe (herramientas) | Nada: leído el 26/11 por la mañana (`LANGFUSE-CLOUD`) | ~~Hecho 26/11~~ |
+| 26/11 02:30 | Probar `docker compose up` | A1, N3b | Arrancarlo en tu portátil y pegar el error si falla. Aquí no se puede: la imagen no descarga paquetes | Pendiente |
 
 ## Registro
 | Fecha | Tanda | Hecho | Queda |
@@ -70,3 +88,4 @@ Están detalladas en [23-plan-maestro.md](23-plan-maestro.md), sección 6. Las t
 | 26/11 06:10 | Tanda 06:00 | Sin tareas sin marcar. Comprobaciones en verde (151 pruebas). Investigadas con fuente GitHub Projects y Langfuse para el informe; no hay noticia de la votación del RDL 43/2026. Informe de la mañana en [informes/2026-11-26.md](informes/2026-11-26.md) | Que Juan elija las tareas de la próxima noche (apartado 8 del informe) |
 | 26/11 07:55 | Tanda 07:45 | Sin tareas sin marcar. Comprobaciones en verde (151 pruebas). **Arreglado:** las 44 fuentes añadidas esta noche salían en el registro como «consultadas el 17/11/2026», también el RDL 43/2026, que es del 25/11. `org_gen.py` admite ahora fecha de consulta por fuente y esas 44 llevan el 26/11 (sacadas del historial de git, no supuestas). Buscada otra vez la convalidación del RDL 43/2026: lo que sale es la del RDL 15/2025 (11/12/2025, 179 a favor). El BOE pidió una aprobación que nadie podía dar, así que el texto no se ha vuelto a leer | Que Juan elija las tareas de la próxima noche (apartado 8 del informe); comprobar la convalidación antes del 26/12/2026 |
 | 26/11 09:45 | Preparación (chat) | Juan elige las tareas de la noche del 26 al 27/11: N2, N1, N3a, N3b, N6, S1 y K1, con N4 y N5 de reserva. Tandas programadas solo para esta noche, de 22:00 a 09:00 | Todas |
+| 26/11 12:10 | Durante el día (chat) | Juan pide que lo que necesite permiso de noche quede pendiente para el día y que GitHub esté siempre ordenado: secciones «Pendiente de tu aprobación» y «Orden en GitHub». Resuelto lo pendiente de la noche: BOE del RDL 43/2026 releído (dato nuevo: Cortes disueltas por el RD 806/2026, convalida la Diputación Permanente) y precios de Langfuse Cloud (`LANGFUSE-CLOUD`) | `docker compose up` en el portátil de Juan |

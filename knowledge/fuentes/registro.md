@@ -118,6 +118,7 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 | [AEAT-IS-TIPOS](#aeat-is-tipos) | Impuesto sobre Sociedades: tipo impositivo (microempresas, reducida dimensión y general) | obligacion-legal | alta | vigente | validated |
 | [SEGSOC-RETA-2026](#segsoc-reta-2026) | Cotización de trabajadores autónomos 2026 y encuadramiento de socios con control efectivo | obligacion-legal | alta | vigente | draft |
 | [MINTO-PIRAMIDE](#minto-piramide) | The Pyramid Principle (Barbara Minto): la respuesta primero y la estructura situación, complicación, pregunta y respuesta | buena-practica | media | vigente | draft |
+| [LANGFUSE-CLOUD](#langfuse-cloud) | Langfuse Cloud: planes y precios | documentacion-producto | media | vigente | draft |
 | [CMU-RUBRICAS](#cmu-rubricas) | Creating and Using Rubrics | buena-practica | alta | vigente | draft |
 
 <a id="int-guia"></a>
@@ -1183,10 +1184,10 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 - **Título:** Real Decreto-ley 43/2026: aplazamiento de la adaptación de los sistemas informáticos de facturación (Verifactu)
 - **Autor u organismo:** BOE
 - **URL:** <https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24701>
-- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** BOE núm. 293, 25/11/2026; en vigor 26/11/2026; convalidación del Congreso pendiente (30 días)
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** BOE núm. 293, 25/11/2026; en vigor 26/11/2026; convalidación pendiente en la Diputación Permanente (30 días; Cortes disueltas por el RD 806/2026)
 - **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** Experto en asesorías, gestorías y despachos, Especialista administrativo, Especialista en contabilidad y facturación
-- **Nota:** Disposición final primera: la adaptación coincide con el último plazo del RD 238/2026. Según la AEAT, sistemas adaptados antes del 06/10/2028 para todos, sin distinguir contribuyentes del Impuesto sobre Sociedades. Contrastado con la nota de la AEAT del 25/11/2026. Si no se convalidara, volverían las fechas del RDL 15/2025.
+- **Nota:** Disposición final primera: la adaptación coincide con el último plazo del RD 238/2026. Según la AEAT, sistemas adaptados antes del 06/10/2028 para todos, sin distinguir contribuyentes del Impuesto sobre Sociedades. Contrastado con la nota de la AEAT del 25/11/2026. Si no se convalidara, volverían las fechas del RDL 15/2025. Releído en el BOE el 26/11 por la mañana: la exposición de motivos (apartado VI) cita el Real Decreto 806/2026 de disolución del Congreso y del Senado, así que la convalidación, si llega, la vota la Diputación Permanente (art. 78.2 y 86.2 de la Constitución).
 
 <a id="lsc-art4"></a>
 ### LSC-ART4
@@ -1227,6 +1228,16 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 - **Consultada:** 2026-11-26 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
 - **Nota:** Empezar por la conclusión, agrupar los argumentos que la sostienen y abrir con situación, complicación y pregunta. Fuente secundaria; coincide con otros resúmenes (BetterUp, Think Insights).
+
+<a id="langfuse-cloud"></a>
+### LANGFUSE-CLOUD
+- **Título:** Langfuse Cloud: planes y precios
+- **Autor u organismo:** Langfuse
+- **URL:** <https://langfuse.com/pricing>
+- **Tipo:** documentacion-producto · **Jurisdicción:** — · **Versión o fecha:** consultado 26/11/2026
+- **Consultada:** 2026-11-26 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** Hobby gratis (50.000 unidades al mes, 30 días de datos), Core 29 $/mes y Pro 199 $/mes (100.000 unidades incluidas, 8 $ cada 100.000 más; 90 días y 3 años de datos), Enterprise 2.499 $/mes. Región de datos a elegir entre EE. UU., UE y Japón en los planes de pago y en Hobby. Precios sin IVA, en dólares.
 
 <a id="cmu-rubricas"></a>
 ### CMU-RUBRICAS

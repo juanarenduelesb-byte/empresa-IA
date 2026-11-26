@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 1
-miembros: 99
-cohesion: 0.07
+miembros: 94
+cohesion: 0.08
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 1 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros
 
-99 nodos agrupados por el algoritmo de Louvain. Cohesión 0.07.
+94 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
 
 ## Documentos
 
@@ -30,9 +30,9 @@ tags:
 - [[knowledge/sectores/README|Sectores]]
 - [[knowledge/sectores/seguros/README|Paquete de dominio · seguros y corredurías]]
 - [[governance/legal/borradores/README|Borradores legales para abogado (D1)]]
-- [[docs/25-portal-interno|Portal interno: auditoría de la oficina y distribución propuesta (F1)]]
 - [[governance/legal/borradores/01-contrato-marco-servicios|Contrato marco de prestación de servicios · BORRADOR PARA ABOGADO]]
 - [[governance/legal/borradores/02-encargo-tratamiento|Contrato de encargo del tratamiento (art. 28 RGPD) · BORRADOR PARA ABOGADO]]
+- [[governance/legal/borradores/04-anexo-uso-ia|Anexo de uso de inteligencia artificial · BORRADOR PARA ABOGADO]]
 - [[governance/legal/borradores/03-acuerdo-confidencialidad|Acuerdo de confidencialidad (mutuo) · BORRADOR PARA ABOGADO]]
 - [[knowledge/plantillas/ficha-fuente|Ficha-fuente]]
 - [[docs/26-web-clientes|Web para clientes: estudio de referencias, estructura y textos (F2)]]
@@ -92,28 +92,27 @@ tags:
 - [[knowledge/grafo/fuentes/RDLEG-7-2004-CCS|RDLEG-7-2004-CCS · Real Decreto Legislativo 7/2004, texto refundido del Estatuto Legal del Consorcio de Compensación de Seguros]]
 - [[knowledge/grafo/fuentes/SANIDAD-IA-OMNIBUS|SANIDAD-IA-OMNIBUS · IA en el SNS: ómnibus digital sobre IA y simplificación MDR/IVDR]]
 - [[knowledge/grafo/fuentes/UNESPA-SDM|UNESPA-SDM · Reglamento articulado del Sistema Siniestros Daños Materiales (SDM)]]
-- [[knowledge/grafo/fuentes/BASECAMP-5|BASECAMP-5 · Basecamp 5: inicio orientado a la acción]]
 - [[knowledge/grafo/fuentes/CCT-ENCARGO-2021-915|CCT-ENCARGO-2021-915 · Decisión de Ejecución (UE) 2021/915, cláusulas contractuales tipo entre responsables y encargados del tratamiento]]
 - [[knowledge/grafo/fuentes/CNMC-CIDE-2014|CNMC-CIDE-2014 · CNMC, resolución de 25/09/2014, expediente S/0496/13 CIDE]]
 - [[knowledge/grafo/fuentes/CODIGO-CIVIL|CODIGO-CIVIL · Código Civil (Real Decreto de 24 de julio de 1889)]]
 - [[knowledge/grafo/fuentes/DORA-2022-2554|DORA-2022-2554 · Reglamento (UE) 2022/2554 (DORA), resiliencia operativa digital del sector financiero]]
 - [[knowledge/grafo/fuentes/EEDS-2025-327|EEDS-2025-327 · Reglamento (UE) 2025/327, Espacio Europeo de Datos de Salud]]
-- [[knowledge/grafo/fuentes/LINEAR-TRIAGE|LINEAR-TRIAGE · Linear: Triage e Inbox]]
-- [[knowledge/grafo/fuentes/ZAPIER-HITL|ZAPIER-HITL · Zapier: Human in the Loop (pedir aprobación para seguir)]]
 - [[knowledge/grafo/fuentes/ADCF-MONCLOA-2026|ADCF-MONCLOA-2026 · Autoridad Administrativa Independiente de Defensa del Cliente Financiero: compromiso de retomar la tramitación]]
 - [[knowledge/grafo/fuentes/AEAT-IS-TIPOS|AEAT-IS-TIPOS · Impuesto sobre Sociedades: tipo impositivo (microempresas, reducida dimensión y general)]]
 - [[knowledge/grafo/fuentes/AEPD-DIRECTRICES-ENCARGO|AEPD-DIRECTRICES-ENCARGO · Directrices para la elaboración de contratos entre responsables y encargados del tratamiento]]
 - [[knowledge/grafo/fuentes/AEPD-GUIA-COOKIES|AEPD-GUIA-COOKIES · Guía sobre el uso de las cookies]]
 - [[knowledge/grafo/fuentes/AEPD-INF-2026-0021|AEPD-INF-2026-0021 · AEPD, informe 2026-0021 sobre el anteproyecto de reforma de la Ley 20/2015]]
-- [[knowledge/grafo/fuentes/APPLE-HIG-TAB-BARS|APPLE-HIG-TAB-BARS · Human Interface Guidelines: Tab bars]]
 - [[knowledge/grafo/fuentes/EDPB-GL-07-2020|EDPB-GL-07-2020 · Directrices 07/2020 sobre los conceptos de responsable y encargado del tratamiento en el RGPD]]
 - [[knowledge/grafo/fuentes/GAP-LEY10-ASEG|GAP-LEY10-ASEG · Cómo afecta a las aseguradoras la Ley 10/2025 de servicios de atención a la clientela]]
-- [[knowledge/grafo/fuentes/GITHUB-NOTIF-INBOX|GITHUB-NOTIF-INBOX · GitHub: gestionar notificaciones desde el inbox]]
 - [[knowledge/grafo/fuentes/LEY-1-2019-SECRETOS|LEY-1-2019-SECRETOS · Ley 1/2019, de 20 de febrero, de Secretos Empresariales]]
 - [[knowledge/grafo/fuentes/LEY-35-2015|LEY-35-2015 · Ley 35/2015, de reforma del sistema para la valoración de los daños y perjuicios causados a las personas en accidentes de circulación]]
 - [[knowledge/grafo/fuentes/LEY-5-2025|LEY-5-2025 · Ley 5/2025, de 24 de julio, por la que se modifican el texto refundido de la Ley sobre responsabilidad civil y seguro en la circulación de vehículos a motor y la Ley 20/2015]]
 - [[knowledge/grafo/fuentes/LOPDGDD-DA17|LOPDGDD-DA17 · Ley Orgánica 3/2018 (LOPDGDD), disposición adicional decimoséptima: tratamientos de datos de salud]]
 - [[knowledge/grafo/fuentes/LSC-ART4|LSC-ART4 · Ley de Sociedades de Capital (RDLeg 1/2010), art. 4: capital mínimo]]
 - [[knowledge/grafo/fuentes/LSSI-34-2002|LSSI-34-2002 · Ley 34/2002, de servicios de la sociedad de la información y de comercio electrónico (LSSI-CE)]]
-- [[knowledge/grafo/fuentes/NNG-HIDDEN-NAV|NNG-HIDDEN-NAV · Hamburger Menus and Hidden Navigation Hurt UX Metrics]]
-- … y 5 más
+- [[knowledge/grafo/fuentes/ORDEN-ECO-734-2004|ORDEN-ECO-734-2004 · Orden ECO/734/2004, sobre los departamentos y servicios de atención al cliente y el defensor del cliente de las entidades financieras]]
+- [[knowledge/grafo/fuentes/RIA-2024-1689|RIA-2024-1689 · Reglamento (UE) 2024/1689, de inteligencia artificial]]
+- [[knowledge/grafo/fuentes/SEGSOC-RETA-2026|SEGSOC-RETA-2026 · Cotización de trabajadores autónomos 2026 y encuadramiento de socios con control efectivo]]
+- [[knowledge/grafo/fuentes/CCS-MEDIADOR|CCS-MEDIADOR · Aprendizajes del CCS en la gestión de catástrofes]]
+- [[knowledge/grafo/fuentes/DGT-MANUAL-SEGURO-2026|DGT-MANUAL-SEGURO-2026 · DGT, manual X «Seguro del automóvil»]]
+- [[knowledge/grafo/fuentes/NIS2-ANTEPROYECTO|NIS2-ANTEPROYECTO · Anteproyecto de Ley de Coordinación y Gobernanza de la Ciberseguridad]]

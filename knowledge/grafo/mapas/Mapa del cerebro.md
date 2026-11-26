@@ -11,9 +11,9 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 ## Comunidades
 
 - [[knowledge/grafo/mapas/comunidad-00|Comunidad 0 · Habilidades · Legal y privacidad y Arquitecto de procesos]] (104 nodos)
-- [[knowledge/grafo/mapas/comunidad-01|Comunidad 1 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros]] (99 nodos)
+- [[knowledge/grafo/mapas/comunidad-01|Comunidad 1 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros]] (94 nodos)
 - [[knowledge/grafo/mapas/comunidad-02|Comunidad 2 · claude/habilidades · Habilidades de los agentes y Administración]] (93 nodos)
-- [[knowledge/grafo/mapas/comunidad-03|Comunidad 3 · docs · Registro de decisiones y Varios · empresa-ia]] (75 nodos)
+- [[knowledge/grafo/mapas/comunidad-03|Comunidad 3 · docs · Registro de decisiones y Varios · empresa-ia]] (81 nodos)
 - [[knowledge/grafo/mapas/comunidad-04|Comunidad 4 · knowledge/ingenieria · Dependencias entre procesos y CEO digital]] (75 nodos)
 - [[knowledge/grafo/mapas/comunidad-05|Comunidad 5 · precedents/oficina · Propuesta de proceso de referencia: siniestros en corredurías y Conversaciones con Coordinación sectorial · Seguros]] (59 nodos)
 - [[knowledge/grafo/mapas/comunidad-06|Comunidad 6 · processes/catalog · Índice del conocimiento de Varios y Arquitecto de procesos]] (51 nodos)
@@ -27,8 +27,8 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 
 ## Nodos centrales
 
-- [[knowledge/fuentes/registro|Registro de fuentes]] · 200 vecinos
-- [[knowledge/INDEX|Índice del conocimiento de Varios]] · 117 vecinos
+- [[knowledge/fuentes/registro|Registro de fuentes]] · 201 vecinos
+- [[knowledge/INDEX|Índice del conocimiento de Varios]] · 118 vecinos
 - [[DECISIONS|Registro de decisiones]] · 105 vecinos
 - [[docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado|Guia de Arranque Proyecto v1.4 Diseno Cerrado]] · 84 vecinos
 - [[processes/catalog/README|Catálogo de procesos P01–P38]] · 82 vecinos
@@ -37,7 +37,7 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 - [[processes/catalog/P22-gestion-de-errores-y-reintentos|P22 · Gestión de errores y reintentos]] · 62 vecinos
 - [[processes/catalog/P28-gestion-de-incidentes|P28 · Gestión de incidentes]] · 61 vecinos
 - [[CLAUDE|Varios · empresa-ia]] · 61 vecinos
-- [[knowledge/direccion/ceo-digital|CEO digital]] · 60 vecinos
+- [[knowledge/direccion/ceo-digital|CEO digital]] · 59 vecinos
 - [[knowledge/procesos/arquitecto-procesos|Arquitecto de procesos]] · 50 vecinos
 - [[knowledge/sectores/especialista-sectorial|Coordinación sectorial y seguros]] · 50 vecinos
 - [[knowledge/seguridad-legal/ciberseguridad|Especialista en ciberseguridad]] · 50 vecinos
@@ -59,9 +59,9 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 ## Preguntas abiertas
 
 - ¿Por qué «Registro de fuentes» conecta la comunidad 1 con las comunidades 2, 3, 4, 5?  
-  Intermediación alta (0.265): es un puente entre temas.
+  Intermediación alta (0.267): es un puente entre temas.
 - ¿Por qué «Registro de decisiones» conecta la comunidad 3 con las comunidades 1, 2, 4, 5?  
-  Intermediación alta (0.093): es un puente entre temas.
+  Intermediación alta (0.092): es un puente entre temas.
 - ¿Por qué «Habilidades de los agentes» conecta la comunidad 2 con las comunidades 4, 5, 6, 10?  
   Intermediación alta (0.079): es un puente entre temas.
 - ¿Se aprueba D-013 · Conocimiento y catálogo de procesos generados desde datos? Sigue en propuesta y la citan 12 secciones.  
@@ -72,7 +72,7 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
   Una decisión en propuesta que ya sostiene mucho contenido.
 - ¿Deberían enlazarse «DECISIONS.md» y «docs/06-seguridad-y-gobierno.md»?  
   Tratan lo mismo (relación INFERIDA 0.85) pero no se citan.
-- ¿Deberían enlazarse «governance/legal/borradores/04-anexo-uso-ia.md» y «knowledge/agentes/proj.md»?  
+- ¿Deberían enlazarse «governance/legal/borradores/03-acuerdo-confidencialidad.md» y «knowledge/plantillas/entregables/01-propuesta-diagnostico.md»?  
   Tratan lo mismo (relación INFERIDA 0.75) pero no se citan.
 - ¿Siguen vigentes D-008, D-016, D-020? Ningún documento las cita.  
   Decisiones que nadie menciona.

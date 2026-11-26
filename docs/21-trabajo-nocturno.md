@@ -40,7 +40,7 @@ Elegidas por Juan el 26/11 a las 09:40 a partir del apartado 8 del informe del 2
 - [x] K1 · Fuentes externas del sector seguros. Recorre las fichas de `knowledge/sectores/seguros/` y de los especialistas que las usan; añade a cada afirmación normativa su fuente oficial (BOE, EUR-Lex, DGSFP, UNESPA, CCS) en el registro de fuentes y marca lo que no se pueda confirmar. Recalcula el porcentaje de fichas con fuente externa (hoy 28 %) y apúntalo en el Registro. *Hecho cuando:* las fichas del sector seguros tienen fuente externa o aviso de «sin confirmar», y el porcentaje nuevo está medido.
 
 ### De reserva (solo si sobra tiempo, en este orden)
-- [ ] N4 · Oficina: editar antes de aprobar, posponer y caducidad de las aprobaciones de Inicio (pendiente de F1, docs/25).
+- [~] (en curso, tanda 22:00, 22:58) N4 · Oficina: editar antes de aprobar, posponer y caducidad de las aprobaciones de Inicio (pendiente de F1, docs/25).
 - [ ] N5 · Inventario de la web actual (`site/`) frente a la estructura de la web para clientes (docs/26): qué se queda, qué se mueve y qué se borra. Sin borrar nada.
 
 ### Noche anterior (25 al 26/11): 15 de 15 hechas

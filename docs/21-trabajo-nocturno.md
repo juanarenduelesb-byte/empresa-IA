@@ -26,7 +26,7 @@ Reglas que no cambian: **no reinventar la rueda** (antes de construir, mira cóm
 - [x] F2 · Web para clientes: estudio de 5–8 webs de referencia (consultoras boutique de IA y procesos) con fuente; estructura, textos y maqueta navegable con datos y casos marcados como inventados. Sin publicar y sin cerrar la marca (M-002).
 - [x] B3 · Entender al cliente: ficha de cliente (esquema JSON + plantilla), cuestionario de descubrimiento por fases (G0–G2) y guion de la conversación semanal de validación.
 - [x] C2 · 25 encargos para el Control A (20 normales + 5 trampas) con la decisión esperada y un banco de pruebas con modelo simulado.
-- [ ] D2 · Finanzas: comparativa de forma jurídica con fuentes, requisitos de facturación (incluido Verifactu, con fechas verificadas), modelo de precio de diagnóstico, piloto y operación como hoja con parámetros (sin cifras inventadas) y previsión de caja por escenarios.
+- [~] (en curso, tanda 03:30, 04:35) D2 · Finanzas: comparativa de forma jurídica con fuentes, requisitos de facturación (incluido Verifactu, con fechas verificadas), modelo de precio de diagnóstico, piloto y operación como hoja con parámetros (sin cifras inventadas) y previsión de caja por escenarios.
 - [ ] E1 · Plantillas de entregables con la misma estructura: propuesta de diagnóstico, informe de diagnóstico, diseño TO-BE, plan de piloto, informe mensual de operación y acta de reunión.
 - [ ] C3 · Rúbrica de calidad de entregables y lista de comprobación por tipo de entregable.
 

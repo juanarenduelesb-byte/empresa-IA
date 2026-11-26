@@ -11,9 +11,9 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 ## Comunidades
 
 - [[knowledge/grafo/mapas/comunidad-00|Comunidad 0 · Habilidades · Legal y privacidad y Arquitecto de procesos]] (104 nodos)
-- [[knowledge/grafo/mapas/comunidad-01|Comunidad 1 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros]] (94 nodos)
+- [[knowledge/grafo/mapas/comunidad-01|Comunidad 1 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros]] (99 nodos)
 - [[knowledge/grafo/mapas/comunidad-02|Comunidad 2 · claude/habilidades · Habilidades de los agentes y Administración]] (93 nodos)
-- [[knowledge/grafo/mapas/comunidad-03|Comunidad 3 · docs · Registro de decisiones y Varios · empresa-ia]] (80 nodos)
+- [[knowledge/grafo/mapas/comunidad-03|Comunidad 3 · docs · Registro de decisiones y Varios · empresa-ia]] (75 nodos)
 - [[knowledge/grafo/mapas/comunidad-04|Comunidad 4 · knowledge/ingenieria · Dependencias entre procesos y CEO digital]] (75 nodos)
 - [[knowledge/grafo/mapas/comunidad-05|Comunidad 5 · precedents/oficina · Propuesta de proceso de referencia: siniestros en corredurías y Conversaciones con Coordinación sectorial · Seguros]] (59 nodos)
 - [[knowledge/grafo/mapas/comunidad-06|Comunidad 6 · processes/catalog · Índice del conocimiento de Varios y Arquitecto de procesos]] (51 nodos)

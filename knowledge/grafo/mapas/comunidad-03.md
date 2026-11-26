@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 3
-miembros: 74
+miembros: 75
 cohesion: 0.13
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 3 · knowledge/direccion · Dependencias entre procesos y CEO digital
+# Comunidad 3 · knowledge/ingenieria · Dependencias entre procesos y CEO digital
 
-74 nodos agrupados por el algoritmo de Louvain. Cohesión 0.13.
+75 nodos agrupados por el algoritmo de Louvain. Cohesión 0.13.
 
 ## Documentos
 
@@ -17,9 +17,11 @@ tags:
 - [[knowledge/direccion/ceo-digital|CEO digital]]
 - [[knowledge/seguridad-legal/ciberseguridad|Especialista en ciberseguridad]]
 - [[docs/13-procesos-y-estados|Procesos y estados]]
+- [[knowledge/ingenieria/datos-ia|Arquitecto de datos e IA]]
 - [[knowledge/direccion/decisiones-seguimiento|Responsable de decisiones y seguimiento]]
 - [[knowledge/direccion/bibliotecario|Bibliotecario / responsable de conocimiento]]
 - [[knowledge/procesos/automatizacion|Especialista en automatización]]
+- [[knowledge/ingenieria/arquitecto-tecnico|Arquitecto técnico]]
 - [[knowledge/ingenieria/backend|Especialista backend]]
 - [[knowledge/seguridad-legal/calidad-riesgos|Especialista en calidad y riesgos]]
 - [[knowledge/ingenieria/README|Ingeniería y tecnología]]
@@ -31,14 +33,14 @@ tags:
 - [[knowledge/seguridad-legal/README|Seguridad, privacidad, legal y cumplimiento]]
 - [[processes/tests/README|Plan de pruebas de procesos]]
 - [[processes/README|Procesos]]
-- [[integrations/README|Integraciones]]
 - [[integrations/catalog/README|Catálogo de integraciones]]
 - [[claude/habilidades/cinco-decisiones|Las cinco decisiones del CEO]]
 - [[processes/definitions/README|Definiciones ejecutables]]
-- [[integrations/contracts/README|Contratos de datos]]
-- [[integrations/tests/README|Pruebas de integración]]
 - [[processes/runbooks/caida-proveedor-ia|Caída del proveedor de IA]]
-- [[integrations/connectors/README|Conectores]]
+
+## Decisiones
+
+- [[knowledge/grafo/decisiones/D-004|D-004 · PostgreSQL como fuente operativa]]
 
 ## Procesos
 
@@ -56,7 +58,6 @@ tags:
 - [[processes/catalog/P12-gestion-de-cambios|P12 · Gestión de cambios]]
 - [[processes/catalog/P14-gestion-de-permisos-y-aislamiento|P14 · Gestión de permisos y aislamiento]]
 - [[processes/catalog/P20-seguridad-de-entradas-e-inyeccion-de-instrucciones|P20 · Seguridad de entradas e inyección de instrucciones]]
-- [[processes/catalog/P13-aprendizaje-y-actualizacion-de-la-wiki|P13 · Aprendizaje y actualización de la wiki]]
 - [[processes/catalog/P18-evaluacion-y-mejora|P18 · Evaluación y mejora]]
 - [[processes/catalog/P25-gestion-de-cambios-y-versiones|P25 · Gestión de cambios y versiones]]
 - [[processes/catalog/P05-diseno-del-plan|P05 · Diseño del plan]]
@@ -76,6 +77,7 @@ tags:
 - [[knowledge/ingenieria/backend|Especialista backend]]
 - [[knowledge/procesos/automatizacion|Especialista en automatización]]
 - [[knowledge/seguridad-legal/calidad-riesgos|Especialista en calidad y riesgos]]
+- [[knowledge/ingenieria/datos-ia|Arquitecto de datos e IA]]
 - [[knowledge/direccion/decisiones-seguimiento|Responsable de decisiones y seguimiento]]
 - [[knowledge/ingenieria/evaluacion-ia|Especialista en evaluación de IA]]
 - [[knowledge/direccion/bibliotecario|Bibliotecario / responsable de conocimiento]]
@@ -88,10 +90,12 @@ tags:
 - [[knowledge/grafo/fuentes/INT-GUIA|INT-GUIA · Guía de Arranque v1.4 (diseño cerrado)]]
 - [[knowledge/grafo/fuentes/ISO-27001|ISO-27001 · ISO/IEC 27001:2022 (transición desde 2013 terminada el 31/10/2025)]]
 - [[knowledge/grafo/fuentes/OWASP-LLM-2025|OWASP-LLM-2025 · OWASP Top 10 for LLM Applications 2025]]
-- [[knowledge/grafo/fuentes/APQC-PCF|APQC-PCF · APQC Process Classification Framework, versión intersectorial]]
+- [[knowledge/grafo/fuentes/AEPD-AGENTICA|AEPD-AGENTICA · Inteligencia artificial agéntica desde la perspectiva de protección de datos]]
 - [[knowledge/grafo/fuentes/IETF-IDEMPOTENCY|IETF-IDEMPOTENCY · The Idempotency-Key HTTP Header Field (borrador 07)]]
 - [[knowledge/grafo/fuentes/PG-RLS|PG-RLS · Recomendaciones de seguridad a nivel de fila para SaaS multicliente]]
 - [[knowledge/grafo/fuentes/NIST-AI-600-1|NIST-AI-600-1 · AI RMF: Generative Artificial Intelligence Profile (NIST AI 600-1)]]
 - [[knowledge/grafo/fuentes/OSS-TEMPORAL|OSS-TEMPORAL · Temporal (motor de ejecución duradera)]]
+- [[knowledge/grafo/fuentes/OSS-DOCLING|OSS-DOCLING · Docling (conversión de documentos)]]
+- [[knowledge/grafo/fuentes/OSS-PRESIDIO|OSS-PRESIDIO · Microsoft Presidio (detección y anonimización de datos personales)]]
 - [[knowledge/grafo/fuentes/OSS-PROMPTFOO|OSS-PROMPTFOO · promptfoo (evaluación y pruebas adversariales de LLM)]]
 - [[knowledge/grafo/fuentes/OSS-SPIFF|OSS-SPIFF · SpiffWorkflow (motor BPMN/DMN en Python)]]

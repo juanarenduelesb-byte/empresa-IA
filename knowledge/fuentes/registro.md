@@ -96,6 +96,12 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 | [UNESPA-SDM](#unespa-sdm) | Reglamento articulado del Sistema Siniestros Daños Materiales (SDM) | buena-practica | alta | vigente | draft |
 | [CNMC-CIDE-2014](#cnmc-cide-2014) | CNMC, resolución de 25/09/2014, expediente S/0496/13 CIDE | recomendacion-tecnica | alta | historico | validated |
 | [DGT-MANUAL-SEGURO-2026](#dgt-manual-seguro-2026) | DGT, manual X «Seguro del automóvil» | recomendacion-tecnica | alta | vigente | draft |
+| [NNG-HIDDEN-NAV](#nng-hidden-nav) | Hamburger Menus and Hidden Navigation Hurt UX Metrics | buena-practica | alta | vigente | validated |
+| [APPLE-HIG-TAB-BARS](#apple-hig-tab-bars) | Human Interface Guidelines: Tab bars | buena-practica | alta | vigente | validated |
+| [LINEAR-TRIAGE](#linear-triage) | Linear: Triage e Inbox | documentacion-producto | media | vigente | validated |
+| [BASECAMP-5](#basecamp-5) | Basecamp 5: inicio orientado a la acción | documentacion-producto | media | vigente | draft |
+| [GITHUB-NOTIF-INBOX](#github-notif-inbox) | GitHub: gestionar notificaciones desde el inbox | documentacion-producto | media | vigente | validated |
+| [ZAPIER-HITL](#zapier-hitl) | Zapier: Human in the Loop (pedir aprobación para seguir) | documentacion-producto | media | vigente | validated |
 
 <a id="int-guia"></a>
 ### INT-GUIA
@@ -984,4 +990,64 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
 - **Nota:** El asegurador facilita ejemplares de la declaración amistosa y debe adherirse a los convenios de indemnización directa. Material formativo, no norma.
+
+<a id="nng-hidden-nav"></a>
+### NNG-HIDDEN-NAV
+- **Título:** Hamburger Menus and Hidden Navigation Hurt UX Metrics
+- **Autor u organismo:** Nielsen Norman Group (Pernice y Budiu)
+- **URL:** <https://www.nngroup.com/articles/hamburger-menus/>
+- **Tipo:** buena-practica · **Jurisdicción:** — · **Versión o fecha:** 26/06/2016
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** —
+- **Nota:** Estudio con 179 participantes: la navegación oculta reduce la descubribilidad más de un 20 % y hace las tareas al menos un 39 % más lentas; en escritorio, navegación visible. Coincide con NN/g, navegación vertical (16/05/2021).
+
+<a id="apple-hig-tab-bars"></a>
+### APPLE-HIG-TAB-BARS
+- **Título:** Human Interface Guidelines: Tab bars
+- **Autor u organismo:** Apple
+- **URL:** <https://developer.apple.com/design/human-interface-guidelines/tab-bars>
+- **Tipo:** buena-practica · **Jurisdicción:** — · **Versión o fecha:** actualizada 08/06/2026
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** —
+- **Nota:** Pestañas para navegar, no para acciones; siempre visibles; badges solo para información crítica; cinco o menos por defecto. Material Design 3 (navigation rail) admite de 3 a 7 destinos.
+
+<a id="linear-triage"></a>
+### LINEAR-TRIAGE
+- **Título:** Linear: Triage e Inbox
+- **Autor u organismo:** Linear
+- **URL:** <https://linear.app/docs/triage>
+- **Tipo:** documentacion-producto · **Jurisdicción:** — · **Versión o fecha:** consultado 26/11/2026
+- **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** —
+- **Nota:** Bandeja para lo que llega de fuera con acciones de una tecla: aceptar, rechazar con motivo, duplicado y posponer. Inbox separado de My Issues. Ver también https://linear.app/docs/inbox.
+
+<a id="basecamp-5"></a>
+### BASECAMP-5
+- **Título:** Basecamp 5: inicio orientado a la acción
+- **Autor u organismo:** 37signals
+- **URL:** <https://basecamp.com/5>
+- **Tipo:** documentacion-producto · **Jurisdicción:** — · **Versión o fecha:** 2026
+- **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** Inicio con proyectos recientes y actividad; menú universal (Shift+J); «New for you» separado de la actividad. Atajos en https://basecamp.com/keyboard.
+
+<a id="github-notif-inbox"></a>
+### GITHUB-NOTIF-INBOX
+- **Título:** GitHub: gestionar notificaciones desde el inbox
+- **Autor u organismo:** GitHub
+- **URL:** <https://docs.github.com/en/subscriptions-and-notifications/how-tos/viewing-and-triaging-notifications/managing-notifications-from-your-inbox>
+- **Tipo:** documentacion-producto · **Jurisdicción:** — · **Versión o fecha:** consultado 26/11/2026
+- **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** —
+- **Nota:** Filtros por defecto: asignado, participando, revisión pedida y menciones. Projects muestra los mismos datos como tabla, tablero o calendario.
+
+<a id="zapier-hitl"></a>
+### ZAPIER-HITL
+- **Título:** Zapier: Human in the Loop (pedir aprobación para seguir)
+- **Autor u organismo:** Zapier
+- **URL:** <https://help.zapier.com/hc/en-us/articles/38731463206029-Request-approval-to-keep-your-workflow-running-with-Human-in-the-Loop>
+- **Tipo:** documentacion-producto · **Jurisdicción:** — · **Versión o fecha:** actualizada 26/10/2026
+- **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** —
+- **Nota:** El flujo se pausa; el revisor aprueba, rechaza o edita con nota; caducidad con acción por defecto; registro de auditoría. Coincide con las aprobaciones de Power Automate (19/08/2026).
 

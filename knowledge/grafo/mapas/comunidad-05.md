@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 5
-miembros: 55
+miembros: 56
 cohesion: 0.15
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 5 · processes/catalog · Índice del conocimiento de Varios y Arquitecto de procesos
 
-55 nodos agrupados por el algoritmo de Louvain. Cohesión 0.15.
+56 nodos agrupados por el algoritmo de Louvain. Cohesión 0.15.
 
 ## Documentos
 
@@ -72,6 +72,7 @@ tags:
 ## Fuentes
 
 - [[knowledge/grafo/fuentes/INT-ATLAS|INT-ATLAS · Atlas Evolución v1.1 · modelo operativo, procesos y despliegue]]
+- [[knowledge/grafo/fuentes/APQC-PCF|APQC-PCF · APQC Process Classification Framework, versión intersectorial]]
 - [[knowledge/grafo/fuentes/MEDDICC|MEDDICC · MEDDIC/MEDDPICC: método de cualificación B2B]]
 - [[knowledge/grafo/fuentes/BPMN-OMG|BPMN-OMG · BPMN 2.0.2 (ISO/IEC 19510)]]
 - [[knowledge/grafo/fuentes/PM-MANIFESTO|PM-MANIFESTO · Process Mining Manifesto]]

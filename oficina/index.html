@@ -42,6 +42,13 @@ button{font:inherit;color:inherit}
 .tbtn kbd{font:600 11px var(--font);color:var(--ink-muted);border:1px solid var(--hairline);border-radius:5px;padding:0 4px}
 .tbtn .n{background:var(--warn);color:#fff;border-radius:999px;font-size:11.5px;padding:0 7px;font-weight:700}
 .spacer{flex:1}
+.nav{display:flex;gap:6px;flex-wrap:wrap;align-items:center}.tbtn .n:empty{display:none}.nsep{width:1px;height:22px;background:var(--hairline)}
+.tbtn[aria-current=page]{background:var(--ink);color:var(--surface);border-color:var(--ink)}.tbtn[aria-current=page] .n{background:var(--warn)}
+.home{overflow:auto;padding:16px;display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:16px;align-content:start}@media (max-width:900px){.home{grid-template-columns:1fr}}
+.home .hb{border:1px solid var(--hairline);background:var(--card);border-radius:16px;padding:12px 14px}.home .hb h3{margin:0 0 8px;font-size:15px;display:flex;gap:8px;align-items:center}.home .hb h3 .n{background:var(--warn);color:#fff;border-radius:999px;font-size:11.5px;padding:0 7px}
+.home .hi{border-top:1px solid var(--hairline);padding:9px 0;display:flex;gap:10px;align-items:flex-start}.home .hi:first-of-type{border-top:0}.home .hi .t{flex:1;min-width:0}.home .hi .t b{display:block;font-size:13.5px}.home .hi .t small{color:var(--ink-muted);font-size:12px}
+.home .why{display:block;color:var(--warn);font-size:12px}.home .acts{display:flex;gap:6px;flex-wrap:wrap}
+.clg{overflow:auto;padding:16px;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;align-content:start}.clc{border:1px solid var(--hairline);background:var(--card);border-radius:16px;padding:12px 14px}.clc h3{margin:0 0 2px;font-size:16px}.clc .m{display:flex;gap:12px;font-size:12px;color:var(--ink-muted);margin:6px 0}.clc .m b{color:var(--ink);font-size:15px;display:block}
 .tbtn.ic{padding:6px 8px}
 @media (max-width:1560px){.top .tbtn{padding:6px 9px;font-size:12.5px;gap:5px}.top .tbtn.ic{padding:6px 7px}}
 @media (max-width:1560px){.logo small{display:none}}
@@ -156,7 +163,9 @@ textarea{resize:vertical;min-height:70px}
 .full.behind::after{content:"";position:absolute;inset:0;background:rgba(28,20,16,.28);border-radius:inherit;z-index:5}
 .full{position:fixed;inset:24px;z-index:70;background:var(--surface);border:1px solid var(--hairline);border-radius:24px;display:none;flex-direction:column;overflow:hidden}
 .full.on{display:flex}
-@media (max-width:700px){.full{inset:8px}}
+/* F1: la barra de secciones queda siempre visible y usable encima de las vistas (NN/g: navegación visible) */
+.top{z-index:75}.full{top:calc(var(--toph,57px) + 8px)}
+@media (max-width:700px){.full{inset:8px;top:calc(var(--toph,57px) + 6px)}}
 .msg{border-radius:14px;padding:10px 12px;margin:8px 0;max-width:92%}
 .msg.u{background:var(--ink);color:var(--surface);margin-left:auto}
 .msg.a{background:var(--card);border:1px solid var(--hairline)}
@@ -362,12 +371,17 @@ body.v3d #dtoday.o3only,body.v3d #dwait.o3only{display:block!important}
   <span class="status" id="status">Conectando…</span>
   <div class="clock" aria-live="off"><b id="ck">--:--</b><span id="ckd"></span></div>
   <div class="spacer"></div>
-  <button class="tbtn" id="bApr" type="button" title="Encargos que esperan tu aprobación">Tu OK <span class="n" id="nApr">0</span></button>
-  <button class="tbtn" id="bProj" type="button" title="Tecla J">Proyectos <span class="n" id="nProj">0</span></button>
+  <nav class="nav" aria-label="Secciones de la oficina">
+  <button class="tbtn" id="bApr" type="button" data-nav title="Lo que espera tu OK, preguntas, rutinas y fechas (tecla I)">Inicio <span class="n" id="nApr">0</span></button>
+  <button class="tbtn" id="bBoard" type="button" data-nav title="Todos los encargos por estado (tecla B)">Encargos</button>
+  <button class="tbtn" id="bProj" type="button" data-nav title="Tecla J">Proyectos <span class="n" id="nProj">0</span></button>
+  <button class="tbtn" id="bCli" type="button" data-nav title="Clientes y sus proyectos (tecla L)">Clientes</button>
+  <button class="tbtn" id="bBrain" type="button" data-nav title="Tecla G">Cerebro</button>
+  <button class="tbtn" id="bCal" type="button" data-nav title="Tecla P">Calendario</button>
+  <button class="tbtn" id="bAg" type="button" data-nav title="La planta con los 34 agentes, en 2D o 3D (tecla A)">Agentes</button>
+  </nav>
+  <span class="nsep" aria-hidden="true"></span>
   <button class="tbtn hl" id="bNewP" type="button" title="Tecla N">Nuevo proyecto</button>
-  <button class="tbtn" id="bBoard" type="button" title="Tecla B">Tablero</button>
-  <button class="tbtn" id="bCal" type="button" title="Tecla P">Calendario</button>
-  <button class="tbtn" id="bBrain" type="button" title="Tecla G">Cerebro</button>
   <button class="tbtn" id="bDec" type="button" title="Tecla D">Decisiones <span class="n" id="nDec">0</span></button>
   <button class="tbtn" id="bMeet" type="button" title="Tecla X">Reunión</button>
   <button class="tbtn ic" id="bFocus" type="button" title="Modo foco (tecla V)" aria-label="Modo foco"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 5V2.5a1 1 0 0 1 1-1H5M11 1.5h2.5a1 1 0 0 1 1 1V5M14.5 11v2.5a1 1 0 0 1-1 1H11M5 14.5H2.5a1 1 0 0 1-1-1V11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
@@ -418,7 +432,7 @@ body.v3d #dtoday.o3only,body.v3d #dwait.o3only{display:block!important}
     </div>
   </aside>
 </div>
-<p class="foot">Oficina interna de Varios. Los agentes trabajan con Claude y con los documentos del repositorio empresa-ia. Teclas: 1 a 7 departamentos, J proyectos, N nuevo proyecto, M memoria, B tablero, P calendario, G cerebro, D decisiones, C hablar con el jefe, X reunión, V foco, Esc volver. No envían, publican, pagan ni borran nada: entregan borradores y lo que tenga riesgo espera tu aprobación. Nada de datos reales de clientes aquí.</p>
+<p class="foot">Oficina interna de Varios. Los agentes trabajan con Claude y con los documentos del repositorio empresa-ia. Teclas: I inicio, B encargos, J proyectos, L clientes, G cerebro, P calendario, A agentes, 1 a 7 departamentos, N nuevo proyecto, M memoria, B tablero, P calendario, G cerebro, D decisiones, C hablar con el jefe, X reunión, V foco, Esc volver. No envían, publican, pagan ni borran nada: entregan borradores y lo que tenga riesgo espera tu aprobación. Nada de datos reales de clientes aquí.</p>
 
 <div class="ov" id="ov"></div>
 <aside class="drawer" id="drawer" aria-label="Detalle"></aside>
@@ -1167,7 +1181,7 @@ function layout(W,H,pad){
 }
 // ======================= PANEL =======================
 function setStatus(){var s=document.getElementById('status');if(S.sample){s.className='status live';s.textContent='En vivo · Claude'}else{s.className='status demo';s.textContent='Demostración · sin Claude'};s.title=S.db?'Los encargos se guardan y se comparten con quien tenga acceso a esta oficina.':'Los encargos se guardan solo en este navegador.'}
-function render(){renderFloor();renderFeed();fillProjSel();renderDeptMetrics();if(O3)O3.sync();document.getElementById('nApr').textContent=cnt(function(t){return t.status==='aprob'});document.getElementById('nDec').textContent=Object.values(S.decisions).filter(function(d){return d.estado==='propuesta'}).length;var ae=document.activeElement;if(cur.view&&!(ae&&q('full').contains(ae)&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName)))cur.view()}
+function render(){renderFloor();renderFeed();fillProjSel();renderDeptMetrics();if(O3)O3.sync();document.getElementById('nApr').textContent=cnt(function(t){return !t.piece&&(t.status==='aprob'||t.status==='preg')})||'';document.getElementById('nDec').textContent=Object.values(S.decisions).filter(function(d){return d.estado==='propuesta'}).length||'';var ae=document.activeElement;if(cur.view&&!(ae&&q('full').contains(ae)&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName)))cur.view()}
 function agentState(id){if(S.working[id])return 'work';var w=Object.values(S.tasks).some(function(t){return t.agent===id&&!t.piece&&(t.status==='aprob'||t.status==='preg')});return w?'wait':''}
 function pendingRoutines(){return S.sample?[]:routines().filter(function(r){return routineDue(r)})}
 function renderFeed(){
@@ -1211,7 +1225,7 @@ function openFull(html,view){var f=document.getElementById('full');if(q('drawer'
 function closeAll(){var ae=document.activeElement;if(ae&&ae.blur&&(q('drawer').contains(ae)||q('full').contains(ae)))ae.blur();document.getElementById('drawer').classList.remove('on');document.getElementById('full').classList.remove('on');document.getElementById('ov').classList.remove('on');cur.view=null;cur.agent=null;cur.task=null}
 function closeDrawer(){var d=q('drawer'),f=q('full');if(d.contains(document.activeElement))document.activeElement.blur();d.classList.remove('on');cur.agent=null;cur.task=null;
   if(f.classList.contains('on')){f.classList.remove('behind');if(cur.view)cur.view()}else q('ov').classList.remove('on')}
-function closeFull(){var f=q('full');if(f.contains(document.activeElement))document.activeElement.blur();f.classList.remove('on','behind');cur.view=null;if(!q('drawer').classList.contains('on'))q('ov').classList.remove('on')}
+function closeFull(){setNav('bAg');var f=q('full');if(f.contains(document.activeElement))document.activeElement.blur();f.classList.remove('on','behind');cur.view=null;if(!q('drawer').classList.contains('on'))q('ov').classList.remove('on')}
 function closeTop(){if(q('drawer').classList.contains('on'))closeDrawer();else if(q('full').classList.contains('on'))closeFull();else closeAll()}
 document.getElementById('ov').onclick=closeTop;
 q('full').addEventListener('click',function(e){if(q('full').classList.contains('behind')&&q('drawer').classList.contains('on')){e.stopPropagation();e.preventDefault();closeDrawer();return}var b=e.target.closest('#cx');if(b)closeFull()},true);
@@ -1908,7 +1922,7 @@ q('tAdd').onclick=submit;
 q('tTxt').onkeydown=function(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();submit()}};
 q('tTxt').oninput=hint;q('rDays').onchange=hint;q('rH').onchange=hint;
 q('bBoard').onclick=openBoard;q('bProj').onclick=openProjects;q('bNewP').onclick=function(){openNewProject()};q('tBig').onclick=function(e){e.preventDefault();openNewProject()};q('bCal').onclick=openCal;q('bBrain').onclick=function(){openBrain()};q('bDec').onclick=function(){openDecisions()};q('bMeet').onclick=openMeeting;
-q('bApr').onclick=function(){S.filter='aprob';renderFeed();q('feed').scrollIntoView({block:'nearest'})};
+q('bApr').onclick=function(){openHome()};q('bCli').onclick=function(){openClients()};q('bAg').onclick=function(){goAgents()};
 q('bTheme').onclick=function(){var d=document.documentElement,c=d.getAttribute('data-theme'),dark=c?c==='dark':matchMedia('(prefers-color-scheme: dark)').matches;d.setAttribute('data-theme',dark?'light':'dark');buildScene();if(O3)O3.setNight(isDark());try{localStorage.setItem('varios-theme',dark?'light':'dark')}catch(e){}};
 try{var th=localStorage.getItem('varios-theme');if(th)document.documentElement.setAttribute('data-theme',th)}catch(e){}
 function focusMode(){document.body.classList.toggle('focus');setTimeout(fit,60)}
@@ -1917,7 +1931,7 @@ document.addEventListener('keydown',function(e){
   if(e.key==='Escape'){if(document.body.classList.contains('focus')&&!q('ov').classList.contains('on')){focusMode();return}closeTop();return}
   var tag=(e.target.tagName||'').toLowerCase();if(tag==='input'||tag==='textarea'||tag==='select'||e.metaKey||e.ctrlKey||e.altKey)return;
   var k=e.key.toLowerCase();
-  if(k==='j')openProjects();else if(k==='n')openNewProject();else if(k==='m')openMemory();else if(k==='b')openBoard();else if(k==='p')openCal();else if(k==='g')openBrain();else if(k==='d')openDecisions();else if(k==='x')openMeeting();else if(k==='v')focusMode();
+  if(k==='i')openHome();else if(k==='l')openClients();else if(k==='a')goAgents();else if(k==='j')openProjects();else if(k==='n')openNewProject();else if(k==='m')openMemory();else if(k==='b')openBoard();else if(k==='p')openCal();else if(k==='g')openBrain();else if(k==='d')openDecisions();else if(k==='x')openMeeting();else if(k==='v')focusMode();
   else if(k==='c'){var dd=S.depFilter||'dir';openAgent(A.find(function(a){return a.dep===dd&&a.lead}).id,'chat')}
   else if(/^[1-7]$/.test(k)){var id=DEP[+k-1].id;S.depFilter=S.depFilter===id?null:id;render()}
 });
@@ -1961,10 +1975,61 @@ function renderDeptMetrics(){renderToday();var L=q('dmetL');if(!L)return;
     return '<button type="button" class="dmr'+(S.depFilter===d.id?' sel':'')+'" data-dm="'+d.id+'"><span class="h"><span><i style="background:'+d.c+'"></i>'+esc(d.n)+'</span><small>'+ag_.length+' agentes · '+done+' hechas</small></span><span class="bar">'+(c.work?'<b class="w" style="flex:'+c.work+'"></b>':'')+(c.talk?'<b class="t" style="flex:'+c.talk+'"></b>':'')+(c.wait?'<b class="o" style="flex:'+c.wait+'"></b>':'')+(c.free?'<b class="f" style="flex:'+c.free+'"></b>':'')+'</span></button>'}).join('');
   L.querySelectorAll('[data-dm]').forEach(function(b){b.onclick=function(){S.depFilter=S.depFilter===b.dataset.dm?null:b.dataset.dm;render()}})}
 
+
+// ======================= INICIO Y CLIENTES (F1, docs/25-portal-interno.md) =======================
+function setNav(id){document.querySelectorAll('.top [data-nav]').forEach(function(b){b.setAttribute('aria-current',b.id===id?'page':'false')})}
+function goAgents(){closeAll();setNav('bAg');var sc=q('scene');if(sc&&sc.scrollIntoView)sc.scrollIntoView({block:'nearest'})}
+(function(){var W=function(fn,id){return function(){var r=fn.apply(this,arguments);setNav(id);return r}};
+  openBoard=W(openBoard,'bBoard');openProjects=W(openProjects,'bProj');openProject=W(openProject,'bProj');openCal=W(openCal,'bCal');openBrain=W(openBrain,'bBrain');openDecisions=W(openDecisions,null);openMemory=W(openMemory,null);openMeeting=W(openMeeting,null);openNewProject=W(openNewProject,null);
+  q('bBoard').onclick=function(){openBoard()};q('bProj').onclick=function(){openProjects()};q('bCal').onclick=function(){openCal()};q('bBrain').onclick=function(){openBrain()};q('bDec').onclick=function(){openDecisions()};q('bMeet').onclick=function(){openMeeting()};q('bNewP').onclick=function(){openNewProject()}})();
+function homeWanted(){try{return localStorage.getItem('varios-inicio')!=='0'}catch(e){return true}}
+function openHome(){
+  var draw=function(){
+    var top=function(t){return !t.piece},T=Object.values(S.tasks).filter(top),d0=new Date();d0.setHours(0,0,0,0);
+    var wait=T.filter(function(t){return t.status==='aprob'||t.status==='preg'}).sort(function(a,b){return String(a.done||a.created).localeCompare(String(b.done||b.created))});
+    var run_=T.filter(function(t){return /^(cola|marcha|revision|maqueta)$/.test(t.status)}),done=T.filter(function(t){return t.status==='hecha'&&t.done&&new Date(t.done)>=d0});
+    var pr=pendingRoutines(),nu=nextUp().slice(0,5),today=new Date(new Date().toDateString());
+    var pend=(BRN?BRN.pending:[]).map(function(p){var dd=pendDate(p[2]);return {t:p[0],who:p[1],when:p[2],days:dd?Math.round((dd-today)/864e5):null}}).sort(function(a,b){return (a.days==null?1e9:a.days)-(b.days==null?1e9:b.days)});
+    var props=Object.values(S.decisions).filter(function(d){return d.estado==='propuesta'});
+    var who=function(t){var a=ag(t.agent);return a?esc(a.n)+' · '+esc(dep(a.dep).n):''};
+    var h='<div class="dh"><div><h2>Inicio</h2><small>'+esc(new Date().toLocaleDateString('es-ES',{weekday:'long',day:'numeric',month:'long'}))+' · lo que necesita a un socio, primero</small></div><div class="spacer"></div><label class="ck" style="font-size:12.5px"><input type="checkbox" id="hmStart"'+(homeWanted()?' checked':'')+'> Abrir la oficina aquí</label><button class="btn x" id="cx" type="button">Cerrar</button></div><div class="home"><div>';
+    h+='<section class="hb" aria-labelledby="hmW"><h3 id="hmW">Te esperan'+(wait.length?' <span class="n">'+wait.length+'</span>':'')+'</h3>';
+    h+=wait.length?wait.map(function(t){return '<div class="hi"><div class="t"><b>'+esc(clipT(t.title||t.text,110))+'</b><small>'+who(t)+(t.project&&proj(t.project)?' · '+esc(proj(t.project).name):'')+'</small><span class="why">'+(t.status==='preg'?'Tiene una pregunta para ti':'Necesita tu OK · riesgo '+esc(t.risk||'—'))+'</span></div><div class="acts">'+(t.status==='aprob'?'<button class="btn p sm" type="button" data-hok="'+t.id+'">Dar el OK</button>':'')+'<button class="btn sm" type="button" data-ht="'+t.id+'">'+(t.status==='preg'?'Responder':'Revisar')+'</button></div></div>'}).join(''):'<p class="hint">Nada espera tu OK. Lo que tenga riesgo, sea externo, legal o financiero aparecerá aquí antes de salir.</p>';
+    h+='</section>';
+    if(pr.length)h+='<section class="hb" style="margin-top:12px"><h3>Rutinas que tocaba ejecutar</h3>'+pr.map(function(r){return '<div class="hi"><div class="t"><b>'+esc(r.name)+'</b><small>'+esc(ag(r.ag).n)+'</small></div><div class="acts"><button class="btn p sm" type="button" data-run="'+r.id+'">Ejecutar ahora</button></div></div>'}).join('')+'</section>';
+    h+='<section class="hb" style="margin-top:12px"><h3>En curso <span class="hint" style="font-weight:400">'+run_.length+' · hechas hoy '+done.length+'</span></h3>'+(run_.length?run_.slice(0,6).map(function(t){return '<div class="hi"><div class="t"><b>'+esc(clipT(t.title||t.text,110))+'</b><small>'+who(t)+'</small></div>'+pill(t.status)+'</div>'}).join(''):'<p class="hint">No hay encargos en marcha.</p>')+'<div class="acts" style="margin-top:6px"><button class="btn sm" type="button" id="hmAll">Ver todos los encargos</button></div></section></div><div>';
+    h+='<section class="hb"><h3>Próximo</h3>'+(nu.length?nu.map(function(x){return '<div class="hi"><div class="t"><b>'+esc(x.name)+'</b><small>'+esc(ag(x.ag)?ag(x.ag).n:'')+' · '+esc(fmt(x.at.toISOString()))+'</small></div><span class="hint">en '+esc(inTxt(x.at-new Date()))+'</span></div>'}).join(''):'<p class="hint">Nada programado.</p>')+'<div class="acts" style="margin-top:6px"><button class="btn sm" type="button" id="hmCal">Abrir el calendario</button></div></section>';
+    h+='<section class="hb" style="margin-top:12px"><h3>Decisiones con fecha</h3>'+(pend.length?pend.slice(0,5).map(function(p){return '<div class="hi"><div class="t"><b>'+esc(p.t)+'</b><small>'+esc(p.who)+'</small></div><span class="due'+(p.days!=null&&p.days<0?' late':p.days!=null&&p.days<=7?' soon':'')+'">'+esc(p.when)+(p.days!=null?' · '+(p.days<0?'hace '+(-p.days)+' d':p.days===0?'hoy':'en '+p.days+' d'):'')+'</span></div>'}).join(''):'<p class="hint">'+(BRN?'No hay decisiones pendientes con fecha.':'Cargando el cerebro…')+'</p>')+(props.length?'<p class="hint" style="margin:6px 0 0">'+props.length+' propuestas de la oficina sin aceptar.</p>':'')+'<div class="acts" style="margin-top:6px"><button class="btn sm" type="button" id="hmDec">Abrir decisiones</button></div></section>';
+    h+='<p class="hint" style="margin:10px 2px">Teclas: I inicio · B encargos · J proyectos · L clientes · G cerebro · P calendario · A agentes · Esc cierra.</p></div></div>';
+    var f=q('full');f.innerHTML=h;
+    f.querySelectorAll('[data-hok]').forEach(function(b){b.onclick=function(){var t=S.tasks[b.dataset.hok];approveTask(b.dataset.hok,'');toast('Aprobado: '+((t&&t.title)||''))}});
+    f.querySelectorAll('[data-ht]').forEach(function(b){b.onclick=function(){openTask(b.dataset.ht)}});
+    bindRoutineBtns(f);
+    q('hmAll').onclick=function(){openBoard()};q('hmCal').onclick=function(){openCal()};q('hmDec').onclick=function(){openDecisions()};
+    q('hmStart').onchange=function(){try{localStorage.setItem('varios-inicio',this.checked?'1':'0')}catch(e){}};
+  };
+  openFull('',draw);draw();setNav('bApr');
+}
+function openClients(){
+  var draw=function(){
+    var by={};projList().forEach(function(p){var k=String(p.client||'').trim()||'Interno (Varios)';(by[k]=by[k]||[]).push(p)});
+    var K=Object.keys(by).sort(function(a,b){return a==='Interno (Varios)'?1:b==='Interno (Varios)'?-1:a.localeCompare(b,'es')});
+    var h='<div class="dh"><div><h2>Clientes</h2><small>Cada cliente con sus proyectos, encargos y entregables. Hasta el 15/02/2027 todos son inventados (D-011).</small></div><div class="spacer"></div><button class="btn p" type="button" id="clNew">Nuevo proyecto</button><button class="btn x" id="cx" type="button">Cerrar</button></div>';
+    if(!K.length)h+='<div class="empty"><b>Todavía no hay clientes.</b><p>Un cliente aparece aquí en cuanto un proyecto lo nombra en el campo Cliente. La ficha completa de cliente llega con la tarea B3.</p></div>';
+    h+='<div class="clg">'+K.map(function(k){var P=by[k],T=[],D=0,last='';P.forEach(function(p){T=T.concat(projTasks(p.id));D+=series(p.id).length;if((p.created||'')>last)last=p.created||''});T.forEach(function(t){var x=t.done||t.created||'';if(x>last)last=x});
+      var w=T.filter(function(t){return t.status==='aprob'||t.status==='preg'}).length,sect=P.map(function(p){return SECT[p.sector]}).filter(Boolean).filter(function(x,i,a){return a.indexOf(x)===i});
+      return '<div class="clc"><h3>'+esc(k)+'</h3><small class="hint">'+(sect.length?esc(sect.join(' · ')):'Sin sector')+(last?' · último movimiento '+esc(fmt(last)):'')+'</small><div class="m"><span><b>'+P.length+'</b>proyectos</span><span><b>'+T.length+'</b>encargos</span><span><b>'+D+'</b>entregables</span><span><b'+(w?' style="color:var(--warn)"':'')+'>'+w+'</b>te esperan</span></div>'+P.map(function(p){return '<button type="button" class="tag lnk" data-cp="'+p.id+'">'+esc(p.name)+'</button>'}).join(' ')+'</div>'}).join('')+'</div>';
+    var f=q('full');f.innerHTML=h;
+    q('clNew').onclick=function(){openNewProject()};
+    f.querySelectorAll('[data-cp]').forEach(function(b){b.onclick=function(){openProject(b.dataset.cp)}});
+  };
+  openFull('',draw);draw();setNav('bCli');
+}
+
 // ======================= ARRANQUE =======================
 q('bcard').onclick=function(){openBrain()};
 function topH(){document.documentElement.style.setProperty('--toph',(document.querySelector('.top').offsetHeight+5)+'px')}topH();window.addEventListener('resize',topH);hint();
-lsLoad();setStatus();buildScene();render();clock();setInterval(clock,20000);
+lsLoad();setStatus();buildScene();render();clock();setInterval(clock,20000);if(homeWanted())openHome();else setNav('bAg');
 fetch('agentes.json').then(function(r){if(!r.ok)throw 0;return r.json()}).then(loadFichas).catch(function(){});
 fetch('brain.json').then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(b){loadBrain(b);buildScene();render()}).catch(function(){toast('No se ha podido cargar el cerebro completo: los agentes usan el resumen.')});
 (async function(){

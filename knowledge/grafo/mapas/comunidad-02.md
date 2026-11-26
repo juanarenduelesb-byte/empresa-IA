@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 2
-miembros: 81
-cohesion: 0.09
+miembros: 88
+cohesion: 0.08
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 2 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros
 
-81 nodos agrupados por el algoritmo de Louvain. Cohesión 0.09.
+88 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
 
 ## Documentos
 
@@ -29,6 +29,7 @@ tags:
 - [[knowledge/sectores/seguros/glosario-siniestros|Glosario de siniestros]]
 - [[knowledge/sectores/README|Sectores]]
 - [[knowledge/sectores/seguros/README|Paquete de dominio · seguros y corredurías]]
+- [[docs/25-portal-interno|Portal interno: auditoría de la oficina y distribución propuesta (F1)]]
 - [[knowledge/plantillas/ficha-fuente|Ficha-fuente]]
 - [[knowledge/procesos/sectores|Especialistas sectoriales]]
 
@@ -91,14 +92,20 @@ tags:
 - [[knowledge/grafo/fuentes/SANIDAD-IA-OMNIBUS|SANIDAD-IA-OMNIBUS · IA en el SNS: ómnibus digital sobre IA y simplificación MDR/IVDR]]
 - [[knowledge/grafo/fuentes/TWELVE-FACTOR|TWELVE-FACTOR · The Twelve-Factor App]]
 - [[knowledge/grafo/fuentes/UNESPA-SDM|UNESPA-SDM · Reglamento articulado del Sistema Siniestros Daños Materiales (SDM)]]
+- [[knowledge/grafo/fuentes/BASECAMP-5|BASECAMP-5 · Basecamp 5: inicio orientado a la acción]]
 - [[knowledge/grafo/fuentes/CNMC-CIDE-2014|CNMC-CIDE-2014 · CNMC, resolución de 25/09/2014, expediente S/0496/13 CIDE]]
 - [[knowledge/grafo/fuentes/EEDS-2025-327|EEDS-2025-327 · Reglamento (UE) 2025/327, Espacio Europeo de Datos de Salud]]
+- [[knowledge/grafo/fuentes/LINEAR-TRIAGE|LINEAR-TRIAGE · Linear: Triage e Inbox]]
 - [[knowledge/grafo/fuentes/ADCF-MONCLOA-2026|ADCF-MONCLOA-2026 · Autoridad Administrativa Independiente de Defensa del Cliente Financiero: compromiso de retomar la tramitación]]
 - [[knowledge/grafo/fuentes/AEPD-INF-2026-0021|AEPD-INF-2026-0021 · AEPD, informe 2026-0021 sobre el anteproyecto de reforma de la Ley 20/2015]]
+- [[knowledge/grafo/fuentes/APPLE-HIG-TAB-BARS|APPLE-HIG-TAB-BARS · Human Interface Guidelines: Tab bars]]
+- [[knowledge/grafo/fuentes/GITHUB-NOTIF-INBOX|GITHUB-NOTIF-INBOX · GitHub: gestionar notificaciones desde el inbox]]
 - [[knowledge/grafo/fuentes/LEY-35-2015|LEY-35-2015 · Ley 35/2015, de reforma del sistema para la valoración de los daños y perjuicios causados a las personas en accidentes de circulación]]
 - [[knowledge/grafo/fuentes/LEY-5-2025|LEY-5-2025 · Ley 5/2025, de 24 de julio, que modifica el texto refundido de responsabilidad civil y seguro de vehículos a motor y la Ley 20/2015]]
 - [[knowledge/grafo/fuentes/LOPDGDD-DA17|LOPDGDD-DA17 · Ley Orgánica 3/2018 (LOPDGDD), disposición adicional decimoséptima: tratamientos de datos de salud]]
+- [[knowledge/grafo/fuentes/NNG-HIDDEN-NAV|NNG-HIDDEN-NAV · Hamburger Menus and Hidden Navigation Hurt UX Metrics]]
 - [[knowledge/grafo/fuentes/ORDEN-ECO-734-2004|ORDEN-ECO-734-2004 · Orden ECO/734/2004, sobre los departamentos y servicios de atención al cliente y el defensor del cliente de las entidades financieras]]
+- [[knowledge/grafo/fuentes/ZAPIER-HITL|ZAPIER-HITL · Zapier: Human in the Loop (pedir aprobación para seguir)]]
 - [[knowledge/grafo/fuentes/CCS-MEDIADOR|CCS-MEDIADOR · Aprendizajes del CCS en la gestión de catástrofes]]
 - [[knowledge/grafo/fuentes/DGT-MANUAL-SEGURO-2026|DGT-MANUAL-SEGURO-2026 · DGT, manual X «Seguro del automóvil»]]
 - [[knowledge/grafo/fuentes/GAP-LEY10-ASEG|GAP-LEY10-ASEG · Cómo afecta a las aseguradoras la Ley 10/2025 de servicios de atención a la clientela]]

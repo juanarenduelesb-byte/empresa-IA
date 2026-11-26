@@ -6,6 +6,8 @@ Es una planta isométrica con siete departamentos y 34 agentes alrededor del cer
 
 ## Qué hace
 
+- **Secciones (F1, [docs/25](../docs/25-portal-interno.md)):** barra siempre visible con Inicio, Encargos, Proyectos, Clientes, Cerebro, Calendario y Agentes; las acciones (Nuevo proyecto, Decisiones, Reunión) van aparte. La oficina se abre en **Inicio**: lo que espera tu OK y las preguntas de los agentes, rutinas pendientes, lo que está en curso, lo próximo y las decisiones con fecha. **Clientes** agrupa los proyectos por cliente. La planta 2D/3D es la sección Agentes.
+
 - **Fichas completas de los 34 agentes** (`agentes.json`, generado desde `tools/org_data/agentes.py`): misión, nivel, responsabilidades, entregables, cómo trabaja, reglas del puesto y de la oficina, habilidades con sus pasos, criterio senior, errores que evita, cómo se mide, con quién trabaja y límites. Se ven en la pestaña Ficha de cada agente y entran en su contexto en cada encargo. Fichas legibles en `knowledge/agentes/` y habilidades en `claude/habilidades/`.
 - **Caso de práctica Atalaya** (`casos/atalaya.json`): diagnóstico completo de la apertura de siniestros en una correduría ficticia, 13 encargos para 12 agentes en 4 fases. Se carga desde Proyectos y se lanza entero con «Lanzar todo el plan»: cada encargo empieza cuando terminan los que necesita, cada agente hace uno a la vez y trabajan hasta 4 en paralelo. Detalle en `precedents/projects/caso-correduria-atalaya/`.
 - **Todo acaba en GitHub (D-017):** cada noche se vuelca lo nuevo (encargos, conversaciones, chats, memoria, reglas y habilidades enseñadas) a `oficina/registro/` y `precedents/oficina/`, y se publica el cerebro nuevo. GitHub Actions comprueba, regenera y avisa sin IA. Instrucciones en `registro/VOLCADO.md`.
@@ -49,7 +51,7 @@ Es una planta isométrica con siete departamentos y 34 agentes alrededor del cer
   - también hay encargos programados para un día y hora.
 - **Equipos:** el jefe reparte en piezas, cada compañero trabaja a la vez, pueden dejarse notas (`@Nombre: …`) y el jefe une el resultado.
 - **Reunión (X):** dos agentes hablan de un tema y uno redacta el acta.
-- **Teclas:** 1–7, J (proyectos), N (nuevo proyecto), M (memoria), B, P, G, D, C (chat con el jefe), X, V (foco), Esc.
+- **Teclas:** I (inicio), L (clientes), A (agentes), 1–7, J (proyectos), N (nuevo proyecto), M (memoria), B, P, G, D, C (chat con el jefe), X, V (foco), Esc.
 
 ## Lo que no hace, a propósito
 

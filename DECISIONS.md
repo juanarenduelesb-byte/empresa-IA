@@ -193,6 +193,13 @@ No construir primero un CEO omnisciente; descubrir, diseñar, integrar y medir u
 - Riesgo: que una norma cambie y el archivo quede viejo. Mitigación: cada plazo lleva su fuente con fecha de lectura y las fuentes en `draft` están marcadas; revisar antes de usar con un cliente.
 - Estado: propuesta.
 
+## D-025 — La oficina se organiza en siete secciones y se abre en Inicio
+- Fecha: 2026-11-26
+- Decisión: la oficina tiene una barra de secciones siempre visible: Inicio, Encargos, Proyectos, Clientes, Cerebro, Calendario y Agentes (la planta 2D/3D). Las acciones van aparte. Se abre en Inicio, con lo que espera a un socio primero, y quien lo prefiera puede entrar por la planta. Auditoría, referencias y siguientes pasos en `docs/25-portal-interno.md`.
+- Motivo: lo primero que necesita un socio es lo que espera su OK. Además, la navegación oculta o tapada hace el trabajo más lento (NN/g), y las referencias de gestión de trabajo (Linear, Basecamp, GitHub) separan la bandeja de lo que pide atención del resto.
+- Riesgo: cambiar la costumbre de entrada. Mitigación: no se quita nada, las teclas de antes siguen y la casilla «Abrir la oficina aquí» devuelve la entrada por la planta.
+- Estado: propuesta.
+
 ## Decisiones pendientes (con fecha límite)
 | Decisión | Quién | Antes de |
 |---|---|---|

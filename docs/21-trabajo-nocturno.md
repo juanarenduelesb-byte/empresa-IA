@@ -65,8 +65,8 @@ Lo que una tanda no pudo hacer porque pedía un permiso. Juan lo da durante el d
 |---|---|---|---|---|
 | 26/11 02:50 | Leer el BOE (RDL 43/2026 y otras normas) | B2, D2 | Nada: el 26/11 por la mañana se leyó con Juan delante | ~~Hecho 26/11~~ |
 | 26/11 06:10 | Leer los precios de Langfuse Cloud | Informe (herramientas) | Nada: leído el 26/11 por la mañana (`LANGFUSE-CLOUD`) | ~~Hecho 26/11~~ |
-| 26/11 12:15 | Borrar 17 ramas sobrantes (aprobado por Juan) | Orden en GitHub | En github.com/juanarenduelesb-byte/empresa-IA/branches (sirve el navegador del móvil), papelera en todas menos `main` y `gobierno-politicas` (PR #5). Claude no puede borrar ramas con su acceso | Pendiente |
-| 26/11 12:15 | Activar «Automatically delete head branches» | Orden en GitHub | Repositorio → Settings → General → Pull Requests → marcarlo. Así las propuestas del volcado nocturno no dejan ramas. Claude no puede cambiar ajustes | Pendiente |
+| 26/11 12:15 | Borrar 18 ramas sobrantes (aprobado por Juan; incluye `aprobar-d022-d024`, fusionada antes de activar el borrado automático) | Orden en GitHub | En github.com/juanarenduelesb-byte/empresa-IA/branches (sirve el navegador del móvil), papelera en todas menos `main` y `gobierno-politicas` (PR #5). Claude no puede borrar ramas con su acceso | Pendiente |
+| 26/11 12:15 | Activar «Automatically delete head branches» | Orden en GitHub | Repositorio → Settings → General → Pull Requests → marcarlo. Así las propuestas del volcado nocturno no dejan ramas. Claude no puede cambiar ajustes | ~~Hecho 26/11 por Juan~~ |
 | 26/11 02:30 | Probar `docker compose up` | A1, N3b | Arrancarlo en tu portátil y pegar el error si falla. Aquí no se puede: la imagen no descarga paquetes | Pendiente |
 
 ## Registro
@@ -92,3 +92,4 @@ Lo que una tanda no pudo hacer porque pedía un permiso. Juan lo da durante el d
 | 26/11 09:45 | Preparación (chat) | Juan elige las tareas de la noche del 26 al 27/11: N2, N1, N3a, N3b, N6, S1 y K1, con N4 y N5 de reserva. Tandas programadas solo para esta noche, de 22:00 a 09:00 | Todas |
 | 26/11 12:10 | Durante el día (chat) | Juan pide que lo que necesite permiso de noche quede pendiente para el día y que GitHub esté siempre ordenado: secciones «Pendiente de tu aprobación» y «Orden en GitHub». Resuelto lo pendiente de la noche: BOE del RDL 43/2026 releído (dato nuevo: Cortes disueltas por el RD 806/2026, convalida la Diputación Permanente) y precios de Langfuse Cloud (`LANGFUSE-CLOUD`) | `docker compose up` en el portátil de Juan |
 | 26/11 12:20 | Durante el día (chat) | Juan aprueba borrar las 17 ramas sobrantes y activar el borrado automático, pero el acceso de Claude a GitHub no permite borrar ramas ni cambiar ajustes. Quedan en «Pendiente de tu aprobación» para que lo haga Juan | Las dos acciones de GitHub |
+| 26/11 12:30 | Durante el día (chat) | Juan fusiona la propuesta #20 (D-022, D-023 y D-024 aprobadas) y activa el borrado automático de ramas | 18 ramas por borrar; `docker compose up` |

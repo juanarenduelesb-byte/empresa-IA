@@ -1430,6 +1430,19 @@
    "vigencia": "vigente",
    "estado": "draft",
    "nota": "Cotización por rendimientos reales en 15 tramos (Orden PJC/297/2026, BOE-A-2026-7296). Cuota reducida para nuevos autónomos 12 meses, ampliable 12 más si los rendimientos no llegan al SMI; el importe de 2026 no se ha encontrado en fuente oficial. Pluriactividad: reintegro del 50 % del exceso sobre 17.323,68 euros. Socios con control efectivo (al menos la mitad del capital; se presume con un tercio, o un cuarto con funciones de dirección) van al RETA (art. 305.2 b LGSS)."
+  },
+  {
+   "id": "MINTO-PIRAMIDE",
+   "titulo": "The Pyramid Principle (Barbara Minto): la respuesta primero y la estructura situación, complicación, pregunta y respuesta",
+   "organismo": "Resumen de Will Larson",
+   "url": "https://lethain.com/pyramid-principle/",
+   "tipo": "buena-practica",
+   "jurisdiccion": "—",
+   "version": "libro de 1987; resumen consultado 26/11/2026",
+   "autoridad": "media",
+   "vigencia": "vigente",
+   "estado": "draft",
+   "nota": "Empezar por la conclusión, agrupar los argumentos que la sostienen y abrir con situación, complicación y pregunta. Fuente secundaria; coincide con otros resúmenes (BetterUp, Think Insights)."
   }
  ]
 }

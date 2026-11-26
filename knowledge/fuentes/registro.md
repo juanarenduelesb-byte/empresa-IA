@@ -117,6 +117,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 | [LSC-ART4](#lsc-art4) | Ley de Sociedades de Capital (RDLeg 1/2010), art. 4: capital mínimo | obligacion-legal | alta | vigente | validated |
 | [AEAT-IS-TIPOS](#aeat-is-tipos) | Impuesto sobre Sociedades: tipo impositivo (microempresas, reducida dimensión y general) | obligacion-legal | alta | vigente | validated |
 | [SEGSOC-RETA-2026](#segsoc-reta-2026) | Cotización de trabajadores autónomos 2026 y encuadramiento de socios con control efectivo | obligacion-legal | alta | vigente | draft |
+| [MINTO-PIRAMIDE](#minto-piramide) | The Pyramid Principle (Barbara Minto): la respuesta primero y la estructura situación, complicación, pregunta y respuesta | buena-practica | media | vigente | draft |
 
 <a id="int-guia"></a>
 ### INT-GUIA
@@ -1215,4 +1216,14 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
 - **Nota:** Cotización por rendimientos reales en 15 tramos (Orden PJC/297/2026, BOE-A-2026-7296). Cuota reducida para nuevos autónomos 12 meses, ampliable 12 más si los rendimientos no llegan al SMI; el importe de 2026 no se ha encontrado en fuente oficial. Pluriactividad: reintegro del 50 % del exceso sobre 17.323,68 euros. Socios con control efectivo (al menos la mitad del capital; se presume con un tercio, o un cuarto con funciones de dirección) van al RETA (art. 305.2 b LGSS).
+
+<a id="minto-piramide"></a>
+### MINTO-PIRAMIDE
+- **Título:** The Pyramid Principle (Barbara Minto): la respuesta primero y la estructura situación, complicación, pregunta y respuesta
+- **Autor u organismo:** Resumen de Will Larson
+- **URL:** <https://lethain.com/pyramid-principle/>
+- **Tipo:** buena-practica · **Jurisdicción:** — · **Versión o fecha:** libro de 1987; resumen consultado 26/11/2026
+- **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** Empezar por la conclusión, agrupar los argumentos que la sostienen y abrir con situación, complicación y pregunta. Fuente secundaria; coincide con otros resúmenes (BetterUp, Think Insights).
 

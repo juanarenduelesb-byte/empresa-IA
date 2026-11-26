@@ -1,59 +1,58 @@
 ---
 tipo: "mapa"
 comunidad: 7
-miembros: 45
-cohesion: 0.22
+miembros: 40
+cohesion: 0.44
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 7 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue
+# Comunidad 7 · processes/catalog · P22 · Gestión de errores y reintentos y Catálogo de procesos P01–P38
 
-45 nodos agrupados por el algoritmo de Louvain. Cohesión 0.22.
+40 nodos agrupados por el algoritmo de Louvain. Cohesión 0.44.
 
 ## Documentos
 
-- [[docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado|Guia de Arranque Proyecto v1.4 Diseno Cerrado]]
-- [[docs/fuentes/Atlas_Evolucion_v1.1_Modelo_Operativo_Procesos_y_Despliegue|Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue]]
-- [[docs/fuentes/04_04_ejecucion_agentes|Ejecucion agentes]]
-- [[docs/fuentes/02_02_flujo_ceo|Flujo ceo]]
-- [[docs/fuentes/03_03_motor_conocimiento_obsidian|Motor conocimiento obsidian]]
-- [[docs/fuentes/Marco_Integral_Legal_Ciberseguridad_IA_Espana_UE_2026-11-16|Marco Integral Legal Ciberseguridad IA Espana UE 2026-11-16]]
-- [[README|Varios — repositorio maestro]]
-- [[docs/atlas/12-ciclo-proyecto|12 · Ciclo de vida de un proyecto con cliente]]
-- [[docs/fuentes/09_09_comunicaciones_estados|Comunicaciones estados]]
-- [[docs/16-correcciones|Registro de correcciones a los documentos recibidos el 17/11/2026]]
-- [[docs/fuentes/06_06_calidad_gobierno|Calidad gobierno]]
-- [[docs/fuentes/05_05_seguridad_clientes|Seguridad clientes]]
-- [[docs/atlas/08-seguridad|08 · Seguridad, identidad y aislamiento de clientes]]
-- [[docs/fuentes/08_08_ciclo_vida_proyecto|Ciclo vida proyecto]]
-- [[docs/atlas/07-conocimiento|07 · Motor de conocimiento con Obsidian]]
-- [[docs/atlas/README|Atlas de diagramas]]
-- [[docs/atlas/02-flujo-ceo|02 · Flujo completo del CEO digital]]
-- [[docs/atlas/05-gateway|05 · Puerta de herramientas]]
-- [[docs/atlas/16-estados|16 · Estados de un encargo]]
-- [[docs/fuentes/07_07_infraestructura_portabilidad|Infraestructura portabilidad]]
-- [[docs/atlas/04-ejecucion|04 · Ejecución: motor de procesos, agentes y herramientas]]
-- [[docs/atlas/00-arquitectura|00 · Arquitectura del cerebro digital]]
-- [[docs/atlas/15-componentes|15 · Conversación entre componentes]]
-- [[docs/atlas/09-calidad|09 · Calidad, evaluación y aprobación humana]]
-- [[docs/atlas/03-decisiones-ceo|03 · Las cinco decisiones del CEO]]
-- [[docs/atlas/14-incidentes|14 · Operación y respuesta a incidentes]]
-- [[docs/05-agentes-procesos-e-integraciones|Agentes, procesos e integraciones]]
-- [[docs/atlas/01-organizacion|01 · Organización: modelo matricial]]
-- [[docs/atlas/11-infraestructura|11 · Infraestructura, desarrollo y portabilidad]]
-- [[docs/atlas/10-cambios-modelos|10 · Cambios y elección de modelos de IA]]
-- [[docs/atlas/13-ciclo-dato|13 · Ciclo de vida de un dato]]
-- [[docs/04-motor-de-conocimiento|Motor de conocimiento]]
-- [[docs/14-reglas-del-ceo|Reglas del CEO digital]]
-- [[docs/01-vision-y-modelo-operativo|Visión y modelo operativo]]
-- [[docs/06-seguridad-y-gobierno|Seguridad, privacidad y gobierno]]
-- [[docs/07-calidad-infraestructura-y-operacion|Calidad, infraestructura y operación]]
-- [[docs/atlas/06-fallos|06 · Fallos, reintentos y recuperación]]
-- [[governance/README|Gobierno, seguridad y legal]]
-- [[docs/02-arquitectura-general|Arquitectura general]]
-- [[docs/03-ceo-digital-y-orquestacion|CEO digital y orquestación]]
-- [[processes/ceo-control-a/README|Banco del Control A: 25 encargos para el CEO limitado (C2)]]
-- [[knowledge/README|Conocimiento]]
-- [[docs/informes/README|Informes de la mañana]]
-- [[docs/09-inventario-documental|Inventario documental]]
+- [[processes/catalog/README|Catálogo de procesos P01–P38]]
+- [[processes/catalog/P22-gestion-de-errores-y-reintentos|P22 · Gestión de errores y reintentos]]
+- [[processes/catalog/P27-gestion-de-proveedores-y-dependencias|P27 · Gestión de proveedores y dependencias]]
+- [[processes/catalog/P05-diseno-del-plan|P05 · Diseño del plan]]
+- [[processes/catalog/P11-entrega-y-cierre|P11 · Entrega y cierre]]
+- [[processes/catalog/P13-aprendizaje-y-actualizacion-de-la-wiki|P13 · Aprendizaje y actualización de la wiki]]
+- [[processes/catalog/P02-clasificacion-y-triaje|P02 · Clasificación y triaje]]
+- [[processes/catalog/P23-evaluacion-de-agentes-y-modelos|P23 · Evaluación de agentes y modelos]]
+- [[processes/catalog/P09-control-de-calidad|P09 · Control de calidad]]
+- [[processes/catalog/P12-gestion-de-cambios|P12 · Gestión de cambios]]
+- [[processes/catalog/P21-ejecucion-segura-de-herramientas|P21 · Ejecución segura de herramientas]]
+- [[processes/catalog/P30-gestion-de-identidades-y-secretos|P30 · Gestión de identidades y secretos]]
+- [[processes/catalog/P08-ejecucion-de-tareas|P08 · Ejecución de tareas]]
+- [[processes/catalog/P19-politica-de-uso-y-limites|P19 · Política de uso y límites]]
+- [[processes/catalog/P29-gestion-de-costes-y-capacidad|P29 · Gestión de costes y capacidad]]
+- [[processes/catalog/P16-gobierno-de-modelos-e-instrucciones|P16 · Gobierno de modelos e instrucciones]]
+- [[processes/catalog/P20-seguridad-de-entradas-e-inyeccion-de-instrucciones|P20 · Seguridad de entradas e inyección de instrucciones]]
+- [[processes/catalog/P01-alta-y-recepcion-de-peticion|P01 · Alta y recepción de petición]]
+- [[processes/catalog/P25-gestion-de-cambios-y-versiones|P25 · Gestión de cambios y versiones]]
+- [[processes/catalog/P18-evaluacion-y-mejora|P18 · Evaluación y mejora]]
+- [[processes/catalog/P10-aprobacion-humana|P10 · Aprobación humana]]
+- [[processes/catalog/P04-recuperacion-de-conocimiento|P04 · Recuperación de conocimiento]]
+- [[processes/catalog/P15-observabilidad-e-incidencias|P15 · Observabilidad e incidencias]]
+- [[processes/catalog/P36-gestion-del-catalogo-de-conectores|P36 · Gestión del catálogo de conectores]]
+- [[processes/catalog/P14-gestion-de-permisos-y-aislamiento|P14 · Gestión de permisos y aislamiento]]
+- [[processes/catalog/P28-gestion-de-incidentes|P28 · Gestión de incidentes]]
+- [[processes/catalog/P06-asignacion-y-coordinacion|P06 · Asignación y coordinación]]
+- [[processes/catalog/P24-gestion-del-ciclo-de-vida-del-dato|P24 · Gestión del ciclo de vida del dato]]
+- [[processes/catalog/P17-seguridad-y-continuidad|P17 · Seguridad y continuidad]]
+- [[processes/catalog/P07-ingesta-documental|P07 · Ingesta documental]]
+- [[processes/catalog/P26-continuidad-y-recuperacion|P26 · Continuidad y recuperación]]
+- [[processes/catalog/P03-gestion-de-aclaraciones|P03 · Gestión de aclaraciones]]
+- [[processes/runbooks/README|Runbooks]]
+- [[processes/runbooks/fuga-sospechada|Fuga de datos sospechada]]
+- [[processes/runbooks/workflow-fallido|Workflow bloqueado o fallido]]
+- [[processes/runbooks/restauracion|Restauración de copias]]
+- [[processes/runbooks/credencial-comprometida|Credencial comprometida]]
+
+## Procesos
+
+- [[processes/catalog/P22-gestion-de-errores-y-reintentos|P22 · Gestión de errores y reintentos]]
+- [[processes/catalog/P28-gestion-de-incidentes|P28 · Gestión de incidentes]]
+- [[processes/catalog/P13-aprendizaje-y-actualizacion-de-la-wiki|P13 · Aprendizaje y actualización de la wiki]]

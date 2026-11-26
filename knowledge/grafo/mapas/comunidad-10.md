@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 10
-miembros: 16
+miembros: 17
 cohesion: 0.25
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 10 · knowledge/seguridad-legal · Responsable de cumplimiento normativo y Especialista legal y privacidad
 
-16 nodos agrupados por el algoritmo de Louvain. Cohesión 0.25.
+17 nodos agrupados por el algoritmo de Louvain. Cohesión 0.25.
 
 ## Documentos
 
@@ -20,6 +20,7 @@ tags:
 ## Procesos
 
 - [[processes/catalog/P19-politica-de-uso-y-limites|P19 · Política de uso y límites]]
+- [[processes/catalog/P24-gestion-del-ciclo-de-vida-del-dato|P24 · Gestión del ciclo de vida del dato]]
 
 ## Especialistas
 

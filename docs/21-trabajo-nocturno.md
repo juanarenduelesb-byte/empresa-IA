@@ -13,9 +13,9 @@ Reglas que no cambian: nada de datos reales, cifras ni fuentes inventadas; todo 
 ## Lista (por orden)
 
 ### A · Base de datos real (adelanta S1–S2 del plan)
-- [ ] A1 · Entorno: FastAPI con `/health`, configuración por `.env`, Docker Compose con PostgreSQL 16, Ruff y pytest en CI. *Hecho cuando:* `docker compose up` arranca y `/health` responde con la base de datos conectada.
-- [ ] A2 · Modelo de datos de S2 con Alembic: cliente, usuario, solicitud, plan, tarea, documento, aprobación, evento de auditoría, ejecución de modelo, uso de herramienta. Auditoría que no se puede modificar ni borrar. *Hecho cuando:* las migraciones suben y bajan desde cero en PostgreSQL y las pruebas están en verde.
-- [ ] A3 · Aislamiento por cliente: repositorios que siempre filtran por el cliente de la identidad, dos clientes señuelo y pruebas de acceso cruzado (y RLS en PostgreSQL). *Hecho cuando:* leer o escribir datos de otro cliente falla siempre.
+- [~] (en curso, sesión principal, 02:10) A1 · Entorno: FastAPI con `/health`, configuración por `.env`, Docker Compose con PostgreSQL 16, Ruff y pytest en CI. *Hecho cuando:* `docker compose up` arranca y `/health` responde con la base de datos conectada.
+- [~] (en curso, sesión principal, 02:10) A2 · Modelo de datos de S2 con Alembic: cliente, usuario, solicitud, plan, tarea, documento, aprobación, evento de auditoría, ejecución de modelo, uso de herramienta. Auditoría que no se puede modificar ni borrar. *Hecho cuando:* las migraciones suben y bajan desde cero en PostgreSQL y las pruebas están en verde.
+- [~] (en curso, sesión principal, 02:10) A3 · Aislamiento por cliente: repositorios que siempre filtran por el cliente de la identidad, dos clientes señuelo y pruebas de acceso cruzado (y RLS en PostgreSQL). *Hecho cuando:* leer o escribir datos de otro cliente falla siempre.
 - [ ] A4 · Datos de ejemplo automáticos: script que carga dos clientes inventados con usuarios, solicitudes y documentos.
 
 ### B · Cerebro y conocimiento

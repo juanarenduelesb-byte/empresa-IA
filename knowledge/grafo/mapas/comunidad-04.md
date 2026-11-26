@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 4
-miembros: 56
+miembros: 58
 cohesion: 0.14
 tags:
   - "mapa"
@@ -9,12 +9,13 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 4 · processes/catalog · Índice del conocimiento de Varios y Arquitecto de procesos
 
-56 nodos agrupados por el algoritmo de Louvain. Cohesión 0.14.
+58 nodos agrupados por el algoritmo de Louvain. Cohesión 0.14.
 
 ## Documentos
 
 - [[knowledge/INDEX|Índice del conocimiento de Varios]]
 - [[knowledge/procesos/arquitecto-procesos|Arquitecto de procesos]]
+- [[CLAUDE|Varios · empresa-ia]]
 - [[knowledge/comercial/director-comercial|Director comercial]]
 - [[processes/catalog/P33-diseno-y-validacion-to-be|P33 · Diseño y validación TO-BE]]
 - [[knowledge/comercial/gestion-clientes|Especialista en éxito de cliente]]
@@ -39,8 +40,8 @@ tags:
 - [[knowledge/metodologias-transversales/guardar|Protocolo: guardar el conocimiento]]
 - [[claude/habilidades/cualificacion-oportunidad|Cualificación de oportunidad]]
 - [[knowledge/metodologias-transversales/README|Metodologías transversales]]
-- [[knowledge/plantillas/ficha-kpi|KPI: <nombre>]]
 - [[claude/habilidades/consultar-historico|Consultar el histórico antes de hacer]]
+- [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]]
 - [[precedents/plantilla-precedente|<título>]]
 - [[knowledge/plantillas/ficha-oportunidad|Oportunidad: <empresa> (ejemplo inventado hasta que exista una real)]]
 - [[knowledge/plantillas/entrada-decision|Entrada-decision]]

@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 3
-miembros: 57
+miembros: 58
 cohesion: 0.16
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 3 · precedents/oficina · Propuesta de proceso de referencia: siniestros en corredurías y Conversaciones con Coordinación sectorial · Seguros
 
-57 nodos agrupados por el algoritmo de Louvain. Cohesión 0.16.
+58 nodos agrupados por el algoritmo de Louvain. Cohesión 0.16.
 
 ## Documentos
 
@@ -51,6 +51,7 @@ tags:
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-datos-de-prueba-a-calidad-y-riesgo-dvsoz|Datos de prueba → Calidad y riesgo]]
 - [[precedents/projects/caso-correduria-atalaya/README|Caso de práctica · Atalaya Correduría de Seguros (ficticia)]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-ceo-digital-a-coordinacion-sectorial-seguros-fws4y|CEO digital → Coordinación sectorial · Seguros]]
+- [[knowledge/plantillas/ficha-kpi|KPI: <nombre>]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-ceo-digital-a-metricas-sj6cp|CEO digital → Métricas]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-metricas-a-calidad-y-riesgo-4xyvo|Métricas → Calidad y riesgo]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-arquitecto-de-procesos-a-calidad-y-riesgo-61ars|Arquitecto de procesos → Calidad y riesgo]]

@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 5
-miembros: 55
+miembros: 54
 cohesion: 0.17
 tags:
   - "mapa"
@@ -9,13 +9,12 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 5 · knowledge/ingenieria · Dependencias entre procesos y Especialista en ciberseguridad
 
-55 nodos agrupados por el algoritmo de Louvain. Cohesión 0.17.
+54 nodos agrupados por el algoritmo de Louvain. Cohesión 0.17.
 
 ## Documentos
 
 - [[processes/diagrams/dependencias|Dependencias entre procesos]]
 - [[knowledge/seguridad-legal/ciberseguridad|Especialista en ciberseguridad]]
-- [[CLAUDE|Varios · empresa-ia]]
 - [[docs/13-procesos-y-estados|Procesos y estados]]
 - [[knowledge/ingenieria/datos-ia|Arquitecto de datos e IA]]
 - [[precedents/README|Biblioteca de precedentes]]

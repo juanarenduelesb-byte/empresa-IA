@@ -17,3 +17,8 @@ __pycache__/
 .DS_Store
 
 !.env.example
+
+# Metadatos de instalación (pip install -e .): se generan solos
+*.egg-info/
+build/
+dist/

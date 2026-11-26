@@ -1,21 +1,20 @@
 ---
 tipo: "mapa"
 comunidad: 12
-miembros: 3
-cohesion: 0.67
+miembros: 5
+cohesion: 0.9
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 12 · knowledge/metodologias-transversales · Protocolo: consultar el histórico antes de empezar y Consultar el histórico antes de hacer
+# Comunidad 12 · knowledge/estudios · Estudios y Integraciones
 
-3 nodos agrupados por el algoritmo de Louvain. Cohesión 0.67.
+5 nodos agrupados por el algoritmo de Louvain. Cohesión 0.9.
 
 ## Documentos
 
-- [[knowledge/metodologias-transversales/consultar-historico|Protocolo: consultar el histórico antes de empezar]]
-- [[claude/habilidades/consultar-historico|Consultar el histórico antes de hacer]]
-
-## Habilidades
-
-- [[claude/habilidades/consultar-historico|Consultar el histórico antes de hacer]]
+- [[knowledge/estudios/README|Estudios]]
+- [[integrations/README|Integraciones]]
+- [[integrations/contracts/README|Contratos de datos]]
+- [[integrations/tests/README|Pruebas de integración]]
+- [[integrations/connectors/README|Conectores]]

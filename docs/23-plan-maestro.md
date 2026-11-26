@@ -39,7 +39,7 @@ Lo que me preocupa, de más a menos grave:
    - boletín semanal;
    - comité de especialistas.
 
-   «Varios» es el nombre provisional del repositorio con Álvaro (D-007). Dos marcas dividen el esfuerzo y confunden al cliente. Mi recomendación es una sola, y Esclusa está mucho más avanzada. Es decisión de los dos socios. (M-002)
+   «Varios» es el nombre provisional del repositorio con Álvaro (D-007). Dos marcas dividen el esfuerzo y confunden al cliente. Mi recomendación es una sola. **Corregido el 26/11 por la noche (S1):** no recomiendo Esclusa salvo que Juan la traspase a la sociedad, porque Juan la ha convertido en su web personal, que no debe presentarse como consultora, y está a su nombre. Comparativa y búsqueda de anterioridades en [governance/socios/](../governance/socios/01-marca-esclusa-o-varios.md). Es decisión de los dos socios. (M-002)
 3. **Decisiones vencidas el 22/11:** el acuerdo de socios, el plan de Claude y el proceso de referencia. Sin acuerdo de socios no hay empresa que automatizar: reparto, dedicación, propiedad del código y de la marca, y qué pasa si uno se va. (M-003 a M-005)
 4. **Agentes antes que procesos.** Hay 34 agentes y 65 habilidades, y ningún proceso funcionando de punta a punta. Un agente que no está unido a un proceso medido es una ficha bonita, no capacidad. La auditoría de la semana 2 decide qué se queda. (M-040)
 5. **La oficina vive en el navegador.** El artefacto de la oficina guarda en su propio almacén, así que no es todavía un sistema: no tiene identidad, ni auditoría central, ni copias. Tiene que apoyarse en la API y en la base de datos de esta noche (semanas 2–5). (M-041)
@@ -247,8 +247,9 @@ Regla: cada herramienta necesita una decisión que diga qué problema resuelve, 
 ## 6. Lo que necesito de vosotros (por orden)
 
 1. **M-001 · Compatibilidad con vuestros empleos.** Esta semana, con un laboralista.
-2. **M-002 · Una sola marca.** Recomiendo Esclusa. Decidid antes de la web y de la marca registrada.
-3. **M-003 · Acuerdo de socios.** Puedo prepararos una lista de puntos a decidir; la redacción final es del abogado.
+2. **M-002 · Una sola marca.** Varios o un nombre nuevo, tras buscar anterioridades; Esclusa solo si Juan la traspasa a la sociedad ([comparativa](../governance/socios/01-marca-esclusa-o-varios.md)). Decidid antes de la web y de la marca registrada.
+3. **M-003 · Acuerdo de socios.** Lista de 14 puntos a decidir, con opciones: [governance/socios/](../governance/socios/02-acuerdo-de-socios-puntos.md). La redacción final es del abogado.
+   - **M-020 · Seguro de RC profesional y ciberriesgos.** Preguntas para el corredor: [governance/socios/](../governance/socios/03-preguntas-seguro-rc-y-ciber.md).
 4. **M-005 · Proceso de referencia confirmado.** Por defecto, siniestros en corredurías.
 5. **M-010 · Primera conversación de validación** antes del 06/12.
 6. **M-070 / M-071 · Cuentas de empresa, segundo factor y gestor de contraseñas.** Una tarde.

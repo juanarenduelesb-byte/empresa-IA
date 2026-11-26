@@ -124,6 +124,10 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 | [KNIGHT-NIVELES-AUTONOMIA](#knight-niveles-autonomia) | Levels of Autonomy for AI Agents | buena-practica | media | vigente | draft |
 | [OWASP-FASTAPI](#owasp-fastapi) | FastAPI Security Cheat Sheet | recomendacion-tecnica | media | vigente | draft |
 | [OWASP-IDOR](#owasp-idor) | Insecure Direct Object Reference Prevention Cheat Sheet | recomendacion-tecnica | media | vigente | draft |
+| [OEPM-LOCALIZADOR](#oepm-localizador) | Localizador de marcas (servicio web de la OEPM) | documentacion-producto | alta | vigente | draft |
+| [UC3M-PACTOS](#uc3m-pactos) | Guía de los tipos de cláusulas en los pactos de socios en S.A. y S.L. | buena-practica | media | vigente | draft |
+| [HISCOX-RC-TIC](#hiscox-rc-tic) | Condicionado del seguro de Responsabilidad Civil TIC | documentacion-producto | baja | vigente | draft |
+| [INCIBE-CIBERSEGUROS](#incibe-ciberseguros) | Los ciberseguros, el complemento ideal de la gestión de riesgos | recomendacion-tecnica | alta | vigente | draft |
 
 <a id="int-guia"></a>
 ### INT-GUIA
@@ -1292,4 +1296,44 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 - **Consultada:** 2026-11-26 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
 - **Nota:** «Verify the user's permission every time an access attempt is made»; buscar acotando por el usuario o propietario, no solo por la clave; los UUID son defensa en profundidad, no control de acceso; si la existencia es sensible, la misma respuesta (404) en ambos casos. Probar con dos usuarios de permisos distintos.
+
+<a id="oepm-localizador"></a>
+### OEPM-LOCALIZADOR
+- **Título:** Localizador de marcas (servicio web de la OEPM)
+- **Autor u organismo:** OEPM
+- **URL:** <https://oepm.es/es/sobre-OEPM/servicios-al-ciudadano/servicios-gratuitos/Servicios-web-de-la-OEPM/LOCALIZADOR-DE-MARCAS/>
+- **Tipo:** documentacion-producto · **Jurisdicción:** ES · **Versión o fecha:** leída el 26/11/2026
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** Permite «realizar búsquedas avanzadas de marcas y nombres comerciales con efectos en España»; está entre los servicios gratuitos de la OEPM y se entra con usuario y contraseña. La página no menciona marcas de la UE: para esas, TMview o eSearch plus de la EUIPO (sin comprobar).
+
+<a id="uc3m-pactos"></a>
+### UC3M-PACTOS
+- **Título:** Guía de los tipos de cláusulas en los pactos de socios en S.A. y S.L.
+- **Autor u organismo:** Clínica Jurídica de Emprendimiento, Universidad Carlos III de Madrid
+- **URL:** <https://www.uc3m.es/uc3m/media/uc3m/doc/archivo/doc_guia-tipo-de-clausulas-de-pactos-sociales-de-sl-y-sa-/guia-tipos-clausulas-pactos-de-socios-sa-y-sl.pdf>
+- **Tipo:** buena-practica · **Jurisdicción:** ES · **Versión o fecha:** sin fecha (bibliografía consultada en noviembre de 2024); leída el 26/11/2026
+- **Consultada:** 2026-11-26 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** Cláusulas: materias reservadas, transmisión, acompañamiento, arrastre, propiedad intelectual, confidencialidad, no competencia razonable en duración, resolución de conflictos, vesting, salida obligatoria, no dilución. El pacto «nunca va a poder servir para anular una decisión que se adopte con respeto a la ley y a los estatutos»; la Ley de Startups permite inscribirlo en el Registro Mercantil. Trabajo académico de estudiantes: orientativo.
+
+<a id="hiscox-rc-tic"></a>
+### HISCOX-RC-TIC
+- **Título:** Condicionado del seguro de Responsabilidad Civil TIC
+- **Autor u organismo:** Hiscox España
+- **URL:** <https://hiscox.es/sites/spain/files/2024-11/14620%20-%20Spain%20-%20Responsabilidad%20Civil%20TIC%20Wording.pdf>
+- **Tipo:** documentacion-producto · **Jurisdicción:** ES · **Versión o fecha:** 14620 07/24 (leído el 26/11/2026)
+- **Consultada:** 2026-11-26 · **Autoridad:** baja · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** Solo como ejemplo de condicionado, no como recomendación. Cobertura por reclamación presentada durante el periodo de seguro con retroactividad según condiciones particulares; 6 meses gratis o 12 con prima para notificar tras no renovar. Excluye multas, sanciones y penalizaciones contractuales, defectos de productos no desarrollados en exclusiva por el asegurado y fallos de electricidad, telecomunicaciones y centros de datos. No menciona la inteligencia artificial.
+
+<a id="incibe-ciberseguros"></a>
+### INCIBE-CIBERSEGUROS
+- **Título:** Los ciberseguros, el complemento ideal de la gestión de riesgos
+- **Autor u organismo:** INCIBE
+- **URL:** <https://www.incibe.es/empresas/blog/los-ciberseguros-el-complemento-ideal-gestion-riesgos>
+- **Tipo:** recomendacion-tecnica · **Jurisdicción:** ES · **Versión o fecha:** 17/08/2021 (leído el 26/11/2026)
+- **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** La aseguradora revisa aspectos técnicos antes de firmar (por ejemplo, «configuraciones inseguras, sistemas no actualizados») y puede exigir correcciones; no se cubren incidentes por comportamientos ilícitos o intencionados, como vulnerar la normativa de protección de datos. Artículo de 2021: buscar una guía más reciente.
 

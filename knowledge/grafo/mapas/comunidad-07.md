@@ -35,10 +35,10 @@ tags:
 - [[knowledge/comercial/README|Comercial y clientes]]
 - [[claude/habilidades/cualificacion-oportunidad|Cualificación de oportunidad]]
 - [[knowledge/metodologias-transversales/guardar|Protocolo: guardar el conocimiento]]
+- [[knowledge/plantillas/ficha-proveedor|Proveedor: <nombre>]]
 - [[precedents/plantilla-precedente|<título>]]
 - [[knowledge/plantillas/ficha-oportunidad|Oportunidad: <empresa> (ejemplo inventado hasta que exista una real)]]
 - [[knowledge/plantillas/entrada-decision|Entrada-decision]]
-- [[knowledge/plantillas/ficha-proveedor|Proveedor: <nombre>]]
 - [[knowledge/plantillas/ficha-conocimiento|Título]]
 - [[knowledge/plantillas/ficha-investigacion|Investigación: <pregunta>]]
 

@@ -17,6 +17,8 @@ import jwt
 from varios.config import ajustes
 
 ALGORITMO = "HS256"
+# Valor de ejemplo de .env.example: quien copia el archivo sin cambiarlo no debe tener una API que firme con él.
+SECRETO_DE_EJEMPLO = "cambia-este-secreto-largo-y-aleatorio"
 
 
 class NoAutenticado(Exception):
@@ -27,6 +29,8 @@ def _secreto() -> str:
     s = ajustes().jwt_secreto
     if not s or len(s) < 32:
         raise NoAutenticado("Falta VARIOS_JWT_SECRETO (al menos 32 caracteres)")
+    if s == SECRETO_DE_EJEMPLO:
+        raise NoAutenticado("VARIOS_JWT_SECRETO es el de .env.example: cámbialo por una cadena larga y aleatoria")
     return s
 
 

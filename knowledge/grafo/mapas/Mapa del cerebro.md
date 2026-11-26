@@ -12,7 +12,7 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 
 - [[knowledge/grafo/mapas/comunidad-00|Comunidad 0 · claude/habilidades · Habilidades de los agentes y Administración]] (112 nodos)
 - [[knowledge/grafo/mapas/comunidad-01|Comunidad 1 · claude/habilidades · Legal y privacidad y Arquitecto de procesos]] (104 nodos)
-- [[knowledge/grafo/mapas/comunidad-02|Comunidad 2 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros]] (102 nodos)
+- [[knowledge/grafo/mapas/comunidad-02|Comunidad 2 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros]] (101 nodos)
 - [[knowledge/grafo/mapas/comunidad-03|Comunidad 3 · docs · Registro de decisiones y Trabajo nocturno de Claude]] (83 nodos)
 - [[knowledge/grafo/mapas/comunidad-04|Comunidad 4 · processes/runbooks · Auditoría de agentes y habilidades frente a los procesos (M-040) y Dependencias entre procesos]] (64 nodos)
 - [[knowledge/grafo/mapas/comunidad-05|Comunidad 5 · precedents/oficina · Propuesta de proceso de referencia: siniestros en corredurías y Conversaciones con Coordinación sectorial · Seguros]] (59 nodos)
@@ -22,12 +22,12 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 - [[knowledge/grafo/mapas/comunidad-09|Comunidad 9 · processes/catalog · P22 · Gestión de errores y reintentos y Catálogo de procesos P01–P38]] (36 nodos)
 - [[knowledge/grafo/mapas/comunidad-10|Comunidad 10 · claude/habilidades · Ingeniero de plataforma y operaciones (DevOps/SRE) y Plataforma y operaciones]] (15 nodos)
 - [[knowledge/grafo/mapas/comunidad-11|Comunidad 11 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Conversaciones con IA y evaluación]] (13 nodos)
-- [[knowledge/grafo/mapas/comunidad-12|Comunidad 12 · knowledge/estudios · Estudios y Integraciones]] (6 nodos)
+- [[knowledge/grafo/mapas/comunidad-12|Comunidad 12 · knowledge/estudios · Estudios y Integraciones]] (7 nodos)
 
 ## Nodos centrales
 
-- [[knowledge/fuentes/registro|Registro de fuentes]] · 216 vecinos
-- [[DECISIONS|Registro de decisiones]] · 122 vecinos
+- [[knowledge/fuentes/registro|Registro de fuentes]] · 215 vecinos
+- [[DECISIONS|Registro de decisiones]] · 123 vecinos
 - [[knowledge/INDEX|Índice del conocimiento de Varios]] · 119 vecinos
 - [[docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado|Guia de Arranque Proyecto v1.4 Diseno Cerrado]] · 85 vecinos
 - [[processes/catalog/README|Catálogo de procesos P01–P38]] · 83 vecinos
@@ -38,7 +38,7 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 - [[docs/28-auditoria-agentes|Auditoría de agentes y habilidades frente a los procesos (M-040)]] · 64 vecinos
 - [[processes/catalog/P28-gestion-de-incidentes|P28 · Gestión de incidentes]] · 63 vecinos
 - [[knowledge/direccion/ceo-digital|CEO digital]] · 60 vecinos
-- [[docs/29-autonomia|Mapa de autonomía por proceso, A0–A4 (M-045)]] · 57 vecinos
+- [[docs/29-autonomia|Mapa de autonomía por proceso, A0–A4 (M-045)]] · 60 vecinos
 - [[knowledge/procesos/arquitecto-procesos|Arquitecto de procesos]] · 50 vecinos
 - [[knowledge/sectores/especialista-sectorial|Coordinación sectorial y seguros]] · 50 vecinos
 
@@ -58,9 +58,9 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 ## Preguntas abiertas
 
 - ¿Por qué «Registro de fuentes» conecta la comunidad 2 con las comunidades 0, 3, 4, 5?  
-  Intermediación alta (0.14): es un puente entre temas.
+  Intermediación alta (0.137): es un puente entre temas.
 - ¿Por qué «Registro de decisiones» conecta la comunidad 3 con las comunidades 0, 2, 4, 5?  
-  Intermediación alta (0.05): es un puente entre temas.
+  Intermediación alta (0.049): es un puente entre temas.
 - ¿Por qué «Habilidades de los agentes» conecta la comunidad 0 con las comunidades 1, 4, 5, 6?  
   Intermediación alta (0.042): es un puente entre temas.
 - ¿Se aprueba D-019 · Calidad exigente, todo pasa por un socio y cada rechazo se rehace aprendiendo? Sigue en propuesta y la citan 17 secciones.  

@@ -62,7 +62,7 @@ Rutas en `src/varios/api/oficina.py`; pruebas en `tests/db/test_api_oficina.py`,
 | `POST /aprobaciones/{id}/decision` | Aprobar (→ ENTREGADO) o rechazar (→ RETRABAJO, versión + 1) | Solo una persona con rol `aprobador`, que no la ha pedido ni es autora del encargo, y sobre la misma versión |
 | `GET /encargos/{id}/auditoria` | Eventos del encargo, sus tareas y sus aprobaciones | Cada cambio deja uno; la tabla no se puede modificar |
 
-**Identidad (provisional hasta el proveedor de S3).** Cabecera `Authorization: Bearer <token>`. El token es un JWT HS256 con `sub` (usuario), `cliente`, `exp`, `iss` y `aud`, firmado con `VARIOS_JWT_SECRETO`. El usuario tiene que existir y estar activo en ese cliente; sus roles se leen de la base. Para probar en local: `python -c "from varios.api.identidad import emitir; print(emitir('<usuario>', '<cliente>'))"` con los identificadores de la semilla.
+**Identidad (provisional hasta el proveedor de S3).** Cabecera `Authorization: Bearer <token>`. El token es un JWT HS256 con `sub` (usuario), `cliente`, `exp`, `iss` y `aud`, firmado con `VARIOS_JWT_SECRETO` (al menos 32 caracteres; si se deja el valor de `.env.example`, la API no emite ni acepta tokens). El usuario tiene que existir y estar activo en ese cliente; sus roles se leen de la base. Para probar en local: `python -c "from varios.api.identidad import emitir; print(emitir('<usuario>', '<cliente>'))"` con los identificadores de la semilla.
 
 **Errores.** 401 sin token válido · 404 si no existe o es de otro cliente (no se revela cuál) · 403 si la aprobación no cumple la regla · 409 si la transición no está permitida · 422 si los datos no son válidos. Cada petición es una transacción: si algo falla, no se guarda nada, tampoco el evento.
 

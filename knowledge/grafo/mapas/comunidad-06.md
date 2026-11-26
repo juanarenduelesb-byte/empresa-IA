@@ -2,14 +2,14 @@
 tipo: "mapa"
 comunidad: 6
 miembros: 47
-cohesion: 0.15
+cohesion: 0.16
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 6 · processes/catalog · Índice del conocimiento de Varios y Arquitecto de procesos
 
-47 nodos agrupados por el algoritmo de Louvain. Cohesión 0.15.
+47 nodos agrupados por el algoritmo de Louvain. Cohesión 0.16.
 
 ## Documentos
 
@@ -17,8 +17,8 @@ tags:
 - [[knowledge/procesos/arquitecto-procesos|Arquitecto de procesos]]
 - [[processes/catalog/P33-diseno-y-validacion-to-be|P33 · Diseño y validación TO-BE]]
 - [[knowledge/comercial/director-comercial|Director comercial]]
-- [[knowledge/comercial/gestion-clientes|Especialista en éxito de cliente]]
 - [[processes/catalog/P32-descubrimiento-de-procesos|P32 · Descubrimiento de procesos]]
+- [[knowledge/comercial/gestion-clientes|Especialista en éxito de cliente]]
 - [[processes/catalog/P38-gestion-de-despliegue-por-cliente|P38 · Gestión de despliegue por cliente]]
 - [[processes/catalog/P37-medicion-de-rendimiento-y-valor|P37 · Medición de rendimiento y valor]]
 - [[knowledge/procesos/implantacion-clientes|Responsable de implantación de clientes]]

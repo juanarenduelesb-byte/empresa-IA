@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 2
-miembros: 102
+miembros: 101
 cohesion: 0.07
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 2 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros
 
-102 nodos agrupados por el algoritmo de Louvain. Cohesión 0.07.
+101 nodos agrupados por el algoritmo de Louvain. Cohesión 0.07.
 
 ## Documentos
 
@@ -36,7 +36,6 @@ tags:
 - [[governance/legal/borradores/03-acuerdo-confidencialidad|Acuerdo de confidencialidad (mutuo) · BORRADOR PARA ABOGADO]]
 - [[knowledge/plantillas/ficha-fuente|Ficha-fuente]]
 - [[governance/socios/03-preguntas-seguro-rc-y-ciber|M-020 · Preguntas para el corredor: responsabilidad civil profesional y ciberriesgos]]
-- [[knowledge/estudios/2026-11-26-prospectos-pymes-alvaro/README|Estudio de prospectos: automatización para pymes (Álvaro, noviembre de 2026)]]
 - [[knowledge/metodologias-transversales/investigar|Protocolo: investigar fuera]]
 - [[knowledge/procesos/sectores|Especialistas sectoriales]]
 

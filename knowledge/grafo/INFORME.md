@@ -5,16 +5,16 @@ Cómo está conectado el cerebro de Varios: qué sostiene todo, qué temas forma
 
 ## Resumen
 
-- 5086 nodos: seccion 4364, documento 383, fuente 121, habilidad 65, proceso 38, especialista 34, agente 34, decision 28, puerta 12, departamento 7.
-- 7176 relaciones: 63 % EXTRACTADAS (escritas en la fuente), 37 % INFERIDAS (temas compartidos, con puntuación) y 39 AMBIGUAS (para revisar).
+- 5087 nodos: seccion 4365, documento 383, fuente 121, habilidad 65, proceso 38, especialista 34, agente 34, decision 28, puerta 12, departamento 7.
+- 7184 relaciones: 63 % EXTRACTADAS (escritas en la fuente), 37 % INFERIDAS (temas compartidos, con puntuación) y 39 AMBIGUAS (para revisar).
 - 13 comunidades de temas.
 
 ## Nodos centrales
 
 Lo que más cosas conecta. Si cambia, cambia mucho.
 
-1. **Registro de fuentes** (`knowledge/fuentes/registro.md`) · 216 conexiones
-2. **Registro de decisiones** (`DECISIONS.md`) · 122 conexiones
+1. **Registro de fuentes** (`knowledge/fuentes/registro.md`) · 215 conexiones
+2. **Registro de decisiones** (`DECISIONS.md`) · 123 conexiones
 3. **Índice del conocimiento de Varios** (`knowledge/INDEX.md`) · 119 conexiones
 4. **Guia de Arranque Proyecto v1.4 Diseno Cerrado** (`docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado.md`) · 85 conexiones
 5. **Catálogo de procesos P01–P38** (`processes/catalog/README.md`) · 83 conexiones
@@ -30,8 +30,8 @@ Lo que más cosas conecta. Si cambia, cambia mucho.
 
 Nodos por los que pasa el camino entre comunidades distintas (intermediación).
 
-- **Registro de fuentes** · intermediación 0.14 · une la comunidad 2 con 0, 3, 4, 5, 6, 7
-- **Registro de decisiones** · intermediación 0.05 · une la comunidad 3 con 0, 2, 4, 5, 6, 7
+- **Registro de fuentes** · intermediación 0.137 · une la comunidad 2 con 0, 3, 4, 5, 6, 7
+- **Registro de decisiones** · intermediación 0.049 · une la comunidad 3 con 0, 2, 4, 5, 6, 7
 - **Habilidades de los agentes** · intermediación 0.042 · une la comunidad 0 con 1, 4, 5, 6, 8, 10
 - **L2 (puerta técnica)** · intermediación 0.026 · une la comunidad 11 con 0, 2, 3, 4, 5, 6
 - **Índice del conocimiento de Varios** · intermediación 0.022 · une la comunidad 6 con 0, 2, 3, 4, 5, 7
@@ -68,11 +68,11 @@ Cohesión 0.05 · 104 nodos: Legal y privacidad; Arquitecto de procesos; Segurid
 
 ### 2 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros
 
-Cohesión 0.07 · 102 nodos: Registro de fuentes; Coordinación sectorial y seguros; Experto en sanidad privada; Responsable de cumplimiento normativo; Experto en servicios financieros no bancarios; Especialista legal y privacidad; Experto en logística y transporte; P33 · Diseño y validación TO-BE (y 94 más)
+Cohesión 0.07 · 101 nodos: Registro de fuentes; Coordinación sectorial y seguros; Experto en sanidad privada; Responsable de cumplimiento normativo; Experto en servicios financieros no bancarios; Especialista legal y privacidad; Experto en logística y transporte; P33 · Diseño y validación TO-BE (y 93 más)
 
 ### 3 · docs · Registro de decisiones y Trabajo nocturno de Claude
 
-Cohesión 0.09 · 83 nodos: Registro de decisiones; Trabajo nocturno de Claude; Informe de la mañana · 26/11/2026; 17 · Cerebro, conocimiento y procesos: auditoría e informe; Plan maestro: la empresa completa, sin que se escape nada; G0 (puerta de cliente); Plan de trabajo diario · 26/11/2026 → 28/02/2027; L0 (puerta técnica) (y 75 más)
+Cohesión 0.09 · 83 nodos: Registro de decisiones; Trabajo nocturno de Claude; Informe de la mañana · 26/11/2026; 17 · Cerebro, conocimiento y procesos: auditoría e informe; Plan maestro: la empresa completa, sin que se escape nada; G0 (puerta de cliente); L0 (puerta técnica); Plan de trabajo diario · 26/11/2026 → 28/02/2027 (y 75 más)
 
 ### 4 · processes/runbooks · Auditoría de agentes y habilidades frente a los procesos (M-040) y Dependencias entre procesos
 
@@ -84,7 +84,7 @@ Cohesión 0.15 · 59 nodos: Propuesta de proceso de referencia: siniestros en co
 
 ### 6 · processes/catalog · Índice del conocimiento de Varios y Arquitecto de procesos
 
-Cohesión 0.15 · 47 nodos: Índice del conocimiento de Varios; Arquitecto de procesos; P32 · Descubrimiento de procesos; P38 · Gestión de despliegue por cliente; P31 · Calificación de oportunidad; P33 · Diseño y validación TO-BE; Director comercial; Especialista en éxito de cliente (y 39 más)
+Cohesión 0.16 · 47 nodos: Índice del conocimiento de Varios; Arquitecto de procesos; P32 · Descubrimiento de procesos; P38 · Gestión de despliegue por cliente; P31 · Calificación de oportunidad; P33 · Diseño y validación TO-BE; Director comercial; P32 · Descubrimiento de procesos (y 39 más)
 
 ### 7 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue
 
@@ -108,7 +108,7 @@ Cohesión 0.47 · 13 nodos: Acta de protección de la IA y examen de 50 casos; L
 
 ### 12 · knowledge/estudios · Estudios y Integraciones
 
-Cohesión 0.67 · 6 nodos: Estudios; Integraciones; Contratos de datos; Pruebas de integración; Conocimiento; Conectores
+Cohesión 0.52 · 7 nodos: Estudios; Integraciones; Contratos de datos; Estudio de prospectos: automatización para pymes (Álvaro, noviembre de 2026); Pruebas de integración; Conocimiento; Conectores
 
 ## Huecos
 
@@ -134,9 +134,9 @@ Cohesión 0.67 · 6 nodos: Estudios; Integraciones; Contratos de datos; Pruebas 
 _Preguntas que este grafo ayuda a responder o que conviene decidir:_
 
 - **¿Por qué «Registro de fuentes» conecta la comunidad 2 con las comunidades 0, 3, 4, 5?**
-  _Intermediación alta (0.14): es un puente entre temas._
+  _Intermediación alta (0.137): es un puente entre temas._
 - **¿Por qué «Registro de decisiones» conecta la comunidad 3 con las comunidades 0, 2, 4, 5?**
-  _Intermediación alta (0.05): es un puente entre temas._
+  _Intermediación alta (0.049): es un puente entre temas._
 - **¿Por qué «Habilidades de los agentes» conecta la comunidad 0 con las comunidades 1, 4, 5, 6?**
   _Intermediación alta (0.042): es un puente entre temas._
 - **¿Se aprueba D-019 · Calidad exigente, todo pasa por un socio y cada rechazo se rehace aprendiendo? Sigue en propuesta y la citan 17 secciones.**

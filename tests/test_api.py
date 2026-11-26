@@ -1,5 +1,7 @@
 """Salud de la API (plan S1)."""
 
+from pathlib import Path
+
 from fastapi.testclient import TestClient
 
 from varios.api.app import app
@@ -39,6 +41,25 @@ def test_definicion_del_encargo_con_token(monkeypatch):
     for t in fuente["transiciones"]:
         esperado.setdefault(t["de"], set()).update(t["a"])
     assert {k: set(v) for k, v in r.json()["transiciones"].items()} == esperado
+    ajustes.cache_clear()
+
+
+def test_no_firma_con_el_secreto_de_ejemplo(monkeypatch):
+    """Copiar .env.example sin cambiar el secreto no deja una API que acepte tokens firmados con un valor público."""
+    import uuid
+
+    import pytest
+
+    from varios.api.identidad import SECRETO_DE_EJEMPLO, NoAutenticado, emitir
+
+    ejemplo = Path(__file__).resolve().parents[1] / ".env.example"
+    assert f"VARIOS_JWT_SECRETO={SECRETO_DE_EJEMPLO}" in ejemplo.read_text(encoding="utf-8")
+    monkeypatch.setenv("VARIOS_JWT_SECRETO", SECRETO_DE_EJEMPLO)
+    ajustes.cache_clear()
+    with pytest.raises(NoAutenticado):
+        emitir(uuid.uuid4(), uuid.uuid4())
+    c = TestClient(app)
+    assert c.get("/definiciones/encargo", headers={"Authorization": "Bearer x.y.z"}).status_code == 401
     ajustes.cache_clear()
 
 

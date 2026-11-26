@@ -49,7 +49,7 @@ Prueba de humo con Chromium: cada sección abre, la barra marca la sección acti
 No se ha publicado el artefacto. Los archivos de `oficina/` quedan listos, y publicarlos es de un socio: la oficina publicada tiene datos en su almacén y conviene que la pruebe quien la usa.
 
 ## 4. Siguiente (por orden)
-1. Cola de aprobación con «editar antes de aprobar», «posponer» y caducidad que nunca continúa lo externo, legal o financiero (hallazgo 7).
+1. ~~Cola de aprobación con «editar antes de aprobar», «posponer» y caducidad que nunca continúa lo externo, legal o financiero (hallazgo 7).~~ **Hecho en N4 (26/11/2026):** «Editar y aprobar» guarda la original y la corrección en la memoria; «Posponer» oculta el encargo de Inicio hasta el día siguiente a las 9:00 sin parar la caducidad; una aprobación sin decidir caduca a las 72 horas (plazo propuesto, lo ajustan los socios) y la acción por defecto es siempre la segura para todo, no solo para lo externo, legal o financiero: no continúa y vuelve a Inicio como pregunta, porque D-019 pide el OK de un socio para todo. Prueba de humo en Chromium sin errores.
+3. ~~La oficina sobre la API~~ Primera parte hecha en N3a y N3b ([docs/24](24-base-de-datos.md)).
 2. Paleta Cmd/Ctrl+K para ir a cualquier sección, proyecto, agente o documento del cerebro (hallazgo 8).
-3. La oficina sobre la API y PostgreSQL (M-041, semanas 2–5 del plan), que es lo que la convierte en sistema.
 4. Ficha de cliente (B3) dentro de Clientes.

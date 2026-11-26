@@ -6,6 +6,7 @@ Es una planta isométrica con siete departamentos y 34 agentes alrededor del cer
 
 ## Qué hace
 
+- **Aprobaciones de Inicio (N4, [docs/25](../docs/25-portal-interno.md)):** «Editar y aprobar» (la original y la corrección van a la memoria), «Posponer» hasta mañana a las 9:00 y caducidad a las 72 horas, que nunca continúa: vuelve a Inicio como pregunta.
 - **Guarda en la API cuando la hay (N3b, [docs/24](../docs/24-base-de-datos.md#la-oficina-sobre-la-api-n3b)):** servida por la API en http://localhost:8000/oficina/, `api.js` escribe cada encargo en PostgreSQL (alta, estados, petición de aprobación y decisión de un socio) y muestra los que llegan de fuera. Como artefacto o sin API funciona igual que antes.
 
 - **Secciones (F1, [docs/25](../docs/25-portal-interno.md)):** barra siempre visible con Inicio, Encargos, Proyectos, Clientes, Cerebro, Calendario y Agentes; las acciones (Nuevo proyecto, Decisiones, Reunión) van aparte. La oficina se abre en **Inicio**: lo que espera tu OK y las preguntas de los agentes, rutinas pendientes, lo que está en curso, lo próximo y las decisiones con fecha. **Clientes** agrupa los proyectos por cliente. La planta 2D/3D es la sección Agentes.

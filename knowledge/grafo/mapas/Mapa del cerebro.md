@@ -64,7 +64,7 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
   Intermediación alta (0.05): es un puente entre temas.
 - ¿Por qué «Habilidades de los agentes» conecta la comunidad 0 con las comunidades 1, 4, 5, 6?  
   Intermediación alta (0.044): es un puente entre temas.
-- ¿Se aprueba D-019 · Calidad exigente, todo pasa por un socio y cada rechazo se rehace aprendiendo? Sigue en propuesta y la citan 15 secciones.  
+- ¿Se aprueba D-019 · Calidad exigente, todo pasa por un socio y cada rechazo se rehace aprendiendo? Sigue en propuesta y la citan 17 secciones.  
   Una decisión en propuesta que ya sostiene mucho contenido.
 - ¿Se aprueba D-013 · Conocimiento y catálogo de procesos generados desde datos? Sigue en propuesta y la citan 12 secciones.  
   Una decisión en propuesta que ya sostiene mucho contenido.

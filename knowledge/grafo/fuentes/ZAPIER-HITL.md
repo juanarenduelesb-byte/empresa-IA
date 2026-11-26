@@ -8,7 +8,7 @@ version: "actualizada 26/10/2026"
 autoridad: "media"
 vigencia: "vigente"
 estado: "validated"
-citada: 2
+citada: 3
 tags:
   - "fuente"
   - "vigencia/vigente"
@@ -22,5 +22,6 @@ tags:
 
 ## Citada en
 
+- [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]]
 - [[docs/25-portal-interno|Portal interno: auditoría de la oficina y distribución propuesta (F1)]]
 - [[governance/legal/borradores/05-matriz-aprobaciones|Matriz de aprobaciones · BORRADOR]]

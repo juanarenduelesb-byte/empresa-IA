@@ -4,7 +4,7 @@
  "comunes": [
   {
    "id": "C01",
-   "texto": "Cabecera completa: versión, fecha, autor y revisor por rol, estado, clasificación y datos usados (L0–L4)"
+   "texto": "Cabecera completa: versión, fecha, autor y revisor por rol, estado, clasificación y datos usados (inventados o reales, con su nivel L0–L4)"
   },
   {
    "id": "C02",
@@ -55,6 +55,10 @@
     {
      "id": "PD4",
      "texto": "Dice que en esta fase no se usan datos reales de sus clientes"
+    },
+    {
+     "id": "PD5",
+     "texto": "Explica cómo se medirá la línea base sin sacar datos personales del cliente"
     }
    ]
   },

@@ -61,3 +61,15 @@ def test_puntuar_mal_es_un_error():
         evaluar(Revision(tipo="acta", puntos={"criterio": 5}))
     with pytest.raises(ValueError):
         evaluar(rev([6, 5, 5, 5, 5, 5]))
+
+
+def test_un_punto_de_otra_lista_no_cuenta_como_cumplido():
+    import pytest
+
+    from varios.calidad.rubrica import Revision, evaluar, rubrica
+
+    puntos = {c["id"]: 5 for c in rubrica()["criterios"]}
+    with pytest.raises(ValueError, match="no son de la lista"):
+        evaluar(Revision(tipo="propuesta-diagnostico", puntos=puntos, comprobaciones={"PD9": True}))
+    with pytest.raises(ValueError, match="no son de la lista"):
+        evaluar(Revision(tipo="propuesta-diagnostico", puntos=puntos, comprobaciones={"ID1": True}))

@@ -10,6 +10,9 @@ Primer proyecto completo de la oficina: el diagnóstico de la apertura de sinies
 - [Muestra de 15 siniestros](documentos/03-muestra-de-siniestros.csv)
 - [Sistemas y restricciones](documentos/04-sistemas-y-restricciones.md)
 
+## Entregables de ejemplo (ficticios)
+- [Propuesta de diagnóstico](entregables/01-propuesta-diagnostico.md), con la plantilla de E1 y [su revisión con la rúbrica C3](entregables/01-propuesta-diagnostico.revision.md) (N6, 26/11/2026): no cumple todavía (media 4,33) porque el precio y las fechas los deciden los socios.
+
 ## Plan (13 encargos, 12 agentes, 4 fases)
 Lo define [`proyecto.py`](proyecto.py), que genera `proyecto.json` para cargarlo en la base de datos de la oficina.
 

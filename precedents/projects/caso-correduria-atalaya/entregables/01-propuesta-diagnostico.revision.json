@@ -1,0 +1,52 @@
+{
+ "tipo": "propuesta-diagnostico",
+ "puntos": {
+  "criterio": 5,
+  "completo": 4,
+  "veracidad": 4,
+  "coherencia": 4,
+  "nivel": 5,
+  "forma": 4
+ },
+ "problemas": [
+  {
+   "criterio": "completo",
+   "gravedad": "leve",
+   "donde": "§1, §3, §4, §6 y §7",
+   "como_arreglarlo": "Rellenar precio, fecha de arranque, horas de la directora y días del registro de tiempos cuando los socios los decidan (precio antes del 29/01/2027). Hasta entonces no se puede enviar."
+  },
+  {
+   "criterio": "veracidad",
+   "gravedad": "leve",
+   "donde": "§2",
+   "como_arreglarlo": "Las cifras del cliente salen de una sola fuente (lo que declaró la dirección). Están marcadas como declaradas; la semana 2 las sustituye por la medición."
+  },
+  {
+   "criterio": "coherencia",
+   "gravedad": "leve",
+   "donde": "§2",
+   "como_arreglarlo": "Cuando el informe de diagnóstico mida otras cifras, debe citar esta v1 y decir qué cambia."
+  },
+  {
+   "criterio": "forma",
+   "gravedad": "leve",
+   "donde": "§1",
+   "como_arreglarlo": "Al rellenar los dos huecos del resumen, comprobar que sigue cabiendo en cinco líneas."
+  }
+ ],
+ "comprobaciones": {
+  "C01": true,
+  "C02": true,
+  "C03": true,
+  "C04": true,
+  "C05": true,
+  "C06": true,
+  "C07": true,
+  "C08": true,
+  "PD1": true,
+  "PD2": true,
+  "PD3": true,
+  "PD4": true,
+  "PD5": true
+ }
+}

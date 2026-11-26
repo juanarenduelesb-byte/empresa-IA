@@ -73,6 +73,13 @@ def evaluar(r: Revision) -> Veredicto:
     if lista is None:
         raise ValueError(f"Tipo de entregable desconocido: {r.tipo}")
     puntos = listas()["comunes"] + lista["puntos"]
+    # Un id mal escrito o de otro tipo de entregable no puede contar como cumplido sin que nadie lo vea (N6).
+    ajenos = sorted(set(r.comprobaciones) - {p["id"] for p in puntos})
+    if ajenos:
+        raise ValueError(f"Puntos que no son de la lista de {r.tipo}: {ajenos}")
+    sin_criterio = sorted({p.criterio for p in r.problemas} - set(ids))
+    if sin_criterio:
+        raise ValueError(f"Problemas con un criterio que no existe: {sin_criterio}")
     faltan = [p["id"] for p in puntos if not r.comprobaciones.get(p["id"], False)]
     if faltan:
         motivos.append("Lista de comprobación sin cumplir: " + ", ".join(faltan))

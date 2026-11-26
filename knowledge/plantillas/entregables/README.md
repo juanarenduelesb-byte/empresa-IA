@@ -33,3 +33,6 @@ Basada en el principio de la pirámide: **primero la respuesta**, y después lo 
 - Sin datos personales en el cuerpo. Las personas se nombran por rol.
 - Toda afirmación legal es orientativa y lleva «no es asesoría jurídica».
 - Antes de enviar: [rúbrica de calidad y lista de comprobación](rubrica.md) (C3) y aprobación de un socio, porque enviar es una acción externa.
+
+## Ejemplo relleno
+La propuesta de diagnóstico del caso ficticio Atalaya, con su puntuación y los cambios que provocó en esta plantilla y en la rúbrica: [precedents/projects/caso-correduria-atalaya/entregables/](../../../precedents/projects/caso-correduria-atalaya/entregables/01-propuesta-diagnostico.md) (N6).

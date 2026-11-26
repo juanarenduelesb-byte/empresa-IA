@@ -35,7 +35,7 @@ Aunque cumpla, lo aprueba un socio antes de enviarlo.
 El 3 («aceptable con cambios») queda entre el 2 y el 4.
 
 ## Lista común (todos los entregables)
-- [ ] **C01** Cabecera completa: versión, fecha, autor y revisor por rol, estado, clasificación y datos usados (L0–L4).
+- [ ] **C01** Cabecera completa: versión, fecha, autor y revisor por rol, estado, clasificación y datos usados (inventados o reales, con su nivel L0–L4).
 - [ ] **C02** El resumen cabe en cinco líneas y dice qué decisión se pide, a quién y para cuándo.
 - [ ] **C03** Cada cifra tiene base (medido, declarado o hipótesis) y origen; lo no medido va como [por medir].
 - [ ] **C04** Cada norma citada tiene fuente vigente del registro y, si es legal, «no es asesoría jurídica».
@@ -49,6 +49,7 @@ El 3 («aceptable con cambios») queda entre el 2 y el 4.
 - [ ] **PD2** Qué necesitamos del cliente (personas, horas, acceso).
 - [ ] **PD3** Precio sin IVA o hueco [precio] si aún no está decidido; nunca un precio inventado.
 - [ ] **PD4** Dice que en esta fase no se usan datos reales de sus clientes.
+- [ ] **PD5** Explica cómo se medirá la línea base sin sacar datos personales del cliente (añadido en N6).
 
 ## Informe de diagnóstico (`informe-diagnostico`, plantilla [02-informe-diagnostico.md](02-informe-diagnostico.md))
 - [ ] **ID1** AS-IS validado por quien hace el proceso, con fecha.

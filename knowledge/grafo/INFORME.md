@@ -31,15 +31,15 @@ Lo que más cosas conecta. Si cambia, cambia mucho.
 Nodos por los que pasa el camino entre comunidades distintas (intermediación).
 
 - **Registro de fuentes** · intermediación 0.264 · une la comunidad 1 con 2, 3, 4, 5, 6, 7
-- **Registro de decisiones** · intermediación 0.094 · une la comunidad 9 con 1, 2, 3, 4, 5, 6
+- **Registro de decisiones** · intermediación 0.094 · une la comunidad 7 con 1, 2, 3, 4, 5, 6
 - **Habilidades de los agentes** · intermediación 0.079 · une la comunidad 2 con 3, 4, 5, 11
-- **L2 (puerta técnica)** · intermediación 0.054 · une la comunidad 9 con 1, 2, 3, 4, 5, 7
+- **L2 (puerta técnica)** · intermediación 0.054 · une la comunidad 7 con 1, 2, 3, 4, 5, 8
 - **Índice del conocimiento de Varios** · intermediación 0.051 · une la comunidad 5 con 1, 3, 4, 6, 7, 8
 - **Guia de Arranque Proyecto v1.4 Diseno Cerrado** · intermediación 0.041 · une la comunidad 6 con 2, 3, 5, 7, 8, 9
 - **CEO digital** · intermediación 0.024 · une la comunidad 3 con 1, 2, 5, 6, 7, 8
-- **D-011 · Construir primero, clientes desde el 15/02/2027** · intermediación 0.022 · une la comunidad 4 con 1, 2, 5, 6, 8, 9
-- **Administración** · intermediación 0.021 · une la comunidad 2 con 0, 1, 9, 10, 11
-- **Experto en asesorías y despachos** · intermediación 0.02 · une la comunidad 2 con 0, 1, 6, 9, 11
+- **D-011 · Construir primero, clientes desde el 15/02/2027** · intermediación 0.022 · une la comunidad 4 con 1, 2, 5, 6, 7, 10
+- **Administración** · intermediación 0.021 · une la comunidad 2 con 0, 1, 7, 9, 11
+- **Experto en asesorías y despachos** · intermediación 0.02 · une la comunidad 2 con 0, 1, 6, 7, 11
 
 ## Conexiones sorprendentes
 
@@ -86,21 +86,21 @@ Cohesión 0.15 · 55 nodos: Índice del conocimiento de Varios; Arquitecto de pr
 
 Cohesión 0.23 · 44 nodos: Guia de Arranque Proyecto v1.4 Diseno Cerrado; Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue; Flujo ceo; Ejecucion agentes; Motor conocimiento obsidian; Marco Integral Legal Ciberseguridad IA Espana UE 2026-11-16; Varios — repositorio maestro; 12 · Ciclo de vida de un proyecto con cliente (y 36 más)
 
-### 7 · processes/catalog · P22 · Gestión de errores y reintentos y Catálogo de procesos P01–P38
+### 7 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Registro de decisiones
+
+Cohesión 0.16 · 42 nodos: Acta de protección de la IA y examen de 50 casos; L2 (puerta técnica); Registro de decisiones; Conversaciones con IA y evaluación; Varios · empresa-ia; Reunión: IA y evaluación y Seguridad; Conversaciones con CEO digital; 17 · Cerebro, conocimiento y procesos: auditoría e informe (y 34 más)
+
+### 8 · processes/catalog · P22 · Gestión de errores y reintentos y Catálogo de procesos P01–P38
 
 Cohesión 0.44 · 40 nodos: P22 · Gestión de errores y reintentos; Catálogo de procesos P01–P38; P28 · Gestión de incidentes; P22 · Gestión de errores y reintentos; P27 · Gestión de proveedores y dependencias; P05 · Diseño del plan; P11 · Entrega y cierre; P13 · Aprendizaje y actualización de la wiki (y 32 más)
 
-### 8 · knowledge/plantillas · Plan maestro: la empresa completa, sin que se escape nada y Trabajo nocturno de Claude
-
-Cohesión 0.17 · 35 nodos: Plan maestro: la empresa completa, sin que se escape nada; Trabajo nocturno de Claude; Matriz de aprobaciones · BORRADOR; Plantillas de entregables al cliente (E1); G6 (puerta de cliente); G2 (puerta de cliente); Roadmap y decisiones; Rúbrica de calidad de entregables y listas de comprobación (C3) (y 27 más)
-
-### 9 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Registro de decisiones
-
-Cohesión 0.19 · 35 nodos: Acta de protección de la IA y examen de 50 casos; L2 (puerta técnica); Registro de decisiones; Conversaciones con IA y evaluación; Varios · empresa-ia; Reunión: IA y evaluación y Seguridad; Conversaciones con CEO digital; 17 · Cerebro, conocimiento y procesos: auditoría e informe (y 27 más)
-
-### 10 · knowledge/administracion-finanzas · Responsable de cumplimiento normativo y Especialista legal y privacidad
+### 9 · knowledge/administracion-finanzas · Responsable de cumplimiento normativo y Especialista legal y privacidad
 
 Cohesión 0.16 · 30 nodos: Responsable de cumplimiento normativo; Especialista legal y privacidad; Director financiero (CFO); P29 · Gestión de costes y capacidad; Especialista en costes y proveedores; P27 · Gestión de proveedores y dependencias; P19 · Política de uso y límites; Especialista financiero (y 22 más)
+
+### 10 · knowledge/plantillas · Matriz de aprobaciones · BORRADOR y Plantillas de entregables al cliente (E1)
+
+Cohesión 0.21 · 28 nodos: Matriz de aprobaciones · BORRADOR; Plantillas de entregables al cliente (E1); G6 (puerta de cliente); G2 (puerta de cliente); Roadmap y decisiones; Rúbrica de calidad de entregables y listas de comprobación (C3); Informe de diagnóstico · [Cliente] · [Proceso]; Plantilla · Ficha de cliente (y 20 más)
 
 ### 11 · claude/habilidades · Ingeniero de plataforma y operaciones (DevOps/SRE) y Plataforma y operaciones
 
@@ -129,7 +129,7 @@ _Preguntas que este grafo ayuda a responder o que conviene decidir:_
 
 - **¿Por qué «Registro de fuentes» conecta la comunidad 1 con las comunidades 2, 3, 4, 5?**
   _Intermediación alta (0.264): es un puente entre temas._
-- **¿Por qué «Registro de decisiones» conecta la comunidad 9 con las comunidades 1, 2, 3, 4?**
+- **¿Por qué «Registro de decisiones» conecta la comunidad 7 con las comunidades 1, 2, 3, 4?**
   _Intermediación alta (0.094): es un puente entre temas._
 - **¿Por qué «Habilidades de los agentes» conecta la comunidad 2 con las comunidades 3, 4, 5, 11?**
   _Intermediación alta (0.079): es un puente entre temas._

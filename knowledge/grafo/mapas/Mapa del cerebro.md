@@ -17,10 +17,10 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 - [[knowledge/grafo/mapas/comunidad-04|Comunidad 4 · precedents/oficina · Propuesta de proceso de referencia: siniestros en corredurías y Conversaciones con Coordinación sectorial · Seguros]] (59 nodos)
 - [[knowledge/grafo/mapas/comunidad-05|Comunidad 5 · processes/catalog · Índice del conocimiento de Varios y Arquitecto de procesos]] (55 nodos)
 - [[knowledge/grafo/mapas/comunidad-06|Comunidad 6 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue]] (44 nodos)
-- [[knowledge/grafo/mapas/comunidad-07|Comunidad 7 · processes/catalog · P22 · Gestión de errores y reintentos y Catálogo de procesos P01–P38]] (40 nodos)
-- [[knowledge/grafo/mapas/comunidad-08|Comunidad 8 · knowledge/plantillas · Plan maestro: la empresa completa, sin que se escape nada y Trabajo nocturno de Claude]] (35 nodos)
-- [[knowledge/grafo/mapas/comunidad-09|Comunidad 9 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Registro de decisiones]] (35 nodos)
-- [[knowledge/grafo/mapas/comunidad-10|Comunidad 10 · knowledge/administracion-finanzas · Responsable de cumplimiento normativo y Especialista legal y privacidad]] (30 nodos)
+- [[knowledge/grafo/mapas/comunidad-07|Comunidad 7 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Registro de decisiones]] (42 nodos)
+- [[knowledge/grafo/mapas/comunidad-08|Comunidad 8 · processes/catalog · P22 · Gestión de errores y reintentos y Catálogo de procesos P01–P38]] (40 nodos)
+- [[knowledge/grafo/mapas/comunidad-09|Comunidad 9 · knowledge/administracion-finanzas · Responsable de cumplimiento normativo y Especialista legal y privacidad]] (30 nodos)
+- [[knowledge/grafo/mapas/comunidad-10|Comunidad 10 · knowledge/plantillas · Matriz de aprobaciones · BORRADOR y Plantillas de entregables al cliente (E1)]] (28 nodos)
 - [[knowledge/grafo/mapas/comunidad-11|Comunidad 11 · claude/habilidades · Ingeniero de plataforma y operaciones (DevOps/SRE) y Plataforma y operaciones]] (14 nodos)
 - [[knowledge/grafo/mapas/comunidad-12|Comunidad 12 · knowledge/ingenieria · Diseñador de producto y experiencia (UX) y Diseñador de producto y experiencia (UX)]] (5 nodos)
 - [[knowledge/grafo/mapas/comunidad-13|Comunidad 13 · integrations · Integraciones y Contratos de datos]] (4 nodos)
@@ -48,19 +48,19 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 - [[knowledge/fuentes/registro|Registro de fuentes]] · conecta las comunidades 2, 3, 4, 5, 6, 7
 - [[DECISIONS|Registro de decisiones]] · conecta las comunidades 1, 2, 3, 4, 5, 6
 - [[claude/habilidades/README|Habilidades de los agentes]] · conecta las comunidades 3, 4, 5, 11
-- L2 (puerta técnica) · conecta las comunidades 1, 2, 3, 4, 5, 7
+- L2 (puerta técnica) · conecta las comunidades 1, 2, 3, 4, 5, 8
 - [[knowledge/INDEX|Índice del conocimiento de Varios]] · conecta las comunidades 1, 3, 4, 6, 7, 8
 - [[docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado|Guia de Arranque Proyecto v1.4 Diseno Cerrado]] · conecta las comunidades 2, 3, 5, 7, 8, 9
 - [[knowledge/direccion/ceo-digital|CEO digital]] · conecta las comunidades 1, 2, 5, 6, 7, 8
-- [[knowledge/grafo/decisiones/D-011|D-011 · Construir primero, clientes desde el 15/02/2027]] · conecta las comunidades 1, 2, 5, 6, 8, 9
-- [[knowledge/agentes/admj|Administración]] · conecta las comunidades 0, 1, 9, 10, 11
-- [[knowledge/agentes/ase|Experto en asesorías y despachos]] · conecta las comunidades 0, 1, 6, 9, 11
+- [[knowledge/grafo/decisiones/D-011|D-011 · Construir primero, clientes desde el 15/02/2027]] · conecta las comunidades 1, 2, 5, 6, 7, 10
+- [[knowledge/agentes/admj|Administración]] · conecta las comunidades 0, 1, 7, 9, 11
+- [[knowledge/agentes/ase|Experto en asesorías y despachos]] · conecta las comunidades 0, 1, 6, 7, 11
 
 ## Preguntas abiertas
 
 - ¿Por qué «Registro de fuentes» conecta la comunidad 1 con las comunidades 2, 3, 4, 5?  
   Intermediación alta (0.264): es un puente entre temas.
-- ¿Por qué «Registro de decisiones» conecta la comunidad 9 con las comunidades 1, 2, 3, 4?  
+- ¿Por qué «Registro de decisiones» conecta la comunidad 7 con las comunidades 1, 2, 3, 4?  
   Intermediación alta (0.094): es un puente entre temas.
 - ¿Por qué «Habilidades de los agentes» conecta la comunidad 2 con las comunidades 3, 4, 5, 11?  
   Intermediación alta (0.079): es un puente entre temas.

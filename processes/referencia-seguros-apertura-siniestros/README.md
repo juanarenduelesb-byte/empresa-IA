@@ -3,10 +3,14 @@
 **Estado:** draft. **Todo lo de este documento son hipótesis**, salvo lo que tiene fuente. Se valida en las conversaciones semanales (D-011). Datos: solo inventados. La decisión sobre el proceso de referencia está pendiente (vence el 22/11/2026).
 
 ## Lo que sabemos con fuente
-- El tomador comunica el siniestro en un máximo de 7 días desde que lo conoce, salvo plazo mayor en la póliza ([LCS art. 16](../../knowledge/fuentes/registro.md#lcs-50-1980)).
+Detalle, plazos, glosario y catálogo de excepciones en el [paquete de dominio de seguros](../../knowledge/sectores/seguros/README.md) (B2, draft, borrador para abogado).
+
+- El tomador comunica el siniestro en un máximo de 7 días desde que lo conoce, salvo plazo mayor en la póliza. Si se retrasa, la aseguradora puede reclamar daños y perjuicios, pero no se pierde la cobertura por eso ([LCS art. 16](../../knowledge/fuentes/registro.md#lcs-50-1980)).
+- El corredor presta asistencia y asesoramiento en caso de siniestro, y lo que comunica en nombre del tomador vale como si lo hiciera el tomador ([RDL 3/2020 art. 155.3](../../knowledge/fuentes/registro.md#rdl-3-2020); [LCS art. 21](../../knowledge/fuentes/registro.md#lcs-50-1980)).
 - Los riesgos extraordinarios los gestiona el Consorcio de Compensación de Seguros. La solicitud puede presentarla el mediador, y en la práctica suele llegar a través de agentes y corredores ([CCS](../../knowledge/fuentes/registro.md#ccs)).
-- En daños materiales entre dos vehículos existen convenios entre aseguradoras ([CIDE-CICOS](../../knowledge/fuentes/registro.md#cide-cicos), draft).
-- Los corredores tienen obligaciones de libros-registro e información ([RD 287/2021](../../knowledge/fuentes/registro.md#rd-287-2021)).
+- En daños materiales de una colisión directa entre dos vehículos se aplica el convenio de indemnización directa entre aseguradoras, que desde abril de 2026 refunde CIDE y ASCIDE ([UNESPA-CONVENIO-2026](../../knowledge/fuentes/registro.md#unespa-convenio-2026)).
+- Los corredores anotan cada siniestro en su libro-registro en cuanto lo conocen, con un retraso máximo de tres meses ([RD 287/2021 art. 14 y 15](../../knowledge/fuentes/registro.md#rd-287-2021)).
+- Las quejas y reclamaciones se resuelven en un mes, y el cliente puede pedir en cualquier momento que le atienda una persona ([Ley 10/2025](../../knowledge/fuentes/registro.md#ley-10-2025)).
 
 ## AS-IS hipotético (por validar)
 ```mermaid
@@ -35,7 +39,7 @@ flowchart TD
 | Paso | Regla | IA propone | Persona |
 |---|---|---|---|
 | Recepción multicanal | Registro, identificación por póliza | Extraer datos del mensaje | — |
-| Comprobación de plazo y póliza | Plazo de 7 días, póliza vigente (datos inventados) | — | Excepciones |
+| Comprobación de plazo y póliza | Plazo de 7 días como aviso, nunca como rechazo; póliza vigente (datos inventados) | — | Excepciones (EX-01 a EX-15) |
 | Petición de documentación | Lista por tipo de siniestro | Redactar la petición | Aprobar envío (acción externa) |
 | Parte en el portal de la aseguradora | — | Prellenar | Enviar (acción externa) |
 | Riesgo extraordinario | Detectar por tipo de causa | — | Decidir la vía CCS |

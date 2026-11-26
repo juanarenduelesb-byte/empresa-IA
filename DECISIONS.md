@@ -186,6 +186,13 @@ No construir primero un CEO omnisciente; descubrir, diseñar, integrar y medir u
 - Riesgo: adelantar código antes de validar el proceso. Mitigación: el modelo es genérico (encargos, tareas, aprobaciones) y no depende del sector. El motor en memoria (D-014) sigue igual hasta S5.
 - Estado: propuesta.
 
+## D-024 — Paquete de dominio de seguros con un archivo máquina como fuente de las reglas
+- Fecha: 2026-11-26
+- Decisión: el conocimiento del sector del proceso de referencia vive en `knowledge/sectores/seguros/`: normas con artículo y fuente oficial, glosario, catálogo de excepciones y `dominio.json` con plazos, excepciones, campos mínimos del expediente y términos. El código fijo del proceso leerá los plazos y los disparadores de `dominio.json`; los Markdown son la explicación para personas, y una prueba (`tests/test_dominio_seguros.py`) comprueba que coinciden y que todo cita una fuente del registro. Mientras un abogado no fije la base jurídica, el proceso de referencia no guarda datos de salud.
+- Motivo: «código fijo para reglas y cálculos». Una sola fuente de las reglas evita que el motor, las pruebas de C1 y la documentación digan cosas distintas.
+- Riesgo: que una norma cambie y el archivo quede viejo. Mitigación: cada plazo lleva su fuente con fecha de lectura y las fuentes en `draft` están marcadas; revisar antes de usar con un cliente.
+- Estado: propuesta.
+
 ## Decisiones pendientes (con fecha límite)
 | Decisión | Quién | Antes de |
 |---|---|---|

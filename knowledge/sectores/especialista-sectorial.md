@@ -38,6 +38,7 @@ tags:
 - [`precedents/README.md`](../../precedents/README.md)
 - [`knowledge/sectores/README.md`](README.md)
 - [`knowledge/sectores/priorizacion.md`](priorizacion.md)
+- [`knowledge/sectores/seguros/README.md`](seguros/README.md)
 - [`processes/referencia-seguros-apertura-siniestros/README.md`](../../processes/referencia-seguros-apertura-siniestros/README.md)
 
 ### Procesos que puede ejecutar
@@ -72,7 +73,10 @@ tags:
 
 ### Fundamentos y terminología
 - El tomador comunica el siniestro en un máximo de 7 días desde que lo conoce, salvo plazo mayor en la póliza ([LCS-50-1980](../fuentes/registro.md#lcs-50-1980), art. 16).
-- Los corredores tienen obligaciones de formación, libros-registro e información ([RD-287-2021](../fuentes/registro.md#rd-287-2021)).
+- Los corredores tienen obligaciones de formación, libros-registro e información; el libro de siniestros se anota en cuanto el corredor conoce el siniestro y no puede ir más de tres meses retrasado ([RD-287-2021](../fuentes/registro.md#rd-287-2021), art. 14 y 15).
+- El corredor presta asistencia y asesoramiento al cliente en caso de siniestro ([RDL-3-2020](../fuentes/registro.md#rdl-3-2020), art. 155.3), y lo que comunica en nombre del tomador vale como si lo comunicara el tomador ([LCS-50-1980](../fuentes/registro.md#lcs-50-1980), art. 21).
+- Corredores y aseguradoras resuelven quejas y reclamaciones en un mes (Ley 44/2002, art. 29, en la redacción de LEY-10-2025); adaptación hasta el 28/12/2026.
+- Detalle y catálogo de excepciones: knowledge/sectores/seguros/.
 - A 21/11/2025 había 3.445 corredores inscritos en la DGSFP: 884 personas físicas y 2.561 sociedades (DGSFP-MEDIACION, cita indirecta).
 - El mercado de corredurías se consolida por escala, sucesión y requisitos regulatorios (PL-MA-CORREDURIAS): más tamaño, más procesos que ordenar.
 - Si el cliente es una aseguradora sujeta a DORA, los requisitos llegan al proveedor TIC por contrato ([DORA-CNMV](../fuentes/registro.md#dora-cnmv)).
@@ -95,7 +99,7 @@ tags:
 
 ### Casos y escenarios
 - Apertura de siniestros en corredurías (proceso de referencia, hipótesis).
-- Siniestro de daños materiales entre dos vehículos: posible tramitación por convenio entre aseguradoras ([CIDE-CICOS](../fuentes/registro.md#cide-cicos)).
+- Siniestro de daños materiales entre dos vehículos: posible tramitación por el convenio de indemnización directa (UNESPA-CONVENIO-2026).
 - Candidatos sin validar: renovaciones, solicitudes al CCS, conciliación de comisiones.
 
 ### Criterio profesional
@@ -118,8 +122,15 @@ Ver *A quién convoca* y [`knowledge/navigation.json`](../navigation.json).
 
 ## 3. Fuentes
 - [LCS-50-1980](../fuentes/registro.md#lcs-50-1980) · Ley 50/1980, de Contrato de Seguro
-- [RDL-3-2020](../fuentes/registro.md#rdl-3-2020) · Real Decreto-ley 3/2020 (distribución de seguros): actualización de importes por la DGSFP
-- [RD-287-2021](../fuentes/registro.md#rd-287-2021) · Real Decreto 287/2021: formación y libros-registro de distribuidores de seguros
+- [RDL-3-2020](../fuentes/registro.md#rdl-3-2020) · Real Decreto-ley 3/2020, libro II: distribución de seguros y reaseguros privados
+- [RD-287-2021](../fuentes/registro.md#rd-287-2021) · Real Decreto 287/2021, sobre formación y remisión de la información estadístico-contable de los distribuidores de seguros y reaseguros
+- [LEY-10-2025](../fuentes/registro.md#ley-10-2025) · Ley 10/2025, de 26 de diciembre, por la que se regulan los servicios de atención a la clientela
+- [RDLEG-8-2004](../fuentes/registro.md#rdleg-8-2004) · Real Decreto Legislativo 8/2004, texto refundido de la Ley sobre responsabilidad civil y seguro en la circulación de vehículos a motor
+- [BAREMO-2026](../fuentes/registro.md#baremo-2026) · Resolución de 3 de febrero de 2026, de la DGSFP, cuantías actualizadas del baremo de tráfico
+- [UNESPA-CONVENIO-2026](../fuentes/registro.md#unespa-convenio-2026) · Convenio entre entidades aseguradoras de automóviles para la indemnización directa de daños materiales a vehículos (refunde CIDE, ASCIDE y CICOS)
+- [RD-300-2004](../fuentes/registro.md#rd-300-2004) · Real Decreto 300/2004, Reglamento del seguro de riesgos extraordinarios
+- [CCS-SOLICITUD](../fuentes/registro.md#ccs-solicitud) · CCS: solicitud de indemnización por riesgos extraordinarios
+- [LOSSEAR-ART99](../fuentes/registro.md#lossear-art99) · Ley 20/2015, de ordenación, supervisión y solvencia de las entidades aseguradoras y reaseguradoras, art. 99
 - [CIDE-CICOS](../fuentes/registro.md#cide-cicos) · Convenios CIDE/ASCIDE y Centro Informático de Compensación de Siniestros (CICOS)
 - [CCS](../fuentes/registro.md#ccs) · Consorcio de Compensación de Seguros: riesgos extraordinarios
 - [DORA-CNMV](../fuentes/registro.md#dora-cnmv) · Preguntas frecuentes sobre el Reglamento (UE) 2022/2554 (DORA)

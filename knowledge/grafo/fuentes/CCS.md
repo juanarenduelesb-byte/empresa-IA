@@ -8,7 +8,7 @@ version: "consultado 17/11/2026"
 autoridad: "alta"
 vigencia: "vigente"
 estado: "validated"
-citada: 18
+citada: 23
 tags:
   - "fuente"
   - "vigencia/vigente"
@@ -22,7 +22,12 @@ tags:
 
 ## Citada en
 
+- [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]]
 - [[knowledge/sectores/especialista-sectorial|Coordinación sectorial y seguros]]
+- [[knowledge/sectores/seguros/README|Paquete de dominio · seguros y corredurías]]
+- [[knowledge/sectores/seguros/excepciones|Catálogo de excepciones al abrir un siniestro]]
+- [[knowledge/sectores/seguros/glosario-siniestros|Glosario de siniestros]]
+- [[knowledge/sectores/seguros/normas|Normas para abrir un siniestro en una correduría]]
 - [[precedents/oficina/chats/coordinacion-sectorial-seguros|Conversaciones con Coordinación sectorial · Seguros]]
 - [[precedents/oficina/chats/jefe-comercial|Conversaciones con Jefe comercial]]
 - [[precedents/oficina/chats/legal-y-privacidad|Conversaciones con Legal y privacidad]]

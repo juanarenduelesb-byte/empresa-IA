@@ -1,0 +1,378 @@
+{
+ "version": "2026-11-26",
+ "estado": "draft",
+ "aviso": "Borrador para abogado. Datos de dominio, no de clientes. Validar con el sector antes de usar.",
+ "plazos": [
+  {
+   "id": "PL-COMUNICACION",
+   "nombre": "Comunicar el siniestro",
+   "dias": 7,
+   "unidad": "dias_naturales",
+   "desde": "conocimiento_del_siniestro",
+   "norma": "LCS art. 16",
+   "fuente": "LCS-50-1980",
+   "efecto": "Si se supera, la aseguradora puede reclamar daños y perjuicios; no se pierde la cobertura por el retraso. La póliza puede fijar un plazo mayor.",
+   "uso": "aviso"
+  },
+  {
+   "id": "PL-RELACION-OBJETOS",
+   "nombre": "Relación de objetos existentes y salvados",
+   "dias": 5,
+   "unidad": "dias",
+   "desde": "comunicacion_del_siniestro",
+   "norma": "LCS art. 38",
+   "fuente": "LCS-50-1980",
+   "efecto": "Base de la peritación.",
+   "uso": "seguimiento"
+  },
+  {
+   "id": "PL-IMPORTE-MINIMO",
+   "nombre": "Pago del importe mínimo",
+   "dias": 40,
+   "unidad": "dias",
+   "desde": "recepcion_declaracion_por_aseguradora",
+   "norma": "LCS art. 18",
+   "fuente": "LCS-50-1980",
+   "efecto": "Si no se paga, hay mora (art. 20).",
+   "uso": "seguimiento"
+  },
+  {
+   "id": "PL-MORA",
+   "nombre": "Mora del asegurador",
+   "meses": 3,
+   "desde": "produccion_del_siniestro",
+   "norma": "LCS art. 20",
+   "fuente": "LCS-50-1980",
+   "efecto": "Interés legal más 50 %; desde los 2 años, mínimo 20 % anual; salvo causa justificada.",
+   "uso": "alerta"
+  },
+  {
+   "id": "PL-OFERTA-MOTIVADA",
+   "nombre": "Oferta o respuesta motivada (automóviles)",
+   "meses": 3,
+   "desde": "reclamacion_del_perjudicado",
+   "norma": "RDLeg 8/2004 art. 7.2",
+   "fuente": "RDLEG-8-2004",
+   "efecto": "La aseguradora presenta oferta motivada o respuesta motivada.",
+   "uso": "seguimiento"
+  },
+  {
+   "id": "PL-LIBRO-SINIESTROS",
+   "nombre": "Anotar el libro de siniestros",
+   "meses": 3,
+   "desde": "conocimiento_por_el_corredor",
+   "norma": "RD 287/2021 art. 14.2 c) y 15 c)",
+   "fuente": "RD-287-2021",
+   "efecto": "Se anota en cuanto se conoce; el libro no puede llevar más de tres meses de retraso.",
+   "uso": "al_abrir"
+  },
+  {
+   "id": "PL-RECLAMACION-SAC",
+   "nombre": "Resolver una queja o reclamación",
+   "meses": 1,
+   "desde": "presentacion_de_la_reclamacion",
+   "norma": "Ley 44/2002 art. 29.5 b) (redacción de la Ley 10/2025)",
+   "fuente": "LEY-10-2025",
+   "efecto": "Si no se resuelve o se rechaza, el cliente puede ir a la DGSFP (90 días naturales).",
+   "uso": "flujo_reclamaciones"
+  },
+  {
+   "id": "PL-PRESCRIPCION-DANOS",
+   "nombre": "Prescripción, seguro de daños",
+   "anos": 2,
+   "desde": "segun_la_accion",
+   "norma": "LCS art. 23",
+   "fuente": "LCS-50-1980",
+   "efecto": "Las acciones del contrato prescriben.",
+   "uso": "alerta"
+  },
+  {
+   "id": "PL-PRESCRIPCION-PERSONAS",
+   "nombre": "Prescripción, seguro de personas",
+   "anos": 5,
+   "desde": "segun_la_accion",
+   "norma": "LCS art. 23",
+   "fuente": "LCS-50-1980",
+   "efecto": "Las acciones del contrato prescriben.",
+   "uso": "alerta"
+  },
+  {
+   "id": "PL-CARENCIA-CCS",
+   "nombre": "Carencia de riesgos extraordinarios de la naturaleza",
+   "dias": 7,
+   "unidad": "dias_naturales",
+   "desde": "poliza_fecha_por_comprobar",
+   "norma": "RD 300/2004 art. 8.1",
+   "fuente": "RD-300-2004",
+   "efecto": "No cubre daños materiales por fenómenos de la naturaleza dentro de la carencia; no se aplica a daños personales.",
+   "uso": "aviso"
+  }
+ ],
+ "excepciones": [
+  {
+   "id": "EX-01",
+   "nombre": "Comunicación fuera de plazo",
+   "disparador": "dias_desde_conocimiento > plazo_poliza (7 si la póliza no fija otro)",
+   "regla": "Abrir igual, registrar la fecha de conocimiento y avisar. Nunca rechazar por el plazo.",
+   "decide": "aseguradora; la correduría informa",
+   "ia": "Extrae la fecha de conocimiento del mensaje si aparece.",
+   "fuentes": [
+    "LCS-50-1980"
+   ],
+   "base": "con_fuente"
+  },
+  {
+   "id": "EX-02",
+   "nombre": "Póliza no encontrada, no vigente o con recibo impagado",
+   "disparador": "no hay póliza que case, o fecha_siniestro fuera de vigencia, o recibo pendiente",
+   "regla": "No abrir parte en el portal; pasar a un tramitador. Las consecuencias del impago (LCS art. 15) no se han leído esta noche.",
+   "decide": "persona",
+   "ia": "Propone la póliza más probable con su confianza; no la elige.",
+   "fuentes": [
+    "LCS-50-1980"
+   ],
+   "base": "hipotesis"
+  },
+  {
+   "id": "EX-03",
+   "nombre": "Riesgo extraordinario (posible vía CCS)",
+   "disparador": "causa declarada en la lista del RD 300/2004 art. 1.1",
+   "regla": "Marcar como posible CCS, comprobar la carencia y preparar la solicitud; presentarla es una acción externa.",
+   "decide": "persona",
+   "ia": "Clasifica la causa declarada; no decide la vía.",
+   "fuentes": [
+    "RD-300-2004",
+    "RDLEG-7-2004-CCS",
+    "CCS-SOLICITUD",
+    "CCS-FAQ"
+   ],
+   "base": "con_fuente"
+  },
+  {
+   "id": "EX-04",
+   "nombre": "Daños personales",
+   "disparador": "el mensaje menciona lesiones, heridos, fallecimiento o asistencia sanitaria",
+   "regla": "Registrar solo que hay daños personales; no guardar diagnósticos ni partes médicos hasta que el abogado fije la base del art. 9.2 RGPD.",
+   "decide": "persona",
+   "ia": "Detecta la mención y la oculta del texto guardado.",
+   "fuentes": [
+    "RGPD-2016-679",
+    "LOSSEAR-ART99",
+    "AEPD-CORREDOR-2018"
+   ],
+   "base": "con_fuente"
+  },
+  {
+   "id": "EX-05",
+   "nombre": "Colisión de dos vehículos con daños materiales",
+   "disparador": "ramo automóviles, dos vehículos, colisión directa, solo daños materiales",
+   "regla": "Pedir la declaración amistosa si existe; marcar posible convenio de indemnización directa. Si hay más de dos vehículos o no hubo colisión directa, marcar posible SDM.",
+   "decide": "aseguradora",
+   "ia": "Extrae vehículos, matrículas y si hay declaración amistosa.",
+   "fuentes": [
+    "UNESPA-CONVENIO-2026",
+    "UNESPA-SDM"
+   ],
+   "base": "con_fuente"
+  },
+  {
+   "id": "EX-06",
+   "nombre": "Tercero perjudicado que reclama",
+   "disparador": "el mensaje viene de un tercero o el asegurado es responsable del daño a otro",
+   "regla": "Trasladar a la aseguradora: el perjudicado tiene acción directa (LCS art. 76) y en automóviles corre el plazo de oferta motivada.",
+   "decide": "aseguradora",
+   "ia": "Identifica quién escribe y en calidad de qué.",
+   "fuentes": [
+    "LCS-50-1980",
+    "RDLEG-8-2004"
+   ],
+   "base": "con_fuente"
+  },
+  {
+   "id": "EX-07",
+   "nombre": "Queja o reclamación dentro del mensaje",
+   "disparador": "el cliente expresa una queja sobre la correduría o la aseguradora",
+   "regla": "Separarla del siniestro y abrirla en el servicio de atención al cliente: un mes para resolver; no por teléfono.",
+   "decide": "persona",
+   "ia": "Detecta el tono de queja y la separa.",
+   "fuentes": [
+    "LEY-10-2025",
+    "RDL-3-2020"
+   ],
+   "base": "con_fuente"
+  },
+  {
+   "id": "EX-08",
+   "nombre": "El cliente pide hablar con una persona",
+   "disparador": "petición expresa de atención personal en cualquier momento",
+   "regla": "Pasar a una persona sin más preguntas; no cortar la comunicación por tiempo de espera.",
+   "decide": "persona",
+   "ia": "Detecta la petición; no la discute.",
+   "fuentes": [
+    "LEY-10-2025"
+   ],
+   "base": "con_fuente"
+  },
+  {
+   "id": "EX-09",
+   "nombre": "Indicios de fraude o datos incoherentes",
+   "disparador": "fechas imposibles, contradicciones entre documentos o con el historial",
+   "regla": "No acusar ni rechazar; marcar para revisión. La pérdida de la indemnización exige dolo o culpa grave, y eso no lo decide una máquina.",
+   "decide": "persona",
+   "ia": "Señala la incoherencia concreta, sin calificarla.",
+   "fuentes": [
+    "LCS-50-1980",
+    "INT-ATLAS"
+   ],
+   "base": "con_fuente"
+  },
+  {
+   "id": "EX-10",
+   "nombre": "Cerca de la prescripción",
+   "disparador": "han pasado más de 18 meses (daños) o 54 meses (personas) desde el siniestro",
+   "regla": "Avisar a una persona. El umbral de aviso es una propuesta, no una norma.",
+   "decide": "persona",
+   "ia": "—",
+   "fuentes": [
+    "LCS-50-1980"
+   ],
+   "base": "hipotesis"
+  },
+  {
+   "id": "EX-11",
+   "nombre": "Varias pólizas o aseguradoras para el mismo daño",
+   "disparador": "el cliente tiene más de una póliza que podría cubrir el siniestro",
+   "regla": "Pasar a un tramitador. La concurrencia de seguros (LCS art. 32) no se ha leído esta noche.",
+   "decide": "persona",
+   "ia": "Lista las pólizas candidatas.",
+   "fuentes": [
+    "LCS-50-1980"
+   ],
+   "base": "hipotesis"
+  },
+  {
+   "id": "EX-12",
+   "nombre": "Dinero que pasa por la correduría",
+   "disparador": "hay que cobrar o pagar algo por cuenta del cliente",
+   "regla": "Solo por cuentas de clientes separadas; cualquier movimiento necesita aprobación humana.",
+   "decide": "persona",
+   "ia": "—",
+   "fuentes": [
+    "RDL-3-2020",
+    "INT-DEC"
+   ],
+   "base": "con_fuente"
+  },
+  {
+   "id": "EX-13",
+   "nombre": "Faltan datos mínimos",
+   "disparador": "falta alguno de: póliza, fecha de ocurrencia, descripción, contacto",
+   "regla": "Preparar la petición de documentación; enviarla es una acción externa que aprueba una persona.",
+   "decide": "persona",
+   "ia": "Redacta la petición con la lista de lo que falta.",
+   "fuentes": [
+    "RD-287-2021",
+    "INT-DEC"
+   ],
+   "base": "con_fuente"
+  },
+  {
+   "id": "EX-14",
+   "nombre": "Hay reclamación judicial, administrativa o atestado",
+   "disparador": "el mensaje menciona denuncia, atestado, juicio, abogado o reclamación ante un organismo",
+   "regla": "Anotarlo en el libro de siniestros (art. 15 c) y pasar a una persona.",
+   "decide": "persona",
+   "ia": "Detecta la mención.",
+   "fuentes": [
+    "RD-287-2021"
+   ],
+   "base": "con_fuente"
+  },
+  {
+   "id": "EX-15",
+   "nombre": "Persona vulnerable, menor o fallecimiento",
+   "disparador": "el mensaje menciona un menor, un fallecido o una situación de especial vulnerabilidad",
+   "regla": "Pasar a una persona con prioridad; trato y documentación especiales por validar con el sector.",
+   "decide": "persona",
+   "ia": "Detecta la mención.",
+   "fuentes": [
+    "INT-ATLAS"
+   ],
+   "base": "hipotesis"
+  }
+ ],
+ "campos_libro_siniestros": [
+  {
+   "campo": "numero_siniestro_correduria",
+   "por": "numeración correlativa por series",
+   "fuente": "RD-287-2021"
+  },
+  {
+   "campo": "poliza",
+   "por": "datos de la póliza",
+   "fuente": "RD-287-2021"
+  },
+  {
+   "campo": "fecha_ocurrencia",
+   "por": "fecha de ocurrencia",
+   "fuente": "RD-287-2021"
+  },
+  {
+   "campo": "fecha_conocimiento_asegurado",
+   "por": "cómputo de los 7 días",
+   "fuente": "LCS-50-1980"
+  },
+  {
+   "campo": "fecha_declaracion",
+   "por": "fecha de declaración",
+   "fuente": "RD-287-2021"
+  },
+  {
+   "campo": "fecha_liquidacion",
+   "por": "fecha de liquidación",
+   "fuente": "RD-287-2021"
+  },
+  {
+   "campo": "reclamacion",
+   "por": "si hay reclamación judicial, administrativa, ante el defensor u otra",
+   "fuente": "RD-287-2021"
+  }
+ ],
+ "terminos": [
+  "siniestro",
+  "tomador",
+  "asegurado",
+  "beneficiario",
+  "perjudicado",
+  "comunicacion-del-siniestro",
+  "parte",
+  "importe-minimo",
+  "interes-de-demora",
+  "peritacion",
+  "salvamento",
+  "subrogacion",
+  "accion-directa",
+  "prescripcion",
+  "franquicia",
+  "riesgos-extraordinarios",
+  "recargo-ccs",
+  "carencia",
+  "oferta-motivada",
+  "baremo",
+  "declaracion-amistosa",
+  "convenio-indemnizacion-directa",
+  "cicos",
+  "tirea",
+  "sdm",
+  "libro-registro-de-siniestros",
+  "corredor",
+  "agente",
+  "cuentas-de-clientes",
+  "servicio-de-atencion-al-cliente",
+  "defensor-del-cliente",
+  "servicio-de-reclamaciones-dgsfp",
+  "atencion-personalizada",
+  "datos-de-salud",
+  "responsable-del-tratamiento"
+ ]
+}

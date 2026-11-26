@@ -27,8 +27,8 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 | [FACTURA-B2B](#factura-b2b) | Real Decreto 238/2026, factura electrónica obligatoria entre empresas | obligacion-legal | media | vigente | validated |
 | [PGC-PYMES](#pgc-pymes) | Real Decreto 1515/2007, Plan General de Contabilidad de Pymes | obligacion-legal | alta | vigente | validated |
 | [LCS-50-1980](#lcs-50-1980) | Ley 50/1980, de Contrato de Seguro | obligacion-legal | alta | vigente | validated |
-| [RDL-3-2020](#rdl-3-2020) | Real Decreto-ley 3/2020 (distribución de seguros): actualización de importes por la DGSFP | obligacion-legal | alta | vigente | validated |
-| [RD-287-2021](#rd-287-2021) | Real Decreto 287/2021: formación y libros-registro de distribuidores de seguros | obligacion-legal | alta | vigente | validated |
+| [RDL-3-2020](#rdl-3-2020) | Real Decreto-ley 3/2020, libro II: distribución de seguros y reaseguros privados | obligacion-legal | alta | vigente | validated |
+| [RD-287-2021](#rd-287-2021) | Real Decreto 287/2021, sobre formación y remisión de la información estadístico-contable de los distribuidores de seguros y reaseguros | obligacion-legal | alta | vigente | validated |
 | [CIDE-CICOS](#cide-cicos) | Convenios CIDE/ASCIDE y Centro Informático de Compensación de Siniestros (CICOS) | buena-practica | media | vigente | draft |
 | [CCS](#ccs) | Consorcio de Compensación de Seguros: riesgos extraordinarios | recomendacion-tecnica | alta | vigente | validated |
 | [CCS-MEDIADOR](#ccs-mediador) | Aprendizajes del CCS en la gestión de catástrofes | recomendacion-tecnica | alta | vigente | draft |
@@ -75,6 +75,27 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 | [TWELVE-FACTOR](#twelve-factor) | The Twelve-Factor App | buena-practica | media | vigente | validated |
 | [RIA-ART4-ALFABETIZACION](#ria-art4-alfabetizacion) | Reglamento de IA, artículo 4: alfabetización en IA | obligacion-legal | media | vigente | validated |
 | [RGPD-2016-679](#rgpd-2016-679) | Reglamento (UE) 2016/679, General de Protección de Datos | obligacion-legal | alta | vigente | validated |
+| [DGSFP-IMPORTES-2024](#dgsfp-importes-2024) | Resolución de la DGSFP de 19/04/2024: actualización de importes de capacidad financiera y RC profesional de los mediadores | obligacion-legal | alta | vigente | draft |
+| [LEY-10-2025](#ley-10-2025) | Ley 10/2025, de 26 de diciembre, por la que se regulan los servicios de atención a la clientela | obligacion-legal | alta | vigente | validated |
+| [ORDEN-ECO-734-2004](#orden-eco-734-2004) | Orden ECO/734/2004, sobre los departamentos y servicios de atención al cliente y el defensor del cliente de las entidades financieras | obligacion-legal | alta | vigente | validated |
+| [GAP-LEY10-ASEG](#gap-ley10-aseg) | Cómo afecta a las aseguradoras la Ley 10/2025 de servicios de atención a la clientela | prensa-especializada | media | vigente | draft |
+| [ADCF-MONCLOA-2026](#adcf-moncloa-2026) | Autoridad Administrativa Independiente de Defensa del Cliente Financiero: compromiso de retomar la tramitación | prensa-especializada | alta | en-tramitacion | draft |
+| [RDLEG-8-2004](#rdleg-8-2004) | Real Decreto Legislativo 8/2004, texto refundido de la Ley sobre responsabilidad civil y seguro en la circulación de vehículos a motor | obligacion-legal | alta | vigente | validated |
+| [LEY-35-2015](#ley-35-2015) | Ley 35/2015, de reforma del sistema para la valoración de los daños y perjuicios causados a las personas en accidentes de circulación | obligacion-legal | alta | vigente | draft |
+| [LEY-5-2025](#ley-5-2025) | Ley 5/2025, de 24 de julio, que modifica el texto refundido de responsabilidad civil y seguro de vehículos a motor y la Ley 20/2015 | obligacion-legal | media | vigente | draft |
+| [BAREMO-2026](#baremo-2026) | Resolución de 3 de febrero de 2026, de la DGSFP, cuantías actualizadas del baremo de tráfico | obligacion-legal | alta | vigente | validated |
+| [RDLEG-7-2004-CCS](#rdleg-7-2004-ccs) | Real Decreto Legislativo 7/2004, texto refundido del Estatuto Legal del Consorcio de Compensación de Seguros | obligacion-legal | alta | vigente | validated |
+| [RD-300-2004](#rd-300-2004) | Real Decreto 300/2004, Reglamento del seguro de riesgos extraordinarios | obligacion-legal | alta | vigente | validated |
+| [CCS-SOLICITUD](#ccs-solicitud) | CCS: solicitud de indemnización por riesgos extraordinarios | recomendacion-tecnica | alta | vigente | validated |
+| [CCS-FAQ](#ccs-faq) | CCS: preguntas frecuentes del seguro de riesgos extraordinarios | recomendacion-tecnica | alta | vigente | validated |
+| [LOSSEAR-ART99](#lossear-art99) | Ley 20/2015, de ordenación, supervisión y solvencia de las entidades aseguradoras y reaseguradoras, art. 99 | obligacion-legal | alta | vigente | draft |
+| [LOPDGDD-DA17](#lopdgdd-da17) | Ley Orgánica 3/2018 (LOPDGDD), disposición adicional decimoséptima: tratamientos de datos de salud | obligacion-legal | alta | vigente | draft |
+| [AEPD-CORREDOR-2018](#aepd-corredor-2018) | AEPD, informe 2018-0151: el corredor de seguros es responsable del tratamiento | recomendacion-tecnica | alta | vigente | validated |
+| [AEPD-INF-2026-0021](#aepd-inf-2026-0021) | AEPD, informe 2026-0021 sobre el anteproyecto de reforma de la Ley 20/2015 | recomendacion-tecnica | alta | vigente | draft |
+| [UNESPA-CONVENIO-2026](#unespa-convenio-2026) | Convenio entre entidades aseguradoras de automóviles para la indemnización directa de daños materiales a vehículos (refunde CIDE, ASCIDE y CICOS) | buena-practica | alta | vigente | validated |
+| [UNESPA-SDM](#unespa-sdm) | Reglamento articulado del Sistema Siniestros Daños Materiales (SDM) | buena-practica | alta | vigente | draft |
+| [CNMC-CIDE-2014](#cnmc-cide-2014) | CNMC, resolución de 25/09/2014, expediente S/0496/13 CIDE | recomendacion-tecnica | alta | historico | validated |
+| [DGT-MANUAL-SEGURO-2026](#dgt-manual-seguro-2026) | DGT, manual X «Seguro del automóvil» | recomendacion-tecnica | alta | vigente | draft |
 
 <a id="int-guia"></a>
 ### INT-GUIA
@@ -268,32 +289,32 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 <a id="lcs-50-1980"></a>
 ### LCS-50-1980
 - **Título:** Ley 50/1980, de Contrato de Seguro
-- **Autor u organismo:** Cortes Generales
-- **URL:** <https://www.congreso.es/constitucion/ficheros/leyes_espa/l_050_1980.pdf>
-- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** texto original de 1980; consultar el consolidado del BOE
+- **Autor u organismo:** BOE (texto consolidado)
+- **URL:** <https://www.boe.es/eli/es/l/1980/10/08/50/con>
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** consolidado, última modificación 03/10/2026 (leído el 26/11/2026)
 - **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** Coordinación sectorial y seguros
-- **Nota:** Art. 16: comunicar el siniestro en 7 días como máximo desde que se conoce, salvo plazo mayor en la póliza. Art. 18 y 20: pago e intereses de demora. Contrastado con Revista CEF.
+- **Nota:** Art. 16: comunicar el siniestro en 7 días como máximo desde que se conoce, salvo plazo mayor en la póliza; el incumplimiento solo da derecho a reclamar daños y perjuicios. Art. 17: aminorar consecuencias. Art. 18: pago del importe mínimo en 40 días desde la declaración. Art. 20: mora a los 3 meses del siniestro. Art. 21: lo que comunica el corredor en nombre del tomador vale como si lo hiciera el tomador. Art. 23: prescripción 2 años (daños) y 5 (personas). Art. 38: peritación (5, 8 y 30 días). Contrastado con Revista CEF (17/11/2026).
 
 <a id="rdl-3-2020"></a>
 ### RDL-3-2020
-- **Título:** Real Decreto-ley 3/2020 (distribución de seguros): actualización de importes por la DGSFP
+- **Título:** Real Decreto-ley 3/2020, libro II: distribución de seguros y reaseguros privados
 - **Autor u organismo:** BOE
-- **URL:** <https://BOE.ES/boe/dias/2024/04/27/pdfs/BOE-A-2024-8516.pdf>
-- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** BOE 27/04/2024
+- **URL:** <https://www.boe.es/buscar/act.php?id=BOE-A-2020-1651>
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** BOE núm. 31, 05/02/2020; leído en copia íntegra del texto original (Consellería de Facenda de Galicia), falta cotejar el consolidado
 - **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** Coordinación sectorial y seguros
-- **Nota:** Transpone la Directiva (UE) 2016/97 (IDD). Libro II, título I: distribuidores y corredores.
+- **Nota:** Transpone la Directiva (UE) 2016/97 (IDD). Art. 129.1: la distribución incluye la asistencia en caso de siniestro. Art. 136.3–4: cuentas de clientes separadas. Art. 155.1 y 155.3: el corredor asesora de forma independiente y presta asistencia y asesoramiento en caso de siniestro. Art. 157.1 f–g: capacidad financiera y RC profesional (importes actualizados en DGSFP-IMPORTES-2024). Art. 166–168: servicio de atención al cliente y defensor del cliente. Contrastado con Pérez-Llorca (2021).
 
 <a id="rd-287-2021"></a>
 ### RD-287-2021
-- **Título:** Real Decreto 287/2021: formación y libros-registro de distribuidores de seguros
+- **Título:** Real Decreto 287/2021, sobre formación y remisión de la información estadístico-contable de los distribuidores de seguros y reaseguros
 - **Autor u organismo:** BOE
-- **URL:** <https://BOE.ES/boe/dias/2021/04/21/pdfs/BOE-A-2021-6309.pdf>
-- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** BOE 21/04/2021
+- **URL:** <https://www.boe.es/boe/dias/2021/04/21/pdfs/BOE-A-2021-6309.pdf>
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** texto original, BOE 21/04/2021 (leído el 26/11/2026); falta cotejar el consolidado
 - **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** Coordinación sectorial y seguros
-- **Nota:** Obligaciones contables y de información de los corredores (art. 17–20).
+- **Nota:** Art. 7 y 11: formación (300, 200 o 150 horas; continua 25 o 15 horas al año). Art. 14: libros-registro preferentemente informáticos, a disposición de la DGSFP y con un retraso máximo de 3 meses; conservación según la legislación mercantil. Art. 15 c): libro de siniestros tramitados, anotados en cuanto el corredor los conoce, con numeración correlativa, fechas de ocurrencia, declaración y liquidación, y si hay reclamación. Art. 17–23: información estadístico-contable anual antes del 30 de abril. Contrastado con Finreg360.
 
 <a id="cide-cicos"></a>
 ### CIDE-CICOS
@@ -753,4 +774,214 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** Responsable de cumplimiento normativo
 - **Nota:** Art. 28 (encargado del tratamiento), 30 (registro de actividades), 32 (seguridad), 33 (brechas, 72 h), 35 (evaluación de impacto).
+
+<a id="dgsfp-importes-2024"></a>
+### DGSFP-IMPORTES-2024
+- **Título:** Resolución de la DGSFP de 19/04/2024: actualización de importes de capacidad financiera y RC profesional de los mediadores
+- **Autor u organismo:** BOE
+- **URL:** <https://www.boe.es/boe/dias/2024/04/27/pdfs/BOE-A-2024-8516.pdf>
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** BOE 27/04/2024; efectos desde el 09/10/2024
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** Aplica el Reglamento Delegado (UE) 2024/896. Capacidad financiera mínima 23.480 euros; RC profesional 1.564.610 euros por siniestro y 2.315.610 euros al año. Una sola lectura.
+
+<a id="ley-10-2025"></a>
+### LEY-10-2025
+- **Título:** Ley 10/2025, de 26 de diciembre, por la que se regulan los servicios de atención a la clientela
+- **Autor u organismo:** BOE
+- **URL:** <https://www.boe.es/eli/es/l/2025/12/26/10/con>
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** BOE núm. 312, 27/12/2025 (BOE-A-2025-26698); en vigor el 28/12/2025; consolidado leído el 26/11/2026
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** Coordinación sectorial y seguros
+- **Nota:** Art. 2.5: los servicios financieros se rigen por su norma sectorial y esta ley es supletoria; no se les aplican el art. 13.8 ni los art. 18, 19, 21, 22 y 23. Art. 8: atención personalizada por una persona a petición del cliente, también desde un bot. Art. 17.1: 15 días hábiles salvo plazo sectorial distinto. Disposición transitoria única: 12 meses de adaptación (hasta el 28/12/2026; el preámbulo dice 6, manda el articulado). Disposición derogatoria: art. 6 y 9–16 de la Orden ECO/734/2004. Disposición final segunda: nuevos art. 29–31 de la Ley 44/2002 (corredores y aseguradoras, un mes para resolver; DGSFP 90 días naturales). Contrastado con KPMG, Gómez-Acebo & Pombo y Comunidad de Madrid.
+
+<a id="orden-eco-734-2004"></a>
+### ORDEN-ECO-734-2004
+- **Título:** Orden ECO/734/2004, sobre los departamentos y servicios de atención al cliente y el defensor del cliente de las entidades financieras
+- **Autor u organismo:** BOE
+- **URL:** <https://www.boe.es/eli/es/o/2004/03/11/eco734/con>
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** consolidado, última actualización 27/12/2025 (BOE-A-2004-5290)
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** —
+- **Nota:** Art. 2 i): incluye a las sociedades de correduría de seguros. Los art. 6 y 9–16 (entre ellos el plazo de dos meses del art. 10) están derogados por la Ley 10/2025.
+
+<a id="gap-ley10-aseg"></a>
+### GAP-LEY10-ASEG
+- **Título:** Cómo afecta a las aseguradoras la Ley 10/2025 de servicios de atención a la clientela
+- **Autor u organismo:** Gómez-Acebo & Pombo
+- **URL:** <https://ga-p.com/publicaciones/como-afecta-a-las-aseguradoras-la-ley-10-2025-de-26-de-diciembre-por-la-que-se-regulan-los-servicios-de-atencion-a-la-clientela/>
+- **Tipo:** prensa-especializada · **Jurisdicción:** ES · **Versión o fecha:** 29/01/2026
+- **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** Fuente secundaria. Confirma los doce meses de adaptación.
+
+<a id="adcf-moncloa-2026"></a>
+### ADCF-MONCLOA-2026
+- **Título:** Autoridad Administrativa Independiente de Defensa del Cliente Financiero: compromiso de retomar la tramitación
+- **Autor u organismo:** La Moncloa (nota de prensa)
+- **URL:** <https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/economia-comercio-empresa/paginas/2026/240726-autoridad-deensa-cliente-financiero.aspx>
+- **Tipo:** prensa-especializada · **Jurisdicción:** ES · **Versión o fecha:** 24/07/2026
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** en-tramitacion · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** La autoridad no está creada; mientras tanto reclama la DGSFP (art. 30 de la Ley 44/2002). Sin comprobar avances después de julio de 2026.
+
+<a id="rdleg-8-2004"></a>
+### RDLEG-8-2004
+- **Título:** Real Decreto Legislativo 8/2004, texto refundido de la Ley sobre responsabilidad civil y seguro en la circulación de vehículos a motor
+- **Autor u organismo:** BOE
+- **URL:** <https://www.boe.es/eli/es/rdlg/2004/10/29/8/con>
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** consolidado, última actualización 18/02/2026 (BOE-A-2004-18911)
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** Coordinación sectorial y seguros
+- **Nota:** Art. 7.2: oferta motivada o respuesta motivada en 3 meses desde la reclamación del perjudicado. Título IV y anexo: sistema de valoración (baremo), introducido por la Ley 35/2015. Art. 49: actualización anual. El texto sin /con es el original de 2004: no usarlo.
+
+<a id="ley-35-2015"></a>
+### LEY-35-2015
+- **Título:** Ley 35/2015, de reforma del sistema para la valoración de los daños y perjuicios causados a las personas en accidentes de circulación
+- **Autor u organismo:** BOE
+- **URL:** <https://www.boe.es/eli/es/l/2015/09/22/35>
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** BOE 23/09/2015 (BOE-A-2015-10197)
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** Modifica el RDLeg 8/2004; no se pudo leer el texto esta noche. Usar el consolidado de RDLEG-8-2004.
+
+<a id="ley-5-2025"></a>
+### LEY-5-2025
+- **Título:** Ley 5/2025, de 24 de julio, que modifica el texto refundido de responsabilidad civil y seguro de vehículos a motor y la Ley 20/2015
+- **Autor u organismo:** ICAM y Congreso (resumen y comparativo)
+- **URL:** <https://web.icam.es/ley-5-2025-de-24-de-julio-por-la-que-se-modifican-el-texto-refundido-de-la-ley-sobre-responsabilidad-civil-y-seguro-en-la-circulacion-de-vehiculos-a-motor-aprobado-por-el-real-decreto-legislativo-8/>
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** BOE 25/07/2025 (BOE-A-2025-15424); en vigor 26/07/2025
+- **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** Actualiza el baremo con el IPC y reforma el art. 7 (la reclamación no tiene que ir cuantificada; la oferta incluye el informe médico definitivo). No se pudo abrir el BOE: falta leerlo.
+
+<a id="baremo-2026"></a>
+### BAREMO-2026
+- **Título:** Resolución de 3 de febrero de 2026, de la DGSFP, cuantías actualizadas del baremo de tráfico
+- **Autor u organismo:** BOE
+- **URL:** <https://www.boe.es/boe/dias/2026/02/18/pdfs/BOE-A-2026-3803.pdf>
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** BOE 18/02/2026 (BOE-A-2026-3803); efecto 01/01/2026
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** Coordinación sectorial y seguros
+- **Nota:** Actualización del 2,9 % (IPC de 2025). Las tablas no van en el BOE: se publican en la web de la DGSFP. Contrastado con Sepin (09/03/2026).
+
+<a id="rdleg-7-2004-ccs"></a>
+### RDLEG-7-2004-CCS
+- **Título:** Real Decreto Legislativo 7/2004, texto refundido del Estatuto Legal del Consorcio de Compensación de Seguros
+- **Autor u organismo:** BOE
+- **URL:** <https://www.boe.es/buscar/pdf/2004/BOE-A-2004-18910-consolidado.pdf>
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** consolidado, última modificación 07/05/2020
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** —
+- **Nota:** Art. 6: riesgos extraordinarios en España. Art. 8: el CCS paga si se pagó el recargo y el riesgo no está cubierto por otra póliza o la aseguradora no puede pagar. Contrastado con Consumo Responde.
+
+<a id="rd-300-2004"></a>
+### RD-300-2004
+- **Título:** Real Decreto 300/2004, Reglamento del seguro de riesgos extraordinarios
+- **Autor u organismo:** BOE
+- **URL:** <https://www.boe.es/buscar/pdf/2004/BOE-A-2004-3373-consolidado.pdf>
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** consolidado, última actualización 02/12/2015
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** Coordinación sectorial y seguros
+- **Nota:** Art. 1.1: fenómenos de la naturaleza (terremoto y maremoto, inundación extraordinaria, erupción volcánica, tempestad ciclónica atípica con vientos de más de 120 km/h, caída de cuerpos siderales), terrorismo y alteraciones del orden, y actuaciones de las Fuerzas Armadas o de Seguridad en tiempo de paz. Art. 8.1: carencia de 7 días en fenómenos de la naturaleza, salvo daños personales.
+
+<a id="ccs-solicitud"></a>
+### CCS-SOLICITUD
+- **Título:** CCS: solicitud de indemnización por riesgos extraordinarios
+- **Autor u organismo:** Consorcio de Compensación de Seguros
+- **URL:** <https://www.consorseguros.es/ambitos-de-actividad/seguros-de-riesgos-extraordinarios/solicitud-de-indemnizacion>
+- **Tipo:** recomendacion-tecnica · **Jurisdicción:** ES · **Versión o fecha:** consultado 26/11/2026
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** Coordinación sectorial y seguros
+- **Nota:** Teléfono 900 222 665 o formulario web. Daños materiales: asegurado, tomador, beneficiario o sus representantes; daños personales: también la aseguradora o el mediador. Pago solo por transferencia al beneficiario. Contrastado con La Moncloa (22/10/2026).
+
+<a id="ccs-faq"></a>
+### CCS-FAQ
+- **Título:** CCS: preguntas frecuentes del seguro de riesgos extraordinarios
+- **Autor u organismo:** Consorcio de Compensación de Seguros
+- **URL:** <https://www.consorseguros.es/preguntas-frecuentes/seguros-de-riesgos-extraodinarios>
+- **Tipo:** recomendacion-tecnica · **Jurisdicción:** ES · **Versión o fecha:** consultado 26/11/2026
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** —
+- **Nota:** Franquicia del 7 % de los daños indemnizables en bienes; no se aplica a vehículos con póliza de automóviles, viviendas ni comunidades de propietarios de viviendas. Desde julio de 2016 las pólizas de automóvil solo de RC también llevan recargo. Contrastado con el condicionado de Chubb.
+
+<a id="lossear-art99"></a>
+### LOSSEAR-ART99
+- **Título:** Ley 20/2015, de ordenación, supervisión y solvencia de las entidades aseguradoras y reaseguradoras, art. 99
+- **Autor u organismo:** BOE
+- **URL:** <https://www.boe.es/eli/es/l/2015/07/14/20/con>
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** consolidado (fecha no visible; leído el 26/11/2026)
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** Coordinación sectorial y seguros
+- **Nota:** Art. 99.2: las aseguradoras pueden tratar datos de salud sin consentimiento para determinar la asistencia sanitaria y la indemnización que deban pagar, informando al interesado. Habilita a las aseguradoras, no a los mediadores. Una sola lectura del BOE.
+
+<a id="lopdgdd-da17"></a>
+### LOPDGDD-DA17
+- **Título:** Ley Orgánica 3/2018 (LOPDGDD), disposición adicional decimoséptima: tratamientos de datos de salud
+- **Autor u organismo:** BOE
+- **URL:** <https://www.boe.es/eli/es/lo/2018/12/05/3/con>
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** consolidado (BOE-A-2018-16673)
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** Los tratamientos de datos de salud regulados en las leyes que enumera, entre ellas la Ley 20/2015, se amparan en el art. 9.2 g), h), i) y j) del RGPD. Falta leer el texto en el BOE.
+
+<a id="aepd-corredor-2018"></a>
+### AEPD-CORREDOR-2018
+- **Título:** AEPD, informe 2018-0151: el corredor de seguros es responsable del tratamiento
+- **Autor u organismo:** AEPD
+- **URL:** <https://www.aepd.es/documento/2018-0151.pdf>
+- **Tipo:** recomendacion-tecnica · **Jurisdicción:** ES · **Versión o fecha:** 2018
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** —
+- **Nota:** Base en el art. 6.1 b) y c) del RGPD. No trata datos de salud. Coincide con el informe 2017-0232 de la AEPD sobre el anteproyecto de distribución.
+
+<a id="aepd-inf-2026-0021"></a>
+### AEPD-INF-2026-0021
+- **Título:** AEPD, informe 2026-0021 sobre el anteproyecto de reforma de la Ley 20/2015
+- **Autor u organismo:** AEPD
+- **URL:** <https://www.aepd.es/documento/2026-0021.pdf>
+- **Tipo:** recomendacion-tecnica · **Jurisdicción:** ES · **Versión o fecha:** 2026 (sin fecha en el texto)
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** Señala que el art. 99 no fija una base del art. 6 del RGPD y propone revisar los art. 99, 100 y 130. Anteproyecto, no norma.
+
+<a id="unespa-convenio-2026"></a>
+### UNESPA-CONVENIO-2026
+- **Título:** Convenio entre entidades aseguradoras de automóviles para la indemnización directa de daños materiales a vehículos (refunde CIDE, ASCIDE y CICOS)
+- **Autor u organismo:** UNESPA
+- **URL:** <https://www.unespa.es/main-files/uploads/2026/10/2026-CONVENIO-INDEMNIZACION-DIRECTA-DANOS-MATERIALES-A-VEHICULOS_Abril_2026_def.pdf>
+- **Tipo:** buena-practica · **Jurisdicción:** ES · **Versión o fecha:** abril de 2026; fecha de entrada en vigor no indicada
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** Coordinación sectorial y seguros
+- **Nota:** Colisión directa entre dos vehículos con seguro obligatorio, solo daños materiales al vehículo. Art. 6: la responsabilidad se fija con la declaración amistosa o, sin ella, con las declaraciones de los asegurados. TIREA gestiona CICOS (art. 22). Tiene su base en el art. 8 del RDLeg 8/2004. Contrastado con la CNMC (2014) y el manual de la DGT (2026).
+
+<a id="unespa-sdm"></a>
+### UNESPA-SDM
+- **Título:** Reglamento articulado del Sistema Siniestros Daños Materiales (SDM)
+- **Autor u organismo:** UNESPA
+- **URL:** <https://www.unespa.es/main-files/uploads/2017/05/reglamento-SDM.pdf>
+- **Tipo:** buena-practica · **Jurisdicción:** ES · **Versión o fecha:** 01/01/2014
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** Cubre lo que no va por el convenio de indemnización directa: más de dos vehículos, sin colisión directa, cargas desprendidas, daños a otros bienes. Sin comprobar si sigue vigente en 2026.
+
+<a id="cnmc-cide-2014"></a>
+### CNMC-CIDE-2014
+- **Título:** CNMC, resolución de 25/09/2014, expediente S/0496/13 CIDE
+- **Autor u organismo:** CNMC
+- **URL:** <https://www.cnmc.es/sites/default/files/501990_0.pdf>
+- **Tipo:** recomendacion-tecnica · **Jurisdicción:** ES · **Versión o fecha:** 25/09/2014
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** historico · **Estado:** validated
+- **Especialistas relacionados:** —
+- **Nota:** Historia: CIDE (1988), ASCIDE (1990, sin declaración amistosa o defectuosa), CICOS (1993, gestionado por TIREA desde 1998).
+
+<a id="dgt-manual-seguro-2026"></a>
+### DGT-MANUAL-SEGURO-2026
+- **Título:** DGT, manual X «Seguro del automóvil»
+- **Autor u organismo:** DGT
+- **URL:** <https://sede.dgt.gob.es/export/sites/dgt/.galleries/permisos-de-conducir/certificacion-aptitud-profesores-formacion-vial/2026/MANUAL-X-Seguro-del-automovil.pdf>
+- **Tipo:** recomendacion-tecnica · **Jurisdicción:** ES · **Versión o fecha:** 2026
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** El asegurador facilita ejemplares de la declaración amistosa y debe adherirse a los convenios de indemnización directa. Material formativo, no norma.
 

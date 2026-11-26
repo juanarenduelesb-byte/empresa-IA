@@ -8,7 +8,7 @@ version: "vivo"
 autoridad: "alta"
 vigencia: "vigente"
 estado: "validated"
-citada: 1
+citada: 3
 tags:
   - "fuente"
   - "vigencia/vigente"
@@ -22,3 +22,5 @@ tags:
 ## Citada en
 
 - [[knowledge/direccion/decisiones-seguimiento|Responsable de decisiones y seguimiento]]
+- [[knowledge/sectores/seguros/README|Paquete de dominio · seguros y corredurías]]
+- [[knowledge/sectores/seguros/excepciones|Catálogo de excepciones al abrir un siniestro]]

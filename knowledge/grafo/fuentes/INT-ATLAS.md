@@ -8,7 +8,7 @@ version: "v1.1"
 autoridad: "alta"
 vigencia: "vigente"
 estado: "validated"
-citada: 12
+citada: 14
 tags:
   - "fuente"
   - "vigencia/vigente"
@@ -34,3 +34,5 @@ tags:
 - [[knowledge/procesos/implantacion-clientes|Responsable de implantación de clientes]]
 - [[knowledge/procesos/metricas|Especialista en métricas]]
 - [[knowledge/sectores/especialista-sectorial|Coordinación sectorial y seguros]]
+- [[knowledge/sectores/seguros/README|Paquete de dominio · seguros y corredurías]]
+- [[knowledge/sectores/seguros/excepciones|Catálogo de excepciones al abrir un siniestro]]

@@ -8,7 +8,7 @@ version: "sin fecha visible"
 autoridad: "media"
 vigencia: "vigente"
 estado: "draft"
-citada: 15
+citada: 14
 tags:
   - "fuente"
   - "vigencia/vigente"
@@ -36,4 +36,3 @@ tags:
 - [[precedents/oficina/encargos/2026-11/2026-11-17-guiones-de-diagnostico-de-apertura-de-siniestros-a-mwles|Guiones de diagnóstico de apertura de siniestros (Atalaya)]]
 - [[precedents/oficina/encargos/2026-11/2026-11-17-linea-base-y-fichas-de-metricas-atalaya-23vgx|Línea base y fichas de métricas · Atalaya]]
 - [[precedents/oficina/encargos/2026-11/2026-11-17-mapa-de-obligaciones-rgpd-ia-y-corredor-atalaya-bh693|Mapa de obligaciones RGPD, IA y corredor · Atalaya]]
-- [[processes/referencia-seguros-apertura-siniestros/README|Seguros · Apertura de siniestros en corredurías (proceso de referencia)]]

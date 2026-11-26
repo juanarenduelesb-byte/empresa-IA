@@ -5,8 +5,8 @@ Cómo está conectado el cerebro de Varios: qué sostiene todo, qué temas forma
 
 ## Resumen
 
-- 5085 nodos: seccion 4363, documento 383, fuente 121, habilidad 65, proceso 38, especialista 34, agente 34, decision 28, puerta 12, departamento 7.
-- 7177 relaciones: 63 % EXTRACTADAS (escritas en la fuente), 37 % INFERIDAS (temas compartidos, con puntuación) y 39 AMBIGUAS (para revisar).
+- 5086 nodos: seccion 4364, documento 383, fuente 121, habilidad 65, proceso 38, especialista 34, agente 34, decision 28, puerta 12, departamento 7.
+- 7176 relaciones: 63 % EXTRACTADAS (escritas en la fuente), 37 % INFERIDAS (temas compartidos, con puntuación) y 39 AMBIGUAS (para revisar).
 - 13 comunidades de temas.
 
 ## Nodos centrales
@@ -104,7 +104,7 @@ Cohesión 0.19 · 15 nodos: Ingeniero de plataforma y operaciones (DevOps/SRE); 
 
 ### 11 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Conversaciones con IA y evaluación
 
-Cohesión 0.47 · 13 nodos: Acta de protección de la IA y examen de 50 casos; L2 (puerta técnica); Conversaciones con IA y evaluación; Reunión: IA y evaluación y Seguridad; Conversaciones con CEO digital; Conversaciones con Registro de decisiones; Conversaciones con Plan y seguimiento; Conversaciones con Bibliotecario (y 5 más)
+Cohesión 0.47 · 13 nodos: Acta de protección de la IA y examen de 50 casos; L2 (puerta técnica); Conversaciones con IA y evaluación; Reunión: IA y evaluación y Seguridad; Conversaciones con CEO digital; Conversaciones con Plan y seguimiento; Conversaciones con Registro de decisiones; Conversaciones con Bibliotecario (y 5 más)
 
 ### 12 · knowledge/estudios · Estudios y Integraciones
 

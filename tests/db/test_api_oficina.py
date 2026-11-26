@@ -216,3 +216,31 @@ def test_idempotencia(api, gente):
     assert t1["id"] == t2["id"]
     acciones = [e["accion"] for e in api.get(f"/encargos/{enc['id']}/auditoria", headers=h(autor)).json()]
     assert acciones == ["alta", "mover", "mover", "tarea_alta"]
+
+
+def test_la_clave_de_idempotencia_es_de_cada_encargo(api, gente):
+    autor = gente["autor"]
+    a, b = _nuevo(api, autor), _nuevo(api, autor)
+    cuerpo = {"a": "EN_CLASIFICACION", "motivo": "Clasificar", "clave_idempotencia": "misma-clave"}
+    assert api.post(f"/encargos/{a['id']}/estado", json=cuerpo, headers=h(autor)).json()["estado"] == "EN_CLASIFICACION"
+    assert api.post(f"/encargos/{b['id']}/estado", json=cuerpo, headers=h(autor)).json()["estado"] == "EN_CLASIFICACION"
+
+
+def test_dos_decisiones_a_la_vez_solo_cuenta_una(api, gente):
+    from concurrent.futures import ThreadPoolExecutor
+
+    autor, ap1, ap2 = gente["autor"], gente["aprobador"], gente["aprobador2"]
+    enc = _nuevo(api, autor)
+    _hasta_qa(api, autor, enc["id"])
+    ap = api.post(f"/encargos/{enc['id']}/aprobaciones", json={}, headers=h(autor)).json()
+
+    def decidir(quien, decision):
+        return api.post(f"/aprobaciones/{ap['id']}/decision", json={"decision": decision, "motivo": "a la vez"},
+                        headers=h(quien)).status_code
+
+    with ThreadPoolExecutor(2) as ex:
+        codigos = sorted(ex.map(lambda x: decidir(*x), [(ap1, "aprobada"), (ap2, "rechazada")]))
+    assert codigos == [200, 403]
+    decididas = [e for e in api.get(f"/encargos/{enc['id']}/auditoria", headers=h(autor)).json()
+                 if e["accion"] == "aprobacion_decidida"]
+    assert len(decididas) == 1

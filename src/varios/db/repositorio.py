@@ -45,10 +45,11 @@ class Repositorio:
         self.registrar("alta", f"solicitud:{sol.id}", None, sol.estado, "Alta de la solicitud", solicitud=str(sol.id))
         return sol
 
-    def solicitud(self, solicitud_id: uuid.UUID) -> Solicitud:
-        sol = self.sesion.scalar(
-            select(Solicitud).where(Solicitud.id == solicitud_id, Solicitud.cliente_id == self.cliente_id)
-        )
+    def solicitud(self, solicitud_id: uuid.UUID, bloquear: bool = False) -> Solicitud:
+        """Con `bloquear`, la fila queda reservada hasta el final de la transacción (SELECT … FOR UPDATE):
+        dos cambios a la vez sobre el mismo encargo se aplican uno detrás de otro, no a la vez."""
+        q = select(Solicitud).where(Solicitud.id == solicitud_id, Solicitud.cliente_id == self.cliente_id)
+        sol = self.sesion.scalar(q.with_for_update() if bloquear else q)
         if sol is None:
             raise NoEncontrado(str(solicitud_id))
         return sol
@@ -58,11 +59,13 @@ class Repositorio:
         return list(self.sesion.scalars(consulta))
 
     # --- encargo: cambios de estado -------------------------------------------------
-    def _ya_aplicada(self, clave: str | None) -> bool:
+    def _ya_aplicada(self, clave: str | None, solicitud_id: uuid.UUID) -> bool:
+        """La clave vale para un encargo: la misma clave en otro encargo no lo deja sin aplicar."""
         if not clave:
             return False
         q = select(EventoAuditoria.id).where(EventoAuditoria.cliente_id == self.cliente_id,
-                                             EventoAuditoria.clave_idempotencia == clave)
+                                             EventoAuditoria.clave_idempotencia == clave,
+                                             EventoAuditoria.datos["solicitud"].as_string() == str(solicitud_id))
         return self.sesion.scalar(q) is not None
 
     def _cambiar(self, sol: Solicitud, a: str, motivo: str, clave: str | None = None, **datos: object) -> None:
@@ -77,8 +80,8 @@ class Repositorio:
 
     def mover_solicitud(self, solicitud_id: uuid.UUID, a: str, motivo: str, clave: str | None = None) -> Solicitud:
         """Cambio de estado según encargo.json. Toda transición lleva motivo y deja evento de auditoría."""
-        sol = self.solicitud(solicitud_id)
-        if self._ya_aplicada(clave):
+        sol = self.solicitud(solicitud_id, bloquear=True)
+        if self._ya_aplicada(clave, sol.id):
             return sol
         if not motivo.strip():
             raise TransicionInvalida("Toda transición necesita motivo")
@@ -116,7 +119,7 @@ class Repositorio:
     # --- aprobaciones (P10) --------------------------------------------------------------
     def pedir_aprobacion(self, solicitud_id: uuid.UUID, objeto: str, motivo: str) -> Aprobacion:
         """Pide la aprobación de la versión actual y pasa el encargo de EN_QA a PENDIENTE_APROBACION."""
-        sol = self.solicitud(solicitud_id)
+        sol = self.solicitud(solicitud_id, bloquear=True)
         ap = Aprobacion(cliente_id=self.cliente_id, solicitud_id=sol.id, objeto=objeto, version=sol.version,
                         solicitada_por=self.quien.usuario)
         self.sesion.add(ap)
@@ -141,7 +144,8 @@ class Repositorio:
     def decidir_aprobacion(self, aprobacion_id: uuid.UUID, aprobada: bool, motivo: str) -> Aprobacion:
         """Aprobar o rechazar. Reglas de P10 y de motor.aprobar, en código y no en el modelo."""
         ap = self.aprobacion(aprobacion_id)
-        sol = self.solicitud(ap.solicitud_id)
+        sol = self.solicitud(ap.solicitud_id, bloquear=True)
+        self.sesion.refresh(ap, with_for_update=True)  # nadie más la decide a la vez
         if ap.decision != "pendiente":
             raise AprobacionInvalida("Esta aprobación ya está decidida")
         if not self.quien.persona:

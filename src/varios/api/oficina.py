@@ -82,7 +82,9 @@ def errores_de_dominio(app) -> None:
     """Traduce las reglas del repositorio a HTTP. La transacción ya se ha deshecho al llegar aquí."""
     from fastapi.responses import JSONResponse
 
-    codigos = {NoEncontrado: 404, AprobacionInvalida: 403, TransicionInvalida: 409, ValueError: 422}
+    # Solo errores del dominio, con mensajes escritos por nosotros. Un ValueError cualquiera no se traduce: su texto
+    # podría enseñar detalles internos (hoja de FastAPI de OWASP). La validación de entrada la hace Pydantic (422).
+    codigos = {NoEncontrado: 404, AprobacionInvalida: 403, TransicionInvalida: 409}
     for clase, codigo in codigos.items():
         def manejar(_peticion, exc, codigo=codigo, clase=clase):
             detalle = "No encontrado" if clase is NoEncontrado else str(exc)

@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 2
-miembros: 94
+miembros: 93
 cohesion: 0.1
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 2 · claude/habilidades · Habilidades de los agentes y Administración
 
-94 nodos agrupados por el algoritmo de Louvain. Cohesión 0.1.
+93 nodos agrupados por el algoritmo de Louvain. Cohesión 0.1.
 
 ## Documentos
 
@@ -51,10 +51,10 @@ tags:
 - [[knowledge/agentes/ind|Experto en industria]]
 - [[claude/habilidades/acta-reunion|Acta de reunión]]
 - [[claude/habilidades/mapa-obligaciones|Mapa de obligaciones]]
+- [[claude/habilidades/marca-varios|Voz y formato de Varios]]
 - [[claude/habilidades/claves-sector|Claves del sector para un encargo]]
 - [[claude/habilidades/contraste-fuentes|Contraste de fuentes]]
 - [[claude/habilidades/revision-entregable|Revisión de un entregable]]
-- [[claude/habilidades/marca-varios|Voz y formato de Varios]]
 - [[claude/habilidades/business-case|Caso de negocio]]
 - [[claude/habilidades/glosario-sector|Glosario del sector]]
 - [[claude/habilidades/plan-con-criterio|Plan con responsables y criterio]]
@@ -73,4 +73,4 @@ tags:
 - [[claude/habilidades/propuesta-diagnostico|Propuesta de diagnóstico]]
 - [[claude/habilidades/preguntas-profesional|Preguntas para un profesional externo]]
 - [[claude/habilidades/matriz-ia-regla-persona|Matriz IA · regla · persona]]
-- … y 34 más
+- … y 33 más

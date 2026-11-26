@@ -1,28 +1,27 @@
 ---
 tipo: "mapa"
 comunidad: 3
-miembros: 81
-cohesion: 0.09
+miembros: 89
+cohesion: 0.08
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 3 · docs · Registro de decisiones y Varios · empresa-ia
+# Comunidad 3 · docs · Registro de decisiones y Trabajo nocturno de Claude
 
-81 nodos agrupados por el algoritmo de Louvain. Cohesión 0.09.
+89 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
 
 ## Documentos
 
 - [[DECISIONS|Registro de decisiones]]
-- [[CLAUDE|Varios · empresa-ia]]
 - [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]]
 - [[docs/fuentes/Atlas_Evolucion_v1.1_Modelo_Operativo_Procesos_y_Despliegue|Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue]]
 - [[docs/informes/2026-11-26|Informe de la mañana · 26/11/2026]]
 - [[docs/17-cerebro-y-procesos|17 · Cerebro, conocimiento y procesos: auditoría e informe]]
-- [[docs/10-plan-12-semanas|Plan de construcción · 18/11/2026 → 12/02/2027]]
 - [[docs/23-plan-maestro|Plan maestro: la empresa completa, sin que se escape nada]]
-- [[README|Varios — repositorio maestro]]
+- [[docs/10-plan-12-semanas|Plan de construcción · 18/11/2026 → 12/02/2027]]
 - [[docs/22-plan-hasta-febrero|Plan de trabajo diario · 26/11/2026 → 28/02/2027]]
+- [[README|Varios — repositorio maestro]]
 - [[governance/legal/borradores/05-matriz-aprobaciones|Matriz de aprobaciones · BORRADOR]]
 - [[knowledge/plantillas/entregables/README|Plantillas de entregables al cliente (E1)]]
 - [[knowledge/plantillas/entregables/rubrica|Rúbrica de calidad de entregables y listas de comprobación (C3)]]
@@ -32,13 +31,16 @@ tags:
 - [[knowledge/plantillas/entregables/02-informe-diagnostico|Informe de diagnóstico · (Cliente) · (Proceso)]]
 - [[docs/19-obsidian|Obsidian: el cerebro abierto en tu equipo]]
 - [[knowledge/plantillas/entregables/03-diseno-to-be|Diseño del proceso nuevo (TO-BE) · (Cliente) · (Proceso)]]
+- [[docs/09-inventario-documental|Inventario documental]]
 - [[knowledge/plantillas/entregables/04-plan-piloto|Plan de piloto · (Cliente) · (Proceso)]]
 - [[knowledge/plantillas/entregables/01-propuesta-diagnostico|Propuesta de diagnóstico · (Cliente)]]
+- [[processes/templates/proceso-cliente|<sector> · <proceso>]]
 - [[knowledge/metodologias-transversales/cuestionario-descubrimiento|Cuestionario de descubrimiento por puertas (G0–G2)]]
-- [[docs/09-inventario-documental|Inventario documental]]
 - [[knowledge/metodologias-transversales/guion-validacion-semanal|Guion de la conversación semanal de validación]]
 - [[docs/05-agentes-procesos-e-integraciones|Agentes, procesos e integraciones]]
+- [[governance/legal/borradores/04-anexo-uso-ia|Anexo de uso de inteligencia artificial · BORRADOR PARA ABOGADO]]
 - [[Inicio|Inicio · cerebro de Varios]]
+- [[docs/26-web-clientes|Web para clientes: estudio de referencias, estructura y textos (F2)]]
 - [[knowledge/glosario/README|Glosario]]
 - [[knowledge/metodologias-transversales/README|Metodologías transversales]]
 - [[knowledge/plantillas/entregables/05-informe-mensual-operacion|Informe mensual de operación · (Cliente) · (Mes)]]
@@ -54,8 +56,8 @@ tags:
 
 ## Decisiones
 
-- [[knowledge/grafo/decisiones/D-012|D-012 · Las propuestas de cambios de Claude se aceptan solas]]
 - [[knowledge/grafo/decisiones/D-019|D-019 · Calidad exigente, todo pasa por un socio y cada rechazo se rehace aprendiendo]]
+- [[knowledge/grafo/decisiones/D-012|D-012 · Las propuestas de cambios de Claude se aceptan solas]]
 - [[knowledge/grafo/decisiones/D-023|D-023 · Base de datos real: PostgreSQL con RLS, auditoría inmutable y conocimiento con citas]]
 - [[knowledge/grafo/decisiones/D-024|D-024 · Paquete de dominio de seguros con un archivo máquina como fuente de las reglas]]
 - [[knowledge/grafo/decisiones/D-025|D-025 · La oficina se organiza en siete secciones y se abre en Inicio]]
@@ -65,7 +67,7 @@ tags:
 - [[knowledge/grafo/decisiones/D-021|D-021 · El cerebro se abre en Obsidian: el repositorio es el vault]]
 - [[knowledge/grafo/decisiones/D-026|D-026 · Cada agente sirve a un proceso medido: de 34 se quedan 22]]
 - [[knowledge/grafo/decisiones/D-009|D-009 · Unificación de puertas y estados]]
-- [[knowledge/grafo/decisiones/D-006|D-006 · Primer proceso piloto]]
+- [[knowledge/grafo/decisiones/D-027|D-027 · Cada proceso tiene un nivel de autonomía A0–A4 con techo y criterio]]
 - [[knowledge/grafo/decisiones/D-010|D-010 · Diagramas como código]]
 - [[knowledge/grafo/decisiones/D-015|D-015 · Entregables en archivos reales, memoria y Google Drive en la oficina de agentes]]
 - [[knowledge/grafo/decisiones/D-004|D-004 · PostgreSQL como fuente operativa]]
@@ -81,14 +83,18 @@ tags:
 ## Fuentes
 
 - [[knowledge/grafo/fuentes/ANTHROPIC-AGENTES|ANTHROPIC-AGENTES · Building effective agents]]
+- [[knowledge/grafo/fuentes/KNIGHT-NIVELES-AUTONOMIA|KNIGHT-NIVELES-AUTONOMIA · Levels of Autonomy for AI Agents]]
 - [[knowledge/grafo/fuentes/LANGFUSE-CLOUD|LANGFUSE-CLOUD · Langfuse Cloud: planes y precios]]
 - [[knowledge/grafo/fuentes/BASECAMP-5|BASECAMP-5 · Basecamp 5: inicio orientado a la acción]]
 - [[knowledge/grafo/fuentes/LEI-VSM|LEI-VSM · Value Stream Mapping (léxico del Lean Enterprise Institute)]]
 - [[knowledge/grafo/fuentes/LINEAR-TRIAGE|LINEAR-TRIAGE · Linear: Triage e Inbox]]
 - [[knowledge/grafo/fuentes/MOM-TEST|MOM-TEST · The Mom Test (Rob Fitzpatrick): cómo hablar con clientes sin que te mientan]]
 - [[knowledge/grafo/fuentes/ZAPIER-HITL|ZAPIER-HITL · Zapier: Human in the Loop (pedir aprobación para seguir)]]
+- [[knowledge/grafo/fuentes/AEPD-GUIA-COOKIES|AEPD-GUIA-COOKIES · Guía sobre el uso de las cookies]]
 - [[knowledge/grafo/fuentes/APPLE-HIG-TAB-BARS|APPLE-HIG-TAB-BARS · Human Interface Guidelines: Tab bars]]
 - [[knowledge/grafo/fuentes/CMU-RUBRICAS|CMU-RUBRICAS · Creating and Using Rubrics]]
 - [[knowledge/grafo/fuentes/GITHUB-NOTIF-INBOX|GITHUB-NOTIF-INBOX · GitHub: gestionar notificaciones desde el inbox]]
+- [[knowledge/grafo/fuentes/LSSI-34-2002|LSSI-34-2002 · Ley 34/2002, de servicios de la sociedad de la información y de comercio electrónico (LSSI-CE)]]
 - [[knowledge/grafo/fuentes/MINTO-PIRAMIDE|MINTO-PIRAMIDE · The Pyramid Principle (Barbara Minto): la respuesta primero y la estructura situación, complicación, pregunta y respuesta]]
 - [[knowledge/grafo/fuentes/NNG-HIDDEN-NAV|NNG-HIDDEN-NAV · Hamburger Menus and Hidden Navigation Hurt UX Metrics]]
+- [[knowledge/grafo/fuentes/RIA-2024-1689|RIA-2024-1689 · Reglamento (UE) 2024/1689, de inteligencia artificial]]

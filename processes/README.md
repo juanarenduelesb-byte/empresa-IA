@@ -14,5 +14,6 @@ Hay dos tipos de proceso. No hay que confundirlos.
 - [`templates/`](templates/proceso-cliente.md): plantilla de proceso de cliente.
 - [`tests/`](tests/README.md): plan de pruebas por proceso.
 - [`runbooks/`](runbooks/README.md): qué hacer cuando algo falla.
+- [`autonomia.json`](autonomia.json): nivel de autonomía A0–A4 de cada proceso, con techo y criterio para subir y bajar ([docs/29](../docs/29-autonomia.md)).
 
 Ningún dato real de clientes en este repositorio.

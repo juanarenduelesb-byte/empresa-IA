@@ -1,0 +1,617 @@
+{
+ "estado": "propuesta (D-027)",
+ "fecha": "2026-11-26",
+ "fuente": "docs/22-plan-hasta-febrero.md (niveles A0–A4) y CLAUDE.md (aprobación humana)",
+ "regla": "Lo externo, legal, financiero y contractual nunca pasa de A2.",
+ "actual": "A0 en todos: ningún proceso funciona todavía de punta a punta (docs/23, punto 4). El objetivo de febrero es con datos inventados.",
+ "niveles": {
+  "A0": "Ayuda a una persona",
+  "A1": "Propone y una persona decide",
+  "A2": "Ejecuta con aprobación previa",
+  "A3": "Ejecuta y avisa",
+  "A4": "Autónomo con muestreo"
+ },
+ "procesos": [
+  {
+   "id": "P01",
+   "categorias": [],
+   "actual": "A0",
+   "objetivo_febrero": "A3",
+   "tope": "A4",
+   "subir": {
+    "metrica": "Peticiones registradas con el cliente sacado de la identidad (pruebas de acceso cruzado en verde)",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": ""
+  },
+  {
+   "id": "P02",
+   "categorias": [],
+   "actual": "A0",
+   "objetivo_febrero": "A1",
+   "tope": "A3",
+   "subir": {
+    "metrica": "Acierto de decisión en el banco del Control A frente al umbral que fijen los socios el 22/01/2027",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": "Las trampas (inyección, otro cliente, autoaprobación) las paran reglas fijas, no el nivel."
+  },
+  {
+   "id": "P03",
+   "categorias": [
+    "externo"
+   ],
+   "actual": "A0",
+   "objetivo_febrero": "A1",
+   "tope": "A2",
+   "subir": {
+    "metrica": "Preguntas que el solicitante entiende a la primera (sin segunda aclaración)",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": "Preguntar al solicitante es comunicarse con el cliente."
+  },
+  {
+   "id": "P04",
+   "categorias": [],
+   "actual": "A0",
+   "objetivo_febrero": "A3",
+   "tope": "A4",
+   "subir": {
+    "metrica": "Respuestas con cita que existe y consultas sin resultado",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": ""
+  },
+  {
+   "id": "P05",
+   "categorias": [],
+   "actual": "A0",
+   "objetivo_febrero": "A1",
+   "tope": "A3",
+   "subir": {
+    "metrica": "Planes aprobados sin cambios por el socio",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": ""
+  },
+  {
+   "id": "P06",
+   "categorias": [],
+   "actual": "A0",
+   "objetivo_febrero": "A2",
+   "tope": "A3",
+   "subir": {
+    "metrica": "Tareas asignadas al agente correcto a la primera y bloqueos por semana",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": ""
+  },
+  {
+   "id": "P07",
+   "categorias": [
+    "legal"
+   ],
+   "actual": "A0",
+   "objetivo_febrero": "A1",
+   "tope": "A2",
+   "subir": {
+    "metrica": "Documentos bien clasificados y cuarentenas justificadas",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": "Clasificar datos personales tiene efecto legal (RGPD)."
+  },
+  {
+   "id": "P08",
+   "categorias": [
+    "externo"
+   ],
+   "actual": "A0",
+   "objetivo_febrero": "A1",
+   "tope": "A2",
+   "subir": {
+    "metrica": "Tareas que pasan Calidad a la primera, errores por tipo y coste por tarea",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": "Puede ejecutar acciones en sistemas del cliente."
+  },
+  {
+   "id": "P09",
+   "categorias": [],
+   "actual": "A0",
+   "objetivo_febrero": "A3",
+   "tope": "A3",
+   "subir": {
+    "metrica": "Defectos que encuentran los socios después de Calidad",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": "Calidad avisa; la entrega sigue pasando por P10 (D-019)."
+  },
+  {
+   "id": "P10",
+   "categorias": [
+    "externo",
+    "legal",
+    "financiero",
+    "contractual"
+   ],
+   "actual": "A0",
+   "objetivo_febrero": "A1",
+   "tope": "A1",
+   "subir": {
+    "metrica": "Tiempo de aprobación y rechazos",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": "Es el propio control humano: nunca sube de A1."
+  },
+  {
+   "id": "P11",
+   "categorias": [
+    "externo",
+    "contractual"
+   ],
+   "actual": "A0",
+   "objetivo_febrero": "A1",
+   "tope": "A2",
+   "subir": {
+    "metrica": "Entregas aceptadas sin reabrir",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": ""
+  },
+  {
+   "id": "P12",
+   "categorias": [
+    "contractual"
+   ],
+   "actual": "A0",
+   "objetivo_febrero": "A1",
+   "tope": "A2",
+   "subir": {
+    "metrica": "Cambios no planificados",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": "Cambiar alcance o precio es contractual."
+  },
+  {
+   "id": "P13",
+   "categorias": [],
+   "actual": "A0",
+   "objetivo_febrero": "A1",
+   "tope": "A2",
+   "subir": {
+    "metrica": "Fichas en borrador con más de 30 días y lecciones que se convierten en regla con prueba",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": "Lo que entra en el conocimiento lo aprueba un socio (D-019)."
+  },
+  {
+   "id": "P14",
+   "categorias": [
+    "legal"
+   ],
+   "actual": "A0",
+   "objetivo_febrero": "A1",
+   "tope": "A2",
+   "subir": {
+    "metrica": "Pruebas de acceso cruzado en verde",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": "Los roles privilegiados los dan los socios."
+  },
+  {
+   "id": "P15",
+   "categorias": [],
+   "actual": "A0",
+   "objetivo_febrero": "A3",
+   "tope": "A4",
+   "subir": {
+    "metrica": "Tiempo de detección y alertas sin acción",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": ""
+  },
+  {
+   "id": "P16",
+   "categorias": [],
+   "actual": "A0",
+   "objetivo_febrero": "A1",
+   "tope": "A2",
+   "subir": {
+    "metrica": "Regresiones por cambio de modelo o instrucciones",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": "Cambiar de modelo lo aprueban los socios."
+  },
+  {
+   "id": "P17",
+   "categorias": [
+    "legal"
+   ],
+   "actual": "A0",
+   "objetivo_febrero": "A1",
+   "tope": "A2",
+   "subir": {
+    "metrica": "Hallazgos críticos abiertos y fecha de la última restauración probada",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": "Aceptar un riesgo lo hacen los socios."
+  },
+  {
+   "id": "P18",
+   "categorias": [],
+   "actual": "A0",
+   "objetivo_febrero": "A1",
+   "tope": "A3",
+   "subir": {
+    "metrica": "Mejoras medidas frente a mejoras hechas",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": ""
+  },
+  {
+   "id": "P19",
+   "categorias": [
+    "legal"
+   ],
+   "actual": "A0",
+   "objetivo_febrero": "A0",
+   "tope": "A2",
+   "subir": {
+    "metrica": "Encargos bloqueados por política con motivo correcto",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": "La política la escriben los socios con el abogado."
+  },
+  {
+   "id": "P20",
+   "categorias": [],
+   "actual": "A0",
+   "objetivo_febrero": "A3",
+   "tope": "A4",
+   "subir": {
+    "metrica": "Ataques de prueba que pasan (objetivo 0)",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": ""
+  },
+  {
+   "id": "P21",
+   "categorias": [
+    "externo"
+   ],
+   "actual": "A0",
+   "objetivo_febrero": "A1",
+   "tope": "A2",
+   "subir": {
+    "metrica": "Llamadas no autorizadas denegadas",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": ""
+  },
+  {
+   "id": "P22",
+   "categorias": [],
+   "actual": "A0",
+   "objetivo_febrero": "A3",
+   "tope": "A4",
+   "subir": {
+    "metrica": "Duplicados evitados y reintentos por éxito",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": "Solo errores transitorios; una acción externa no se reintenta sin su aprobación (P21)."
+  },
+  {
+   "id": "P23",
+   "categorias": [],
+   "actual": "A0",
+   "objetivo_febrero": "A2",
+   "tope": "A2",
+   "subir": {
+    "metrica": "Exactitud e invenciones frente al banco de casos",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": "Fijar el umbral lo deciden los socios."
+  },
+  {
+   "id": "P24",
+   "categorias": [
+    "legal"
+   ],
+   "actual": "A0",
+   "objetivo_febrero": "A0",
+   "tope": "A2",
+   "subir": {
+    "metrica": "Peticiones de derechos atendidas en plazo",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": ""
+  },
+  {
+   "id": "P25",
+   "categorias": [],
+   "actual": "A0",
+   "objetivo_febrero": "A1",
+   "tope": "A2",
+   "subir": {
+    "metrica": "Reversiones",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": "Las subidas nocturnas a main del repositorio de trabajo son otra cosa: decisión de Juan del 26/11."
+  },
+  {
+   "id": "P26",
+   "categorias": [],
+   "actual": "A0",
+   "objetivo_febrero": "A1",
+   "tope": "A3",
+   "subir": {
+    "metrica": "Tiempo real de restauración ensayado",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": ""
+  },
+  {
+   "id": "P27",
+   "categorias": [
+    "legal",
+    "financiero",
+    "contractual"
+   ],
+   "actual": "A0",
+   "objetivo_febrero": "A0",
+   "tope": "A2",
+   "subir": {
+    "metrica": "Proveedores sin ficha (objetivo 0)",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": ""
+  },
+  {
+   "id": "P28",
+   "categorias": [
+    "externo",
+    "legal"
+   ],
+   "actual": "A0",
+   "objetivo_febrero": "A0",
+   "tope": "A2",
+   "subir": {
+    "metrica": "Tiempo de contención",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": "Notificar a la AEPD o al cliente es externo y legal."
+  },
+  {
+   "id": "P29",
+   "categorias": [
+    "financiero"
+   ],
+   "actual": "A0",
+   "objetivo_febrero": "A1",
+   "tope": "A2",
+   "subir": {
+    "metrica": "Coste por caso frente al presupuesto",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": ""
+  },
+  {
+   "id": "P30",
+   "categorias": [
+    "legal"
+   ],
+   "actual": "A0",
+   "objetivo_febrero": "A1",
+   "tope": "A2",
+   "subir": {
+    "metrica": "Secretos sin rotar",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": ""
+  },
+  {
+   "id": "P31",
+   "categorias": [
+    "contractual"
+   ],
+   "actual": "A0",
+   "objetivo_febrero": "A0",
+   "tope": "A2",
+   "subir": {
+    "metrica": "Oportunidades que pasan G0",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": "Seguir o no con una oportunidad lo deciden los socios."
+  },
+  {
+   "id": "P32",
+   "categorias": [
+    "externo"
+   ],
+   "actual": "A0",
+   "objetivo_febrero": "A0",
+   "tope": "A2",
+   "subir": {
+    "metrica": "Variantes y excepciones descubiertas que el cliente confirma en G1",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": "Se trabaja con personas del cliente."
+  },
+  {
+   "id": "P33",
+   "categorias": [
+    "externo",
+    "contractual"
+   ],
+   "actual": "A0",
+   "objetivo_febrero": "A0",
+   "tope": "A2",
+   "subir": {
+    "metrica": "Cambios tras la aprobación del diseño (G2)",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": ""
+  },
+  {
+   "id": "P34",
+   "categorias": [],
+   "actual": "A0",
+   "objetivo_febrero": "A1",
+   "tope": "A2",
+   "subir": {
+    "metrica": "Definiciones con pruebas",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": "Publicar una definición la aprueban los socios."
+  },
+  {
+   "id": "P35",
+   "categorias": [],
+   "actual": "A0",
+   "objetivo_febrero": "A3",
+   "tope": "A4",
+   "subir": {
+    "metrica": "Excepciones por instancia resueltas en plazo",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": ""
+  },
+  {
+   "id": "P36",
+   "categorias": [
+    "externo"
+   ],
+   "actual": "A0",
+   "objetivo_febrero": "A0",
+   "tope": "A2",
+   "subir": {
+    "metrica": "Conectores degradados",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": ""
+  },
+  {
+   "id": "P37",
+   "categorias": [
+    "financiero",
+    "contractual"
+   ],
+   "actual": "A0",
+   "objetivo_febrero": "A1",
+   "tope": "A2",
+   "subir": {
+    "metrica": "Métricas con ficha completa y línea base medida",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": "El pago 50/50 del piloto depende de la métrica: es financiero."
+  },
+  {
+   "id": "P38",
+   "categorias": [
+    "externo",
+    "contractual"
+   ],
+   "actual": "A0",
+   "objetivo_febrero": "A0",
+   "tope": "A2",
+   "subir": {
+    "metrica": "Puertas pasadas a la primera",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": ""
+  },
+  {
+   "id": "REF-SIN",
+   "categorias": [
+    "externo",
+    "legal"
+   ],
+   "actual": "A0",
+   "objetivo_febrero": "A1",
+   "tope": "A2",
+   "subir": {
+    "metrica": "Acierto por campo de la extracción frente a los «hechos» de los 20 casos y acciones correctas por caso",
+    "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
+    "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
+   },
+   "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
+   "nota": "Comunicar el siniestro a la aseguradora es externo y los plazos son legales (LCS art. 16)."
+  }
+ ]
+}

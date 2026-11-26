@@ -1528,6 +1528,20 @@
    "estado": "draft",
    "consultada": "2026-11-26",
    "nota": "Distingue flujos de trabajo («LLMs and tools are orchestrated through predefined code paths») de agentes (el modelo dirige sus propios pasos) y recomienda «find the simplest solution possible, and only increasing complexity when needed». Patrones: encadenar, enrutar, paralelizar, orquestador y trabajadores, evaluador y optimizador. Tres principios: simplicidad, transparencia de la planificación y herramientas bien documentadas y probadas. Autoridad media: proveedor con interés en el tema; una sola fuente."
+  },
+  {
+   "id": "KNIGHT-NIVELES-AUTONOMIA",
+   "titulo": "Levels of Autonomy for AI Agents",
+   "organismo": "Knight First Amendment Institute, Columbia University (Kevin Feng, David McDonald y Amy Zhang)",
+   "url": "https://knightcolumbia.org/research/levels-of-autonomy-for-ai-agents",
+   "tipo": "buena-practica",
+   "jurisdiccion": "—",
+   "version": "28/07/2025 (leída el 26/11/2026); versión en arXiv 2506.12469",
+   "autoridad": "media",
+   "vigencia": "vigente",
+   "estado": "draft",
+   "consultada": "2026-11-26",
+   "nota": "Cinco niveles según el papel del usuario: operator, collaborator, consultant, approver y observer. La autonomía «can instead be a deliberate design decision», independiente de la capacidad: un agente capaz puede trabajar con poca autonomía si consulta antes de cada acción. Propone certificados de autonomía con un nivel máximo; esa parte no se ha leído literalmente. Artículo académico, una sola fuente."
   }
  ]
 }

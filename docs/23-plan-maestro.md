@@ -133,7 +133,7 @@ El marco completo ya existe en [el marco legal](fuentes/Marco_Integral_Legal_Cib
 | M-042 | Chat con el CEO: clasificar, preguntar, planificar y repartir | En el artefacto | CEO limitado de S4 con las cinco decisiones y el banco de 25 encargos | P1 | Noche (semana 4) |
 | M-043 | Agentes que colaboran: plan → tareas → agentes → calidad → aprobación | Modo «En equipo» | Sobre el motor persistente, con dependencias y reintentos | P1 | Noche (semana 5) |
 | M-044 | Bucle de mejora diaria: histórico → lecciones → reglas → pruebas | Memoria y lecciones (D-019) | Cada regla nueva entra con su prueba; puntuación del examen por semana | P1 | Noche (semanas 4 y 9) |
-| M-045 | Mapa de autonomía por proceso (A0–A4) | No existe | Nivel de cada proceso y criterio para subirlo | P1 | Noche (semana 2) |
+| M-045 | Mapa de autonomía por proceso (A0–A4) ([docs/29](29-autonomia.md), D-027 propuesta) | No existe | Nivel de cada proceso y criterio para subirlo | P1 | Noche (semana 2) |
 | M-046 | Coste de IA por encargo y por cliente, con límite | Tabla `ejecucion_modelo` creada | Panel de coste y alerta | P2 | Noche |
 | M-047 | Entrada de los socios con identidad real (no contraseñas en el artefacto) | No existe | Autenticación de S3 | P1 | Noche |
 | M-048 | Portal interno claro y bien distribuido | Oficina 3D con panel de encargos | La pantalla de inicio responde en 10 segundos a qué espera mi OK, qué está en marcha, qué se ha entregado y qué viene. Secciones para encargos, proyectos, clientes, cerebro, calendario y agentes, con la vista 3D como una vista más | P1 | Noche (F1) |

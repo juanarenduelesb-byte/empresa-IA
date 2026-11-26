@@ -121,6 +121,7 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 | [LANGFUSE-CLOUD](#langfuse-cloud) | Langfuse Cloud: planes y precios | documentacion-producto | media | vigente | draft |
 | [CMU-RUBRICAS](#cmu-rubricas) | Creating and Using Rubrics | buena-practica | alta | vigente | draft |
 | [ANTHROPIC-AGENTES](#anthropic-agentes) | Building effective agents | buena-practica | media | vigente | draft |
+| [KNIGHT-NIVELES-AUTONOMIA](#knight-niveles-autonomia) | Levels of Autonomy for AI Agents | buena-practica | media | vigente | draft |
 
 <a id="int-guia"></a>
 ### INT-GUIA
@@ -1259,4 +1260,14 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 - **Consultada:** 2026-11-26 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
 - **Nota:** Distingue flujos de trabajo («LLMs and tools are orchestrated through predefined code paths») de agentes (el modelo dirige sus propios pasos) y recomienda «find the simplest solution possible, and only increasing complexity when needed». Patrones: encadenar, enrutar, paralelizar, orquestador y trabajadores, evaluador y optimizador. Tres principios: simplicidad, transparencia de la planificación y herramientas bien documentadas y probadas. Autoridad media: proveedor con interés en el tema; una sola fuente.
+
+<a id="knight-niveles-autonomia"></a>
+### KNIGHT-NIVELES-AUTONOMIA
+- **Título:** Levels of Autonomy for AI Agents
+- **Autor u organismo:** Knight First Amendment Institute, Columbia University (Kevin Feng, David McDonald y Amy Zhang)
+- **URL:** <https://knightcolumbia.org/research/levels-of-autonomy-for-ai-agents>
+- **Tipo:** buena-practica · **Jurisdicción:** — · **Versión o fecha:** 28/07/2025 (leída el 26/11/2026); versión en arXiv 2506.12469
+- **Consultada:** 2026-11-26 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** Cinco niveles según el papel del usuario: operator, collaborator, consultant, approver y observer. La autonomía «can instead be a deliberate design decision», independiente de la capacidad: un agente capaz puede trabajar con poca autonomía si consulta antes de cada acción. Propone certificados de autonomía con un nivel máximo; esa parte no se ha leído literalmente. Artículo académico, una sola fuente.
 

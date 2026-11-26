@@ -59,6 +59,9 @@ def rel(frm, to):
     return os.path.relpath(to, os.path.dirname(frm)).replace("\\", "/")
 
 
+IDS_FUENTE = re.compile(r"(?<![\w-])(" + "|".join(sorted((re.escape(x["id"]) for x in FUENTES if "-" in x["id"]), key=len, reverse=True)) + r"|MEDDICC)(?![\w-])")
+
+
 def link_ref(frm, ref):
     """Convierte ids de fuente y de proceso en enlaces."""
     def f(m):
@@ -66,7 +69,9 @@ def link_ref(frm, ref):
         if i in FUENTE:
             return "[%s](%s#%s)" % (i, rel(frm, "knowledge/fuentes/registro.md"), i.lower())
         return i
-    ref = re.sub(r"\b(INT|UE|AEPD|NIST|ISO|OWASP|NIS2|DORA|ENS|VERIFACTU|FACTURA|PGC|LCS|RDL|RD|CIDE|CCS|BPMN|APQC|PM|MEDDICC|PG|OTEL|IETF|OSS)-[A-Z0-9-]+\b|\bMEDDICC\b", f, ref)
+    # Cualquier id del registro con guion (LEY-10-2025, DGSFP-MEDIACION…) y MEDDICC. Antes solo se enlazaban
+    # algunos prefijos y las citas como LEY-… o UNESPA-… quedaban sin enlace ni cómputo de fuente externa (K1).
+    ref = re.sub(IDS_FUENTE, f, ref)
 
     def pp(m):
         i = m.group(0)

@@ -29,8 +29,8 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 | [LCS-50-1980](#lcs-50-1980) | Ley 50/1980, de Contrato de Seguro | obligacion-legal | alta | vigente | validated |
 | [RDL-3-2020](#rdl-3-2020) | Real Decreto-ley 3/2020, libro II: distribución de seguros y reaseguros privados | obligacion-legal | alta | vigente | validated |
 | [RD-287-2021](#rd-287-2021) | Real Decreto 287/2021, sobre formación y remisión de la información estadístico-contable de los distribuidores de seguros y reaseguros | obligacion-legal | alta | vigente | validated |
-| [CIDE-CICOS](#cide-cicos) | Convenios CIDE/ASCIDE y Centro Informático de Compensación de Siniestros (CICOS) | buena-practica | media | vigente | draft |
-| [CCS](#ccs) | Consorcio de Compensación de Seguros: riesgos extraordinarios | recomendacion-tecnica | alta | vigente | validated |
+| [CIDE-CICOS](#cide-cicos) | Convenios CIDE/ASCIDE y Centro Informático de Compensación de Siniestros (CICOS) | buena-practica | media | historico | draft |
+| [CCS](#ccs) | Consorcio de Compensación de Seguros: riesgos extraordinarios | recomendacion-tecnica | alta | vigente | disputed |
 | [CCS-MEDIADOR](#ccs-mediador) | Aprendizajes del CCS en la gestión de catástrofes | recomendacion-tecnica | alta | vigente | draft |
 | [BPMN-OMG](#bpmn-omg) | BPMN 2.0.2 (ISO/IEC 19510) | estandar-voluntario | alta | vigente | validated |
 | [APQC-PCF](#apqc-pcf) | APQC Process Classification Framework, versión intersectorial | estandar-voluntario | alta | vigente | draft |
@@ -354,9 +354,9 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 - **Autor u organismo:** Fundación Mapfre (documentación)
 - **URL:** <https://documentacion.fundacionmapfre.org/documentacion/es/media/group/1066013.do>
 - **Tipo:** buena-practica · **Jurisdicción:** ES · **Versión o fecha:** sin fecha visible
-- **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
-- **Especialistas relacionados:** Coordinación sectorial y seguros
-- **Nota:** Convenios entre aseguradoras para daños materiales de automóvil. TIREA da soporte técnico. Confirmar el estado actual con TIREA o UNESPA.
+- **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** historico · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** Convenios entre aseguradoras para daños materiales de automóvil. TIREA da soporte técnico. Desde abril de 2026, CIDE y ASCIDE se refunden en el convenio de indemnización directa de UNESPA (UNESPA-CONVENIO-2026), que es la fuente oficial que hay que citar (K1, 26/11/2026).
 
 <a id="ccs"></a>
 ### CCS
@@ -364,9 +364,9 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 - **Autor u organismo:** Consumo Responde (Junta de Andalucía) y CCS
 - **URL:** <https://www.consumoresponde.es/art%C3%ADculos/el_consorcio_de_compensacion_de_seguros>
 - **Tipo:** recomendacion-tecnica · **Jurisdicción:** ES · **Versión o fecha:** consultado 17/11/2026
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
-- **Especialistas relacionados:** Coordinación sectorial y seguros
-- **Nota:** La solicitud la puede presentar el asegurado, su aseguradora o su mediador. Según el propio CCS, las declaraciones llegan mayoritariamente a través de agentes y corredores.
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** disputed
+- **Especialistas relacionados:** —
+- **Nota:** Imprecisa frente a la fuente oficial (CCS-SOLICITUD, revisada en K1 el 26/11/2026): en daños materiales presentan la solicitud el asegurado, el tomador, el beneficiario o sus representantes; en daños personales, también la aseguradora o el mediador. Decía: la solicitud la puede presentar el asegurado, su aseguradora o su mediador. Según el propio CCS, las declaraciones llegan mayoritariamente a través de agentes y corredores.
 
 <a id="ccs-mediador"></a>
 ### CCS-MEDIADOR
@@ -545,7 +545,7 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 - **Tipo:** estadistica-oficial · **Jurisdicción:** ES · **Versión o fecha:** registro a 21/11/2025
 - **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** Coordinación sectorial y seguros
-- **Nota:** 3.445 corredores inscritos en el registro de la DGSFP: 884 personas físicas y 2.561 sociedades. Cita indirecta: localizar el informe original en la web de la DGSFP.
+- **Nota:** 3.445 corredores inscritos en el registro de la DGSFP: 884 personas físicas y 2.561 sociedades. Cita indirecta y sin confirmar: el 26/11/2026 (K1) no se encontró el informe original en la web de la DGSFP. No usar la cifra con un cliente sin confirmarla.
 
 <a id="pl-ma-corredurias"></a>
 ### PL-MA-CORREDURIAS
@@ -934,7 +934,7 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 - **URL:** <https://www.consorseguros.es/preguntas-frecuentes/seguros-de-riesgos-extraodinarios>
 - **Tipo:** recomendacion-tecnica · **Jurisdicción:** ES · **Versión o fecha:** consultado 26/11/2026
 - **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
-- **Especialistas relacionados:** —
+- **Especialistas relacionados:** Coordinación sectorial y seguros
 - **Nota:** Franquicia del 7 % de los daños indemnizables en bienes; no se aplica a vehículos con póliza de automóviles, viviendas ni comunidades de propietarios de viviendas. Desde julio de 2016 las pólizas de automóvil solo de RC también llevan recargo. Contrastado con el condicionado de Chubb.
 
 <a id="lossear-art99"></a>
@@ -1124,7 +1124,7 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 - **URL:** <https://eur-lex.europa.eu/eli/reg/2022/2554/oj/spa>
 - **Tipo:** obligacion-legal · **Jurisdicción:** UE · **Versión o fecha:** DOUE L 333 de 27/12/2022; aplicable desde 17/01/2025
 - **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
-- **Especialistas relacionados:** —
+- **Especialistas relacionados:** Coordinación sectorial y seguros, Responsable de cumplimiento normativo
 - **Nota:** Art. 2.3 e): no se aplica a los intermediarios de seguros que sean micro, pequeñas o medianas empresas. Art. 2.3 b) solo excluye a las aseguradoras del art. 4 de Solvencia II: una aseguradora mediana sujeta a Solvencia II sí está sujeta a DORA. Art. 30.2: contenido mínimo de todo contrato TIC; art. 30.3: extras si sustenta funciones esenciales o importantes. Contrastado con DORA-CNMV.
 
 <a id="ley-1-2019-secretos"></a>

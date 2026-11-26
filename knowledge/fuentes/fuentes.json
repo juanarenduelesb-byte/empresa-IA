@@ -296,9 +296,9 @@
    "jurisdiccion": "ES",
    "version": "sin fecha visible",
    "autoridad": "media",
-   "vigencia": "vigente",
+   "vigencia": "historico",
    "estado": "draft",
-   "nota": "Convenios entre aseguradoras para daños materiales de automóvil. TIREA da soporte técnico. Confirmar el estado actual con TIREA o UNESPA."
+   "nota": "Convenios entre aseguradoras para daños materiales de automóvil. TIREA da soporte técnico. Desde abril de 2026, CIDE y ASCIDE se refunden en el convenio de indemnización directa de UNESPA (UNESPA-CONVENIO-2026), que es la fuente oficial que hay que citar (K1, 26/11/2026)."
   },
   {
    "id": "CCS",
@@ -310,8 +310,8 @@
    "version": "consultado 17/11/2026",
    "autoridad": "alta",
    "vigencia": "vigente",
-   "estado": "validated",
-   "nota": "La solicitud la puede presentar el asegurado, su aseguradora o su mediador. Según el propio CCS, las declaraciones llegan mayoritariamente a través de agentes y corredores."
+   "estado": "disputed",
+   "nota": "Imprecisa frente a la fuente oficial (CCS-SOLICITUD, revisada en K1 el 26/11/2026): en daños materiales presentan la solicitud el asegurado, el tomador, el beneficiario o sus representantes; en daños personales, también la aseguradora o el mediador. Decía: la solicitud la puede presentar el asegurado, su aseguradora o su mediador. Según el propio CCS, las declaraciones llegan mayoritariamente a través de agentes y corredores."
   },
   {
    "id": "CCS-MEDIADOR",
@@ -545,7 +545,7 @@
    "autoridad": "media",
    "vigencia": "vigente",
    "estado": "draft",
-   "nota": "3.445 corredores inscritos en el registro de la DGSFP: 884 personas físicas y 2.561 sociedades. Cita indirecta: localizar el informe original en la web de la DGSFP."
+   "nota": "3.445 corredores inscritos en el registro de la DGSFP: 884 personas físicas y 2.561 sociedades. Cita indirecta y sin confirmar: el 26/11/2026 (K1) no se encontró el informe original en la web de la DGSFP. No usar la cifra con un cliente sin confirmarla."
   },
   {
    "id": "PL-MA-CORREDURIAS",

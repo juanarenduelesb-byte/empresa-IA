@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 5
-miembros: 60
+miembros: 59
 cohesion: 0.15
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 5 · precedents/oficina · Propuesta de proceso de referencia: siniestros en corredurías y Conversaciones con Coordinación sectorial · Seguros
 
-60 nodos agrupados por el algoritmo de Louvain. Cohesión 0.15.
+59 nodos agrupados por el algoritmo de Louvain. Cohesión 0.15.
 
 ## Documentos
 
@@ -33,15 +33,15 @@ tags:
 - [[precedents/oficina/chats/legal-y-privacidad|Conversaciones con Legal y privacidad]]
 - [[precedents/oficina/README|Registro de la oficina de agentes]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-legal-y-privacidad-a-coordinacion-sectorial-seguros-b188o|Legal y privacidad → Coordinación sectorial · Seguros]]
-- [[precedents/oficina/conversaciones/2026-11/2026-11-17-metricas-a-coordinacion-sectorial-seguros-utv9x|Métricas → Coordinación sectorial · Seguros]]
 - [[precedents/projects/caso-correduria-atalaya/documentos/02-notas-del-proceso-actual|Notas de la sesión de arranque · proceso actual de apertura de siniestros (FICTICIO)]]
+- [[precedents/oficina/conversaciones/2026-11/2026-11-17-metricas-a-coordinacion-sectorial-seguros-utv9x|Métricas → Coordinación sectorial · Seguros]]
 - [[precedents/projects/caso-correduria-atalaya/documentos/01-ficha-del-cliente|Ficha del cliente · Atalaya Correduría de Seguros (FICTICIA)]]
 - [[precedents/oficina/proyectos/diagnostico-de-apertura-de-siniestros-atalaya-fict|Diagnóstico de apertura de siniestros · Atalaya (ficticia)]]
 - [[precedents/projects/caso-correduria-atalaya/documentos/04-sistemas-y-restricciones|Sistemas, datos y restricciones · Atalaya (FICTICIO)]]
 - [[docs/12-simulacion|Simulación del cerebro]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-datos-de-prueba-a-coordinacion-sectorial-seguros-j4rxd|Datos de prueba → Coordinación sectorial · Seguros]]
-- [[precedents/oficina/conversaciones/2026-11/2026-11-17-metricas-a-calidad-y-riesgo-7jvup|Métricas → Calidad y riesgo]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-validacion-a-coordinacion-sectorial-seguros-3yt5x|Validación → Coordinación sectorial · Seguros]]
+- [[precedents/oficina/conversaciones/2026-11/2026-11-17-metricas-a-calidad-y-riesgo-7jvup|Métricas → Calidad y riesgo]]
 - [[precedents/oficina/encargos/2026-11/2026-11-23-lee-el-plan-de-construccion-y-prepara-la-lista-de-uqvwy|Lee el plan de construcción y prepara la lista de tareas de]]
 - [[precedents/projects/caso-correduria-atalaya/README|Caso de práctica · Atalaya Correduría de Seguros (ficticia)]]
 - [[claude/habilidades/revision-riesgo-ia|Revisión de riesgo de IA y datos]]
@@ -55,7 +55,6 @@ tags:
 - [[knowledge/plantillas/ficha-kpi|KPI: <nombre>]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-ceo-digital-a-metricas-sj6cp|CEO digital → Métricas]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-metricas-a-calidad-y-riesgo-4xyvo|Métricas → Calidad y riesgo]]
-- [[web/README|Web para clientes (borrador)]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-arquitecto-de-procesos-a-calidad-y-riesgo-61ars|Arquitecto de procesos → Calidad y riesgo]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-ceo-digital-a-legal-y-privacidad-wknhu|CEO digital → Legal y privacidad]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-ceo-digital-a-arquitecto-de-procesos-oqbwj|CEO digital → Arquitecto de procesos]]

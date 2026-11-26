@@ -69,9 +69,9 @@ Todavía no hay precedentes de este tipo.
 ## 2. Conocimiento profesional
 
 ### Fundamentos y terminología
-- UNO sitúa la logística y el transporte en el 8 % del PIB (UNO-LOGISTICA, patronal).
-- En 2024 UNO citaba que solo el 9,6 % de las empresas del sector usaba IA (UNO-LOGISTICA; dato antiguo, actualizar).
-- La rentabilidad bruta del sector bajó un 2,86 % en 2025 según el Banco de España, citado por UNO (UNO-LOGISTICA).
+- UNO sitúa la logística y el transporte en el 8 % del PIB ([UNO-LOGISTICA](../fuentes/registro.md#uno-logistica), patronal).
+- En 2024 UNO citaba que solo el 9,6 % de las empresas del sector usaba IA ([UNO-LOGISTICA](../fuentes/registro.md#uno-logistica); dato antiguo, actualizar).
+- La rentabilidad bruta del sector bajó un 2,86 % en 2025 según el Banco de España, citado por UNO ([UNO-LOGISTICA](../fuentes/registro.md#uno-logistica)).
 - El transporte es sector de alta criticidad y los servicios postales y de mensajería están en el anexo II de NIS2 ([NIS2-DIRECTIVA](../fuentes/registro.md#nis2-directiva)).
 
 ### Metodologías y marcos

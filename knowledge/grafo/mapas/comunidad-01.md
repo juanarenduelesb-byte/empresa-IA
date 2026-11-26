@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 1
-miembros: 108
+miembros: 103
 cohesion: 0.05
 tags:
   - "mapa"
@@ -9,12 +9,11 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 1 · claude/habilidades · Legal y privacidad y Arquitecto de procesos
 
-108 nodos agrupados por el algoritmo de Louvain. Cohesión 0.05.
+103 nodos agrupados por el algoritmo de Louvain. Cohesión 0.05.
 
 ## Documentos
 
-- [[claude/habilidades/observabilidad|Observabilidad y alertas]]
-- [[claude/habilidades/runbook-incidente|Runbook y gestión de incidentes]]
+- [[claude/habilidades/salud-cuenta|Salud de la cuenta]]
 
 ## Agentes
 
@@ -52,6 +51,10 @@ tags:
 - [[knowledge/agentes/sal|Experto en sanidad privada]]
 - [[knowledge/agentes/ind|Experto en industria]]
 - [[knowledge/agentes/logi|Experto en logística]]
+
+## Especialistas
+
+- [[knowledge/comercial/gestion-clientes|Especialista en éxito de cliente]]
 
 ## Habilidades
 
@@ -105,14 +108,13 @@ tags:
 - [[claude/habilidades/matriz-ia-regla-persona|Matriz IA · regla · persona]]
 - [[claude/habilidades/mensaje-posicionamiento|Mensaje y posicionamiento]]
 - [[claude/habilidades/modelo-datos|Modelo de datos]]
-- [[claude/habilidades/observabilidad|Observabilidad y alertas]]
 - [[claude/habilidades/paquete-gestor|Paquete trimestral para el gestor]]
-- [[claude/habilidades/plan-exito-cliente|Plan de éxito del cliente]]
 - [[claude/habilidades/plan-semanal|Seguimiento semanal del plan]]
 - [[claude/habilidades/prevision-tesoreria|Previsión de tesorería a 13 semanas]]
 - [[claude/habilidades/propuesta-diagnostico|Propuesta de diagnóstico]]
-- [[claude/habilidades/prueba-usabilidad|Prueba de usabilidad]]
 - [[claude/habilidades/raid|Registro RAID]]
 - [[claude/habilidades/registro-tratamientos|Registro de actividades de tratamiento]]
 - [[claude/habilidades/revision-accesibilidad|Revisión de accesibilidad]]
-- … y 5 más
+- [[claude/habilidades/revision-riesgo-ia|Revisión de riesgo de IA y datos]]
+- [[claude/habilidades/salud-cuenta|Salud de la cuenta]]
+- [[claude/habilidades/sintesis-entrevistas|Síntesis de entrevistas]]

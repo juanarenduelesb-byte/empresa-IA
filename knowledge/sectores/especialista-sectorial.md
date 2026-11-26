@@ -75,11 +75,11 @@ tags:
 - El tomador comunica el siniestro en un máximo de 7 días desde que lo conoce, salvo plazo mayor en la póliza ([LCS-50-1980](../fuentes/registro.md#lcs-50-1980), art. 16).
 - Los corredores tienen obligaciones de formación, libros-registro e información; el libro de siniestros se anota en cuanto el corredor conoce el siniestro y no puede ir más de tres meses retrasado ([RD-287-2021](../fuentes/registro.md#rd-287-2021), art. 14 y 15).
 - El corredor presta asistencia y asesoramiento al cliente en caso de siniestro ([RDL-3-2020](../fuentes/registro.md#rdl-3-2020), art. 155.3), y lo que comunica en nombre del tomador vale como si lo comunicara el tomador ([LCS-50-1980](../fuentes/registro.md#lcs-50-1980), art. 21).
-- Corredores y aseguradoras resuelven quejas y reclamaciones en un mes (Ley 44/2002, art. 29, en la redacción de LEY-10-2025); adaptación hasta el 28/12/2026.
+- Corredores y aseguradoras resuelven quejas y reclamaciones en un mes (Ley 44/2002, art. 29, en la redacción de [LEY-10-2025](../fuentes/registro.md#ley-10-2025)); adaptación hasta el 28/12/2026.
 - Detalle y catálogo de excepciones: knowledge/sectores/seguros/.
-- A 21/11/2025 había 3.445 corredores inscritos en la DGSFP: 884 personas físicas y 2.561 sociedades (DGSFP-MEDIACION, cita indirecta).
-- El mercado de corredurías se consolida por escala, sucesión y requisitos regulatorios (PL-MA-CORREDURIAS): más tamaño, más procesos que ordenar.
-- Si el cliente es una aseguradora sujeta a DORA, los requisitos llegan al proveedor TIC por contrato ([DORA-CNMV](../fuentes/registro.md#dora-cnmv)).
+- A 21/11/2025 había 3.445 corredores inscritos en la DGSFP: 884 personas físicas y 2.561 sociedades ([DGSFP-MEDIACION](../fuentes/registro.md#dgsfp-mediacion), cita indirecta y sin confirmar en la DGSFP).
+- El mercado de corredurías se consolida por escala, sucesión y requisitos regulatorios ([PL-MA-CORREDURIAS](../fuentes/registro.md#pl-ma-corredurias)): más tamaño, más procesos que ordenar.
+- DORA no se aplica a los intermediarios de seguros que son micro, pequeñas o medianas empresas, pero sí a una aseguradora mediana sujeta a Solvencia II; en ese caso los requisitos llegan al proveedor TIC por contrato ([DORA-2022-2554](../fuentes/registro.md#dora-2022-2554), art. 2.3 y 30; [DORA-CNMV](../fuentes/registro.md#dora-cnmv)).
 
 ### Metodologías y marcos
 - Paquete sectorial: procesos, reglas, plantillas, conocimiento, conectores, pruebas y controles versionados ([INT-ATLAS](../fuentes/registro.md#int-atlas) §5).
@@ -99,7 +99,7 @@ tags:
 
 ### Casos y escenarios
 - Apertura de siniestros en corredurías (proceso de referencia, hipótesis).
-- Siniestro de daños materiales entre dos vehículos: posible tramitación por el convenio de indemnización directa (UNESPA-CONVENIO-2026).
+- Siniestro de daños materiales entre dos vehículos: posible tramitación por el convenio de indemnización directa ([UNESPA-CONVENIO-2026](../fuentes/registro.md#unespa-convenio-2026)).
 - Candidatos sin validar: renovaciones, solicitudes al CCS, conciliación de comisiones.
 
 ### Criterio profesional
@@ -130,9 +130,9 @@ Ver *A quién convoca* y [`knowledge/navigation.json`](../navigation.json).
 - [UNESPA-CONVENIO-2026](../fuentes/registro.md#unespa-convenio-2026) · Convenio entre entidades aseguradoras de automóviles para la indemnización directa de daños materiales a vehículos (refunde CIDE, ASCIDE y CICOS)
 - [RD-300-2004](../fuentes/registro.md#rd-300-2004) · Real Decreto 300/2004, Reglamento del seguro de riesgos extraordinarios
 - [CCS-SOLICITUD](../fuentes/registro.md#ccs-solicitud) · CCS: solicitud de indemnización por riesgos extraordinarios
+- [CCS-FAQ](../fuentes/registro.md#ccs-faq) · CCS: preguntas frecuentes del seguro de riesgos extraordinarios
 - [LOSSEAR-ART99](../fuentes/registro.md#lossear-art99) · Ley 20/2015, de ordenación, supervisión y solvencia de las entidades aseguradoras y reaseguradoras, art. 99
-- [CIDE-CICOS](../fuentes/registro.md#cide-cicos) · Convenios CIDE/ASCIDE y Centro Informático de Compensación de Siniestros (CICOS)
-- [CCS](../fuentes/registro.md#ccs) · Consorcio de Compensación de Seguros: riesgos extraordinarios
+- [DORA-2022-2554](../fuentes/registro.md#dora-2022-2554) · Reglamento (UE) 2022/2554 (DORA), resiliencia operativa digital del sector financiero
 - [DORA-CNMV](../fuentes/registro.md#dora-cnmv) · Preguntas frecuentes sobre el Reglamento (UE) 2022/2554 (DORA)
 - [DGSFP-MEDIACION](../fuentes/registro.md#dgsfp-mediacion) · Informe estadístico anual de mediación de seguros 2024
 - [PL-MA-CORREDURIAS](../fuentes/registro.md#pl-ma-corredurias) · Fusiones y adquisiciones de corredurías de seguros en España: tendencias y situación en 2025

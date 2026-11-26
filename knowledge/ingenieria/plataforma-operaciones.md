@@ -81,8 +81,8 @@ tags:
 
 ### Fundamentos y terminología
 - Métricas DORA de entrega: frecuencia de despliegue, tiempo de entrega de cambios, tasa de fallo y tiempo de recuperación ([DORA-DEVOPS](../fuentes/registro.md#dora-devops)). No confundir con el Reglamento DORA.
-- Objetivos de nivel de servicio y presupuesto de errores; postmortems sin culpables (GOOGLE-SRE).
-- Configuración en el entorno y paridad entre entornos (TWELVE-FACTOR).
+- Objetivos de nivel de servicio y presupuesto de errores; postmortems sin culpables ([GOOGLE-SRE](../fuentes/registro.md#google-sre)).
+- Configuración en el entorno y paridad entre entornos ([TWELVE-FACTOR](../fuentes/registro.md#twelve-factor)).
 - Una copia que no se ha restaurado no es una copia.
 
 ### Metodologías y marcos

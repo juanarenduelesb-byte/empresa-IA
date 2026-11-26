@@ -66,7 +66,7 @@ tags:
 
 ### Fundamentos y terminología
 - Clientes del sector público exigen conformidad ENS a sus proveedores ([ENS-RD311](../fuentes/registro.md#ens-rd311)).
-- Clientes financieros trasladan requisitos DORA a sus proveedores TIC por contrato ([DORA-CNMV](../fuentes/registro.md#dora-cnmv)).
+- Clientes financieros trasladan requisitos DORA a sus proveedores TIC por contrato ([DORA-2022-2554](../fuentes/registro.md#dora-2022-2554), art. 30; [DORA-CNMV](../fuentes/registro.md#dora-cnmv)).
 
 ### Metodologías y marcos
 - Matriz requisito-respuesta-evidencia.

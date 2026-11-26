@@ -4,7 +4,8 @@ Cada sección de nivel 2 (`## ...`) de cada ficha Markdown es una ficha de conoc
 - siempre, el propio documento del repositorio como fuente interna (`repo:<ruta>`), para saber de dónde sale;
 - además, las fuentes externas del registro (`registro.md#<id>`) que cita la sección o, si no cita ninguna,
   las del documento entero.
-El recuento `con_fuente_externa` mide cuánto del cerebro está respaldado por una fuente externa.
+El recuento `con_fuente_externa` mide cuánto del cerebro está respaldado por una fuente externa. Las fuentes
+del registro de tipo «interno» (Guía, Atlas, DECISIONS.md…) enlazan, pero no cuentan como externas (corregido en K1).
 Se puede ejecutar tantas veces como se quiera: actualiza y no duplica. Lo ejecuta el propietario (conocimiento común).
 
 Uso: VARIOS_DATABASE_URL_ADMIN=... python -m varios.db.carga_conocimiento
@@ -61,13 +62,28 @@ def fichas(raiz: Path = RAIZ) -> list[dict]:
     return salida
 
 
+def medir(raiz: Path = RAIZ, prefijo: str = "knowledge/") -> dict[str, float]:
+    """Lo mismo que cuenta la carga, sin base de datos: fichas y cuántas citan al menos una fuente externa."""
+    import sys
+
+    sys.path.insert(0, str(RAIZ / "tools"))
+    from org_data.fuentes import FUENTES
+
+    externas = {x["id"].lower() for x in FUENTES if x["tipo"] != "interno"}
+    todas = [f for f in fichas(raiz) if f["origen"].startswith(prefijo)]
+    con = sum(1 for f in todas if set(f["citas"]) & externas)
+    return {"fichas": len(todas), "con_fuente_externa": con,
+            "porcentaje": round(100 * con / len(todas), 1) if todas else 0.0}
+
+
 def cargar_conocimiento(url: str, raiz: Path = RAIZ) -> dict[str, int]:
     cargar(url)  # fuentes comunes primero (idempotente)
     cuenta = {"fichas": 0, "con_fuente_externa": 0, "citas_sin_fuente": 0}
     e = create_engine(url)
     with e.begin() as c:
-        filas = c.execute(text("SELECT codigo, id FROM fuente WHERE cliente_id IS NULL"))
+        filas = c.execute(text("SELECT codigo, id, tipo FROM fuente WHERE cliente_id IS NULL")).all()
         codigos = {r[0].lower(): r[1] for r in filas}
+        externas = {r[0].lower() for r in filas if r[2] != "interno"}
         vistos = []
         internas: dict[str, uuid.UUID] = {}
         for f in fichas(raiz):
@@ -90,7 +106,7 @@ def cargar_conocimiento(url: str, raiz: Path = RAIZ) -> dict[str, int]:
             c.execute(text("INSERT INTO ficha_fuente (ficha_id, fuente_id, cliente_id, cita) "
                            "VALUES (:f, :u, NULL, :c)"),
                       {"f": fid, "u": internas[f["origen"]], "c": f["titulo"][:300]})
-            enlazadas = 0
+            externa = False
             for cita in f["citas"]:
                 fuente = codigos.get(cita)
                 if fuente is None:
@@ -98,9 +114,9 @@ def cargar_conocimiento(url: str, raiz: Path = RAIZ) -> dict[str, int]:
                     continue
                 c.execute(text("INSERT INTO ficha_fuente (ficha_id, fuente_id, cliente_id, cita) "
                                "VALUES (:f, :u, NULL, :c)"), {"f": fid, "u": fuente, "c": f["origen"]})
-                enlazadas += 1
+                externa = externa or cita in externas
             cuenta["fichas"] += 1
-            cuenta["con_fuente_externa"] += bool(enlazadas)
+            cuenta["con_fuente_externa"] += externa
             vistos.append(str(fid))
         # Lo que ya no está en el repositorio queda obsoleto, no se borra (trazabilidad).
         c.execute(text("UPDATE ficha_conocimiento SET estado = 'deprecated' WHERE cliente_id IS NULL "

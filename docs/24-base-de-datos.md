@@ -47,6 +47,8 @@ Es idempotente. Lo que desaparece del repositorio queda como obsoleto, no se bor
 
 **Foto del 26/11/2026:** 633 fichas, todas en borrador. Solo 178 (28 %) citan una fuente externa. Ninguna está validada todavía por un socio o un profesional. Es la medida de cuánto le falta al cerebro para ser fiable, y el informe de la mañana la seguirá.
 
+**Foto del 26/11/2026 por la noche (K1):** 757 fichas; 220 (29,1 %) citan una fuente externa. **Cambio de medida:** hasta ahora contaban como externas las fuentes internas del registro (Guía, Atlas, DECISIONS.md); con el cómputo antiguo saldría un 32,8 %. El paquete de seguros: 37 de 39 fichas (94,9 %); las otras dos solo citan fuentes internas y lo dicen. Se mide sin base de datos con `varios.db.carga_conocimiento.medir()`.
+
 ## API de la oficina (N3a, D-028)
 
 Rutas en `src/varios/api/oficina.py`; pruebas en `tests/db/test_api_oficina.py`, contra PostgreSQL real.

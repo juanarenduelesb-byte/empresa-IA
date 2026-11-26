@@ -69,9 +69,9 @@ Todavía no hay precedentes de este tipo.
 ## 2. Conocimiento profesional
 
 ### Fundamentos y terminología
-- El 29,1 % de las empresas industriales de 10 o más empleados usaba IA en el primer trimestre de 2026, frente al 38,2 % de los servicios (INE-TIC-2026).
+- El 29,1 % de las empresas industriales de 10 o más empleados usaba IA en el primer trimestre de 2026, frente al 38,2 % de los servicios ([INE-TIC-2026](../fuentes/registro.md#ine-tic-2026)).
 - NIS2 incluye en el anexo II la fabricación de productos sanitarios, electrónica, maquinaria y vehículos, y alcanza a medianas empresas ([NIS2-DIRECTIVA](../fuentes/registro.md#nis2-directiva)).
-- El Reglamento de máquinas (UE) 2023/1230 incluye componentes de seguridad con IA (MAQUINARIA-2023-1230, fecha por verificar).
+- El Reglamento de máquinas (UE) 2023/1230 incluye componentes de seguridad con IA ([MAQUINARIA-2023-1230](../fuentes/registro.md#maquinaria-2023-1230), fecha por verificar).
 
 ### Metodologías y marcos
 - Integración con ERP por API o exportaciones; nada en la red de planta en el piloto.

@@ -6,23 +6,23 @@ organismo: "Fundación Mapfre (documentación)"
 fuente_tipo: "buena-practica"
 version: "sin fecha visible"
 autoridad: "media"
-vigencia: "vigente"
+vigencia: "historico"
 estado: "draft"
 citada: 14
 tags:
   - "fuente"
-  - "vigencia/vigente"
+  - "vigencia/historico"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # CIDE-CICOS · Convenios CIDE/ASCIDE y Centro Informático de Compensación de Siniestros (CICOS)
 
 - Origen: <https://documentacion.fundacionmapfre.org/documentacion/es/media/group/1066013.do>
 - Registro: [[knowledge/fuentes/registro|registro de fuentes]]
-- Nota: Convenios entre aseguradoras para daños materiales de automóvil. TIREA da soporte técnico. Confirmar el estado actual con TIREA o UNESPA.
+- Nota: Convenios entre aseguradoras para daños materiales de automóvil. TIREA da soporte técnico. Desde abril de 2026, CIDE y ASCIDE se refunden en el convenio de indemnización directa de UNESPA (UNESPA-CONVENIO-2026), que es la fuente oficial que hay que citar (K1, 26/11/2026).
 
 ## Citada en
 
-- [[knowledge/sectores/especialista-sectorial|Coordinación sectorial y seguros]]
+- [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]]
 - [[precedents/oficina/chats/coordinacion-sectorial-seguros|Conversaciones con Coordinación sectorial · Seguros]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-ceo-digital-a-coordinacion-sectorial-seguros-fws4y|CEO digital → Coordinación sectorial · Seguros]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-coordinacion-sectorial-seguros-a-calidad-y-riesgo-6aum5|Coordinación sectorial · Seguros → Calidad y riesgo]]

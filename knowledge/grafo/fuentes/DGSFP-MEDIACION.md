@@ -18,7 +18,7 @@ tags:
 
 - Origen: <https://www.once.es/grupo-social-once/oncecom/20261009/archivos/N03ninestar-es-10223403_82932.txt>
 - Registro: [[knowledge/fuentes/registro|registro de fuentes]]
-- Nota: 3.445 corredores inscritos en el registro de la DGSFP: 884 personas físicas y 2.561 sociedades. Cita indirecta: localizar el informe original en la web de la DGSFP.
+- Nota: 3.445 corredores inscritos en el registro de la DGSFP: 884 personas físicas y 2.561 sociedades. Cita indirecta y sin confirmar: el 26/11/2026 (K1) no se encontró el informe original en la web de la DGSFP. No usar la cifra con un cliente sin confirmarla.
 
 ## Citada en
 

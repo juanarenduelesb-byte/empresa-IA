@@ -71,8 +71,8 @@ Todavía no hay precedentes de este tipo.
 - Contabilidad según el PGC de Pymes ([PGC-PYMES](../fuentes/registro.md#pgc-pymes)).
 - La factura tiene un contenido mínimo obligatorio y plazos de expedición y conservación ([RD-1619-2012](../fuentes/registro.md#rd-1619-2012)).
 - Los sistemas de facturación deberán cumplir Verifactu en los plazos del RDL 15/2025; el aplazamiento a 2028 está anunciado pero sin norma ([VERIFACTU-RDL15](../fuentes/registro.md#verifactu-rdl15), [VERIFACTU-2028](../fuentes/registro.md#verifactu-2028)).
-- La factura electrónica entre empresas será obligatoria según el RD 238/2026 y el calendario de la AEAT ([FACTURA-B2B](../fuentes/registro.md#factura-b2b), AEAT-FACTURA-CAL).
-- Plazos máximos de pago entre empresas: Ley 3/2004 (LEY-MOROSIDAD-3-2004).
+- La factura electrónica entre empresas será obligatoria según el RD 238/2026 y el calendario de la AEAT ([FACTURA-B2B](../fuentes/registro.md#factura-b2b), [AEAT-FACTURA-CAL](../fuentes/registro.md#aeat-factura-cal)).
+- Plazos máximos de pago entre empresas: Ley 3/2004 ([LEY-MOROSIDAD-3-2004](../fuentes/registro.md#ley-morosidad-3-2004)).
 
 ### Metodologías y marcos
 - Cierre mensual con lista de comprobación fija.
@@ -80,7 +80,7 @@ Todavía no hay precedentes de este tipo.
 - Reconocimiento de ingresos por hito o por avance en proyectos de varias fases.
 
 ### Normativa aplicable
-- IVA (LIVA-37-1992), facturación ([RD-1619-2012](../fuentes/registro.md#rd-1619-2012)), impuesto sobre sociedades si la forma es sociedad (LIS-27-2014), Verifactu y factura electrónica.
+- IVA ([LIVA-37-1992](../fuentes/registro.md#liva-37-1992)), facturación ([RD-1619-2012](../fuentes/registro.md#rd-1619-2012)), impuesto sobre sociedades si la forma es sociedad ([LIS-27-2014](../fuentes/registro.md#lis-27-2014)), Verifactu y factura electrónica.
 
 ### Herramientas y tecnologías
 - Programa de facturación certificado (pendiente de decidir)

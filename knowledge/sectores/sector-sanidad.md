@@ -71,10 +71,10 @@ Todavía no hay precedentes de este tipo.
 ## 2. Conocimiento profesional
 
 ### Fundamentos y terminología
-- El gasto sanitario privado fue de 37.048 millones de euros en 2025, el 2,47 % del PIB y el 26,8 % del gasto sanitario total (IDIS-2026, vía prensa).
-- El sector privado tenía 431 hospitales, el 56 % del total (Observatorio IDIS 2025, citado en IDIS-2026).
+- El gasto sanitario privado fue de 37.048 millones de euros en 2025, el 2,47 % del PIB y el 26,8 % del gasto sanitario total ([IDIS-2026](../fuentes/registro.md#idis-2026), vía prensa).
+- El sector privado tenía 431 hospitales, el 56 % del total (Observatorio IDIS 2025, citado en [IDIS-2026](../fuentes/registro.md#idis-2026)).
 - Los datos de salud son categoría especial del RGPD ([INT-MARCO](../fuentes/registro.md#int-marco)).
-- El software con IA de finalidad médica puede ser producto sanitario y entra en el anexo I del Reglamento de IA, con obligaciones de alto riesgo desde el 02/08/2028 (MDR-2017-745, SANIDAD-IA-OMNIBUS).
+- El software con IA de finalidad médica puede ser producto sanitario y entra en el anexo I del Reglamento de IA, con obligaciones de alto riesgo desde el 02/08/2028 ([MDR-2017-745](../fuentes/registro.md#mdr-2017-745), [SANIDAD-IA-OMNIBUS](../fuentes/registro.md#sanidad-ia-omnibus)).
 - La sanidad es sector de alta criticidad en NIS2 ([NIS2-DIRECTIVA](../fuentes/registro.md#nis2-directiva)).
 
 ### Metodologías y marcos

@@ -72,8 +72,8 @@ Todavía no hay precedentes de este tipo.
 ## 2. Conocimiento profesional
 
 ### Fundamentos y terminología
-- DORA es aplicable desde el 17/01/2025 y alcanza a los proveedores TIC por contrato ([DORA-CNMV](../fuentes/registro.md#dora-cnmv)).
-- En su autoevaluación, la CNMV contaba 190 empresas de servicios de inversión, 112 gestoras y 26 plataformas de financiación participativa bajo su competencia (CNMV-DORA-AUTOEVAL).
+- DORA es aplicable desde el 17/01/2025 y alcanza a los proveedores TIC por contrato ([DORA-2022-2554](../fuentes/registro.md#dora-2022-2554); [DORA-CNMV](../fuentes/registro.md#dora-cnmv)).
+- En su autoevaluación, la CNMV contaba 190 empresas de servicios de inversión, 112 gestoras y 26 plataformas de financiación participativa bajo su competencia ([CNMV-DORA-AUTOEVAL](../fuentes/registro.md#cnmv-dora-autoeval)).
 - No hay registro oficial de entidades sujetas a DORA: cada entidad evalúa si le aplica ([DORA-CNMV](../fuentes/registro.md#dora-cnmv)).
 
 ### Metodologías y marcos

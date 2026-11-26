@@ -74,10 +74,10 @@ Todavía no hay precedentes de este tipo.
 ## 2. Conocimiento profesional
 
 ### Fundamentos y terminología
-- La alfabetización en IA del artículo 4 es exigible desde el 02/02/2025. Desde el 27/07/2026 obliga a «apoyar la promoción» de la alfabetización y no a garantizar un nivel concreto (RIA-ART4-ALFABETIZACION, [UE-RIA-OMNIBUS](../fuentes/registro.md#ue-ria-omnibus)).
+- La alfabetización en IA del artículo 4 es exigible desde el 02/02/2025. Desde el 27/07/2026 obliga a «apoyar la promoción» de la alfabetización y no a garantizar un nivel concreto ([RIA-ART4-ALFABETIZACION](../fuentes/registro.md#ria-art4-alfabetizacion), [UE-RIA-OMNIBUS](../fuentes/registro.md#ue-ria-omnibus)).
 - Las obligaciones de alto riesgo del anexo III se aplican desde el 02/12/2027 tras el ómnibus ([UE-RIA-OMNIBUS](../fuentes/registro.md#ue-ria-omnibus)).
-- DORA aplica desde el 17/01/2025 a entidades financieras y alcanza a sus proveedores TIC por contrato ([DORA-CNMV](../fuentes/registro.md#dora-cnmv)).
-- RGPD: registro de actividades (art. 30), seguridad (art. 32), brechas en 72 horas (art. 33) y evaluación de impacto (art. 35) (RGPD-2016-679).
+- DORA aplica desde el 17/01/2025 a entidades financieras y alcanza a sus proveedores TIC por contrato ([DORA-2022-2554](../fuentes/registro.md#dora-2022-2554); [DORA-CNMV](../fuentes/registro.md#dora-cnmv)).
+- RGPD: registro de actividades (art. 30), seguridad (art. 32), brechas en 72 horas (art. 33) y evaluación de impacto (art. 35) ([RGPD-2016-679](../fuentes/registro.md#rgpd-2016-679)).
 
 ### Metodologías y marcos
 - Matriz obligación → control → evidencia → responsable → fecha de revisión.
@@ -85,7 +85,7 @@ Todavía no hay precedentes de este tipo.
 - Clasificación de riesgo por uso, no por tecnología.
 
 ### Normativa aplicable
-- Reglamento de IA y ómnibus ([UE-RIA-OMNIBUS](../fuentes/registro.md#ue-ria-omnibus)), RGPD, DORA, ENS, NIS2 ([NIS2-ES](../fuentes/registro.md#nis2-es)), accesibilidad (LEY-ACCESIBILIDAD-11-2023) según el cliente.
+- Reglamento de IA y ómnibus ([UE-RIA-OMNIBUS](../fuentes/registro.md#ue-ria-omnibus)), RGPD, DORA, ENS, NIS2 ([NIS2-ES](../fuentes/registro.md#nis2-es)), accesibilidad ([LEY-ACCESIBILIDAD-11-2023](../fuentes/registro.md#ley-accesibilidad-11-2023)) según el cliente.
 
 ### Herramientas y tecnologías
 - Hoja de inventario y matriz hasta tener herramienta
@@ -125,6 +125,7 @@ Ver *A quién convoca* y [`knowledge/navigation.json`](../navigation.json).
 - [RIA-ART4-ALFABETIZACION](../fuentes/registro.md#ria-art4-alfabetizacion) · Reglamento de IA, artículo 4: alfabetización en IA
 - [UE-RIA-OMNIBUS](../fuentes/registro.md#ue-ria-omnibus) · Reglamento (UE) 2026/1744 (ómnibus digital sobre IA), que modifica el Reglamento (UE) 2024/1689
 - [RGPD-2016-679](../fuentes/registro.md#rgpd-2016-679) · Reglamento (UE) 2016/679, General de Protección de Datos
+- [DORA-2022-2554](../fuentes/registro.md#dora-2022-2554) · Reglamento (UE) 2022/2554 (DORA), resiliencia operativa digital del sector financiero
 - [DORA-CNMV](../fuentes/registro.md#dora-cnmv) · Preguntas frecuentes sobre el Reglamento (UE) 2022/2554 (DORA)
 - [ENS-RD311](../fuentes/registro.md#ens-rd311) · Real Decreto 311/2022, Esquema Nacional de Seguridad
 - [NIS2-ES](../fuentes/registro.md#nis2-es) · Estado de la transposición de NIS2 en España

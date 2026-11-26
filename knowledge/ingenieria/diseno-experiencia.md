@@ -69,9 +69,9 @@ Todavía no hay precedentes de este tipo.
 ## 2. Conocimiento profesional
 
 ### Fundamentos y terminología
-- WCAG 2.2 es la recomendación vigente del W3C desde el 05/10/2023 (W3C-WCAG22).
-- La Ley 11/2023 obliga a hacer accesibles ciertos productos y servicios nuevos desde el 28/06/2025; puede afectar a clientes financieros y de comercio electrónico (LEY-ACCESIBILIDAD-11-2023).
-- Diez heurísticas de usabilidad para revisar una interfaz (NNG-HEURISTICAS).
+- WCAG 2.2 es la recomendación vigente del W3C desde el 05/10/2023 ([W3C-WCAG22](../fuentes/registro.md#w3c-wcag22)).
+- La Ley 11/2023 obliga a hacer accesibles ciertos productos y servicios nuevos desde el 28/06/2025; puede afectar a clientes financieros y de comercio electrónico ([LEY-ACCESIBILIDAD-11-2023](../fuentes/registro.md#ley-accesibilidad-11-2023)).
+- Diez heurísticas de usabilidad para revisar una interfaz ([NNG-HEURISTICAS](../fuentes/registro.md#nng-heuristicas)).
 
 ### Metodologías y marcos
 - Diseño centrado en tareas: primero la tarea crítica (aprobar un caso), después lo demás.
@@ -79,7 +79,7 @@ Todavía no hay precedentes de este tipo.
 - Revisión heurística y de accesibilidad antes de cada entrega.
 
 ### Normativa aplicable
-- Accesibilidad (LEY-ACCESIBILIDAD-11-2023) cuando el producto entre en su ámbito; revisar con Legal y Cumplimiento.
+- Accesibilidad ([LEY-ACCESIBILIDAD-11-2023](../fuentes/registro.md#ley-accesibilidad-11-2023)) cuando el producto entre en su ámbito; revisar con Legal y Cumplimiento.
 
 ### Herramientas y tecnologías
 - HTML y CSS accesibles

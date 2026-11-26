@@ -59,7 +59,7 @@ Todavía no hay precedentes de este tipo.
 
 ### Fundamentos y terminología
 - Verifactu: adaptación antes del 06/10/2028 para todos según el RDL 43/2026, publicado el 25/11/2026 y pendiente de convalidación; si no se convalida, vuelven el 01/01/2027 (Impuesto sobre Sociedades) y el 01/07/2027 (resto) del RDL 15/2025 ([VERIFACTU-RDL43](../fuentes/registro.md#verifactu-rdl43), [VERIFACTU-RDL15](../fuentes/registro.md#verifactu-rdl15)).
-- Factura electrónica B2B: RD 238/2026 en vigor desde el 20/04/2026; con la Orden HAC/1028/2026 es obligatoria desde octubre de 2027 si se facturan más de 8 millones de euros y desde octubre de 2028 para el resto ([FACTURA-B2B](../fuentes/registro.md#factura-b2b), AEAT-FACTURA-CAL).
+- Factura electrónica B2B: RD 238/2026 en vigor desde el 20/04/2026; con la Orden HAC/1028/2026 es obligatoria desde octubre de 2027 si se facturan más de 8 millones de euros y desde octubre de 2028 para el resto ([FACTURA-B2B](../fuentes/registro.md#factura-b2b), [AEAT-FACTURA-CAL](../fuentes/registro.md#aeat-factura-cal)).
 
 ### Metodologías y marcos
 - Elegir un software de facturación que ya cumpla Verifactu, no construirlo.

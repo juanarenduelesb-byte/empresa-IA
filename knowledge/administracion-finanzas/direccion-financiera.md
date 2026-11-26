@@ -70,9 +70,9 @@ Todavía no hay precedentes de este tipo.
 
 ### Fundamentos y terminología
 - Caja no es beneficio: un piloto con pago 50/50 adelanta coste y retrasa ingreso.
-- La Ley 28/2022 da ventajas a las empresas emergentes acreditadas por ENISA, con requisitos que hay que comprobar (LEY-STARTUPS-28-2022).
-- ENISA financia con préstamos participativos con fondos propios mínimos; las cifras de 2026 varían según la fuente: confirmar en enisa.es (ENISA-2026).
-- NEOTEC subvenciona empresas de base tecnológica; la convocatoria 2026 cerró el 14/05/2026 (CDTI-NEOTEC-2026).
+- La Ley 28/2022 da ventajas a las empresas emergentes acreditadas por ENISA, con requisitos que hay que comprobar ([LEY-STARTUPS-28-2022](../fuentes/registro.md#ley-startups-28-2022)).
+- ENISA financia con préstamos participativos con fondos propios mínimos; las cifras de 2026 varían según la fuente: confirmar en enisa.es ([ENISA-2026](../fuentes/registro.md#enisa-2026)).
+- NEOTEC subvenciona empresas de base tecnológica; la convocatoria 2026 cerró el 14/05/2026 ([CDTI-NEOTEC-2026](../fuentes/registro.md#cdti-neotec-2026)).
 
 ### Metodologías y marcos
 - Previsión de tesorería directa a 13 semanas, actualizada cada semana.
@@ -80,7 +80,7 @@ Todavía no hay precedentes de este tipo.
 - Margen de contribución por proyecto y punto de equilibrio mensual.
 
 ### Normativa aplicable
-- Contabilidad ([PGC-PYMES](../fuentes/registro.md#pgc-pymes)) e impuesto sobre sociedades si aplica (LIS-27-2014).
+- Contabilidad ([PGC-PYMES](../fuentes/registro.md#pgc-pymes)) e impuesto sobre sociedades si aplica ([LIS-27-2014](../fuentes/registro.md#lis-27-2014)).
 
 ### Herramientas y tecnologías
 - Hoja de cálculo con supuestos separados de los cálculos

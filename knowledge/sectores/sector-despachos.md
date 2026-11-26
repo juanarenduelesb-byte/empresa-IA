@@ -69,8 +69,8 @@ Todavía no hay precedentes de este tipo.
 
 ### Fundamentos y terminología
 - Verifactu: el RDL 43/2026 (BOE 25/11/2026) aplaza la adaptación al 06/10/2028 para todos; está pendiente de convalidación y, si no se convalida, vuelven el 01/01/2027 y el 01/07/2027 del RDL 15/2025 ([VERIFACTU-RDL43](../fuentes/registro.md#verifactu-rdl43), [VERIFACTU-RDL15](../fuentes/registro.md#verifactu-rdl15)).
-- La factura electrónica entre empresas es obligatoria desde octubre de 2027 para facturación superior a 8 millones de euros y desde octubre de 2028 para el resto (AEAT-FACTURA-CAL).
-- En una encuesta de un proveedor de software a 194 despachos, el 81 % declaró trabajo extra no facturable por los cambios normativos (HOLDED-ASESORIAS-2026; señal, no dato de mercado).
+- La factura electrónica entre empresas es obligatoria desde octubre de 2027 para facturación superior a 8 millones de euros y desde octubre de 2028 para el resto ([AEAT-FACTURA-CAL](../fuentes/registro.md#aeat-factura-cal)).
+- En una encuesta de un proveedor de software a 194 despachos, el 81 % declaró trabajo extra no facturable por los cambios normativos ([HOLDED-ASESORIAS-2026](../fuentes/registro.md#holded-asesorias-2026); señal, no dato de mercado).
 
 ### Metodologías y marcos
 - Medir horas no facturables por tipo de tarea antes de proponer automatizar.

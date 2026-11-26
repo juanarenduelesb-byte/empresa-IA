@@ -62,7 +62,7 @@ Cotejado con el texto consolidado del BOE (última actualización 26/12/2025): e
 ## Riesgos extraordinarios y Consorcio
 - El CCS paga los daños por riesgos extraordinarios en España si la póliza lleva el recargo y el riesgo no está cubierto por otra póliza o la aseguradora no puede pagar ([RDLEG-7-2004-CCS](../../fuentes/registro.md#rdleg-7-2004-ccs), art. 6 y 8).
 - Riesgos: terremoto y maremoto, inundación extraordinaria (también embate de mar), erupción volcánica, tempestad ciclónica atípica (vientos de más de 120 km/h y tornados), caída de cuerpos siderales; terrorismo, rebelión, sedición, motín y tumulto popular; actuaciones de las Fuerzas Armadas o de Seguridad en tiempo de paz ([RD-300-2004](../../fuentes/registro.md#rd-300-2004), art. 1.1).
-- Carencia de **7 días naturales** para los fenómenos de la naturaleza, salvo daños personales (art. 8.1). Comprobar en el texto desde qué fecha se cuenta antes de automatizarlo.
+- Carencia de **7 días naturales** para los fenómenos de la naturaleza, salvo daños personales (art. 8.1). **Sin confirmar:** desde qué fecha se cuenta; comprobarlo en el texto antes de automatizarlo.
 - Franquicia del **7 %** en daños a bienes; no se aplica a vehículos con póliza de automóviles, ni a viviendas ni comunidades de propietarios de viviendas ([CCS-FAQ](../../fuentes/registro.md#ccs-faq)).
 - Se solicita por teléfono (900 222 665) o en la web del CCS. En daños materiales la presentan el asegurado, el tomador, el beneficiario o sus representantes; en daños personales también la aseguradora o el mediador. No hay un plazo propio de caducidad, y el CCS paga solo por transferencia al beneficiario ([CCS-SOLICITUD](../../fuentes/registro.md#ccs-solicitud)).
 

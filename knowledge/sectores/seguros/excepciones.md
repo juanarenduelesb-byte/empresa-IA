@@ -38,7 +38,7 @@ tags:
 
 ## EX-02 · Póliza no encontrada, no vigente o con recibo impagado
 - **Disparador:** hay número de póliza pero no casa con la cartera, la fecha de ocurrencia cae fuera de la vigencia o el recibo está pendiente.
-- **Regla:** No abrir parte en el portal; pasar a un tramitador. Las consecuencias del impago (LCS art. 15) no se han leído esta noche.
+- **Regla:** No abrir parte en el portal; pasar a un tramitador. **Sin confirmar:** las consecuencias del impago (LCS art. 15) no se han leído en el BOE.
 - **IA:** Propone la póliza más probable con su confianza; no la elige.
 - **Decide:** persona.
 - **Base:** hipótesis · [LCS-50-1980](../../fuentes/registro.md#lcs-50-1980)
@@ -101,7 +101,7 @@ tags:
 
 ## EX-11 · Varias pólizas o aseguradoras para el mismo daño
 - **Disparador:** el cliente tiene más de una póliza que podría cubrir el siniestro.
-- **Regla:** Pasar a un tramitador. La concurrencia de seguros (LCS art. 32) no se ha leído esta noche.
+- **Regla:** Pasar a un tramitador. **Sin confirmar:** la concurrencia de seguros (LCS art. 32) no se ha leído en el BOE.
 - **IA:** Lista las pólizas candidatas.
 - **Decide:** persona.
 - **Base:** hipótesis · [LCS-50-1980](../../fuentes/registro.md#lcs-50-1980)
@@ -129,7 +129,7 @@ tags:
 
 ## EX-15 · Persona vulnerable, menor o fallecimiento
 - **Disparador:** el mensaje menciona un menor, un fallecido o una situación de especial vulnerabilidad.
-- **Regla:** Pasar a una persona con prioridad; trato y documentación especiales por validar con el sector.
+- **Regla:** Pasar a una persona con prioridad; trato y documentación especiales por validar con el sector. **Sin confirmar:** no hay norma localizada que lo exija; es criterio de prudencia.
 - **IA:** Detecta la mención.
 - **Decide:** persona.
 - **Base:** hipótesis · [INT-ATLAS](../../fuentes/registro.md#int-atlas)

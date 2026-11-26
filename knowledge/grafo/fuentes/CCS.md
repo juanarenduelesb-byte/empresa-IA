@@ -7,7 +7,7 @@ fuente_tipo: "recomendacion-tecnica"
 version: "consultado 17/11/2026"
 autoridad: "alta"
 vigencia: "vigente"
-estado: "validated"
+estado: "disputed"
 citada: 24
 tags:
   - "fuente"
@@ -18,7 +18,7 @@ tags:
 
 - Origen: <https://www.consumoresponde.es/art%C3%ADculos/el_consorcio_de_compensacion_de_seguros>
 - Registro: [[knowledge/fuentes/registro|registro de fuentes]]
-- Nota: La solicitud la puede presentar el asegurado, su aseguradora o su mediador. Según el propio CCS, las declaraciones llegan mayoritariamente a través de agentes y corredores.
+- Nota: Imprecisa frente a la fuente oficial (CCS-SOLICITUD, revisada en K1 el 26/11/2026): en daños materiales presentan la solicitud el asegurado, el tomador, el beneficiario o sus representantes; en daños personales, también la aseguradora o el mediador. Decía: la solicitud la puede presentar el asegurado, su aseguradora o su mediador. Según el propio CCS, las declaraciones llegan mayoritariamente a través de agentes y corredores.
 
 ## Citada en
 

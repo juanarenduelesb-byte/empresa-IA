@@ -8,7 +8,7 @@ version: "consultado 26/11/2026"
 autoridad: "alta"
 vigencia: "vigente"
 estado: "validated"
-citada: 3
+citada: 4
 tags:
   - "fuente"
   - "vigencia/vigente"
@@ -22,6 +22,7 @@ tags:
 
 ## Citada en
 
+- [[knowledge/sectores/especialista-sectorial|Coordinación sectorial y seguros]]
 - [[knowledge/sectores/seguros/excepciones|Catálogo de excepciones al abrir un siniestro]]
 - [[knowledge/sectores/seguros/glosario-siniestros|Glosario de siniestros]]
 - [[knowledge/sectores/seguros/normas|Normas para abrir un siniestro en una correduría]]

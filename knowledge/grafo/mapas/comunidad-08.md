@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 8
-miembros: 37
-cohesion: 0.29
+miembros: 35
+cohesion: 0.32
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 8 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Flujo ceo
 
-37 nodos agrupados por el algoritmo de Louvain. Cohesión 0.29.
+35 nodos agrupados por el algoritmo de Louvain. Cohesión 0.32.
 
 ## Documentos
 
@@ -41,12 +41,10 @@ tags:
 - [[docs/atlas/11-infraestructura|11 · Infraestructura, desarrollo y portabilidad]]
 - [[docs/atlas/10-cambios-modelos|10 · Cambios y elección de modelos de IA]]
 - [[docs/atlas/13-ciclo-dato|13 · Ciclo de vida de un dato]]
-- [[docs/04-motor-de-conocimiento|Motor de conocimiento]]
 - [[docs/14-reglas-del-ceo|Reglas del CEO digital]]
 - [[docs/06-seguridad-y-gobierno|Seguridad, privacidad y gobierno]]
 - [[docs/07-calidad-infraestructura-y-operacion|Calidad, infraestructura y operación]]
-- [[docs/atlas/06-fallos|06 · Fallos, reintentos y recuperación]]
 - [[governance/README|Gobierno, seguridad y legal]]
+- [[docs/atlas/06-fallos|06 · Fallos, reintentos y recuperación]]
 - [[docs/03-ceo-digital-y-orquestacion|CEO digital y orquestación]]
-- [[knowledge/README|Conocimiento]]
 - [[precedents/lessons-learned/2026-11-correcciones-documentales|Lección: los documentos base también tienen errores]]

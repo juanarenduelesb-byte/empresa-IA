@@ -27,6 +27,7 @@
    "leer": [
     "docs/00-negocio.md",
     "knowledge/comercial/",
+    "knowledge/estudios/",
     "knowledge/seguridad-legal/"
    ],
    "regla_cruzada": "Comercial consulta a Legal antes de cualquier cláusula contractual."

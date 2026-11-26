@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 10
-miembros: 15
-cohesion: 0.43
+miembros: 12
+cohesion: 0.5
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 10 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Conversaciones con IA y evaluación
 
-15 nodos agrupados por el algoritmo de Louvain. Cohesión 0.43.
+12 nodos agrupados por el algoritmo de Louvain. Cohesión 0.5.
 
 ## Documentos
 
@@ -20,8 +20,6 @@ tags:
 - [[precedents/oficina/chats/plan-y-seguimiento|Conversaciones con Plan y seguimiento]]
 - [[precedents/oficina/chats/registro-de-decisiones|Conversaciones con Registro de decisiones]]
 - [[precedents/oficina/chats/bibliotecario|Conversaciones con Bibliotecario]]
-- [[docs/10-plan-12-semanas|Plan de construcción · 18/11/2026 → 12/02/2027]]
-- [[docs/22-plan-hasta-febrero|Plan de trabajo diario · 26/11/2026 → 28/02/2027]]
 - [[precedents/oficina/chats/seguridad|Conversaciones con Seguridad]]
 
 ## Decisiones

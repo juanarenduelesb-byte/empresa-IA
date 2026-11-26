@@ -16,7 +16,7 @@ Reglas que no cambian: **no reinventar la rueda** (antes de construir, mira cóm
 
 ## Lista de esta noche (hazlas en este orden)
 
-- [~] (en curso, sesión principal, 02:25) B1 · Conocimiento en la base de datos: fuentes y fichas con estado (draft, validated, deprecated), búsqueda de texto con permisos por cliente y cita obligatoria; carga de `knowledge/` y del registro de fuentes. *Hecho cuando:* una búsqueda desde el cliente A nunca devuelve nada del B y todo resultado trae su fuente.
+- [x] B1 · Conocimiento en la base de datos: fuentes y fichas con estado (draft, validated, deprecated), búsqueda de texto con permisos por cliente y cita obligatoria; carga de `knowledge/` y del registro de fuentes. *Hecho cuando:* una búsqueda desde el cliente A nunca devuelve nada del B y todo resultado trae su fuente.
 - [ ] B2 · Paquete de dominio de seguros y corredurías: normas con fuente oficial verificada (LCS, distribución de seguros, libros-registro, baremo, convenios entre aseguradoras, Consorcio, atención al cliente, datos de salud), glosario de siniestros y catálogo de excepciones.
 - [ ] F1 · Portal interno: auditoría de la oficina actual (`oficina/`) frente a referencias de gestión de trabajo con éxito, con fuente. Propuesta de distribución (inicio con lo que espera tu OK, encargos, proyectos, clientes, cerebro, calendario, agentes y la vista 3D como una vista más) y mejoras aplicadas sin romper lo que funciona. Si no puedes publicar el artefacto, deja los archivos listos y dilo en el informe.
 - [ ] C1 · 20 siniestros inventados con su resultado esperado (esquema, casos y pruebas que validan los casos).
@@ -42,3 +42,4 @@ Reglas que no cambian: **no reinventar la rueda** (antes de construir, mira cóm
 | Fecha | Tanda | Hecho | Queda |
 |---|---|---|---|
 | 26/11 02:30 | Sesión principal | A1–A4: API con /health, Docker Compose, modelo de S2 con Alembic, RLS forzada, auditoría inmutable, tablas de conocimiento con búsqueda y citas, datos de ejemplo, 14 pruebas nuevas contra PostgreSQL real, CI con PostgreSQL y Ruff (D-023, docs/24-base-de-datos.md) | `docker compose up` sin probar aquí (la imagen no puede descargar paquetes en este entorno); falta cargar en la base las fichas de knowledge/ (B1) |
+| 26/11 02:40 | Sesión principal | B1: `varios.db.carga_conocimiento` carga knowledge/ en la base (633 fichas, 28 % con fuente externa, todas en borrador); búsqueda con cita interna y externa; 2 pruebas más | Validar fichas (socios) y subir el % con fuente externa (B2) |

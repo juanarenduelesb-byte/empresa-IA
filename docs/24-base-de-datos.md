@@ -37,9 +37,18 @@ La aplicación entra con el usuario `varios_app`, sin privilegios. Las migracion
 - **Datos de ejemplo** (todos inventados): `python -m varios.db.semilla`.
 - **Pruebas:** `python -m pytest -q`. Usan `VARIOS_TEST_DATABASE_URL` o un PostgreSQL desechable. CI levanta PostgreSQL como servicio.
 
+## Carga del cerebro
+
+`python -m varios.db.carga_conocimiento` (con `VARIOS_DATABASE_URL_ADMIN`) carga:
+- el registro de fuentes;
+- cada sección de `knowledge/` como ficha, con su documento como fuente interna y las fuentes externas que cita.
+
+Es idempotente. Lo que desaparece del repositorio queda como obsoleto, no se borra.
+
+**Foto del 26/11/2026:** 633 fichas, todas en borrador. Solo 178 (28 %) citan una fuente externa. Ninguna está validada todavía por un socio o un profesional. Es la medida de cuánto le falta al cerebro para ser fiable, y el informe de la mañana la seguirá.
+
 ## Lo que falta (plan)
 
 - Autenticación y roles reales (S3); hoy la identidad se construye en las pruebas.
 - Pasar el motor en memoria (`varios.procesos`) a estas tablas (S5).
-- Cargar en `ficha_conocimiento` las fichas de `knowledge/` (tarea B1 del trabajo nocturno).
 - Comprobar `docker compose up` en un equipo de los socios: en el entorno de Claude, la imagen no puede descargar paquetes.

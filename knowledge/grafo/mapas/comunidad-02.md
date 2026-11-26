@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 2
-miembros: 73
+miembros: 74
 cohesion: 0.1
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 2 · knowledge/sectores · Registro de fuentes y Responsable de cumplimiento normativo
 
-73 nodos agrupados por el algoritmo de Louvain. Cohesión 0.1.
+74 nodos agrupados por el algoritmo de Louvain. Cohesión 0.1.
 
 ## Documentos
 
@@ -18,8 +18,8 @@ tags:
 - [[knowledge/sectores/especialista-sectorial|Coordinación sectorial y seguros]]
 - [[knowledge/sectores/sector-sanidad|Experto en sanidad privada]]
 - [[knowledge/ingenieria/plataforma-operaciones|Ingeniero de plataforma y operaciones (DevOps/SRE)]]
-- [[knowledge/sectores/sector-financiero|Experto en servicios financieros no bancarios]]
 - [[knowledge/sectores/sector-despachos|Experto en asesorías, gestorías y despachos]]
+- [[knowledge/sectores/sector-financiero|Experto en servicios financieros no bancarios]]
 - [[knowledge/sectores/sector-logistica|Experto en logística y transporte]]
 - [[knowledge/seguridad-legal/legal-privacidad|Especialista legal y privacidad]]
 - [[knowledge/administracion-finanzas/contabilidad|Especialista en contabilidad y facturación]]
@@ -29,6 +29,7 @@ tags:
 - [[knowledge/sectores/priorizacion|Priorización de sectores]]
 - [[knowledge/sectores/README|Sectores]]
 - [[knowledge/plantillas/ficha-fuente|Ficha-fuente]]
+- [[knowledge/metodologias-transversales/investigar|Protocolo: investigar fuera]]
 - [[knowledge/procesos/sectores|Especialistas sectoriales]]
 
 ## Procesos

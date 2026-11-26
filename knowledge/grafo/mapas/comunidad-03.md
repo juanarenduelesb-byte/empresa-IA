@@ -1,85 +1,80 @@
 ---
 tipo: "mapa"
 comunidad: 3
-miembros: 62
-cohesion: 0.15
+miembros: 67
+cohesion: 0.09
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 3 · knowledge/direccion · Dependencias entre procesos y CEO digital
+# Comunidad 3 · docs · Registro de decisiones y Varios · empresa-ia
 
-62 nodos agrupados por el algoritmo de Louvain. Cohesión 0.15.
+67 nodos agrupados por el algoritmo de Louvain. Cohesión 0.09.
 
 ## Documentos
 
-- [[processes/diagrams/dependencias|Dependencias entre procesos]]
-- [[knowledge/direccion/ceo-digital|CEO digital]]
-- [[docs/13-procesos-y-estados|Procesos y estados]]
-- [[knowledge/direccion/decisiones-seguimiento|Responsable de decisiones y seguimiento]]
-- [[knowledge/direccion/bibliotecario|Bibliotecario / responsable de conocimiento]]
-- [[knowledge/procesos/automatizacion|Especialista en automatización]]
-- [[knowledge/ingenieria/README|Ingeniería y tecnología]]
-- [[knowledge/ingenieria/integraciones|Especialista en integraciones]]
-- [[docs/24-base-de-datos|Base de datos (D-023, propuesta)]]
-- [[knowledge/direccion/README|Dirección y gobierno]]
-- [[processes/diagrams/ciclo-encargo|Ciclo completo de un encargo (P01 → P11)]]
-- [[knowledge/seguridad-legal/README|Seguridad, privacidad, legal y cumplimiento]]
-- [[processes/README|Procesos]]
-- [[integrations/catalog/README|Catálogo de integraciones]]
-- [[claude/habilidades/cinco-decisiones|Las cinco decisiones del CEO]]
-- [[processes/definitions/README|Definiciones ejecutables]]
-- [[processes/runbooks/caida-proveedor-ia|Caída del proveedor de IA]]
-
-## Procesos
-
-- [[processes/catalog/P30-gestion-de-identidades-y-secretos|P30 · Gestión de identidades y secretos]]
-- [[processes/catalog/P21-ejecucion-segura-de-herramientas|P21 · Ejecución segura de herramientas]]
-- [[processes/catalog/P10-aprobacion-humana|P10 · Aprobación humana]]
-- [[processes/catalog/P01-alta-y-recepcion-de-peticion|P01 · Alta y recepción de petición]]
-- [[processes/catalog/P11-entrega-y-cierre|P11 · Entrega y cierre]]
-- [[processes/catalog/P15-observabilidad-e-incidencias|P15 · Observabilidad e incidencias]]
-- [[processes/catalog/P23-evaluacion-de-agentes-y-modelos|P23 · Evaluación de agentes y modelos]]
-- [[processes/catalog/P04-recuperacion-de-conocimiento|P04 · Recuperación de conocimiento]]
-- [[processes/catalog/P07-ingesta-documental|P07 · Ingesta documental]]
-- [[processes/catalog/P08-ejecucion-de-tareas|P08 · Ejecución de tareas]]
-- [[processes/catalog/P12-gestion-de-cambios|P12 · Gestión de cambios]]
-- [[processes/catalog/P14-gestion-de-permisos-y-aislamiento|P14 · Gestión de permisos y aislamiento]]
-- [[processes/catalog/P20-seguridad-de-entradas-e-inyeccion-de-instrucciones|P20 · Seguridad de entradas e inyección de instrucciones]]
-- [[processes/catalog/P13-aprendizaje-y-actualizacion-de-la-wiki|P13 · Aprendizaje y actualización de la wiki]]
-- [[processes/catalog/P18-evaluacion-y-mejora|P18 · Evaluación y mejora]]
-- [[processes/catalog/P19-politica-de-uso-y-limites|P19 · Política de uso y límites]]
-- [[processes/catalog/P25-gestion-de-cambios-y-versiones|P25 · Gestión de cambios y versiones]]
-- [[processes/catalog/P05-diseno-del-plan|P05 · Diseño del plan]]
-- [[processes/catalog/P09-control-de-calidad|P09 · Control de calidad]]
-- [[processes/catalog/P16-gobierno-de-modelos-e-instrucciones|P16 · Gobierno de modelos e instrucciones]]
-- [[processes/catalog/P17-seguridad-y-continuidad|P17 · Seguridad y continuidad]]
-- [[processes/catalog/P24-gestion-del-ciclo-de-vida-del-dato|P24 · Gestión del ciclo de vida del dato]]
-- [[processes/catalog/P06-asignacion-y-coordinacion|P06 · Asignación y coordinación]]
-- [[processes/catalog/P36-gestion-del-catalogo-de-conectores|P36 · Gestión del catálogo de conectores]]
-- [[processes/catalog/P26-continuidad-y-recuperacion|P26 · Continuidad y recuperación]]
-- [[processes/catalog/P03-gestion-de-aclaraciones|P03 · Gestión de aclaraciones]]
-
-## Especialistas
-
+- [[DECISIONS|Registro de decisiones]]
+- [[CLAUDE|Varios · empresa-ia]]
 - [[knowledge/seguridad-legal/ciberseguridad|Especialista en ciberseguridad]]
-- [[knowledge/direccion/ceo-digital|CEO digital]]
-- [[knowledge/ingenieria/backend|Especialista backend]]
-- [[knowledge/seguridad-legal/legal-privacidad|Especialista legal y privacidad]]
-- [[knowledge/procesos/automatizacion|Especialista en automatización]]
-- [[knowledge/seguridad-legal/calidad-riesgos|Especialista en calidad y riesgos]]
 - [[knowledge/ingenieria/datos-ia|Arquitecto de datos e IA]]
-- [[knowledge/direccion/decisiones-seguimiento|Responsable de decisiones y seguimiento]]
-- [[knowledge/ingenieria/evaluacion-ia|Especialista en evaluación de IA]]
-- [[knowledge/direccion/bibliotecario|Bibliotecario / responsable de conocimiento]]
+- [[docs/fuentes/Atlas_Evolucion_v1.1_Modelo_Operativo_Procesos_y_Despliegue|Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue]]
+- [[precedents/README|Biblioteca de precedentes]]
+- [[docs/17-cerebro-y-procesos|17 · Cerebro, conocimiento y procesos: auditoría e informe]]
 - [[knowledge/ingenieria/arquitecto-tecnico|Arquitecto técnico]]
-- [[knowledge/ingenieria/integraciones|Especialista en integraciones]]
-- [[knowledge/procesos/implantacion-clientes|Responsable de implantación de clientes]]
+- [[knowledge/ingenieria/backend|Especialista backend]]
+- [[knowledge/seguridad-legal/calidad-riesgos|Especialista en calidad y riesgos]]
+- [[docs/10-plan-12-semanas|Plan de construcción · 18/11/2026 → 12/02/2027]]
+- [[knowledge/ingenieria/evaluacion-ia|Especialista en evaluación de IA]]
+- [[docs/23-plan-maestro|Plan maestro: la empresa completa, sin que se escape nada]]
+- [[README|Varios — repositorio maestro]]
+- [[docs/22-plan-hasta-febrero|Plan de trabajo diario · 26/11/2026 → 28/02/2027]]
+- [[docs/19-obsidian|Obsidian: el cerebro abierto en tu equipo]]
+- [[docs/08-roadmap-y-decisiones|Roadmap y decisiones]]
+- [[docs/05-agentes-procesos-e-integraciones|Agentes, procesos e integraciones]]
+- [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]]
+- [[Inicio|Inicio · cerebro de Varios]]
+- [[knowledge/glosario/README|Glosario]]
+- [[docs/01-vision-y-modelo-operativo|Visión y modelo operativo]]
+- [[knowledge/metodologias-transversales/contrastar|Protocolo: contrastar el conocimiento interno y el externo]]
+- [[docs/11-cerebro-en-claude|Cerebro en Claude]]
+- [[docs/07-calidad-infraestructura-y-operacion|Calidad, infraestructura y operación]]
+- [[docs/06-seguridad-y-gobierno|Seguridad, privacidad y gobierno]]
+- [[docs/02-arquitectura-general|Arquitectura general]]
+- [[docs/03-ceo-digital-y-orquestacion|CEO digital y orquestación]]
+- [[claude/instrucciones-proyecto|Instrucciones del proyecto "Varios · Cerebro" en Claude]]
+- [[docs/18-flujo-de-calidad-y-aprendizaje|18 · Flujo de calidad y aprendizaje continuo en la oficina]]
+- [[governance/README|Gobierno, seguridad y legal]]
+- [[docs/informes/README|Informes de la mañana]]
+- [[docs/09-inventario-documental|Inventario documental]]
+
+## Decisiones
+
+- [[knowledge/grafo/decisiones/D-012|D-012 · Las propuestas de cambios de Claude se aceptan solas]]
+- [[knowledge/grafo/decisiones/D-014|D-014 · Adelantar un prototipo mínimo del motor de procesos]]
+- [[knowledge/grafo/decisiones/D-003|D-003 · Obsidian como interfaz humana]]
+- [[knowledge/grafo/decisiones/D-021|D-021 · El cerebro se abre en Obsidian: el repositorio es el vault]]
+- [[knowledge/grafo/decisiones/D-009|D-009 · Unificación de puertas y estados]]
+- [[knowledge/grafo/decisiones/D-019|D-019 · Calidad exigente, todo pasa por un socio y cada rechazo se rehace aprendiendo]]
+- [[knowledge/grafo/decisiones/D-010|D-010 · Diagramas como código]]
+- [[knowledge/grafo/decisiones/D-004|D-004 · PostgreSQL como fuente operativa]]
+- [[knowledge/grafo/decisiones/D-006|D-006 · Primer proceso piloto]]
+- [[knowledge/grafo/decisiones/D-018|D-018 · El cerebro pasa a ser un grafo de conocimiento con relaciones explicadas]]
+- [[knowledge/grafo/decisiones/D-001|D-001 · Arquitectura orientada a procesos]]
+- [[knowledge/grafo/decisiones/D-007|D-007 · Nombre provisional: Varios]]
+- [[knowledge/grafo/decisiones/D-015|D-015 · Entregables en archivos reales, memoria y Google Drive en la oficina de agentes]]
+- [[knowledge/grafo/decisiones/D-022|D-022 · Trabajo nocturno de Claude con plan diario e informe de la mañana]]
+- [[knowledge/grafo/decisiones/D-023|D-023 · Base de datos real: PostgreSQL con RLS, auditoría inmutable y conocimiento con citas]]
+- [[knowledge/grafo/decisiones/D-002|D-002 · Modelo matricial]]
+- [[knowledge/grafo/decisiones/D-005|D-005 · Aislamiento multi-cliente]]
+- [[knowledge/grafo/decisiones/D-008|D-008 · Repositorio como memoria oficial y web visual]]
+- [[knowledge/grafo/decisiones/D-016|D-016 · Vista 3D de la oficina de agentes con Three.js]]
+- [[knowledge/grafo/decisiones/D-020|D-020 · Seis puestos nuevos en la oficina: CFO, contabilidad, éxito de cliente, plataforma, diseño y cumplimiento]]
 
 ## Fuentes
 
-- [[knowledge/grafo/fuentes/IETF-IDEMPOTENCY|IETF-IDEMPOTENCY · The Idempotency-Key HTTP Header Field (borrador 07)]]
-- [[knowledge/grafo/fuentes/NIST-AI-600-1|NIST-AI-600-1 · AI RMF: Generative Artificial Intelligence Profile (NIST AI 600-1)]]
-- [[knowledge/grafo/fuentes/OSS-TEMPORAL|OSS-TEMPORAL · Temporal (motor de ejecución duradera)]]
-- [[knowledge/grafo/fuentes/INT-DEC|INT-DEC · Registro de decisiones]]
-- [[knowledge/grafo/fuentes/OSS-SPIFF|OSS-SPIFF · SpiffWorkflow (motor BPMN/DMN en Python)]]
+- [[knowledge/grafo/fuentes/INT-GUIA|INT-GUIA · Guía de Arranque v1.4 (diseño cerrado)]]
+- [[knowledge/grafo/fuentes/OWASP-LLM-2025|OWASP-LLM-2025 · OWASP Top 10 for LLM Applications 2025]]
+- [[knowledge/grafo/fuentes/AEPD-AGENTICA|AEPD-AGENTICA · Inteligencia artificial agéntica desde la perspectiva de protección de datos]]
+- [[knowledge/grafo/fuentes/PG-RLS|PG-RLS · Recomendaciones de seguridad a nivel de fila para SaaS multicliente]]
+- [[knowledge/grafo/fuentes/OSS-DOCLING|OSS-DOCLING · Docling (conversión de documentos)]]
+- [[knowledge/grafo/fuentes/OSS-PRESIDIO|OSS-PRESIDIO · Microsoft Presidio (detección y anonimización de datos personales)]]

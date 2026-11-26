@@ -2,8 +2,11 @@
 
 from __future__ import annotations
 
+from pathlib import Path
+
 from fastapi import FastAPI
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, RedirectResponse
+from fastapi.staticfiles import StaticFiles
 from sqlalchemy import text
 
 from varios import __version__
@@ -31,3 +34,20 @@ def salud() -> JSONResponse:
     if codigo != 200:
         estado["estado"] = "degradado"
     return JSONResponse(estado, status_code=codigo)
+
+
+def _carpeta_oficina() -> Path | None:
+    """La oficina (HTML estático) se sirve desde la API para que use la misma dirección y no haga falta CORS."""
+    for c in (Path(__file__).resolve().parents[3] / "oficina", Path.cwd() / "oficina"):
+        if (c / "index.html").is_file():
+            return c
+    return None
+
+
+_oficina = _carpeta_oficina()
+if _oficina:
+    @app.get("/oficina", include_in_schema=False)
+    def _a_la_oficina() -> RedirectResponse:
+        return RedirectResponse("/oficina/")
+
+    app.mount("/oficina", StaticFiles(directory=_oficina, html=True), name="oficina")

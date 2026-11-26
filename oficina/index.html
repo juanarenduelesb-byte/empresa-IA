@@ -369,6 +369,7 @@ body.v3d #dtoday.o3only,body.v3d #dwait.o3only{display:block!important}
 <header class="top">
   <div class="logo"><span class="mk" aria-hidden="true"><i></i><i></i><i></i></span>varios <small>· oficina de agentes</small></div>
   <span class="status" id="status">Conectando…</span>
+  <button class="status demo" id="bApi" type="button" hidden>Conectar API</button>
   <div class="clock" aria-live="off"><b id="ck">--:--</b><span id="ckd"></span></div>
   <div class="spacer"></div>
   <nav class="nav" aria-label="Secciones de la oficina">
@@ -442,6 +443,7 @@ body.v3d #dtoday.o3only,body.v3d #dwait.o3only{display:block!important}
 <script type="importmap">{"imports":{"three":"./vendor/three/three.module.js","three/addons/":"./vendor/three/addons/"}}</script>
 <script type="module">import('./oficina3d.js').then(function(m){window.__o3dMount=m.mount;window.dispatchEvent(new Event('o3d-ready'))}).catch(function(e){window.__o3dFail=String(e);window.dispatchEvent(new Event('o3d-fail'))});</script>
 <script src="entregables.js"></script>
+<script src="api.js"></script>
 <script>
 (function(){
 "use strict";
@@ -570,8 +572,10 @@ function lsSave(){if(S.db)return;try{var o={};COLS.forEach(function(c){o[c]=S[c]
 var writing={};
 function clone(o){return JSON.parse(JSON.stringify(o||{}))}
 async function put(col,id,obj){
+  if(col==='tasks'&&S.tasks[id]&&S.tasks[id].api&&!obj.api)obj.api=S.tasks[id].api;
   obj._ts=now();S[col][id]=obj;if(col==='agents'){applyAgents();refreshLabels()}
   render();
+  if(window.VariosAPI)VariosAPI.guardar(col,obj);
   if(!S.db){lsSave();return}
   var key=col+'/'+id;
   while(writing[key])await writing[key];
@@ -1180,7 +1184,13 @@ function layout(W,H,pad){
   return P;
 }
 // ======================= PANEL =======================
-function setStatus(){var s=document.getElementById('status');if(S.sample){s.className='status live';s.textContent='En vivo · Claude'}else{s.className='status demo';s.textContent='Demostración · sin Claude'};s.title=S.db?'Los encargos se guardan y se comparten con quien tenga acceso a esta oficina.':'Los encargos se guardan solo en este navegador.'}
+function setStatus(){var s=document.getElementById('status');if(S.sample){s.className='status live';s.textContent='En vivo · Claude'}else{s.className='status demo';s.textContent='Demostración · sin Claude'};s.title=S.db?'Los encargos se guardan y se comparten con quien tenga acceso a esta oficina.':'Los encargos se guardan solo en este navegador.';
+  var V=window.VariosAPI,b=document.getElementById('bApi');if(!V||!b)return;b.hidden=!V.disponible();
+  if(V.activa()){b.textContent='API · PostgreSQL';b.className='status live';b.title='Los encargos se guardan también en PostgreSQL a través de la API (D-028).'}
+  else{b.textContent='Conectar API';b.className='status demo';b.title='La API está disponible: pega un token para guardar los encargos en PostgreSQL.'}}
+var API_OPS={toast:function(m){toast(m)},estado:function(){setStatus()},tareas:function(){return S.tasks},
+  guardarApi:function(id,api){var x=clone(S.tasks[id]);if(!x.id)return;x.api=api;put('tasks',id,x)},
+  importar:function(e,st){var id='api-'+e.id;if(S.tasks[id])return;put('tasks',id,{id:id,title:e.titulo,text:e.descripcion||e.titulo,status:st,agent:'ceo',risk:e.riesgo,created:e.creado_en,apiLectura:1,api:{id:e.id,estado:e.estado,version:e.version},question:st==='preg'?'Este encargo se creó fuera de esta oficina (API). Revísalo antes de seguir.':'',log:[{t:now(),m:'Llega de la API en estado '+e.estado}]})}};
 function render(){renderFloor();renderFeed();fillProjSel();renderDeptMetrics();if(O3)O3.sync();document.getElementById('nApr').textContent=cnt(function(t){return !t.piece&&(t.status==='aprob'||t.status==='preg')})||'';document.getElementById('nDec').textContent=Object.values(S.decisions).filter(function(d){return d.estado==='propuesta'}).length||'';var ae=document.activeElement;if(cur.view&&!(ae&&q('full').contains(ae)&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName)))cur.view()}
 function agentState(id){if(S.working[id])return 'work';var w=Object.values(S.tasks).some(function(t){return t.agent===id&&!t.piece&&(t.status==='aprob'||t.status==='preg')});return w?'wait':''}
 function pendingRoutines(){return S.sample?[]:routines().filter(function(r){return routineDue(r)})}
@@ -2029,7 +2039,11 @@ function openClients(){
 // ======================= ARRANQUE =======================
 q('bcard').onclick=function(){openBrain()};
 function topH(){document.documentElement.style.setProperty('--toph',(document.querySelector('.top').offsetHeight+5)+'px')}topH();window.addEventListener('resize',topH);hint();
-lsLoad();setStatus();buildScene();render();clock();setInterval(clock,20000);if(homeWanted())openHome();else setNav('bAg');
+lsLoad();setStatus();buildScene();render();
+if(window.VariosAPI){VariosAPI.iniciar(API_OPS).then(function(ok){if(ok)toast('Conectada a la API: los encargos se guardan en PostgreSQL.')});
+  q('bApi').onclick=function(){if(VariosAPI.activa()){VariosAPI.leer().then(function(n){toast(n+' encargos en la API')}).catch(function(e){toast('API: '+e.message)});return}
+    var t=prompt('Token de la API (solo desarrollo, datos inventados):');if(t)VariosAPI.conectar(t.trim()).then(function(n){toast('Conectada a la API: '+n+' encargos.')}).catch(function(e){toast('La API no acepta el token: '+e.message)})}}
+clock();setInterval(clock,20000);if(homeWanted())openHome();else setNav('bAg');
 fetch('agentes.json').then(function(r){if(!r.ok)throw 0;return r.json()}).then(loadFichas).catch(function(){});
 fetch('brain.json').then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(b){loadBrain(b);buildScene();render()}).catch(function(){toast('No se ha podido cargar el cerebro completo: los agentes usan el resumen.')});
 (async function(){

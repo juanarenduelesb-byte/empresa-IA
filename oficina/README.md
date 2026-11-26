@@ -1,10 +1,12 @@
 # Oficina de agentes de Varios
 
-Artefacto de Claude "Varios · Oficina de agentes". Archivos: `index.html`, `entregables.js`, `brain.json`, `office.js` y `oficina3d.js` (vista 3D) y `vendor/` (librerías; ver [LICENCIAS](vendor/LICENCIAS.md), D-015 y D-016).
+Artefacto de Claude "Varios · Oficina de agentes". Archivos: `index.html`, `entregables.js`, `api.js` (adaptador con la API), `brain.json`, `office.js` y `oficina3d.js` (vista 3D) y `vendor/` (librerías; ver [LICENCIAS](vendor/LICENCIAS.md), D-015 y D-016).
 
 Es una planta isométrica con siete departamentos y 34 agentes alrededor del cerebro. El séptimo departamento es **Sectores**: seis expertos (seguros, sanidad privada, asesorías y despachos, servicios financieros no bancarios, industria y logística). La priorización está en `knowledge/sectores/priorizacion.md`.
 
 ## Qué hace
+
+- **Guarda en la API cuando la hay (N3b, [docs/24](../docs/24-base-de-datos.md#la-oficina-sobre-la-api-n3b)):** servida por la API en http://localhost:8000/oficina/, `api.js` escribe cada encargo en PostgreSQL (alta, estados, petición de aprobación y decisión de un socio) y muestra los que llegan de fuera. Como artefacto o sin API funciona igual que antes.
 
 - **Secciones (F1, [docs/25](../docs/25-portal-interno.md)):** barra siempre visible con Inicio, Encargos, Proyectos, Clientes, Cerebro, Calendario y Agentes; las acciones (Nuevo proyecto, Decisiones, Reunión) van aparte. La oficina se abre en **Inicio**: lo que espera tu OK y las preguntas de los agentes, rutinas pendientes, lo que está en curso, lo próximo y las decisiones con fecha. **Clientes** agrupa los proyectos por cliente. La planta 2D/3D es la sección Agentes.
 

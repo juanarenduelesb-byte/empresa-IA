@@ -64,6 +64,25 @@ Rutas en `src/varios/api/oficina.py`; pruebas en `tests/db/test_api_oficina.py`,
 
 **Errores.** 401 sin token válido · 404 si no existe o es de otro cliente (no se revela cuál) · 403 si la aprobación no cumple la regla · 409 si la transición no está permitida · 422 si los datos no son válidos. Cada petición es una transacción: si algo falla, no se guarda nada, tampoco el evento.
 
+## La oficina sobre la API (N3b)
+
+La oficina (`oficina/`) es la misma en los dos casos; `oficina/api.js` decide dónde guarda.
+
+| Cómo se abre | Dónde guarda los encargos |
+|---|---|
+| Como artefacto de Claude o como archivos sueltos | Como hasta ahora: el almacén del artefacto o el del navegador. `api.js` no hace nada |
+| Desde la API: `docker compose up` y http://localhost:8000/oficina/ | Además de su almacén, cada encargo se escribe en PostgreSQL por la API |
+
+**Cómo se conecta.** La API sirve la oficina en `/oficina/` (misma dirección, sin CORS). Si `/health` responde, aparece el botón «Conectar API»: se pega un token (o se abre `/oficina/#token=…`) y el botón pasa a «API · PostgreSQL». El token se guarda en `sessionStorage` y se borra al cerrar la pestaña. Para sacar uno con los datos de ejemplo: `docker compose exec api python -c "from varios.db.semilla import _id; from varios.api.identidad import emitir; print(emitir(_id('usuario','atalaya','tramitador@atalaya.invalid'), _id('cliente','atalaya')))"`.
+
+**Qué se escribe.** Alta del encargo; cada cambio de estado de la oficina se traduce al estado de la API y se recorre el camino más corto de `encargo.json` (la API publica las transiciones en `GET /definiciones/encargo`, así que la oficina no copia la tabla); al pedir el OK se pide la aprobación, y la decisión solo se envía si la tomó un socio en la oficina («Aprobado por un socio» o «Rechazado por un socio»). Si la API la rechaza (por ejemplo, porque quien aprueba es quien pidió el encargo), la oficina avisa y en la API sigue pendiente: no se fuerza nada.
+
+**Qué se lee.** Al conectar, la oficina actualiza el estado de los encargos que ya conoce y muestra los que se crearon fuera (otra persona u otro equipo) como «Llega de la API», en solo lectura.
+
+**Lo que aún no hace.** Las piezas de un encargo en equipo no se suben como tareas; la aprobación de un encargo que llegó de la API no se puede dar desde otra oficina; reglas, memoria, proyectos y entregables siguen solo en el almacén de la oficina. Es el paso siguiente de M-041 (y N4 para editar, posponer y caducar aprobaciones).
+
+**Prueba de humo (26/11/2026, Chromium sin interfaz).** Con PostgreSQL desechable, migraciones, semilla y la API: un encargo creado en la oficina queda en la tabla `solicitud` en PENDIENTE_APROBACION con 7 eventos de auditoría (alta, cinco cambios de estado y la petición de aprobación); en modo demostración la oficina lo da por hecho sin un socio y la API no lo acepta como aprobado. Los dos encargos de la semilla aparecen en Inicio como preguntas. La misma oficina servida como archivos sin API guarda como siempre y no muestra el botón. Sin errores en la consola en ninguno de los dos casos. `docker compose up` sigue sin poder probarse aquí (ver «Pendiente de tu aprobación» en docs/21).
+
 ## Lo que falta (plan)
 
 - Proveedor de identidad real (S3, antes de L2); hoy los tokens se firman con un secreto compartido (D-028).

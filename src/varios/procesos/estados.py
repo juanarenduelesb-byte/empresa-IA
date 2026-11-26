@@ -11,7 +11,15 @@ from dataclasses import dataclass
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parents[3]
-DEFINICIONES = RAIZ / "processes" / "definitions"
+
+
+def _definiciones() -> Path:
+    """En el repositorio, junto al código; instalado (imagen de Docker), en la carpeta de trabajo."""
+    junto = RAIZ / "processes" / "definitions"
+    return junto if junto.is_dir() else Path.cwd() / "processes" / "definitions"
+
+
+DEFINICIONES = _definiciones()
 
 
 @dataclass(frozen=True)

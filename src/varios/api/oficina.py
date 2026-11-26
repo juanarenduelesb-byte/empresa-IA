@@ -19,7 +19,7 @@ from pydantic import BaseModel, ConfigDict, Field
 from sqlalchemy import Engine, select
 
 from varios.db.modelos import RIESGOS, Usuario
-from varios.db.repositorio import NoEncontrado, Repositorio
+from varios.db.repositorio import MAQUINA, NoEncontrado, Repositorio
 from varios.db.sesion import motor, sesion_de_cliente
 from varios.procesos.motor import AprobacionInvalida, Identidad, TransicionInvalida
 
@@ -140,6 +140,13 @@ def _aprobacion(a) -> dict:
     return {"id": str(a.id), "encargo_id": str(a.solicitud_id), "objeto": a.objeto, "version": a.version,
             "solicitada_por": a.solicitada_por, "aprobador_id": str(a.aprobador_id) if a.aprobador_id else None,
             "decision": a.decision, "motivo": a.motivo}
+
+
+@router.get("/definiciones/encargo")
+def definicion_encargo(c: Annotated[Credencial, Depends(credencial)]) -> dict:
+    """Transiciones de encargo.json, para que la oficina no copie la tabla (la fuente sigue siendo el JSON)."""
+    return {"id": MAQUINA.id, "version": MAQUINA.version, "inicial": MAQUINA.inicial,
+            "transiciones": {k: sorted(v) for k, v in MAQUINA.transiciones.items()}}
 
 
 @router.post("/encargos", status_code=201)

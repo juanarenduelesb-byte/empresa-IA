@@ -1,77 +1,76 @@
 ---
 tipo: "mapa"
 comunidad: 5
-miembros: 54
-cohesion: 0.17
+miembros: 53
+cohesion: 0.16
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 5 · knowledge/ingenieria · Dependencias entre procesos y Especialista en ciberseguridad
+# Comunidad 5 · processes/catalog · Índice del conocimiento de Varios y Arquitecto de procesos
 
-54 nodos agrupados por el algoritmo de Louvain. Cohesión 0.17.
+53 nodos agrupados por el algoritmo de Louvain. Cohesión 0.16.
 
 ## Documentos
 
-- [[processes/diagrams/dependencias|Dependencias entre procesos]]
-- [[knowledge/seguridad-legal/ciberseguridad|Especialista en ciberseguridad]]
-- [[docs/13-procesos-y-estados|Procesos y estados]]
-- [[knowledge/ingenieria/datos-ia|Arquitecto de datos e IA]]
+- [[knowledge/INDEX|Índice del conocimiento de Varios]]
+- [[knowledge/procesos/arquitecto-procesos|Arquitecto de procesos]]
+- [[knowledge/comercial/director-comercial|Director comercial]]
+- [[processes/catalog/P33-diseno-y-validacion-to-be|P33 · Diseño y validación TO-BE]]
 - [[precedents/README|Biblioteca de precedentes]]
-- [[knowledge/procesos/automatizacion|Especialista en automatización]]
-- [[knowledge/ingenieria/arquitecto-tecnico|Arquitecto técnico]]
-- [[knowledge/ingenieria/backend|Especialista backend]]
-- [[knowledge/seguridad-legal/calidad-riesgos|Especialista en calidad y riesgos]]
-- [[knowledge/ingenieria/README|Ingeniería y tecnología]]
-- [[knowledge/ingenieria/evaluacion-ia|Especialista en evaluación de IA]]
-- [[knowledge/ingenieria/integraciones|Especialista en integraciones]]
-- [[processes/diagrams/ciclo-encargo|Ciclo completo de un encargo (P01 → P11)]]
-- [[knowledge/seguridad-legal/README|Seguridad, privacidad, legal y cumplimiento]]
-- [[integrations/catalog/README|Catálogo de integraciones]]
-- [[processes/runbooks/caida-proveedor-ia|Caída del proveedor de IA]]
+- [[knowledge/comercial/gestion-clientes|Especialista en éxito de cliente]]
+- [[processes/catalog/P32-descubrimiento-de-procesos|P32 · Descubrimiento de procesos]]
+- [[processes/catalog/P38-gestion-de-despliegue-por-cliente|P38 · Gestión de despliegue por cliente]]
+- [[knowledge/procesos/implantacion-clientes|Responsable de implantación de clientes]]
+- [[processes/catalog/P37-medicion-de-rendimiento-y-valor|P37 · Medición de rendimiento y valor]]
+- [[processes/catalog/P31-calificacion-de-oportunidad|P31 · Calificación de oportunidad]]
+- [[knowledge/procesos/metricas|Especialista en métricas]]
+- [[processes/catalog/P34-gestion-de-definiciones-de-proceso|P34 · Gestión de definiciones de proceso]]
+- [[knowledge/comercial/propuestas-licitaciones|Especialista en propuestas y licitaciones]]
+- [[processes/catalog/P35-gestion-de-instancias-y-excepciones|P35 · Gestión de instancias y excepciones]]
+- [[knowledge/procesos/README|Procesos y operaciones]]
+- [[knowledge/plantillas/README|Plantillas]]
+- [[knowledge/comercial/prospeccion|Especialista en prospección]]
+- [[knowledge/comercial/marketing-contenido|Especialista en marketing y contenido]]
+- [[docs/00-negocio|Negocio]]
+- [[processes/templates/proceso-cliente|<sector> · <proceso>]]
+- [[knowledge/comercial/README|Comercial y clientes]]
+- [[knowledge/metodologias-transversales/consultar-historico|Protocolo: consultar el histórico antes de empezar]]
+- [[knowledge/metodologias-transversales/investigar|Protocolo: investigar fuera]]
+- [[precedents/plantilla-incidente|Incidente: <título>]]
+- [[knowledge/metodologias-transversales/guardar|Protocolo: guardar el conocimiento]]
+- [[claude/habilidades/cualificacion-oportunidad|Cualificación de oportunidad]]
+- [[knowledge/metodologias-transversales/README|Metodologías transversales]]
+- [[precedents/plantilla-precedente|<título>]]
+- [[knowledge/plantillas/ficha-oportunidad|Oportunidad: <empresa> (ejemplo inventado hasta que exista una real)]]
+- [[knowledge/plantillas/entrada-decision|Entrada-decision]]
+- [[knowledge/plantillas/ficha-proveedor|Proveedor: <nombre>]]
+- [[knowledge/plantillas/ficha-conocimiento|Título]]
+- [[precedents/incidents/2026-11-pr1-fusionado-antes-del-ultimo-push|Incidente: PR #1 fusionado antes del último push]]
+- [[knowledge/plantillas/ficha-investigacion|Investigación: <pregunta>]]
 
 ## Procesos
 
-- [[processes/catalog/P30-gestion-de-identidades-y-secretos|P30 · Gestión de identidades y secretos]]
-- [[processes/catalog/P21-ejecucion-segura-de-herramientas|P21 · Ejecución segura de herramientas]]
-- [[processes/catalog/P10-aprobacion-humana|P10 · Aprobación humana]]
-- [[processes/catalog/P15-observabilidad-e-incidencias|P15 · Observabilidad e incidencias]]
-- [[processes/catalog/P23-evaluacion-de-agentes-y-modelos|P23 · Evaluación de agentes y modelos]]
-- [[processes/catalog/P04-recuperacion-de-conocimiento|P04 · Recuperación de conocimiento]]
-- [[processes/catalog/P07-ingesta-documental|P07 · Ingesta documental]]
-- [[processes/catalog/P08-ejecucion-de-tareas|P08 · Ejecución de tareas]]
-- [[processes/catalog/P14-gestion-de-permisos-y-aislamiento|P14 · Gestión de permisos y aislamiento]]
-- [[processes/catalog/P20-seguridad-de-entradas-e-inyeccion-de-instrucciones|P20 · Seguridad de entradas e inyección de instrucciones]]
-- [[processes/catalog/P18-evaluacion-y-mejora|P18 · Evaluación y mejora]]
-- [[processes/catalog/P09-control-de-calidad|P09 · Control de calidad]]
-- [[processes/catalog/P19-politica-de-uso-y-limites|P19 · Política de uso y límites]]
-- [[processes/catalog/P16-gobierno-de-modelos-e-instrucciones|P16 · Gobierno de modelos e instrucciones]]
-- [[processes/catalog/P17-seguridad-y-continuidad|P17 · Seguridad y continuidad]]
-- [[processes/catalog/P24-gestion-del-ciclo-de-vida-del-dato|P24 · Gestión del ciclo de vida del dato]]
-- [[processes/catalog/P36-gestion-del-catalogo-de-conectores|P36 · Gestión del catálogo de conectores]]
-- [[processes/catalog/P26-continuidad-y-recuperacion|P26 · Continuidad y recuperación]]
+- [[processes/catalog/P32-descubrimiento-de-procesos|P32 · Descubrimiento de procesos]]
+- [[processes/catalog/P38-gestion-de-despliegue-por-cliente|P38 · Gestión de despliegue por cliente]]
+- [[processes/catalog/P31-calificacion-de-oportunidad|P31 · Calificación de oportunidad]]
+- [[processes/catalog/P37-medicion-de-rendimiento-y-valor|P37 · Medición de rendimiento y valor]]
+- [[processes/catalog/P34-gestion-de-definiciones-de-proceso|P34 · Gestión de definiciones de proceso]]
+- [[processes/catalog/P35-gestion-de-instancias-y-excepciones|P35 · Gestión de instancias y excepciones]]
 
 ## Especialistas
 
-- [[knowledge/seguridad-legal/ciberseguridad|Especialista en ciberseguridad]]
-- [[knowledge/ingenieria/backend|Especialista backend]]
-- [[knowledge/seguridad-legal/legal-privacidad|Especialista legal y privacidad]]
-- [[knowledge/procesos/automatizacion|Especialista en automatización]]
-- [[knowledge/seguridad-legal/calidad-riesgos|Especialista en calidad y riesgos]]
-- [[knowledge/ingenieria/datos-ia|Arquitecto de datos e IA]]
-- [[knowledge/ingenieria/evaluacion-ia|Especialista en evaluación de IA]]
-- [[knowledge/direccion/bibliotecario|Bibliotecario / responsable de conocimiento]]
-- [[knowledge/ingenieria/integraciones|Especialista en integraciones]]
+- [[knowledge/procesos/arquitecto-procesos|Arquitecto de procesos]]
+- [[knowledge/procesos/metricas|Especialista en métricas]]
+- [[knowledge/comercial/gestion-clientes|Especialista en éxito de cliente]]
+- [[knowledge/comercial/director-comercial|Director comercial]]
+- [[knowledge/comercial/propuestas-licitaciones|Especialista en propuestas y licitaciones]]
+- [[knowledge/comercial/prospeccion|Especialista en prospección]]
+- [[knowledge/comercial/marketing-contenido|Especialista en marketing y contenido]]
 
 ## Fuentes
 
-- [[knowledge/grafo/fuentes/INT-GUIA|INT-GUIA · Guía de Arranque v1.4 (diseño cerrado)]]
-- [[knowledge/grafo/fuentes/OWASP-LLM-2025|OWASP-LLM-2025 · OWASP Top 10 for LLM Applications 2025]]
-- [[knowledge/grafo/fuentes/AEPD-AGENTICA|AEPD-AGENTICA · Inteligencia artificial agéntica desde la perspectiva de protección de datos]]
-- [[knowledge/grafo/fuentes/IETF-IDEMPOTENCY|IETF-IDEMPOTENCY · The Idempotency-Key HTTP Header Field (borrador 07)]]
-- [[knowledge/grafo/fuentes/PG-RLS|PG-RLS · Recomendaciones de seguridad a nivel de fila para SaaS multicliente]]
-- [[knowledge/grafo/fuentes/OSS-TEMPORAL|OSS-TEMPORAL · Temporal (motor de ejecución duradera)]]
-- [[knowledge/grafo/fuentes/OSS-DOCLING|OSS-DOCLING · Docling (conversión de documentos)]]
-- [[knowledge/grafo/fuentes/OSS-PRESIDIO|OSS-PRESIDIO · Microsoft Presidio (detección y anonimización de datos personales)]]
-- [[knowledge/grafo/fuentes/OSS-PROMPTFOO|OSS-PROMPTFOO · promptfoo (evaluación y pruebas adversariales de LLM)]]
-- [[knowledge/grafo/fuentes/OSS-SPIFF|OSS-SPIFF · SpiffWorkflow (motor BPMN/DMN en Python)]]
+- [[knowledge/grafo/fuentes/INT-ATLAS|INT-ATLAS · Atlas Evolución v1.1 · modelo operativo, procesos y despliegue]]
+- [[knowledge/grafo/fuentes/MEDDICC|MEDDICC · MEDDIC/MEDDPICC: método de cualificación B2B]]
+- [[knowledge/grafo/fuentes/BPMN-OMG|BPMN-OMG · BPMN 2.0.2 (ISO/IEC 19510)]]
+- [[knowledge/grafo/fuentes/PM-MANIFESTO|PM-MANIFESTO · Process Mining Manifesto]]

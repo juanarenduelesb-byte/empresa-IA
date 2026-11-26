@@ -1,45 +1,41 @@
 ---
 tipo: "mapa"
 comunidad: 9
-miembros: 21
-cohesion: 0.23
+miembros: 17
+cohesion: 0.27
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 9 · knowledge/direccion · CEO digital y Responsable de decisiones y seguimiento
+# Comunidad 9 · knowledge/administracion-finanzas · Director financiero (CFO) y P29 · Gestión de costes y capacidad
 
-21 nodos agrupados por el algoritmo de Louvain. Cohesión 0.23.
+17 nodos agrupados por el algoritmo de Louvain. Cohesión 0.27.
 
 ## Documentos
 
-- [[knowledge/direccion/ceo-digital|CEO digital]]
-- [[knowledge/direccion/decisiones-seguimiento|Responsable de decisiones y seguimiento]]
-- [[knowledge/direccion/bibliotecario|Bibliotecario / responsable de conocimiento]]
-- [[knowledge/direccion/README|Dirección y gobierno]]
-- [[processes/tests/README|Plan de pruebas de procesos]]
-- [[processes/README|Procesos]]
-- [[claude/habilidades/cinco-decisiones|Las cinco decisiones del CEO]]
-- [[processes/definitions/README|Definiciones ejecutables]]
+- [[knowledge/administracion-finanzas/direccion-financiera|Director financiero (CFO)]]
+- [[knowledge/administracion-finanzas/costes-proveedores|Especialista en costes y proveedores]]
+- [[knowledge/administracion-finanzas/financiero|Especialista financiero]]
+- [[knowledge/administracion-finanzas/README|Administración y finanzas]]
+- [[processes/runbooks/coste-anomalo|Coste anómalo]]
 
 ## Procesos
 
-- [[processes/catalog/P11-entrega-y-cierre|P11 · Entrega y cierre]]
-- [[processes/catalog/P01-alta-y-recepcion-de-peticion|P01 · Alta y recepción de petición]]
-- [[processes/catalog/P12-gestion-de-cambios|P12 · Gestión de cambios]]
-- [[processes/catalog/P25-gestion-de-cambios-y-versiones|P25 · Gestión de cambios y versiones]]
-- [[processes/catalog/P05-diseno-del-plan|P05 · Diseño del plan]]
-- [[processes/catalog/P06-asignacion-y-coordinacion|P06 · Asignación y coordinación]]
-- [[processes/catalog/P03-gestion-de-aclaraciones|P03 · Gestión de aclaraciones]]
+- [[processes/catalog/P29-gestion-de-costes-y-capacidad|P29 · Gestión de costes y capacidad]]
+- [[processes/catalog/P27-gestion-de-proveedores-y-dependencias|P27 · Gestión de proveedores y dependencias]]
 
 ## Especialistas
 
-- [[knowledge/direccion/ceo-digital|CEO digital]]
-- [[knowledge/direccion/decisiones-seguimiento|Responsable de decisiones y seguimiento]]
-- [[knowledge/ingenieria/arquitecto-tecnico|Arquitecto técnico]]
-- [[knowledge/procesos/implantacion-clientes|Responsable de implantación de clientes]]
+- [[knowledge/administracion-finanzas/costes-proveedores|Especialista en costes y proveedores]]
+- [[knowledge/administracion-finanzas/direccion-financiera|Director financiero (CFO)]]
+- [[knowledge/administracion-finanzas/financiero|Especialista financiero]]
 
 ## Fuentes
 
-- [[knowledge/grafo/fuentes/NIST-AI-600-1|NIST-AI-600-1 · AI RMF: Generative Artificial Intelligence Profile (NIST AI 600-1)]]
-- [[knowledge/grafo/fuentes/INT-DEC|INT-DEC · Registro de decisiones]]
+- [[knowledge/grafo/fuentes/PGC-PYMES|PGC-PYMES · Real Decreto 1515/2007, Plan General de Contabilidad de Pymes]]
+- [[knowledge/grafo/fuentes/OSS-CAMUNDA|OSS-CAMUNDA · Camunda 8: licencia para Self-Managed]]
+- [[knowledge/grafo/fuentes/OSS-N8N|OSS-N8N · n8n: Sustainable Use License]]
+- [[knowledge/grafo/fuentes/OSS-LANGFUSE|OSS-LANGFUSE · Langfuse (observabilidad de LLM)]]
+- [[knowledge/grafo/fuentes/CDTI-NEOTEC-2026|CDTI-NEOTEC-2026 · Programa NEOTEC 2026 (CDTI)]]
+- [[knowledge/grafo/fuentes/ENISA-2026|ENISA-2026 · ENISA: préstamos participativos (líneas 2026)]]
+- [[knowledge/grafo/fuentes/LEY-STARTUPS-28-2022|LEY-STARTUPS-28-2022 · Ley 28/2022, de fomento del ecosistema de las empresas emergentes]]

@@ -1,41 +1,31 @@
 ---
 tipo: "mapa"
 comunidad: 10
-miembros: 17
-cohesion: 0.27
+miembros: 15
+cohesion: 0.4
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 10 · knowledge/administracion-finanzas · Director financiero (CFO) y P29 · Gestión de costes y capacidad
+# Comunidad 10 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Conversaciones con IA y evaluación
 
-17 nodos agrupados por el algoritmo de Louvain. Cohesión 0.27.
+15 nodos agrupados por el algoritmo de Louvain. Cohesión 0.4.
 
 ## Documentos
 
-- [[knowledge/administracion-finanzas/direccion-financiera|Director financiero (CFO)]]
-- [[knowledge/administracion-finanzas/costes-proveedores|Especialista en costes y proveedores]]
-- [[knowledge/administracion-finanzas/financiero|Especialista financiero]]
-- [[knowledge/administracion-finanzas/README|Administración y finanzas]]
-- [[processes/runbooks/coste-anomalo|Coste anómalo]]
+- [[precedents/oficina/encargos/2026-11/2026-11-17-acta-de-proteccion-de-la-ia-y-examen-de-50-casos-6sxjn|Acta de protección de la IA y examen de 50 casos]]
+- [[precedents/oficina/chats/ia-y-evaluacion|Conversaciones con IA y evaluación]]
+- [[precedents/oficina/encargos/2026-11/2026-11-17-reunion-ia-y-evaluacion-y-seguridad-zyn2w|Reunión: IA y evaluación y Seguridad]]
+- [[precedents/oficina/chats/ceo-digital|Conversaciones con CEO digital]]
+- [[precedents/oficina/chats/plan-y-seguimiento|Conversaciones con Plan y seguimiento]]
+- [[precedents/oficina/chats/registro-de-decisiones|Conversaciones con Registro de decisiones]]
+- [[precedents/oficina/chats/bibliotecario|Conversaciones con Bibliotecario]]
+- [[docs/10-plan-12-semanas|Plan de construcción · 18/11/2026 → 12/02/2027]]
+- [[docs/22-plan-hasta-febrero|Plan de trabajo diario · 26/11/2026 → 28/02/2027]]
+- [[precedents/oficina/chats/seguridad|Conversaciones con Seguridad]]
+- [[docs/informes/README|Informes de la mañana]]
 
-## Procesos
+## Decisiones
 
-- [[processes/catalog/P29-gestion-de-costes-y-capacidad|P29 · Gestión de costes y capacidad]]
-- [[processes/catalog/P27-gestion-de-proveedores-y-dependencias|P27 · Gestión de proveedores y dependencias]]
-
-## Especialistas
-
-- [[knowledge/administracion-finanzas/costes-proveedores|Especialista en costes y proveedores]]
-- [[knowledge/administracion-finanzas/direccion-financiera|Director financiero (CFO)]]
-- [[knowledge/administracion-finanzas/financiero|Especialista financiero]]
-
-## Fuentes
-
-- [[knowledge/grafo/fuentes/PGC-PYMES|PGC-PYMES · Real Decreto 1515/2007, Plan General de Contabilidad de Pymes]]
-- [[knowledge/grafo/fuentes/OSS-CAMUNDA|OSS-CAMUNDA · Camunda 8: licencia para Self-Managed]]
-- [[knowledge/grafo/fuentes/OSS-N8N|OSS-N8N · n8n: Sustainable Use License]]
-- [[knowledge/grafo/fuentes/OSS-LANGFUSE|OSS-LANGFUSE · Langfuse (observabilidad de LLM)]]
-- [[knowledge/grafo/fuentes/CDTI-NEOTEC-2026|CDTI-NEOTEC-2026 · Programa NEOTEC 2026 (CDTI)]]
-- [[knowledge/grafo/fuentes/ENISA-2026|ENISA-2026 · ENISA: préstamos participativos (líneas 2026)]]
-- [[knowledge/grafo/fuentes/LEY-STARTUPS-28-2022|LEY-STARTUPS-28-2022 · Ley 28/2022, de fomento del ecosistema de las empresas emergentes]]
+- [[knowledge/grafo/decisiones/D-013|D-013 · Conocimiento y catálogo de procesos generados desde datos]]
+- [[knowledge/grafo/decisiones/D-017|D-017 · La oficina se vuelca cada noche a GitHub y las automatizaciones van por GitHub Actions]]

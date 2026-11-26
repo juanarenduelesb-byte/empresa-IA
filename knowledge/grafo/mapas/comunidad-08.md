@@ -1,52 +1,57 @@
 ---
 tipo: "mapa"
 comunidad: 8
-miembros: 37
-cohesion: 0.15
+miembros: 39
+cohesion: 0.46
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 8 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Registro de decisiones
+# Comunidad 8 · processes/catalog · P22 · Gestión de errores y reintentos y Catálogo de procesos P01–P38
 
-37 nodos agrupados por el algoritmo de Louvain. Cohesión 0.15.
+39 nodos agrupados por el algoritmo de Louvain. Cohesión 0.46.
 
 ## Documentos
 
-- [[precedents/oficina/encargos/2026-11/2026-11-17-acta-de-proteccion-de-la-ia-y-examen-de-50-casos-6sxjn|Acta de protección de la IA y examen de 50 casos]]
-- [[DECISIONS|Registro de decisiones]]
-- [[precedents/oficina/chats/ia-y-evaluacion|Conversaciones con IA y evaluación]]
-- [[precedents/oficina/encargos/2026-11/2026-11-17-reunion-ia-y-evaluacion-y-seguridad-zyn2w|Reunión: IA y evaluación y Seguridad]]
-- [[precedents/oficina/chats/ceo-digital|Conversaciones con CEO digital]]
-- [[docs/17-cerebro-y-procesos|17 · Cerebro, conocimiento y procesos: auditoría e informe]]
-- [[precedents/oficina/chats/plan-y-seguimiento|Conversaciones con Plan y seguimiento]]
-- [[precedents/oficina/chats/registro-de-decisiones|Conversaciones con Registro de decisiones]]
-- [[precedents/oficina/chats/bibliotecario|Conversaciones con Bibliotecario]]
-- [[docs/10-plan-12-semanas|Plan de construcción · 18/11/2026 → 12/02/2027]]
-- [[docs/19-obsidian|Obsidian: el cerebro abierto en tu equipo]]
-- [[precedents/oficina/chats/seguridad|Conversaciones con Seguridad]]
-- [[Inicio|Inicio · cerebro de Varios]]
-- [[docs/11-cerebro-en-claude|Cerebro en Claude]]
-- [[claude/instrucciones-proyecto|Instrucciones del proyecto "Varios · Cerebro" en Claude]]
-- [[docs/18-flujo-de-calidad-y-aprendizaje|18 · Flujo de calidad y aprendizaje continuo en la oficina]]
+- [[processes/catalog/README|Catálogo de procesos P01–P38]]
+- [[processes/catalog/P22-gestion-de-errores-y-reintentos|P22 · Gestión de errores y reintentos]]
+- [[processes/catalog/P27-gestion-de-proveedores-y-dependencias|P27 · Gestión de proveedores y dependencias]]
+- [[processes/catalog/P05-diseno-del-plan|P05 · Diseño del plan]]
+- [[processes/catalog/P11-entrega-y-cierre|P11 · Entrega y cierre]]
+- [[processes/catalog/P02-clasificacion-y-triaje|P02 · Clasificación y triaje]]
+- [[processes/catalog/P13-aprendizaje-y-actualizacion-de-la-wiki|P13 · Aprendizaje y actualización de la wiki]]
+- [[processes/catalog/P09-control-de-calidad|P09 · Control de calidad]]
+- [[processes/catalog/P21-ejecucion-segura-de-herramientas|P21 · Ejecución segura de herramientas]]
+- [[processes/catalog/P12-gestion-de-cambios|P12 · Gestión de cambios]]
+- [[processes/catalog/P23-evaluacion-de-agentes-y-modelos|P23 · Evaluación de agentes y modelos]]
+- [[processes/catalog/P30-gestion-de-identidades-y-secretos|P30 · Gestión de identidades y secretos]]
+- [[processes/catalog/P08-ejecucion-de-tareas|P08 · Ejecución de tareas]]
+- [[processes/catalog/P19-politica-de-uso-y-limites|P19 · Política de uso y límites]]
+- [[processes/catalog/P29-gestion-de-costes-y-capacidad|P29 · Gestión de costes y capacidad]]
+- [[processes/catalog/P16-gobierno-de-modelos-e-instrucciones|P16 · Gobierno de modelos e instrucciones]]
+- [[processes/catalog/P25-gestion-de-cambios-y-versiones|P25 · Gestión de cambios y versiones]]
+- [[processes/catalog/P20-seguridad-de-entradas-e-inyeccion-de-instrucciones|P20 · Seguridad de entradas e inyección de instrucciones]]
+- [[processes/catalog/P01-alta-y-recepcion-de-peticion|P01 · Alta y recepción de petición]]
+- [[processes/catalog/P10-aprobacion-humana|P10 · Aprobación humana]]
+- [[processes/catalog/P18-evaluacion-y-mejora|P18 · Evaluación y mejora]]
+- [[processes/catalog/P04-recuperacion-de-conocimiento|P04 · Recuperación de conocimiento]]
+- [[processes/catalog/P36-gestion-del-catalogo-de-conectores|P36 · Gestión del catálogo de conectores]]
+- [[processes/catalog/P14-gestion-de-permisos-y-aislamiento|P14 · Gestión de permisos y aislamiento]]
+- [[processes/catalog/P06-asignacion-y-coordinacion|P06 · Asignación y coordinación]]
+- [[processes/catalog/P15-observabilidad-e-incidencias|P15 · Observabilidad e incidencias]]
+- [[processes/catalog/P24-gestion-del-ciclo-de-vida-del-dato|P24 · Gestión del ciclo de vida del dato]]
+- [[processes/catalog/P28-gestion-de-incidentes|P28 · Gestión de incidentes]]
+- [[processes/catalog/P17-seguridad-y-continuidad|P17 · Seguridad y continuidad]]
+- [[processes/catalog/P07-ingesta-documental|P07 · Ingesta documental]]
+- [[processes/catalog/P26-continuidad-y-recuperacion|P26 · Continuidad y recuperación]]
+- [[processes/catalog/P03-gestion-de-aclaraciones|P03 · Gestión de aclaraciones]]
+- [[processes/runbooks/README|Runbooks]]
+- [[processes/runbooks/fuga-sospechada|Fuga de datos sospechada]]
+- [[processes/runbooks/workflow-fallido|Workflow bloqueado o fallido]]
+- [[processes/runbooks/restauracion|Restauración de copias]]
+- [[processes/runbooks/credencial-comprometida|Credencial comprometida]]
 
-## Decisiones
+## Procesos
 
-- [[knowledge/grafo/decisiones/D-013|D-013 · Conocimiento y catálogo de procesos generados desde datos]]
-- [[knowledge/grafo/decisiones/D-017|D-017 · La oficina se vuelca cada noche a GitHub y las automatizaciones van por GitHub Actions]]
-- [[knowledge/grafo/decisiones/D-012|D-012 · Las propuestas de cambios de Claude se aceptan solas]]
-- [[knowledge/grafo/decisiones/D-003|D-003 · Obsidian como interfaz humana]]
-- [[knowledge/grafo/decisiones/D-014|D-014 · Adelantar un prototipo mínimo del motor de procesos]]
-- [[knowledge/grafo/decisiones/D-010|D-010 · Diagramas como código]]
-- [[knowledge/grafo/decisiones/D-021|D-021 · El cerebro se abre en Obsidian: el repositorio es el vault]]
-- [[knowledge/grafo/decisiones/D-006|D-006 · Primer proceso piloto]]
-- [[knowledge/grafo/decisiones/D-018|D-018 · El cerebro pasa a ser un grafo de conocimiento con relaciones explicadas]]
-- [[knowledge/grafo/decisiones/D-001|D-001 · Arquitectura orientada a procesos]]
-- [[knowledge/grafo/decisiones/D-004|D-004 · PostgreSQL como fuente operativa]]
-- [[knowledge/grafo/decisiones/D-005|D-005 · Aislamiento multi-cliente]]
-- [[knowledge/grafo/decisiones/D-007|D-007 · Nombre provisional: Varios]]
-- [[knowledge/grafo/decisiones/D-015|D-015 · Entregables en archivos reales, memoria y Google Drive en la oficina de agentes]]
-- [[knowledge/grafo/decisiones/D-019|D-019 · Calidad exigente, todo pasa por un socio y cada rechazo se rehace aprendiendo]]
-- [[knowledge/grafo/decisiones/D-008|D-008 · Repositorio como memoria oficial y web visual]]
-- [[knowledge/grafo/decisiones/D-016|D-016 · Vista 3D de la oficina de agentes con Three.js]]
-- [[knowledge/grafo/decisiones/D-020|D-020 · Seis puestos nuevos en la oficina: CFO, contabilidad, éxito de cliente, plataforma, diseño y cumplimiento]]
+- [[processes/catalog/P22-gestion-de-errores-y-reintentos|P22 · Gestión de errores y reintentos]]
+- [[processes/catalog/P28-gestion-de-incidentes|P28 · Gestión de incidentes]]

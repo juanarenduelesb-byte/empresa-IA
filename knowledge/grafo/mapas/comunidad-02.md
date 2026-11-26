@@ -2,14 +2,14 @@
 tipo: "mapa"
 comunidad: 2
 miembros: 73
-cohesion: 0.1
+cohesion: 0.11
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 2 · knowledge/sectores · Registro de fuentes y Responsable de cumplimiento normativo
 
-73 nodos agrupados por el algoritmo de Louvain. Cohesión 0.1.
+73 nodos agrupados por el algoritmo de Louvain. Cohesión 0.11.
 
 ## Documentos
 
@@ -29,18 +29,19 @@ tags:
 - [[knowledge/sectores/priorizacion|Priorización de sectores]]
 - [[knowledge/sectores/README|Sectores]]
 - [[knowledge/plantillas/ficha-fuente|Ficha-fuente]]
-- [[knowledge/metodologias-transversales/investigar|Protocolo: investigar fuera]]
 - [[knowledge/procesos/sectores|Especialistas sectoriales]]
 
 ## Procesos
 
 - [[processes/catalog/P02-clasificacion-y-triaje|P02 · Clasificación y triaje]]
 - [[processes/catalog/P33-diseno-y-validacion-to-be|P33 · Diseño y validación TO-BE]]
+- [[processes/catalog/P19-politica-de-uso-y-limites|P19 · Política de uso y límites]]
 
 ## Especialistas
 
 - [[knowledge/seguridad-legal/cumplimiento|Responsable de cumplimiento normativo]]
 - [[knowledge/sectores/especialista-sectorial|Coordinación sectorial y seguros]]
+- [[knowledge/seguridad-legal/legal-privacidad|Especialista legal y privacidad]]
 - [[knowledge/ingenieria/plataforma-operaciones|Ingeniero de plataforma y operaciones (DevOps/SRE)]]
 - [[knowledge/administracion-finanzas/contabilidad|Especialista en contabilidad y facturación]]
 - [[knowledge/sectores/sector-sanidad|Experto en sanidad privada]]
@@ -58,7 +59,6 @@ tags:
 - [[knowledge/grafo/fuentes/UE-RIA-OMNIBUS|UE-RIA-OMNIBUS · Reglamento (UE) 2026/1744 (ómnibus digital sobre IA), que modifica el Reglamento (UE) 2024/1689]]
 - [[knowledge/grafo/fuentes/AEAT-FACTURA-CAL|AEAT-FACTURA-CAL · Factura electrónica obligatoria: calendario de implantación]]
 - [[knowledge/grafo/fuentes/ENS-RD311|ENS-RD311 · Real Decreto 311/2022, Esquema Nacional de Seguridad]]
-- [[knowledge/grafo/fuentes/ISO-27001|ISO-27001 · ISO/IEC 27001:2022 (transición desde 2013 terminada el 31/10/2025)]]
 - [[knowledge/grafo/fuentes/NIS2-DIRECTIVA|NIS2-DIRECTIVA · Directiva (UE) 2022/2555 (NIS2)]]
 - [[knowledge/grafo/fuentes/VERIFACTU-2028|VERIFACTU-2028 · Hacienda anuncia el aplazamiento de Verifactu a octubre de 2028]]
 - [[knowledge/grafo/fuentes/VERIFACTU-RDL15|VERIFACTU-RDL15 · Real Decreto-ley 15/2025: plazos de Verifactu]]

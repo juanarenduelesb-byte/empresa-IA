@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 1
-miembros: 97
+miembros: 98
 cohesion: 0.09
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 1 · claude/habilidades · Habilidades de los agentes y Administración
 
-97 nodos agrupados por el algoritmo de Louvain. Cohesión 0.09.
+98 nodos agrupados por el algoritmo de Louvain. Cohesión 0.09.
 
 ## Documentos
 
@@ -19,25 +19,25 @@ tags:
 - [[knowledge/agentes/back|Backend]]
 - [[knowledge/agentes/README|Agentes de la oficina]]
 - [[knowledge/agentes/proj|Arquitecto de procesos]]
-- [[knowledge/agentes/cfo|Director financiero]]
 - [[knowledge/agentes/comj|Jefe comercial]]
+- [[knowledge/agentes/cfo|Director financiero]]
 - [[knowledge/agentes/conta|Contabilidad y facturación]]
 - [[knowledge/agentes/ingj|Arquitecto técnico]]
-- [[knowledge/agentes/cump|Cumplimiento normativo]]
 - [[knowledge/agentes/prop|Propuestas]]
 - [[knowledge/agentes/leg|Legal y privacidad]]
 - [[knowledge/agentes/seg|Coordinación sectorial · Seguros]]
+- [[knowledge/agentes/cump|Cumplimiento normativo]]
 - [[knowledge/agentes/ceo|CEO digital]]
 - [[knowledge/agentes/pmo|Plan y seguimiento]]
 - [[knowledge/agentes/exito|Éxito de cliente]]
 - [[knowledge/agentes/pros|Prospección]]
-- [[knowledge/agentes/bib|Bibliotecario]]
 - [[knowledge/agentes/ops|Plataforma y operaciones]]
-- [[knowledge/agentes/val|Validación]]
+- [[knowledge/agentes/bib|Bibliotecario]]
 - [[knowledge/agentes/dec|Registro de decisiones]]
+- [[knowledge/agentes/val|Validación]]
 - [[knowledge/agentes/cont|Contenido]]
-- [[knowledge/agentes/ux|Diseño y experiencia]]
 - [[knowledge/agentes/sec|Seguridad]]
+- [[knowledge/agentes/ux|Diseño y experiencia]]
 - [[knowledge/agentes/kpi|Métricas]]
 - [[claude/habilidades/hecho-hipotesis-propuesta|Separar hecho, hipótesis y propuesta]]
 - [[knowledge/agentes/calj|Calidad y riesgo]]
@@ -73,4 +73,4 @@ tags:
 - [[claude/habilidades/plan-exito-cliente|Plan de éxito del cliente]]
 - [[claude/habilidades/propuesta-diagnostico|Propuesta de diagnóstico]]
 - [[claude/habilidades/preguntas-profesional|Preguntas para un profesional externo]]
-- … y 37 más
+- … y 38 más

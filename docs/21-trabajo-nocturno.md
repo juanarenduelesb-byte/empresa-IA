@@ -1,6 +1,10 @@
 # Trabajo nocturno de Claude
 
-Lista de trabajo que Claude hace solo, en tandas, mientras los socios no están. Cada tanda:
+Lista de la noche: las tareas que Juan ha elegido para esta noche, que Claude hace solo, en tandas, mientras los socios no están. El plan general, el ritual diario y el formato del informe de la mañana están en [22-plan-hasta-febrero.md](22-plan-hasta-febrero.md). Las tareas que no se terminan pasan a la noche siguiente si Juan lo decide.
+
+**Noche del 26/11/2026:** sesión principal desde las 02:00 y tandas a las 03:30, 05:00 y 06:00. La de las 06:00 escribe el informe a las 07:15.
+
+Cada tanda:
 
 1. Lee este archivo, `CLAUDE.md` y `DECISIONS.md`.
 2. Coge la **primera tarea sin marcar** de la lista (en orden). Al empezarla, cámbiala a `[~] (en curso, tanda N, hora)` y sube ese cambio enseguida: así dos tandas no hacen lo mismo. Una tarea `[~]` de hace menos de 3 horas está ocupada; sáltala. Termina cada tarea entera antes de pasar a la siguiente: mejor una bien hecha que tres a medias.

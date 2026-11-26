@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 6
-miembros: 53
-cohesion: 0.18
+miembros: 49
+cohesion: 0.2
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 6 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue
 
-53 nodos agrupados por el algoritmo de Louvain. Cohesión 0.18.
+49 nodos agrupados por el algoritmo de Louvain. Cohesión 0.2.
 
 ## Documentos
 
@@ -23,10 +23,10 @@ tags:
 - [[docs/fuentes/09_09_comunicaciones_estados|Comunicaciones estados]]
 - [[docs/atlas/08-seguridad|08 · Seguridad, identidad y aislamiento de clientes]]
 - [[docs/16-correcciones|Registro de correcciones a los documentos recibidos el 17/11/2026]]
-- [[docs/fuentes/Marco_Integral_Legal_Ciberseguridad_IA_Espana_UE_2026-11-16|Marco Integral Legal Ciberseguridad IA Espana UE 2026-11-16]]
 - [[README|Varios — repositorio maestro]]
 - [[docs/fuentes/05_05_seguridad_clientes|Seguridad clientes]]
 - [[docs/fuentes/08_08_ciclo_vida_proyecto|Ciclo vida proyecto]]
+- [[docs/fuentes/Marco_Integral_Legal_Ciberseguridad_IA_Espana_UE_2026-11-16|Marco Integral Legal Ciberseguridad IA Espana UE 2026-11-16]]
 - [[docs/atlas/07-conocimiento|07 · Motor de conocimiento con Obsidian]]
 - [[docs/atlas/README|Atlas de diagramas]]
 - [[docs/atlas/16-estados|16 · Estados de un encargo]]
@@ -35,20 +35,18 @@ tags:
 - [[docs/fuentes/07_07_infraestructura_portabilidad|Infraestructura portabilidad]]
 - [[docs/atlas/04-ejecucion|04 · Ejecución: motor de procesos, agentes y herramientas]]
 - [[docs/08-roadmap-y-decisiones|Roadmap y decisiones]]
-- [[docs/atlas/00-arquitectura|00 · Arquitectura del cerebro digital]]
 - [[docs/atlas/09-calidad|09 · Calidad, evaluación y aprobación humana]]
+- [[docs/atlas/00-arquitectura|00 · Arquitectura del cerebro digital]]
 - [[docs/atlas/15-componentes|15 · Conversación entre componentes]]
 - [[docs/atlas/03-decisiones-ceo|03 · Las cinco decisiones del CEO]]
 - [[docs/atlas/14-incidentes|14 · Operación y respuesta a incidentes]]
-- [[docs/atlas/01-organizacion|01 · Organización: modelo matricial]]
 - [[docs/05-agentes-procesos-e-integraciones|Agentes, procesos e integraciones]]
+- [[docs/atlas/01-organizacion|01 · Organización: modelo matricial]]
 - [[docs/atlas/11-infraestructura|11 · Infraestructura, desarrollo y portabilidad]]
 - [[docs/atlas/10-cambios-modelos|10 · Cambios y elección de modelos de IA]]
 - [[docs/atlas/13-ciclo-dato|13 · Ciclo de vida de un dato]]
 - [[docs/04-motor-de-conocimiento|Motor de conocimiento]]
-- [[knowledge/glosario/README|Glosario]]
 - [[docs/14-reglas-del-ceo|Reglas del CEO digital]]
-- [[knowledge/metodologias-transversales/contrastar|Protocolo: contrastar el conocimiento interno y el externo]]
 - [[docs/01-vision-y-modelo-operativo|Visión y modelo operativo]]
 - [[docs/07-calidad-infraestructura-y-operacion|Calidad, infraestructura y operación]]
 - [[docs/atlas/06-fallos|06 · Fallos, reintentos y recuperación]]
@@ -62,5 +60,4 @@ tags:
 
 ## Decisiones
 
-- [[knowledge/grafo/decisiones/D-009|D-009 · Unificación de puertas y estados]]
-- [[knowledge/grafo/decisiones/D-002|D-002 · Modelo matricial]]
+- [[knowledge/grafo/decisiones/D-007|D-007 · Nombre provisional: Varios]]

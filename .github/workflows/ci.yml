@@ -9,12 +9,28 @@ permissions:
 jobs:
   comprobar:
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_PASSWORD: solo-ci
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U postgres" --health-interval 5s --health-retries 10
+    env:
+      VARIOS_TEST_DATABASE_URL: postgresql+psycopg://postgres:solo-ci@localhost:5432/postgres
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install pytest
+      - run: pip install -e ".[dev]"
+      - name: Estilo (Ruff) del código nuevo
+        run: ruff check src migrations tests tools/pg_local.py
+      - name: Migraciones al día con los modelos
+        run: |
+          VARIOS_DATABASE_URL_ADMIN=$VARIOS_TEST_DATABASE_URL alembic upgrade head
+          VARIOS_DATABASE_URL_ADMIN=$VARIOS_TEST_DATABASE_URL alembic check
       - name: Pruebas
         run: python -m pytest -q
       - name: Revisión del repositorio (enlaces, fichas, agentes, secretos)

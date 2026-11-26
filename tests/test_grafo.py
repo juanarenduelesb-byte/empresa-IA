@@ -37,7 +37,10 @@ def test_limpio_quita_codigo_y_enlaces():
 
 def _brain(tmp_path):
     out = tmp_path / "brain.json"
-    subprocess.run([sys.executable, os.path.join(ROOT, "tools", "brain_build.py"), str(out)], check=True, cwd=ROOT, capture_output=True)
+    subprocess.run(
+        [sys.executable, os.path.join(ROOT, "tools", "brain_build.py"), str(out)],
+        check=True, cwd=ROOT, capture_output=True,
+    )
     return json.loads(out.read_text(encoding="utf-8"))
 
 
@@ -51,7 +54,11 @@ def test_grafo_valido_y_estable(tmp_path):
             assert (0 <= x < n) or (0 <= -1 - x < nchunks)
         assert g["rels"][r] != "parte_de"
         tag = g["tags"][t]
-        assert (tag == "EXTRACTADA" and s == 100) or (tag == "INFERIDA" and s in (65, 75, 85)) or (tag == "AMBIGUA" and s == 50)
+        assert (
+            (tag == "EXTRACTADA" and s == 100)
+            or (tag == "INFERIDA" and s in (65, 75, 85))
+            or (tag == "AMBIGUA" and s == 50)
+        )
     ids = {x[0] for x in g["nodos"]}
     for d in ("D-011", "P01", "ag:ceo", "hab:marca-varios", "esp:ceo-digital"):
         assert d in ids

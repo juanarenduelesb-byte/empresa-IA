@@ -169,6 +169,23 @@ No construir primero un CEO omnisciente; descubrir, diseñar, integrar y medir u
 - Riesgo: trabajo sin revisión que se acumula o se aleja del plan. Mitigación: cada tarea tiene un «hecho cuando» y sus pruebas, el informe dice qué comprobar y lo que falla, y Juan elige cada día.
 - Estado: propuesta.
 
+## D-023 — Base de datos real: PostgreSQL con RLS, auditoría inmutable y conocimiento con citas
+- Fecha: 2026-11-26
+- Decisión: adelanta S1–S2 del plan y parte de S3 y S7. Consiste en:
+  - una API FastAPI con `/health`;
+  - Docker Compose con PostgreSQL 16;
+  - el modelo de datos de S2 con Alembic (`src/varios/db/`, `migrations/`);
+  - RLS forzada en todas las tablas, con el cliente fijado por transacción;
+  - el usuario de aplicación `varios_app`, sin privilegios;
+  - auditoría que no se puede modificar ni borrar;
+  - tablas de conocimiento (`fuente`, `ficha_conocimiento`) con búsqueda en español que exige fuente.
+
+  Las pruebas corren contra PostgreSQL real, en CI como servicio. Detalle en `docs/24-base-de-datos.md`.
+- Tecnología nueva dentro del stack ya decidido: SQLAlchemy 2 (base de Alembic), psycopg 3 (controlador de PostgreSQL), uvicorn (servidor de FastAPI) y pydantic-settings (configuración por entorno). No añaden servicios ni coste.
+- Motivo: los socios pidieron una base de datos real esta noche, y el aislamiento entre clientes es la regla que más daño hace si falla. Mejor fijarla en la base de datos desde el primer día que añadirla después.
+- Riesgo: adelantar código antes de validar el proceso. Mitigación: el modelo es genérico (encargos, tareas, aprobaciones) y no depende del sector. El motor en memoria (D-014) sigue igual hasta S5.
+- Estado: propuesta.
+
 ## Decisiones pendientes (con fecha límite)
 | Decisión | Quién | Antes de |
 |---|---|---|

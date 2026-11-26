@@ -24,6 +24,8 @@ Este repositorio es **la memoria oficial del proyecto**. Si algo no está aquí,
 4. **El plan de construcción (hasta el 12/02/2027):** [docs/10-plan-12-semanas.md](docs/10-plan-12-semanas.md)
 5. **Cómo montar el cerebro en Claude:** [docs/11-cerebro-en-claude.md](docs/11-cerebro-en-claude.md)
 6. **Decisiones:** [DECISIONS.md](DECISIONS.md)
+7. **Base de datos y API (código):** [docs/24-base-de-datos.md](docs/24-base-de-datos.md). Arranque: `cp .env.example .env` y `docker compose up --build`.
+8. **Plan diario y trabajo nocturno de Claude:** [docs/22-plan-hasta-febrero.md](docs/22-plan-hasta-febrero.md) · informes en [docs/informes/](docs/informes/README.md)
 
 ## Documentación
 

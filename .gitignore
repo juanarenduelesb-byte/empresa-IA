@@ -15,3 +15,5 @@ __pycache__/
 .obsidian/cache
 .trash/
 .DS_Store
+
+!.env.example

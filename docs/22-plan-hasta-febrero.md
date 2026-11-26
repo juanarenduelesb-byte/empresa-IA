@@ -39,6 +39,25 @@ Siempre con estos apartados y en este orden, en español claro y sin jerga:
 8. **Propuesta para la próxima noche.** De tres a seis tareas del menú de la semana, con lo que cuesta cada una, para que Juan elija.
 9. **Problemas.** Lo que ha fallado o ha quedado a medias, sin maquillar.
 
+## Cómo se diseña: autonomía con pruebas
+
+La meta es una empresa que funcione con los dos socios y casi sin plantilla. Para llegar ahí sin que falle donde más duele (clientes regulados, dinero y responsabilidad legal), el diseño sigue estas reglas:
+
+1. **Proceso antes que agente.** Un agente solo existe si un proceso del catálogo lo necesita y hay forma de medir si lo hace bien. Cada mes se revisa quién sobra. Más agentes no es más inteligencia: es más coordinación y más coste.
+2. **La autonomía se gana con datos.** Cada proceso tiene un nivel de autonomía:
+   - A0: ayuda a una persona.
+   - A1: propone y una persona decide.
+   - A2: ejecuta con aprobación previa.
+   - A3: ejecuta y avisa.
+   - A4: autónomo con muestreo.
+
+   Un proceso sube de nivel cuando su examen y sus métricas lo justifican durante un periodo, y baja solo si falla. Lo externo, lo legal, lo financiero y lo contractual nunca pasa de A2 (`CLAUDE.md`).
+3. **Mejorar es medible.** Cada día, el histórico (encargos, correcciones y rechazos) produce lecciones. Las lecciones que se repiten se convierten en reglas o habilidades, y cada regla nueva entra con una prueba en el banco de evaluación. Si la puntuación no sube, no ha mejorado.
+4. **Memoria que se usa.** Antes de cada encargo, se consulta lo parecido que ya se ha hecho (D-019). Lo que no se consulta nunca se archiva.
+5. **Nada porque sí.** Toda pieza nueva, sea agente, herramienta o pantalla, responde a tres preguntas en `DECISIONS.md`: qué problema resuelve, cómo se mide y qué pasa si se quita.
+
+Tareas del menú que salen de aquí: mapa de autonomía por proceso (semana 2), auditoría de agentes y procesos para ver qué sobra (semana 2), bucle de mejora diaria con su examen (semanas 4 y 9) e identidad y forma de trabajar de la empresa (semana 3).
+
 ## Calendario semana a semana
 
 Cada semana lleva el tema del plan de 12 semanas más un menú de tareas nocturnas. Juan elige cada día del menú. Los socios hacen lo que dice la columna «Socios», que viene del plan de 12 semanas.
@@ -46,9 +65,9 @@ Cada semana lleva el tema del plan de 12 semanas más un menú de tareas nocturn
 | Semana | Fechas | Tema | Menú de tareas nocturnas | Socios |
 |---|---|---|---|---|
 | 1 | 26–29 nov | Entorno y base de datos | Lista de la primera noche ([21-trabajo-nocturno.md](21-trabajo-nocturno.md)): base de datos, cerebro, casos, legal, finanzas y plantillas | Cerrar las decisiones vencidas del 22/11; ficha AS-IS del proceso |
-| 2 | 30 nov–6 dic | Datos (S2) | Datos de ejemplo; la oficina guarda en la API y no en el navegador; inventario de la web actual y estructura de la web para clientes; glosario del sector | 20 casos revisados por Álvaro; 1.ª conversación de validación |
-| 3 | 7–13 dic | Seguridad (S3) | Autenticación y roles; RLS en PostgreSQL; entrada a la oficina para los dos socios; política de uso (P19) y matriz de aprobaciones en borrador | 2.ª conversación |
-| 4 | 14–20 dic | CEO limitado (S4) · **Control A** | Adaptador de modelos (simulado + Claude); las cinco decisiones con motivo; banco de 25 encargos; chat de la oficina conectado al CEO real | Probar el CEO con las trampas; 3.ª conversación |
+| 2 | 30 nov–6 dic | Datos (S2) | Mapa de autonomía por proceso; auditoría de agentes y procesos (qué sobra); datos de ejemplo; la oficina guarda en la API y no en el navegador; inventario de la web actual y estructura de la web para clientes; glosario del sector | 20 casos revisados por Álvaro; 1.ª conversación de validación |
+| 3 | 7–13 dic | Seguridad (S3) | Identidad de la empresa: manifiesto, forma de trabajar, voz y marca; autenticación y roles; RLS en PostgreSQL; entrada a la oficina para los dos socios; política de uso (P19) y matriz de aprobaciones en borrador | 2.ª conversación |
+| 4 | 14–20 dic | CEO limitado (S4) · **Control A** | Bucle de mejora diaria (histórico → lecciones → reglas → pruebas); adaptador de modelos (simulado + Claude); las cinco decisiones con motivo; banco de 25 encargos; chat de la oficina conectado al CEO real | Probar el CEO con las trampas; 3.ª conversación |
 | 5 | 21–27 dic | Motor persistente (S5) | Estados, reintentos e idempotencia en la base de datos; plan → tareas → agentes → calidad → aprobación en la oficina | Gestor: forma jurídica y facturación |
 | 6 | 28 dic–3 ene | Puerta de herramientas (S6) | Catálogo de capacidades; lista cerrada de herramientas; aprobación que pausa y reanuda; botón de parada | Descanso |
 | 7 | 4–10 ene | Conocimiento (S7) | Ingesta con huella y cuarentena; búsqueda con permisos y citas; el cerebro de la oficina pasa a la base de datos; ficha de cada cliente | 10 fichas con fuente; 4.ª conversación |

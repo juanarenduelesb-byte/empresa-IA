@@ -14,13 +14,14 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 - [[knowledge/grafo/mapas/comunidad-01|Comunidad 1 · claude/habilidades · Habilidades de los agentes y Administración]] (98 nodos)
 - [[knowledge/grafo/mapas/comunidad-02|Comunidad 2 · knowledge/sectores · Registro de fuentes y Responsable de cumplimiento normativo]] (73 nodos)
 - [[knowledge/grafo/mapas/comunidad-03|Comunidad 3 · knowledge/direccion · Dependencias entre procesos y CEO digital]] (69 nodos)
-- [[knowledge/grafo/mapas/comunidad-04|Comunidad 4 · precedents/oficina · Propuesta de proceso de referencia: siniestros en corredurías y Conversaciones con Coordinación sectorial · Seguros]] (58 nodos)
+- [[knowledge/grafo/mapas/comunidad-04|Comunidad 4 · precedents/oficina · Propuesta de proceso de referencia: siniestros en corredurías y Conversaciones con Coordinación sectorial · Seguros]] (56 nodos)
 - [[knowledge/grafo/mapas/comunidad-05|Comunidad 5 · processes/catalog · Índice del conocimiento de Varios y Arquitecto de procesos]] (53 nodos)
 - [[knowledge/grafo/mapas/comunidad-06|Comunidad 6 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue]] (49 nodos)
-- [[knowledge/grafo/mapas/comunidad-07|Comunidad 7 · docs · Registro de decisiones y Varios · empresa-ia]] (43 nodos)
+- [[knowledge/grafo/mapas/comunidad-07|Comunidad 7 · docs · Registro de decisiones y Varios · empresa-ia]] (42 nodos)
 - [[knowledge/grafo/mapas/comunidad-08|Comunidad 8 · processes/catalog · P22 · Gestión de errores y reintentos y Catálogo de procesos P01–P38]] (39 nodos)
 - [[knowledge/grafo/mapas/comunidad-09|Comunidad 9 · knowledge/administracion-finanzas · Director financiero (CFO) y P29 · Gestión de costes y capacidad]] (17 nodos)
-- [[knowledge/grafo/mapas/comunidad-10|Comunidad 10 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Conversaciones con IA y evaluación]] (15 nodos)
+- [[knowledge/grafo/mapas/comunidad-10|Comunidad 10 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Conversaciones con IA y evaluación]] (14 nodos)
+- [[knowledge/grafo/mapas/comunidad-11|Comunidad 11 · integrations · Integraciones y Contratos de datos]] (4 nodos)
 
 ## Nodos centrales
 
@@ -56,9 +57,9 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 ## Preguntas abiertas
 
 - ¿Por qué «Registro de fuentes» conecta la comunidad 2 con las comunidades 1, 3, 4, 5?  
-  Intermediación alta (0.163): es un puente entre temas.
+  Intermediación alta (0.162): es un puente entre temas.
 - ¿Por qué «Registro de decisiones» conecta la comunidad 7 con las comunidades 1, 2, 3, 4?  
-  Intermediación alta (0.104): es un puente entre temas.
+  Intermediación alta (0.103): es un puente entre temas.
 - ¿Por qué «Habilidades de los agentes» conecta la comunidad 1 con las comunidades 3, 4, 5?  
   Intermediación alta (0.097): es un puente entre temas.
 - ¿Se aprueba D-013 · Conocimiento y catálogo de procesos generados desde datos? Sigue en propuesta y la citan 12 secciones.  

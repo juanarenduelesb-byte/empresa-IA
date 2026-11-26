@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 7
-miembros: 43
-cohesion: 0.1
+miembros: 42
+cohesion: 0.12
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 7 · docs · Registro de decisiones y Varios · empresa-ia
 
-43 nodos agrupados por el algoritmo de Louvain. Cohesión 0.1.
+42 nodos agrupados por el algoritmo de Louvain. Cohesión 0.12.
 
 ## Documentos
 
@@ -18,18 +18,17 @@ tags:
 - [[knowledge/ingenieria/datos-ia|Arquitecto de datos e IA]]
 - [[docs/17-cerebro-y-procesos|17 · Cerebro, conocimiento y procesos: auditoría e informe]]
 - [[knowledge/ingenieria/arquitecto-tecnico|Arquitecto técnico]]
+- [[docs/10-plan-12-semanas|Plan de construcción · 18/11/2026 → 12/02/2027]]
+- [[docs/22-plan-hasta-febrero|Plan de trabajo diario · 26/11/2026 → 28/02/2027]]
 - [[docs/19-obsidian|Obsidian: el cerebro abierto en tu equipo]]
-- [[integrations/README|Integraciones]]
 - [[Inicio|Inicio · cerebro de Varios]]
 - [[knowledge/glosario/README|Glosario]]
 - [[knowledge/metodologias-transversales/contrastar|Protocolo: contrastar el conocimiento interno y el externo]]
 - [[docs/11-cerebro-en-claude|Cerebro en Claude]]
 - [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]]
-- [[integrations/contracts/README|Contratos de datos]]
-- [[integrations/tests/README|Pruebas de integración]]
 - [[claude/instrucciones-proyecto|Instrucciones del proyecto "Varios · Cerebro" en Claude]]
 - [[docs/18-flujo-de-calidad-y-aprendizaje|18 · Flujo de calidad y aprendizaje continuo en la oficina]]
-- [[integrations/connectors/README|Conectores]]
+- [[docs/informes/README|Informes de la mañana]]
 
 ## Decisiones
 
@@ -43,11 +42,11 @@ tags:
 - [[knowledge/grafo/decisiones/D-018|D-018 · El cerebro pasa a ser un grafo de conocimiento con relaciones explicadas]]
 - [[knowledge/grafo/decisiones/D-001|D-001 · Arquitectura orientada a procesos]]
 - [[knowledge/grafo/decisiones/D-004|D-004 · PostgreSQL como fuente operativa]]
+- [[knowledge/grafo/decisiones/D-019|D-019 · Calidad exigente, todo pasa por un socio y cada rechazo se rehace aprendiendo]]
 - [[knowledge/grafo/decisiones/D-022|D-022 · Trabajo nocturno de Claude con plan diario e informe de la mañana]]
 - [[knowledge/grafo/decisiones/D-002|D-002 · Modelo matricial]]
 - [[knowledge/grafo/decisiones/D-005|D-005 · Aislamiento multi-cliente]]
 - [[knowledge/grafo/decisiones/D-015|D-015 · Entregables en archivos reales, memoria y Google Drive en la oficina de agentes]]
-- [[knowledge/grafo/decisiones/D-019|D-019 · Calidad exigente, todo pasa por un socio y cada rechazo se rehace aprendiendo]]
 - [[knowledge/grafo/decisiones/D-008|D-008 · Repositorio como memoria oficial y web visual]]
 - [[knowledge/grafo/decisiones/D-016|D-016 · Vista 3D de la oficina de agentes con Three.js]]
 - [[knowledge/grafo/decisiones/D-020|D-020 · Seis puestos nuevos en la oficina: CFO, contabilidad, éxito de cliente, plataforma, diseño y cumplimiento]]

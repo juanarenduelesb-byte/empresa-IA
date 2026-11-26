@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 4
-miembros: 58
-cohesion: 0.16
+miembros: 56
+cohesion: 0.17
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 4 · precedents/oficina · Propuesta de proceso de referencia: siniestros en corredurías y Conversaciones con Coordinación sectorial · Seguros
 
-58 nodos agrupados por el algoritmo de Louvain. Cohesión 0.16.
+56 nodos agrupados por el algoritmo de Louvain. Cohesión 0.17.
 
 ## Documentos
 
@@ -40,7 +40,6 @@ tags:
 - [[precedents/projects/caso-correduria-atalaya/documentos/04-sistemas-y-restricciones|Sistemas, datos y restricciones · Atalaya (FICTICIO)]]
 - [[docs/12-simulacion|Simulación del cerebro]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-datos-de-prueba-a-coordinacion-sectorial-seguros-j4rxd|Datos de prueba → Coordinación sectorial · Seguros]]
-- [[precedents/oficina/encargos/2026-11/2026-11-23-lee-el-plan-de-construccion-y-prepara-la-lista-de-uqvwy|Lee el plan de construcción y prepara la lista de tareas de]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-metricas-a-calidad-y-riesgo-7jvup|Métricas → Calidad y riesgo]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-arquitecto-de-procesos-a-coordinacion-sectorial-seguros-hh6fv|Arquitecto de procesos → Coordinación sectorial · Seguros]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-validacion-a-coordinacion-sectorial-seguros-3yt5x|Validación → Coordinación sectorial · Seguros]]
@@ -62,7 +61,6 @@ tags:
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-legal-y-privacidad-a-calidad-y-riesgo-bn4hp|Legal y privacidad → Calidad y riesgo]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-validacion-a-calidad-y-riesgo-n73cv|Validación → Calidad y riesgo]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-datos-de-prueba-a-calidad-y-riesgo-6agmw|Datos de prueba → Calidad y riesgo]]
-- [[precedents/oficina/conversaciones/2026-11/2026-11-23-ceo-digital-a-plan-y-seguimiento-bywjc|CEO digital → Plan y seguimiento]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-arquitecto-de-procesos-a-calidad-y-riesgo-jsrqq|Arquitecto de procesos → Calidad y riesgo]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-ceo-digital-a-datos-de-prueba-3hi0e|CEO digital → Datos de prueba]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-ceo-digital-a-validacion-ccsjr|CEO digital → Validación]]

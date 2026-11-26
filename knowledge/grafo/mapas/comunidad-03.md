@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 3
-miembros: 76
-cohesion: 0.1
+miembros: 83
+cohesion: 0.08
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 3 · docs · Registro de decisiones y Varios · empresa-ia
 
-76 nodos agrupados por el algoritmo de Louvain. Cohesión 0.1.
+83 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
 
 ## Documentos
 
@@ -29,6 +29,7 @@ tags:
 - [[docs/08-roadmap-y-decisiones|Roadmap y decisiones]]
 - [[knowledge/plantillas/entregables/02-informe-diagnostico|Informe de diagnóstico · (Cliente) · (Proceso)]]
 - [[knowledge/plantillas/ficha-cliente|Plantilla · Ficha de cliente]]
+- [[docs/25-portal-interno|Portal interno: auditoría de la oficina y distribución propuesta (F1)]]
 - [[docs/19-obsidian|Obsidian: el cerebro abierto en tu equipo]]
 - [[knowledge/plantillas/entregables/03-diseno-to-be|Diseño del proceso nuevo (TO-BE) · (Cliente) · (Proceso)]]
 - [[knowledge/plantillas/entregables/04-plan-piloto|Plan de piloto · (Cliente) · (Proceso)]]
@@ -80,8 +81,14 @@ tags:
 ## Fuentes
 
 - [[knowledge/grafo/fuentes/LANGFUSE-CLOUD|LANGFUSE-CLOUD · Langfuse Cloud: planes y precios]]
+- [[knowledge/grafo/fuentes/BASECAMP-5|BASECAMP-5 · Basecamp 5: inicio orientado a la acción]]
 - [[knowledge/grafo/fuentes/LEI-VSM|LEI-VSM · Value Stream Mapping (léxico del Lean Enterprise Institute)]]
+- [[knowledge/grafo/fuentes/LINEAR-TRIAGE|LINEAR-TRIAGE · Linear: Triage e Inbox]]
 - [[knowledge/grafo/fuentes/MOM-TEST|MOM-TEST · The Mom Test (Rob Fitzpatrick): cómo hablar con clientes sin que te mientan]]
+- [[knowledge/grafo/fuentes/ZAPIER-HITL|ZAPIER-HITL · Zapier: Human in the Loop (pedir aprobación para seguir)]]
+- [[knowledge/grafo/fuentes/APPLE-HIG-TAB-BARS|APPLE-HIG-TAB-BARS · Human Interface Guidelines: Tab bars]]
 - [[knowledge/grafo/fuentes/CMU-RUBRICAS|CMU-RUBRICAS · Creating and Using Rubrics]]
+- [[knowledge/grafo/fuentes/GITHUB-NOTIF-INBOX|GITHUB-NOTIF-INBOX · GitHub: gestionar notificaciones desde el inbox]]
 - [[knowledge/grafo/fuentes/MINTO-PIRAMIDE|MINTO-PIRAMIDE · The Pyramid Principle (Barbara Minto): la respuesta primero y la estructura situación, complicación, pregunta y respuesta]]
+- [[knowledge/grafo/fuentes/NNG-HIDDEN-NAV|NNG-HIDDEN-NAV · Hamburger Menus and Hidden Navigation Hurt UX Metrics]]
 - [[knowledge/grafo/fuentes/RIA-2024-1689|RIA-2024-1689 · Reglamento (UE) 2024/1689, de inteligencia artificial]]

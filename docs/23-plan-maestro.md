@@ -87,7 +87,7 @@ Cada fila es una capacidad que una consultora seria tiene que tener. «Hoy» des
 | ID | Capacidad | Hoy | Objetivo 28/02 | P | Quién |
 |---|---|---|---|---|---|
 | M-010 | Validación: 10 conversaciones con quien hace el proceso | Guion de preguntas en el proceso de referencia | Seis o más hechas y resumidas, AS-IS validado | P0 | Álvaro; Noche prepara guiones y resúmenes (B3) |
-| M-011 | Perfil de cliente ideal y nicho | Candidato: corredurías medianas | Decidido con criterios y 40 empresas que encajan | P1 | Los dos; Noche investiga fuentes públicas |
+| M-011 | Perfil de cliente ideal y nicho | Candidato: corredurías medianas. Segunda línea: el [estudio de Álvaro](../knowledge/estudios/2026-11-26-prospectos-pymes-alvaro/README.md) con 75 pymes de 5 sectores (26/11) | Decidido con criterios y 40 empresas que encajan | P1 | Los dos; Noche investiga fuentes públicas |
 | M-012 | Precio de cada fase | Por decidir | Precio de diagnóstico y piloto con su cálculo de coste y margen | P1 | Los dos; Noche hace el modelo (D2) |
 | M-013 | Propuesta de diagnóstico | No existe | Plantilla con precio, alcance, exclusiones y condiciones | P1 | Noche (E1), revisión de los socios |
 | M-014 | CRM: contactos, oportunidades, seguimiento | No existe | Tabla de oportunidades en la base de datos o en una hoja, unida a la oficina | P1 | Noche |

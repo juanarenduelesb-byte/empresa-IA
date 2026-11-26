@@ -135,7 +135,7 @@ def dep_readme(d):
 
 # ---------------- Navegación ----------------
 TAREAS = [
-    ("propuesta-comercial", "Preparar una propuesta o responder a un pliego", ["propuestas-licitaciones", "director-comercial"], ["legal-privacidad", "ciberseguridad", "costes-proveedores"], ["P31", "P38"], ["docs/00-negocio.md", "knowledge/comercial/", "knowledge/seguridad-legal/"], "Comercial consulta a Legal antes de cualquier cláusula contractual."),
+    ("propuesta-comercial", "Preparar una propuesta o responder a un pliego", ["propuestas-licitaciones", "director-comercial"], ["legal-privacidad", "ciberseguridad", "costes-proveedores"], ["P31", "P38"], ["docs/00-negocio.md", "knowledge/comercial/", "knowledge/estudios/", "knowledge/seguridad-legal/"], "Comercial consulta a Legal antes de cualquier cláusula contractual."),
     ("validacion", "Preparar o resumir una conversación de validación", ["director-comercial"], ["arquitecto-procesos", "especialista-sectorial"], ["P32"], ["processes/referencia-seguros-apertura-siniestros/README.md", "docs/10-plan-12-semanas.md"], "Se escucha, no se vende (D-011)."),
     ("descubrir-proceso", "Descubrir o diseñar un proceso de cliente", ["arquitecto-procesos"], ["especialista-sectorial", "metricas", "legal-privacidad"], ["P32", "P33", "P34"], ["processes/templates/proceso-cliente.md", "knowledge/sectores/README.md"], "Validar con quien ejecuta el proceso."),
     ("automatizacion", "Diseñar una automatización", ["automatizacion", "arquitecto-procesos"], ["arquitecto-tecnico", "ciberseguridad"], ["P08", "P21", "P22", "P36"], ["integrations/catalog/README.md", "processes/definitions/"], "Procesos consulta a Ingeniería antes de diseñar una automatización."),
@@ -172,7 +172,7 @@ def navegacion():
             if e["dep"] == d[0]:
                 s += "- [%s](%s)%s\n" % (e["nombre"], rel(fn, efile(e)), " · sin puesto en la oficina" if not e["oficina"] else "")
         s += "\n"
-    s += "## Transversal\n\n- [Fuentes](fuentes/registro.md) · [Metodologías](metodologias-transversales/README.md) · [Plantillas](plantillas/README.md) · [Glosario](glosario/README.md)\n- [Catálogo de procesos P01–P38](../processes/catalog/README.md) · [Integraciones](../integrations/catalog/README.md) · [Precedentes](../precedents/README.md) · [Gobierno](../governance/README.md)\n"
+    s += "## Transversal\n\n- [Fuentes](fuentes/registro.md) · [Metodologías](metodologias-transversales/README.md) · [Plantillas](plantillas/README.md) · [Glosario](glosario/README.md) · [Estudios](estudios/README.md)\n- [Catálogo de procesos P01–P38](../processes/catalog/README.md) · [Integraciones](../integrations/catalog/README.md) · [Precedentes](../precedents/README.md) · [Gobierno](../governance/README.md)\n"
     OUT[fn] = s
 
 

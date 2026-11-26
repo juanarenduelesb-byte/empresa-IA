@@ -81,8 +81,8 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 | [GAP-LEY10-ASEG](#gap-ley10-aseg) | Cómo afecta a las aseguradoras la Ley 10/2025 de servicios de atención a la clientela | prensa-especializada | media | vigente | draft |
 | [ADCF-MONCLOA-2026](#adcf-moncloa-2026) | Autoridad Administrativa Independiente de Defensa del Cliente Financiero: compromiso de retomar la tramitación | prensa-especializada | alta | en-tramitacion | draft |
 | [RDLEG-8-2004](#rdleg-8-2004) | Real Decreto Legislativo 8/2004, texto refundido de la Ley sobre responsabilidad civil y seguro en la circulación de vehículos a motor | obligacion-legal | alta | vigente | validated |
-| [LEY-35-2015](#ley-35-2015) | Ley 35/2015, de reforma del sistema para la valoración de los daños y perjuicios causados a las personas en accidentes de circulación | obligacion-legal | alta | vigente | draft |
-| [LEY-5-2025](#ley-5-2025) | Ley 5/2025, de 24 de julio, que modifica el texto refundido de responsabilidad civil y seguro de vehículos a motor y la Ley 20/2015 | obligacion-legal | media | vigente | draft |
+| [LEY-35-2015](#ley-35-2015) | Ley 35/2015, de reforma del sistema para la valoración de los daños y perjuicios causados a las personas en accidentes de circulación | obligacion-legal | alta | vigente | validated |
+| [LEY-5-2025](#ley-5-2025) | Ley 5/2025, de 24 de julio, por la que se modifican el texto refundido de la Ley sobre responsabilidad civil y seguro en la circulación de vehículos a motor y la Ley 20/2015 | obligacion-legal | alta | vigente | validated |
 | [BAREMO-2026](#baremo-2026) | Resolución de 3 de febrero de 2026, de la DGSFP, cuantías actualizadas del baremo de tráfico | obligacion-legal | alta | vigente | validated |
 | [RDLEG-7-2004-CCS](#rdleg-7-2004-ccs) | Real Decreto Legislativo 7/2004, texto refundido del Estatuto Legal del Consorcio de Compensación de Seguros | obligacion-legal | alta | vigente | validated |
 | [RD-300-2004](#rd-300-2004) | Real Decreto 300/2004, Reglamento del seguro de riesgos extraordinarios | obligacion-legal | alta | vigente | validated |
@@ -322,12 +322,12 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 <a id="rdl-3-2020"></a>
 ### RDL-3-2020
 - **Título:** Real Decreto-ley 3/2020, libro II: distribución de seguros y reaseguros privados
-- **Autor u organismo:** BOE
-- **URL:** <https://www.boe.es/buscar/act.php?id=BOE-A-2020-1651>
-- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** BOE núm. 31, 05/02/2020; leído en copia íntegra del texto original (Consellería de Facenda de Galicia), falta cotejar el consolidado
+- **Autor u organismo:** BOE (texto consolidado)
+- **URL:** <https://www.boe.es/eli/es/rdl/2020/02/04/3/con>
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** consolidado, última actualización 26/12/2025 (leído el 26/11/2026); los art. 129, 136, 155 y 166 conservan su redacción original
 - **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** Coordinación sectorial y seguros
-- **Nota:** Transpone la Directiva (UE) 2016/97 (IDD). Art. 129.1: la distribución incluye la asistencia en caso de siniestro. Art. 136.3–4: cuentas de clientes separadas. Art. 155.1 y 155.3: el corredor asesora de forma independiente y presta asistencia y asesoramiento en caso de siniestro. Art. 157.1 f–g: capacidad financiera y RC profesional (importes actualizados en DGSFP-IMPORTES-2024). Art. 166–168: servicio de atención al cliente y defensor del cliente. Contrastado con Pérez-Llorca (2021).
+- **Nota:** Transpone la Directiva (UE) 2016/97 (IDD). Art. 129.1: la distribución incluye la asistencia en caso de siniestro. Art. 136.3: el mediador es depositario de lo que cobra a sus clientes; 136.4: cuentas de clientes separadas. Art. 155.1 y 155.3: el corredor asesora de forma independiente y presta asistencia y asesoramiento en caso de siniestro. Art. 157.1 f–g: capacidad financiera y RC profesional (importes actualizados en DGSFP-IMPORTES-2024). Art. 166–168: servicio de atención al cliente, que se puede externalizar, y defensor del cliente. Contrastado con Pérez-Llorca (2021).
 
 <a id="rd-287-2021"></a>
 ### RD-287-2021
@@ -863,20 +863,20 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Título:** Ley 35/2015, de reforma del sistema para la valoración de los daños y perjuicios causados a las personas en accidentes de circulación
 - **Autor u organismo:** BOE
 - **URL:** <https://www.boe.es/eli/es/l/2015/09/22/35>
-- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** BOE 23/09/2015 (BOE-A-2015-10197)
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** BOE 23/09/2015 (BOE-A-2015-10197); en vigor 01/01/2016 (DF 5.ª)
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** —
-- **Nota:** Modifica el RDLeg 8/2004; no se pudo leer el texto esta noche. Usar el consolidado de RDLEG-8-2004.
+- **Nota:** Modifica el RDLeg 8/2004 e introduce el baremo vigente. Para el texto actual, usar el consolidado de RDLEG-8-2004.
 
 <a id="ley-5-2025"></a>
 ### LEY-5-2025
-- **Título:** Ley 5/2025, de 24 de julio, que modifica el texto refundido de responsabilidad civil y seguro de vehículos a motor y la Ley 20/2015
-- **Autor u organismo:** ICAM y Congreso (resumen y comparativo)
-- **URL:** <https://web.icam.es/ley-5-2025-de-24-de-julio-por-la-que-se-modifican-el-texto-refundido-de-la-ley-sobre-responsabilidad-civil-y-seguro-en-la-circulacion-de-vehiculos-a-motor-aprobado-por-el-real-decreto-legislativo-8/>
-- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** BOE 25/07/2025 (BOE-A-2025-15424); en vigor 26/07/2025
-- **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Título:** Ley 5/2025, de 24 de julio, por la que se modifican el texto refundido de la Ley sobre responsabilidad civil y seguro en la circulación de vehículos a motor y la Ley 20/2015
+- **Autor u organismo:** BOE
+- **URL:** <https://www.boe.es/eli/es/l/2025/07/24/5>
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** BOE 25/07/2025 (BOE-A-2025-15424); en vigor 26/07/2025, con excepciones (DF 9.ª)
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** —
-- **Nota:** Actualiza el baremo con el IPC y reforma el art. 7 (la reclamación no tiene que ir cuantificada; la oferta incluye el informe médico definitivo). No se pudo abrir el BOE: falta leerlo.
+- **Nota:** Nuevo art. 7: la reclamación extrajudicial no tiene que ir cuantificada (7.1) y la oferta motivada incluye el informe médico pericial definitivo, sin el cual no podrá aportarse después en juicio (7.3 c). Art. 37.3: la oferta sin ese informe no es válida. Art. 49: actualización automática con el IPC cada 1 de enero. Contrastado con el ICAM.
 
 <a id="baremo-2026"></a>
 ### BAREMO-2026
@@ -982,11 +982,11 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 ### UNESPA-SDM
 - **Título:** Reglamento articulado del Sistema Siniestros Daños Materiales (SDM)
 - **Autor u organismo:** UNESPA
-- **URL:** <https://www.unespa.es/main-files/uploads/2017/05/reglamento-SDM.pdf>
-- **Tipo:** buena-practica · **Jurisdicción:** ES · **Versión o fecha:** 01/01/2014
+- **URL:** <https://www.unespa.es/convenios/sistema-sdm-siniestros-danos-materiales/>
+- **Tipo:** buena-practica · **Jurisdicción:** ES · **Versión o fecha:** reglamento de 01/01/2014; página de UNESPA consultada 26/11/2026
 - **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
-- **Nota:** Cubre lo que no va por el convenio de indemnización directa: más de dos vehículos, sin colisión directa, cargas desprendidas, daños a otros bienes. Sin comprobar si sigue vigente en 2026.
+- **Nota:** Cubre lo que no va por el convenio de indemnización directa: más de dos vehículos, sin colisión directa, cargas desprendidas, daños a otros bienes. UNESPA lo sigue publicando y el convenio de 2026 no lo sustituye (refunde CIDE y ASCIDE, no el SDM). No se ha encontrado una declaración expresa de vigencia; TIREA no se pudo consultar.
 
 <a id="cnmc-cide-2014"></a>
 ### CNMC-CIDE-2014

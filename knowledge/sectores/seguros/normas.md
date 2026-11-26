@@ -30,7 +30,7 @@ tags:
 - El dinero de los clientes va por **cuentas separadas** de los recursos del corredor (art. 136.3 y 136.4). Capacidad financiera y seguro de RC profesional obligatorios (art. 157.1 f y g); importes actualizados desde el 09/10/2024 ([DGSFP-IMPORTES-2024](../../fuentes/registro.md#dgsfp-importes-2024)).
 - Corredores y aseguradoras atienden y resuelven quejas y reclamaciones con un departamento o servicio de atención al cliente, o un defensor del cliente cuya decisión favorable al cliente les vincula (art. 166–168).
 
-Lectura hecha sobre una copia íntegra del texto original de 2020; falta cotejar el consolidado del BOE.
+Cotejado con el texto consolidado del BOE (última actualización 26/12/2025): estos artículos conservan su redacción original.
 
 ## Libros-registro del corredor
 - El corredor lleva libros-registro preferentemente informáticos, a disposición de la DGSFP y con un retraso máximo de **3 meses**; se conservan según la legislación mercantil ([RD-287-2021](../../fuentes/registro.md#rd-287-2021), art. 14).
@@ -52,10 +52,10 @@ Lectura hecha sobre una copia íntegra del texto original de 2020; falta cotejar
 **Qué implica para el proceso:** una comunicación de siniestro no es una reclamación, pero un mensaje puede traer las dos cosas. Si trae una queja, sale del flujo de apertura (EX-07). Si el cliente pide una persona, se le pasa a una persona (EX-08). **Esto afecta a nuestro producto:** cualquier canal automatizado que montemos para una correduría tiene que ofrecer persona en todo momento.
 
 ## Automóviles: oferta motivada, baremo y convenios
-- En el seguro obligatorio de automóviles, el asegurador presenta una **oferta motivada** de indemnización en **3 meses** desde la reclamación del perjudicado, o una respuesta motivada si no acepta la responsabilidad o no puede cuantificar el daño ([RDLEG-8-2004](../../fuentes/registro.md#rdleg-8-2004), art. 7.2). Tras la Ley 5/2025, la reclamación no tiene que ir cuantificada ([LEY-5-2025](../../fuentes/registro.md#ley-5-2025), resumen secundario).
+- En el seguro obligatorio de automóviles, el asegurador presenta una **oferta motivada** de indemnización en **3 meses** desde la reclamación del perjudicado, o una respuesta motivada si no acepta la responsabilidad o no puede cuantificar el daño ([RDLEG-8-2004](../../fuentes/registro.md#rdleg-8-2004), art. 7.2). Desde la Ley 5/2025, la reclamación no tiene que ir cuantificada, y la oferta motivada debe incluir el informe médico pericial definitivo: sin él no es válida ([LEY-5-2025](../../fuentes/registro.md#ley-5-2025), art. 7 y 37.3).
 - Los daños a las personas se valoran con el **baremo** del título IV y el anexo del RDLeg 8/2004, introducido por la Ley 35/2015 ([LEY-35-2015](../../fuentes/registro.md#ley-35-2015)). Las cuantías de 2026 suben un 2,9 % con efecto 01/01/2026, y las tablas se publican en la web de la DGSFP ([BAREMO-2026](../../fuentes/registro.md#baremo-2026)). **La IA nunca calcula una indemnización por baremo para un cliente.**
 - Daños materiales en una **colisión directa entre dos vehículos** con seguro obligatorio: convenio de indemnización directa entre aseguradoras, que desde abril de 2026 refunde CIDE, ASCIDE y CICOS. La responsabilidad se fija con la **declaración amistosa de accidente** o, sin ella, con las declaraciones de los asegurados (art. 6). TIREA lo gestiona ([UNESPA-CONVENIO-2026](../../fuentes/registro.md#unespa-convenio-2026); historia en [CNMC-CIDE-2014](../../fuentes/registro.md#cnmc-cide-2014)).
-- Lo que el convenio no cubre (más de dos vehículos, sin colisión directa, cargas desprendidas, daños a otros bienes) va por el SDM ([UNESPA-SDM](../../fuentes/registro.md#unespa-sdm), vigencia por confirmar).
+- Lo que el convenio no cubre (más de dos vehículos, sin colisión directa, cargas desprendidas, daños a otros bienes) va por el SDM ([UNESPA-SDM](../../fuentes/registro.md#unespa-sdm); UNESPA lo sigue publicando y el convenio de 2026 no lo sustituye).
 
 **Qué implica para el proceso:** la correduría no decide si aplica el convenio; lo decide la aseguradora. Pero saber que es un caso de convenio cambia qué datos hay que pedir (sobre todo la declaración amistosa).
 

@@ -264,15 +264,15 @@
   {
    "id": "RDL-3-2020",
    "titulo": "Real Decreto-ley 3/2020, libro II: distribución de seguros y reaseguros privados",
-   "organismo": "BOE",
-   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2020-1651",
+   "organismo": "BOE (texto consolidado)",
+   "url": "https://www.boe.es/eli/es/rdl/2020/02/04/3/con",
    "tipo": "obligacion-legal",
    "jurisdiccion": "ES",
-   "version": "BOE núm. 31, 05/02/2020; leído en copia íntegra del texto original (Consellería de Facenda de Galicia), falta cotejar el consolidado",
+   "version": "consolidado, última actualización 26/12/2025 (leído el 26/11/2026); los art. 129, 136, 155 y 166 conservan su redacción original",
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "validated",
-   "nota": "Transpone la Directiva (UE) 2016/97 (IDD). Art. 129.1: la distribución incluye la asistencia en caso de siniestro. Art. 136.3–4: cuentas de clientes separadas. Art. 155.1 y 155.3: el corredor asesora de forma independiente y presta asistencia y asesoramiento en caso de siniestro. Art. 157.1 f–g: capacidad financiera y RC profesional (importes actualizados en DGSFP-IMPORTES-2024). Art. 166–168: servicio de atención al cliente y defensor del cliente. Contrastado con Pérez-Llorca (2021)."
+   "nota": "Transpone la Directiva (UE) 2016/97 (IDD). Art. 129.1: la distribución incluye la asistencia en caso de siniestro. Art. 136.3: el mediador es depositario de lo que cobra a sus clientes; 136.4: cuentas de clientes separadas. Art. 155.1 y 155.3: el corredor asesora de forma independiente y presta asistencia y asesoramiento en caso de siniestro. Art. 157.1 f–g: capacidad financiera y RC profesional (importes actualizados en DGSFP-IMPORTES-2024). Art. 166–168: servicio de atención al cliente, que se puede externalizar, y defensor del cliente. Contrastado con Pérez-Llorca (2021)."
   },
   {
    "id": "RD-287-2021",
@@ -970,24 +970,24 @@
    "url": "https://www.boe.es/eli/es/l/2015/09/22/35",
    "tipo": "obligacion-legal",
    "jurisdiccion": "ES",
-   "version": "BOE 23/09/2015 (BOE-A-2015-10197)",
+   "version": "BOE 23/09/2015 (BOE-A-2015-10197); en vigor 01/01/2016 (DF 5.ª)",
    "autoridad": "alta",
    "vigencia": "vigente",
-   "estado": "draft",
-   "nota": "Modifica el RDLeg 8/2004; no se pudo leer el texto esta noche. Usar el consolidado de RDLEG-8-2004."
+   "estado": "validated",
+   "nota": "Modifica el RDLeg 8/2004 e introduce el baremo vigente. Para el texto actual, usar el consolidado de RDLEG-8-2004."
   },
   {
    "id": "LEY-5-2025",
-   "titulo": "Ley 5/2025, de 24 de julio, que modifica el texto refundido de responsabilidad civil y seguro de vehículos a motor y la Ley 20/2015",
-   "organismo": "ICAM y Congreso (resumen y comparativo)",
-   "url": "https://web.icam.es/ley-5-2025-de-24-de-julio-por-la-que-se-modifican-el-texto-refundido-de-la-ley-sobre-responsabilidad-civil-y-seguro-en-la-circulacion-de-vehiculos-a-motor-aprobado-por-el-real-decreto-legislativo-8/",
+   "titulo": "Ley 5/2025, de 24 de julio, por la que se modifican el texto refundido de la Ley sobre responsabilidad civil y seguro en la circulación de vehículos a motor y la Ley 20/2015",
+   "organismo": "BOE",
+   "url": "https://www.boe.es/eli/es/l/2025/07/24/5",
    "tipo": "obligacion-legal",
    "jurisdiccion": "ES",
-   "version": "BOE 25/07/2025 (BOE-A-2025-15424); en vigor 26/07/2025",
-   "autoridad": "media",
+   "version": "BOE 25/07/2025 (BOE-A-2025-15424); en vigor 26/07/2025, con excepciones (DF 9.ª)",
+   "autoridad": "alta",
    "vigencia": "vigente",
-   "estado": "draft",
-   "nota": "Actualiza el baremo con el IPC y reforma el art. 7 (la reclamación no tiene que ir cuantificada; la oferta incluye el informe médico definitivo). No se pudo abrir el BOE: falta leerlo."
+   "estado": "validated",
+   "nota": "Nuevo art. 7: la reclamación extrajudicial no tiene que ir cuantificada (7.1) y la oferta motivada incluye el informe médico pericial definitivo, sin el cual no podrá aportarse después en juicio (7.3 c). Art. 37.3: la oferta sin ese informe no es válida. Art. 49: actualización automática con el IPC cada 1 de enero. Contrastado con el ICAM."
   },
   {
    "id": "BAREMO-2026",
@@ -1123,14 +1123,14 @@
    "id": "UNESPA-SDM",
    "titulo": "Reglamento articulado del Sistema Siniestros Daños Materiales (SDM)",
    "organismo": "UNESPA",
-   "url": "https://www.unespa.es/main-files/uploads/2017/05/reglamento-SDM.pdf",
+   "url": "https://www.unespa.es/convenios/sistema-sdm-siniestros-danos-materiales/",
    "tipo": "buena-practica",
    "jurisdiccion": "ES",
-   "version": "01/01/2014",
+   "version": "reglamento de 01/01/2014; página de UNESPA consultada 26/11/2026",
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "draft",
-   "nota": "Cubre lo que no va por el convenio de indemnización directa: más de dos vehículos, sin colisión directa, cargas desprendidas, daños a otros bienes. Sin comprobar si sigue vigente en 2026."
+   "nota": "Cubre lo que no va por el convenio de indemnización directa: más de dos vehículos, sin colisión directa, cargas desprendidas, daños a otros bienes. UNESPA lo sigue publicando y el convenio de 2026 no lo sustituye (refunde CIDE y ASCIDE, no el SDM). No se ha encontrado una declaración expresa de vigencia; TIREA no se pudo consultar."
   },
   {
    "id": "CNMC-CIDE-2014",

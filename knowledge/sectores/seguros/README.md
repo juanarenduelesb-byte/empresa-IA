@@ -35,7 +35,6 @@ tags:
 - El plazo de dos meses para resolver reclamaciones (Orden ECO/734/2004, art. 10) está derogado: ahora es un mes ([LEY-10-2025](../../fuentes/registro.md#ley-10-2025)).
 
 ## Lo que falta
-- Leer en el BOE el texto consolidado del RDL 3/2020, de la Ley 35/2015 y de la Ley 5/2025 (esta noche solo se pudieron leer copias y resúmenes).
-- Confirmar si el SDM de 2014 sigue vigente y desde cuándo rige el convenio de 2026.
+- Confirmar con TIREA desde cuándo rige el convenio de 2026 y que el SDM de 2014 sigue vigente. El RDL 3/2020, la Ley 35/2015 y la Ley 5/2025 ya se han cotejado en el BOE.
 - Abogado: base jurídica para que una correduría trate datos de salud de un parte con daños personales (ver [normas.md](normas.md#datos-de-salud)).
 - Validar el catálogo de excepciones con tramitadores de corredurías en las conversaciones semanales (D-011).

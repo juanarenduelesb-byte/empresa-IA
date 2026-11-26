@@ -8,7 +8,7 @@ version: "consultado 17/11/2026"
 autoridad: "alta"
 vigencia: "vigente"
 estado: "validated"
-citada: 23
+citada: 24
 tags:
   - "fuente"
   - "vigencia/vigente"
@@ -23,6 +23,7 @@ tags:
 ## Citada en
 
 - [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]]
+- [[docs/informes/2026-11-26|Informe de la mañana · 26/11/2026]]
 - [[knowledge/sectores/especialista-sectorial|Coordinación sectorial y seguros]]
 - [[knowledge/sectores/seguros/README|Paquete de dominio · seguros y corredurías]]
 - [[knowledge/sectores/seguros/excepciones|Catálogo de excepciones al abrir un siniestro]]

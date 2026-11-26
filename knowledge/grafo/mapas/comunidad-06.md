@@ -1,59 +1,75 @@
 ---
 tipo: "mapa"
 comunidad: 6
-miembros: 44
-cohesion: 0.23
+miembros: 51
+cohesion: 0.16
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 6 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue
+# Comunidad 6 · processes/catalog · Índice del conocimiento de Varios y Arquitecto de procesos
 
-44 nodos agrupados por el algoritmo de Louvain. Cohesión 0.23.
+51 nodos agrupados por el algoritmo de Louvain. Cohesión 0.16.
 
 ## Documentos
 
-- [[docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado|Guia de Arranque Proyecto v1.4 Diseno Cerrado]]
-- [[docs/fuentes/Atlas_Evolucion_v1.1_Modelo_Operativo_Procesos_y_Despliegue|Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue]]
-- [[docs/fuentes/02_02_flujo_ceo|Flujo ceo]]
-- [[docs/fuentes/04_04_ejecucion_agentes|Ejecucion agentes]]
-- [[docs/fuentes/03_03_motor_conocimiento_obsidian|Motor conocimiento obsidian]]
-- [[docs/fuentes/Marco_Integral_Legal_Ciberseguridad_IA_Espana_UE_2026-11-16|Marco Integral Legal Ciberseguridad IA Espana UE 2026-11-16]]
-- [[README|Varios — repositorio maestro]]
-- [[docs/atlas/12-ciclo-proyecto|12 · Ciclo de vida de un proyecto con cliente]]
-- [[docs/fuentes/06_06_calidad_gobierno|Calidad gobierno]]
-- [[docs/fuentes/09_09_comunicaciones_estados|Comunicaciones estados]]
-- [[docs/16-correcciones|Registro de correcciones a los documentos recibidos el 17/11/2026]]
-- [[docs/fuentes/05_05_seguridad_clientes|Seguridad clientes]]
-- [[docs/atlas/08-seguridad|08 · Seguridad, identidad y aislamiento de clientes]]
-- [[docs/fuentes/08_08_ciclo_vida_proyecto|Ciclo vida proyecto]]
-- [[docs/atlas/07-conocimiento|07 · Motor de conocimiento con Obsidian]]
-- [[docs/atlas/README|Atlas de diagramas]]
-- [[docs/atlas/02-flujo-ceo|02 · Flujo completo del CEO digital]]
-- [[docs/atlas/05-gateway|05 · Puerta de herramientas]]
-- [[docs/atlas/16-estados|16 · Estados de un encargo]]
-- [[docs/fuentes/07_07_infraestructura_portabilidad|Infraestructura portabilidad]]
-- [[docs/atlas/04-ejecucion|04 · Ejecución: motor de procesos, agentes y herramientas]]
-- [[docs/atlas/00-arquitectura|00 · Arquitectura del cerebro digital]]
-- [[docs/atlas/15-componentes|15 · Conversación entre componentes]]
-- [[docs/atlas/09-calidad|09 · Calidad, evaluación y aprobación humana]]
-- [[docs/atlas/03-decisiones-ceo|03 · Las cinco decisiones del CEO]]
-- [[docs/atlas/14-incidentes|14 · Operación y respuesta a incidentes]]
-- [[docs/05-agentes-procesos-e-integraciones|Agentes, procesos e integraciones]]
-- [[docs/atlas/01-organizacion|01 · Organización: modelo matricial]]
-- [[docs/atlas/11-infraestructura|11 · Infraestructura, desarrollo y portabilidad]]
-- [[docs/atlas/10-cambios-modelos|10 · Cambios y elección de modelos de IA]]
-- [[docs/atlas/13-ciclo-dato|13 · Ciclo de vida de un dato]]
-- [[docs/04-motor-de-conocimiento|Motor de conocimiento]]
-- [[docs/14-reglas-del-ceo|Reglas del CEO digital]]
-- [[docs/01-vision-y-modelo-operativo|Visión y modelo operativo]]
-- [[docs/06-seguridad-y-gobierno|Seguridad, privacidad y gobierno]]
-- [[docs/07-calidad-infraestructura-y-operacion|Calidad, infraestructura y operación]]
-- [[docs/atlas/06-fallos|06 · Fallos, reintentos y recuperación]]
-- [[governance/README|Gobierno, seguridad y legal]]
-- [[docs/02-arquitectura-general|Arquitectura general]]
-- [[docs/03-ceo-digital-y-orquestacion|CEO digital y orquestación]]
-- [[processes/ceo-control-a/README|Banco del Control A: 25 encargos para el CEO limitado (C2)]]
-- [[knowledge/README|Conocimiento]]
-- [[docs/informes/README|Informes de la mañana]]
-- [[docs/09-inventario-documental|Inventario documental]]
+- [[knowledge/INDEX|Índice del conocimiento de Varios]]
+- [[knowledge/procesos/arquitecto-procesos|Arquitecto de procesos]]
+- [[processes/catalog/P33-diseno-y-validacion-to-be|P33 · Diseño y validación TO-BE]]
+- [[knowledge/comercial/director-comercial|Director comercial]]
+- [[precedents/README|Biblioteca de precedentes]]
+- [[knowledge/comercial/gestion-clientes|Especialista en éxito de cliente]]
+- [[processes/catalog/P32-descubrimiento-de-procesos|P32 · Descubrimiento de procesos]]
+- [[processes/catalog/P38-gestion-de-despliegue-por-cliente|P38 · Gestión de despliegue por cliente]]
+- [[processes/catalog/P37-medicion-de-rendimiento-y-valor|P37 · Medición de rendimiento y valor]]
+- [[knowledge/procesos/implantacion-clientes|Responsable de implantación de clientes]]
+- [[processes/catalog/P31-calificacion-de-oportunidad|P31 · Calificación de oportunidad]]
+- [[knowledge/procesos/metricas|Especialista en métricas]]
+- [[processes/catalog/P34-gestion-de-definiciones-de-proceso|P34 · Gestión de definiciones de proceso]]
+- [[knowledge/comercial/propuestas-licitaciones|Especialista en propuestas y licitaciones]]
+- [[processes/catalog/P35-gestion-de-instancias-y-excepciones|P35 · Gestión de instancias y excepciones]]
+- [[knowledge/plantillas/README|Plantillas]]
+- [[knowledge/procesos/README|Procesos y operaciones]]
+- [[knowledge/comercial/prospeccion|Especialista en prospección]]
+- [[knowledge/comercial/marketing-contenido|Especialista en marketing y contenido]]
+- [[docs/00-negocio|Negocio]]
+- [[knowledge/comercial/README|Comercial y clientes]]
+- [[knowledge/metodologias-transversales/consultar-historico|Protocolo: consultar el histórico antes de empezar]]
+- [[precedents/plantilla-incidente|Incidente: <título>]]
+- [[claude/habilidades/cualificacion-oportunidad|Cualificación de oportunidad]]
+- [[knowledge/plantillas/ficha-kpi|KPI: <nombre>]]
+- [[knowledge/metodologias-transversales/guardar|Protocolo: guardar el conocimiento]]
+- [[precedents/plantilla-precedente|<título>]]
+- [[knowledge/plantillas/ficha-oportunidad|Oportunidad: <empresa> (ejemplo inventado hasta que exista una real)]]
+- [[knowledge/plantillas/entrada-decision|Entrada-decision]]
+- [[knowledge/plantillas/ficha-proveedor|Proveedor: <nombre>]]
+- [[knowledge/plantillas/ficha-conocimiento|Título]]
+- [[precedents/incidents/2026-11-pr1-fusionado-antes-del-ultimo-push|Incidente: PR #1 fusionado antes del último push]]
+- [[knowledge/plantillas/ficha-investigacion|Investigación: <pregunta>]]
+
+## Procesos
+
+- [[processes/catalog/P32-descubrimiento-de-procesos|P32 · Descubrimiento de procesos]]
+- [[processes/catalog/P38-gestion-de-despliegue-por-cliente|P38 · Gestión de despliegue por cliente]]
+- [[processes/catalog/P31-calificacion-de-oportunidad|P31 · Calificación de oportunidad]]
+- [[processes/catalog/P37-medicion-de-rendimiento-y-valor|P37 · Medición de rendimiento y valor]]
+- [[processes/catalog/P34-gestion-de-definiciones-de-proceso|P34 · Gestión de definiciones de proceso]]
+- [[processes/catalog/P35-gestion-de-instancias-y-excepciones|P35 · Gestión de instancias y excepciones]]
+
+## Especialistas
+
+- [[knowledge/procesos/arquitecto-procesos|Arquitecto de procesos]]
+- [[knowledge/procesos/metricas|Especialista en métricas]]
+- [[knowledge/comercial/gestion-clientes|Especialista en éxito de cliente]]
+- [[knowledge/comercial/director-comercial|Director comercial]]
+- [[knowledge/comercial/propuestas-licitaciones|Especialista en propuestas y licitaciones]]
+- [[knowledge/comercial/prospeccion|Especialista en prospección]]
+- [[knowledge/comercial/marketing-contenido|Especialista en marketing y contenido]]
+
+## Fuentes
+
+- [[knowledge/grafo/fuentes/INT-ATLAS|INT-ATLAS · Atlas Evolución v1.1 · modelo operativo, procesos y despliegue]]
+- [[knowledge/grafo/fuentes/MEDDICC|MEDDICC · MEDDIC/MEDDPICC: método de cualificación B2B]]
+- [[knowledge/grafo/fuentes/APQC-PCF|APQC-PCF · APQC Process Classification Framework, versión intersectorial]]
+- [[knowledge/grafo/fuentes/BPMN-OMG|BPMN-OMG · BPMN 2.0.2 (ISO/IEC 19510)]]
+- [[knowledge/grafo/fuentes/PM-MANIFESTO|PM-MANIFESTO · Process Mining Manifesto]]

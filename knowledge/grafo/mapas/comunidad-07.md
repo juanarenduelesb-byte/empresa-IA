@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 7
-miembros: 45
+miembros: 48
 cohesion: 0.16
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 7 · processes/catalog · Índice del conocimiento de Varios y Arquitecto de procesos
 
-45 nodos agrupados por el algoritmo de Louvain. Cohesión 0.16.
+48 nodos agrupados por el algoritmo de Louvain. Cohesión 0.16.
 
 ## Documentos
 
@@ -35,6 +35,7 @@ tags:
 - [[knowledge/metodologias-transversales/consultar-historico|Protocolo: consultar el histórico antes de empezar]]
 - [[claude/habilidades/cualificacion-oportunidad|Cualificación de oportunidad]]
 - [[knowledge/metodologias-transversales/guardar|Protocolo: guardar el conocimiento]]
+- [[knowledge/plantillas/ficha-kpi|KPI: <nombre>]]
 - [[claude/habilidades/consultar-historico|Consultar el histórico antes de hacer]]
 - [[precedents/plantilla-precedente|<título>]]
 - [[knowledge/plantillas/ficha-oportunidad|Oportunidad: <empresa> (ejemplo inventado hasta que exista una real)]]
@@ -48,10 +49,12 @@ tags:
 - [[processes/catalog/P32-descubrimiento-de-procesos|P32 · Descubrimiento de procesos]]
 - [[processes/catalog/P38-gestion-de-despliegue-por-cliente|P38 · Gestión de despliegue por cliente]]
 - [[processes/catalog/P31-calificacion-de-oportunidad|P31 · Calificación de oportunidad]]
+- [[processes/catalog/P37-medicion-de-rendimiento-y-valor|P37 · Medición de rendimiento y valor]]
 
 ## Especialistas
 
 - [[knowledge/procesos/arquitecto-procesos|Arquitecto de procesos]]
+- [[knowledge/procesos/metricas|Especialista en métricas]]
 - [[knowledge/comercial/gestion-clientes|Especialista en éxito de cliente]]
 - [[knowledge/comercial/director-comercial|Director comercial]]
 - [[knowledge/procesos/implantacion-clientes|Responsable de implantación de clientes]]

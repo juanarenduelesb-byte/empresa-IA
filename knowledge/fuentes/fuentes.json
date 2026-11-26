@@ -1542,6 +1542,34 @@
    "estado": "draft",
    "consultada": "2026-11-26",
    "nota": "Cinco niveles según el papel del usuario: operator, collaborator, consultant, approver y observer. La autonomía «can instead be a deliberate design decision», independiente de la capacidad: un agente capaz puede trabajar con poca autonomía si consulta antes de cada acción. Propone certificados de autonomía con un nivel máximo; esa parte no se ha leído literalmente. Artículo académico, una sola fuente."
+  },
+  {
+   "id": "OWASP-FASTAPI",
+   "titulo": "FastAPI Security Cheat Sheet",
+   "organismo": "OWASP Cheat Sheet Series",
+   "url": "https://cheatsheetseries.owasp.org/cheatsheets/FastAPI_Security_Cheat_Sheet.html",
+   "tipo": "recomendacion-tecnica",
+   "jurisdiccion": "Internacional",
+   "version": "sin fecha visible (leída el 26/11/2026)",
+   "autoridad": "media",
+   "vigencia": "vigente",
+   "estado": "draft",
+   "consultada": "2026-11-26",
+   "nota": "Autenticar y autorizar con Depends(); OAuth2PasswordBearer no verifica el token. JWT con PyJWT, algoritmo fijo y exp, iss y aud obligatorios; secretos fuera del código. «Authentication alone does not authorize an operation». Pydantic ignora por defecto los campos no declarados; usar esquemas de entrada separados."
+  },
+  {
+   "id": "OWASP-IDOR",
+   "titulo": "Insecure Direct Object Reference Prevention Cheat Sheet",
+   "organismo": "OWASP Cheat Sheet Series",
+   "url": "https://cheatsheetseries.owasp.org/cheatsheets/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html",
+   "tipo": "recomendacion-tecnica",
+   "jurisdiccion": "Internacional",
+   "version": "sin fecha visible (leída el 26/11/2026)",
+   "autoridad": "media",
+   "vigencia": "vigente",
+   "estado": "draft",
+   "consultada": "2026-11-26",
+   "nota": "«Verify the user's permission every time an access attempt is made»; buscar acotando por el usuario o propietario, no solo por la clave; los UUID son defensa en profundidad, no control de acceso; si la existencia es sensible, la misma respuesta (404) en ambos casos. Probar con dos usuarios de permisos distintos."
   }
  ]
 }

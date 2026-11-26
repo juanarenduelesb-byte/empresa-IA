@@ -122,6 +122,8 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 | [CMU-RUBRICAS](#cmu-rubricas) | Creating and Using Rubrics | buena-practica | alta | vigente | draft |
 | [ANTHROPIC-AGENTES](#anthropic-agentes) | Building effective agents | buena-practica | media | vigente | draft |
 | [KNIGHT-NIVELES-AUTONOMIA](#knight-niveles-autonomia) | Levels of Autonomy for AI Agents | buena-practica | media | vigente | draft |
+| [OWASP-FASTAPI](#owasp-fastapi) | FastAPI Security Cheat Sheet | recomendacion-tecnica | media | vigente | draft |
+| [OWASP-IDOR](#owasp-idor) | Insecure Direct Object Reference Prevention Cheat Sheet | recomendacion-tecnica | media | vigente | draft |
 
 <a id="int-guia"></a>
 ### INT-GUIA
@@ -1270,4 +1272,24 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 - **Consultada:** 2026-11-26 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
 - **Nota:** Cinco niveles según el papel del usuario: operator, collaborator, consultant, approver y observer. La autonomía «can instead be a deliberate design decision», independiente de la capacidad: un agente capaz puede trabajar con poca autonomía si consulta antes de cada acción. Propone certificados de autonomía con un nivel máximo; esa parte no se ha leído literalmente. Artículo académico, una sola fuente.
+
+<a id="owasp-fastapi"></a>
+### OWASP-FASTAPI
+- **Título:** FastAPI Security Cheat Sheet
+- **Autor u organismo:** OWASP Cheat Sheet Series
+- **URL:** <https://cheatsheetseries.owasp.org/cheatsheets/FastAPI_Security_Cheat_Sheet.html>
+- **Tipo:** recomendacion-tecnica · **Jurisdicción:** Internacional · **Versión o fecha:** sin fecha visible (leída el 26/11/2026)
+- **Consultada:** 2026-11-26 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** Autenticar y autorizar con Depends(); OAuth2PasswordBearer no verifica el token. JWT con PyJWT, algoritmo fijo y exp, iss y aud obligatorios; secretos fuera del código. «Authentication alone does not authorize an operation». Pydantic ignora por defecto los campos no declarados; usar esquemas de entrada separados.
+
+<a id="owasp-idor"></a>
+### OWASP-IDOR
+- **Título:** Insecure Direct Object Reference Prevention Cheat Sheet
+- **Autor u organismo:** OWASP Cheat Sheet Series
+- **URL:** <https://cheatsheetseries.owasp.org/cheatsheets/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html>
+- **Tipo:** recomendacion-tecnica · **Jurisdicción:** Internacional · **Versión o fecha:** sin fecha visible (leída el 26/11/2026)
+- **Consultada:** 2026-11-26 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** «Verify the user's permission every time an access attempt is made»; buscar acotando por el usuario o propietario, no solo por la clave; los UUID son defensa en profundidad, no control de acceso; si la existencia es sensible, la misma respuesta (404) en ambos casos. Probar con dos usuarios de permisos distintos.
 

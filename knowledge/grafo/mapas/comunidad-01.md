@@ -34,6 +34,7 @@ tags:
 - [[governance/legal/borradores/README|Borradores legales para abogado (D1)]]
 - [[governance/legal/borradores/01-contrato-marco-servicios|Contrato marco de prestación de servicios · BORRADOR PARA ABOGADO]]
 - [[governance/legal/borradores/02-encargo-tratamiento|Contrato de encargo del tratamiento (art. 28 RGPD) · BORRADOR PARA ABOGADO]]
+- [[knowledge/administracion-finanzas/README|Administración y finanzas]]
 - [[governance/legal/borradores/03-acuerdo-confidencialidad|Acuerdo de confidencialidad (mutuo) · BORRADOR PARA ABOGADO]]
 - [[knowledge/plantillas/ficha-fuente|Ficha-fuente]]
 - [[knowledge/estudios/2026-11-26-prospectos-pymes-alvaro/README|Estudio de prospectos: automatización para pymes (Álvaro, noviembre de 2026)]]
@@ -105,7 +106,6 @@ tags:
 - [[knowledge/grafo/fuentes/CODIGO-CIVIL|CODIGO-CIVIL · Código Civil (Real Decreto de 24 de julio de 1889)]]
 - [[knowledge/grafo/fuentes/DORA-2022-2554|DORA-2022-2554 · Reglamento (UE) 2022/2554 (DORA), resiliencia operativa digital del sector financiero]]
 - [[knowledge/grafo/fuentes/EEDS-2025-327|EEDS-2025-327 · Reglamento (UE) 2025/327, Espacio Europeo de Datos de Salud]]
-- [[knowledge/grafo/fuentes/OSS-PROMPTFOO|OSS-PROMPTFOO · promptfoo (evaluación y pruebas adversariales de LLM)]]
 - [[knowledge/grafo/fuentes/ADCF-MONCLOA-2026|ADCF-MONCLOA-2026 · Autoridad Administrativa Independiente de Defensa del Cliente Financiero: compromiso de retomar la tramitación]]
 - [[knowledge/grafo/fuentes/AEAT-IS-TIPOS|AEAT-IS-TIPOS · Impuesto sobre Sociedades: tipo impositivo (microempresas, reducida dimensión y general)]]
 - [[knowledge/grafo/fuentes/AEPD-DIRECTRICES-ENCARGO|AEPD-DIRECTRICES-ENCARGO · Directrices para la elaboración de contratos entre responsables y encargados del tratamiento]]
@@ -119,4 +119,5 @@ tags:
 - [[knowledge/grafo/fuentes/LSC-ART4|LSC-ART4 · Ley de Sociedades de Capital (RDLeg 1/2010), art. 4: capital mínimo]]
 - [[knowledge/grafo/fuentes/ORDEN-ECO-734-2004|ORDEN-ECO-734-2004 · Orden ECO/734/2004, sobre los departamentos y servicios de atención al cliente y el defensor del cliente de las entidades financieras]]
 - [[knowledge/grafo/fuentes/SEGSOC-RETA-2026|SEGSOC-RETA-2026 · Cotización de trabajadores autónomos 2026 y encuadramiento de socios con control efectivo]]
-- … y 3 más
+- [[knowledge/grafo/fuentes/CCS-MEDIADOR|CCS-MEDIADOR · Aprendizajes del CCS en la gestión de catástrofes]]
+- … y 2 más

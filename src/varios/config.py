@@ -15,6 +15,10 @@ class Ajustes(BaseSettings):
     database_url: str | None = None
     # Conexión para migraciones y cargas de conocimiento común (propietario de las tablas).
     database_url_admin: str | None = None
+    # Firma de los tokens de acceso (provisional hasta el proveedor de identidad de S3, D-028). Nunca en el código.
+    jwt_secreto: str | None = None
+    jwt_emisor: str = "varios-local"
+    jwt_audiencia: str = "varios-api"
 
 
 @lru_cache

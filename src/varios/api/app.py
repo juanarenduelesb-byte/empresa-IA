@@ -1,4 +1,4 @@
-"""API mínima (plan S1). De momento solo salud; la autenticación llega en S3."""
+"""API (plan S1 y N3a): salud y oficina (encargos, tareas y aprobaciones). Identidad provisional en D-028."""
 
 from __future__ import annotations
 
@@ -10,7 +10,11 @@ from varios import __version__
 from varios.config import ajustes
 from varios.db.sesion import motor
 
+from .oficina import errores_de_dominio, router
+
 app = FastAPI(title="Varios", version=__version__)
+app.include_router(router)
+errores_de_dominio(app)
 
 
 @app.get("/health")

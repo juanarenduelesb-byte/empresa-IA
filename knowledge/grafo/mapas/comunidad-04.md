@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 4
-miembros: 65
-cohesion: 0.18
+miembros: 62
+cohesion: 0.19
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 4 · processes/runbooks · Auditoría de agentes y habilidades frente a los procesos (M-040) y Dependencias entre procesos
 
-65 nodos agrupados por el algoritmo de Louvain. Cohesión 0.18.
+62 nodos agrupados por el algoritmo de Louvain. Cohesión 0.19.
 
 ## Documentos
 
@@ -17,8 +17,8 @@ tags:
 - [[processes/diagrams/dependencias|Dependencias entre procesos]]
 - [[docs/29-autonomia|Mapa de autonomía por proceso, A0–A4 (M-045)]]
 - [[docs/13-procesos-y-estados|Procesos y estados]]
-- [[knowledge/ingenieria/README|Ingeniería y tecnología]]
 - [[docs/24-base-de-datos|Base de datos (D-023, propuesta)]]
+- [[knowledge/ingenieria/README|Ingeniería y tecnología]]
 - [[knowledge/seguridad-legal/README|Seguridad, privacidad, legal y cumplimiento]]
 - [[knowledge/direccion/README|Dirección y gobierno]]
 - [[processes/diagrams/ciclo-encargo|Ciclo completo de un encargo (P01 → P11)]]
@@ -26,7 +26,6 @@ tags:
 - [[processes/tests/README|Plan de pruebas de procesos]]
 - [[processes/README|Procesos]]
 - [[processes/runbooks/README|Runbooks]]
-- [[knowledge/administracion-finanzas/README|Administración y finanzas]]
 - [[processes/definitions/README|Definiciones ejecutables]]
 - [[processes/runbooks/workflow-fallido|Workflow bloqueado o fallido]]
 - [[processes/runbooks/caida-proveedor-ia|Caída del proveedor de IA]]
@@ -40,7 +39,6 @@ tags:
 - [[processes/catalog/P02-clasificacion-y-triaje|P02 · Clasificación y triaje]]
 - [[processes/catalog/P10-aprobacion-humana|P10 · Aprobación humana]]
 - [[processes/catalog/P29-gestion-de-costes-y-capacidad|P29 · Gestión de costes y capacidad]]
-- [[processes/catalog/P37-medicion-de-rendimiento-y-valor|P37 · Medición de rendimiento y valor]]
 - [[processes/catalog/P21-ejecucion-segura-de-herramientas|P21 · Ejecución segura de herramientas]]
 - [[processes/catalog/P30-gestion-de-identidades-y-secretos|P30 · Gestión de identidades y secretos]]
 - [[processes/catalog/P01-alta-y-recepcion-de-peticion|P01 · Alta y recepción de petición]]
@@ -81,6 +79,5 @@ tags:
 - [[knowledge/direccion/decisiones-seguimiento|Responsable de decisiones y seguimiento]]
 - [[knowledge/ingenieria/evaluacion-ia|Especialista en evaluación de IA]]
 - [[knowledge/direccion/bibliotecario|Bibliotecario / responsable de conocimiento]]
-- [[knowledge/procesos/metricas|Especialista en métricas]]
 - [[knowledge/ingenieria/arquitecto-tecnico|Arquitecto técnico]]
 - [[knowledge/ingenieria/integraciones|Especialista en integraciones]]

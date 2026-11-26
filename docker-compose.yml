@@ -22,6 +22,7 @@ services:
       VARIOS_ENTORNO: ${VARIOS_ENTORNO:-local}
       VARIOS_DATABASE_URL: postgresql+psycopg://varios_app:${VARIOS_APP_PASSWORD}@db:5432/varios
       VARIOS_DATABASE_URL_ADMIN: postgresql+psycopg://postgres:${POSTGRES_PASSWORD}@db:5432/varios
+      VARIOS_JWT_SECRETO: ${VARIOS_JWT_SECRETO:?Define VARIOS_JWT_SECRETO en .env}
     ports: ["8000:8000"]
 volumes:
   datos:

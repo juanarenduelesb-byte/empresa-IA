@@ -47,8 +47,25 @@ Es idempotente. Lo que desaparece del repositorio queda como obsoleto, no se bor
 
 **Foto del 26/11/2026:** 633 fichas, todas en borrador. Solo 178 (28 %) citan una fuente externa. Ninguna está validada todavía por un socio o un profesional. Es la medida de cuánto le falta al cerebro para ser fiable, y el informe de la mañana la seguirá.
 
+## API de la oficina (N3a, D-028)
+
+Rutas en `src/varios/api/oficina.py`; pruebas en `tests/db/test_api_oficina.py`, contra PostgreSQL real.
+
+| Ruta | Qué hace | Regla |
+|---|---|---|
+| `POST /encargos` · `GET /encargos` · `GET /encargos/{id}` | Alta y lectura de encargos | El cliente y el autor salen del token; si el cuerpo trae `cliente_id` o `autor_id`, se ignoran |
+| `POST /encargos/{id}/estado` | Cambio de estado según `encargo.json`, con motivo y clave de idempotencia opcional | A PENDIENTE_APROBACION y a ENTREGADO solo se llega por las rutas de aprobación (D-019) |
+| `POST /encargos/{id}/tareas` · `GET …/tareas` | Tareas del encargo | Solo en PLANIFICADO, EN_EJECUCION o RETRABAJO; la misma clave devuelve la misma tarea |
+| `POST /encargos/{id}/aprobaciones` · `GET …/aprobaciones` | Pedir aprobación de la versión actual (EN_QA → PENDIENTE_APROBACION) | Queda quién la pide |
+| `POST /aprobaciones/{id}/decision` | Aprobar (→ ENTREGADO) o rechazar (→ RETRABAJO, versión + 1) | Solo una persona con rol `aprobador`, que no la ha pedido ni es autora del encargo, y sobre la misma versión |
+| `GET /encargos/{id}/auditoria` | Eventos del encargo, sus tareas y sus aprobaciones | Cada cambio deja uno; la tabla no se puede modificar |
+
+**Identidad (provisional hasta el proveedor de S3).** Cabecera `Authorization: Bearer <token>`. El token es un JWT HS256 con `sub` (usuario), `cliente`, `exp`, `iss` y `aud`, firmado con `VARIOS_JWT_SECRETO`. El usuario tiene que existir y estar activo en ese cliente; sus roles se leen de la base. Para probar en local: `python -c "from varios.api.identidad import emitir; print(emitir('<usuario>', '<cliente>'))"` con los identificadores de la semilla.
+
+**Errores.** 401 sin token válido · 404 si no existe o es de otro cliente (no se revela cuál) · 403 si la aprobación no cumple la regla · 409 si la transición no está permitida · 422 si los datos no son válidos. Cada petición es una transacción: si algo falla, no se guarda nada, tampoco el evento.
+
 ## Lo que falta (plan)
 
-- Autenticación y roles reales (S3); hoy la identidad se construye en las pruebas.
+- Proveedor de identidad real (S3, antes de L2); hoy los tokens se firman con un secreto compartido (D-028).
 - Pasar el motor en memoria (`varios.procesos`) a estas tablas (S5).
 - Comprobar `docker compose up` en un equipo de los socios: en el entorno de Claude, la imagen no puede descargar paquetes.

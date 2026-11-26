@@ -1,28 +1,29 @@
 ---
 tipo: "mapa"
 comunidad: 2
-miembros: 91
-cohesion: 0.08
+miembros: 102
+cohesion: 0.07
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 2 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros
 
-91 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
+102 nodos agrupados por el algoritmo de Louvain. Cohesión 0.07.
 
 ## Documentos
 
 - [[knowledge/fuentes/registro|Registro de fuentes]]
 - [[knowledge/sectores/especialista-sectorial|Coordinación sectorial y seguros]]
-- [[knowledge/seguridad-legal/cumplimiento|Responsable de cumplimiento normativo]]
 - [[knowledge/sectores/sector-sanidad|Experto en sanidad privada]]
+- [[knowledge/seguridad-legal/cumplimiento|Responsable de cumplimiento normativo]]
 - [[knowledge/sectores/sector-financiero|Experto en servicios financieros no bancarios]]
 - [[knowledge/seguridad-legal/legal-privacidad|Especialista legal y privacidad]]
 - [[knowledge/sectores/sector-logistica|Experto en logística y transporte]]
 - [[knowledge/sectores/seguros/excepciones|Catálogo de excepciones al abrir un siniestro]]
 - [[knowledge/sectores/sector-industria|Experto en industria manufacturera]]
 - [[knowledge/sectores/seguros/normas|Normas para abrir un siniestro en una correduría]]
+- [[knowledge/ingenieria/diseno-experiencia|Diseñador de producto y experiencia (UX)]]
 - [[knowledge/sectores/priorizacion|Priorización de sectores]]
 - [[knowledge/sectores/seguros/glosario-siniestros|Glosario de siniestros]]
 - [[docs/27-finanzas|Finanzas: forma jurídica, facturación, precio y caja (D2)]]
@@ -51,10 +52,10 @@ tags:
 - [[knowledge/sectores/sector-financiero|Experto en servicios financieros no bancarios]]
 - [[knowledge/sectores/sector-industria|Experto en industria manufacturera]]
 - [[knowledge/sectores/sector-logistica|Experto en logística y transporte]]
+- [[knowledge/ingenieria/diseno-experiencia|Diseñador de producto y experiencia (UX)]]
 
 ## Fuentes
 
-- [[knowledge/grafo/fuentes/DORA-CNMV|DORA-CNMV · Preguntas frecuentes sobre el Reglamento (UE) 2022/2554 (DORA)]]
 - [[knowledge/grafo/fuentes/LCS-50-1980|LCS-50-1980 · Ley 50/1980, de Contrato de Seguro]]
 - [[knowledge/grafo/fuentes/UE-RIA-OMNIBUS|UE-RIA-OMNIBUS · Reglamento (UE) 2026/1744 (ómnibus digital sobre IA), que modifica el Reglamento (UE) 2024/1689]]
 - [[knowledge/grafo/fuentes/INE-TIC-2026|INE-TIC-2026 · Encuesta sobre el uso de TIC y del comercio electrónico en las empresas, año 2025 y primer trimestre de 2026]]
@@ -64,6 +65,7 @@ tags:
 - [[knowledge/grafo/fuentes/LEY-10-2025|LEY-10-2025 · Ley 10/2025, de 26 de diciembre, por la que se regulan los servicios de atención a la clientela]]
 - [[knowledge/grafo/fuentes/RD-287-2021|RD-287-2021 · Real Decreto 287/2021, sobre formación y remisión de la información estadístico-contable de los distribuidores de seguros y reaseguros]]
 - [[knowledge/grafo/fuentes/UNESPA-CONVENIO-2026|UNESPA-CONVENIO-2026 · Convenio entre entidades aseguradoras de automóviles para la indemnización directa de daños materiales a vehículos (refunde CIDE, ASCIDE y CICOS)]]
+- [[knowledge/grafo/fuentes/LEY-ACCESIBILIDAD-11-2023|LEY-ACCESIBILIDAD-11-2023 · Ley 11/2023 (accesibilidad de productos y servicios, transpone la Directiva (UE) 2019/882)]]
 - [[knowledge/grafo/fuentes/NIS2-ES|NIS2-ES · Estado de la transposición de NIS2 en España]]
 - [[knowledge/grafo/fuentes/RGPD-2016-679|RGPD-2016-679 · Reglamento (UE) 2016/679, General de Protección de Datos]]
 - [[knowledge/grafo/fuentes/CCS-SOLICITUD|CCS-SOLICITUD · CCS: solicitud de indemnización por riesgos extraordinarios]]
@@ -87,9 +89,11 @@ tags:
 - [[knowledge/grafo/fuentes/ISO-42001|ISO-42001 · ISO/IEC 42001:2023 Sistema de gestión de IA]]
 - [[knowledge/grafo/fuentes/MAQUINARIA-2023-1230|MAQUINARIA-2023-1230 · Reglamento (UE) 2023/1230, relativo a las máquinas]]
 - [[knowledge/grafo/fuentes/MDR-2017-745|MDR-2017-745 · Reglamento (UE) 2017/745, productos sanitarios (en el anexo I del Reglamento de IA)]]
+- [[knowledge/grafo/fuentes/NNG-HEURISTICAS|NNG-HEURISTICAS · 10 heurísticas de usabilidad (Jakob Nielsen)]]
 - [[knowledge/grafo/fuentes/RDLEG-7-2004-CCS|RDLEG-7-2004-CCS · Real Decreto Legislativo 7/2004, texto refundido del Estatuto Legal del Consorcio de Compensación de Seguros]]
 - [[knowledge/grafo/fuentes/SANIDAD-IA-OMNIBUS|SANIDAD-IA-OMNIBUS · IA en el SNS: ómnibus digital sobre IA y simplificación MDR/IVDR]]
 - [[knowledge/grafo/fuentes/UNESPA-SDM|UNESPA-SDM · Reglamento articulado del Sistema Siniestros Daños Materiales (SDM)]]
+- [[knowledge/grafo/fuentes/W3C-WCAG22|W3C-WCAG22 · Web Content Accessibility Guidelines (WCAG) 2.2]]
 - [[knowledge/grafo/fuentes/CCT-ENCARGO-2021-915|CCT-ENCARGO-2021-915 · Decisión de Ejecución (UE) 2021/915, cláusulas contractuales tipo entre responsables y encargados del tratamiento]]
 - [[knowledge/grafo/fuentes/CNMC-CIDE-2014|CNMC-CIDE-2014 · CNMC, resolución de 25/09/2014, expediente S/0496/13 CIDE]]
 - [[knowledge/grafo/fuentes/CODIGO-CIVIL|CODIGO-CIVIL · Código Civil (Real Decreto de 24 de julio de 1889)]]
@@ -98,8 +102,10 @@ tags:
 - [[knowledge/grafo/fuentes/AEAT-IS-TIPOS|AEAT-IS-TIPOS · Impuesto sobre Sociedades: tipo impositivo (microempresas, reducida dimensión y general)]]
 - [[knowledge/grafo/fuentes/AEPD-DIRECTRICES-ENCARGO|AEPD-DIRECTRICES-ENCARGO · Directrices para la elaboración de contratos entre responsables y encargados del tratamiento]]
 - [[knowledge/grafo/fuentes/AEPD-INF-2026-0021|AEPD-INF-2026-0021 · AEPD, informe 2026-0021 sobre el anteproyecto de reforma de la Ley 20/2015]]
+- [[knowledge/grafo/fuentes/APPLE-HIG-TAB-BARS|APPLE-HIG-TAB-BARS · Human Interface Guidelines: Tab bars]]
 - [[knowledge/grafo/fuentes/EDPB-GL-07-2020|EDPB-GL-07-2020 · Directrices 07/2020 sobre los conceptos de responsable y encargado del tratamiento en el RGPD]]
 - [[knowledge/grafo/fuentes/GAP-LEY10-ASEG|GAP-LEY10-ASEG · Cómo afecta a las aseguradoras la Ley 10/2025 de servicios de atención a la clientela]]
+- [[knowledge/grafo/fuentes/GITHUB-NOTIF-INBOX|GITHUB-NOTIF-INBOX · GitHub: gestionar notificaciones desde el inbox]]
 - [[knowledge/grafo/fuentes/HISCOX-RC-TIC|HISCOX-RC-TIC · Condicionado del seguro de Responsabilidad Civil TIC]]
 - [[knowledge/grafo/fuentes/INCIBE-CIBERSEGUROS|INCIBE-CIBERSEGUROS · Los ciberseguros, el complemento ideal de la gestión de riesgos]]
 - [[knowledge/grafo/fuentes/LEY-1-2019-SECRETOS|LEY-1-2019-SECRETOS · Ley 1/2019, de 20 de febrero, de Secretos Empresariales]]
@@ -107,9 +113,7 @@ tags:
 - [[knowledge/grafo/fuentes/LEY-5-2025|LEY-5-2025 · Ley 5/2025, de 24 de julio, por la que se modifican el texto refundido de la Ley sobre responsabilidad civil y seguro en la circulación de vehículos a motor y la Ley 20/2015]]
 - [[knowledge/grafo/fuentes/LOPDGDD-DA17|LOPDGDD-DA17 · Ley Orgánica 3/2018 (LOPDGDD), disposición adicional decimoséptima: tratamientos de datos de salud]]
 - [[knowledge/grafo/fuentes/LSC-ART4|LSC-ART4 · Ley de Sociedades de Capital (RDLeg 1/2010), art. 4: capital mínimo]]
+- [[knowledge/grafo/fuentes/NNG-HIDDEN-NAV|NNG-HIDDEN-NAV · Hamburger Menus and Hidden Navigation Hurt UX Metrics]]
+- [[knowledge/grafo/fuentes/OEPM-LOCALIZADOR|OEPM-LOCALIZADOR · Localizador de marcas (servicio web de la OEPM)]]
 - [[knowledge/grafo/fuentes/ORDEN-ECO-734-2004|ORDEN-ECO-734-2004 · Orden ECO/734/2004, sobre los departamentos y servicios de atención al cliente y el defensor del cliente de las entidades financieras]]
-- [[knowledge/grafo/fuentes/RIA-2024-1689|RIA-2024-1689 · Reglamento (UE) 2024/1689, de inteligencia artificial]]
-- [[knowledge/grafo/fuentes/SEGSOC-RETA-2026|SEGSOC-RETA-2026 · Cotización de trabajadores autónomos 2026 y encuadramiento de socios con control efectivo]]
-- [[knowledge/grafo/fuentes/CCS-MEDIADOR|CCS-MEDIADOR · Aprendizajes del CCS en la gestión de catástrofes]]
-- [[knowledge/grafo/fuentes/DGT-MANUAL-SEGURO-2026|DGT-MANUAL-SEGURO-2026 · DGT, manual X «Seguro del automóvil»]]
-- [[knowledge/grafo/fuentes/NIS2-ANTEPROYECTO|NIS2-ANTEPROYECTO · Anteproyecto de Ley de Coordinación y Gobernanza de la Ciberseguridad]]
+- … y 8 más

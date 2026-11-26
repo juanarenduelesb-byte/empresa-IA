@@ -57,6 +57,8 @@ Consultadas el 26/11/2026. Se eligieron consultoras de IA aplicada con una prueb
 - **No describirnos como mediadores de seguros:** no lo somos.
 
 ## 5. Qué falta para publicar
+Qué se aprovecha de la web interna `site/` y qué no: [docs/30](30-inventario-web.md).
+
 1. Marca (M-002) y forma jurídica (M-003): sin ellas no hay aviso legal.
 2. Que los socios aprueben los textos.
 3. Revisión legal de las páginas legales.

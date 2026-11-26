@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 0
-miembros: 109
+miembros: 112
 cohesion: 0.08
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 0 · claude/habilidades · Habilidades de los agentes y Administración
 
-109 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
+112 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
 
 ## Documentos
 
@@ -26,22 +26,23 @@ tags:
 - [[knowledge/agentes/cfo|Director financiero]]
 - [[knowledge/agentes/comj|Jefe comercial]]
 - [[knowledge/agentes/leg|Legal y privacidad]]
-- [[knowledge/agentes/ingj|Arquitecto técnico]]
 - [[knowledge/agentes/conta|Contabilidad y facturación]]
+- [[knowledge/agentes/ingj|Arquitecto técnico]]
+- [[knowledge/agentes/seg|Coordinación sectorial · Seguros]]
 - [[knowledge/agentes/cump|Cumplimiento normativo]]
 - [[knowledge/agentes/ceo|CEO digital]]
 - [[knowledge/agentes/prop|Propuestas]]
-- [[knowledge/agentes/seg|Coordinación sectorial · Seguros]]
-- [[knowledge/agentes/bib|Bibliotecario]]
-- [[knowledge/agentes/dec|Registro de decisiones]]
 - [[knowledge/agentes/cont|Contenido]]
+- [[knowledge/agentes/bib|Bibliotecario]]
 - [[knowledge/agentes/pros|Prospección]]
 - [[knowledge/agentes/val|Validación]]
-- [[knowledge/agentes/pmo|Plan y seguimiento]]
 - [[knowledge/administracion-finanzas/financiero|Especialista financiero]]
+- [[knowledge/agentes/dec|Registro de decisiones]]
 - [[knowledge/agentes/calj|Calidad y riesgo]]
-- [[knowledge/agentes/kpi|Métricas]]
+- [[knowledge/agentes/ux|Diseño y experiencia]]
+- [[knowledge/agentes/pmo|Plan y seguimiento]]
 - [[knowledge/agentes/sec|Seguridad]]
+- [[knowledge/agentes/kpi|Métricas]]
 - [[claude/habilidades/hecho-hipotesis-propuesta|Separar hecho, hipótesis y propuesta]]
 - [[knowledge/agentes/dat|Datos de prueba]]
 - [[knowledge/agentes/ia|IA y evaluación]]
@@ -72,8 +73,7 @@ tags:
 - [[claude/habilidades/evaluacion-modelos|Evaluación de modelos]]
 - [[claude/habilidades/cierre-mensual|Cierre contable mensual]]
 - [[claude/habilidades/casos-sinteticos|Casos de prueba inventados]]
-- [[claude/habilidades/propuesta-diagnostico|Propuesta de diagnóstico]]
-- … y 31 más
+- … y 34 más
 
 ## Especialistas
 

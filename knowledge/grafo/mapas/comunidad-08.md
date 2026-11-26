@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 8
-miembros: 37
-cohesion: 0.16
+miembros: 38
+cohesion: 0.15
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 8 · knowledge/ingenieria · CEO digital y Varios · empresa-ia
 
-37 nodos agrupados por el algoritmo de Louvain. Cohesión 0.16.
+38 nodos agrupados por el algoritmo de Louvain. Cohesión 0.15.
 
 ## Documentos
 
@@ -44,6 +44,7 @@ tags:
 ## Fuentes
 
 - [[knowledge/grafo/fuentes/INT-GUIA|INT-GUIA · Guía de Arranque v1.4 (diseño cerrado)]]
+- [[knowledge/grafo/fuentes/DORA-CNMV|DORA-CNMV · Preguntas frecuentes sobre el Reglamento (UE) 2022/2554 (DORA)]]
 - [[knowledge/grafo/fuentes/OWASP-LLM-2025|OWASP-LLM-2025 · OWASP Top 10 for LLM Applications 2025]]
 - [[knowledge/grafo/fuentes/OSS-CAMUNDA|OSS-CAMUNDA · Camunda 8: licencia para Self-Managed]]
 - [[knowledge/grafo/fuentes/OSS-N8N|OSS-N8N · n8n: Sustainable Use License]]

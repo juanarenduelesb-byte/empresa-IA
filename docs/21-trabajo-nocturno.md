@@ -19,7 +19,7 @@ Reglas que no cambian: **no reinventar la rueda** (antes de construir, mira cóm
 ## Lista de esta noche (hazlas en este orden)
 
 - [x] B1 · Conocimiento en la base de datos: fuentes y fichas con estado (draft, validated, deprecated), búsqueda de texto con permisos por cliente y cita obligatoria; carga de `knowledge/` y del registro de fuentes. *Hecho cuando:* una búsqueda desde el cliente A nunca devuelve nada del B y todo resultado trae su fuente.
-- [~] (en curso, sesión principal, 02:45) B2 · Paquete de dominio de seguros y corredurías: normas con fuente oficial verificada (LCS, distribución de seguros, libros-registro, baremo, convenios entre aseguradoras, Consorcio, atención al cliente, datos de salud), glosario de siniestros y catálogo de excepciones.
+- [ ] B2 · Paquete de dominio de seguros y corredurías: normas con fuente oficial verificada (LCS, distribución de seguros, libros-registro, baremo, convenios entre aseguradoras, Consorcio, atención al cliente, datos de salud), glosario de siniestros y catálogo de excepciones. *Pista ya encontrada:* la Ley 10/2025 de servicios de atención a la clientela (BOE-A-2025-26698, https://www.boe.es/eli/es/l/2025/12/26/10/con) fija con carácter general 15 días hábiles para resolver reclamaciones. Las empresas tienen hasta el 28/12/2026 para adaptarse, y los servicios financieros se rigen por su norma sectorial con esta como supletoria. Hay que comprobar en el texto cómo aplica a corredurías.
 - [ ] F1 · Portal interno: auditoría de la oficina actual (`oficina/`) frente a referencias de gestión de trabajo con éxito, con fuente. Propuesta de distribución (inicio con lo que espera tu OK, encargos, proyectos, clientes, cerebro, calendario, agentes y la vista 3D como una vista más) y mejoras aplicadas sin romper lo que funciona. Si no puedes publicar el artefacto, deja los archivos listos y dilo en el informe.
 - [ ] C1 · 20 siniestros inventados con su resultado esperado (esquema, casos y pruebas que validan los casos).
 - [ ] D1 · Legal (borradores para abogado): contrato marco de servicios, encargo de tratamiento (art. 28 RGPD), acuerdo de confidencialidad, anexo de uso de IA (Reglamento de IA) y matriz de aprobaciones.
@@ -38,10 +38,14 @@ Reglas que no cambian: **no reinventar la rueda** (antes de construir, mira cóm
 - [x] Plan maestro: [23-plan-maestro.md](23-plan-maestro.md)
 
 ## Preguntas para los socios
-(vacío)
+Están detalladas en [23-plan-maestro.md](23-plan-maestro.md), sección 6. Las tres primeras:
+1. **M-001.** ¿Habéis revisado con un laboralista la compatibilidad con vuestros empleos actuales?
+2. **M-002.** ¿Una sola marca? Claude recomienda Esclusa.
+3. **M-003.** Acuerdo de socios, pendiente desde el 22/11.
 
 ## Registro
 | Fecha | Tanda | Hecho | Queda |
 |---|---|---|---|
 | 26/11 02:30 | Sesión principal | A1–A4: API con /health, Docker Compose, modelo de S2 con Alembic, RLS forzada, auditoría inmutable, tablas de conocimiento con búsqueda y citas, datos de ejemplo, 14 pruebas nuevas contra PostgreSQL real, CI con PostgreSQL y Ruff (D-023, docs/24-base-de-datos.md) | `docker compose up` sin probar aquí (la imagen no puede descargar paquetes en este entorno); falta cargar en la base las fichas de knowledge/ (B1) |
 | 26/11 02:40 | Sesión principal | B1: `varios.db.carga_conocimiento` carga knowledge/ en la base (633 fichas, 28 % con fuente externa, todas en borrador); búsqueda con cita interna y externa; 2 pruebas más | Validar fichas (socios) y subir el % con fuente externa (B2) |
+| 26/11 02:50 | Sesión principal | Plan maestro (docs/23) y plan diario (docs/22, D-022); B2 empezada y devuelta a la lista: leer el BOE pedía una aprobación que nadie podía dar a esta hora | B2 y siguientes, para las tandas de las 03:30, 05:00, 06:00 y 07:45 |

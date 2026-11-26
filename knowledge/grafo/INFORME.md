@@ -6,7 +6,7 @@ Cómo está conectado el cerebro de Varios: qué sostiene todo, qué temas forma
 ## Resumen
 
 - 4604 nodos: seccion 3979, documento 344, fuente 68, habilidad 65, proceso 38, especialista 34, agente 34, decision 23, puerta 12, departamento 7.
-- 6180 relaciones: 60 % EXTRACTADAS (escritas en la fuente), 40 % INFERIDAS (temas compartidos, con puntuación) y 0 AMBIGUAS (para revisar).
+- 6182 relaciones: 60 % EXTRACTADAS (escritas en la fuente), 40 % INFERIDAS (temas compartidos, con puntuación) y 0 AMBIGUAS (para revisar).
 - 12 comunidades de temas.
 
 ## Nodos centrales

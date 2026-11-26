@@ -8,7 +8,7 @@ version: "2018"
 autoridad: "alta"
 vigencia: "vigente"
 estado: "validated"
-citada: 3
+citada: 4
 tags:
   - "fuente"
   - "vigencia/vigente"
@@ -22,6 +22,7 @@ tags:
 
 ## Citada en
 
+- [[governance/legal/borradores/02-encargo-tratamiento|Contrato de encargo del tratamiento (art. 28 RGPD) · BORRADOR PARA ABOGADO]]
 - [[knowledge/sectores/seguros/excepciones|Catálogo de excepciones al abrir un siniestro]]
 - [[knowledge/sectores/seguros/glosario-siniestros|Glosario de siniestros]]
 - [[knowledge/sectores/seguros/normas|Normas para abrir un siniestro en una correduría]]

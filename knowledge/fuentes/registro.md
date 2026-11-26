@@ -11,7 +11,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 | [INT-ATLAS](#int-atlas) | Atlas Evolución v1.1 · modelo operativo, procesos y despliegue | interno | alta | vigente | validated |
 | [INT-MARCO](#int-marco) | Marco integral legal, ciberseguridad e IA (España/UE) 16/11/2026 | interno | media | vigente | validated |
 | [INT-DEC](#int-dec) | Registro de decisiones | interno | alta | vigente | validated |
-| [UE-RIA-OMNIBUS](#ue-ria-omnibus) | Reglamento (UE) 2026/1744 (ómnibus digital sobre IA), que modifica el Reglamento (UE) 2024/1689 | obligacion-legal | media | vigente | validated |
+| [UE-RIA-OMNIBUS](#ue-ria-omnibus) | Reglamento (UE) 2026/1744 (ómnibus digital sobre IA), que modifica el Reglamento (UE) 2024/1689 | obligacion-legal | alta | vigente | validated |
 | [AEPD-AGENTICA](#aepd-agentica) | Inteligencia artificial agéntica desde la perspectiva de protección de datos | recomendacion-tecnica | alta | vigente | validated |
 | [AEPD-RIA-ART5](#aepd-ria-art5) | La AEPD recuerda que ya puede actuar ante sistemas de IA | recomendacion-tecnica | alta | vigente | draft |
 | [NIST-AI-600-1](#nist-ai-600-1) | AI RMF: Generative Artificial Intelligence Profile (NIST AI 600-1) | estandar-voluntario | alta | vigente | validated |
@@ -102,6 +102,13 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 | [BASECAMP-5](#basecamp-5) | Basecamp 5: inicio orientado a la acción | documentacion-producto | media | vigente | draft |
 | [GITHUB-NOTIF-INBOX](#github-notif-inbox) | GitHub: gestionar notificaciones desde el inbox | documentacion-producto | media | vigente | validated |
 | [ZAPIER-HITL](#zapier-hitl) | Zapier: Human in the Loop (pedir aprobación para seguir) | documentacion-producto | media | vigente | validated |
+| [RIA-2024-1689](#ria-2024-1689) | Reglamento (UE) 2024/1689, de inteligencia artificial | obligacion-legal | alta | vigente | validated |
+| [CCT-ENCARGO-2021-915](#cct-encargo-2021-915) | Decisión de Ejecución (UE) 2021/915, cláusulas contractuales tipo entre responsables y encargados del tratamiento | recomendacion-tecnica | alta | vigente | validated |
+| [AEPD-DIRECTRICES-ENCARGO](#aepd-directrices-encargo) | Directrices para la elaboración de contratos entre responsables y encargados del tratamiento | recomendacion-tecnica | alta | vigente | draft |
+| [EDPB-GL-07-2020](#edpb-gl-07-2020) | Directrices 07/2020 sobre los conceptos de responsable y encargado del tratamiento en el RGPD | recomendacion-tecnica | alta | vigente | validated |
+| [DORA-2022-2554](#dora-2022-2554) | Reglamento (UE) 2022/2554 (DORA), resiliencia operativa digital del sector financiero | obligacion-legal | alta | vigente | validated |
+| [LEY-1-2019-SECRETOS](#ley-1-2019-secretos) | Ley 1/2019, de 20 de febrero, de Secretos Empresariales | obligacion-legal | alta | vigente | draft |
+| [CODIGO-CIVIL](#codigo-civil) | Código Civil (Real Decreto de 24 de julio de 1889) | obligacion-legal | alta | vigente | draft |
 
 <a id="int-guia"></a>
 ### INT-GUIA
@@ -145,12 +152,12 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 <a id="ue-ria-omnibus"></a>
 ### UE-RIA-OMNIBUS
 - **Título:** Reglamento (UE) 2026/1744 (ómnibus digital sobre IA), que modifica el Reglamento (UE) 2024/1689
-- **Autor u organismo:** Parlamento Europeo y Consejo (resumen de Finreg360)
-- **URL:** <https://finreg360.com/alerta/el-parlamento-europeo-y-el-consejo-aprueban-la-simplificacion-del-reglamento-de-inteligencia-artificial/>
-- **Tipo:** obligacion-legal · **Jurisdicción:** UE · **Versión o fecha:** DOUE 24/07/2026; en vigor 27/07/2026
-- **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** validated
+- **Autor u organismo:** Parlamento Europeo y Consejo (DOUE)
+- **URL:** <https://eur-lex.europa.eu/eli/reg/2026/1744/oj?locale=es>
+- **Tipo:** obligacion-legal · **Jurisdicción:** UE · **Versión o fecha:** 08/07/2026; DOUE 24/07/2026; en vigor 27/07/2026 (texto leído en EUR-Lex el 26/11/2026)
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** Especialista en marketing y contenido, Experto en industria manufacturera, Especialista legal y privacidad, Responsable de cumplimiento normativo
-- **Nota:** Alto riesgo del anexo III desde el 02/12/2027 y del anexo I desde el 02/08/2028. Contrastado con Cuatrecasas y GlobalSuite. Falta enlazar el texto del DOUE.
+- **Nota:** Alto riesgo del anexo III desde el 02/12/2027 y del anexo I desde el 02/08/2028 (nuevo art. 113 c). El art. 50 sigue aplicándose desde el 02/08/2026; el marcado del art. 50.2 para IA generativa ya en el mercado, a más tardar el 02/12/2026 (art. 111.4). Sustituye el art. 4. Contrastado con Finreg360, Cuatrecasas y GlobalSuite.
 
 <a id="aepd-agentica"></a>
 ### AEPD-AGENTICA
@@ -669,7 +676,7 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** texto consolidado
 - **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** Especialista en contabilidad y facturación
-- **Nota:** Plazos máximos de pago entre empresas e intereses de demora. Comprobar el plazo vigente en el texto consolidado antes de citarlo en un contrato.
+- **Nota:** Art. 4: sin pacto, 30 días naturales; por pacto, nunca más de 60 días naturales. Art. 5: mora automática. Art. 7: interés pactado o, si no, el tipo del BCE más 8 puntos. Art. 8: 40 euros por costes de cobro. Consolidado a 01/10/2014, leído el 26/11/2026.
 
 <a id="ley-startups-28-2022"></a>
 ### LEY-STARTUPS-28-2022
@@ -766,10 +773,10 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Título:** Reglamento de IA, artículo 4: alfabetización en IA
 - **Autor u organismo:** Unión Europea / despachos
 - **URL:** <https://www.economistjurist.es/zbloque-1/reglamento-europeo-de-ia-tras-el-omnibus-que-obligaciones-y-sanciones-ya-son-exigibles-en-agosto-de-2026/>
-- **Tipo:** obligacion-legal · **Jurisdicción:** UE · **Versión o fecha:** aplicable desde 02/02/2025; reformulado por el Reglamento (UE) 2026/1744 desde 27/07/2026
+- **Tipo:** obligacion-legal · **Jurisdicción:** UE · **Versión o fecha:** aplicable desde 02/02/2025; sustituido por el Reglamento (UE) 2026/1744 desde 27/07/2026
 - **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** Responsable de cumplimiento normativo
-- **Nota:** La obligación sigue tras el ómnibus, con nueva redacción; supervisión por autoridades nacionales desde agosto de 2026. Es la base de la oferta de formación de Varios. Leer el texto vigente en EUR-Lex antes de citarlo.
+- **Nota:** Tras el ómnibus (leído en EUR-Lex el 26/11/2026), proveedores y responsables del despliegue «adoptarán medidas para apoyar la promoción de la alfabetización en materia de IA», y la obligación «no exige» garantizar un nivel específico de nadie. Antes decía «garantizar, en la mayor medida posible, un nivel suficiente». Sigue siendo base de la oferta de formación, pero ya no se puede vender como obligación de garantizar un nivel.
 
 <a id="rgpd-2016-679"></a>
 ### RGPD-2016-679
@@ -1050,4 +1057,74 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** —
 - **Nota:** El flujo se pausa; el revisor aprueba, rechaza o edita con nota; caducidad con acción por defecto; registro de auditoría. Coincide con las aprobaciones de Power Automate (19/08/2026).
+
+<a id="ria-2024-1689"></a>
+### RIA-2024-1689
+- **Título:** Reglamento (UE) 2024/1689, de inteligencia artificial
+- **Autor u organismo:** Parlamento Europeo y Consejo (DOUE)
+- **URL:** <https://eur-lex.europa.eu/eli/reg/2024/1689/oj?locale=es>
+- **Tipo:** obligacion-legal · **Jurisdicción:** UE · **Versión o fecha:** DOUE 12/07/2024; modificado por el Reglamento (UE) 2026/1744
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** —
+- **Nota:** Art. 3.3 proveedor y 3.4 responsable del despliegue. Art. 50: informar de que se interactúa con una IA y marcar el contenido sintético (desde 02/08/2026). Anexo III 5 c): alto riesgo la evaluación de riesgos y la fijación de precios de personas físicas en seguros de vida y salud (desde 02/12/2027 tras el ómnibus). La apertura de siniestros no figura en el anexo III. Contrastado con UE-RIA-OMNIBUS.
+
+<a id="cct-encargo-2021-915"></a>
+### CCT-ENCARGO-2021-915
+- **Título:** Decisión de Ejecución (UE) 2021/915, cláusulas contractuales tipo entre responsables y encargados del tratamiento
+- **Autor u organismo:** Comisión Europea (DOUE)
+- **URL:** <https://eur-lex.europa.eu/eli/dec_impl/2021/915/oj>
+- **Tipo:** recomendacion-tecnica · **Jurisdicción:** UE · **Versión o fecha:** 04/06/2021; DOUE L 199 de 07/06/2021
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** —
+- **Nota:** Cláusulas tipo del art. 28.7 RGPD: secciones I–III y anexos I (partes), II (descripción del tratamiento), III (medidas técnicas y organizativas, concretas) y IV (subencargados). Cláusula 7.7: autorización específica o general de subencargados con un preaviso que fijan las partes. Uso voluntario. Contrastado con las directrices de la AEPD.
+
+<a id="aepd-directrices-encargo"></a>
+### AEPD-DIRECTRICES-ENCARGO
+- **Título:** Directrices para la elaboración de contratos entre responsables y encargados del tratamiento
+- **Autor u organismo:** AEPD
+- **URL:** <https://aepd.es/guias/guia-directrices-contratos.pdf>
+- **Tipo:** recomendacion-tecnica · **Jurisdicción:** ES · **Versión o fecha:** sin fecha impresa (PDF de 2017, anterior a las cláusulas tipo de 2021)
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** Incluye un modelo orientativo de cláusulas (anexo I) que la propia AEPD dice que no son cláusulas tipo.
+
+<a id="edpb-gl-07-2020"></a>
+### EDPB-GL-07-2020
+- **Título:** Directrices 07/2020 sobre los conceptos de responsable y encargado del tratamiento en el RGPD
+- **Autor u organismo:** Comité Europeo de Protección de Datos
+- **URL:** <https://www.edpb.europa.eu/system/files/2023-10/edpb_guidelines_202007_controllerprocessor_final_es.pdf>
+- **Tipo:** recomendacion-tecnica · **Jurisdicción:** UE · **Versión o fecha:** versión 2.0, adoptada el 07/07/2021
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** —
+- **Nota:** Cuándo se es responsable, corresponsable o encargado; contenido del contrato del art. 28.
+
+<a id="dora-2022-2554"></a>
+### DORA-2022-2554
+- **Título:** Reglamento (UE) 2022/2554 (DORA), resiliencia operativa digital del sector financiero
+- **Autor u organismo:** Parlamento Europeo y Consejo (DOUE)
+- **URL:** <https://eur-lex.europa.eu/eli/reg/2022/2554/oj/spa>
+- **Tipo:** obligacion-legal · **Jurisdicción:** UE · **Versión o fecha:** DOUE L 333 de 27/12/2022; aplicable desde 17/01/2025
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** —
+- **Nota:** Art. 2.3 e): no se aplica a los intermediarios de seguros que sean micro, pequeñas o medianas empresas. Art. 2.3 b) solo excluye a las aseguradoras del art. 4 de Solvencia II: una aseguradora mediana sujeta a Solvencia II sí está sujeta a DORA. Art. 30.2: contenido mínimo de todo contrato TIC; art. 30.3: extras si sustenta funciones esenciales o importantes. Contrastado con DORA-CNMV.
+
+<a id="ley-1-2019-secretos"></a>
+### LEY-1-2019-SECRETOS
+- **Título:** Ley 1/2019, de 20 de febrero, de Secretos Empresariales
+- **Autor u organismo:** BOE
+- **URL:** <https://www.boe.es/eli/es/l/2019/02/20/1/con>
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** consolidado, sin modificaciones desde 21/02/2019
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** Art. 1.1: secreto, valor empresarial por ser secreto y medidas razonables del titular para mantenerlo en secreto. Una sola lectura.
+
+<a id="codigo-civil"></a>
+### CODIGO-CIVIL
+- **Título:** Código Civil (Real Decreto de 24 de julio de 1889)
+- **Autor u organismo:** BOE
+- **URL:** <https://www.boe.es/eli/es/rd/1889/07/24/(1)/con>
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** consolidado, última actualización 03/01/2025
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** Art. 1101–1107: responsabilidad contractual. Art. 1102: la responsabilidad por dolo no se puede renunciar. Una sola lectura.
 

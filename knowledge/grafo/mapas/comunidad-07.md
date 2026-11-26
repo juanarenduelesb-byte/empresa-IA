@@ -1,60 +1,66 @@
 ---
 tipo: "mapa"
 comunidad: 7
-miembros: 46
-cohesion: 0.14
+miembros: 54
+cohesion: 0.18
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 7 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Registro de decisiones
+# Comunidad 7 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue
 
-46 nodos agrupados por el algoritmo de Louvain. Cohesión 0.14.
+54 nodos agrupados por el algoritmo de Louvain. Cohesión 0.18.
 
 ## Documentos
 
-- [[precedents/oficina/encargos/2026-11/2026-11-17-acta-de-proteccion-de-la-ia-y-examen-de-50-casos-6sxjn|Acta de protección de la IA y examen de 50 casos]]
-- [[DECISIONS|Registro de decisiones]]
-- [[precedents/oficina/chats/ia-y-evaluacion|Conversaciones con IA y evaluación]]
-- [[CLAUDE|Varios · empresa-ia]]
-- [[precedents/oficina/encargos/2026-11/2026-11-17-reunion-ia-y-evaluacion-y-seguridad-zyn2w|Reunión: IA y evaluación y Seguridad]]
-- [[precedents/oficina/chats/ceo-digital|Conversaciones con CEO digital]]
-- [[docs/17-cerebro-y-procesos|17 · Cerebro, conocimiento y procesos: auditoría e informe]]
-- [[precedents/oficina/chats/plan-y-seguimiento|Conversaciones con Plan y seguimiento]]
-- [[precedents/oficina/chats/registro-de-decisiones|Conversaciones con Registro de decisiones]]
-- [[precedents/oficina/chats/bibliotecario|Conversaciones con Bibliotecario]]
-- [[docs/10-plan-12-semanas|Plan de construcción · 18/11/2026 → 12/02/2027]]
-- [[docs/23-plan-maestro|Plan maestro: la empresa completa, sin que se escape nada]]
-- [[docs/22-plan-hasta-febrero|Plan de trabajo diario · 26/11/2026 → 28/02/2027]]
-- [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]]
-- [[docs/19-obsidian|Obsidian: el cerebro abierto en tu equipo]]
-- [[precedents/oficina/chats/seguridad|Conversaciones con Seguridad]]
-- [[Inicio|Inicio · cerebro de Varios]]
-- [[docs/11-cerebro-en-claude|Cerebro en Claude]]
-- [[claude/instrucciones-proyecto|Instrucciones del proyecto "Varios · Cerebro" en Claude]]
-- [[docs/18-flujo-de-calidad-y-aprendizaje|18 · Flujo de calidad y aprendizaje continuo en la oficina]]
+- [[docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado|Guia de Arranque Proyecto v1.4 Diseno Cerrado]]
+- [[docs/fuentes/Atlas_Evolucion_v1.1_Modelo_Operativo_Procesos_y_Despliegue|Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue]]
+- [[docs/fuentes/04_04_ejecucion_agentes|Ejecucion agentes]]
+- [[docs/fuentes/02_02_flujo_ceo|Flujo ceo]]
+- [[docs/fuentes/03_03_motor_conocimiento_obsidian|Motor conocimiento obsidian]]
+- [[docs/fuentes/Marco_Integral_Legal_Ciberseguridad_IA_Espana_UE_2026-11-16|Marco Integral Legal Ciberseguridad IA Espana UE 2026-11-16]]
+- [[README|Varios — repositorio maestro]]
+- [[docs/fuentes/09_09_comunicaciones_estados|Comunicaciones estados]]
+- [[docs/atlas/12-ciclo-proyecto|12 · Ciclo de vida de un proyecto con cliente]]
+- [[docs/16-correcciones|Registro de correcciones a los documentos recibidos el 17/11/2026]]
+- [[docs/fuentes/06_06_calidad_gobierno|Calidad gobierno]]
+- [[docs/fuentes/05_05_seguridad_clientes|Seguridad clientes]]
+- [[docs/atlas/08-seguridad|08 · Seguridad, identidad y aislamiento de clientes]]
+- [[docs/fuentes/08_08_ciclo_vida_proyecto|Ciclo vida proyecto]]
+- [[docs/atlas/07-conocimiento|07 · Motor de conocimiento con Obsidian]]
+- [[governance/legal/borradores/05-matriz-aprobaciones|Matriz de aprobaciones · BORRADOR]]
+- [[docs/atlas/README|Atlas de diagramas]]
+- [[docs/atlas/02-flujo-ceo|02 · Flujo completo del CEO digital]]
+- [[docs/atlas/16-estados|16 · Estados de un encargo]]
+- [[docs/atlas/05-gateway|05 · Puerta de herramientas]]
+- [[docs/fuentes/07_07_infraestructura_portabilidad|Infraestructura portabilidad]]
+- [[docs/08-roadmap-y-decisiones|Roadmap y decisiones]]
+- [[docs/atlas/04-ejecucion|04 · Ejecución: motor de procesos, agentes y herramientas]]
+- [[docs/atlas/00-arquitectura|00 · Arquitectura del cerebro digital]]
+- [[docs/atlas/09-calidad|09 · Calidad, evaluación y aprobación humana]]
+- [[docs/atlas/15-componentes|15 · Conversación entre componentes]]
+- [[docs/atlas/03-decisiones-ceo|03 · Las cinco decisiones del CEO]]
+- [[docs/atlas/14-incidentes|14 · Operación y respuesta a incidentes]]
+- [[docs/05-agentes-procesos-e-integraciones|Agentes, procesos e integraciones]]
+- [[docs/atlas/01-organizacion|01 · Organización: modelo matricial]]
+- [[docs/atlas/11-infraestructura|11 · Infraestructura, desarrollo y portabilidad]]
+- [[docs/atlas/10-cambios-modelos|10 · Cambios y elección de modelos de IA]]
+- [[docs/atlas/13-ciclo-dato|13 · Ciclo de vida de un dato]]
+- [[docs/04-motor-de-conocimiento|Motor de conocimiento]]
+- [[docs/01-vision-y-modelo-operativo|Visión y modelo operativo]]
+- [[docs/14-reglas-del-ceo|Reglas del CEO digital]]
+- [[knowledge/metodologias-transversales/contrastar|Protocolo: contrastar el conocimiento interno y el externo]]
+- [[docs/06-seguridad-y-gobierno|Seguridad, privacidad y gobierno]]
+- [[docs/07-calidad-infraestructura-y-operacion|Calidad, infraestructura y operación]]
+- [[docs/atlas/06-fallos|06 · Fallos, reintentos y recuperación]]
+- [[governance/README|Gobierno, seguridad y legal]]
+- [[docs/02-arquitectura-general|Arquitectura general]]
+- [[docs/03-ceo-digital-y-orquestacion|CEO digital y orquestación]]
+- [[knowledge/README|Conocimiento]]
+- [[docs/informes/README|Informes de la mañana]]
+- [[precedents/lessons-learned/2026-11-correcciones-documentales|Lección: los documentos base también tienen errores]]
+- [[docs/09-inventario-documental|Inventario documental]]
 
 ## Decisiones
 
-- [[knowledge/grafo/decisiones/D-013|D-013 · Conocimiento y catálogo de procesos generados desde datos]]
-- [[knowledge/grafo/decisiones/D-017|D-017 · La oficina se vuelca cada noche a GitHub y las automatizaciones van por GitHub Actions]]
-- [[knowledge/grafo/decisiones/D-012|D-012 · Las propuestas de cambios de Claude se aceptan solas]]
-- [[knowledge/grafo/decisiones/D-014|D-014 · Adelantar un prototipo mínimo del motor de procesos]]
-- [[knowledge/grafo/decisiones/D-003|D-003 · Obsidian como interfaz humana]]
-- [[knowledge/grafo/decisiones/D-019|D-019 · Calidad exigente, todo pasa por un socio y cada rechazo se rehace aprendiendo]]
-- [[knowledge/grafo/decisiones/D-021|D-021 · El cerebro se abre en Obsidian: el repositorio es el vault]]
-- [[knowledge/grafo/decisiones/D-010|D-010 · Diagramas como código]]
-- [[knowledge/grafo/decisiones/D-006|D-006 · Primer proceso piloto]]
-- [[knowledge/grafo/decisiones/D-018|D-018 · El cerebro pasa a ser un grafo de conocimiento con relaciones explicadas]]
-- [[knowledge/grafo/decisiones/D-022|D-022 · Trabajo nocturno de Claude con plan diario e informe de la mañana]]
-- [[knowledge/grafo/decisiones/D-024|D-024 · Paquete de dominio de seguros con un archivo máquina como fuente de las reglas]]
-- [[knowledge/grafo/decisiones/D-001|D-001 · Arquitectura orientada a procesos]]
-- [[knowledge/grafo/decisiones/D-007|D-007 · Nombre provisional: Varios]]
-- [[knowledge/grafo/decisiones/D-015|D-015 · Entregables en archivos reales, memoria y Google Drive en la oficina de agentes]]
-- [[knowledge/grafo/decisiones/D-023|D-023 · Base de datos real: PostgreSQL con RLS, auditoría inmutable y conocimiento con citas]]
-- [[knowledge/grafo/decisiones/D-025|D-025 · La oficina se organiza en siete secciones y se abre en Inicio]]
-- [[knowledge/grafo/decisiones/D-002|D-002 · Modelo matricial]]
-- [[knowledge/grafo/decisiones/D-005|D-005 · Aislamiento multi-cliente]]
-- [[knowledge/grafo/decisiones/D-008|D-008 · Repositorio como memoria oficial y web visual]]
-- [[knowledge/grafo/decisiones/D-016|D-016 · Vista 3D de la oficina de agentes con Three.js]]
-- [[knowledge/grafo/decisiones/D-020|D-020 · Seis puestos nuevos en la oficina: CFO, contabilidad, éxito de cliente, plataforma, diseño y cumplimiento]]
+- [[knowledge/grafo/decisiones/D-009|D-009 · Unificación de puertas y estados]]

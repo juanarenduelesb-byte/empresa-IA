@@ -56,15 +56,15 @@
   {
    "id": "UE-RIA-OMNIBUS",
    "titulo": "Reglamento (UE) 2026/1744 (ómnibus digital sobre IA), que modifica el Reglamento (UE) 2024/1689",
-   "organismo": "Parlamento Europeo y Consejo (resumen de Finreg360)",
-   "url": "https://finreg360.com/alerta/el-parlamento-europeo-y-el-consejo-aprueban-la-simplificacion-del-reglamento-de-inteligencia-artificial/",
+   "organismo": "Parlamento Europeo y Consejo (DOUE)",
+   "url": "https://eur-lex.europa.eu/eli/reg/2026/1744/oj?locale=es",
    "tipo": "obligacion-legal",
    "jurisdiccion": "UE",
-   "version": "DOUE 24/07/2026; en vigor 27/07/2026",
-   "autoridad": "media",
+   "version": "08/07/2026; DOUE 24/07/2026; en vigor 27/07/2026 (texto leído en EUR-Lex el 26/11/2026)",
+   "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "validated",
-   "nota": "Alto riesgo del anexo III desde el 02/12/2027 y del anexo I desde el 02/08/2028. Contrastado con Cuatrecasas y GlobalSuite. Falta enlazar el texto del DOUE."
+   "nota": "Alto riesgo del anexo III desde el 02/12/2027 y del anexo I desde el 02/08/2028 (nuevo art. 113 c). El art. 50 sigue aplicándose desde el 02/08/2026; el marcado del art. 50.2 para IA generativa ya en el mercado, a más tardar el 02/12/2026 (art. 111.4). Sustituye el art. 4. Contrastado con Finreg360, Cuatrecasas y GlobalSuite."
   },
   {
    "id": "AEPD-AGENTICA",
@@ -740,7 +740,7 @@
    "autoridad": "alta",
    "vigencia": "vigente",
    "estado": "validated",
-   "nota": "Plazos máximos de pago entre empresas e intereses de demora. Comprobar el plazo vigente en el texto consolidado antes de citarlo en un contrato."
+   "nota": "Art. 4: sin pacto, 30 días naturales; por pacto, nunca más de 60 días naturales. Art. 5: mora automática. Art. 7: interés pactado o, si no, el tipo del BCE más 8 puntos. Art. 8: 40 euros por costes de cobro. Consolidado a 01/10/2014, leído el 26/11/2026."
   },
   {
    "id": "LEY-STARTUPS-28-2022",
@@ -866,11 +866,11 @@
    "url": "https://www.economistjurist.es/zbloque-1/reglamento-europeo-de-ia-tras-el-omnibus-que-obligaciones-y-sanciones-ya-son-exigibles-en-agosto-de-2026/",
    "tipo": "obligacion-legal",
    "jurisdiccion": "UE",
-   "version": "aplicable desde 02/02/2025; reformulado por el Reglamento (UE) 2026/1744 desde 27/07/2026",
+   "version": "aplicable desde 02/02/2025; sustituido por el Reglamento (UE) 2026/1744 desde 27/07/2026",
    "autoridad": "media",
    "vigencia": "vigente",
    "estado": "validated",
-   "nota": "La obligación sigue tras el ómnibus, con nueva redacción; supervisión por autoridades nacionales desde agosto de 2026. Es la base de la oferta de formación de Varios. Leer el texto vigente en EUR-Lex antes de citarlo."
+   "nota": "Tras el ómnibus (leído en EUR-Lex el 26/11/2026), proveedores y responsables del despliegue «adoptarán medidas para apoyar la promoción de la alfabetización en materia de IA», y la obligación «no exige» garantizar un nivel específico de nadie. Antes decía «garantizar, en la mayor medida posible, un nivel suficiente». Sigue siendo base de la oferta de formación, pero ya no se puede vender como obligación de garantizar un nivel."
   },
   {
    "id": "RGPD-2016-679",
@@ -1235,6 +1235,97 @@
    "vigencia": "vigente",
    "estado": "validated",
    "nota": "El flujo se pausa; el revisor aprueba, rechaza o edita con nota; caducidad con acción por defecto; registro de auditoría. Coincide con las aprobaciones de Power Automate (19/08/2026)."
+  },
+  {
+   "id": "RIA-2024-1689",
+   "titulo": "Reglamento (UE) 2024/1689, de inteligencia artificial",
+   "organismo": "Parlamento Europeo y Consejo (DOUE)",
+   "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj?locale=es",
+   "tipo": "obligacion-legal",
+   "jurisdiccion": "UE",
+   "version": "DOUE 12/07/2024; modificado por el Reglamento (UE) 2026/1744",
+   "autoridad": "alta",
+   "vigencia": "vigente",
+   "estado": "validated",
+   "nota": "Art. 3.3 proveedor y 3.4 responsable del despliegue. Art. 50: informar de que se interactúa con una IA y marcar el contenido sintético (desde 02/08/2026). Anexo III 5 c): alto riesgo la evaluación de riesgos y la fijación de precios de personas físicas en seguros de vida y salud (desde 02/12/2027 tras el ómnibus). La apertura de siniestros no figura en el anexo III. Contrastado con UE-RIA-OMNIBUS."
+  },
+  {
+   "id": "CCT-ENCARGO-2021-915",
+   "titulo": "Decisión de Ejecución (UE) 2021/915, cláusulas contractuales tipo entre responsables y encargados del tratamiento",
+   "organismo": "Comisión Europea (DOUE)",
+   "url": "https://eur-lex.europa.eu/eli/dec_impl/2021/915/oj",
+   "tipo": "recomendacion-tecnica",
+   "jurisdiccion": "UE",
+   "version": "04/06/2021; DOUE L 199 de 07/06/2021",
+   "autoridad": "alta",
+   "vigencia": "vigente",
+   "estado": "validated",
+   "nota": "Cláusulas tipo del art. 28.7 RGPD: secciones I–III y anexos I (partes), II (descripción del tratamiento), III (medidas técnicas y organizativas, concretas) y IV (subencargados). Cláusula 7.7: autorización específica o general de subencargados con un preaviso que fijan las partes. Uso voluntario. Contrastado con las directrices de la AEPD."
+  },
+  {
+   "id": "AEPD-DIRECTRICES-ENCARGO",
+   "titulo": "Directrices para la elaboración de contratos entre responsables y encargados del tratamiento",
+   "organismo": "AEPD",
+   "url": "https://aepd.es/guias/guia-directrices-contratos.pdf",
+   "tipo": "recomendacion-tecnica",
+   "jurisdiccion": "ES",
+   "version": "sin fecha impresa (PDF de 2017, anterior a las cláusulas tipo de 2021)",
+   "autoridad": "alta",
+   "vigencia": "vigente",
+   "estado": "draft",
+   "nota": "Incluye un modelo orientativo de cláusulas (anexo I) que la propia AEPD dice que no son cláusulas tipo."
+  },
+  {
+   "id": "EDPB-GL-07-2020",
+   "titulo": "Directrices 07/2020 sobre los conceptos de responsable y encargado del tratamiento en el RGPD",
+   "organismo": "Comité Europeo de Protección de Datos",
+   "url": "https://www.edpb.europa.eu/system/files/2023-10/edpb_guidelines_202007_controllerprocessor_final_es.pdf",
+   "tipo": "recomendacion-tecnica",
+   "jurisdiccion": "UE",
+   "version": "versión 2.0, adoptada el 07/07/2021",
+   "autoridad": "alta",
+   "vigencia": "vigente",
+   "estado": "validated",
+   "nota": "Cuándo se es responsable, corresponsable o encargado; contenido del contrato del art. 28."
+  },
+  {
+   "id": "DORA-2022-2554",
+   "titulo": "Reglamento (UE) 2022/2554 (DORA), resiliencia operativa digital del sector financiero",
+   "organismo": "Parlamento Europeo y Consejo (DOUE)",
+   "url": "https://eur-lex.europa.eu/eli/reg/2022/2554/oj/spa",
+   "tipo": "obligacion-legal",
+   "jurisdiccion": "UE",
+   "version": "DOUE L 333 de 27/12/2022; aplicable desde 17/01/2025",
+   "autoridad": "alta",
+   "vigencia": "vigente",
+   "estado": "validated",
+   "nota": "Art. 2.3 e): no se aplica a los intermediarios de seguros que sean micro, pequeñas o medianas empresas. Art. 2.3 b) solo excluye a las aseguradoras del art. 4 de Solvencia II: una aseguradora mediana sujeta a Solvencia II sí está sujeta a DORA. Art. 30.2: contenido mínimo de todo contrato TIC; art. 30.3: extras si sustenta funciones esenciales o importantes. Contrastado con DORA-CNMV."
+  },
+  {
+   "id": "LEY-1-2019-SECRETOS",
+   "titulo": "Ley 1/2019, de 20 de febrero, de Secretos Empresariales",
+   "organismo": "BOE",
+   "url": "https://www.boe.es/eli/es/l/2019/02/20/1/con",
+   "tipo": "obligacion-legal",
+   "jurisdiccion": "ES",
+   "version": "consolidado, sin modificaciones desde 21/02/2019",
+   "autoridad": "alta",
+   "vigencia": "vigente",
+   "estado": "draft",
+   "nota": "Art. 1.1: secreto, valor empresarial por ser secreto y medidas razonables del titular para mantenerlo en secreto. Una sola lectura."
+  },
+  {
+   "id": "CODIGO-CIVIL",
+   "titulo": "Código Civil (Real Decreto de 24 de julio de 1889)",
+   "organismo": "BOE",
+   "url": "https://www.boe.es/eli/es/rd/1889/07/24/(1)/con",
+   "tipo": "obligacion-legal",
+   "jurisdiccion": "ES",
+   "version": "consolidado, última actualización 03/01/2025",
+   "autoridad": "alta",
+   "vigencia": "vigente",
+   "estado": "draft",
+   "nota": "Art. 1101–1107: responsabilidad contractual. Art. 1102: la responsabilidad por dolo no se puede renunciar. Una sola lectura."
   }
  ]
 }

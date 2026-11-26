@@ -8,7 +8,7 @@ version: "texto consolidado"
 autoridad: "alta"
 vigencia: "vigente"
 estado: "validated"
-citada: 1
+citada: 2
 tags:
   - "fuente"
   - "vigencia/vigente"
@@ -18,8 +18,9 @@ tags:
 
 - Origen: <https://www.boe.es/eli/es/l/2004/12/29/3/con>
 - Registro: [[knowledge/fuentes/registro|registro de fuentes]]
-- Nota: Plazos máximos de pago entre empresas e intereses de demora. Comprobar el plazo vigente en el texto consolidado antes de citarlo en un contrato.
+- Nota: Art. 4: sin pacto, 30 días naturales; por pacto, nunca más de 60 días naturales. Art. 5: mora automática. Art. 7: interés pactado o, si no, el tipo del BCE más 8 puntos. Art. 8: 40 euros por costes de cobro. Consolidado a 01/10/2014, leído el 26/11/2026.
 
 ## Citada en
 
+- [[governance/legal/borradores/01-contrato-marco-servicios|Contrato marco de prestación de servicios · BORRADOR PARA ABOGADO]]
 - [[knowledge/administracion-finanzas/contabilidad|Especialista en contabilidad y facturación]]

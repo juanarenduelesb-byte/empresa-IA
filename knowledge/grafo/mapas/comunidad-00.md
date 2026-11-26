@@ -1,15 +1,21 @@
 ---
 tipo: "mapa"
 comunidad: 0
-miembros: 106
+miembros: 109
 cohesion: 0.05
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 0 · Habilidades · Legal y privacidad y Arquitecto de procesos
+# Comunidad 0 · claude/habilidades · Legal y privacidad y Arquitecto de procesos
 
-106 nodos agrupados por el algoritmo de Louvain. Cohesión 0.05.
+109 nodos agrupados por el algoritmo de Louvain. Cohesión 0.05.
+
+## Documentos
+
+- [[claude/habilidades/observabilidad|Observabilidad y alertas]]
+- [[claude/habilidades/copias-restauracion|Copias y restauración probada]]
+- [[claude/habilidades/runbook-incidente|Runbook y gestión de incidentes]]
 
 ## Agentes
 

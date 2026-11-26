@@ -74,7 +74,7 @@ Todavía no hay precedentes de este tipo.
 ## 2. Conocimiento profesional
 
 ### Fundamentos y terminología
-- La alfabetización en IA del artículo 4 es exigible desde el 02/02/2025 y sigue tras el ómnibus, con nueva redacción desde el 27/07/2026 (RIA-ART4-ALFABETIZACION).
+- La alfabetización en IA del artículo 4 es exigible desde el 02/02/2025. Desde el 27/07/2026 obliga a «apoyar la promoción» de la alfabetización y no a garantizar un nivel concreto (RIA-ART4-ALFABETIZACION, [UE-RIA-OMNIBUS](../fuentes/registro.md#ue-ria-omnibus)).
 - Las obligaciones de alto riesgo del anexo III se aplican desde el 02/12/2027 tras el ómnibus ([UE-RIA-OMNIBUS](../fuentes/registro.md#ue-ria-omnibus)).
 - DORA aplica desde el 17/01/2025 a entidades financieras y alcanza a sus proveedores TIC por contrato ([DORA-CNMV](../fuentes/registro.md#dora-cnmv)).
 - RGPD: registro de actividades (art. 30), seguridad (art. 32), brechas en 72 horas (art. 33) y evaluación de impacto (art. 35) (RGPD-2016-679).

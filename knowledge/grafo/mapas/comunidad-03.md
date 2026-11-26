@@ -1,35 +1,30 @@
 ---
 tipo: "mapa"
 comunidad: 3
-miembros: 70
-cohesion: 0.14
+miembros: 62
+cohesion: 0.15
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 3 · knowledge/direccion · Dependencias entre procesos y CEO digital
 
-70 nodos agrupados por el algoritmo de Louvain. Cohesión 0.14.
+62 nodos agrupados por el algoritmo de Louvain. Cohesión 0.15.
 
 ## Documentos
 
 - [[processes/diagrams/dependencias|Dependencias entre procesos]]
 - [[knowledge/direccion/ceo-digital|CEO digital]]
-- [[knowledge/seguridad-legal/ciberseguridad|Especialista en ciberseguridad]]
 - [[docs/13-procesos-y-estados|Procesos y estados]]
 - [[knowledge/direccion/decisiones-seguimiento|Responsable de decisiones y seguimiento]]
 - [[knowledge/direccion/bibliotecario|Bibliotecario / responsable de conocimiento]]
 - [[knowledge/procesos/automatizacion|Especialista en automatización]]
-- [[knowledge/ingenieria/backend|Especialista backend]]
-- [[knowledge/seguridad-legal/calidad-riesgos|Especialista en calidad y riesgos]]
 - [[knowledge/ingenieria/README|Ingeniería y tecnología]]
-- [[knowledge/ingenieria/evaluacion-ia|Especialista en evaluación de IA]]
 - [[knowledge/ingenieria/integraciones|Especialista en integraciones]]
 - [[docs/24-base-de-datos|Base de datos (D-023, propuesta)]]
 - [[knowledge/direccion/README|Dirección y gobierno]]
 - [[processes/diagrams/ciclo-encargo|Ciclo completo de un encargo (P01 → P11)]]
 - [[knowledge/seguridad-legal/README|Seguridad, privacidad, legal y cumplimiento]]
-- [[processes/tests/README|Plan de pruebas de procesos]]
 - [[processes/README|Procesos]]
 - [[integrations/catalog/README|Catálogo de integraciones]]
 - [[claude/habilidades/cinco-decisiones|Las cinco decisiones del CEO]]
@@ -53,6 +48,7 @@ tags:
 - [[processes/catalog/P20-seguridad-de-entradas-e-inyeccion-de-instrucciones|P20 · Seguridad de entradas e inyección de instrucciones]]
 - [[processes/catalog/P13-aprendizaje-y-actualizacion-de-la-wiki|P13 · Aprendizaje y actualización de la wiki]]
 - [[processes/catalog/P18-evaluacion-y-mejora|P18 · Evaluación y mejora]]
+- [[processes/catalog/P19-politica-de-uso-y-limites|P19 · Política de uso y límites]]
 - [[processes/catalog/P25-gestion-de-cambios-y-versiones|P25 · Gestión de cambios y versiones]]
 - [[processes/catalog/P05-diseno-del-plan|P05 · Diseño del plan]]
 - [[processes/catalog/P09-control-de-calidad|P09 · Control de calidad]]
@@ -69,8 +65,10 @@ tags:
 - [[knowledge/seguridad-legal/ciberseguridad|Especialista en ciberseguridad]]
 - [[knowledge/direccion/ceo-digital|CEO digital]]
 - [[knowledge/ingenieria/backend|Especialista backend]]
+- [[knowledge/seguridad-legal/legal-privacidad|Especialista legal y privacidad]]
 - [[knowledge/procesos/automatizacion|Especialista en automatización]]
 - [[knowledge/seguridad-legal/calidad-riesgos|Especialista en calidad y riesgos]]
+- [[knowledge/ingenieria/datos-ia|Arquitecto de datos e IA]]
 - [[knowledge/direccion/decisiones-seguimiento|Responsable de decisiones y seguimiento]]
 - [[knowledge/ingenieria/evaluacion-ia|Especialista en evaluación de IA]]
 - [[knowledge/direccion/bibliotecario|Bibliotecario / responsable de conocimiento]]
@@ -80,14 +78,8 @@ tags:
 
 ## Fuentes
 
-- [[knowledge/grafo/fuentes/INT-GUIA|INT-GUIA · Guía de Arranque v1.4 (diseño cerrado)]]
-- [[knowledge/grafo/fuentes/ISO-27001|ISO-27001 · ISO/IEC 27001:2022 (transición desde 2013 terminada el 31/10/2025)]]
-- [[knowledge/grafo/fuentes/OWASP-LLM-2025|OWASP-LLM-2025 · OWASP Top 10 for LLM Applications 2025]]
-- [[knowledge/grafo/fuentes/APQC-PCF|APQC-PCF · APQC Process Classification Framework, versión intersectorial]]
 - [[knowledge/grafo/fuentes/IETF-IDEMPOTENCY|IETF-IDEMPOTENCY · The Idempotency-Key HTTP Header Field (borrador 07)]]
-- [[knowledge/grafo/fuentes/PG-RLS|PG-RLS · Recomendaciones de seguridad a nivel de fila para SaaS multicliente]]
 - [[knowledge/grafo/fuentes/NIST-AI-600-1|NIST-AI-600-1 · AI RMF: Generative Artificial Intelligence Profile (NIST AI 600-1)]]
 - [[knowledge/grafo/fuentes/OSS-TEMPORAL|OSS-TEMPORAL · Temporal (motor de ejecución duradera)]]
 - [[knowledge/grafo/fuentes/INT-DEC|INT-DEC · Registro de decisiones]]
-- [[knowledge/grafo/fuentes/OSS-PROMPTFOO|OSS-PROMPTFOO · promptfoo (evaluación y pruebas adversariales de LLM)]]
 - [[knowledge/grafo/fuentes/OSS-SPIFF|OSS-SPIFF · SpiffWorkflow (motor BPMN/DMN en Python)]]

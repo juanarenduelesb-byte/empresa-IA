@@ -7,15 +7,15 @@ tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 1 · claude/habilidades · Habilidades de los agentes y Administración
+# Comunidad 1 · claude/habilidades · Habilidades de los agentes y Experto en asesorías y despachos
 
 98 nodos agrupados por el algoritmo de Louvain. Cohesión 0.09.
 
 ## Documentos
 
 - [[claude/habilidades/README|Habilidades de los agentes]]
-- [[knowledge/agentes/admj|Administración]]
 - [[knowledge/agentes/ase|Experto en asesorías y despachos]]
+- [[knowledge/agentes/admj|Administración]]
 - [[knowledge/agentes/back|Backend]]
 - [[knowledge/agentes/README|Agentes de la oficina]]
 - [[knowledge/agentes/proj|Arquitecto de procesos]]
@@ -23,27 +23,27 @@ tags:
 - [[knowledge/agentes/cfo|Director financiero]]
 - [[knowledge/agentes/conta|Contabilidad y facturación]]
 - [[knowledge/agentes/ingj|Arquitecto técnico]]
-- [[knowledge/agentes/prop|Propuestas]]
 - [[knowledge/agentes/leg|Legal y privacidad]]
-- [[knowledge/agentes/seg|Coordinación sectorial · Seguros]]
 - [[knowledge/agentes/cump|Cumplimiento normativo]]
+- [[knowledge/agentes/prop|Propuestas]]
+- [[knowledge/agentes/seg|Coordinación sectorial · Seguros]]
 - [[knowledge/agentes/ceo|CEO digital]]
 - [[knowledge/agentes/pmo|Plan y seguimiento]]
 - [[knowledge/agentes/exito|Éxito de cliente]]
 - [[knowledge/agentes/pros|Prospección]]
-- [[knowledge/agentes/bib|Bibliotecario]]
 - [[knowledge/agentes/ops|Plataforma y operaciones]]
+- [[knowledge/agentes/bib|Bibliotecario]]
+- [[knowledge/agentes/cont|Contenido]]
 - [[knowledge/agentes/val|Validación]]
 - [[knowledge/agentes/dec|Registro de decisiones]]
-- [[knowledge/agentes/cont|Contenido]]
 - [[knowledge/agentes/sec|Seguridad]]
 - [[knowledge/agentes/ux|Diseño y experiencia]]
 - [[knowledge/agentes/kpi|Métricas]]
 - [[claude/habilidades/hecho-hipotesis-propuesta|Separar hecho, hipótesis y propuesta]]
-- [[knowledge/agentes/dat|Datos de prueba]]
 - [[knowledge/agentes/calj|Calidad y riesgo]]
-- [[knowledge/agentes/ia|IA y evaluación]]
+- [[knowledge/agentes/dat|Datos de prueba]]
 - [[knowledge/agentes/prov|Proveedores]]
+- [[knowledge/agentes/ia|IA y evaluación]]
 - [[knowledge/agentes/int|Integraciones]]
 - [[knowledge/agentes/sal|Experto en sanidad privada]]
 - [[knowledge/agentes/logi|Experto en logística]]

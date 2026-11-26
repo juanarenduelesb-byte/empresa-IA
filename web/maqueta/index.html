@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>[Marca] · Maqueta de la web</title>
+<!-- MAQUETA (F2, docs/26-web-clientes.md). NO PUBLICAR. Marca sin decidir (M-002). Casos y personas inventados. Sin cookies ni analítica. -->
+<style>
+:root{--bg:#FBF8F2;--ink:#1F1A17;--muted:#62574F;--line:#E6DCCB;--card:#FFFFFF;--accent:#0B6E6B;--on-accent:#FFFFFF;--soft:#E3F0ED;--warn:#8A5A0C;--warn-bg:#FBF0D9;--font:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#15110F;--ink:#F3ECE2;--muted:#B5A89B;--line:#3A302B;--card:#1E1916;--accent:#4FC2BC;--on-accent:#06201F;--soft:#123432;--warn:#F0C25E;--warn-bg:#3A2C0E}}
+:root[data-theme=dark]{--bg:#15110F;--ink:#F3ECE2;--muted:#B5A89B;--line:#3A302B;--card:#1E1916;--accent:#4FC2BC;--on-accent:#06201F;--soft:#123432;--warn:#F0C25E;--warn-bg:#3A2C0E}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--font);-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.maq{background:var(--warn-bg);color:var(--warn);font-size:13.5px;font-weight:600;text-align:center;padding:8px 16px}
+header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{max-width:1120px;margin:0 auto;padding:14px 16px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.logo{font-weight:800;font-size:20px;letter-spacing:-.02em;text-decoration:none;color:var(--ink)}
+nav{display:flex;gap:4px;flex-wrap:wrap;flex:1}
+nav a{text-decoration:none;color:var(--ink);font-size:15px;padding:6px 10px;border-radius:8px}
+nav a[aria-current=page]{background:var(--soft);font-weight:600}
+.cta{display:inline-block;background:var(--accent);color:var(--on-accent);text-decoration:none;font-weight:600;padding:10px 18px;border-radius:999px;font-size:15px;border:0;cursor:pointer;font-family:inherit}
+.cta.sec{background:transparent;color:var(--accent);border:1.5px solid var(--accent)}
+main{max-width:1120px;margin:0 auto;padding:0 16px 64px}
+section.pg{display:none}section.pg.on{display:block}
+.hero{padding:64px 0 40px;max-width:820px}
+.hero h1{font-size:clamp(32px,5vw,52px);line-height:1.08;letter-spacing:-.025em;margin:0 0 18px}
+.hero p{font-size:20px;color:var(--muted);margin:0 0 26px}
+h2{font-size:clamp(24px,3vw,32px);letter-spacing:-.02em;line-height:1.15;margin:56px 0 14px}
+h3{font-size:19px;margin:0 0 6px}
+.lead{color:var(--muted);max-width:760px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px}
+.card small{color:var(--muted);display:block;font-size:14px}
+.ph{display:inline-block;font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);margin-bottom:6px}
+.fic{display:inline-block;background:var(--warn-bg);color:var(--warn);font-size:12.5px;font-weight:700;border-radius:6px;padding:2px 8px;margin-bottom:8px}
+ul.chk{padding-left:0;list-style:none}ul.chk li{padding-left:26px;position:relative;margin:6px 0}ul.chk li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:800}
+ul.no li::before{content:"✕";color:var(--warn)}
+table{width:100%;border-collapse:collapse;font-size:15.5px}td,th{text-align:left;border-bottom:1px solid var(--line);padding:10px 8px;vertical-align:top}th{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.tw{overflow-x:auto}
+.band{background:var(--soft);border-radius:20px;padding:28px 24px;margin-top:48px}
+form{display:grid;gap:12px;max-width:560px}label{display:grid;gap:4px;font-size:15px;font-weight:600}input,textarea,select{font:inherit;font-weight:400;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink)}textarea{min-height:110px}
+.small{font-size:14px;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:26px 16px;max-width:1120px;margin:0 auto;font-size:14px;color:var(--muted);display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between}
+footer nav a{font-size:14px;color:var(--muted)}
+@media (max-width:640px){.hero{padding:36px 0 24px}.hero p{font-size:18px}.bar{gap:10px}.bar .cta{display:none}}
+</style>
+</head>
+<body>
+<div class="maq" role="note">Maqueta interna · no publicar · marca sin decidir · los casos, personas y empresas que aparecen son inventados</div>
+<header><div class="bar">
+  <a class="logo" href="#inicio">[Marca]</a>
+  <nav aria-label="Principal">
+    <a href="#como">Cómo trabajamos</a><a href="#seguros">Seguros</a><a href="#caso">Caso de referencia</a><a href="#seguridad">Seguridad</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a>
+  </nav>
+  <a class="cta" href="#contacto">Pedir un diagnóstico</a>
+</div></header>
+
+<main>
+<!-- INICIO -->
+<section class="pg" id="p-inicio" aria-labelledby="h-inicio">
+  <div class="hero">
+    <span class="ph">IA aplicada a procesos, con control en cada paso</span>
+    <h1 id="h-inicio">IA que abre siniestros con vosotros, no por vosotros.</h1>
+    <p>Ayudamos a corredurías y aseguradoras medianas a que la IA haga trabajo real en un proceso concreto, como la apertura de siniestros, con una persona aprobando lo importante y un resultado medido antes de escalar.</p>
+    <a class="cta" href="#contacto">Pedir un diagnóstico de 3 semanas</a> &nbsp; <a class="cta sec" href="#como">Ver cómo trabajamos</a>
+  </div>
+
+  <h2>El problema que resolvemos</h2>
+  <div class="grid">
+    <div class="card"><h3>Mensajes por todos los canales</h3><small>Correo, teléfono, WhatsApp y formularios. Cada uno con datos que faltan.</small></div>
+    <div class="card"><h3>Portales distintos por aseguradora</h3><small>Copiar los mismos datos varias veces, a mano.</small></div>
+    <div class="card"><h3>Excepciones que no esperan</h3><small>Consorcio, daños personales, terceros que reclaman, plazos que corren.</small></div>
+    <div class="card"><h3>Miedo a equivocarse</h3><small>Datos de clientes, normas del sector y el Reglamento Europeo de IA.</small></div>
+  </div>
+
+  <h2>Cuatro fases, precio cerrado por fase</h2>
+  <p class="lead">Empezamos por un proceso, lo medimos y solo escalamos lo que funciona. En cada fase decidís vosotros si seguimos.</p>
+  <div class="grid">
+    <div class="card"><span class="ph">1 · 3 semanas</span><h3>Diagnosticar</h3><small>Medimos el proceso actual y puntuamos dónde la IA aporta y con qué riesgo. Decidís qué pasa a diseño.</small></div>
+    <div class="card"><span class="ph">2 · 2 semanas</span><h3>Diseñar</h3><small>Proceso nuevo, controles y una métrica de éxito firmada.</small></div>
+    <div class="card"><span class="ph">3 · 4–8 semanas</span><h3>Construir el piloto</h3><small>En producción limitada. Pagáis la mitad al empezar y la otra mitad solo si se cumple la métrica firmada.</small></div>
+    <div class="card"><span class="ph">4 · continuo</span><h3>Operar</h3><small>Seguimiento, mejoras y revisión trimestral con cuota mensual.</small></div>
+  </div>
+
+  <div class="band">
+    <h2 style="margin-top:0">Lo que la IA no decide nunca</h2>
+    <ul class="chk no" style="columns:2;column-gap:32px">
+      <li>Si hay cobertura</li><li>Quién tiene la culpa</li><li>Si hay fraude</li><li>Cuánto se paga</li><li>Rechazar un siniestro</li><li>Enviar algo fuera sin vuestro OK</li>
+    </ul>
+    <p class="small" style="margin:0">El código fijo aplica plazos y reglas. La IA lee, extrae y redacta. Una persona de vuestro equipo aprueba lo que sale.</p>
+  </div>
+
+  <h2>Caso de referencia</h2>
+  <div class="card"><span class="fic">Caso inventado</span><h3>Correduría ficticia Atalaya: apertura de siniestros</h3><small>Cómo sería un diagnóstico de principio a fin, con datos inventados: qué medimos, qué excepciones pasan a una persona y qué se automatiza. Todavía no tenemos clientes que enseñar; cuando los tengamos, lo diremos con su permiso.</small><p style="margin:10px 0 0"><a href="#caso">Ver el caso</a></p></div>
+</section>
+
+<!-- CÓMO TRABAJAMOS -->
+<section class="pg" id="p-como" aria-labelledby="h-como">
+  <h2 id="h-como">Cómo trabajamos</h2>
+  <p class="lead">Proceso antes que agente: primero entendemos y medimos el trabajo, después lo rediseñamos y solo entonces automatizamos. Quien vende es quien ejecuta.</p>
+  <div class="tw"><table>
+    <thead><tr><th>Fase</th><th>Duración</th><th>Entregable</th><th>Qué decidís</th></tr></thead>
+    <tbody>
+      <tr><td><b>Diagnosticar</b></td><td>3 semanas</td><td>Proceso actual medido (tiempo activo y espera), casos de uso puntuados, clasificación de riesgo y hoja de ruta a 12 meses</td><td>Qué pasa a diseño</td></tr>
+      <tr><td><b>Diseñar</b></td><td>2 semanas</td><td>Proceso nuevo, controles, matriz de aprobaciones y métrica de éxito con línea base y umbral</td><td>Aprobar el diseño y firmar la métrica</td></tr>
+      <tr><td><b>Construir</b></td><td>4–8 semanas</td><td>Piloto en producción limitada, con pruebas y auditoría</td><td>Escalar, ajustar o parar</td></tr>
+      <tr><td><b>Operar</b></td><td>Continuo</td><td>Seguimiento, actualizaciones, soporte e informe mensual</td><td>Revisión trimestral</td></tr>
+    </tbody></table></div>
+  <h2>Qué necesitamos de vosotros</h2>
+  <ul class="chk"><li>Una persona que conozca el proceso y una hora a la semana para validar.</li><li>Ejemplos del trabajo real, anonimizados o en vuestras instalaciones.</li><li>Alguien que decida al final de cada fase.</li></ul>
+  <p><a class="cta" href="#contacto">Pedir un diagnóstico</a></p>
+</section>
+
+<!-- SEGUROS -->
+<section class="pg" id="p-seguros" aria-labelledby="h-seg">
+  <h2 id="h-seg">Seguros y corredurías</h2>
+  <p class="lead">Empezamos por un solo sector para conocerlo de verdad. Hablamos vuestro idioma: parte, libro de siniestros, Consorcio, convenios entre aseguradoras, declaración amistosa.</p>
+  <div class="grid">
+    <div class="card"><h3>Recepción en cualquier canal</h3><small>Leemos el mensaje, identificamos póliza y cliente y detectamos lo que falta.</small></div>
+    <div class="card"><h3>Borrador del parte</h3><small>Prellenado para el portal de la aseguradora. Lo envía una persona.</small></div>
+    <div class="card"><h3>Petición de documentación</h3><small>Redactada con la lista exacta de lo que falta. La aprueba una persona.</small></div>
+    <div class="card"><h3>Libro de siniestros al día</h3><small>Cada siniestro se anota en cuanto se conoce, con sus fechas.</small></div>
+  </div>
+  <h2>Excepciones que siempre pasan a una persona</h2>
+  <ul class="chk"><li>Riesgos extraordinarios (posible vía Consorcio)</li><li>Daños personales o fallecimiento</li><li>Un tercero que reclama</li><li>Pólizas no vigentes o recibos pendientes</li><li>Incoherencias en fechas o documentos</li><li>Un cliente que pide hablar con una persona, en cualquier momento</li></ul>
+  <p class="small">Tenemos en cuenta, entre otras, la Ley de Contrato de Seguro, la normativa de distribución de seguros, la Ley 10/2025 de atención a la clientela y el RGPD. No somos mediadores de seguros ni damos asesoramiento jurídico.</p>
+  <p><a class="cta" href="#contacto">Hablar de vuestro proceso</a></p>
+</section>
+
+<!-- CASO -->
+<section class="pg" id="p-caso" aria-labelledby="h-caso">
+  <span class="fic" style="margin-top:40px">Caso inventado · ningún dato es real</span>
+  <h2 id="h-caso" style="margin-top:8px">Correduría ficticia Atalaya: apertura de siniestros</h2>
+  <p class="lead">Así sería un diagnóstico. Los números se miden en la primera fase: aquí van como huecos, porque no inventamos resultados.</p>
+  <div class="grid">
+    <div class="card"><span class="ph">Qué medimos</span><small>Tiempo desde que llega el aviso hasta que el parte queda registrado; trabajo activo frente a espera; partes que hay que rehacer.</small></div>
+    <div class="card"><span class="ph">Línea base</span><h3>[se mide en el diagnóstico]</h3><small>Con los registros y entrevistas de la correduría.</small></div>
+    <div class="card"><span class="ph">Métrica firmada</span><h3>[umbral acordado en el diseño]</h3><small>Si el piloto no la alcanza, no se cobra la segunda mitad.</small></div>
+  </div>
+  <h2>Qué se automatiza y qué no</h2>
+  <div class="tw"><table><thead><tr><th>Paso</th><th>Regla fija</th><th>IA propone</th><th>Persona</th></tr></thead><tbody>
+    <tr><td>Recepción</td><td>Registro e identificación por póliza</td><td>Extraer datos del mensaje</td><td>—</td></tr>
+    <tr><td>Plazo y póliza</td><td>Plazo como aviso, nunca como rechazo; vigencia</td><td>—</td><td>Excepciones</td></tr>
+    <tr><td>Documentación</td><td>Lista por tipo de siniestro</td><td>Redactar la petición</td><td>Aprobar el envío</td></tr>
+    <tr><td>Parte</td><td>—</td><td>Prellenar</td><td>Enviar</td></tr>
+    <tr><td>Consorcio</td><td>Detectar la causa</td><td>—</td><td>Decidir la vía</td></tr>
+  </tbody></table></div>
+  <p class="small">Probado con 20 siniestros inventados, cada uno con su resultado esperado.</p>
+</section>
+
+<!-- SEGURIDAD -->
+<section class="pg" id="p-seguridad" aria-labelledby="h-segu">
+  <h2 id="h-segu">Seguridad y cumplimiento</h2>
+  <p class="lead">Lo diseñamos desde el primer día, no al final. Aquí decimos lo que hacemos; no ponemos sellos que no tenemos.</p>
+  <div class="grid">
+    <div class="card"><h3>Una persona aprueba</h3><small>Nada sale fuera, se paga o se firma sin la aprobación de alguien de vuestro equipo. Nadie aprueba su propio trabajo.</small></div>
+    <div class="card"><h3>Vuestros datos, separados</h3><small>Cada cliente ve solo lo suyo, garantizado en la propia base de datos y probado.</small></div>
+    <div class="card"><h3>Todo queda registrado</h3><small>Quién hizo qué, cuándo y qué se aprobó, en un registro que no se puede modificar.</small></div>
+    <div class="card"><h3>Datos inventados hasta el piloto</h3><small>Diagnóstico y diseño trabajan con datos inventados o agregados. Los datos reales llegan solo con contrato de encargo firmado.</small></div>
+    <div class="card"><h3>Reglamento Europeo de IA</h3><small>Os decimos qué sistema es, qué papel tiene cada uno y qué obligaciones aplican, por escrito.</small></div>
+    <div class="card"><h3>No entrenamos con vuestros datos</h3><small>Ni para nosotros ni para otros clientes.</small></div>
+  </div>
+</section>
+
+<!-- NOSOTROS -->
+<section class="pg" id="p-nosotros" aria-labelledby="h-nos">
+  <h2 id="h-nos">Nosotros</h2>
+  <p class="lead">Somos dos socios. Pequeños a propósito: quien os vende el proyecto es quien lo hace.</p>
+  <div class="grid">
+    <div class="card"><h3>[Socio 1]</h3><small>Producto y construcción. [Biografía breve, pendiente de los socios.]</small></div>
+    <div class="card"><h3>[Socio 2]</h3><small>Clientes y relación. [Biografía breve, pendiente de los socios.]</small></div>
+  </div>
+  <h2>Lo que no somos</h2>
+  <ul class="chk no"><li>Una plataforma que hay que adaptar a vuestro proceso.</li><li>Una consultora que tarda meses en llegar a producción.</li><li>Una promesa de cero errores: lo que prometemos es una métrica medida y una persona en control.</li></ul>
+</section>
+
+<!-- CONTACTO -->
+<section class="pg" id="p-contacto" aria-labelledby="h-con">
+  <h2 id="h-con">Pedir un diagnóstico</h2>
+  <p class="lead">Contadnos qué proceso os quita más tiempo. Os respondemos en [plazo] para una primera conversación de 30 minutos, sin compromiso.</p>
+  <form onsubmit="event.preventDefault();document.getElementById('fok').hidden=false">
+    <label>Nombre<input name="n" autocomplete="name" required></label>
+    <label>Correo de trabajo<input name="e" type="email" autocomplete="email" required></label>
+    <label>Empresa<input name="c" autocomplete="organization"></label>
+    <label>¿Qué proceso queréis mejorar?<textarea name="m" placeholder="Por ejemplo: abrir siniestros que llegan por correo y WhatsApp" required></textarea></label>
+    <p class="small" style="margin:0"><b>Protección de datos.</b> Responsable: [razón social]. Finalidad: responder a vuestra consulta. Base: vuestra solicitud. No cedemos los datos. Podéis ejercer vuestros derechos en [correo]. Más información en la <a href="#privacidad">política de privacidad</a>. No incluyáis datos de vuestros clientes.</p>
+    <button class="cta" type="submit">Enviar (inactivo en la maqueta)</button>
+    <p id="fok" class="small" hidden role="status">Maqueta: el formulario no envía nada.</p>
+  </form>
+</section>
+
+<!-- LEGALES -->
+<section class="pg" id="p-aviso" aria-labelledby="h-av">
+  <h2 id="h-av">Aviso legal</h2>
+  <p class="small">Pendiente de la forma jurídica (M-003). Debe incluir, según la LSSI-CE, art. 10: denominación social, domicilio, correo electrónico, datos de inscripción en el Registro Mercantil y NIF.</p>
+  <div class="tw"><table><tbody>
+    <tr><th>Denominación social</th><td>[·]</td></tr><tr><th>Domicilio</th><td>[·]</td></tr><tr><th>Correo</th><td>[·]</td></tr><tr><th>Registro Mercantil</th><td>[·]</td></tr><tr><th>NIF</th><td>[·]</td></tr>
+  </tbody></table></div>
+</section>
+<section class="pg" id="p-privacidad" aria-labelledby="h-pr">
+  <h2 id="h-pr">Política de privacidad</h2>
+  <p class="small">Borrador pendiente de revisión legal: responsable, finalidades, bases jurídicas, plazos de conservación, destinatarios, derechos y reclamación ante la AEPD (RGPD, art. 13).</p>
+</section>
+<section class="pg" id="p-cookies" aria-labelledby="h-ck">
+  <h2 id="h-ck">Política de cookies</h2>
+  <p class="small">Esta web no usa cookies de analítica, publicidad ni de terceros. Si en algún momento se usaran cookies no exentas, se pediría el consentimiento con la opción de rechazar al mismo nivel que la de aceptar (guía de cookies de la AEPD). Pendiente de confirmar en la revisión legal.</p>
+</section>
+</main>
+
+<footer>
+  <span>© [año] [Marca] · Maqueta interna</span>
+  <nav aria-label="Legal"><a href="#aviso">Aviso legal</a> <a href="#privacidad">Privacidad</a> <a href="#cookies">Cookies</a> <a href="#seguridad">Seguridad</a></nav>
+</footer>
+
+<script>
+(function(){
+  var ids=['inicio','como','seguros','caso','seguridad','nosotros','contacto','aviso','privacidad','cookies'];
+  function show(){
+    var h=(location.hash||'#inicio').slice(1);if(ids.indexOf(h)<0)h='inicio';
+    ids.forEach(function(i){var s=document.getElementById('p-'+i);if(s)s.classList.toggle('on',i===h)});
+    document.querySelectorAll('header nav a').forEach(function(a){a.setAttribute('aria-current',a.getAttribute('href')==='#'+h?'page':'false')});
+    var t=document.querySelector('#p-'+h+' h1, #p-'+h+' h2');document.title='[Marca] · '+(t?t.textContent:'Maqueta');
+    window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange',show);show();
+})();
+</script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 1
-miembros: 104
+miembros: 107
 cohesion: 0.07
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 1 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros
 
-104 nodos agrupados por el algoritmo de Louvain. Cohesión 0.07.
+107 nodos agrupados por el algoritmo de Louvain. Cohesión 0.07.
 
 ## Documentos
 
@@ -37,6 +37,7 @@ tags:
 - [[governance/legal/borradores/04-anexo-uso-ia|Anexo de uso de inteligencia artificial · BORRADOR PARA ABOGADO]]
 - [[knowledge/plantillas/ficha-fuente|Ficha-fuente]]
 - [[governance/legal/borradores/03-acuerdo-confidencialidad|Acuerdo de confidencialidad (mutuo) · BORRADOR PARA ABOGADO]]
+- [[docs/26-web-clientes|Web para clientes: estudio de referencias, estructura y textos (F2)]]
 - [[knowledge/procesos/sectores|Especialistas sectoriales]]
 
 ## Decisiones
@@ -114,11 +115,11 @@ tags:
 - [[knowledge/grafo/fuentes/ZAPIER-HITL|ZAPIER-HITL · Zapier: Human in the Loop (pedir aprobación para seguir)]]
 - [[knowledge/grafo/fuentes/ADCF-MONCLOA-2026|ADCF-MONCLOA-2026 · Autoridad Administrativa Independiente de Defensa del Cliente Financiero: compromiso de retomar la tramitación]]
 - [[knowledge/grafo/fuentes/AEPD-DIRECTRICES-ENCARGO|AEPD-DIRECTRICES-ENCARGO · Directrices para la elaboración de contratos entre responsables y encargados del tratamiento]]
+- [[knowledge/grafo/fuentes/AEPD-GUIA-COOKIES|AEPD-GUIA-COOKIES · Guía sobre el uso de las cookies]]
 - [[knowledge/grafo/fuentes/AEPD-INF-2026-0021|AEPD-INF-2026-0021 · AEPD, informe 2026-0021 sobre el anteproyecto de reforma de la Ley 20/2015]]
 - [[knowledge/grafo/fuentes/APPLE-HIG-TAB-BARS|APPLE-HIG-TAB-BARS · Human Interface Guidelines: Tab bars]]
 - [[knowledge/grafo/fuentes/EDPB-GL-07-2020|EDPB-GL-07-2020 · Directrices 07/2020 sobre los conceptos de responsable y encargado del tratamiento en el RGPD]]
 - [[knowledge/grafo/fuentes/GITHUB-NOTIF-INBOX|GITHUB-NOTIF-INBOX · GitHub: gestionar notificaciones desde el inbox]]
 - [[knowledge/grafo/fuentes/LEY-1-2019-SECRETOS|LEY-1-2019-SECRETOS · Ley 1/2019, de 20 de febrero, de Secretos Empresariales]]
 - [[knowledge/grafo/fuentes/LEY-35-2015|LEY-35-2015 · Ley 35/2015, de reforma del sistema para la valoración de los daños y perjuicios causados a las personas en accidentes de circulación]]
-- [[knowledge/grafo/fuentes/LEY-5-2025|LEY-5-2025 · Ley 5/2025, de 24 de julio, que modifica el texto refundido de responsabilidad civil y seguro de vehículos a motor y la Ley 20/2015]]
-- … y 8 más
+- … y 10 más

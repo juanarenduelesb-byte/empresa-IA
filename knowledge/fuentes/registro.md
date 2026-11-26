@@ -109,6 +109,8 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 | [DORA-2022-2554](#dora-2022-2554) | Reglamento (UE) 2022/2554 (DORA), resiliencia operativa digital del sector financiero | obligacion-legal | alta | vigente | validated |
 | [LEY-1-2019-SECRETOS](#ley-1-2019-secretos) | Ley 1/2019, de 20 de febrero, de Secretos Empresariales | obligacion-legal | alta | vigente | draft |
 | [CODIGO-CIVIL](#codigo-civil) | Código Civil (Real Decreto de 24 de julio de 1889) | obligacion-legal | alta | vigente | draft |
+| [LSSI-34-2002](#lssi-34-2002) | Ley 34/2002, de servicios de la sociedad de la información y de comercio electrónico (LSSI-CE) | obligacion-legal | alta | vigente | validated |
+| [AEPD-GUIA-COOKIES](#aepd-guia-cookies) | Guía sobre el uso de las cookies | recomendacion-tecnica | alta | vigente | validated |
 
 <a id="int-guia"></a>
 ### INT-GUIA
@@ -1127,4 +1129,24 @@ Consultadas el 2026-11-17. Tipos: obligación legal, estándar voluntario, recom
 - **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
 - **Nota:** Art. 1101–1107: responsabilidad contractual. Art. 1102: la responsabilidad por dolo no se puede renunciar. Una sola lectura.
+
+<a id="lssi-34-2002"></a>
+### LSSI-34-2002
+- **Título:** Ley 34/2002, de servicios de la sociedad de la información y de comercio electrónico (LSSI-CE)
+- **Autor u organismo:** BOE
+- **URL:** <https://www.boe.es/buscar/act.php?id=BOE-A-2002-13758>
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** consolidado, última actualización 23/01/2025
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** —
+- **Nota:** Art. 10.1: denominación, domicilio, correo, Registro Mercantil, NIF y, si hay precios, si incluyen impuestos; se cumple poniéndolo en la propia web (10.2). Art. 22.2: consentimiento para cookies no exentas tras información clara y completa. Contrastado con la guía de cookies de la AEPD.
+
+<a id="aepd-guia-cookies"></a>
+### AEPD-GUIA-COOKIES
+- **Título:** Guía sobre el uso de las cookies
+- **Autor u organismo:** AEPD
+- **URL:** <https://www.aepd.es/guias/guia-cookies.pdf>
+- **Tipo:** recomendacion-tecnica · **Jurisdicción:** ES · **Versión o fecha:** mayo de 2024 (adaptada a las directrices 03/2022 del CEPD en julio de 2023)
+- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** —
+- **Nota:** Rechazar debe ofrecerse en la misma capa y al mismo nivel que aceptar; la primera capa incluye la petición de consentimiento. Las cookies técnicas exentas no necesitan consentimiento.
 

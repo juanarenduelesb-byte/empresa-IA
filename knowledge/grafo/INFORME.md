@@ -5,15 +5,15 @@ Cómo está conectado el cerebro de Varios: qué sostiene todo, qué temas forma
 
 ## Resumen
 
-- 4789 nodos: seccion 4116, documento 356, fuente 102, habilidad 65, proceso 38, especialista 34, agente 34, decision 25, puerta 12, departamento 7.
-- 6454 relaciones: 61 % EXTRACTADAS (escritas en la fuente), 39 % INFERIDAS (temas compartidos, con puntuación) y 0 AMBIGUAS (para revisar).
+- 4804 nodos: seccion 4127, documento 358, fuente 104, habilidad 65, proceso 38, especialista 34, agente 34, decision 25, puerta 12, departamento 7.
+- 6457 relaciones: 61 % EXTRACTADAS (escritas en la fuente), 39 % INFERIDAS (temas compartidos, con puntuación) y 0 AMBIGUAS (para revisar).
 - 12 comunidades de temas.
 
 ## Nodos centrales
 
 Lo que más cosas conecta. Si cambia, cambia mucho.
 
-1. **Registro de fuentes** (`knowledge/fuentes/registro.md`) · 181 conexiones
+1. **Registro de fuentes** (`knowledge/fuentes/registro.md`) · 184 conexiones
 2. **Índice del conocimiento de Varios** (`knowledge/INDEX.md`) · 117 conexiones
 3. **Registro de decisiones** (`DECISIONS.md`) · 104 conexiones
 4. **Guia de Arranque Proyecto v1.4 Diseno Cerrado** (`docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado.md`) · 85 conexiones
@@ -30,15 +30,15 @@ Lo que más cosas conecta. Si cambia, cambia mucho.
 
 Nodos por los que pasa el camino entre comunidades distintas (intermediación).
 
-- **Registro de fuentes** · intermediación 0.24 · une la comunidad 1 con 2, 3, 4, 5, 6, 7
-- **Registro de decisiones** · intermediación 0.101 · une la comunidad 6 con 1, 2, 3, 4, 5, 7
+- **Registro de fuentes** · intermediación 0.246 · une la comunidad 1 con 2, 3, 4, 5, 6, 7
+- **Registro de decisiones** · intermediación 0.1 · une la comunidad 6 con 1, 2, 3, 4, 5, 7
 - **Habilidades de los agentes** · intermediación 0.084 · une la comunidad 2 con 0, 3, 4, 5, 6
 - **Índice del conocimiento de Varios** · intermediación 0.053 · une la comunidad 5 con 1, 3, 4, 6, 7, 8
 - **L2 (puerta técnica)** · intermediación 0.05 · une la comunidad 10 con 1, 2, 3, 4, 5, 6
 - **Guia de Arranque Proyecto v1.4 Diseno Cerrado** · intermediación 0.042 · une la comunidad 7 con 2, 3, 5, 6, 8, 9
 - **CEO digital** · intermediación 0.024 · une la comunidad 3 con 1, 2, 5, 6, 7, 8
 - **D-011 · Construir primero, clientes desde el 15/02/2027** · intermediación 0.022 · une la comunidad 4 con 1, 2, 3, 5, 6, 7
-- **Administración** · intermediación 0.02 · une la comunidad 2 con 0, 1, 6, 9, 10
+- **Administración** · intermediación 0.021 · une la comunidad 2 con 0, 1, 6, 9, 10
 - **P31 · Calificación de oportunidad** · intermediación 0.02 · une la comunidad 5 con 1, 2, 3, 6, 7, 8
 
 ## Conexiones sorprendentes
@@ -50,8 +50,8 @@ Secciones de carpetas y comunidades distintas que tratan lo mismo y no se enlaza
 - `knowledge/agentes/dat.md` › Reglas del puesto  ↔  `precedents/oficina/encargos/2026-11/2026-11-17-examen-de-25-casos-ficticios-para-atalaya-qq164.md` › Contrato de tarea del CEO  [INFERIDA 0.75]
 - `knowledge/agentes/ingj.md` › Reglas del puesto  ↔  `processes/catalog/P01-alta-y-recepcion-de-peticion.md` › 7. Decisiones y reglas  [INFERIDA 0.75]
 - `knowledge/agentes/kpi.md` › Reglas del puesto  ↔  `precedents/oficina/conversaciones/2026-11/2026-11-17-ceo-digital-a-metricas-sj6cp.md` › CEO digital → Métricas  [INFERIDA 0.75]
-- `knowledge/agentes/proj.md` › Con quién trabaja  ↔  `precedents/oficina/conversaciones/2026-11/2026-11-17-metricas-a-coordinacion-sectorial-seguros-utv9x.md` › Métricas → Coordinación sectorial · Seguros  [INFERIDA 0.75]
 - `claude/habilidades/decision-registro.md` › Pasos  ↔  `knowledge/plantillas/entrada-decision.md` › D-0XX — Título  [INFERIDA 0.75]
+- `knowledge/agentes/proj.md` › Con quién trabaja  ↔  `precedents/oficina/conversaciones/2026-11/2026-11-17-metricas-a-coordinacion-sectorial-seguros-utv9x.md` › Métricas → Coordinación sectorial · Seguros  [INFERIDA 0.75]
 - `knowledge/agentes/seg.md` › Reglas del puesto  ↔  `precedents/oficina/encargos/2026-11/2026-11-17-propuesta-de-proceso-de-referencia-siniestros-en-c-tcpkm.md` › 7. Qué distingue práctica habitual de norma legal  [INFERIDA 0.75]
 - `knowledge/direccion/bibliotecario.md` › Bibliotecario / responsable de conocimiento  ↔  `processes/catalog/P13-aprendizaje-y-actualizacion-de-la-wiki.md` › 20. Pruebas necesarias  [INFERIDA 0.75]
 - `knowledge/direccion/ceo-digital.md` › Qué requiere aprobación  ↔  `precedents/oficina/chats/ceo-digital.md` › 2. Hechos  [INFERIDA 0.75]
@@ -64,7 +64,7 @@ Cohesión 0.05 · 109 nodos: Legal y privacidad; Arquitecto de procesos; Segurid
 
 ### 1 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros
 
-Cohesión 0.07 · 104 nodos: Registro de fuentes; Coordinación sectorial y seguros; Experto en sanidad privada; Responsable de cumplimiento normativo; Experto en servicios financieros no bancarios; Experto en asesorías, gestorías y despachos; Especialista legal y privacidad; Experto en logística y transporte (y 96 más)
+Cohesión 0.07 · 107 nodos: Registro de fuentes; Coordinación sectorial y seguros; Experto en sanidad privada; Responsable de cumplimiento normativo; Experto en servicios financieros no bancarios; Experto en asesorías, gestorías y despachos; Especialista legal y privacidad; Experto en logística y transporte (y 99 más)
 
 ### 2 · claude/habilidades · Habilidades de los agentes y Administración
 
@@ -76,7 +76,7 @@ Cohesión 0.14 · 66 nodos: Dependencias entre procesos; CEO digital; Procesos y
 
 ### 4 · precedents/oficina · Propuesta de proceso de referencia: siniestros en corredurías y Conversaciones con Coordinación sectorial · Seguros
 
-Cohesión 0.15 · 59 nodos: Propuesta de proceso de referencia: siniestros en corredurías; Conversaciones con Coordinación sectorial · Seguros; Guion de validación semanal: apertura de siniestros; Conversaciones con Arquitecto de procesos; Memoria de la oficina; Línea base y fichas de métricas · Atalaya; D-011 · Construir primero, clientes desde el 15/02/2027; CCS · Consorcio de Compensación de Seguros: riesgos extraordinarios (y 51 más)
+Cohesión 0.15 · 60 nodos: Propuesta de proceso de referencia: siniestros en corredurías; Conversaciones con Coordinación sectorial · Seguros; Guion de validación semanal: apertura de siniestros; Conversaciones con Arquitecto de procesos; Memoria de la oficina; Línea base y fichas de métricas · Atalaya; D-011 · Construir primero, clientes desde el 15/02/2027; CCS · Consorcio de Compensación de Seguros: riesgos extraordinarios (y 52 más)
 
 ### 5 · processes/catalog · Índice del conocimiento de Varios y Arquitecto de procesos
 
@@ -120,9 +120,9 @@ Cohesión 0.7 · 5 nodos: Diseñador de producto y experiencia (UX); LEY-ACCESIB
 _Preguntas que este grafo ayuda a responder o que conviene decidir:_
 
 - **¿Por qué «Registro de fuentes» conecta la comunidad 1 con las comunidades 2, 3, 4, 5?**
-  _Intermediación alta (0.24): es un puente entre temas._
+  _Intermediación alta (0.246): es un puente entre temas._
 - **¿Por qué «Registro de decisiones» conecta la comunidad 6 con las comunidades 1, 2, 3, 4?**
-  _Intermediación alta (0.101): es un puente entre temas._
+  _Intermediación alta (0.1): es un puente entre temas._
 - **¿Por qué «Habilidades de los agentes» conecta la comunidad 2 con las comunidades 0, 3, 4, 5?**
   _Intermediación alta (0.084): es un puente entre temas._
 - **¿Se aprueba D-013 · Conocimiento y catálogo de procesos generados desde datos? Sigue en propuesta y la citan 12 secciones.**

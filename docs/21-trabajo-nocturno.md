@@ -28,7 +28,7 @@ Reglas que no cambian: **no reinventar la rueda** (antes de construir, mira cóm
 - [x] C2 · 25 encargos para el Control A (20 normales + 5 trampas) con la decisión esperada y un banco de pruebas con modelo simulado.
 - [x] D2 · Finanzas: comparativa de forma jurídica con fuentes, requisitos de facturación (incluido Verifactu, con fechas verificadas), modelo de precio de diagnóstico, piloto y operación como hoja con parámetros (sin cifras inventadas) y previsión de caja por escenarios.
 - [x] E1 · Plantillas de entregables con la misma estructura: propuesta de diagnóstico, informe de diagnóstico, diseño TO-BE, plan de piloto, informe mensual de operación y acta de reunión.
-- [ ] C3 · Rúbrica de calidad de entregables y lista de comprobación por tipo de entregable.
+- [~] (en curso, tanda 03:30, 04:47) C3 · Rúbrica de calidad de entregables y lista de comprobación por tipo de entregable.
 
 ### Ya hechas por la sesión principal
 - [x] A1 · Entorno: FastAPI con `/health`, configuración por `.env`, Docker Compose con PostgreSQL 16, Ruff y pytest en CI. *Hecho cuando:* `docker compose up` arranca y `/health` responde con la base de datos conectada.

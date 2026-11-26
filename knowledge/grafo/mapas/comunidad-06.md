@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 6
-miembros: 48
-cohesion: 0.21
+miembros: 49
+cohesion: 0.2
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 6 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue
 
-48 nodos agrupados por el algoritmo de Louvain. Cohesión 0.21.
+49 nodos agrupados por el algoritmo de Louvain. Cohesión 0.2.
 
 ## Documentos
 

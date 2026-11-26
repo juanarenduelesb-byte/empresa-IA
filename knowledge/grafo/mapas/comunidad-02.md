@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 2
-miembros: 72
-cohesion: 0.11
+miembros: 73
+cohesion: 0.1
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 2 · knowledge/sectores · Registro de fuentes y Responsable de cumplimiento normativo
 
-72 nodos agrupados por el algoritmo de Louvain. Cohesión 0.11.
+73 nodos agrupados por el algoritmo de Louvain. Cohesión 0.1.
 
 ## Documentos
 
@@ -91,6 +91,7 @@ tags:
 - [[knowledge/grafo/fuentes/TWELVE-FACTOR|TWELVE-FACTOR · The Twelve-Factor App]]
 - [[knowledge/grafo/fuentes/W3C-WCAG22|W3C-WCAG22 · Web Content Accessibility Guidelines (WCAG) 2.2]]
 - [[knowledge/grafo/fuentes/EEDS-2025-327|EEDS-2025-327 · Reglamento (UE) 2025/327, Espacio Europeo de Datos de Salud]]
+- [[knowledge/grafo/fuentes/OSS-PROMPTFOO|OSS-PROMPTFOO · promptfoo (evaluación y pruebas adversariales de LLM)]]
 - [[knowledge/grafo/fuentes/RDL-3-2020|RDL-3-2020 · Real Decreto-ley 3/2020 (distribución de seguros): actualización de importes por la DGSFP]]
 - [[knowledge/grafo/fuentes/CCS-MEDIADOR|CCS-MEDIADOR · Aprendizajes del CCS en la gestión de catástrofes]]
 - [[knowledge/grafo/fuentes/NIS2-ANTEPROYECTO|NIS2-ANTEPROYECTO · Anteproyecto de Ley de Coordinación y Gobernanza de la Ciberseguridad]]

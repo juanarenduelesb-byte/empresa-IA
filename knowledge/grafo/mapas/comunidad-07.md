@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 7
-miembros: 47
-cohesion: 0.1
+miembros: 45
+cohesion: 0.11
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 7 · docs · Registro de decisiones y Varios · empresa-ia
 
-47 nodos agrupados por el algoritmo de Louvain. Cohesión 0.1.
+45 nodos agrupados por el algoritmo de Louvain. Cohesión 0.11.
 
 ## Documentos
 
@@ -63,4 +63,3 @@ tags:
 - [[knowledge/grafo/fuentes/PG-RLS|PG-RLS · Recomendaciones de seguridad a nivel de fila para SaaS multicliente]]
 - [[knowledge/grafo/fuentes/OSS-DOCLING|OSS-DOCLING · Docling (conversión de documentos)]]
 - [[knowledge/grafo/fuentes/OSS-PRESIDIO|OSS-PRESIDIO · Microsoft Presidio (detección y anonimización de datos personales)]]
-- [[knowledge/grafo/fuentes/OSS-PROMPTFOO|OSS-PROMPTFOO · promptfoo (evaluación y pruebas adversariales de LLM)]]

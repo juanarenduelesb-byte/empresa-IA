@@ -6,7 +6,7 @@ Cómo está conectado el cerebro de Varios: qué sostiene todo, qué temas forma
 ## Resumen
 
 - 4603 nodos: seccion 3978, documento 344, fuente 68, habilidad 65, proceso 38, especialista 34, agente 34, decision 23, puerta 12, departamento 7.
-- 6183 relaciones: 60 % EXTRACTADAS (escritas en la fuente), 40 % INFERIDAS (temas compartidos, con puntuación) y 0 AMBIGUAS (para revisar).
+- 6182 relaciones: 60 % EXTRACTADAS (escritas en la fuente), 40 % INFERIDAS (temas compartidos, con puntuación) y 0 AMBIGUAS (para revisar).
 - 12 comunidades de temas.
 
 ## Nodos centrales
@@ -16,7 +16,7 @@ Lo que más cosas conecta. Si cambia, cambia mucho.
 1. **Registro de fuentes** (`knowledge/fuentes/registro.md`) · 137 conexiones
 2. **Índice del conocimiento de Varios** (`knowledge/INDEX.md`) · 117 conexiones
 3. **Registro de decisiones** (`DECISIONS.md`) · 100 conexiones
-4. **Guia de Arranque Proyecto v1.4 Diseno Cerrado** (`docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado.md`) · 84 conexiones
+4. **Guia de Arranque Proyecto v1.4 Diseno Cerrado** (`docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado.md`) · 85 conexiones
 5. **Catálogo de procesos P01–P38** (`processes/catalog/README.md`) · 82 conexiones
 6. **Habilidades de los agentes** (`claude/habilidades/README.md`) · 68 conexiones
 7. **P22 · Gestión de errores y reintentos** · 62 conexiones
@@ -35,7 +35,7 @@ Nodos por los que pasa el camino entre comunidades distintas (intermediación).
 - **Habilidades de los agentes** · intermediación 0.096 · une la comunidad 1 con 3, 4, 5
 - **Índice del conocimiento de Varios** · intermediación 0.059 · une la comunidad 5 con 2, 3, 4, 6, 7, 8
 - **L2 (puerta técnica)** · intermediación 0.053 · une la comunidad 10 con 1, 2, 3, 4, 5, 6
-- **Guia de Arranque Proyecto v1.4 Diseno Cerrado** · intermediación 0.046 · une la comunidad 6 con 1, 2, 3, 5, 7, 8
+- **Guia de Arranque Proyecto v1.4 Diseno Cerrado** · intermediación 0.047 · une la comunidad 6 con 1, 2, 3, 5, 7, 8
 - **CEO digital** · intermediación 0.024 · une la comunidad 3 con 1, 2, 5, 6, 7, 8
 - **D-011 · Construir primero, clientes desde el 15/02/2027** · intermediación 0.022 · une la comunidad 4 con 1, 2, 5, 6, 7, 10
 - **P31 · Calificación de oportunidad** · intermediación 0.021 · une la comunidad 5 con 1, 2, 3, 6, 7, 8
@@ -68,7 +68,7 @@ Cohesión 0.09 · 98 nodos: Habilidades de los agentes; Experto en asesorías y 
 
 ### 2 · knowledge/sectores · Registro de fuentes y Responsable de cumplimiento normativo
 
-Cohesión 0.11 · 72 nodos: Registro de fuentes; Responsable de cumplimiento normativo; Coordinación sectorial y seguros; Experto en sanidad privada; Ingeniero de plataforma y operaciones (DevOps/SRE); Experto en servicios financieros no bancarios; Experto en asesorías, gestorías y despachos; Experto en logística y transporte (y 64 más)
+Cohesión 0.1 · 73 nodos: Registro de fuentes; Responsable de cumplimiento normativo; Coordinación sectorial y seguros; Experto en sanidad privada; Ingeniero de plataforma y operaciones (DevOps/SRE); Experto en servicios financieros no bancarios; Experto en asesorías, gestorías y despachos; Experto en logística y transporte (y 65 más)
 
 ### 3 · knowledge/direccion · Dependencias entre procesos y CEO digital
 
@@ -84,11 +84,11 @@ Cohesión 0.14 · 57 nodos: Índice del conocimiento de Varios; Arquitecto de pr
 
 ### 6 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue
 
-Cohesión 0.21 · 48 nodos: Guia de Arranque Proyecto v1.4 Diseno Cerrado; Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue; Ejecucion agentes; Flujo ceo; Motor conocimiento obsidian; Varios — repositorio maestro; 12 · Ciclo de vida de un proyecto con cliente; Marco Integral Legal Ciberseguridad IA Espana UE 2026-11-16 (y 40 más)
+Cohesión 0.2 · 49 nodos: Guia de Arranque Proyecto v1.4 Diseno Cerrado; Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue; Ejecucion agentes; Flujo ceo; Motor conocimiento obsidian; Varios — repositorio maestro; 12 · Ciclo de vida de un proyecto con cliente; Marco Integral Legal Ciberseguridad IA Espana UE 2026-11-16 (y 41 más)
 
 ### 7 · docs · Registro de decisiones y Varios · empresa-ia
 
-Cohesión 0.1 · 47 nodos: Registro de decisiones; Varios · empresa-ia; Especialista en ciberseguridad; Arquitecto de datos e IA; 17 · Cerebro, conocimiento y procesos: auditoría e informe; Arquitecto técnico; Especialista backend; Especialista en calidad y riesgos (y 39 más)
+Cohesión 0.11 · 45 nodos: Registro de decisiones; Varios · empresa-ia; Especialista en ciberseguridad; Arquitecto de datos e IA; 17 · Cerebro, conocimiento y procesos: auditoría e informe; Arquitecto técnico; Especialista backend; Especialista en calidad y riesgos (y 37 más)
 
 ### 8 · processes/catalog · P22 · Gestión de errores y reintentos y Catálogo de procesos P01–P38
 

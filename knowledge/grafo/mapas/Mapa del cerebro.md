@@ -12,12 +12,12 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 
 - [[knowledge/grafo/mapas/comunidad-00|Comunidad 0 · Habilidades · Legal y privacidad y Arquitecto de procesos]] (106 nodos)
 - [[knowledge/grafo/mapas/comunidad-01|Comunidad 1 · claude/habilidades · Habilidades de los agentes y Experto en asesorías y despachos]] (98 nodos)
-- [[knowledge/grafo/mapas/comunidad-02|Comunidad 2 · knowledge/sectores · Registro de fuentes y Responsable de cumplimiento normativo]] (72 nodos)
+- [[knowledge/grafo/mapas/comunidad-02|Comunidad 2 · knowledge/sectores · Registro de fuentes y Responsable de cumplimiento normativo]] (73 nodos)
 - [[knowledge/grafo/mapas/comunidad-03|Comunidad 3 · knowledge/direccion · Dependencias entre procesos y CEO digital]] (62 nodos)
 - [[knowledge/grafo/mapas/comunidad-04|Comunidad 4 · precedents/oficina · Propuesta de proceso de referencia: siniestros en corredurías y Conversaciones con Coordinación sectorial · Seguros]] (58 nodos)
 - [[knowledge/grafo/mapas/comunidad-05|Comunidad 5 · processes/catalog · Índice del conocimiento de Varios y Arquitecto de procesos]] (57 nodos)
-- [[knowledge/grafo/mapas/comunidad-06|Comunidad 6 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue]] (48 nodos)
-- [[knowledge/grafo/mapas/comunidad-07|Comunidad 7 · docs · Registro de decisiones y Varios · empresa-ia]] (47 nodos)
+- [[knowledge/grafo/mapas/comunidad-06|Comunidad 6 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue]] (49 nodos)
+- [[knowledge/grafo/mapas/comunidad-07|Comunidad 7 · docs · Registro de decisiones y Varios · empresa-ia]] (45 nodos)
 - [[knowledge/grafo/mapas/comunidad-08|Comunidad 8 · processes/catalog · P22 · Gestión de errores y reintentos y Catálogo de procesos P01–P38]] (39 nodos)
 - [[knowledge/grafo/mapas/comunidad-09|Comunidad 9 · knowledge/administracion-finanzas · Director financiero (CFO) y P29 · Gestión de costes y capacidad]] (17 nodos)
 - [[knowledge/grafo/mapas/comunidad-10|Comunidad 10 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Conversaciones con IA y evaluación]] (15 nodos)
@@ -28,7 +28,7 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 - [[knowledge/fuentes/registro|Registro de fuentes]] · 137 vecinos
 - [[knowledge/INDEX|Índice del conocimiento de Varios]] · 117 vecinos
 - [[DECISIONS|Registro de decisiones]] · 100 vecinos
-- [[docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado|Guia de Arranque Proyecto v1.4 Diseno Cerrado]] · 84 vecinos
+- [[docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado|Guia de Arranque Proyecto v1.4 Diseno Cerrado]] · 85 vecinos
 - [[processes/catalog/README|Catálogo de procesos P01–P38]] · 82 vecinos
 - [[claude/habilidades/README|Habilidades de los agentes]] · 68 vecinos
 - [[processes/catalog/P22-gestion-de-errores-y-reintentos|P22 · Gestión de errores y reintentos]] · 62 vecinos

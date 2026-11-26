@@ -56,6 +56,20 @@ def test_la_aprobacion_humana_no_pasa_de_A1():
     assert g.nivel(p10["tope"]) <= 1
 
 
+def errores_techo_humano(procesos, humanos) -> list[str]:
+    return [p["id"] for p in procesos if humanos.get(p["id"]) and g.nivel(p["tope"]) >= 4]
+
+
+def test_un_proceso_con_pasos_humanos_no_llega_a_A4():
+    """A4 es «autónomo con muestreo»: no cabe si el catálogo deja pasos a una persona (P15 y P35 lo tenían, 26/11)."""
+    assert errores_techo_humano(PROCESOS, g.pasos_humanos()) == []
+
+
+def test_la_prueba_detecta_un_paso_humano_en_A4():
+    malo = dict(PROCESOS[0], tope="A4")
+    assert errores_techo_humano([malo], {malo["id"]: ["Decidir"]}) == [malo["id"]]
+
+
 def test_cada_proceso_tiene_criterio_para_subir_y_bajar():
     for p in PROCESOS:
         assert p["subir"]["metrica"].strip() and p["subir"]["periodo"].strip() and p["subir"]["umbral"].strip(), p["id"]

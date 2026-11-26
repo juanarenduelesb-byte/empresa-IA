@@ -231,14 +231,14 @@
    "categorias": [],
    "actual": "A0",
    "objetivo_febrero": "A3",
-   "tope": "A4",
+   "tope": "A3",
    "subir": {
     "metrica": "Tiempo de detección y alertas sin acción",
     "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
     "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
    },
    "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
-   "nota": ""
+   "nota": "Abrir una incidencia es de una persona (catálogo); lo que sube de nivel es registrar, medir y alertar."
   },
   {
    "id": "P16",
@@ -534,17 +534,19 @@
   },
   {
    "id": "P35",
-   "categorias": [],
+   "categorias": [
+    "externo"
+   ],
    "actual": "A0",
-   "objetivo_febrero": "A3",
-   "tope": "A4",
+   "objetivo_febrero": "A2",
+   "tope": "A2",
    "subir": {
     "metrica": "Excepciones por instancia resueltas en plazo",
     "periodo": "4 semanas seguidas sobre el banco de casos completo, sin ningún fallo grave",
     "umbral": "por decidir por los socios (umbral del examen, 22/01/2027)"
    },
    "bajar": "Baja a A1 en el acto con un fallo grave (acción no autorizada, dato de otro cliente, cifra o fuente inventada); baja un nivel si la métrica queda por debajo del umbral dos semanas seguidas",
-   "nota": ""
+   "nota": "Compensar una secuencia a medias deshace acciones en sistemas del cliente (P08): es externo."
   },
   {
    "id": "P36",

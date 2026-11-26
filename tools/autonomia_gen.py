@@ -26,6 +26,11 @@ def nivel(n: str) -> int:
     return int(n[1])
 
 
+def pasos_humanos() -> dict[str, list[str]]:
+    """Pasos que el catálogo (tools/org_data/procesos.py) asigna a una persona: siguen siéndolo en cualquier nivel."""
+    return {p["id"]: [a[0] for a in p["actividades"] if a[1] == "humano"] for p in P}
+
+
 def cargar() -> dict:
     return json.loads(FUENTE.read_text(encoding="utf-8"))
 
@@ -33,6 +38,7 @@ def cargar() -> dict:
 def generar() -> str:
     d = cargar()
     nombres = {p["id"]: p["nombre"] for p in P} | {k: v[0] for k, v in PROCESOS_CLIENTE.items()}
+    humanos = pasos_humanos()
     agentes = {}
     for aid, e in AGENTES.items():
         for pid in e["procesos"]:
@@ -77,20 +83,23 @@ def generar() -> str:
           "- **Bajar:** %s." % d["procesos"][0]["bajar"],
           "- **Nunca por encima del techo.** Subir el techo de un proceso sensible no es una mejora técnica: exige cambiar CLAUDE.md, y eso lo "
           "deciden los socios.",
+          "- **Lo que el catálogo da a una persona sigue siendo de una persona.** El nivel mide lo que hacen las reglas, los sistemas y "
+          "la IA; los pasos que las fichas de [processes/catalog/](../processes/catalog/) marcan como «Persona» no se automatizan al subir de nivel (columna «Siempre "
+          "de una persona»). Por eso un proceso con pasos humanos no puede tener el techo en A4.",
           "- Los periodos y la regla de bajada son una propuesta de esta noche, no un dato: los fijan los socios con D-027.",
           "",
           "## Procesos",
           "",
-          "| Proceso | Toca | Hoy | Febrero | Techo | Métrica para subir | Agentes | Nota |",
-          "|---|---|---|---|---|---|---|---|"]
+          "| Proceso | Toca | Hoy | Febrero | Techo | Métrica para subir | Agentes | Siempre de una persona | Nota |",
+          "|---|---|---|---|---|---|---|---|---|"]
     for p in d["procesos"]:
-        s.append("| %s · %s | %s | %s | %s | %s | %s | %s | %s |" % (
+        s.append("| %s · %s | %s | %s | %s | %s | %s | %s | %s | %s |" % (
             p["id"], nombres[p["id"]], ", ".join(p["categorias"]) or "—", p["actual"], p["objetivo_febrero"], p["tope"],
-            p["subir"]["metrica"], ", ".join(agentes.get(p["id"], [])), p["nota"] or ""))
+            p["subir"]["metrica"], ", ".join(agentes.get(p["id"], [])), "; ".join(humanos.get(p["id"], [])) or "—", p["nota"] or ""))
     s += ["", "## Cómo se mantiene", "",
           "- Se edita `processes/autonomia.json` y se regenera con `python3 tools/autonomia_gen.py`.",
           "- `tests/test_autonomia.py` falla si falta un proceso, si un nivel no existe, si hoy o febrero superan el techo, si algo externo, "
-          "legal, financiero o contractual pasa de A2, si P10 pasa de A1, si falta la métrica o el criterio de bajada, o si este documento no "
+          "legal, financiero o contractual pasa de A2, si P10 pasa de A1, si un proceso con pasos humanos tiene el techo en A4, si falta la métrica o el criterio de bajada, o si este documento no "
           "está al día.",
           ""]
     return "\n".join(s)

@@ -53,4 +53,5 @@ def test_las_fuentes_legales_del_paquete_son_oficiales_o_lo_dicen():
     usadas = {f for e in D["excepciones"] for f in e["fuentes"]} | {p["fuente"] for p in D["plazos"]}
     for f in FUENTES:
         if f["id"] in usadas and f["tipo"] == "obligacion-legal":
-            assert any(d in f["url"].lower() for d in ("boe.es", "eur-lex.europa.eu")) or f["estado"] == "draft", f["id"]
+            oficial = any(d in f["url"].lower() for d in ("boe.es", "eur-lex.europa.eu"))
+            assert oficial or f["estado"] == "draft", f["id"]

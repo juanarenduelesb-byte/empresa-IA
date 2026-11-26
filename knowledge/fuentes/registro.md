@@ -120,6 +120,7 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 | [MINTO-PIRAMIDE](#minto-piramide) | The Pyramid Principle (Barbara Minto): la respuesta primero y la estructura situación, complicación, pregunta y respuesta | buena-practica | media | vigente | draft |
 | [LANGFUSE-CLOUD](#langfuse-cloud) | Langfuse Cloud: planes y precios | documentacion-producto | media | vigente | draft |
 | [CMU-RUBRICAS](#cmu-rubricas) | Creating and Using Rubrics | buena-practica | alta | vigente | draft |
+| [ANTHROPIC-AGENTES](#anthropic-agentes) | Building effective agents | buena-practica | media | vigente | draft |
 
 <a id="int-guia"></a>
 ### INT-GUIA
@@ -1248,4 +1249,14 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 - **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
 - **Nota:** Rúbrica analítica: criterios por niveles de desempeño, con un descriptor concreto en cada celda para que dos evaluadores puntúen igual. Base de la rúbrica de entregables (C3).
+
+<a id="anthropic-agentes"></a>
+### ANTHROPIC-AGENTES
+- **Título:** Building effective agents
+- **Autor u organismo:** Anthropic (Erik Schluntz y Barry Zhang)
+- **URL:** <https://www.anthropic.com/research/building-effective-agents>
+- **Tipo:** buena-practica · **Jurisdicción:** — · **Versión o fecha:** 19/12/2024; revisada el 09/10/2026 (leída el 26/11/2026)
+- **Consultada:** 2026-11-26 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** Distingue flujos de trabajo («LLMs and tools are orchestrated through predefined code paths») de agentes (el modelo dirige sus propios pasos) y recomienda «find the simplest solution possible, and only increasing complexity when needed». Patrones: encadenar, enrutar, paralelizar, orquestador y trabajadores, evaluador y optimizador. Tres principios: simplicidad, transparencia de la planificación y herramientas bien documentadas y probadas. Autoridad media: proveedor con interés en el tema; una sola fuente.
 

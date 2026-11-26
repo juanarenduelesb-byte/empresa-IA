@@ -128,7 +128,7 @@ El marco completo ya existe en [el marco legal](fuentes/Marco_Integral_Legal_Cib
 
 | ID | Capacidad | Hoy | Objetivo 28/02 | P | Quién |
 |---|---|---|---|---|---|
-| M-040 | Auditoría de agentes y procesos: qué sobra, qué falta | 34 agentes | Cada agente unido a procesos, con métrica y nivel de autonomía; los que no lo estén, fusionados o retirados | P0 | Noche (semana 2) |
+| M-040 | Auditoría de agentes y procesos: qué sobra, qué falta ([docs/28](28-auditoria-agentes.md), D-026 propuesta) | 34 agentes | Cada agente unido a procesos, con métrica y nivel de autonomía; los que no lo estén, fusionados o retirados | P0 | Noche (semana 2) |
 | M-041 | La oficina sobre la API y la base de datos | Almacén del artefacto | Encargos, tareas, aprobaciones y memoria en PostgreSQL con auditoría | P1 | Noche (semanas 2–5) |
 | M-042 | Chat con el CEO: clasificar, preguntar, planificar y repartir | En el artefacto | CEO limitado de S4 con las cinco decisiones y el banco de 25 encargos | P1 | Noche (semana 4) |
 | M-043 | Agentes que colaboran: plan → tareas → agentes → calidad → aprobación | Modo «En equipo» | Sobre el motor persistente, con dependencias y reintentos | P1 | Noche (semana 5) |
@@ -198,10 +198,10 @@ Cada uno necesita plantilla, rúbrica, ejemplo con datos inventados y su lugar e
 | Diagnosticar | Mapa AS-IS con volúmenes y tiempos | Línea base medible | G1 |
 | Diagnosticar | Casos de uso puntuados y clasificación de riesgo (IA, datos) | Qué merece la pena | G2 |
 | Diagnosticar | Informe de diagnóstico con caso de negocio y hoja de ruta a 12 meses | Decisión de seguir | G2 |
-| Diseñar | Diseño TO-BE: qué hace la regla, la IA o la persona | El proceso nuevo | G3 |
-| Diseñar | Evaluación de riesgos y, si toca, EIPD y clasificación según el Reglamento de IA | Cumplir | G3 |
-| Diseñar | Métrica de éxito firmada y plan de piloto | Pago 50/50 | G3 |
-| Construir | Especificación y plan de pruebas | Qué se construye y cómo se comprueba | G4 |
+| Diseñar | Diseño TO-BE: qué hace la regla, la IA o la persona | El proceso nuevo | G2 |
+| Diseñar | Evaluación de riesgos y, si toca, EIPD y clasificación según el Reglamento de IA | Cumplir | G2 |
+| Diseñar | Métrica de éxito firmada y plan de piloto | Pago 50/50 | G2 |
+| Construir | Especificación y plan de pruebas | Qué se construye y cómo se comprueba | G3 |
 | Construir | Informe de evaluación con cifras reales | Acierto, coste, errores | G4 |
 | Construir | Manual de uso y formación (art. 4) | Adopción | G5 |
 | Construir | Acta de aceptación del piloto | Cobrar la segunda mitad | G5 |

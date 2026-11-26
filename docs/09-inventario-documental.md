@@ -24,3 +24,19 @@ Documentos generados en el trabajo previo y sus funciones:
 Assets: Mapa_Maestro_Cerebro_Digital_Completo.png, Arquitectura_Cerebro_Digital_con_Obsidian.png/.svg, diagramas del Atlas y anexos.
 
 **Nota de alcance:** esta primera carga incorpora la síntesis Markdown y el inventario. La tabla identifica los originales, pero no significa que cada binario Word/HTML/PNG/ZIP esté adjuntado aún. La carga de binarios y su verificación debe hacerse como operación separada.
+
+## Documentos de trabajo (docs/21 en adelante)
+
+Añadido el 26/11/2026: los documentos nuevos de las noches no estaban en este índice.
+
+| Documento | Función |
+|---|---|
+| [21-trabajo-nocturno.md](21-trabajo-nocturno.md) | Lista de la noche, registro de tandas, preguntas y pendientes de aprobación. |
+| [22-plan-hasta-febrero.md](22-plan-hasta-febrero.md) | Plan diario hasta el 12/02/2027 e informe de la mañana. |
+| [23-plan-maestro.md](23-plan-maestro.md) | Plan maestro: tesis, catálogo de entregables, mejoras M-0xx y preguntas para los socios. |
+| [24-base-de-datos.md](24-base-de-datos.md) | Base de datos: PostgreSQL, RLS, auditoría y conocimiento con citas (D-023). |
+| [25-portal-interno.md](25-portal-interno.md) | Auditoría y estructura de la oficina (D-025). |
+| [26-web-clientes.md](26-web-clientes.md) | Estudio, estructura y textos de la web para clientes. |
+| [27-finanzas.md](27-finanzas.md) | Forma jurídica, facturación, precio y caja. |
+| [28-auditoria-agentes.md](28-auditoria-agentes.md) | Auditoría de agentes y habilidades frente a los procesos (D-026, propuesta). |
+| [informes/](informes/2026-11-26.md) | Informes de la mañana. |

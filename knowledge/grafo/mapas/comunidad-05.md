@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 5
-miembros: 59
+miembros: 60
 cohesion: 0.15
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 5 · precedents/oficina · Propuesta de proceso de referencia: siniestros en corredurías y Conversaciones con Coordinación sectorial · Seguros
 
-59 nodos agrupados por el algoritmo de Louvain. Cohesión 0.15.
+60 nodos agrupados por el algoritmo de Louvain. Cohesión 0.15.
 
 ## Documentos
 
@@ -24,8 +24,8 @@ tags:
 - [[precedents/oficina/encargos/2026-11/2026-11-17-as-is-de-apertura-de-siniestros-atalaya-nau7x|AS-IS de apertura de siniestros · Atalaya]]
 - [[precedents/oficina/chats/jefe-comercial|Conversaciones con Jefe comercial]]
 - [[precedents/oficina/encargos/2026-11/2026-11-17-guiones-de-diagnostico-de-apertura-de-siniestros-a-mwles|Guiones de diagnóstico de apertura de siniestros (Atalaya)]]
-- [[precedents/oficina/encargos/2026-11/2026-11-17-examen-de-25-casos-ficticios-para-atalaya-qq164|Examen de 25 casos ficticios para Atalaya]]
 - [[precedents/oficina/chats/validacion|Conversaciones con Validación]]
+- [[precedents/oficina/encargos/2026-11/2026-11-17-examen-de-25-casos-ficticios-para-atalaya-qq164|Examen de 25 casos ficticios para Atalaya]]
 - [[precedents/oficina/chats/metricas|Conversaciones con Métricas]]
 - [[precedents/oficina/chats/datos-de-prueba|Conversaciones con Datos de prueba]]
 - [[processes/referencia-seguros-apertura-siniestros/README|Seguros · Apertura de siniestros en corredurías (proceso de referencia)]]
@@ -52,6 +52,7 @@ tags:
 - [[precedents/projects/caso-correduria-atalaya/README|Caso de práctica · Atalaya Correduría de Seguros (ficticia)]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-datos-de-prueba-a-calidad-y-riesgo-dvsoz|Datos de prueba → Calidad y riesgo]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-ceo-digital-a-coordinacion-sectorial-seguros-fws4y|CEO digital → Coordinación sectorial · Seguros]]
+- [[knowledge/plantillas/ficha-kpi|KPI: <nombre>]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-ceo-digital-a-metricas-sj6cp|CEO digital → Métricas]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-metricas-a-calidad-y-riesgo-4xyvo|Métricas → Calidad y riesgo]]
 - [[web/README|Web para clientes (borrador)]]

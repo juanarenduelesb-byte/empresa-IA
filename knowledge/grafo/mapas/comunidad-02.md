@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 2
-miembros: 93
+miembros: 94
 cohesion: 0.1
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 2 · claude/habilidades · Habilidades de los agentes y Administración
 
-93 nodos agrupados por el algoritmo de Louvain. Cohesión 0.1.
+94 nodos agrupados por el algoritmo de Louvain. Cohesión 0.1.
 
 ## Documentos
 
@@ -21,24 +21,24 @@ tags:
 - [[knowledge/agentes/proj|Arquitecto de procesos]]
 - [[knowledge/agentes/cfo|Director financiero]]
 - [[knowledge/agentes/comj|Jefe comercial]]
-- [[knowledge/agentes/conta|Contabilidad y facturación]]
 - [[knowledge/agentes/ingj|Arquitecto técnico]]
+- [[knowledge/agentes/conta|Contabilidad y facturación]]
 - [[knowledge/agentes/leg|Legal y privacidad]]
 - [[knowledge/agentes/cump|Cumplimiento normativo]]
 - [[knowledge/agentes/ceo|CEO digital]]
 - [[knowledge/agentes/prop|Propuestas]]
 - [[knowledge/agentes/seg|Coordinación sectorial · Seguros]]
-- [[knowledge/agentes/dec|Registro de decisiones]]
-- [[knowledge/agentes/cont|Contenido]]
-- [[knowledge/agentes/pmo|Plan y seguimiento]]
 - [[knowledge/agentes/bib|Bibliotecario]]
+- [[knowledge/agentes/dec|Registro de decisiones]]
 - [[knowledge/agentes/exito|Éxito de cliente]]
+- [[knowledge/agentes/cont|Contenido]]
 - [[knowledge/agentes/pros|Prospección]]
-- [[knowledge/agentes/kpi|Métricas]]
+- [[knowledge/agentes/val|Validación]]
+- [[knowledge/agentes/pmo|Plan y seguimiento]]
 - [[knowledge/agentes/calj|Calidad y riesgo]]
 - [[knowledge/agentes/sec|Seguridad]]
 - [[knowledge/agentes/ux|Diseño y experiencia]]
-- [[knowledge/agentes/val|Validación]]
+- [[knowledge/agentes/kpi|Métricas]]
 - [[claude/habilidades/hecho-hipotesis-propuesta|Separar hecho, hipótesis y propuesta]]
 - [[knowledge/agentes/dat|Datos de prueba]]
 - [[knowledge/agentes/ia|IA y evaluación]]
@@ -62,15 +62,15 @@ tags:
 - [[claude/habilidades/decision-registro|Entrada de DECISIONS.md]]
 - [[claude/habilidades/modelo-amenazas|Modelo de amenazas]]
 - [[claude/habilidades/entrevista-descubrimiento|Entrevista de descubrimiento]]
+- [[claude/habilidades/cinco-decisiones|Las cinco decisiones del CEO]]
 - [[claude/habilidades/ficha-metrica|Ficha de métrica]]
 - [[claude/habilidades/spec-tecnica|Especificación para Claude Code]]
+- [[claude/habilidades/ficha-proveedor|Ficha de proveedor]]
 - [[claude/habilidades/contrato-de-tarea|Contrato de tarea]]
 - [[claude/habilidades/evaluacion-modelos|Evaluación de modelos]]
-- [[claude/habilidades/ficha-proveedor|Ficha de proveedor]]
 - [[claude/habilidades/cierre-mensual|Cierre contable mensual]]
 - [[claude/habilidades/casos-sinteticos|Casos de prueba inventados]]
 - [[claude/habilidades/propuesta-diagnostico|Propuesta de diagnóstico]]
-- [[claude/habilidades/revision-valor|Revisión de valor con el cliente]]
 - [[claude/habilidades/preguntas-profesional|Preguntas para un profesional externo]]
-- [[claude/habilidades/flujo-pantallas|Flujo y pantallas de una tarea]]
-- … y 33 más
+- [[claude/habilidades/matriz-ia-regla-persona|Matriz IA · regla · persona]]
+- … y 34 más

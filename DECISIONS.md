@@ -200,6 +200,14 @@ No construir primero un CEO omnisciente; descubrir, diseñar, integrar y medir u
 - Riesgo: cambiar la costumbre de entrada. Mitigación: no se quita nada, las teclas de antes siguen y la casilla «Abrir la oficina aquí» devuelve la entrada por la planta.
 - Estado: propuesta.
 
+## D-026 — Cada agente sirve a un proceso medido: de 34 se quedan 22
+- Fecha: 2026-11-26
+- Decisión: se mantienen 22 agentes, 5 se fusionan con otro (Registro de decisiones con Plan y seguimiento; Validación y Contenido con el Jefe comercial; Cumplimiento con Legal; Costes con el Director financiero) y 7 se retiran sin borrar su ficha (Administración, Contabilidad y los expertos de sanidad, despachos, financiero, industria y logística), cada uno con la condición para recuperarlo. De 65 habilidades se mantienen 56, se fusionan 3 y se retiran 6. Detalle, cobertura por proceso y métricas en `docs/28-auditoria-agentes.md`; fuente máquina en `tools/org_data/auditoria.py`. Revisa D-020.
+- Motivo: «proceso antes que agente» (CLAUDE.md) y la recomendación de Anthropic de empezar por lo más simple y añadir complejidad solo cuando hace falta (fuente `ANTHROPIC-AGENTES`). Con 0 clientes y un solo proceso de referencia (D-011), un agente sin proceso no se puede medir ni probar.
+- Alternativas descartadas: mantener los 34 (más rutas que probar y más tokens sin trabajo que hacer); retirar también Éxito de cliente y Diseño (P37, P38 y P10 los necesitan antes del primer piloto).
+- Riesgo: perder conocimiento de sectores retirados. Mitigación: las fichas de knowledge/ se conservan y una oportunidad del sector que pase P31 los recupera. Una prueba (`tests/test_auditoria_agentes.py`) impide añadir un agente sin proceso y métrica.
+- Estado: propuesta. Hasta que se apruebe no se toca `agentes.py`.
+
 ## Decisiones pendientes (con fecha límite)
 | Decisión | Quién | Antes de |
 |---|---|---|

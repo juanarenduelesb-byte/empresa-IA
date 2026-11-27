@@ -61,7 +61,8 @@ class Modelo(Protocol):
 # --- Detectores fijos (independientes del modelo) -----------------------------------------------
 _INYECCION = re.compile(
     r"ignora\w* (todas |las |tus )*(instrucciones|reglas)|olvida (tus|las) (instrucciones|reglas)"
-    r"|instrucciones (anteriores|del sistema)|system prompt|eres ahora", re.I)
+    r"|instrucciones (anteriores|del sistema)|system prompt|eres ahora"
+    r"|ignore (all |the |any |your )*(previous |prior |above )?(instructions|rules)|you are now", re.I)
 _SIN_APROBACION = re.compile(
     r"apru[eé]ba(lo|la|los|las)? t[uú]|sin que lo (vea|revise|apruebe) nadie|no hace falta que lo (vea|revise|apruebe)"
     r"|sin pasar por (ningún|ningun|el) (socio|ok|control)|sin (pedir|esperar) (permiso|aprobaci[oó]n)", re.I)
@@ -78,7 +79,9 @@ def detectar(e: Encargo, identidad: Identidad, clientes: dict[str, str]) -> Sena
     otro = next((t for t, n in clientes.items()
                  if t != identidad.tenant and (n.lower() in e.texto.lower() or t in e.texto.lower())), None)
     return Senales(
-        instrucciones_en_documento=bool(e.documento and _INYECCION.search(e.documento)),
+        # En un adjunto, pedir que nadie lo apruebe o que se inventen cifras también es una instrucción.
+        instrucciones_en_documento=bool(e.documento and any(
+            x.search(e.documento) for x in (_INYECCION, _SIN_APROBACION, _INVENTAR))),
         pide_sin_aprobacion=bool(_SIN_APROBACION.search(e.texto)),
         pide_inventar=bool(_INVENTAR.search(e.texto)),
         afirma_cumplimiento=bool(_CUMPLIMIENTO.search(e.texto)),

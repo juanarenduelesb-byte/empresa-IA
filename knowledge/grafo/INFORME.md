@@ -6,7 +6,7 @@ Cómo está conectado el cerebro de Varios: qué sostiene todo, qué temas forma
 ## Resumen
 
 - 5118 nodos: seccion 4393, documento 384, fuente 122, habilidad 65, proceso 38, especialista 34, agente 34, decision 29, puerta 12, departamento 7.
-- 7280 relaciones: 63 % EXTRACTADAS (escritas en la fuente), 36 % INFERIDAS (temas compartidos, con puntuación) y 39 AMBIGUAS (para revisar).
+- 7281 relaciones: 63 % EXTRACTADAS (escritas en la fuente), 36 % INFERIDAS (temas compartidos, con puntuación) y 39 AMBIGUAS (para revisar).
 - 12 comunidades de temas.
 
 ## Nodos centrales
@@ -72,7 +72,7 @@ Cohesión 0.06 · 108 nodos: Registro de fuentes; Coordinación sectorial y segu
 
 ### 3 · docs · Registro de decisiones y Trabajo nocturno de Claude
 
-Cohesión 0.09 · 93 nodos: Registro de decisiones; Trabajo nocturno de Claude; Informe de la mañana · 27/11/2026; Informe de la mañana · 26/11/2026; Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue; Plan maestro: la empresa completa, sin que se escape nada; 17 · Cerebro, conocimiento y procesos: auditoría e informe; Varios — repositorio maestro (y 85 más)
+Cohesión 0.09 · 93 nodos: Registro de decisiones; Trabajo nocturno de Claude; Informe de la mañana · 27/11/2026; Informe de la mañana · 26/11/2026; Plan maestro: la empresa completa, sin que se escape nada; Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue; 17 · Cerebro, conocimiento y procesos: auditoría e informe; Varios — repositorio maestro (y 85 más)
 
 ### 4 · processes/runbooks · Auditoría de agentes y habilidades frente a los procesos (M-040) y Dependencias entre procesos
 

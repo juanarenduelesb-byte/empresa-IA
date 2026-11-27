@@ -17,8 +17,8 @@ tags:
 - [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]]
 - [[docs/informes/2026-11-27|Informe de la mañana · 27/11/2026]]
 - [[docs/informes/2026-11-26|Informe de la mañana · 26/11/2026]]
-- [[docs/fuentes/Atlas_Evolucion_v1.1_Modelo_Operativo_Procesos_y_Despliegue|Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue]]
 - [[docs/23-plan-maestro|Plan maestro: la empresa completa, sin que se escape nada]]
+- [[docs/fuentes/Atlas_Evolucion_v1.1_Modelo_Operativo_Procesos_y_Despliegue|Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue]]
 - [[docs/17-cerebro-y-procesos|17 · Cerebro, conocimiento y procesos: auditoría e informe]]
 - [[README|Varios — repositorio maestro]]
 - [[docs/24-base-de-datos|Base de datos (D-023, propuesta)]]
@@ -60,9 +60,9 @@ tags:
 - [[web/README|Web para clientes (borrador)]]
 - [[knowledge/plantillas/entregables/06-acta-reunion|Acta de reunión · (Cliente) · (Tema) · (Fecha)]]
 - [[claude/instrucciones-proyecto|Instrucciones del proyecto "Varios · Cerebro" en Claude]]
+- [[processes/ceo-control-a/README|Banco del Control A: 25 encargos para el CEO limitado (C2)]]
 - [[docs/02-arquitectura-general|Arquitectura general]]
 - [[docs/informes/README|Informes de la mañana]]
-- [[processes/ceo-control-a/README|Banco del Control A: 25 encargos para el CEO limitado (C2)]]
 
 ## Decisiones
 

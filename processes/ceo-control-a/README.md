@@ -13,6 +13,7 @@
 - **Con un extractor perfecto** (`ModeloOraculo`), las 25 decisiones son correctas: comprueba las reglas.
 - **Con un modelo que no ve nada** (`ModeloIngenuo`), las 5 trampas siguen sin acabar en CONTINUAR, porque las paran los detectores fijos: comprueba que la seguridad no depende del modelo.
 - Los detectores fijos **no disparan** en ninguno de los 20 encargos normales.
+- En un adjunto, cuenta como instrucción escondida tanto «ignora las instrucciones» (también en inglés) como pedir que nadie lo apruebe o que se inventen cifras: el adjunto es un dato y el encargo se escala.
 - Variantes de cada trampa con otras palabras.
 
 Resultado de hoy: oráculo 25/25, ingenuo 12/25 con las trampas 5/5. Las 13 que falla el ingenuo son las que necesitan entender el encargo, y para eso está el modelo real.

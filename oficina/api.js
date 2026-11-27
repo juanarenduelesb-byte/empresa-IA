@@ -61,7 +61,8 @@
       var antes = api.estado;
       if (destino === 'PENDIENTE_APROBACION' || destino === 'ENTREGADO' || antes === 'PENDIENTE_APROBACION') {
         // Aprobaciones: a QA, pedir, y decidir. De PENDIENTE_APROBACION solo se sale decidiendo (Guía v1.4 §4):
-        // rechazar o descartar es una decisión «rechazada» y después el camino libre desde RETRABAJO.
+        // rechazar o descartar es una decisión «rechazada» que va a RECHAZADO si la oficina lo da por descartado y,
+        // si no, a RETRABAJO y después el camino libre hasta donde esté en la oficina.
         if (antes !== 'PENDIENTE_APROBACION') {
           for (var p of (camino(antes, 'EN_QA') || [])) { api.estado = (await mover(api.id, p, 'Oficina: ' + t.status)).estado; }
           if (api.estado === 'EN_QA') {
@@ -83,10 +84,11 @@
           }
           if (api.rehusada === api.aprobacion) return;
           try {
+            var siRechaza = destino === 'RECHAZADO' ? 'RECHAZADO' : 'RETRABAJO';
             await llamar('POST', '/aprobaciones/' + api.aprobacion + '/decision',
-              {decision: aprobada ? 'aprobada' : 'rechazada', motivo: ult.m});
-            api.estado = aprobada ? 'ENTREGADO' : 'RETRABAJO'; api.aprobacion = '';
-            if (!aprobada) for (var q of (camino('RETRABAJO', destino) || [])) { api.estado = (await mover(api.id, q, 'Oficina: ' + t.status)).estado; }
+              {decision: aprobada ? 'aprobada' : 'rechazada', motivo: ult.m, si_rechaza: siRechaza});
+            api.estado = aprobada ? 'ENTREGADO' : siRechaza; api.aprobacion = '';
+            if (!aprobada) for (var q of (camino(api.estado, destino) || [])) { api.estado = (await mover(api.id, q, 'Oficina: ' + t.status)).estado; }
           } catch (err) {
             if (err.status === 403) {
               api.rehusada = api.aprobacion; cambio = true;

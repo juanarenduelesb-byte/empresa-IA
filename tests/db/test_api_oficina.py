@@ -143,6 +143,29 @@ def test_rechazar_devuelve_a_retrabajo_y_sube_la_version(api, gente):
     assert r.status_code == 403  # ya decidida
 
 
+def test_rechazar_del_todo_lleva_a_rechazado(api, gente):
+    """Guía v1.4 §4: de PENDIENTE_APROBACION también se sale a RECHAZADO, y solo decidiendo la aprobación."""
+    autor, aprobador = gente["autor"], gente["aprobador"]
+    enc = _nuevo(api, autor)
+    _hasta_qa(api, autor, enc["id"])
+    ap = api.post(f"/encargos/{enc['id']}/aprobaciones", json={}, headers=h(autor)).json()
+    r = api.post(f"/aprobaciones/{ap['id']}/decision",
+                 json={"decision": "rechazada", "motivo": "No procede", "si_rechaza": "ENTREGADO"},
+                 headers=h(aprobador))
+    assert r.status_code == 422  # solo RETRABAJO o RECHAZADO
+    r = api.post(f"/aprobaciones/{ap['id']}/decision",
+                 json={"decision": "rechazada", "motivo": "No procede", "si_rechaza": "RECHAZADO"}, headers=h(autor))
+    assert r.status_code == 403  # quien la pidió tampoco rechaza
+    r = api.post(f"/aprobaciones/{ap['id']}/decision",
+                 json={"decision": "rechazada", "motivo": "No procede", "si_rechaza": "RECHAZADO"},
+                 headers=h(aprobador))
+    assert r.status_code == 200 and r.json()["decision"] == "rechazada"
+    e = api.get(f"/encargos/{enc['id']}", headers=h(autor)).json()
+    assert e["estado"] == "RECHAZADO" and e["version"] == 1
+    ultimo = api.get(f"/encargos/{enc['id']}/auditoria", headers=h(autor)).json()[-1]
+    assert (ultimo["antes"], ultimo["despues"]) == ("PENDIENTE_APROBACION", "RECHAZADO")
+
+
 def test_el_cliente_del_cuerpo_se_ignora(api, gente):
     autor, b = gente["autor"], gente["b"]
     enc = _nuevo(api, autor, cliente_id=str(b[1]), autor_id=str(b[0]))

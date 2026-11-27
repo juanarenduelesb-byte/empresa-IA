@@ -126,6 +126,8 @@ class PeticionAprobacion(Entrada):
 class Decision(Entrada):
     decision: Literal["aprobada", "rechazada"]
     motivo: str = Field(min_length=1)
+    # Solo cuenta al rechazar: devolver para rehacer (por defecto) o rechazar del todo (Guía v1.4 §4).
+    si_rechaza: Literal["RETRABAJO", "RECHAZADO"] = "RETRABAJO"
 
 
 def _encargo(s) -> dict:
@@ -204,7 +206,8 @@ def listar_aprobaciones(encargo_id: uuid.UUID, ctx: Ctx) -> list[dict]:
 @router.post("/aprobaciones/{aprobacion_id}/decision")
 def decidir(aprobacion_id: uuid.UUID, datos: Decision, ctx: Ctx) -> dict:
     with ctx.abrir() as repo:
-        return _aprobacion(repo.decidir_aprobacion(aprobacion_id, datos.decision == "aprobada", datos.motivo))
+        return _aprobacion(repo.decidir_aprobacion(aprobacion_id, datos.decision == "aprobada", datos.motivo,
+                                                     datos.si_rechaza))
 
 
 @router.get("/encargos/{encargo_id}/auditoria")

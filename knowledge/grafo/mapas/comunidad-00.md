@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 0
-miembros: 109
+miembros: 112
 cohesion: 0.08
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 0 · claude/habilidades · Habilidades de los agentes y Administración
 
-109 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
+112 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
 
 ## Documentos
 
@@ -39,6 +39,7 @@ tags:
 - [[knowledge/administracion-finanzas/financiero|Especialista financiero]]
 - [[knowledge/agentes/calj|Calidad y riesgo]]
 - [[knowledge/agentes/dec|Registro de decisiones]]
+- [[knowledge/agentes/ux|Diseño y experiencia]]
 - [[knowledge/agentes/pmo|Plan y seguimiento]]
 - [[knowledge/agentes/sec|Seguridad]]
 - [[knowledge/agentes/kpi|Métricas]]
@@ -72,8 +73,7 @@ tags:
 - [[claude/habilidades/evaluacion-modelos|Evaluación de modelos]]
 - [[claude/habilidades/cierre-mensual|Cierre contable mensual]]
 - [[claude/habilidades/casos-sinteticos|Casos de prueba inventados]]
-- [[claude/habilidades/propuesta-diagnostico|Propuesta de diagnóstico]]
-- … y 31 más
+- … y 34 más
 
 ## Especialistas
 

@@ -145,8 +145,15 @@ class Repositorio:
         q = select(Aprobacion).where(Aprobacion.cliente_id == self.cliente_id, Aprobacion.solicitud_id == sol.id)
         return list(self.sesion.scalars(q.order_by(Aprobacion.creado_en)))
 
-    def decidir_aprobacion(self, aprobacion_id: uuid.UUID, aprobada: bool, motivo: str) -> Aprobacion:
-        """Aprobar o rechazar. Reglas de P10 y de motor.aprobar, en código y no en el modelo."""
+    def decidir_aprobacion(self, aprobacion_id: uuid.UUID, aprobada: bool, motivo: str,
+                           si_rechaza: str = "RETRABAJO") -> Aprobacion:
+        """Aprobar o rechazar. Reglas de P10 y de motor.aprobar, en código y no en el modelo.
+
+        Al rechazar, el aprobador elige entre devolver (RETRABAJO, versión + 1) o rechazar del todo (RECHAZADO): son las
+        dos salidas de PENDIENTE_APROBACION que da la Guía v1.4 §4 además de ENTREGADO.
+        """
+        if si_rechaza not in ("RETRABAJO", "RECHAZADO"):
+            raise TransicionInvalida(f"Al rechazar se va a RETRABAJO o a RECHAZADO, no a {si_rechaza}")
         ap = self.aprobacion(aprobacion_id)
         sol = self.solicitud(ap.solicitud_id, bloquear=True)
         self.sesion.refresh(ap, with_for_update=True)  # nadie más la decide a la vez
@@ -169,7 +176,7 @@ class Repositorio:
         self.sesion.flush()
         self.registrar("aprobacion_decidida", f"aprobacion:{ap.id}", "pendiente", ap.decision, motivo,
                        solicitud=str(sol.id), version=ap.version)
-        self._cambiar(sol, "ENTREGADO" if aprobada else "RETRABAJO", motivo, aprobacion=str(ap.id))
+        self._cambiar(sol, "ENTREGADO" if aprobada else si_rechaza, motivo, aprobacion=str(ap.id))
         return ap
 
     # --- auditoría ----------------------------------------------------------------------

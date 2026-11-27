@@ -6,8 +6,8 @@ Cómo está conectado el cerebro de Varios: qué sostiene todo, qué temas forma
 ## Resumen
 
 - 5097 nodos: seccion 4374, documento 383, fuente 122, habilidad 65, proceso 38, especialista 34, agente 34, decision 28, puerta 12, departamento 7.
-- 7203 relaciones: 63 % EXTRACTADAS (escritas en la fuente), 37 % INFERIDAS (temas compartidos, con puntuación) y 39 AMBIGUAS (para revisar).
-- 14 comunidades de temas.
+- 7206 relaciones: 63 % EXTRACTADAS (escritas en la fuente), 37 % INFERIDAS (temas compartidos, con puntuación) y 39 AMBIGUAS (para revisar).
+- 13 comunidades de temas.
 
 ## Nodos centrales
 
@@ -35,11 +35,11 @@ Nodos por los que pasa el camino entre comunidades distintas (intermediación).
 - **Habilidades de los agentes** · intermediación 0.042 · une la comunidad 0 con 4, 5, 7, 9, 10, 12
 - **L2 (puerta técnica)** · intermediación 0.026 · une la comunidad 11 con 0, 2, 3, 4, 5, 6
 - **Índice del conocimiento de Varios** · intermediación 0.022 · une la comunidad 7 con 0, 2, 3, 4, 5, 6
-- **Guia de Arranque Proyecto v1.4 Diseno Cerrado** · intermediación 0.017 · une la comunidad 8 con 0, 3, 4, 6, 9, 13
-- **Estudios** · intermediación 0.017 · une la comunidad 13 con 0, 2, 3, 4, 5, 6
+- **Guia de Arranque Proyecto v1.4 Diseno Cerrado** · intermediación 0.017 · une la comunidad 8 con 0, 3, 4, 6, 9, 12
+- **Estudios** · intermediación 0.017 · une la comunidad 12 con 0, 2, 3, 4, 5, 6
 - **D-011 · Construir primero, clientes desde el 15/02/2027** · intermediación 0.011 · une la comunidad 5 con 0, 2, 3, 4, 7, 11
 - **CEO digital** · intermediación 0.01 · une la comunidad 9 con 0, 2, 3, 4, 6, 7
-- **Administración** · intermediación 0.01 · une la comunidad 0 con 1, 2, 7, 10, 11, 12
+- **Administración** · intermediación 0.01 · une la comunidad 0 con 1, 2, 7, 10, 11
 
 ## Conexiones sorprendentes
 
@@ -60,15 +60,15 @@ Secciones de carpetas y comunidades distintas que tratan lo mismo y no se enlaza
 
 ### 0 · claude/habilidades · Habilidades de los agentes y Administración
 
-Cohesión 0.08 · 109 nodos: Habilidades de los agentes; Administración; Experto en asesorías y despachos; Experto en asesorías, gestorías y despachos; Especialista en contabilidad y facturación; Backend; Director financiero (CFO); Agentes de la oficina (y 101 más)
+Cohesión 0.08 · 112 nodos: Habilidades de los agentes; Administración; Experto en asesorías y despachos; Experto en asesorías, gestorías y despachos; Especialista en contabilidad y facturación; Backend; Director financiero (CFO); Agentes de la oficina (y 104 más)
 
 ### 1 · Habilidades · Legal y privacidad y Arquitecto de procesos
 
-Cohesión 0.05 · 101 nodos: Legal y privacidad; Arquitecto de procesos; Seguridad; Coordinación sectorial · Seguros; Director financiero; Jefe comercial; Separar hecho, hipótesis y propuesta; Arquitecto técnico (y 93 más)
+Cohesión 0.05 · 102 nodos: Legal y privacidad; Arquitecto de procesos; Seguridad; Coordinación sectorial · Seguros; Director financiero; Jefe comercial; Separar hecho, hipótesis y propuesta; Arquitecto técnico (y 94 más)
 
 ### 2 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros
 
-Cohesión 0.07 · 95 nodos: Registro de fuentes; Coordinación sectorial y seguros; Experto en sanidad privada; Responsable de cumplimiento normativo; Experto en servicios financieros no bancarios; Especialista legal y privacidad; Experto en logística y transporte; Catálogo de excepciones al abrir un siniestro (y 87 más)
+Cohesión 0.07 · 100 nodos: Registro de fuentes; Coordinación sectorial y seguros; Experto en sanidad privada; Responsable de cumplimiento normativo; Experto en servicios financieros no bancarios; Especialista legal y privacidad; Experto en logística y transporte; Catálogo de excepciones al abrir un siniestro (y 92 más)
 
 ### 3 · docs · Registro de decisiones y Trabajo nocturno de Claude
 
@@ -106,11 +106,7 @@ Cohesión 0.19 · 15 nodos: Ingeniero de plataforma y operaciones (DevOps/SRE); 
 
 Cohesión 0.55 · 11 nodos: Acta de protección de la IA y examen de 50 casos; L2 (puerta técnica); Conversaciones con IA y evaluación; Reunión: IA y evaluación y Seguridad; Conversaciones con CEO digital; Conversaciones con Plan y seguimiento; Conversaciones con Registro de decisiones; Conversaciones con Bibliotecario (y 3 más)
 
-### 12 · claude/habilidades · Diseñador de producto y experiencia (UX) y Diseño y experiencia
-
-Cohesión 0.33 · 9 nodos: Diseñador de producto y experiencia (UX); Diseño y experiencia; LEY-ACCESIBILIDAD-11-2023 · Ley 11/2023 (accesibilidad de productos y servicios, transpone la Directiva (UE) 2019/882); Diseñador de producto y experiencia (UX); Flujo y pantallas de una tarea; NNG-HEURISTICAS · 10 heurísticas de usabilidad (Jakob Nielsen); W3C-WCAG22 · Web Content Accessibility Guidelines (WCAG) 2.2; Prueba de usabilidad (y 1 más)
-
-### 13 · knowledge/estudios · Estudios y Integraciones
+### 12 · knowledge/estudios · Estudios y Integraciones
 
 Cohesión 0.43 · 8 nodos: Estudios; Integraciones; Motor de conocimiento; Contratos de datos; Estudio de prospectos: automatización para pymes (Álvaro, noviembre de 2026); Pruebas de integración; Conectores; Conocimiento
 

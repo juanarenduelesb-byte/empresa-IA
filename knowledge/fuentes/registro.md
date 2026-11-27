@@ -1266,7 +1266,7 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 - **Tipo:** buena-practica · **Jurisdicción:** — · **Versión o fecha:** 19/12/2024; revisada el 09/10/2026 (leída el 26/11/2026)
 - **Consultada:** 2026-11-26 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
-- **Nota:** Distingue flujos de trabajo («LLMs and tools are orchestrated through predefined code paths») de agentes (el modelo dirige sus propios pasos) y recomienda «find the simplest solution possible, and only increasing complexity when needed». Patrones: encadenar, enrutar, paralelizar, orquestador y trabajadores, evaluador y optimizador. Tres principios: simplicidad, transparencia de la planificación y herramientas bien documentadas y probadas. Autoridad media: proveedor con interés en el tema; una sola fuente.
+- **Nota:** Distingue flujos de trabajo («LLMs and tools are orchestrated through predefined code paths») de agentes (el modelo dirige sus propios pasos) y dice «we recommend finding the simplest solution possible, and only increasing complexity when needed». Patrones: encadenar, enrutar, paralelizar, orquestador y trabajadores, evaluador y optimizador. Tres principios: simplicidad, transparencia de la planificación y herramientas bien documentadas y probadas. Autoridad media: proveedor con interés en el tema; una sola fuente.
 
 <a id="knight-niveles-autonomia"></a>
 ### KNIGHT-NIVELES-AUTONOMIA

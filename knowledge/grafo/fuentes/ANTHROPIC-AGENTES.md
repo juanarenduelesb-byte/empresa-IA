@@ -18,7 +18,7 @@ tags:
 
 - Origen: <https://www.anthropic.com/research/building-effective-agents>
 - Registro: [[knowledge/fuentes/registro|registro de fuentes]]
-- Nota: Distingue flujos de trabajo («LLMs and tools are orchestrated through predefined code paths») de agentes (el modelo dirige sus propios pasos) y recomienda «find the simplest solution possible, and only increasing complexity when needed». Patrones: encadenar, enrutar, paralelizar, orquestador y trabajadores, evaluador y optimizador. Tres principios: simplicidad, transparencia de la planificación y herramientas bien documentadas y probadas. Autoridad media: proveedor con interés en el tema; una sola fuente.
+- Nota: Distingue flujos de trabajo («LLMs and tools are orchestrated through predefined code paths») de agentes (el modelo dirige sus propios pasos) y dice «we recommend finding the simplest solution possible, and only increasing complexity when needed». Patrones: encadenar, enrutar, paralelizar, orquestador y trabajadores, evaluador y optimizador. Tres principios: simplicidad, transparencia de la planificación y herramientas bien documentadas y probadas. Autoridad media: proveedor con interés en el tema; una sola fuente.
 
 ## Citada en
 

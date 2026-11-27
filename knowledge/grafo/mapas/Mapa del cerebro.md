@@ -27,7 +27,7 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 
 ## Nodos centrales
 
-- [[knowledge/fuentes/registro|Registro de fuentes]] · 216 vecinos
+- [[knowledge/fuentes/registro|Registro de fuentes]] · 217 vecinos
 - [[DECISIONS|Registro de decisiones]] · 123 vecinos
 - [[knowledge/INDEX|Índice del conocimiento de Varios]] · 119 vecinos
 - [[docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado|Guia de Arranque Proyecto v1.4 Diseno Cerrado]] · 85 vecinos
@@ -40,7 +40,7 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 - [[docs/28-auditoria-agentes|Auditoría de agentes y habilidades frente a los procesos (M-040)]] · 63 vecinos
 - [[knowledge/direccion/ceo-digital|CEO digital]] · 60 vecinos
 - [[docs/29-autonomia|Mapa de autonomía por proceso, A0–A4 (M-045)]] · 60 vecinos
-- [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]] · 51 vecinos
+- [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]] · 52 vecinos
 - [[knowledge/procesos/arquitecto-procesos|Arquitecto de procesos]] · 50 vecinos
 
 ## Puentes entre temas
@@ -59,9 +59,9 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 ## Preguntas abiertas
 
 - ¿Por qué «Registro de fuentes» conecta la comunidad 2 con las comunidades 0, 3, 4, 5?  
-  Intermediación alta (0.138): es un puente entre temas.
+  Intermediación alta (0.139): es un puente entre temas.
 - ¿Por qué «Registro de decisiones» conecta la comunidad 3 con las comunidades 0, 2, 4, 5?  
-  Intermediación alta (0.049): es un puente entre temas.
+  Intermediación alta (0.048): es un puente entre temas.
 - ¿Por qué «Habilidades de los agentes» conecta la comunidad 0 con las comunidades 4, 5, 7, 9?  
   Intermediación alta (0.042): es un puente entre temas.
 - ¿Se aprueba D-019 · Calidad exigente, todo pasa por un socio y cada rechazo se rehace aprendiendo? Sigue en propuesta y la citan 16 secciones.  

@@ -77,7 +77,7 @@ def generar() -> str:
          "1. **Proceso antes que agente** ([CLAUDE.md](../CLAUDE.md)). Un agente existe porque un proceso de [P01–P38](13-procesos-y-estados.md) "
          "o el [proceso de referencia](../processes/referencia-seguros-apertura-siniestros/README.md) lo necesita; si no, es una ficha, no capacidad "
          "([plan maestro, punto 4](23-plan-maestro.md)).",
-         "2. **Lo más simple que funcione.** La guía de Anthropic sobre agentes eficaces recomienda «find the simplest solution possible, and only "
+         "2. **Lo más simple que funcione.** La guía de Anthropic sobre agentes eficaces dice «we recommend finding the simplest solution possible, and only "
          "increasing complexity when needed» y distingue los flujos de trabajo, donde el modelo y las herramientas siguen «predefined code paths», "
          "de los agentes que deciden sus propios pasos ([ANTHROPIC-AGENTES](../knowledge/fuentes/registro.md#anthropic-agentes)). "
          "Nuestros puestos son, en sus términos, trabajadores de un orquestador (el CEO limitado): cada uno más es una ruta más que probar.",

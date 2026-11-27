@@ -2,14 +2,14 @@
 tipo: "mapa"
 comunidad: 8
 miembros: 37
-cohesion: 0.49
+cohesion: 0.5
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 8 · processes/catalog · P22 · Gestión de errores y reintentos y Catálogo de procesos P01–P38
 
-37 nodos agrupados por el algoritmo de Louvain. Cohesión 0.49.
+37 nodos agrupados por el algoritmo de Louvain. Cohesión 0.5.
 
 ## Documentos
 
@@ -18,15 +18,15 @@ tags:
 - [[processes/catalog/P27-gestion-de-proveedores-y-dependencias|P27 · Gestión de proveedores y dependencias]]
 - [[processes/catalog/P13-aprendizaje-y-actualizacion-de-la-wiki|P13 · Aprendizaje y actualización de la wiki]]
 - [[processes/catalog/P05-diseno-del-plan|P05 · Diseño del plan]]
-- [[processes/catalog/P25-gestion-de-cambios-y-versiones|P25 · Gestión de cambios y versiones]]
 - [[processes/catalog/P11-entrega-y-cierre|P11 · Entrega y cierre]]
+- [[processes/catalog/P25-gestion-de-cambios-y-versiones|P25 · Gestión de cambios y versiones]]
 - [[processes/catalog/P02-clasificacion-y-triaje|P02 · Clasificación y triaje]]
 - [[processes/catalog/P23-evaluacion-de-agentes-y-modelos|P23 · Evaluación de agentes y modelos]]
 - [[processes/catalog/P19-politica-de-uso-y-limites|P19 · Política de uso y límites]]
+- [[processes/catalog/P16-gobierno-de-modelos-e-instrucciones|P16 · Gobierno de modelos e instrucciones]]
 - [[processes/catalog/P12-gestion-de-cambios|P12 · Gestión de cambios]]
 - [[processes/catalog/P09-control-de-calidad|P09 · Control de calidad]]
 - [[processes/catalog/P21-ejecucion-segura-de-herramientas|P21 · Ejecución segura de herramientas]]
-- [[processes/catalog/P16-gobierno-de-modelos-e-instrucciones|P16 · Gobierno de modelos e instrucciones]]
 - [[processes/catalog/P14-gestion-de-permisos-y-aislamiento|P14 · Gestión de permisos y aislamiento]]
 - [[processes/catalog/P29-gestion-de-costes-y-capacidad|P29 · Gestión de costes y capacidad]]
 - [[processes/catalog/P08-ejecucion-de-tareas|P08 · Ejecución de tareas]]

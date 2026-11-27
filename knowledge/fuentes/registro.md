@@ -118,6 +118,8 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 | [AEAT-IS-TIPOS](#aeat-is-tipos) | Impuesto sobre Sociedades: tipo impositivo (microempresas, reducida dimensión y general) | obligacion-legal | alta | vigente | validated |
 | [SEGSOC-RETA-2026](#segsoc-reta-2026) | Cotización de trabajadores autónomos 2026 y encuadramiento de socios con control efectivo | obligacion-legal | alta | vigente | draft |
 | [MINTO-PIRAMIDE](#minto-piramide) | The Pyramid Principle (Barbara Minto): la respuesta primero y la estructura situación, complicación, pregunta y respuesta | buena-practica | media | vigente | draft |
+| [GEPA-2026](#gepa-2026) | GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning (Agrawal et al., ICLR 2026, ponencia oral) | recomendacion-tecnica | media | vigente | draft |
+| [NEAT-2002](#neat-2002) | Neuroevolution of augmenting topologies (NEAT) | buena-practica | baja | vigente | draft |
 | [LANGFUSE-CLOUD](#langfuse-cloud) | Langfuse Cloud: planes y precios | documentacion-producto | media | vigente | draft |
 | [CMU-RUBRICAS](#cmu-rubricas) | Creating and Using Rubrics | buena-practica | alta | vigente | draft |
 | [ANTHROPIC-AGENTES](#anthropic-agentes) | Building effective agents | buena-practica | media | vigente | draft |
@@ -1237,6 +1239,26 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 - **Consultada:** 2026-11-26 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
 - **Nota:** Empezar por la conclusión, agrupar los argumentos que la sostienen y abrir con situación, complicación y pregunta. Fuente secundaria; coincide con otros resúmenes (BetterUp, Think Insights).
+
+<a id="gepa-2026"></a>
+### GEPA-2026
+- **Título:** GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning (Agrawal et al., ICLR 2026, ponencia oral)
+- **Autor u organismo:** UC Berkeley, Stanford, Databricks y otros
+- **URL:** <https://arxiv.org/abs/2507.19457>
+- **Tipo:** recomendacion-tecnica · **Jurisdicción:** — · **Versión o fecha:** v2, 14/02/2026
+- **Consultada:** 2026-11-27 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** Optimizador que evoluciona las instrucciones de un sistema con IA: reflexiona en lenguaje natural sobre las trazas, propone y prueba cambios y conserva un frente de Pareto de candidatas. Según el artículo, en seis tareas supera a GRPO un 6 % de media y hasta un 20 % con hasta 35 veces menos ejecuciones. Código abierto (gepa-ai/gepa) e integrado en DSPy. Base de D-030.
+
+<a id="neat-2002"></a>
+### NEAT-2002
+- **Título:** Neuroevolution of augmenting topologies (NEAT)
+- **Autor u organismo:** Stanley y Miikkulainen, Universidad de Texas en Austin (resumen en Wikipedia)
+- **URL:** <https://en.wikipedia.org/wiki/Neuroevolution_of_augmenting_topologies>
+- **Tipo:** buena-practica · **Jurisdicción:** — · **Versión o fecha:** consultado 27/11/2026
+- **Consultada:** 2026-11-27 · **Autoridad:** baja · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** Neuroevolución clásica: evoluciona a la vez pesos y topología de una red neuronal. No aplica a Varios, que no entrena redes; se cita en D-030 para explicar por qué se evoluciona el texto y no el modelo.
 
 <a id="langfuse-cloud"></a>
 ### LANGFUSE-CLOUD

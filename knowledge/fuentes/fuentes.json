@@ -1488,6 +1488,34 @@
    "consultada": "2026-11-26"
   },
   {
+   "id": "GEPA-2026",
+   "titulo": "GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning (Agrawal et al., ICLR 2026, ponencia oral)",
+   "organismo": "UC Berkeley, Stanford, Databricks y otros",
+   "url": "https://arxiv.org/abs/2507.19457",
+   "tipo": "recomendacion-tecnica",
+   "jurisdiccion": "—",
+   "version": "v2, 14/02/2026",
+   "autoridad": "media",
+   "vigencia": "vigente",
+   "estado": "draft",
+   "nota": "Optimizador que evoluciona las instrucciones de un sistema con IA: reflexiona en lenguaje natural sobre las trazas, propone y prueba cambios y conserva un frente de Pareto de candidatas. Según el artículo, en seis tareas supera a GRPO un 6 % de media y hasta un 20 % con hasta 35 veces menos ejecuciones. Código abierto (gepa-ai/gepa) e integrado en DSPy. Base de D-030.",
+   "consultada": "2026-11-27"
+  },
+  {
+   "id": "NEAT-2002",
+   "titulo": "Neuroevolution of augmenting topologies (NEAT)",
+   "organismo": "Stanley y Miikkulainen, Universidad de Texas en Austin (resumen en Wikipedia)",
+   "url": "https://en.wikipedia.org/wiki/Neuroevolution_of_augmenting_topologies",
+   "tipo": "buena-practica",
+   "jurisdiccion": "—",
+   "version": "consultado 27/11/2026",
+   "autoridad": "baja",
+   "vigencia": "vigente",
+   "estado": "draft",
+   "nota": "Neuroevolución clásica: evoluciona a la vez pesos y topología de una red neuronal. No aplica a Varios, que no entrena redes; se cita en D-030 para explicar por qué se evoluciona el texto y no el modelo.",
+   "consultada": "2026-11-27"
+  },
+  {
    "id": "LANGFUSE-CLOUD",
    "titulo": "Langfuse Cloud: planes y precios",
    "organismo": "Langfuse",

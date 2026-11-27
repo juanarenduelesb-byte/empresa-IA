@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 6
-miembros: 51
-cohesion: 0.11
+miembros: 48
+cohesion: 0.12
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 6 · knowledge/ingenieria · CEO digital y Varios · empresa-ia
 
-51 nodos agrupados por el algoritmo de Louvain. Cohesión 0.11.
+48 nodos agrupados por el algoritmo de Louvain. Cohesión 0.12.
 
 ## Documentos
 
@@ -27,7 +27,6 @@ tags:
 - [[knowledge/seguridad-legal/calidad-riesgos|Especialista en calidad y riesgos]]
 - [[knowledge/administracion-finanzas/costes-proveedores|Especialista en costes y proveedores]]
 - [[knowledge/ingenieria/evaluacion-ia|Especialista en evaluación de IA]]
-- [[knowledge/procesos/implantacion-clientes|Responsable de implantación de clientes]]
 - [[knowledge/ingenieria/integraciones|Especialista en integraciones]]
 - [[knowledge/agentes/ops|Plataforma y operaciones]]
 - [[integrations/catalog/README|Catálogo de integraciones]]
@@ -46,12 +45,11 @@ tags:
 - [[knowledge/procesos/automatizacion|Especialista en automatización]]
 - [[knowledge/ingenieria/plataforma-operaciones|Ingeniero de plataforma y operaciones (DevOps/SRE)]]
 - [[knowledge/administracion-finanzas/costes-proveedores|Especialista en costes y proveedores]]
-- [[knowledge/procesos/implantacion-clientes|Responsable de implantación de clientes]]
 
 ## Fuentes
 
-- [[knowledge/grafo/fuentes/INT-ATLAS|INT-ATLAS · Atlas Evolución v1.1 · modelo operativo, procesos y despliegue]]
 - [[knowledge/grafo/fuentes/INT-GUIA|INT-GUIA · Guía de Arranque v1.4 (diseño cerrado)]]
+- [[knowledge/grafo/fuentes/DORA-CNMV|DORA-CNMV · Preguntas frecuentes sobre el Reglamento (UE) 2022/2554 (DORA)]]
 - [[knowledge/grafo/fuentes/ENS-RD311|ENS-RD311 · Real Decreto 311/2022, Esquema Nacional de Seguridad]]
 - [[knowledge/grafo/fuentes/ISO-27001|ISO-27001 · ISO/IEC 27001:2022 (transición desde 2013 terminada el 31/10/2025)]]
 - [[knowledge/grafo/fuentes/OWASP-LLM-2025|OWASP-LLM-2025 · OWASP Top 10 for LLM Applications 2025]]
@@ -62,7 +60,6 @@ tags:
 - [[knowledge/grafo/fuentes/APQC-PCF|APQC-PCF · APQC Process Classification Framework, versión intersectorial]]
 - [[knowledge/grafo/fuentes/IETF-IDEMPOTENCY|IETF-IDEMPOTENCY · The Idempotency-Key HTTP Header Field (borrador 07)]]
 - [[knowledge/grafo/fuentes/PG-RLS|PG-RLS · Recomendaciones de seguridad a nivel de fila para SaaS multicliente]]
-- [[knowledge/grafo/fuentes/NIST-AI-600-1|NIST-AI-600-1 · AI RMF: Generative Artificial Intelligence Profile (NIST AI 600-1)]]
 - [[knowledge/grafo/fuentes/OSS-LANGFUSE|OSS-LANGFUSE · Langfuse (observabilidad de LLM)]]
 - [[knowledge/grafo/fuentes/OSS-TEMPORAL|OSS-TEMPORAL · Temporal (motor de ejecución duradera)]]
 - [[knowledge/grafo/fuentes/DORA-DEVOPS|DORA-DEVOPS · Métricas DORA de entrega de software (DevOps Research and Assessment)]]

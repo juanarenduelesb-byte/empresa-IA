@@ -53,10 +53,6 @@ tags:
 - [[knowledge/agentes/ind|Experto en industria]]
 - [[knowledge/agentes/logi|Experto en logística]]
 
-## Especialistas
-
-- [[knowledge/comercial/gestion-clientes|Especialista en éxito de cliente]]
-
 ## Habilidades
 
 - [[claude/habilidades/hecho-hipotesis-propuesta|Separar hecho, hipótesis y propuesta]]
@@ -119,4 +115,4 @@ tags:
 - [[claude/habilidades/raid|Registro RAID]]
 - [[claude/habilidades/registro-tratamientos|Registro de actividades de tratamiento]]
 - [[claude/habilidades/revision-accesibilidad|Revisión de accesibilidad]]
-- … y 4 más
+- … y 5 más

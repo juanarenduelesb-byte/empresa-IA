@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 1
-miembros: 109
+miembros: 110
 cohesion: 0.06
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 1 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros
 
-109 nodos agrupados por el algoritmo de Louvain. Cohesión 0.06.
+110 nodos agrupados por el algoritmo de Louvain. Cohesión 0.06.
 
 ## Documentos
 
@@ -56,7 +56,6 @@ tags:
 
 ## Fuentes
 
-- [[knowledge/grafo/fuentes/DORA-CNMV|DORA-CNMV · Preguntas frecuentes sobre el Reglamento (UE) 2022/2554 (DORA)]]
 - [[knowledge/grafo/fuentes/LCS-50-1980|LCS-50-1980 · Ley 50/1980, de Contrato de Seguro]]
 - [[knowledge/grafo/fuentes/UE-RIA-OMNIBUS|UE-RIA-OMNIBUS · Reglamento (UE) 2026/1744 (ómnibus digital sobre IA), que modifica el Reglamento (UE) 2024/1689]]
 - [[knowledge/grafo/fuentes/INE-TIC-2026|INE-TIC-2026 · Encuesta sobre el uso de TIC y del comercio electrónico en las empresas, año 2025 y primer trimestre de 2026]]
@@ -106,6 +105,7 @@ tags:
 - [[knowledge/grafo/fuentes/AEPD-GUIA-COOKIES|AEPD-GUIA-COOKIES · Guía sobre el uso de las cookies]]
 - [[knowledge/grafo/fuentes/AEPD-INF-2026-0021|AEPD-INF-2026-0021 · AEPD, informe 2026-0021 sobre el anteproyecto de reforma de la Ley 20/2015]]
 - [[knowledge/grafo/fuentes/APPLE-HIG-TAB-BARS|APPLE-HIG-TAB-BARS · Human Interface Guidelines: Tab bars]]
+- [[knowledge/grafo/fuentes/CMU-RUBRICAS|CMU-RUBRICAS · Creating and Using Rubrics]]
 - [[knowledge/grafo/fuentes/EDPB-GL-07-2020|EDPB-GL-07-2020 · Directrices 07/2020 sobre los conceptos de responsable y encargado del tratamiento en el RGPD]]
 - [[knowledge/grafo/fuentes/GAP-LEY10-ASEG|GAP-LEY10-ASEG · Cómo afecta a las aseguradoras la Ley 10/2025 de servicios de atención a la clientela]]
 - [[knowledge/grafo/fuentes/GITHUB-NOTIF-INBOX|GITHUB-NOTIF-INBOX · GitHub: gestionar notificaciones desde el inbox]]
@@ -116,4 +116,4 @@ tags:
 - [[knowledge/grafo/fuentes/LEY-5-2025|LEY-5-2025 · Ley 5/2025, de 24 de julio, por la que se modifican el texto refundido de la Ley sobre responsabilidad civil y seguro en la circulación de vehículos a motor y la Ley 20/2015]]
 - [[knowledge/grafo/fuentes/LOPDGDD-DA17|LOPDGDD-DA17 · Ley Orgánica 3/2018 (LOPDGDD), disposición adicional decimoséptima: tratamientos de datos de salud]]
 - [[knowledge/grafo/fuentes/LSC-ART4|LSC-ART4 · Ley de Sociedades de Capital (RDLeg 1/2010), art. 4: capital mínimo]]
-- … y 12 más
+- … y 13 más

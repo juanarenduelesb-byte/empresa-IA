@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 3
-miembros: 89
+miembros: 92
 cohesion: 0.09
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 3 · docs · Registro de decisiones y Trabajo nocturno de Claude
 
-89 nodos agrupados por el algoritmo de Louvain. Cohesión 0.09.
+92 nodos agrupados por el algoritmo de Louvain. Cohesión 0.09.
 
 ## Documentos
 
@@ -40,8 +40,9 @@ tags:
 - [[knowledge/plantillas/entregables/04-plan-piloto|Plan de piloto · (Cliente) · (Proceso)]]
 - [[knowledge/metodologias-transversales/guion-validacion-semanal|Guion de la conversación semanal de validación]]
 - [[docs/26-web-clientes|Web para clientes: estudio de referencias, estructura y textos (F2)]]
-- [[docs/05-agentes-procesos-e-integraciones|Agentes, procesos e integraciones]]
+- [[processes/templates/proceso-cliente|<sector> · <proceso>]]
 - [[knowledge/metodologias-transversales/cuestionario-descubrimiento|Cuestionario de descubrimiento por puertas (G0–G2)]]
+- [[docs/05-agentes-procesos-e-integraciones|Agentes, procesos e integraciones]]
 - [[precedents/projects/caso-correduria-atalaya/entregables/01-propuesta-diagnostico.revision|Revisión con la rúbrica C3 · Propuesta de diagnóstico de Atalaya (FICTICIA)]]
 - [[governance/socios/02-acuerdo-de-socios-puntos|M-003 · Acuerdo de socios: lo que tenéis que decidir]]
 - [[Inicio|Inicio · cerebro de Varios]]
@@ -61,16 +62,17 @@ tags:
 
 ## Decisiones
 
-- [[knowledge/grafo/decisiones/D-012|D-012 · Las propuestas de cambios de Claude se aceptan solas]]
 - [[knowledge/grafo/decisiones/D-019|D-019 · Calidad exigente, todo pasa por un socio y cada rechazo se rehace aprendiendo]]
+- [[knowledge/grafo/decisiones/D-012|D-012 · Las propuestas de cambios de Claude se aceptan solas]]
 - [[knowledge/grafo/decisiones/D-023|D-023 · Base de datos real: PostgreSQL con RLS, auditoría inmutable y conocimiento con citas]]
 - [[knowledge/grafo/decisiones/D-024|D-024 · Paquete de dominio de seguros con un archivo máquina como fuente de las reglas]]
 - [[knowledge/grafo/decisiones/D-026|D-026 · Cada agente sirve a un proceso medido: de 34 se quedan 22]]
 - [[knowledge/grafo/decisiones/D-025|D-025 · La oficina se organiza en siete secciones y se abre en Inicio]]
-- [[knowledge/grafo/decisiones/D-022|D-022 · Trabajo nocturno de Claude con plan diario e informe de la mañana]]
 - [[knowledge/grafo/decisiones/D-027|D-027 · Cada proceso tiene un nivel de autonomía A0–A4 con techo y criterio]]
+- [[knowledge/grafo/decisiones/D-022|D-022 · Trabajo nocturno de Claude con plan diario e informe de la mañana]]
 - [[knowledge/grafo/decisiones/D-029|D-029 · El trabajo nocturno de Claude sube directo a `main`, sin propuesta de cambios]]
 - [[knowledge/grafo/decisiones/D-028|D-028 · La oficina guarda en la API: identidad por token firmado y PyJWT]]
+- [[knowledge/grafo/decisiones/D-030|D-030 · La oficina mejora evolucionando sus instrucciones contra un examen, no sus modelos]]
 - [[knowledge/grafo/decisiones/D-014|D-014 · Adelantar un prototipo mínimo del motor de procesos]]
 - [[knowledge/grafo/decisiones/D-003|D-003 · Obsidian como interfaz humana]]
 - [[knowledge/grafo/decisiones/D-021|D-021 · El cerebro se abre en Obsidian: el repositorio es el vault]]
@@ -94,8 +96,8 @@ tags:
 - [[knowledge/grafo/fuentes/LANGFUSE-CLOUD|LANGFUSE-CLOUD · Langfuse Cloud: planes y precios]]
 - [[knowledge/grafo/fuentes/ZAPIER-HITL|ZAPIER-HITL · Zapier: Human in the Loop (pedir aprobación para seguir)]]
 - [[knowledge/grafo/fuentes/BASECAMP-5|BASECAMP-5 · Basecamp 5: inicio orientado a la acción]]
+- [[knowledge/grafo/fuentes/GEPA-2026|GEPA-2026 · GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning (Agrawal et al., ICLR 2026, ponencia oral)]]
 - [[knowledge/grafo/fuentes/LEI-VSM|LEI-VSM · Value Stream Mapping (léxico del Lean Enterprise Institute)]]
 - [[knowledge/grafo/fuentes/LINEAR-TRIAGE|LINEAR-TRIAGE · Linear: Triage e Inbox]]
 - [[knowledge/grafo/fuentes/MOM-TEST|MOM-TEST · The Mom Test (Rob Fitzpatrick): cómo hablar con clientes sin que te mientan]]
-- [[knowledge/grafo/fuentes/CMU-RUBRICAS|CMU-RUBRICAS · Creating and Using Rubrics]]
-- [[knowledge/grafo/fuentes/MINTO-PIRAMIDE|MINTO-PIRAMIDE · The Pyramid Principle (Barbara Minto): la respuesta primero y la estructura situación, complicación, pregunta y respuesta]]
+- [[knowledge/grafo/fuentes/NEAT-2002|NEAT-2002 · Neuroevolution of augmenting topologies (NEAT)]]

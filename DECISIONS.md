@@ -232,6 +232,20 @@ No construir primero un CEO omnisciente; descubrir, diseñar, integrar y medir u
 - Riesgo: un error llega a `main` sin que nadie lo lea. Mitigación: comprobaciones de CI en cada subida, la siguiente tanda arregla un CI en rojo antes de nada, repaso crítico al final de cada noche y el Registro con lo que cambió.
 - Estado: propuesta.
 
+## D-030 — La oficina mejora evolucionando sus instrucciones contra un examen, no sus modelos
+- Fecha: 2026-11-27
+- Decisión: amplía el bucle de mejora diaria (M-044). Además de convertir errores repetidos en reglas (D-019), la oficina evoluciona el texto que gobierna a cada agente y proceso (instrucciones, reglas y fichas) al estilo de GEPA (fuente `GEPA-2026`): genera varias versiones a partir de las trazas y de lo que falló, las examina todas con el mismo banco de casos y conserva las que mejoran sin empeorar nada. Reglas:
+  1. Sin examen no hay evolución: solo se evoluciona lo que tiene su banco de casos (primero el Control A de la semana 4; después el examen de 50 casos de la semana 9).
+  2. Un conjunto de casos reservado que el optimizador nunca ve decide si una versión gana, para no aprender a aprobar el examen.
+  3. Varias métricas a la vez (calidad de la rúbrica, coste, tiempo y cero fallos de seguridad o de aislamiento); una versión que empeora la seguridad se descarta aunque suba la nota.
+  4. Nunca se despliega sola: la versión ganadora es una propuesta que pasa por P16 y P23 y aprueba un socio; en procesos con techo A2 (D-027), los dos.
+  5. Cada versión queda guardada con su nota, su examen y quién la aprobó, y se puede volver atrás.
+- Motivo: los socios quieren que la oficina mejore cada día. La neuroevolución clásica (fuente `NEAT-2002`) evoluciona pesos y topología de redes neuronales, y Varios no entrena modelos: usa Claude por API. Lo que sí se puede mejorar es el texto que lo rodea, y es lo que GEPA ha mostrado que funciona.
+- Tecnología: GEPA o DSPy serían nuevas. No entran con esta decisión: en la semana 9 se compara usar GEPA o DSPy con un bucle propio más simple y se propone en una decisión aparte.
+- Alternativas descartadas: entrenar o ajustar un modelo propio (coste, datos reales que no tenemos y riesgo regulatorio); cambiar instrucciones a mano sin examen (no se sabe si mejora).
+- Riesgo: sobreajuste a un banco pequeño (25 o 50 casos) y coste de las ejecuciones. Mitigación: casos reservados, presupuesto por ejecución (M-046) y aprobación humana.
+- Estado: propuesta.
+
 ## Decisiones pendientes (con fecha límite)
 | Decisión | Quién | Antes de |
 |---|---|---|

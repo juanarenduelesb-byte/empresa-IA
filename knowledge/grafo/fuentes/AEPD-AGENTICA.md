@@ -8,7 +8,7 @@ version: "febrero 2026"
 autoridad: "alta"
 vigencia: "vigente"
 estado: "validated"
-citada: 2
+citada: 3
 tags:
   - "fuente"
   - "vigencia/vigente"
@@ -22,5 +22,6 @@ tags:
 
 ## Citada en
 
+- [[governance/legal/borradores/06-politica-uso-ia|Política de uso de inteligencia artificial de Varios · BORRADOR PARA ABOGADO]]
 - [[knowledge/ingenieria/datos-ia|Arquitecto de datos e IA]]
 - [[knowledge/seguridad-legal/legal-privacidad|Especialista legal y privacidad]]

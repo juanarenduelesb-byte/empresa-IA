@@ -118,6 +118,8 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 | [AEAT-IS-TIPOS](#aeat-is-tipos) | Impuesto sobre Sociedades: tipo impositivo (microempresas, reducida dimensión y general) | obligacion-legal | alta | vigente | validated |
 | [SEGSOC-RETA-2026](#segsoc-reta-2026) | Cotización de trabajadores autónomos 2026 y encuadramiento de socios con control efectivo | obligacion-legal | alta | vigente | draft |
 | [MINTO-PIRAMIDE](#minto-piramide) | The Pyramid Principle (Barbara Minto): la respuesta primero y la estructura situación, complicación, pregunta y respuesta | buena-practica | media | vigente | draft |
+| [AEPD-POLITICA-IAG](#aepd-politica-iag) | Política general para el uso de IA generativa en procesos administrativos de la AEPD | buena-practica | alta | vigente | draft |
+| [CE-ALFABETIZACION-QA](#ce-alfabetizacion-qa) | AI Literacy - Questions & Answers | recomendacion-tecnica | alta | vigente | draft |
 | [KEYCLOAK-SIZING](#keycloak-sizing) | Keycloak: Concepts for sizing CPU and memory resources | documentacion-producto | media | vigente | draft |
 | [KEYCLOAK-DB](#keycloak-db) | Keycloak: Configuring the database | documentacion-producto | media | vigente | draft |
 | [KEYCLOAK-ADMIN](#keycloak-admin) | Keycloak: Server Administration Guide | documentacion-producto | media | vigente | draft |
@@ -1251,6 +1253,26 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 - **Consultada:** 2026-11-26 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
 - **Nota:** Empezar por la conclusión, agrupar los argumentos que la sostienen y abrir con situación, complicación y pregunta. Fuente secundaria; coincide con otros resúmenes (BetterUp, Think Insights).
+
+<a id="aepd-politica-iag"></a>
+### AEPD-POLITICA-IAG
+- **Título:** Política general para el uso de IA generativa en procesos administrativos de la AEPD
+- **Autor u organismo:** AEPD
+- **URL:** <https://www.aepd.es/documento/politica-iag-aepd.pdf>
+- **Tipo:** buena-practica · **Jurisdicción:** ES · **Versión o fecha:** versión de 27/11/2025 (primera)
+- **Consultada:** 2026-11-27 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** Política interna, la primera de su tipo en el sector público según la nota de prensa de la AEPD (27/11/2025). Estructura: casos de uso, riesgos, gobernanza (responsable de la organización, responsables funcionales, de seguridad y de IA), políticas por tema y procedimientos. En soluciones externas, «la prohibición expresa de introducir información personal, confidencial o no publicada»; resultados «revisados y contrastados por personal competente». Leída la primera mitad del PDF literalmente. Base de la política de uso de IA de Varios (P19).
+
+<a id="ce-alfabetizacion-qa"></a>
+### CE-ALFABETIZACION-QA
+- **Título:** AI Literacy - Questions & Answers
+- **Autor u organismo:** Comisión Europea (Shaping Europe's digital future)
+- **URL:** <https://digital-strategy.ec.europa.eu/en/faqs/ai-literacy-questions-answers>
+- **Tipo:** recomendacion-tecnica · **Jurisdicción:** UE · **Versión o fecha:** actualizada tras el ómnibus (leída el 27/11/2026)
+- **Consultada:** 2026-11-27 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** «There is no need for a certificate.» «Organisations can keep an internal record of trainings and/or other guiding initiatives.» Un programa debe considerar al menos: comprensión general de la IA, el papel de la organización (proveedor o responsable del despliegue), el riesgo de los sistemas y el nivel de cada persona. Supervisión y sanciones desde el 02/08/2026.
 
 <a id="keycloak-sizing"></a>
 ### KEYCLOAK-SIZING

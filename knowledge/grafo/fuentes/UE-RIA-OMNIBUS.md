@@ -8,7 +8,7 @@ version: "08/07/2026; DOUE 24/07/2026; en vigor 27/07/2026 (texto leído en EUR-
 autoridad: "alta"
 vigencia: "vigente"
 estado: "validated"
-citada: 6
+citada: 7
 tags:
   - "fuente"
   - "vigencia/vigente"
@@ -23,6 +23,7 @@ tags:
 ## Citada en
 
 - [[governance/legal/borradores/04-anexo-uso-ia|Anexo de uso de inteligencia artificial · BORRADOR PARA ABOGADO]]
+- [[governance/legal/borradores/06-politica-uso-ia|Política de uso de inteligencia artificial de Varios · BORRADOR PARA ABOGADO]]
 - [[knowledge/comercial/marketing-contenido|Especialista en marketing y contenido]]
 - [[knowledge/direccion/ceo-digital|CEO digital]]
 - [[knowledge/sectores/sector-industria|Experto en industria manufacturera]]

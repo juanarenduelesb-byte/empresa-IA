@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 3
-miembros: 74
-cohesion: 0.09
+miembros: 76
+cohesion: 0.08
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 3 · docs · Registro de decisiones y Trabajo nocturno de Claude
 
-74 nodos agrupados por el algoritmo de Louvain. Cohesión 0.09.
+76 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
 
 ## Documentos
 
@@ -20,18 +20,17 @@ tags:
 - [[docs/23-plan-maestro|Plan maestro: la empresa completa, sin que se escape nada]]
 - [[docs/informes/2026-11-26|Informe de la mañana · 26/11/2026]]
 - [[docs/17-cerebro-y-procesos|17 · Cerebro, conocimiento y procesos: auditoría e informe]]
-- [[docs/31-identidad|Identidad y roles: opciones para los socios y, más adelante, los clientes (S3a)]]
 - [[README|Varios — repositorio maestro]]
+- [[docs/31-identidad|Identidad y roles: opciones para los socios y, más adelante, los clientes (S3a)]]
+- [[governance/legal/borradores/06-politica-uso-ia|Política de uso de inteligencia artificial de Varios · BORRADOR PARA ABOGADO]]
 - [[docs/22-plan-hasta-febrero|Plan de trabajo diario · 26/11/2026 → 28/02/2027]]
 - [[docs/25-portal-interno|Portal interno: auditoría de la oficina y distribución propuesta (F1)]]
 - [[docs/30-inventario-web|Inventario de la web interna (site/) frente a la web para clientes (N5)]]
 - [[docs/09-inventario-documental|Inventario documental]]
 - [[docs/19-obsidian|Obsidian: el cerebro abierto en tu equipo]]
 - [[docs/26-web-clientes|Web para clientes: estudio de referencias, estructura y textos (F2)]]
-- [[governance/socios/01-marca-esclusa-o-varios|M-002 · ¿Una sola marca: Esclusa o Varios?]]
-- [[governance/socios/02-acuerdo-de-socios-puntos|M-003 · Acuerdo de socios: lo que tenéis que decidir]]
+- [[governance/legal/borradores/04-anexo-uso-ia|Anexo de uso de inteligencia artificial · BORRADOR PARA ABOGADO]]
 - [[Inicio|Inicio · cerebro de Varios]]
-- [[governance/socios/README|Decisiones de los socios (borradores)]]
 - [[docs/18-flujo-de-calidad-y-aprendizaje|18 · Flujo de calidad y aprendizaje continuo en la oficina]]
 - [[web/README|Web para clientes (borrador)]]
 - [[docs/11-cerebro-en-claude|Cerebro en Claude]]
@@ -44,11 +43,11 @@ tags:
 
 - [[knowledge/grafo/decisiones/D-019|D-019 · Calidad exigente, todo pasa por un socio y cada rechazo se rehace aprendiendo]]
 - [[knowledge/grafo/decisiones/D-012|D-012 · Las propuestas de cambios de Claude se aceptan solas]]
-- [[knowledge/grafo/decisiones/D-023|D-023 · Base de datos real: PostgreSQL con RLS, auditoría inmutable y conocimiento con citas]]
 - [[knowledge/grafo/decisiones/D-024|D-024 · Paquete de dominio de seguros con un archivo máquina como fuente de las reglas]]
+- [[knowledge/grafo/decisiones/D-023|D-023 · Base de datos real: PostgreSQL con RLS, auditoría inmutable y conocimiento con citas]]
 - [[knowledge/grafo/decisiones/D-026|D-026 · Cada agente sirve a un proceso medido: de 34 se quedan 22]]
-- [[knowledge/grafo/decisiones/D-025|D-025 · La oficina se organiza en siete secciones y se abre en Inicio]]
 - [[knowledge/grafo/decisiones/D-027|D-027 · Cada proceso tiene un nivel de autonomía A0–A4 con techo y criterio]]
+- [[knowledge/grafo/decisiones/D-025|D-025 · La oficina se organiza en siete secciones y se abre en Inicio]]
 - [[knowledge/grafo/decisiones/D-028|D-028 · La oficina guarda en la API: identidad por token firmado y PyJWT]]
 - [[knowledge/grafo/decisiones/D-022|D-022 · Trabajo nocturno de Claude con plan diario e informe de la mañana]]
 - [[knowledge/grafo/decisiones/D-029|D-029 · El trabajo nocturno de Claude sube directo a `main`, sin propuesta de cambios]]
@@ -72,8 +71,10 @@ tags:
 
 ## Fuentes
 
+- [[knowledge/grafo/fuentes/AEPD-POLITICA-IAG|AEPD-POLITICA-IAG · Política general para el uso de IA generativa en procesos administrativos de la AEPD]]
 - [[knowledge/grafo/fuentes/ANTHROPIC-AGENTES|ANTHROPIC-AGENTES · Building effective agents]]
 - [[knowledge/grafo/fuentes/AUTHLIB|AUTHLIB · Authlib: Python Authentication (documentación y licencias)]]
+- [[knowledge/grafo/fuentes/CE-ALFABETIZACION-QA|CE-ALFABETIZACION-QA · AI Literacy - Questions & Answers]]
 - [[knowledge/grafo/fuentes/CNCF-KEYCLOAK|CNCF-KEYCLOAK · Keycloak · CNCF]]
 - [[knowledge/grafo/fuentes/KEYCLOAK-ADMIN|KEYCLOAK-ADMIN · Keycloak: Server Administration Guide]]
 - [[knowledge/grafo/fuentes/KEYCLOAK-REPO|KEYCLOAK-REPO · Repositorio keycloak/keycloak]]
@@ -91,5 +92,6 @@ tags:
 - [[knowledge/grafo/fuentes/KEYCLOAK-DOCKER|KEYCLOAK-DOCKER · Keycloak: Getting started with Docker]]
 - [[knowledge/grafo/fuentes/LINEAR-TRIAGE|LINEAR-TRIAGE · Linear: Triage e Inbox]]
 - [[knowledge/grafo/fuentes/NEAT-2002|NEAT-2002 · Neuroevolution of augmenting topologies (NEAT)]]
+- [[knowledge/grafo/fuentes/RIA-2024-1689|RIA-2024-1689 · Reglamento (UE) 2024/1689, de inteligencia artificial]]
 - [[knowledge/grafo/fuentes/ZITADEL-AGPL|ZITADEL-AGPL · Strengthening Our Open Source Foundation: Moving to AGPL 3.0]]
 - [[knowledge/grafo/fuentes/ZITADEL-MFA|ZITADEL-MFA · ZITADEL Default Settings (segundos factores)]]

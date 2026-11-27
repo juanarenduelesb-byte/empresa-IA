@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 4
-miembros: 60
+miembros: 61
 cohesion: 0.19
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 4 · processes/runbooks · Auditoría de agentes y habilidades frente a los procesos (M-040) y Dependencias entre procesos
 
-60 nodos agrupados por el algoritmo de Louvain. Cohesión 0.19.
+61 nodos agrupados por el algoritmo de Louvain. Cohesión 0.19.
 
 ## Documentos
 
@@ -21,6 +21,7 @@ tags:
 - [[knowledge/seguridad-legal/README|Seguridad, privacidad, legal y cumplimiento]]
 - [[knowledge/direccion/README|Dirección y gobierno]]
 - [[processes/diagrams/ciclo-encargo|Ciclo completo de un encargo (P01 → P11)]]
+- [[knowledge/procesos/README|Procesos y operaciones]]
 - [[processes/tests/README|Plan de pruebas de procesos]]
 - [[processes/README|Procesos]]
 - [[processes/runbooks/README|Runbooks]]
@@ -40,13 +41,13 @@ tags:
 - [[processes/catalog/P15-observabilidad-e-incidencias|P15 · Observabilidad e incidencias]]
 - [[processes/catalog/P21-ejecucion-segura-de-herramientas|P21 · Ejecución segura de herramientas]]
 - [[processes/catalog/P30-gestion-de-identidades-y-secretos|P30 · Gestión de identidades y secretos]]
+- [[processes/catalog/P19-politica-de-uso-y-limites|P19 · Política de uso y límites]]
 - [[processes/catalog/P27-gestion-de-proveedores-y-dependencias|P27 · Gestión de proveedores y dependencias]]
 - [[processes/catalog/P11-entrega-y-cierre|P11 · Entrega y cierre]]
 - [[processes/catalog/P08-ejecucion-de-tareas|P08 · Ejecución de tareas]]
 - [[processes/catalog/P23-evaluacion-de-agentes-y-modelos|P23 · Evaluación de agentes y modelos]]
 - [[processes/catalog/P04-recuperacion-de-conocimiento|P04 · Recuperación de conocimiento]]
 - [[processes/catalog/P13-aprendizaje-y-actualizacion-de-la-wiki|P13 · Aprendizaje y actualización de la wiki]]
-- [[processes/catalog/P19-politica-de-uso-y-limites|P19 · Política de uso y límites]]
 - [[processes/catalog/P20-seguridad-de-entradas-e-inyeccion-de-instrucciones|P20 · Seguridad de entradas e inyección de instrucciones]]
 - [[processes/catalog/P12-gestion-de-cambios|P12 · Gestión de cambios]]
 - [[processes/catalog/P07-ingesta-documental|P07 · Ingesta documental]]

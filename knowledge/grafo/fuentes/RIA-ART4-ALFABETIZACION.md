@@ -8,7 +8,7 @@ version: "aplicable desde 02/02/2025; sustituido por el Reglamento (UE) 2026/174
 autoridad: "media"
 vigencia: "vigente"
 estado: "validated"
-citada: 2
+citada: 3
 tags:
   - "fuente"
   - "vigencia/vigente"
@@ -23,4 +23,5 @@ tags:
 ## Citada en
 
 - [[governance/legal/borradores/04-anexo-uso-ia|Anexo de uso de inteligencia artificial · BORRADOR PARA ABOGADO]]
+- [[governance/legal/borradores/06-politica-uso-ia|Política de uso de inteligencia artificial de Varios · BORRADOR PARA ABOGADO]]
 - [[knowledge/seguridad-legal/cumplimiento|Responsable de cumplimiento normativo]]

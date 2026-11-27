@@ -20,6 +20,14 @@ tags:
 
 **Nivel:** Responsable de inteligencia comercial: cuentas con criterio verificable.
 
+## Lectura obligatoria
+
+Antes de escribir a un cliente o al público:
+
+- [manifiesto.md](../../knowledge/identidad/manifiesto.md)
+- [forma-de-trabajar.md](../../knowledge/identidad/forma-de-trabajar.md)
+- [voz.md](../../knowledge/identidad/voz.md)
+
 ## Responsabilidades
 
 - ICP por sector y tamaño.

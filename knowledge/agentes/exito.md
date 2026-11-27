@@ -20,6 +20,14 @@ tags:
 
 **Nivel:** Director de éxito de cliente en consultoría B2B: arranques ordenados, pilotos medidos y renovaciones con evidencia.
 
+## Lectura obligatoria
+
+Antes de escribir a un cliente o al público:
+
+- [manifiesto.md](../../knowledge/identidad/manifiesto.md)
+- [forma-de-trabajar.md](../../knowledge/identidad/forma-de-trabajar.md)
+- [voz.md](../../knowledge/identidad/voz.md)
+
 ## Responsabilidades
 
 - Plan de éxito de cada cliente con métrica y línea base.

@@ -1516,6 +1516,48 @@
    "consultada": "2026-11-27"
   },
   {
+   "id": "AGILE-MANIFESTO",
+   "titulo": "Manifesto for Agile Software Development",
+   "organismo": "Kent Beck, Mike Beedle y otros firmantes",
+   "url": "https://agilemanifesto.org/",
+   "tipo": "buena-practica",
+   "jurisdiccion": "—",
+   "version": "2001",
+   "autoridad": "media",
+   "vigencia": "vigente",
+   "estado": "draft",
+   "nota": "Cuatro valores con el formato «X over Y» y «while there is value in the items on the right, we value the items on the left more». Forma del manifiesto de Varios (I1).",
+   "consultada": "2026-11-27"
+  },
+  {
+   "id": "MAILCHIMP-VOZ",
+   "titulo": "Voice and Tone | Mailchimp Content Style Guide",
+   "organismo": "Mailchimp",
+   "url": "https://styleguide.mailchimp.com/voice-and-tone/",
+   "tipo": "buena-practica",
+   "jurisdiccion": "—",
+   "version": "© 2023, licencia CC BY-NC 4.0",
+   "autoridad": "media",
+   "vigencia": "vigente",
+   "estado": "draft",
+   "nota": "«Our voice doesn't change much from day to day, but our tone changes all the time.» Rasgos de voz formulados como «somos X, no Y» («smart but not snobbish»). Base de la guía de voz (I1).",
+   "consultada": "2026-11-27"
+  },
+  {
+   "id": "GOVUK-LENGUAJE-CLARO",
+   "titulo": "Use clear language (Writing to GOV.UK standards)",
+   "organismo": "GOV.UK, Government Digital Service",
+   "url": "https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/writing-guidelines/clear-language/",
+   "tipo": "buena-practica",
+   "jurisdiccion": "UK",
+   "version": "sin fecha visible; Open Government Licence v3.0",
+   "autoridad": "media",
+   "vigencia": "vigente",
+   "estado": "draft",
+   "nota": "«Plain English is mandatory for all of GOV.UK.» Párrafos de 5 frases como mucho, partir las frases de más de 25 palabras, palabras cortas y sin jerga, el lenguaje que usan los usuarios. Base de las reglas de escritura (I1).",
+   "consultada": "2026-11-27"
+  },
+  {
    "id": "KEYCLOAK-SIZING",
    "titulo": "Keycloak: Concepts for sizing CPU and memory resources",
    "organismo": "Keycloak Team",

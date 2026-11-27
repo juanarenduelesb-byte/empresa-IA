@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 5
-miembros: 58
-cohesion: 0.16
+miembros: 59
+cohesion: 0.15
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 5 · precedents/oficina · Propuesta de proceso de referencia: siniestros en corredurías y Conversaciones con Coordinación sectorial · Seguros
 
-58 nodos agrupados por el algoritmo de Louvain. Cohesión 0.16.
+59 nodos agrupados por el algoritmo de Louvain. Cohesión 0.15.
 
 ## Documentos
 
@@ -29,8 +29,8 @@ tags:
 - [[precedents/oficina/chats/metricas|Conversaciones con Métricas]]
 - [[precedents/oficina/chats/datos-de-prueba|Conversaciones con Datos de prueba]]
 - [[processes/referencia-seguros-apertura-siniestros/README|Seguros · Apertura de siniestros en corredurías (proceso de referencia)]]
-- [[precedents/oficina/chats/legal-y-privacidad|Conversaciones con Legal y privacidad]]
 - [[precedents/oficina/encargos/2026-11/2026-11-17-guion-y-8-preguntas-de-validacion-semanal-aq2vk|Guion y 8 preguntas de validación semanal]]
+- [[precedents/oficina/chats/legal-y-privacidad|Conversaciones con Legal y privacidad]]
 - [[precedents/oficina/README|Registro de la oficina de agentes]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-legal-y-privacidad-a-coordinacion-sectorial-seguros-b188o|Legal y privacidad → Coordinación sectorial · Seguros]]
 - [[precedents/projects/caso-correduria-atalaya/documentos/04-sistemas-y-restricciones|Sistemas, datos y restricciones · Atalaya (FICTICIO)]]
@@ -50,6 +50,7 @@ tags:
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-validacion-a-calidad-y-riesgo-u2br2|Validación → Calidad y riesgo]]
 - [[precedents/oficina/encargos/2026-11/2026-11-23-lee-el-plan-de-construccion-y-prepara-la-lista-de-uqvwy|Lee el plan de construcción y prepara la lista de tareas de]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-datos-de-prueba-a-calidad-y-riesgo-dvsoz|Datos de prueba → Calidad y riesgo]]
+- [[knowledge/plantillas/ficha-kpi|KPI: <nombre>]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-legal-y-privacidad-a-calidad-y-riesgo-7k9sg|Legal y privacidad → Calidad y riesgo]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-ceo-digital-a-coordinacion-sectorial-seguros-fws4y|CEO digital → Coordinación sectorial · Seguros]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-arquitecto-de-procesos-a-calidad-y-riesgo-61ars|Arquitecto de procesos → Calidad y riesgo]]

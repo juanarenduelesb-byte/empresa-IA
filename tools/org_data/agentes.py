@@ -27,7 +27,7 @@ A = []
 
 
 def ag(**k):
-    for c in ("responsabilidades", "entregables", "procedimiento", "reglas", "habilidades", "criterio", "errores", "kpis", "colabora", "limites", "especialista"):
+    for c in ("responsabilidades", "entregables", "procedimiento", "reglas", "habilidades", "criterio", "errores", "kpis", "colabora", "limites", "especialista", "lectura"):
         k.setdefault(c, [])
     k.setdefault("lead", False)
     A.append(k)
@@ -597,3 +597,12 @@ ag(id="cump", dep="cal", nombre="Cumplimiento normativo", rol="Compliance",
    limites=["No certifica ni firma."])
 
 AGENTES = A
+
+
+# Lectura obligatoria (I1): los agentes que escriben a clientes o al público leen la identidad de la empresa antes de
+# escribir. agentes_gen.py comprueba que cada ruta existe.
+IDENTIDAD = ["knowledge/identidad/manifiesto.md", "knowledge/identidad/forma-de-trabajar.md", "knowledge/identidad/voz.md"]
+ESCRIBEN_A_CLIENTES = ("comj", "val", "pros", "prop", "cont", "exito")
+for _a in A:
+    if _a["id"] in ESCRIBEN_A_CLIENTES:
+        _a["lectura"] = IDENTIDAD + [x for x in _a["lectura"] if x not in IDENTIDAD]

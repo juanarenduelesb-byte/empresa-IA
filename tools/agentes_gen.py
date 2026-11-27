@@ -54,6 +54,9 @@ def validar():
         for e in a["especialista"]:
             if e not in ESP:
                 errores.append(f"{a['id']}: especialista desconocido {e}")
+        for ruta in a["lectura"]:
+            if not os.path.isfile(os.path.join(ROOT, ruta)):
+                errores.append(f"{a['id']}: lectura obligatoria que no existe {ruta}")
         for campo in ("mision", "nivel"):
             if not a.get(campo):
                 errores.append(f"{a['id']}: falta {campo}")
@@ -83,6 +86,8 @@ def ficha_md(a):
            f"**Departamento:** {DEPS[a['dep']]}{' · **Jefe del departamento**' if a['lead'] else ''} · **Puesto en la oficina:** `{a['id']}` · **Estado:** draft, pendiente de revisión de un socio\n",
            f"> {a['mision']}\n",
            f"**Nivel:** {a['nivel']}\n",
+           *(["## Lectura obligatoria\n", "Antes de escribir a un cliente o al público:\n",
+               lista(f"[{r.split('/')[-1]}](../../{r})" for r in a["lectura"]), ""] if a["lectura"] else []),
            "## Responsabilidades\n", lista(a["responsabilidades"]), "",
            "## Entregables\n", lista(a["entregables"]), "",
            "## Cómo trabaja\n", "\n".join(f"{i}. {p}" for i, p in enumerate(a["procedimiento"], 1)), "",
@@ -136,7 +141,7 @@ def json_oficina():
         "generado": "tools/agentes_gen.py",
         "reglas_oficina": REGLAS_OFICINA,
         "agentes": {a["id"]: {k: a[k] for k in ("nombre", "rol", "dep", "lead", "nivel", "mision", "responsabilidades", "entregables", "procedimiento",
-                                                 "reglas", "habilidades", "criterio", "errores", "kpis", "limites")}
+                                                 "reglas", "habilidades", "criterio", "errores", "kpis", "limites", "lectura")}
                     | {"colabora": [{"id": c, "motivo": m} for c, m in a["colabora"]], "especialista": [esp_path(e) for e in a["especialista"]]}
                     for a in AGENTES},
         "habilidades": {h["id"]: {k: h[k] for k in ("nombre", "cuando", "pasos", "salida", "control")} for h in HABILIDADES},

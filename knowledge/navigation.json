@@ -287,6 +287,28 @@
    "regla_cruzada": "Licencia, datos, región, retención, salida."
   },
   {
+   "id": "escribir-cliente",
+   "tarea": "Escribir algo que leerá un cliente o el público (correo, propuesta, web, informe)",
+   "responsables": [
+    "propuestas-licitaciones",
+    "director-comercial"
+   ],
+   "consultar_a": [
+    "calidad-riesgos",
+    "legal-privacidad"
+   ],
+   "procesos": [
+    "P31",
+    "P32"
+   ],
+   "leer": [
+    "knowledge/identidad/README.md",
+    "knowledge/identidad/voz.md",
+    "knowledge/identidad/manifiesto.md"
+   ],
+   "regla_cruzada": "Sin clientes, cifras ni testimonios inventados; lo legal, con prudencia."
+  },
+  {
    "id": "facturacion",
    "tarea": "Facturar o preparar trámites",
    "responsables": [

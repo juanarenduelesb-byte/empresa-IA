@@ -8,7 +8,7 @@ version: "19/12/2024; revisada el 09/10/2026 (leída el 26/11/2026)"
 autoridad: "media"
 vigencia: "vigente"
 estado: "draft"
-citada: 2
+citada: 3
 tags:
   - "fuente"
   - "vigencia/vigente"
@@ -24,3 +24,4 @@ tags:
 
 - [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]]
 - [[docs/28-auditoria-agentes|Auditoría de agentes y habilidades frente a los procesos (M-040)]]
+- [[knowledge/identidad/forma-de-trabajar|Forma de trabajar]]

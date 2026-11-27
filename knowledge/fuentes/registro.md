@@ -120,6 +120,9 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 | [MINTO-PIRAMIDE](#minto-piramide) | The Pyramid Principle (Barbara Minto): la respuesta primero y la estructura situación, complicación, pregunta y respuesta | buena-practica | media | vigente | draft |
 | [AEPD-POLITICA-IAG](#aepd-politica-iag) | Política general para el uso de IA generativa en procesos administrativos de la AEPD | buena-practica | alta | vigente | draft |
 | [CE-ALFABETIZACION-QA](#ce-alfabetizacion-qa) | AI Literacy - Questions & Answers | recomendacion-tecnica | alta | vigente | draft |
+| [AGILE-MANIFESTO](#agile-manifesto) | Manifesto for Agile Software Development | buena-practica | media | vigente | draft |
+| [MAILCHIMP-VOZ](#mailchimp-voz) | Voice and Tone | Mailchimp Content Style Guide | buena-practica | media | vigente | draft |
+| [GOVUK-LENGUAJE-CLARO](#govuk-lenguaje-claro) | Use clear language (Writing to GOV.UK standards) | buena-practica | media | vigente | draft |
 | [KEYCLOAK-SIZING](#keycloak-sizing) | Keycloak: Concepts for sizing CPU and memory resources | documentacion-producto | media | vigente | draft |
 | [KEYCLOAK-DB](#keycloak-db) | Keycloak: Configuring the database | documentacion-producto | media | vigente | draft |
 | [KEYCLOAK-ADMIN](#keycloak-admin) | Keycloak: Server Administration Guide | documentacion-producto | media | vigente | draft |
@@ -1273,6 +1276,36 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 - **Consultada:** 2026-11-27 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
 - **Nota:** «There is no need for a certificate.» «Organisations can keep an internal record of trainings and/or other guiding initiatives.» Un programa debe considerar al menos: comprensión general de la IA, el papel de la organización (proveedor o responsable del despliegue), el riesgo de los sistemas y el nivel de cada persona. Supervisión y sanciones desde el 02/08/2026.
+
+<a id="agile-manifesto"></a>
+### AGILE-MANIFESTO
+- **Título:** Manifesto for Agile Software Development
+- **Autor u organismo:** Kent Beck, Mike Beedle y otros firmantes
+- **URL:** <https://agilemanifesto.org/>
+- **Tipo:** buena-practica · **Jurisdicción:** — · **Versión o fecha:** 2001
+- **Consultada:** 2026-11-27 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** Cuatro valores con el formato «X over Y» y «while there is value in the items on the right, we value the items on the left more». Forma del manifiesto de Varios (I1).
+
+<a id="mailchimp-voz"></a>
+### MAILCHIMP-VOZ
+- **Título:** Voice and Tone | Mailchimp Content Style Guide
+- **Autor u organismo:** Mailchimp
+- **URL:** <https://styleguide.mailchimp.com/voice-and-tone/>
+- **Tipo:** buena-practica · **Jurisdicción:** — · **Versión o fecha:** © 2023, licencia CC BY-NC 4.0
+- **Consultada:** 2026-11-27 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** «Our voice doesn't change much from day to day, but our tone changes all the time.» Rasgos de voz formulados como «somos X, no Y» («smart but not snobbish»). Base de la guía de voz (I1).
+
+<a id="govuk-lenguaje-claro"></a>
+### GOVUK-LENGUAJE-CLARO
+- **Título:** Use clear language (Writing to GOV.UK standards)
+- **Autor u organismo:** GOV.UK, Government Digital Service
+- **URL:** <https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/writing-guidelines/clear-language/>
+- **Tipo:** buena-practica · **Jurisdicción:** UK · **Versión o fecha:** sin fecha visible; Open Government Licence v3.0
+- **Consultada:** 2026-11-27 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** «Plain English is mandatory for all of GOV.UK.» Párrafos de 5 frases como mucho, partir las frases de más de 25 palabras, palabras cortas y sin jerga, el lenguaje que usan los usuarios. Base de las reglas de escritura (I1).
 
 <a id="keycloak-sizing"></a>
 ### KEYCLOAK-SIZING

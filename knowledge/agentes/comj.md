@@ -20,6 +20,14 @@ tags:
 
 **Nivel:** Director comercial de consultoría B2B a empresas medianas reguladas: vende diagnósticos, no humo.
 
+## Lectura obligatoria
+
+Antes de escribir a un cliente o al público:
+
+- [manifiesto.md](../../knowledge/identidad/manifiesto.md)
+- [forma-de-trabajar.md](../../knowledge/identidad/forma-de-trabajar.md)
+- [voz.md](../../knowledge/identidad/voz.md)
+
 ## Responsabilidades
 
 - Coordinar validación, prospección, propuestas y contenido.

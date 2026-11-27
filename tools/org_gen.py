@@ -154,6 +154,7 @@ TAREAS = [
     ("incidente", "Gestionar un incidente", ["ciberseguridad", "calidad-riesgos"], ["legal-privacidad"], ["P28", "P15", "P17"], ["processes/runbooks/", "precedents/incidents/"], "Preservar evidencias antes de corregir."),
     ("conocimiento", "Añadir o actualizar conocimiento", ["bibliotecario"], ["el dueño del tema"], ["P13", "P04"], ["knowledge/metodologias-transversales/", "knowledge/fuentes/registro.md"], "Buscar antes de crear; draft hasta revisión."),
     ("proveedor", "Dar de alta un proveedor o herramienta", ["costes-proveedores"], ["legal-privacidad", "ciberseguridad", "arquitecto-tecnico"], ["P27", "P29"], ["integrations/catalog/README.md", "knowledge/plantillas/ficha-proveedor.md"], "Licencia, datos, región, retención, salida."),
+    ("escribir-cliente", "Escribir algo que leerá un cliente o el público (correo, propuesta, web, informe)", ["propuestas-licitaciones", "director-comercial"], ["calidad-riesgos", "legal-privacidad"], ["P31", "P32"], ["knowledge/identidad/README.md", "knowledge/identidad/voz.md", "knowledge/identidad/manifiesto.md"], "Sin clientes, cifras ni testimonios inventados; lo legal, con prudencia."),
     ("facturacion", "Facturar o preparar trámites", ["administrativo", "financiero"], [], ["P11"], ["knowledge/administracion-finanzas/"], "Fechas de Verifactu y factura electrónica según norma vigente."),
 ]
 
@@ -178,7 +179,7 @@ def navegacion():
             if e["dep"] == d[0]:
                 s += "- [%s](%s)%s\n" % (e["nombre"], rel(fn, efile(e)), " · sin puesto en la oficina" if not e["oficina"] else "")
         s += "\n"
-    s += "## Transversal\n\n- [Fuentes](fuentes/registro.md) · [Metodologías](metodologias-transversales/README.md) · [Plantillas](plantillas/README.md) · [Glosario](glosario/README.md) · [Estudios](estudios/README.md)\n- [Catálogo de procesos P01–P38](../processes/catalog/README.md) · [Integraciones](../integrations/catalog/README.md) · [Precedentes](../precedents/README.md) · [Gobierno](../governance/README.md)\n"
+    s += "## Transversal\n\n- [Identidad de la empresa](identidad/README.md) (manifiesto, forma de trabajar y voz) · [Fuentes](fuentes/registro.md) · [Metodologías](metodologias-transversales/README.md) · [Plantillas](plantillas/README.md) · [Glosario](glosario/README.md) · [Estudios](estudios/README.md)\n- [Catálogo de procesos P01–P38](../processes/catalog/README.md) · [Integraciones](../integrations/catalog/README.md) · [Precedentes](../precedents/README.md) · [Gobierno](../governance/README.md)\n"
     OUT[fn] = s
 
 

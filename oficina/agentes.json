@@ -72,6 +72,7 @@
     "No cambia estados del motor: los pide.",
     "No accede a credenciales."
    ],
+   "lectura": [],
    "colabora": [
     {
      "id": "pmo",
@@ -150,6 +151,7 @@
    "limites": [
     "No cambia el plan: lo propone a los socios."
    ],
+   "lectura": [],
    "colabora": [
     {
      "id": "ceo",
@@ -223,6 +225,7 @@
    "limites": [
     "No aprueba decisiones."
    ],
+   "lectura": [],
    "colabora": [
     {
      "id": "ceo",
@@ -294,6 +297,7 @@
    "limites": [
     "No aprueba conocimiento."
    ],
+   "lectura": [],
    "colabora": [
     {
      "id": "leg",
@@ -365,6 +369,11 @@
    ],
    "limites": [
     "No contacta con nadie: prepara; contacta un socio."
+   ],
+   "lectura": [
+    "knowledge/identidad/manifiesto.md",
+    "knowledge/identidad/forma-de-trabajar.md",
+    "knowledge/identidad/voz.md"
    ],
    "colabora": [
     {
@@ -445,6 +454,11 @@
    "limites": [
     "No organiza las conversaciones: lo hace un socio."
    ],
+   "lectura": [
+    "knowledge/identidad/manifiesto.md",
+    "knowledge/identidad/forma-de-trabajar.md",
+    "knowledge/identidad/voz.md"
+   ],
    "colabora": [
     {
      "id": "proj",
@@ -509,6 +523,11 @@
    ],
    "limites": [
     "No contacta con nadie."
+   ],
+   "lectura": [
+    "knowledge/identidad/manifiesto.md",
+    "knowledge/identidad/forma-de-trabajar.md",
+    "knowledge/identidad/voz.md"
    ],
    "colabora": [
     {
@@ -579,6 +598,11 @@
    "limites": [
     "No envía propuestas."
    ],
+   "lectura": [
+    "knowledge/identidad/manifiesto.md",
+    "knowledge/identidad/forma-de-trabajar.md",
+    "knowledge/identidad/voz.md"
+   ],
    "colabora": [
     {
      "id": "kpi",
@@ -647,6 +671,11 @@
    ],
    "limites": [
     "No publica."
+   ],
+   "lectura": [
+    "knowledge/identidad/manifiesto.md",
+    "knowledge/identidad/forma-de-trabajar.md",
+    "knowledge/identidad/voz.md"
    ],
    "colabora": [
     {
@@ -722,6 +751,7 @@
    "limites": [
     "No promete automatización sin examen superado."
    ],
+   "lectura": [],
    "colabora": [
     {
      "id": "seg",
@@ -799,6 +829,7 @@
    "limites": [
     "Nunca usa datos reales, ni anonimizados."
    ],
+   "lectura": [],
    "colabora": [
     {
      "id": "proj",
@@ -870,6 +901,7 @@
    "limites": [
     "No firma objetivos con el cliente."
    ],
+   "lectura": [],
    "colabora": [
     {
      "id": "proj",
@@ -942,6 +974,7 @@
    "limites": [
     "No despliega a producción sin aprobación."
    ],
+   "lectura": [],
    "colabora": [
     {
      "id": "back",
@@ -1016,6 +1049,7 @@
    "limites": [
     "No toca datos reales."
    ],
+   "lectura": [],
    "colabora": [
     {
      "id": "ingj",
@@ -1086,6 +1120,7 @@
    "limites": [
     "No decide umbrales de negocio: los propone."
    ],
+   "lectura": [],
    "colabora": [
     {
      "id": "dat",
@@ -1153,6 +1188,7 @@
    "limites": [
     "No conecta sistemas reales antes de L3."
    ],
+   "lectura": [],
    "colabora": [
     {
      "id": "sec",
@@ -1222,6 +1258,7 @@
    "limites": [
     "No sustituye la aprobación de un socio."
    ],
+   "lectura": [],
    "colabora": [
     {
      "id": "sec",
@@ -1289,6 +1326,7 @@
    "limites": [
     "No hace pruebas sobre sistemas de terceros."
    ],
+   "lectura": [],
    "colabora": [
     {
      "id": "back",
@@ -1363,6 +1401,7 @@
    "limites": [
     "No firma ni valida contratos."
    ],
+   "lectura": [],
    "colabora": [
     {
      "id": "sec",
@@ -1431,6 +1470,7 @@
    "limites": [
     "No presenta nada ante la administración."
    ],
+   "lectura": [],
    "colabora": [
     {
      "id": "fin",
@@ -1499,6 +1539,7 @@
    "limites": [
     "No paga ni contrata."
    ],
+   "lectura": [],
    "colabora": [
     {
      "id": "kpi",
@@ -1560,6 +1601,7 @@
    "limites": [
     "No contrata."
    ],
+   "lectura": [],
    "colabora": [
     {
      "id": "leg",
@@ -1626,6 +1668,7 @@
    "limites": [
     "No asesora a asegurados."
    ],
+   "lectura": [],
    "colabora": [
     {
      "id": "proj",
@@ -1691,6 +1734,7 @@
    "limites": [
     "Nada clínico."
    ],
+   "lectura": [],
    "colabora": [
     {
      "id": "leg",
@@ -1748,6 +1792,7 @@
    "limites": [
     "No presenta modelos."
    ],
+   "lectura": [],
    "colabora": [
     {
      "id": "admj",
@@ -1804,6 +1849,7 @@
    "limites": [
     "No asesora sobre inversiones."
    ],
+   "lectura": [],
    "colabora": [
     {
      "id": "leg",
@@ -1863,6 +1909,7 @@
    "limites": [
     "Nada de OT."
    ],
+   "lectura": [],
    "colabora": [
     {
      "id": "proj",
@@ -1918,6 +1965,7 @@
    "limites": [
     "No contacta con transportistas."
    ],
+   "lectura": [],
    "colabora": [
     {
      "id": "proj",
@@ -1993,6 +2041,7 @@
    "limites": [
     "No firma, no paga, no solicita financiación ni cambia precios."
    ],
+   "lectura": [],
    "colabora": [
     {
      "id": "conta",
@@ -2078,6 +2127,7 @@
    "limites": [
     "No emite, no paga, no presenta ante la Agencia Tributaria."
    ],
+   "lectura": [],
    "colabora": [
     {
      "id": "cfo",
@@ -2159,6 +2209,7 @@
    "limites": [
     "No toca producción ni cambia la región de datos sin aprobación."
    ],
+   "lectura": [],
    "colabora": [
     {
      "id": "ingj",
@@ -2241,6 +2292,7 @@
    "limites": [
     "No decide alcance funcional."
    ],
+   "lectura": [],
    "colabora": [
     {
      "id": "proj",
@@ -2323,6 +2375,11 @@
    ],
    "limites": [
     "No firma ni compromete nada en nombre de Varios."
+   ],
+   "lectura": [
+    "knowledge/identidad/manifiesto.md",
+    "knowledge/identidad/forma-de-trabajar.md",
+    "knowledge/identidad/voz.md"
    ],
    "colabora": [
     {
@@ -2410,6 +2467,7 @@
    "limites": [
     "No certifica ni firma."
    ],
+   "lectura": [],
    "colabora": [
     {
      "id": "leg",

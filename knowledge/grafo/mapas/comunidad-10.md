@@ -1,46 +1,38 @@
 ---
 tipo: "mapa"
 comunidad: 10
-miembros: 31
-cohesion: 0.37
+miembros: 17
+cohesion: 0.21
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 10 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Flujo ceo
+# Comunidad 10 · knowledge/administracion-finanzas · Director financiero (CFO) y Especialista en costes y proveedores
 
-31 nodos agrupados por el algoritmo de Louvain. Cohesión 0.37.
+17 nodos agrupados por el algoritmo de Louvain. Cohesión 0.21.
 
 ## Documentos
 
-- [[docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado|Guia de Arranque Proyecto v1.4 Diseno Cerrado]]
-- [[docs/fuentes/02_02_flujo_ceo|Flujo ceo]]
-- [[docs/fuentes/04_04_ejecucion_agentes|Ejecucion agentes]]
-- [[docs/fuentes/03_03_motor_conocimiento_obsidian|Motor conocimiento obsidian]]
-- [[docs/atlas/12-ciclo-proyecto|12 · Ciclo de vida de un proyecto con cliente]]
-- [[docs/fuentes/09_09_comunicaciones_estados|Comunicaciones estados]]
-- [[docs/fuentes/06_06_calidad_gobierno|Calidad gobierno]]
-- [[docs/atlas/08-seguridad|08 · Seguridad, identidad y aislamiento de clientes]]
-- [[docs/fuentes/05_05_seguridad_clientes|Seguridad clientes]]
-- [[docs/16-correcciones|Registro de correcciones a los documentos recibidos el 17/11/2026]]
-- [[docs/atlas/07-conocimiento|07 · Motor de conocimiento con Obsidian]]
-- [[docs/atlas/README|Atlas de diagramas]]
-- [[docs/fuentes/07_07_infraestructura_portabilidad|Infraestructura portabilidad]]
-- [[docs/fuentes/08_08_ciclo_vida_proyecto|Ciclo vida proyecto]]
-- [[docs/atlas/16-estados|16 · Estados de un encargo]]
-- [[docs/atlas/02-flujo-ceo|02 · Flujo completo del CEO digital]]
-- [[docs/atlas/04-ejecucion|04 · Ejecución: motor de procesos, agentes y herramientas]]
-- [[docs/atlas/05-gateway|05 · Puerta de herramientas]]
-- [[docs/atlas/00-arquitectura|00 · Arquitectura del cerebro digital]]
-- [[docs/atlas/09-calidad|09 · Calidad, evaluación y aprobación humana]]
-- [[docs/atlas/03-decisiones-ceo|03 · Las cinco decisiones del CEO]]
-- [[docs/atlas/15-componentes|15 · Conversación entre componentes]]
-- [[docs/atlas/14-incidentes|14 · Operación y respuesta a incidentes]]
-- [[docs/atlas/01-organizacion|01 · Organización: modelo matricial]]
-- [[docs/atlas/11-infraestructura|11 · Infraestructura, desarrollo y portabilidad]]
-- [[docs/atlas/13-ciclo-dato|13 · Ciclo de vida de un dato]]
-- [[docs/atlas/10-cambios-modelos|10 · Cambios y elección de modelos de IA]]
-- [[docs/14-reglas-del-ceo|Reglas del CEO digital]]
-- [[docs/atlas/06-fallos|06 · Fallos, reintentos y recuperación]]
-- [[docs/03-ceo-digital-y-orquestacion|CEO digital y orquestación]]
-- [[precedents/lessons-learned/2026-11-correcciones-documentales|Lección: los documentos base también tienen errores]]
+- [[knowledge/administracion-finanzas/direccion-financiera|Director financiero (CFO)]]
+- [[knowledge/administracion-finanzas/costes-proveedores|Especialista en costes y proveedores]]
+- [[knowledge/administracion-finanzas/financiero|Especialista financiero]]
+
+## Especialistas
+
+- [[knowledge/procesos/automatizacion|Especialista en automatización]]
+- [[knowledge/administracion-finanzas/costes-proveedores|Especialista en costes y proveedores]]
+- [[knowledge/administracion-finanzas/direccion-financiera|Director financiero (CFO)]]
+- [[knowledge/administracion-finanzas/financiero|Especialista financiero]]
+
+## Fuentes
+
+- [[knowledge/grafo/fuentes/DORA-CNMV|DORA-CNMV · Preguntas frecuentes sobre el Reglamento (UE) 2022/2554 (DORA)]]
+- [[knowledge/grafo/fuentes/PGC-PYMES|PGC-PYMES · Real Decreto 1515/2007, Plan General de Contabilidad de Pymes]]
+- [[knowledge/grafo/fuentes/OSS-CAMUNDA|OSS-CAMUNDA · Camunda 8: licencia para Self-Managed]]
+- [[knowledge/grafo/fuentes/OSS-N8N|OSS-N8N · n8n: Sustainable Use License]]
+- [[knowledge/grafo/fuentes/LEY-STARTUPS-28-2022|LEY-STARTUPS-28-2022 · Ley 28/2022, de fomento del ecosistema de las empresas emergentes]]
+- [[knowledge/grafo/fuentes/OSS-LANGFUSE|OSS-LANGFUSE · Langfuse (observabilidad de LLM)]]
+- [[knowledge/grafo/fuentes/OSS-TEMPORAL|OSS-TEMPORAL · Temporal (motor de ejecución duradera)]]
+- [[knowledge/grafo/fuentes/CDTI-NEOTEC-2026|CDTI-NEOTEC-2026 · Programa NEOTEC 2026 (CDTI)]]
+- [[knowledge/grafo/fuentes/ENISA-2026|ENISA-2026 · ENISA: préstamos participativos (líneas 2026)]]
+- [[knowledge/grafo/fuentes/OSS-SPIFF|OSS-SPIFF · SpiffWorkflow (motor BPMN/DMN en Python)]]

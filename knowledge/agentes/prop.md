@@ -20,6 +20,14 @@ tags:
 
 **Nivel:** Responsable de propuestas en consultoría: claridad de alcance y nada de letra pequeña.
 
+## Lectura obligatoria
+
+Antes de escribir a un cliente o al público:
+
+- [manifiesto.md](../../knowledge/identidad/manifiesto.md)
+- [forma-de-trabajar.md](../../knowledge/identidad/forma-de-trabajar.md)
+- [voz.md](../../knowledge/identidad/voz.md)
+
 ## Responsabilidades
 
 - Propuesta de diagnóstico y sus variantes.

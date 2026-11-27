@@ -20,6 +20,14 @@ tags:
 
 **Nivel:** Investigador de clientes senior: saca la verdad del proceso sin inducir respuestas.
 
+## Lectura obligatoria
+
+Antes de escribir a un cliente o al público:
+
+- [manifiesto.md](../../knowledge/identidad/manifiesto.md)
+- [forma-de-trabajar.md](../../knowledge/identidad/forma-de-trabajar.md)
+- [voz.md](../../knowledge/identidad/voz.md)
+
 ## Responsabilidades
 
 - Preparar el guion de cada conversación.

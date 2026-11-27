@@ -9,6 +9,8 @@ Este documento dice qué había, qué se ha construido y qué falta. Separa hech
 > - 13 fuentes más, 53 en total. La de factura electrónica B2B ya tiene calendario oficial.
 > - La oficina de agentes tiene proyectos, entregables en archivos reales, memoria y lectura de Google Drive (D-015, propuesta).
 > - Las cifras de abajo son las del primer informe.
+>
+> **Nota del 27/11/2026:** este informe describe el 17/11. Lo que dicen §9 y §10 del motor «en memoria», sin PostgreSQL, RLS, API ni identidad, está superado: desde el 26/11 hay PostgreSQL con RLS forzada, auditoría inmutable, una API con identidad por token firmado (provisional, D-028) y pruebas contra PostgreSQL real, también de acceso cruzado entre clientes ([24-base-de-datos.md](24-base-de-datos.md)). Las demás limitaciones de §10 siguen en pie.
 
 ## 1. Estado antes
 - **Documentación:** 52 documentos y 12 decisiones (D-001 a D-012).

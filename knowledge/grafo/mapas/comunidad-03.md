@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 3
-miembros: 93
+miembros: 96
 cohesion: 0.08
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 3 · docs · Registro de decisiones y Trabajo nocturno de Claude
 
-93 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
+96 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
 
 ## Documentos
 
@@ -18,27 +18,27 @@ tags:
 - [[CLAUDE|Varios · empresa-ia]]
 - [[docs/fuentes/Atlas_Evolucion_v1.1_Modelo_Operativo_Procesos_y_Despliegue|Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue]]
 - [[docs/23-plan-maestro|Plan maestro: la empresa completa, sin que se escape nada]]
-- [[docs/informes/2026-11-26|Informe de la mañana · 26/11/2026]]
 - [[docs/17-cerebro-y-procesos|17 · Cerebro, conocimiento y procesos: auditoría e informe]]
+- [[docs/informes/2026-11-26|Informe de la mañana · 26/11/2026]]
+- [[README|Varios — repositorio maestro]]
 - [[docs/10-plan-12-semanas|Plan de construcción · 18/11/2026 → 12/02/2027]]
 - [[docs/22-plan-hasta-febrero|Plan de trabajo diario · 26/11/2026 → 28/02/2027]]
-- [[README|Varios — repositorio maestro]]
 - [[knowledge/plantillas/entregables/README|Plantillas de entregables al cliente (E1)]]
 - [[governance/legal/borradores/05-matriz-aprobaciones|Matriz de aprobaciones · BORRADOR]]
+- [[docs/25-portal-interno|Portal interno: auditoría de la oficina y distribución propuesta (F1)]]
 - [[precedents/projects/caso-correduria-atalaya/entregables/01-propuesta-diagnostico|Propuesta de diagnóstico · Atalaya Correduría de Seguros (FICTICIA)]]
 - [[knowledge/plantillas/entregables/01-propuesta-diagnostico|Propuesta de diagnóstico · (Cliente)]]
-- [[docs/25-portal-interno|Portal interno: auditoría de la oficina y distribución propuesta (F1)]]
+- [[docs/30-inventario-web|Inventario de la web interna (site/) frente a la web para clientes (N5)]]
 - [[knowledge/plantillas/entregables/02-informe-diagnostico|Informe de diagnóstico · (Cliente) · (Proceso)]]
 - [[knowledge/plantillas/entregables/rubrica|Rúbrica de calidad de entregables y listas de comprobación (C3)]]
-- [[docs/30-inventario-web|Inventario de la web interna (site/) frente a la web para clientes (N5)]]
 - [[docs/08-roadmap-y-decisiones|Roadmap y decisiones]]
+- [[docs/19-obsidian|Obsidian: el cerebro abierto en tu equipo]]
 - [[knowledge/plantillas/ficha-cliente|Plantilla · Ficha de cliente]]
 - [[knowledge/plantillas/entregables/03-diseno-to-be|Diseño del proceso nuevo (TO-BE) · (Cliente) · (Proceso)]]
-- [[docs/19-obsidian|Obsidian: el cerebro abierto en tu equipo]]
 - [[docs/09-inventario-documental|Inventario documental]]
 - [[knowledge/plantillas/entregables/04-plan-piloto|Plan de piloto · (Cliente) · (Proceso)]]
-- [[knowledge/metodologias-transversales/guion-validacion-semanal|Guion de la conversación semanal de validación]]
 - [[docs/26-web-clientes|Web para clientes: estudio de referencias, estructura y textos (F2)]]
+- [[knowledge/metodologias-transversales/guion-validacion-semanal|Guion de la conversación semanal de validación]]
 - [[docs/05-agentes-procesos-e-integraciones|Agentes, procesos e integraciones]]
 - [[knowledge/metodologias-transversales/cuestionario-descubrimiento|Cuestionario de descubrimiento por puertas (G0–G2)]]
 - [[governance/socios/01-marca-esclusa-o-varios|M-002 · ¿Una sola marca: Esclusa o Varios?]]
@@ -52,10 +52,13 @@ tags:
 - [[knowledge/metodologias-transversales/contrastar|Protocolo: contrastar el conocimiento interno y el externo]]
 - [[governance/socios/README|Decisiones de los socios (borradores)]]
 - [[docs/11-cerebro-en-claude|Cerebro en Claude]]
+- [[governance/README|Gobierno, seguridad y legal]]
+- [[docs/07-calidad-infraestructura-y-operacion|Calidad, infraestructura y operación]]
+- [[docs/18-flujo-de-calidad-y-aprendizaje|18 · Flujo de calidad y aprendizaje continuo en la oficina]]
 - [[web/README|Web para clientes (borrador)]]
+- [[docs/06-seguridad-y-gobierno|Seguridad, privacidad y gobierno]]
 - [[knowledge/plantillas/entregables/06-acta-reunion|Acta de reunión · (Cliente) · (Tema) · (Fecha)]]
 - [[docs/02-arquitectura-general|Arquitectura general]]
-- [[docs/18-flujo-de-calidad-y-aprendizaje|18 · Flujo de calidad y aprendizaje continuo en la oficina]]
 - [[docs/informes/README|Informes de la mañana]]
 - [[processes/ceo-control-a/README|Banco del Control A: 25 encargos para el CEO limitado (C2)]]
 - [[claude/instrucciones-proyecto|Instrucciones del proyecto "Varios · Cerebro" en Claude]]
@@ -73,8 +76,8 @@ tags:
 - [[knowledge/grafo/decisiones/D-003|D-003 · Obsidian como interfaz humana]]
 - [[knowledge/grafo/decisiones/D-021|D-021 · El cerebro se abre en Obsidian: el repositorio es el vault]]
 - [[knowledge/grafo/decisiones/D-027|D-027 · Cada proceso tiene un nivel de autonomía A0–A4 con techo y criterio]]
-- [[knowledge/grafo/decisiones/D-009|D-009 · Unificación de puertas y estados]]
 - [[knowledge/grafo/decisiones/D-028|D-028 · La oficina guarda en la API: identidad por token firmado y PyJWT]]
+- [[knowledge/grafo/decisiones/D-009|D-009 · Unificación de puertas y estados]]
 - [[knowledge/grafo/decisiones/D-006|D-006 · Primer proceso piloto]]
 - [[knowledge/grafo/decisiones/D-010|D-010 · Diagramas como código]]
 - [[knowledge/grafo/decisiones/D-015|D-015 · Entregables en archivos reales, memoria y Google Drive en la oficina de agentes]]

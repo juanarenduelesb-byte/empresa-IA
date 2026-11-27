@@ -1,28 +1,23 @@
 ---
 tipo: "mapa"
 comunidad: 11
-miembros: 11
-cohesion: 0.55
+miembros: 8
+cohesion: 0.43
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 11 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Conversaciones con IA y evaluación
+# Comunidad 11 · knowledge/estudios · Estudios y Integraciones
 
-11 nodos agrupados por el algoritmo de Louvain. Cohesión 0.55.
+8 nodos agrupados por el algoritmo de Louvain. Cohesión 0.43.
 
 ## Documentos
 
-- [[precedents/oficina/encargos/2026-11/2026-11-17-acta-de-proteccion-de-la-ia-y-examen-de-50-casos-6sxjn|Acta de protección de la IA y examen de 50 casos]]
-- [[precedents/oficina/chats/ia-y-evaluacion|Conversaciones con IA y evaluación]]
-- [[precedents/oficina/encargos/2026-11/2026-11-17-reunion-ia-y-evaluacion-y-seguridad-zyn2w|Reunión: IA y evaluación y Seguridad]]
-- [[precedents/oficina/chats/ceo-digital|Conversaciones con CEO digital]]
-- [[precedents/oficina/chats/plan-y-seguimiento|Conversaciones con Plan y seguimiento]]
-- [[precedents/oficina/chats/registro-de-decisiones|Conversaciones con Registro de decisiones]]
-- [[precedents/oficina/chats/bibliotecario|Conversaciones con Bibliotecario]]
-- [[precedents/oficina/chats/seguridad|Conversaciones con Seguridad]]
-
-## Decisiones
-
-- [[knowledge/grafo/decisiones/D-013|D-013 · Conocimiento y catálogo de procesos generados desde datos]]
-- [[knowledge/grafo/decisiones/D-017|D-017 · La oficina se vuelca cada noche a GitHub y las automatizaciones van por GitHub Actions]]
+- [[knowledge/estudios/README|Estudios]]
+- [[integrations/README|Integraciones]]
+- [[docs/04-motor-de-conocimiento|Motor de conocimiento]]
+- [[integrations/contracts/README|Contratos de datos]]
+- [[knowledge/estudios/2026-11-26-prospectos-pymes-alvaro/README|Estudio de prospectos: automatización para pymes (Álvaro, noviembre de 2026)]]
+- [[integrations/tests/README|Pruebas de integración]]
+- [[integrations/connectors/README|Conectores]]
+- [[knowledge/README|Conocimiento]]

@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 2
-miembros: 100
+miembros: 101
 cohesion: 0.07
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 2 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros
 
-100 nodos agrupados por el algoritmo de Louvain. Cohesión 0.07.
+101 nodos agrupados por el algoritmo de Louvain. Cohesión 0.07.
 
 ## Documentos
 
@@ -24,6 +24,7 @@ tags:
 - [[knowledge/sectores/sector-industria|Experto en industria manufacturera]]
 - [[knowledge/sectores/seguros/normas|Normas para abrir un siniestro en una correduría]]
 - [[knowledge/ingenieria/diseno-experiencia|Diseñador de producto y experiencia (UX)]]
+- [[docs/fuentes/Marco_Integral_Legal_Ciberseguridad_IA_Espana_UE_2026-11-16|Marco Integral Legal Ciberseguridad IA Espana UE 2026-11-16]]
 - [[knowledge/sectores/priorizacion|Priorización de sectores]]
 - [[knowledge/sectores/seguros/glosario-siniestros|Glosario de siniestros]]
 - [[docs/27-finanzas|Finanzas: forma jurídica, facturación, precio y caja (D2)]]

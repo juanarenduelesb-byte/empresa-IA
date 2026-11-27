@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 0
-miembros: 110
+miembros: 112
 cohesion: 0.08
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 0 · claude/habilidades · Habilidades de los agentes y Administración
 
-110 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
+112 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
 
 ## Documentos
 
@@ -26,22 +26,23 @@ tags:
 - [[knowledge/agentes/cfo|Director financiero]]
 - [[knowledge/agentes/leg|Legal y privacidad]]
 - [[knowledge/agentes/comj|Jefe comercial]]
-- [[knowledge/agentes/ingj|Arquitecto técnico]]
 - [[knowledge/agentes/conta|Contabilidad y facturación]]
+- [[knowledge/agentes/ingj|Arquitecto técnico]]
 - [[knowledge/agentes/cump|Cumplimiento normativo]]
 - [[knowledge/agentes/ceo|CEO digital]]
 - [[knowledge/agentes/prop|Propuestas]]
 - [[knowledge/agentes/seg|Coordinación sectorial · Seguros]]
-- [[knowledge/agentes/bib|Bibliotecario]]
-- [[knowledge/agentes/dec|Registro de decisiones]]
 - [[knowledge/agentes/cont|Contenido]]
+- [[knowledge/agentes/bib|Bibliotecario]]
 - [[knowledge/agentes/pros|Prospección]]
 - [[knowledge/agentes/val|Validación]]
-- [[knowledge/agentes/pmo|Plan y seguimiento]]
 - [[knowledge/administracion-finanzas/financiero|Especialista financiero]]
 - [[knowledge/agentes/calj|Calidad y riesgo]]
-- [[knowledge/agentes/kpi|Métricas]]
+- [[knowledge/agentes/dec|Registro de decisiones]]
+- [[knowledge/agentes/ux|Diseño y experiencia]]
+- [[knowledge/agentes/pmo|Plan y seguimiento]]
 - [[knowledge/agentes/sec|Seguridad]]
+- [[knowledge/agentes/kpi|Métricas]]
 - [[claude/habilidades/hecho-hipotesis-propuesta|Separar hecho, hipótesis y propuesta]]
 - [[knowledge/agentes/dat|Datos de prueba]]
 - [[knowledge/agentes/ia|IA y evaluación]]
@@ -72,8 +73,7 @@ tags:
 - [[claude/habilidades/evaluacion-modelos|Evaluación de modelos]]
 - [[claude/habilidades/cierre-mensual|Cierre contable mensual]]
 - [[claude/habilidades/casos-sinteticos|Casos de prueba inventados]]
-- [[claude/habilidades/propuesta-diagnostico|Propuesta de diagnóstico]]
-- … y 31 más
+- … y 34 más
 
 ## Especialistas
 
@@ -92,7 +92,6 @@ tags:
 - [[knowledge/grafo/fuentes/PGC-PYMES|PGC-PYMES · Real Decreto 1515/2007, Plan General de Contabilidad de Pymes]]
 - [[knowledge/grafo/fuentes/VERIFACTU-2028|VERIFACTU-2028 · Hacienda anuncia el aplazamiento de Verifactu a octubre de 2028]]
 - [[knowledge/grafo/fuentes/LIS-27-2014|LIS-27-2014 · Ley 27/2014, del Impuesto sobre Sociedades]]
-- [[knowledge/grafo/fuentes/LEY-MOROSIDAD-3-2004|LEY-MOROSIDAD-3-2004 · Ley 3/2004, medidas de lucha contra la morosidad en operaciones comerciales]]
 - [[knowledge/grafo/fuentes/RD-1619-2012|RD-1619-2012 · Real Decreto 1619/2012, Reglamento por el que se regulan las obligaciones de facturación]]
 - [[knowledge/grafo/fuentes/HOLDED-ASESORIAS-2026|HOLDED-ASESORIAS-2026 · Impacto normativo 2026-2027 en asesorías y despachos]]
 - [[knowledge/grafo/fuentes/LEY-STARTUPS-28-2022|LEY-STARTUPS-28-2022 · Ley 28/2022, de fomento del ecosistema de las empresas emergentes]]

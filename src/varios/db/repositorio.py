@@ -87,6 +87,10 @@ class Repositorio:
             raise TransicionInvalida("Toda transición necesita motivo")
         if a in SOLO_POR_OPERACION:
             raise TransicionInvalida(f"A {a} solo se llega con {SOLO_POR_OPERACION[a]} (D-019: todo pasa por un socio)")
+        if sol.estado == "PENDIENTE_APROBACION":
+            # Guía v1.4 §4: de aquí solo se sale con un aprobador autorizado y la versión exacta, es decir, decidiendo
+            # la aprobación. Un cambio libre la dejaría «pendiente» para siempre y lo podría hacer cualquiera.
+            raise TransicionInvalida("Un encargo pendiente de aprobación solo sale con decidir_aprobacion")
         self._cambiar(sol, a, motivo, clave)
         return sol
 

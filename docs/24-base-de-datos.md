@@ -56,7 +56,7 @@ Rutas en `src/varios/api/oficina.py`; pruebas en `tests/db/test_api_oficina.py`,
 | Ruta | Qué hace | Regla |
 |---|---|---|
 | `POST /encargos` · `GET /encargos` · `GET /encargos/{id}` | Alta y lectura de encargos | El cliente y el autor salen del token; si el cuerpo trae `cliente_id` o `autor_id`, se ignoran |
-| `POST /encargos/{id}/estado` | Cambio de estado según `encargo.json`, con motivo y clave de idempotencia opcional | A PENDIENTE_APROBACION y a ENTREGADO solo se llega por las rutas de aprobación (D-019) |
+| `POST /encargos/{id}/estado` | Cambio de estado según `encargo.json`, con motivo y clave de idempotencia opcional | A PENDIENTE_APROBACION y a ENTREGADO solo se llega por las rutas de aprobación (D-019), y de PENDIENTE_APROBACION solo se sale decidiendo la aprobación, también para devolver a retrabajo o rechazar (Guía v1.4 §4; arreglado el 27/11) |
 | `POST /encargos/{id}/tareas` · `GET …/tareas` | Tareas del encargo | Solo en PLANIFICADO, EN_EJECUCION o RETRABAJO; la misma clave devuelve la misma tarea |
 | `POST /encargos/{id}/aprobaciones` · `GET …/aprobaciones` | Pedir aprobación de la versión actual (EN_QA → PENDIENTE_APROBACION) | Queda quién la pide |
 | `POST /aprobaciones/{id}/decision` | Aprobar (→ ENTREGADO) o rechazar (→ RETRABAJO, versión + 1) | Solo una persona con rol `aprobador`, que no la ha pedido ni es autora del encargo, y sobre la misma versión |
@@ -77,13 +77,15 @@ La oficina (`oficina/`) es la misma en los dos casos; `oficina/api.js` decide d�
 
 **Cómo se conecta.** La API sirve la oficina en `/oficina/` (misma dirección, sin CORS). Si `/health` responde, aparece el botón «Conectar API»: se pega un token (o se abre `/oficina/#token=…`) y el botón pasa a «API · PostgreSQL». El token se guarda en `sessionStorage` y se borra al cerrar la pestaña. Para sacar uno con los datos de ejemplo: `docker compose exec api python -c "from varios.db.semilla import _id; from varios.api.identidad import emitir; print(emitir(_id('usuario','atalaya','tramitador@atalaya.invalid'), _id('cliente','atalaya')))"`.
 
-**Qué se escribe.** Alta del encargo; cada cambio de estado de la oficina se traduce al estado de la API y se recorre el camino más corto de `encargo.json` (la API publica las transiciones en `GET /definiciones/encargo`, así que la oficina no copia la tabla); al pedir el OK se pide la aprobación, y la decisión solo se envía si la tomó un socio en la oficina («Aprobado por un socio» o «Rechazado por un socio»). Si la API la rechaza (por ejemplo, porque quien aprueba es quien pidió el encargo), la oficina avisa y en la API sigue pendiente: no se fuerza nada.
+**Qué se escribe.** Alta del encargo; cada cambio de estado de la oficina se traduce al estado de la API y se recorre el camino más corto de `encargo.json` (la API publica las transiciones en `GET /definiciones/encargo`, así que la oficina no copia la tabla); al pedir el OK se pide la aprobación, y la decisión solo se envía si la tomó un socio en la oficina («Aprobado por un socio», «Rechazado por un socio» o «Descartado por un socio»). Descartar algo que espera el OK es una decisión «rechazada» y después el camino libre de RETRABAJO a RECHAZADO. Si la API la rechaza (por ejemplo, porque quien aprueba es quien pidió el encargo), la oficina avisa y en la API sigue pendiente: no se fuerza nada.
 
 **Qué se lee.** Al conectar, la oficina actualiza el estado de los encargos que ya conoce y muestra los que se crearon fuera (otra persona u otro equipo) como «Llega de la API», en solo lectura.
 
 **Lo que aún no hace.** Las piezas de un encargo en equipo no se suben como tareas; la aprobación de un encargo que llegó de la API no se puede dar desde otra oficina; reglas, memoria, proyectos y entregables siguen solo en el almacén de la oficina. Es el paso siguiente de M-041 (y N4 para editar, posponer y caducar aprobaciones).
 
 **Prueba de humo (26/11/2026, Chromium sin interfaz).** Con PostgreSQL desechable, migraciones, semilla y la API: un encargo creado en la oficina queda en la tabla `solicitud` en PENDIENTE_APROBACION con 7 eventos de auditoría (alta, cinco cambios de estado y la petición de aprobación); en modo demostración la oficina lo da por hecho sin un socio y la API no lo acepta como aprobado. Los dos encargos de la semilla aparecen en Inicio como preguntas. La misma oficina servida como archivos sin API guarda como siempre y no muestra el botón. Sin errores en la consola en ninguno de los dos casos. `docker compose up` sigue sin poder probarse aquí (ver «Pendiente de tu aprobación» en docs/21).
+
+**Segunda prueba de humo (27/11/2026).** Mismo montaje. Un encargo inventado que espera el OK se pospone (la oficina lo crea en la API y pide la aprobación: PENDIENTE_APROBACION) y después se descarta: la oficina envía la decisión «rechazada» en vez de un cambio libre, la API la rechaza con 403 porque quien decide es quien la pidió, la oficina lo avisa y en la API sigue pendiente. Antes del arreglo, el mismo usuario lo sacaba a RECHAZADO sin decidir y la aprobación quedaba pendiente para siempre.
 
 ## Lo que falta (plan)
 

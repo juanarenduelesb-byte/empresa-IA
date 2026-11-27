@@ -110,3 +110,19 @@ def test_idempotencia_en_transiciones():
     n = len(m.auditoria)
     m.mover(ANA, e.id, "EN_CLASIFICACION", "clasificar", clave_idempotencia="k1")
     assert len(m.auditoria) == n and e.estado == "EN_CLASIFICACION"
+
+
+def test_salir_de_pendiente_de_aprobacion_exige_aprobador():
+    """Guía v1.4 §4: devolver a retrabajo o rechazar también lo decide un aprobador, no el autor ni un agente."""
+    m = Motor()
+    e = llevar_a_qa(m, ANA, "alto")
+    m.mover(ANA, e.id, "PENDIENTE_APROBACION", "riesgo alto")
+    n = len(m.auditoria)
+    for quien in (ANA, AGENTE, Identidad("pepe", "cliente-ficticio-a")):
+        for a in ("RETRABAJO", "RECHAZADO"):
+            with pytest.raises(AprobacionInvalida):
+                m.mover(quien, e.id, a, "salir sin decidir")
+    assert e.estado == "PENDIENTE_APROBACION" and len(m.auditoria) == n
+    m.mover(LUIS, e.id, "RETRABAJO", "falta un dato")
+    assert e.estado == "RETRABAJO" and e.version_entregable == 2
+

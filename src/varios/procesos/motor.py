@@ -116,6 +116,9 @@ class Motor:
             raise TransicionInvalida("Entrega directa desde QA solo con riesgo bajo y QA conforme")
         if enc.estado == "PENDIENTE_APROBACION" and a == "ENTREGADO":
             raise AprobacionInvalida("Usa aprobar(): la entrega tras aprobación exige una persona")
+        if enc.estado == "PENDIENTE_APROBACION":
+            # Guía v1.4 §4: también devolver a retrabajo o rechazar exige un aprobador autorizado.
+            self._comprobar_aprobador(quien, enc)
         if a == "EN_QA":
             enc.qa_conforme = False
         if a == "RETRABAJO":
@@ -139,17 +142,21 @@ class Motor:
         enc = self.obtener(quien, encargo_id)
         if enc.estado != "PENDIENTE_APROBACION":
             raise AprobacionInvalida("No está pendiente de aprobación")
+        self._comprobar_aprobador(quien, enc)
+        if version != enc.version_entregable:
+            raise AprobacionInvalida("La aprobación es de otra versión del entregable")
+        enc.estado = "ENTREGADO"
+        self._registrar(enc, quien, "aprobar", "PENDIENTE_APROBACION", "ENTREGADO", motivo)
+        return enc
+
+    @staticmethod
+    def _comprobar_aprobador(quien: Identidad, enc: Encargo) -> None:
         if not quien.persona:
             raise AprobacionInvalida("Solo una persona puede aprobar")
         if quien.usuario == enc.autor:
             raise AprobacionInvalida("Nadie aprueba su propio trabajo")
         if "aprobador" not in quien.roles:
             raise AprobacionInvalida("Falta el rol de aprobación")
-        if version != enc.version_entregable:
-            raise AprobacionInvalida("La aprobación es de otra versión del entregable")
-        enc.estado = "ENTREGADO"
-        self._registrar(enc, quien, "aprobar", "PENDIENTE_APROBACION", "ENTREGADO", motivo)
-        return enc
 
     # --- auditoría --------------------------------------------------------
     def _registrar(self, enc, quien, accion, antes, despues, motivo, clave=None) -> Evento:

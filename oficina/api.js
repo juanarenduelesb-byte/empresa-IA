@@ -59,8 +59,9 @@
     var destino = DESTINO[t.status];
     if (destino && destino !== api.estado) {
       var antes = api.estado;
-      if (destino === 'PENDIENTE_APROBACION' || destino === 'ENTREGADO' || (antes === 'PENDIENTE_APROBACION' && destino !== 'RECHAZADO')) {
-        // Aprobaciones: a QA, pedir, y decidir.
+      if (destino === 'PENDIENTE_APROBACION' || destino === 'ENTREGADO' || antes === 'PENDIENTE_APROBACION') {
+        // Aprobaciones: a QA, pedir, y decidir. De PENDIENTE_APROBACION solo se sale decidiendo (Guía v1.4 §4):
+        // rechazar o descartar es una decisión «rechazada» y después el camino libre desde RETRABAJO.
         if (antes !== 'PENDIENTE_APROBACION') {
           for (var p of (camino(antes, 'EN_QA') || [])) { api.estado = (await mover(api.id, p, 'Oficina: ' + t.status)).estado; }
           if (api.estado === 'EN_QA') {
@@ -72,7 +73,7 @@
           var aprobada = destino === 'ENTREGADO';
           // Solo cuenta como decisión lo que hace un socio en la oficina, no el modo demostración (D-019).
           var ult = (t.log || []).filter(function (l) {
-            return (!api.pedida || l.t >= api.pedida) && /^(Aprobado|Rechazado) por un socio/.test(l.m || '');
+            return (!api.pedida || l.t >= api.pedida) && /^(Aprobado|Rechazado|Descartado) por un socio/.test(l.m || '');
           }).slice(-1)[0];
           if (!ult) {
             aviso(t.id, 'En la API, «' + (t.title || '').slice(0, 40) + '» sigue pendiente del OK de un socio.');

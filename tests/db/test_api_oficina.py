@@ -244,3 +244,26 @@ def test_dos_decisiones_a_la_vez_solo_cuenta_una(api, gente):
     decididas = [e for e in api.get(f"/encargos/{enc['id']}/auditoria", headers=h(autor)).json()
                  if e["accion"] == "aprobacion_decidida"]
     assert len(decididas) == 1
+
+
+def test_de_pendiente_de_aprobacion_solo_se_sale_decidiendo(api, gente):
+    """Guía v1.4 §4: nadie saca el encargo con un cambio libre; la aprobación no queda huérfana."""
+    autor, aprobador = gente["autor"], gente["aprobador"]
+    enc = _nuevo(api, autor)
+    _hasta_qa(api, autor, enc["id"])
+    ap = api.post(f"/encargos/{enc['id']}/aprobaciones", json={}, headers=h(autor)).json()
+    n = len(api.get(f"/encargos/{enc['id']}/auditoria", headers=h(autor)).json())
+    for quien in (autor, aprobador):
+        for a in ("RETRABAJO", "RECHAZADO"):
+            r = api.post(f"/encargos/{enc['id']}/estado", json={"a": a, "motivo": "salir sin decidir"},
+                         headers=h(quien))
+            assert r.status_code == 409, (a, r.text)
+    e = api.get(f"/encargos/{enc['id']}", headers=h(autor)).json()
+    assert e["estado"] == "PENDIENTE_APROBACION" and e["version"] == 1
+    assert len(api.get(f"/encargos/{enc['id']}/auditoria", headers=h(autor)).json()) == n
+    aps = api.get(f"/encargos/{enc['id']}/aprobaciones", headers=h(autor)).json()
+    assert [a["decision"] for a in aps] == ["pendiente"]
+    r = api.post(f"/aprobaciones/{ap['id']}/decision", json={"decision": "rechazada", "motivo": "Falta la fuente"},
+                 headers=h(aprobador))
+    assert r.status_code == 200
+

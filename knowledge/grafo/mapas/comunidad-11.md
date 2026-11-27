@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 11
-miembros: 12
-cohesion: 0.5
+miembros: 11
+cohesion: 0.55
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 11 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Conversaciones con IA y evaluación
 
-12 nodos agrupados por el algoritmo de Louvain. Cohesión 0.5.
+11 nodos agrupados por el algoritmo de Louvain. Cohesión 0.55.
 
 ## Documentos
 
@@ -25,5 +25,4 @@ tags:
 ## Decisiones
 
 - [[knowledge/grafo/decisiones/D-013|D-013 · Conocimiento y catálogo de procesos generados desde datos]]
-- [[knowledge/grafo/decisiones/D-012|D-012 · Las propuestas de cambios de Claude se aceptan solas]]
 - [[knowledge/grafo/decisiones/D-017|D-017 · La oficina se vuelca cada noche a GitHub y las automatizaciones van por GitHub Actions]]

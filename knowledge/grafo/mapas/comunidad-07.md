@@ -1,46 +1,53 @@
 ---
 tipo: "mapa"
 comunidad: 7
-miembros: 40
-cohesion: 0.14
+miembros: 46
+cohesion: 0.16
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 7 · knowledge/comercial · Índice del conocimiento de Varios y Arquitecto de procesos
+# Comunidad 7 · processes/catalog · Índice del conocimiento de Varios y Arquitecto de procesos
 
-40 nodos agrupados por el algoritmo de Louvain. Cohesión 0.14.
+46 nodos agrupados por el algoritmo de Louvain. Cohesión 0.16.
 
 ## Documentos
 
 - [[knowledge/INDEX|Índice del conocimiento de Varios]]
 - [[knowledge/procesos/arquitecto-procesos|Arquitecto de procesos]]
+- [[processes/catalog/P33-diseno-y-validacion-to-be|P33 · Diseño y validación TO-BE]]
 - [[knowledge/comercial/director-comercial|Director comercial]]
+- [[processes/catalog/P32-descubrimiento-de-procesos|P32 · Descubrimiento de procesos]]
 - [[knowledge/comercial/gestion-clientes|Especialista en éxito de cliente]]
+- [[processes/catalog/P38-gestion-de-despliegue-por-cliente|P38 · Gestión de despliegue por cliente]]
+- [[processes/catalog/P37-medicion-de-rendimiento-y-valor|P37 · Medición de rendimiento y valor]]
 - [[knowledge/procesos/implantacion-clientes|Responsable de implantación de clientes]]
 - [[processes/catalog/P31-calificacion-de-oportunidad|P31 · Calificación de oportunidad]]
 - [[knowledge/procesos/metricas|Especialista en métricas]]
+- [[processes/catalog/P34-gestion-de-definiciones-de-proceso|P34 · Gestión de definiciones de proceso]]
 - [[knowledge/comercial/propuestas-licitaciones|Especialista en propuestas y licitaciones]]
+- [[processes/catalog/P35-gestion-de-instancias-y-excepciones|P35 · Gestión de instancias y excepciones]]
 - [[knowledge/agentes/exito|Éxito de cliente]]
 - [[knowledge/plantillas/README|Plantillas]]
 - [[knowledge/comercial/marketing-contenido|Especialista en marketing y contenido]]
 - [[knowledge/comercial/prospeccion|Especialista en prospección]]
 - [[docs/00-negocio|Negocio]]
+- [[processes/templates/proceso-cliente|<sector> · <proceso>]]
 - [[knowledge/comercial/README|Comercial y clientes]]
 - [[claude/habilidades/cualificacion-oportunidad|Cualificación de oportunidad]]
 - [[claude/habilidades/revision-valor|Revisión de valor con el cliente]]
 - [[knowledge/metodologias-transversales/guardar|Protocolo: guardar el conocimiento]]
 - [[claude/habilidades/plan-exito-cliente|Plan de éxito del cliente]]
-- [[knowledge/plantillas/ficha-proveedor|Proveedor: <nombre>]]
 - [[precedents/plantilla-precedente|<título>]]
-- [[claude/habilidades/salud-cuenta|Salud de la cuenta]]
 - [[knowledge/plantillas/ficha-oportunidad|Oportunidad: <empresa> (ejemplo inventado hasta que exista una real)]]
 - [[knowledge/plantillas/entrada-decision|Entrada-decision]]
+- [[knowledge/plantillas/ficha-proveedor|Proveedor: <nombre>]]
 - [[knowledge/plantillas/ficha-conocimiento|Título]]
 - [[knowledge/plantillas/ficha-investigacion|Investigación: <pregunta>]]
 
 ## Procesos
 
+- [[processes/catalog/P32-descubrimiento-de-procesos|P32 · Descubrimiento de procesos]]
 - [[processes/catalog/P38-gestion-de-despliegue-por-cliente|P38 · Gestión de despliegue por cliente]]
 - [[processes/catalog/P31-calificacion-de-oportunidad|P31 · Calificación de oportunidad]]
 
@@ -57,7 +64,6 @@ tags:
 
 - [[claude/habilidades/plan-exito-cliente|Plan de éxito del cliente]]
 - [[claude/habilidades/revision-valor|Revisión de valor con el cliente]]
-- [[claude/habilidades/salud-cuenta|Salud de la cuenta]]
 
 ## Fuentes
 

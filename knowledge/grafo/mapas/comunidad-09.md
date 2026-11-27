@@ -1,58 +1,46 @@
 ---
 tipo: "mapa"
 comunidad: 9
-miembros: 34
-cohesion: 0.19
+miembros: 31
+cohesion: 0.37
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 9 · knowledge/sectores · Experto en sanidad privada y P32 · Descubrimiento de procesos
+# Comunidad 9 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Flujo ceo
 
-34 nodos agrupados por el algoritmo de Louvain. Cohesión 0.19.
+31 nodos agrupados por el algoritmo de Louvain. Cohesión 0.37.
 
 ## Documentos
 
-- [[knowledge/sectores/sector-sanidad|Experto en sanidad privada]]
-- [[knowledge/sectores/sector-financiero|Experto en servicios financieros no bancarios]]
-- [[knowledge/sectores/sector-despachos|Experto en asesorías, gestorías y despachos]]
-- [[knowledge/sectores/sector-logistica|Experto en logística y transporte]]
-- [[knowledge/sectores/sector-industria|Experto en industria manufacturera]]
-- [[knowledge/sectores/priorizacion|Priorización de sectores]]
-- [[knowledge/estudios/README|Estudios]]
-- [[knowledge/sectores/README|Sectores]]
-- [[integrations/README|Integraciones]]
-- [[docs/04-motor-de-conocimiento|Motor de conocimiento]]
-- [[integrations/contracts/README|Contratos de datos]]
-- [[knowledge/estudios/2026-11-26-prospectos-pymes-alvaro/README|Estudio de prospectos: automatización para pymes (Álvaro, noviembre de 2026)]]
-- [[integrations/tests/README|Pruebas de integración]]
-- [[integrations/connectors/README|Conectores]]
-- [[knowledge/README|Conocimiento]]
-- [[knowledge/procesos/sectores|Especialistas sectoriales]]
-
-## Procesos
-
-- [[processes/catalog/P32-descubrimiento-de-procesos|P32 · Descubrimiento de procesos]]
-- [[processes/catalog/P33-diseno-y-validacion-to-be|P33 · Diseño y validación TO-BE]]
-
-## Especialistas
-
-- [[knowledge/sectores/sector-despachos|Experto en asesorías, gestorías y despachos]]
-- [[knowledge/sectores/sector-sanidad|Experto en sanidad privada]]
-- [[knowledge/sectores/sector-financiero|Experto en servicios financieros no bancarios]]
-- [[knowledge/sectores/sector-industria|Experto en industria manufacturera]]
-- [[knowledge/sectores/sector-logistica|Experto en logística y transporte]]
-
-## Fuentes
-
-- [[knowledge/grafo/fuentes/INE-TIC-2026|INE-TIC-2026 · Encuesta sobre el uso de TIC y del comercio electrónico en las empresas, año 2025 y primer trimestre de 2026]]
-- [[knowledge/grafo/fuentes/NIS2-DIRECTIVA|NIS2-DIRECTIVA · Directiva (UE) 2022/2555 (NIS2)]]
-- [[knowledge/grafo/fuentes/INT-MARCO|INT-MARCO · Marco integral legal, ciberseguridad e IA (España/UE) 16/11/2026]]
-- [[knowledge/grafo/fuentes/CNMV-DORA-AUTOEVAL|CNMV-DORA-AUTOEVAL · Informe sobre la autoevaluación de la preparación para DORA]]
-- [[knowledge/grafo/fuentes/HOLDED-ASESORIAS-2026|HOLDED-ASESORIAS-2026 · Impacto normativo 2026-2027 en asesorías y despachos]]
-- [[knowledge/grafo/fuentes/IDIS-2026|IDIS-2026 · Observatorio del sector sanitario privado 2026]]
-- [[knowledge/grafo/fuentes/UNO-LOGISTICA|UNO-LOGISTICA · Notas de prensa de UNO, organización empresarial de logística y transporte]]
-- [[knowledge/grafo/fuentes/MAQUINARIA-2023-1230|MAQUINARIA-2023-1230 · Reglamento (UE) 2023/1230, relativo a las máquinas]]
-- [[knowledge/grafo/fuentes/MDR-2017-745|MDR-2017-745 · Reglamento (UE) 2017/745, productos sanitarios (en el anexo I del Reglamento de IA)]]
-- [[knowledge/grafo/fuentes/SANIDAD-IA-OMNIBUS|SANIDAD-IA-OMNIBUS · IA en el SNS: ómnibus digital sobre IA y simplificación MDR/IVDR]]
-- [[knowledge/grafo/fuentes/EEDS-2025-327|EEDS-2025-327 · Reglamento (UE) 2025/327, Espacio Europeo de Datos de Salud]]
+- [[docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado|Guia de Arranque Proyecto v1.4 Diseno Cerrado]]
+- [[docs/fuentes/02_02_flujo_ceo|Flujo ceo]]
+- [[docs/fuentes/04_04_ejecucion_agentes|Ejecucion agentes]]
+- [[docs/fuentes/03_03_motor_conocimiento_obsidian|Motor conocimiento obsidian]]
+- [[docs/atlas/12-ciclo-proyecto|12 · Ciclo de vida de un proyecto con cliente]]
+- [[docs/fuentes/06_06_calidad_gobierno|Calidad gobierno]]
+- [[docs/fuentes/09_09_comunicaciones_estados|Comunicaciones estados]]
+- [[docs/atlas/08-seguridad|08 · Seguridad, identidad y aislamiento de clientes]]
+- [[docs/fuentes/05_05_seguridad_clientes|Seguridad clientes]]
+- [[docs/fuentes/08_08_ciclo_vida_proyecto|Ciclo vida proyecto]]
+- [[docs/16-correcciones|Registro de correcciones a los documentos recibidos el 17/11/2026]]
+- [[docs/atlas/07-conocimiento|07 · Motor de conocimiento con Obsidian]]
+- [[docs/atlas/README|Atlas de diagramas]]
+- [[docs/atlas/16-estados|16 · Estados de un encargo]]
+- [[docs/atlas/02-flujo-ceo|02 · Flujo completo del CEO digital]]
+- [[docs/fuentes/07_07_infraestructura_portabilidad|Infraestructura portabilidad]]
+- [[docs/atlas/04-ejecucion|04 · Ejecución: motor de procesos, agentes y herramientas]]
+- [[docs/atlas/05-gateway|05 · Puerta de herramientas]]
+- [[docs/atlas/00-arquitectura|00 · Arquitectura del cerebro digital]]
+- [[docs/atlas/09-calidad|09 · Calidad, evaluación y aprobación humana]]
+- [[docs/atlas/03-decisiones-ceo|03 · Las cinco decisiones del CEO]]
+- [[docs/atlas/14-incidentes|14 · Operación y respuesta a incidentes]]
+- [[docs/atlas/15-componentes|15 · Conversación entre componentes]]
+- [[docs/atlas/01-organizacion|01 · Organización: modelo matricial]]
+- [[docs/atlas/11-infraestructura|11 · Infraestructura, desarrollo y portabilidad]]
+- [[docs/atlas/10-cambios-modelos|10 · Cambios y elección de modelos de IA]]
+- [[docs/14-reglas-del-ceo|Reglas del CEO digital]]
+- [[docs/atlas/13-ciclo-dato|13 · Ciclo de vida de un dato]]
+- [[docs/atlas/06-fallos|06 · Fallos, reintentos y recuperación]]
+- [[docs/03-ceo-digital-y-orquestacion|CEO digital y orquestación]]
+- [[precedents/lessons-learned/2026-11-correcciones-documentales|Lección: los documentos base también tienen errores]]

@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 4
-miembros: 64
+miembros: 63
 cohesion: 0.18
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 4 · processes/runbooks · Auditoría de agentes y habilidades frente a los procesos (M-040) y Dependencias entre procesos
 
-64 nodos agrupados por el algoritmo de Louvain. Cohesión 0.18.
+63 nodos agrupados por el algoritmo de Louvain. Cohesión 0.18.
 
 ## Documentos
 
@@ -17,7 +17,6 @@ tags:
 - [[processes/diagrams/dependencias|Dependencias entre procesos]]
 - [[docs/29-autonomia|Mapa de autonomía por proceso, A0–A4 (M-045)]]
 - [[docs/13-procesos-y-estados|Procesos y estados]]
-- [[docs/24-base-de-datos|Base de datos (D-023, propuesta)]]
 - [[knowledge/ingenieria/README|Ingeniería y tecnología]]
 - [[knowledge/seguridad-legal/README|Seguridad, privacidad, legal y cumplimiento]]
 - [[knowledge/direccion/README|Dirección y gobierno]]
@@ -28,7 +27,6 @@ tags:
 - [[processes/runbooks/README|Runbooks]]
 - [[knowledge/administracion-finanzas/README|Administración y finanzas]]
 - [[processes/definitions/README|Definiciones ejecutables]]
-- [[processes/runbooks/workflow-fallido|Workflow bloqueado o fallido]]
 - [[processes/runbooks/caida-proveedor-ia|Caída del proveedor de IA]]
 - [[processes/runbooks/restauracion|Restauración de copias]]
 - [[processes/runbooks/coste-anomalo|Coste anómalo]]
@@ -42,9 +40,9 @@ tags:
 - [[processes/catalog/P29-gestion-de-costes-y-capacidad|P29 · Gestión de costes y capacidad]]
 - [[processes/catalog/P37-medicion-de-rendimiento-y-valor|P37 · Medición de rendimiento y valor]]
 - [[processes/catalog/P01-alta-y-recepcion-de-peticion|P01 · Alta y recepción de petición]]
+- [[processes/catalog/P15-observabilidad-e-incidencias|P15 · Observabilidad e incidencias]]
 - [[processes/catalog/P21-ejecucion-segura-de-herramientas|P21 · Ejecución segura de herramientas]]
 - [[processes/catalog/P30-gestion-de-identidades-y-secretos|P30 · Gestión de identidades y secretos]]
-- [[processes/catalog/P15-observabilidad-e-incidencias|P15 · Observabilidad e incidencias]]
 - [[processes/catalog/P27-gestion-de-proveedores-y-dependencias|P27 · Gestión de proveedores y dependencias]]
 - [[processes/catalog/P11-entrega-y-cierre|P11 · Entrega y cierre]]
 - [[processes/catalog/P08-ejecucion-de-tareas|P08 · Ejecución de tareas]]
@@ -55,14 +53,14 @@ tags:
 - [[processes/catalog/P12-gestion-de-cambios|P12 · Gestión de cambios]]
 - [[processes/catalog/P07-ingesta-documental|P07 · Ingesta documental]]
 - [[processes/catalog/P14-gestion-de-permisos-y-aislamiento|P14 · Gestión de permisos y aislamiento]]
-- [[processes/catalog/P25-gestion-de-cambios-y-versiones|P25 · Gestión de cambios y versiones]]
 - [[processes/catalog/P19-politica-de-uso-y-limites|P19 · Política de uso y límites]]
+- [[processes/catalog/P25-gestion-de-cambios-y-versiones|P25 · Gestión de cambios y versiones]]
 - [[processes/catalog/P34-gestion-de-definiciones-de-proceso|P34 · Gestión de definiciones de proceso]]
 - [[processes/catalog/P18-evaluacion-y-mejora|P18 · Evaluación y mejora]]
+- [[processes/catalog/P35-gestion-de-instancias-y-excepciones|P35 · Gestión de instancias y excepciones]]
 - [[processes/catalog/P05-diseno-del-plan|P05 · Diseño del plan]]
 - [[processes/catalog/P09-control-de-calidad|P09 · Control de calidad]]
 - [[processes/catalog/P16-gobierno-de-modelos-e-instrucciones|P16 · Gobierno de modelos e instrucciones]]
-- [[processes/catalog/P35-gestion-de-instancias-y-excepciones|P35 · Gestión de instancias y excepciones]]
 - [[processes/catalog/P17-seguridad-y-continuidad|P17 · Seguridad y continuidad]]
 - [[processes/catalog/P24-gestion-del-ciclo-de-vida-del-dato|P24 · Gestión del ciclo de vida del dato]]
 - [[processes/catalog/P06-asignacion-y-coordinacion|P06 · Asignación y coordinación]]
@@ -79,6 +77,7 @@ tags:
 - [[knowledge/seguridad-legal/calidad-riesgos|Especialista en calidad y riesgos]]
 - [[knowledge/ingenieria/datos-ia|Arquitecto de datos e IA]]
 - [[knowledge/direccion/decisiones-seguimiento|Responsable de decisiones y seguimiento]]
+- [[knowledge/ingenieria/evaluacion-ia|Especialista en evaluación de IA]]
 - [[knowledge/direccion/bibliotecario|Bibliotecario / responsable de conocimiento]]
 - [[knowledge/procesos/metricas|Especialista en métricas]]
 - [[knowledge/ingenieria/arquitecto-tecnico|Arquitecto técnico]]

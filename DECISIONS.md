@@ -224,6 +224,14 @@ No construir primero un CEO omnisciente; descubrir, diseñar, integrar y medir u
 - Riesgo: un secreto compartido HS256 filtrado permite crear tokens. Mitigación: secreto solo en el entorno (`VARIOS_JWT_SECRETO`, mínimo 32 caracteres), tokens de 60 minutos, ningún dato real hasta L2 y sustitución por el proveedor de identidad antes de L2 (decisión pendiente de Juan).
 - Estado: propuesta.
 
+## D-029 — El trabajo nocturno de Claude sube directo a `main`, sin propuesta de cambios
+- Fecha: 2026-11-27 (registra lo que Juan pidió el 26/11/2026; anotado por la tanda de las 04:00)
+- Decisión: de noche Claude no abre propuestas de cambios ni crea ramas: cada tarea va en un commit a `main` con `bash tools/comprobar.sh` en verde, y se explica en el Registro de `docs/21-trabajo-nocturno.md` y en el informe de la mañana (`docs/21`, «Orden en GitHub»). Siguen fuera de este camino las mismas excepciones que en D-012: marcar una decisión como aprobada y cambiar `CLAUDE.md`. Falta decidir qué pasa con los documentos de `governance/`, que D-012 también deja esperando a un socio (pregunta 9 de `docs/21`).
+- Motivo: Juan lo pidió el 26/11/2026 («los socios lo pidieron así», `docs/21`) para que las tandas no dejen ramas sueltas ni propuestas sin fusionar; con el borrado automático de ramas activado, las propuestas de una noche de seis tandas eran ruido. No estaba en DECISIONS.md, aunque cambia cómo se aplica D-012.
+- Alternativas descartadas: una propuesta por tanda aceptada sola (D-012 tal cual), que dejaba ramas y no añadía revisión humana.
+- Riesgo: un error llega a `main` sin que nadie lo lea. Mitigación: comprobaciones de CI en cada subida, la siguiente tanda arregla un CI en rojo antes de nada, repaso crítico al final de cada noche y el Registro con lo que cambió.
+- Estado: propuesta.
+
 ## Decisiones pendientes (con fecha límite)
 | Decisión | Quién | Antes de |
 |---|---|---|

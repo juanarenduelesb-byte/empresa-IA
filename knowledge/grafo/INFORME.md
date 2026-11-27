@@ -5,8 +5,8 @@ Cómo está conectado el cerebro de Varios: qué sostiene todo, qué temas forma
 
 ## Resumen
 
-- 5119 nodos: seccion 4394, documento 384, fuente 122, habilidad 65, proceso 38, especialista 34, agente 34, decision 29, puerta 12, departamento 7.
-- 7284 relaciones: 63 % EXTRACTADAS (escritas en la fuente), 36 % INFERIDAS (temas compartidos, con puntuación) y 39 AMBIGUAS (para revisar).
+- 5121 nodos: seccion 4396, documento 384, fuente 122, habilidad 65, proceso 38, especialista 34, agente 34, decision 29, puerta 12, departamento 7.
+- 7296 relaciones: 63 % EXTRACTADAS (escritas en la fuente), 36 % INFERIDAS (temas compartidos, con puntuación) y 39 AMBIGUAS (para revisar).
 - 12 comunidades de temas.
 
 ## Nodos centrales
@@ -18,7 +18,7 @@ Lo que más cosas conecta. Si cambia, cambia mucho.
 3. **Índice del conocimiento de Varios** (`knowledge/INDEX.md`) · 120 conexiones
 4. **Guia de Arranque Proyecto v1.4 Diseno Cerrado** (`docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado.md`) · 85 conexiones
 5. **Catálogo de procesos P01–P38** (`processes/catalog/README.md`) · 83 conexiones
-6. **L2 (puerta técnica)** · 70 conexiones
+6. **L2 (puerta técnica)** · 71 conexiones
 7. **Habilidades de los agentes** (`claude/habilidades/README.md`) · 69 conexiones
 8. **Mapa de autonomía por proceso, A0–A4 (M-045)** (`docs/29-autonomia.md`) · 66 conexiones
 9. **Varios · empresa-ia** (`CLAUDE.md`) · 65 conexiones
@@ -36,10 +36,10 @@ Nodos por los que pasa el camino entre comunidades distintas (intermediación).
 - **L2 (puerta técnica)** · intermediación 0.026 · une la comunidad 10 con 0, 2, 3, 4, 5, 6
 - **Índice del conocimiento de Varios** · intermediación 0.021 · une la comunidad 7 con 0, 2, 3, 4, 5, 6
 - **Estudios** · intermediación 0.018 · une la comunidad 11 con 0, 2, 3, 4, 5, 6
-- **Guia de Arranque Proyecto v1.4 Diseno Cerrado** · intermediación 0.017 · une la comunidad 9 con 0, 2, 3, 4, 6, 8
-- **D-011 · Construir primero, clientes desde el 15/02/2027** · intermediación 0.01 · une la comunidad 5 con 0, 2, 3, 4, 6, 7
+- **Guia de Arranque Proyecto v1.4 Diseno Cerrado** · intermediación 0.017 · une la comunidad 9 con 0, 2, 3, 4, 6, 7
+- **D-011 · Construir primero, clientes desde el 15/02/2027** · intermediación 0.011 · une la comunidad 5 con 0, 2, 3, 4, 6, 7
 - **CEO digital** · intermediación 0.01 · une la comunidad 6 con 0, 2, 3, 4, 7, 8
-- **Auditoría de agentes y habilidades frente a los procesos (M-040)** · intermediación 0.009 · une la comunidad 4 con 0, 2, 3, 5, 6, 7
+- **Experto en asesorías y despachos** · intermediación 0.009 · une la comunidad 0 con 1, 2, 6, 7, 10
 
 ## Conexiones sorprendentes
 
@@ -68,7 +68,7 @@ Cohesión 0.05 · 108 nodos: Legal y privacidad; Arquitecto de procesos; Segurid
 
 ### 2 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros
 
-Cohesión 0.06 · 108 nodos: Registro de fuentes; Coordinación sectorial y seguros; Experto en sanidad privada; Responsable de cumplimiento normativo; Experto en servicios financieros no bancarios; Especialista legal y privacidad; Experto en logística y transporte; P33 · Diseño y validación TO-BE (y 100 más)
+Cohesión 0.06 · 106 nodos: Registro de fuentes; Coordinación sectorial y seguros; Experto en sanidad privada; Responsable de cumplimiento normativo; Experto en servicios financieros no bancarios; Especialista legal y privacidad; Experto en logística y transporte; P33 · Diseño y validación TO-BE (y 98 más)
 
 ### 3 · docs · Registro de decisiones y Trabajo nocturno de Claude
 
@@ -76,11 +76,11 @@ Cohesión 0.09 · 93 nodos: Registro de decisiones; Trabajo nocturno de Claude; 
 
 ### 4 · processes/runbooks · Auditoría de agentes y habilidades frente a los procesos (M-040) y Dependencias entre procesos
 
-Cohesión 0.18 · 63 nodos: Auditoría de agentes y habilidades frente a los procesos (M-040); Dependencias entre procesos; Mapa de autonomía por proceso, A0–A4 (M-045); Procesos y estados; P02 · Clasificación y triaje; P10 · Aprobación humana; P29 · Gestión de costes y capacidad; P37 · Medición de rendimiento y valor (y 55 más)
+Cohesión 0.18 · 64 nodos: Auditoría de agentes y habilidades frente a los procesos (M-040); Dependencias entre procesos; Mapa de autonomía por proceso, A0–A4 (M-045); Procesos y estados; P02 · Clasificación y triaje; P10 · Aprobación humana; P29 · Gestión de costes y capacidad; P37 · Medición de rendimiento y valor (y 56 más)
 
 ### 5 · precedents/oficina · Propuesta de proceso de referencia: siniestros en corredurías y Conversaciones con Coordinación sectorial · Seguros
 
-Cohesión 0.15 · 59 nodos: Propuesta de proceso de referencia: siniestros en corredurías; Conversaciones con Coordinación sectorial · Seguros; Guion de validación semanal: apertura de siniestros; Conversaciones con Arquitecto de procesos; Memoria de la oficina; D-011 · Construir primero, clientes desde el 15/02/2027; CCS · Consorcio de Compensación de Seguros: riesgos extraordinarios; Línea base y fichas de métricas · Atalaya (y 51 más)
+Cohesión 0.15 · 59 nodos: Propuesta de proceso de referencia: siniestros en corredurías; Conversaciones con Coordinación sectorial · Seguros; Guion de validación semanal: apertura de siniestros; Conversaciones con Arquitecto de procesos; D-011 · Construir primero, clientes desde el 15/02/2027; Memoria de la oficina; CCS · Consorcio de Compensación de Seguros: riesgos extraordinarios; Línea base y fichas de métricas · Atalaya (y 51 más)
 
 ### 6 · knowledge/ingenieria · CEO digital y Varios · empresa-ia
 
@@ -88,7 +88,7 @@ Cohesión 0.12 · 47 nodos: CEO digital; Varios · empresa-ia; Especialista en c
 
 ### 7 · processes/catalog · Índice del conocimiento de Varios y Arquitecto de procesos
 
-Cohesión 0.16 · 46 nodos: Índice del conocimiento de Varios; Arquitecto de procesos; P32 · Descubrimiento de procesos; P38 · Gestión de despliegue por cliente; P31 · Calificación de oportunidad; P33 · Diseño y validación TO-BE; Director comercial; P32 · Descubrimiento de procesos (y 38 más)
+Cohesión 0.16 · 47 nodos: Índice del conocimiento de Varios; Arquitecto de procesos; P32 · Descubrimiento de procesos; P38 · Gestión de despliegue por cliente; P31 · Calificación de oportunidad; P33 · Diseño y validación TO-BE; Director comercial; P32 · Descubrimiento de procesos (y 39 más)
 
 ### 8 · processes/catalog · P22 · Gestión de errores y reintentos y Catálogo de procesos P01–P38
 

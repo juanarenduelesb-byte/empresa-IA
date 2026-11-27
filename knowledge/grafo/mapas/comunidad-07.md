@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 7
-miembros: 46
+miembros: 47
 cohesion: 0.16
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 7 · processes/catalog · Índice del conocimiento de Varios y Arquitecto de procesos
 
-46 nodos agrupados por el algoritmo de Louvain. Cohesión 0.16.
+47 nodos agrupados por el algoritmo de Louvain. Cohesión 0.16.
 
 ## Documentos
 
@@ -38,10 +38,10 @@ tags:
 - [[claude/habilidades/revision-valor|Revisión de valor con el cliente]]
 - [[knowledge/metodologias-transversales/guardar|Protocolo: guardar el conocimiento]]
 - [[claude/habilidades/plan-exito-cliente|Plan de éxito del cliente]]
+- [[knowledge/plantillas/ficha-proveedor|Proveedor: <nombre>]]
 - [[precedents/plantilla-precedente|<título>]]
 - [[knowledge/plantillas/ficha-oportunidad|Oportunidad: <empresa> (ejemplo inventado hasta que exista una real)]]
 - [[knowledge/plantillas/entrada-decision|Entrada-decision]]
-- [[knowledge/plantillas/ficha-proveedor|Proveedor: <nombre>]]
 - [[knowledge/plantillas/ficha-conocimiento|Título]]
 - [[knowledge/plantillas/ficha-investigacion|Investigación: <pregunta>]]
 

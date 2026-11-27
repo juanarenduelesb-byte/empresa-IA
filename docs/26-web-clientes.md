@@ -60,6 +60,8 @@ Consultadas el 26/11/2026. Se eligieron consultoras de IA aplicada con una prueb
 
 Primera propuesta de identidad propia para Varios, pedida por Juan: estilo «expediente» (papel gris claro, tinta casi negra, un solo azul de sello y ámbar solo para las excepciones), con Bricolage Grotesque en titulares, IBM Plex Sans en texto e IBM Plex Mono en etiquetas. Lienzo en el artefacto «Varios · Prototipo de la web para clientes» (https://claude.ai/artifact/Daf7ETWnBBM3ejSdiepTxf); copia de la página en [`web/prototipo-visual/inicio.dc.html`](../web/prototipo-visual/inicio.dc.html). Usa los textos de la maqueta de arriba. El área de clientes queda para la semana 10.
 
+**Segunda versión, la buena (27/11):** Juan la pidió más moderna y que diga qué nos hace distintos. Web completa en HTML, publicada como artefacto «Varios · IA que firma contigo» (https://claude.ai/artifact/CtextYH3By7dhbLAycv6Pi), copia en [`web/prototipo-visual/index.html`](../web/prototipo-visual/index.html). Fondo azul noche, escala rojo → amarillo → turquesa → azul para el recorrido de un aviso, Red Hat Display y Red Hat Text. Abre con la garantía 50/50 como titular y un tablero animado de avisos que solo se dan por firmados cuando pasa una persona, y sigue con la comparativa «lo habitual / con nosotros», la garantía, las fases a escala de su duración, lo que la IA no decide, seguros, el caso Atalaya (inventado), seguridad, nosotros y contacto.
+
 ## 5. Qué falta para publicar
 Qué se aprovecha de la web interna `site/` y qué no: [docs/30](30-inventario-web.md).
 

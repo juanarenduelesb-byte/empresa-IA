@@ -14,4 +14,6 @@ Expertos en los sectores donde Varios quiere trabajar: vocabulario, normas, proc
 
 **Por qué estos sectores:** [priorizacion.md](priorizacion.md) (propuesta, con fuentes y criterios).
 
+**Primer paquete sectorial:** [seguros](seguros/README.md) (normas con artículo, glosario, excepciones y `dominio.json`, que leen las reglas del proceso de referencia; D-024).
+
 > Estado draft. Son hipótesis hasta validarlas con profesionales de cada sector. No se abre un segundo paquete sectorial hasta validar el primero (Atlas §11).

@@ -132,7 +132,8 @@ def dep_readme(d):
     if d[0] == "procesos":
         s += "\nEl conocimiento de cada sector está en el departamento de [Sectores](../sectores/README.md).\n"
     if d[0] == "sectores":
-        s += "\n**Por qué estos sectores:** [priorizacion.md](priorizacion.md) (propuesta, con fuentes y criterios).\n\n> Estado draft. Son hipótesis hasta validarlas con profesionales de cada sector. No se abre un segundo paquete sectorial hasta validar el primero (Atlas §11).\n"
+        s += "\n**Por qué estos sectores:** [priorizacion.md](priorizacion.md) (propuesta, con fuentes y criterios).\n"
+        s += "\n**Primer paquete sectorial:** [seguros](seguros/README.md) (normas con artículo, glosario, excepciones y `dominio.json`, que leen las reglas del proceso de referencia; D-024).\n\n> Estado draft. Son hipótesis hasta validarlas con profesionales de cada sector. No se abre un segundo paquete sectorial hasta validar el primero (Atlas §11).\n"
     if d[0] == "seguridad-legal":
         s += "\n> Estado draft. Nada de esto es asesoría jurídica: antes de usarlo con un cliente, revisión de un profesional competente.\n"
     OUT[fn] = s
@@ -147,7 +148,7 @@ TAREAS = [
     ("integracion", "Habilitar una integración o conector", ["integraciones"], ["ciberseguridad", "legal-privacidad"], ["P21", "P30", "P36"], ["integrations/catalog/README.md", "integrations/contracts/"], "Ingeniería consulta a Seguridad antes de habilitar una integración."),
     ("aprobar-plan", "Aprobar un plan o tomar una decisión", ["ceo-digital", "decisiones-seguimiento"], ["calidad-riesgos"], ["P05", "P10"], ["DECISIONS.md", "precedents/"], "El CEO consulta precedentes y decisiones antes de aprobar un plan."),
     ("regulatorio", "Investigar una obligación legal o regulatoria", ["legal-privacidad", "cumplimiento"], ["especialista-sectorial", "bibliotecario"], ["P19", "P24"], ["docs/fuentes/Marco_Integral_Legal_Ciberseguridad_IA_Espana_UE_2026-11-16.md", "knowledge/fuentes/registro.md"], "Fuente primaria y vigente; nunca afirmar cumplimiento."),
-    ("sector-seguros", "Trabajo en el sector seguros", ["especialista-sectorial"], ["arquitecto-procesos", "cumplimiento"], ["P02", "P32", "P33"], ["knowledge/sectores/README.md", "processes/referencia-seguros-apertura-siniestros/README.md"], "El especialista de seguros consulta también los procesos transversales."),
+    ("sector-seguros", "Trabajo en el sector seguros", ["especialista-sectorial"], ["arquitecto-procesos", "cumplimiento"], ["P02", "P32", "P33"], ["knowledge/sectores/seguros/README.md", "knowledge/sectores/README.md", "processes/referencia-seguros-apertura-siniestros/README.md"], "El especialista de seguros consulta también los procesos transversales."),
     ("sector", "Trabajo en otro sector (sanidad, despachos, finanzas, industria, logística)", ["especialista-sectorial"], ["sector-sanidad", "sector-despachos", "sector-financiero", "sector-industria", "sector-logistica"], ["P02", "P32", "P33"], ["knowledge/sectores/README.md", "knowledge/sectores/priorizacion.md"], "La coordinación sectorial elige al experto; el experto consulta a Legal si hay datos sensibles."),
     ("cambio-modelo", "Cambiar de modelo o de instrucciones", ["datos-ia", "evaluacion-ia"], ["calidad-riesgos"], ["P16", "P23", "P25"], ["docs/atlas/10-cambios-modelos.md", "processes/tests/README.md"], "Sin evaluación superada no hay cambio."),
     ("incidente", "Gestionar un incidente", ["ciberseguridad", "calidad-riesgos"], ["legal-privacidad"], ["P28", "P15", "P17"], ["processes/runbooks/", "precedents/incidents/"], "Preservar evidencias antes de corregir."),

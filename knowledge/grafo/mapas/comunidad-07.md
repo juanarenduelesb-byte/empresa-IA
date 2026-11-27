@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 7
-miembros: 45
-cohesion: 0.41
+miembros: 44
+cohesion: 0.42
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 7 · processes/catalog · P22 · Gestión de errores y reintentos y Catálogo de procesos P01–P38
 
-45 nodos agrupados por el algoritmo de Louvain. Cohesión 0.41.
+44 nodos agrupados por el algoritmo de Louvain. Cohesión 0.42.
 
 ## Documentos
 
@@ -54,7 +54,6 @@ tags:
 - [[processes/catalog/P03-gestion-de-aclaraciones|P03 · Gestión de aclaraciones]]
 - [[precedents/plantilla-incidente|Incidente: <título>]]
 - [[processes/runbooks/fuga-sospechada|Fuga de datos sospechada]]
-- [[processes/runbooks/workflow-fallido|Workflow bloqueado o fallido]]
 
 ## Procesos
 

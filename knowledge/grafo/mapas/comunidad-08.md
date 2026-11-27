@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 8
-miembros: 39
+miembros: 40
 cohesion: 0.14
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 8 · knowledge/comercial · Índice del conocimiento de Varios y Arquitecto de procesos
 
-39 nodos agrupados por el algoritmo de Louvain. Cohesión 0.14.
+40 nodos agrupados por el algoritmo de Louvain. Cohesión 0.14.
 
 ## Documentos
 
@@ -46,6 +46,7 @@ tags:
 
 ## Especialistas
 
+- [[knowledge/procesos/arquitecto-procesos|Arquitecto de procesos]]
 - [[knowledge/comercial/director-comercial|Director comercial]]
 - [[knowledge/procesos/implantacion-clientes|Responsable de implantación de clientes]]
 - [[knowledge/comercial/propuestas-licitaciones|Especialista en propuestas y licitaciones]]

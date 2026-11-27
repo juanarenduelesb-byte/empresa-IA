@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 3
-miembros: 95
+miembros: 94
 cohesion: 0.08
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 3 · docs · Registro de decisiones y Trabajo nocturno de Claude
 
-95 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
+94 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
 
 ## Documentos
 
@@ -21,7 +21,6 @@ tags:
 - [[docs/17-cerebro-y-procesos|17 · Cerebro, conocimiento y procesos: auditoría e informe]]
 - [[docs/informes/2026-11-26|Informe de la mañana · 26/11/2026]]
 - [[README|Varios — repositorio maestro]]
-- [[docs/24-base-de-datos|Base de datos (D-023, propuesta)]]
 - [[docs/10-plan-12-semanas|Plan de construcción · 18/11/2026 → 12/02/2027]]
 - [[docs/22-plan-hasta-febrero|Plan de trabajo diario · 26/11/2026 → 28/02/2027]]
 - [[governance/legal/borradores/05-matriz-aprobaciones|Matriz de aprobaciones · BORRADOR]]

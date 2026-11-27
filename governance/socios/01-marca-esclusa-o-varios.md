@@ -29,7 +29,7 @@ Corrijo lo que recomendé ayer: **no recomiendo Esclusa para la consultora**, sa
 ## Búsqueda de anterioridades (sin hacer)
 No se ha podido hacer esta noche: el Localizador de marcas de la OEPM pide usuario y contraseña ([OEPM-LOCALIZADOR](../../knowledge/fuentes/registro.md#oepm-localizador)) y el texto de la Ley 17/2001 de Marcas en el BOE pedía una aprobación que nadie podía dar de noche. Está en «Pendiente de tu aprobación» (docs/21). Qué hay que buscar:
 1. **Marcas españolas** en el Localizador de marcas de la OEPM, que busca «marcas y nombres comerciales con efectos en España».
-2. **Marcas de la UE e internacionales** en TMview o eSearch plus de la EUIPO. [Sin comprobar esta noche qué cubre cada una: confirmarlo en la propia página.]
+2. **Marcas de la UE y de otras oficinas** en TMview, que busca gratis «las marcas de todas las oficinas oficiales de marcas participantes», también las de la OEPM ([TMVIEW](../../knowledge/fuentes/registro.md#tmview), comprobado el 27/11). [Sin comprobar qué oficinas exactamente, si pide registro y qué añade eSearch plus de la EUIPO: confirmarlo en la propia página.]
 3. **Clases que propongo mirar** (a confirmar con el profesional): 35 (consultoría de gestión de empresas), 42 (servicios informáticos y desarrollo de software) y 41 (formación).
 4. **Sociedades:** el nombre en el Registro Mercantil Central, que hay que pedir igualmente para constituir la SL (`docs/27`).
 5. **Dominios** .es, .com y .eu, y el nombre en LinkedIn.

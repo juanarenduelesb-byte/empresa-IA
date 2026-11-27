@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 4
-miembros: 64
+miembros: 67
 cohesion: 0.18
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 4 · processes/runbooks · Auditoría de agentes y habilidades frente a los procesos (M-040) y Dependencias entre procesos
 
-64 nodos agrupados por el algoritmo de Louvain. Cohesión 0.18.
+67 nodos agrupados por el algoritmo de Louvain. Cohesión 0.18.
 
 ## Documentos
 
@@ -28,7 +28,6 @@ tags:
 - [[processes/runbooks/README|Runbooks]]
 - [[knowledge/administracion-finanzas/README|Administración y finanzas]]
 - [[processes/definitions/README|Definiciones ejecutables]]
-- [[processes/runbooks/workflow-fallido|Workflow bloqueado o fallido]]
 - [[processes/runbooks/caida-proveedor-ia|Caída del proveedor de IA]]
 - [[processes/runbooks/restauracion|Restauración de copias]]
 - [[processes/runbooks/coste-anomalo|Coste anómalo]]
@@ -37,7 +36,9 @@ tags:
 
 ## Procesos
 
+- [[processes/catalog/P32-descubrimiento-de-procesos|P32 · Descubrimiento de procesos]]
 - [[processes/catalog/P02-clasificacion-y-triaje|P02 · Clasificación y triaje]]
+- [[processes/catalog/P33-diseno-y-validacion-to-be|P33 · Diseño y validación TO-BE]]
 - [[processes/catalog/P10-aprobacion-humana|P10 · Aprobación humana]]
 - [[processes/catalog/P29-gestion-de-costes-y-capacidad|P29 · Gestión de costes y capacidad]]
 - [[processes/catalog/P37-medicion-de-rendimiento-y-valor|P37 · Medición de rendimiento y valor]]
@@ -78,7 +79,9 @@ tags:
 - [[knowledge/seguridad-legal/legal-privacidad|Especialista legal y privacidad]]
 - [[knowledge/seguridad-legal/calidad-riesgos|Especialista en calidad y riesgos]]
 - [[knowledge/ingenieria/datos-ia|Arquitecto de datos e IA]]
+- [[knowledge/procesos/arquitecto-procesos|Arquitecto de procesos]]
 - [[knowledge/direccion/decisiones-seguimiento|Responsable de decisiones y seguimiento]]
+- [[knowledge/ingenieria/evaluacion-ia|Especialista en evaluación de IA]]
 - [[knowledge/direccion/bibliotecario|Bibliotecario / responsable de conocimiento]]
 - [[knowledge/procesos/metricas|Especialista en métricas]]
 - [[knowledge/ingenieria/arquitecto-tecnico|Arquitecto técnico]]

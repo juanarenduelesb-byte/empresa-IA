@@ -36,7 +36,7 @@ AGENTES = {
     "pmo": m(["P05", "P12", "P38"], "Semanas del plan con su «hecho cuando» cumplido y con evidencia en el repositorio",
              "Absorbe el registro de decisiones (P12)."),
     "dec": f("pmo", "Comparte con Plan y seguimiento la misma ficha de conocimiento (decisiones-seguimiento) y su único proceso (P12) lo puede llevar el PMO. Con dos socios a 10–15 h semanales, dos agentes para el mismo cuaderno duplican la coordinación."),
-    "bib": m(["P04", "P07", "P11", "P13"], "Porcentaje de fichas de conocimiento con fuente externa (28 % el 26/11/2026) y respuestas con cita que existe"),
+    "bib": m(["P04", "P07", "P11", "P13"], "Porcentaje de fichas de conocimiento con fuente externa (29,1 % el 26/11/2026 con la medida corregida en K1; `carga_conocimiento.medir()`) y respuestas con cita que existe"),
     # --- Comercial
     "comj": m(["P31", "P32"], "Oportunidades con decisión de seguir o no (go/no-go) registrada y motivo",
               "Absorbe Validación y Contenido."),

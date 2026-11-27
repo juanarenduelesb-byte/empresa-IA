@@ -18,7 +18,7 @@ tags:
 
 - Origen: <https://oepm.es/es/sobre-OEPM/servicios-al-ciudadano/servicios-gratuitos/Servicios-web-de-la-OEPM/LOCALIZADOR-DE-MARCAS/>
 - Registro: [[knowledge/fuentes/registro|registro de fuentes]]
-- Nota: Permite «realizar búsquedas avanzadas de marcas y nombres comerciales con efectos en España»; está entre los servicios gratuitos de la OEPM y se entra con usuario y contraseña. La página no menciona marcas de la UE: para esas, TMview o eSearch plus de la EUIPO (sin comprobar).
+- Nota: Permite «realizar búsquedas avanzadas de marcas y nombres comerciales con efectos en España»; está entre los servicios gratuitos de la OEPM y se entra con usuario y contraseña. La página no menciona marcas de la UE: para esas, TMview (`TMVIEW`); eSearch plus de la EUIPO sin comprobar.
 
 ## Citada en
 

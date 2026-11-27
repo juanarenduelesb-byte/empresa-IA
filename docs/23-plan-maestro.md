@@ -41,8 +41,8 @@ Lo que me preocupa, de más a menos grave:
 
    «Varios» es el nombre provisional del repositorio con Álvaro (D-007). Dos marcas dividen el esfuerzo y confunden al cliente. Mi recomendación es una sola. **Corregido el 26/11 por la noche (S1):** no recomiendo Esclusa salvo que Juan la traspase a la sociedad, porque Juan la ha convertido en su web personal, que no debe presentarse como consultora, y está a su nombre. Comparativa y búsqueda de anterioridades en [governance/socios/](../governance/socios/01-marca-esclusa-o-varios.md). Es decisión de los dos socios. (M-002)
 3. **Decisiones vencidas el 22/11:** el acuerdo de socios, el plan de Claude y el proceso de referencia. Sin acuerdo de socios no hay empresa que automatizar: reparto, dedicación, propiedad del código y de la marca, y qué pasa si uno se va. (M-003 a M-005)
-4. **Agentes antes que procesos.** Hay 34 agentes y 65 habilidades, y ningún proceso funcionando de punta a punta. Un agente que no está unido a un proceso medido es una ficha bonita, no capacidad. La auditoría de la semana 2 decide qué se queda. (M-040)
-5. **La oficina vive en el navegador.** El artefacto de la oficina guarda en su propio almacén, así que no es todavía un sistema: no tiene identidad, ni auditoría central, ni copias. Tiene que apoyarse en la API y en la base de datos de esta noche (semanas 2–5). (M-041)
+4. **Agentes antes que procesos.** Hay 34 agentes y 65 habilidades, y ningún proceso funcionando de punta a punta. Un agente que no está unido a un proceso medido es una ficha bonita, no capacidad. La auditoría de la semana 2 decide qué se queda. **Hecha el 26/11 (N2, [docs/28](28-auditoria-agentes.md)):** propone quedarse con 22 agentes y 56 habilidades, cada uno con su proceso y su métrica; falta que la aprobéis (D-026). (M-040)
+5. **La oficina vive en el navegador.** El artefacto de la oficina guarda en su propio almacén, así que no es todavía un sistema: no tiene identidad, ni auditoría central, ni copias. Tiene que apoyarse en la API y en la base de datos de esta noche (semanas 2–5). **Desde el 26/11 (N3a y N3b),** servida desde la API guarda los encargos y las aprobaciones en PostgreSQL con auditoría; como artefacto sigue como antes. Falta la identidad real (M-047) y la memoria. (M-041)
 6. **La validación va por detrás de la construcción.** El riesgo principal del plan es construir algo que nadie pague. Las conversaciones semanales con tramitadores son la única defensa, y no las puede hacer Claude. (M-010)
 7. **Vuestras horas son el cuello de botella, no las de Claude.** Con 10–15 horas por socio a la semana, y varios proyectos personales en marcha (golf, gimnasio, nutrición, Odontina y otros), lo que no se pueda hacer de noche tiene que caber en esas horas. Lo que no cabe se recorta conscientemente; no se aplaza sin más.
 8. **«Sustituir personas» en un sector regulado.** La responsabilidad legal sigue siendo vuestra. Por eso hay niveles de autonomía y aprobación humana en lo externo, legal y financiero (22-plan, «Autonomía con pruebas»), y un seguro de responsabilidad civil profesional antes de firmar con clientes. (M-020)
@@ -68,16 +68,16 @@ Y una regla para todo el trabajo: **si al construir algo nuevo se detecta que al
 
 ## 2. Mapa de la empresa completa
 
-Cada fila es una capacidad que una consultora seria tiene que tener. «Hoy» describe lo que hay en el repositorio a 26/11/2026.
+Cada fila es una capacidad que una consultora seria tiene que tener. «Hoy» describe lo que hay en el repositorio a 27/11/2026 (repasado por la tanda de la 01:00).
 
 ### 2.1 Empresa, socios y gobierno
 
 | ID | Capacidad | Hoy | Objetivo 28/02 | P | Quién |
 |---|---|---|---|---|---|
 | M-001 | Compatibilidad con el empleo actual de cada socio | Sin revisar | Revisada por un laboralista y por escrito | P0 | Juan, Álvaro, abogado |
-| M-002 | Una sola marca y nombre (Esclusa o Varios) | Dos marcas | Decidida, con dominio y marca registrada en la OEPM o la EUIPO tras buscar anterioridades | P0 | Los dos; Noche prepara la comparativa |
-| M-003 | Acuerdo de socios: roles, horas, reparto, salida, propiedad intelectual y no competencia entre socios | Pendiente desde el 22/11 | Firmado | P0 | Los dos, abogado; Noche hace un borrador de puntos a decidir |
-| M-004 | Forma jurídica y alta (SL o autónomos) | Pendiente (08/01) | Decidida con el gestor | P0 | Álvaro, gestor; Noche hace la comparativa con fuentes (D2) |
+| M-002 | Una sola marca y nombre (Esclusa o Varios) | Dos marcas. Comparativa y recomendación hechas (S1, [governance/socios](../governance/socios/01-marca-esclusa-o-varios.md)); falta buscar anterioridades | Decidida, con dominio y marca registrada en la OEPM o la EUIPO tras buscar anterioridades | P0 | Los dos; Noche prepara la comparativa |
+| M-003 | Acuerdo de socios: roles, horas, reparto, salida, propiedad intelectual y no competencia entre socios | Pendiente desde el 22/11. Lista de 14 puntos con opciones (S1) | Firmado | P0 | Los dos, abogado; Noche hace un borrador de puntos a decidir |
+| M-004 | Forma jurídica y alta (SL o autónomos) | Pendiente (08/01). Comparativa y propuesta para el gestor en [docs/27](27-finanzas.md) (D2) | Decidida con el gestor | P0 | Álvaro, gestor; Noche hace la comparativa con fuentes (D2) |
 | M-005 | Proceso de referencia confirmado | Por defecto, siniestros en corredurías | Confirmado tras la 2.ª conversación | P0 | Los dos |
 | M-006 | Gobierno: reunión semanal, decisiones, riesgos | DECISIONS.md y viernes de 45 minutos | Registro de riesgos vivo y revisión mensual de objetivos | P1 | Noche prepara la plantilla y los socios la usan |
 | M-007 | Objetivos medibles por trimestre | No existen | Tres o cuatro objetivos con su métrica para el primer trimestre de 2027 | P1 | Los dos; Noche hace la propuesta |
@@ -86,12 +86,12 @@ Cada fila es una capacidad que una consultora seria tiene que tener. «Hoy» des
 
 | ID | Capacidad | Hoy | Objetivo 28/02 | P | Quién |
 |---|---|---|---|---|---|
-| M-010 | Validación: 10 conversaciones con quien hace el proceso | Guion de preguntas en el proceso de referencia | Seis o más hechas y resumidas, AS-IS validado | P0 | Álvaro; Noche prepara guiones y resúmenes (B3) |
+| M-010 | Validación: 10 conversaciones con quien hace el proceso | Guion de preguntas en el proceso de referencia, cuestionario por puertas y guion semanal (B3) | Seis o más hechas y resumidas, AS-IS validado | P0 | Álvaro; Noche prepara guiones y resúmenes (B3) |
 | M-011 | Perfil de cliente ideal y nicho | Candidato: corredurías medianas. Segunda línea: el [estudio de Álvaro](../knowledge/estudios/2026-11-26-prospectos-pymes-alvaro/README.md) con 75 pymes de 5 sectores (26/11) | Decidido con criterios y 40 empresas que encajan | P1 | Los dos; Noche investiga fuentes públicas |
-| M-012 | Precio de cada fase | Por decidir | Precio de diagnóstico y piloto con su cálculo de coste y margen | P1 | Los dos; Noche hace el modelo (D2) |
-| M-013 | Propuesta de diagnóstico | No existe | Plantilla con precio, alcance, exclusiones y condiciones | P1 | Noche (E1), revisión de los socios |
+| M-012 | Precio de cada fase | Por decidir. Hoja `precio-y-caja.xlsx` con los parámetros vacíos (D2) | Precio de diagnóstico y piloto con su cálculo de coste y margen | P1 | Los dos; Noche hace el modelo (D2) |
+| M-013 | Propuesta de diagnóstico | Plantilla (E1) y ejemplo de Atalaya puntuado con la rúbrica (N6); faltan precio y fechas | Plantilla con precio, alcance, exclusiones y condiciones | P1 | Noche (E1), revisión de los socios |
 | M-014 | CRM: contactos, oportunidades, seguimiento | No existe | Tabla de oportunidades en la base de datos o en una hoja, unida a la oficina | P1 | Noche |
-| M-015 | Web para clientes | `site/` interno y web de Esclusa | Una web pública con oferta, método, sectores, contacto, aviso legal, privacidad y cookies, hecha a partir de referencias de éxito | P1 | Noche (F2); los socios aprueban los textos y la marca (M-002) |
+| M-015 | Web para clientes | `site/` interno, web de Esclusa y maqueta en `web/maqueta/` (F2); inventario de `site/` en [docs/30](30-inventario-web.md) (N5) | Una web pública con oferta, método, sectores, contacto, aviso legal, privacidad y cookies, hecha a partir de referencias de éxito | P1 | Noche (F2); los socios aprueban los textos y la marca (M-002) |
 | M-016 | Contenido y presencia: LinkedIn, boletín | Boletín semanal de Esclusa | Calendario de contenidos alineado con el nicho | P2 | Noche hace borradores y Juan publica |
 | M-017 | Demo grabada de 5 minutos | No existe | Grabada con datos inventados | P1 | Juan (S12) |
 | M-018 | Alta de cliente: contrato, accesos, arranque | No existe | Lista de alta y acta de arranque | P1 | Noche |
@@ -102,38 +102,38 @@ El marco completo ya existe en [el marco legal](fuentes/Marco_Integral_Legal_Cib
 
 | ID | Obligación o documento | Hoy | Objetivo 28/02 | P | Quién |
 |---|---|---|---|---|---|
-| M-020 | Seguro de responsabilidad civil profesional y de ciberriesgos | No existe | Presupuestos comparados y contratado antes del primer piloto | P0 | Álvaro; Noche prepara las preguntas para el corredor |
-| M-021 | Contrato marco de servicios y anexo por fase (SOW) | No existe | Revisado por un abogado | P0 | Noche hace el borrador (D1) y lo revisa el abogado |
-| M-022 | Encargo de tratamiento (art. 28 RGPD) y lista de subencargados (proveedores de IA, nube) | No existe | Revisado; lista de subencargados con su ubicación y garantías | P0 | Noche (D1) y abogado |
-| M-023 | Acuerdo de confidencialidad | No existe | Plantilla revisada | P1 | Noche (D1) |
-| M-024 | Cláusulas para clientes sujetos a DORA (proveedor de servicios TIC a entidades financieras) | Habilidad `revision-contratos-dora` disponible | Anexo DORA por si el cliente es aseguradora o entidad financiera | P1 | Noche |
+| M-020 | Seguro de responsabilidad civil profesional y de ciberriesgos | No existe. Preguntas para el corredor (S1) | Presupuestos comparados y contratado antes del primer piloto | P0 | Álvaro; Noche prepara las preguntas para el corredor |
+| M-021 | Contrato marco de servicios y anexo por fase (SOW) | Borrador para abogado con pedido por fase (D1) | Revisado por un abogado | P0 | Noche hace el borrador (D1) y lo revisa el abogado |
+| M-022 | Encargo de tratamiento (art. 28 RGPD) y lista de subencargados (proveedores de IA, nube) | Borrador para abogado sobre las cláusulas tipo de la Comisión (D1) | Revisado; lista de subencargados con su ubicación y garantías | P0 | Noche (D1) y abogado |
+| M-023 | Acuerdo de confidencialidad | Borrador para abogado (D1) | Plantilla revisada | P1 | Noche (D1) |
+| M-024 | Cláusulas para clientes sujetos a DORA (proveedor de servicios TIC a entidades financieras) | Anexo DORA opcional en el borrador del contrato marco (D1) | Anexo DORA por si el cliente es aseguradora o entidad financiera | P1 | Noche |
 | M-025 | Reglamento de IA: nuestro papel por proyecto (proveedor o implantador), obligaciones de transparencia y alfabetización del art. 4 | Marco legal, cap. 3 | Ficha de clasificación por caso de uso dentro del diagnóstico y curso de alfabetización como producto | P1 | Noche |
 | M-026 | Protección de datos propia: registro de actividades, información a contactos, ejercicio de derechos | Marco legal, cap. 2 | Registro de tratamientos de la empresa y textos de la web | P1 | Noche hace el borrador y revisa el abogado |
 | M-027 | Evaluación de impacto (EIPD) por proyecto cuando toque | Marco legal, cap. 2.6 | Plantilla y criterio de cuándo hace falta | P1 | Noche |
 | M-028 | Web: aviso legal, privacidad, cookies (LSSI-CE) | Esclusa tiene páginas legales | Revisadas para la marca elegida | P1 | Noche |
-| M-029 | Propiedad intelectual: qué es del cliente y qué nuestro (método, código reutilizable) | No existe | Cláusula en el contrato marco | P0 | Noche (D1) y abogado |
+| M-029 | Propiedad intelectual: qué es del cliente y qué nuestro (método, código reutilizable) | Cláusula en el borrador del contrato marco, pendiente del abogado (D1) | Cláusula en el contrato marco | P0 | Noche (D1) y abogado |
 | M-030 | Matriz de cumplimiento: obligación → evidencia → responsable → estado | Capítulo 11 del marco legal | Viva en el repositorio y revisada cada mes | P1 | Noche |
-| M-031 | Facturación electrónica y Verifactu | No existe | Requisitos y fechas verificadas, y herramienta elegida | P1 | Noche (D2) y gestor |
+| M-031 | Facturación electrónica y Verifactu | Requisitos en [docs/27](27-finanzas.md) (D2); el RDL 43/2026 aplaza Verifactu, pendiente de convalidación | Requisitos y fechas verificadas, y herramienta elegida | P1 | Noche (D2) y gestor |
 
 ### 2.4 Método de entrega y entregables
 
 | ID | Capacidad | Hoy | Objetivo 28/02 | P | Quién |
 |---|---|---|---|---|---|
-| M-035 | Catálogo de entregables por fase con plantilla, rúbrica y ejemplo (sección 3) | Habilidades sueltas en `claude/habilidades/` | Los 20 entregables de la sección 3 con plantilla y rúbrica | P1 | Noche (E1, C3) |
+| M-035 | Catálogo de entregables por fase con plantilla, rúbrica y ejemplo (sección 3) | Seis plantillas (E1) y rúbrica con listas por tipo (C3); ejemplo de la propuesta (N6) | Los 20 entregables de la sección 3 con plantilla y rúbrica | P1 | Noche (E1, C3) |
 | M-036 | Puertas G0–G6 con su lista de comprobación | Definidas en la Guía v1.4 | Una lista por puerta, usada en la oficina | P1 | Noche |
 | M-037 | Marca aplicada a todos los entregables | Generador de entregables en la oficina (D-015) | Misma plantilla en Word, PowerPoint, Excel y PDF | P1 | Noche |
-| M-038 | Revisión de calidad antes de entregar | D-019: todo pasa por un socio | Rúbrica automática previa a la revisión del socio | P1 | Noche |
+| M-038 | Revisión de calidad antes de entregar | Rúbrica en código (C3), usada en el ejemplo de Atalaya (N6); falta llevarla a la oficina | Rúbrica automática previa a la revisión del socio | P1 | Noche |
 
 ### 2.5 Oficina interna (la máquina)
 
 | ID | Capacidad | Hoy | Objetivo 28/02 | P | Quién |
 |---|---|---|---|---|---|
-| M-040 | Auditoría de agentes y procesos: qué sobra, qué falta ([docs/28](28-auditoria-agentes.md), D-026 propuesta) | 34 agentes | Cada agente unido a procesos, con métrica y nivel de autonomía; los que no lo estén, fusionados o retirados | P0 | Noche (semana 2) |
-| M-041 | La oficina sobre la API y la base de datos (encargos, tareas y aprobaciones hechos el 26/11 en N3a y N3b, [docs/24](24-base-de-datos.md); falta la memoria) | Almacén del artefacto | Encargos, tareas, aprobaciones y memoria en PostgreSQL con auditoría | P1 | Noche (semanas 2–5) |
-| M-042 | Chat con el CEO: clasificar, preguntar, planificar y repartir | En el artefacto | CEO limitado de S4 con las cinco decisiones y el banco de 25 encargos | P1 | Noche (semana 4) |
+| M-040 | Auditoría de agentes y procesos: qué sobra, qué falta ([docs/28](28-auditoria-agentes.md), D-026 propuesta) | Auditoría hecha (N2, D-026 propuesta): 22 agentes se quedan, 5 se fusionan y 7 se retiran | Cada agente unido a procesos, con métrica y nivel de autonomía; los que no lo estén, fusionados o retirados | P0 | Noche (semana 2) |
+| M-041 | La oficina sobre la API y la base de datos (API de encargos, tareas y aprobaciones en N3a y adaptador de la oficina en N3b, 26/11, [docs/24](24-base-de-datos.md); faltan tareas en la oficina, posponer y caducar en la base, y la memoria) | Encargos y aprobaciones de la oficina en PostgreSQL cuando se sirve desde la API (N3b); la API tiene tareas, pero la oficina aún no las usa | Encargos, tareas, aprobaciones y memoria en PostgreSQL con auditoría | P1 | Noche (semanas 2–5) |
+| M-042 | Chat con el CEO: clasificar, preguntar, planificar y repartir | CEO limitado con reglas fijas y banco de 25 encargos con modelo simulado (C2) | CEO limitado de S4 con las cinco decisiones y el banco de 25 encargos | P1 | Noche (semana 4) |
 | M-043 | Agentes que colaboran: plan → tareas → agentes → calidad → aprobación | Modo «En equipo» | Sobre el motor persistente, con dependencias y reintentos | P1 | Noche (semana 5) |
 | M-044 | Bucle de mejora diaria: histórico → lecciones → reglas → pruebas | Memoria y lecciones (D-019) | Cada regla nueva entra con su prueba; puntuación del examen por semana | P1 | Noche (semanas 4 y 9) |
-| M-045 | Mapa de autonomía por proceso (A0–A4) ([docs/29](29-autonomia.md), D-027 propuesta) | No existe | Nivel de cada proceso y criterio para subirlo | P1 | Noche (semana 2) |
+| M-045 | Mapa de autonomía por proceso (A0–A4) ([docs/29](29-autonomia.md), D-027 propuesta) | Mapa hecho (N1, D-027 propuesta): los 39 procesos en A0 | Nivel de cada proceso y criterio para subirlo | P1 | Noche (semana 2) |
 | M-046 | Coste de IA por encargo y por cliente, con límite | Tabla `ejecucion_modelo` creada | Panel de coste y alerta | P2 | Noche |
 | M-047 | Entrada de los socios con identidad real (no contraseñas en el artefacto) | No existe | Autenticación de S3 | P1 | Noche |
 | M-048 | Portal interno claro y bien distribuido | Oficina 3D con panel de encargos | La pantalla de inicio responde en 10 segundos a qué espera mi OK, qué está en marcha, qué se ha entregado y qué viene. Secciones para encargos, proyectos, clientes, cerebro, calendario y agentes, con la vista 3D como una vista más | P1 | Noche (F1) |
@@ -157,9 +157,9 @@ Lo siguiente:
 
 | ID | Capacidad | Hoy | Objetivo 28/02 | P | Quién |
 |---|---|---|---|---|---|
-| M-050 | Paquete de seguros y corredurías con normas verificadas | Fichas en borrador; no hay `sector-seguros` | Paquete completo con fuente oficial (B2) | P0 | Noche |
-| M-051 | Fichas de `knowledge/` cargadas en la base de datos con citas | Tablas creadas | Carga automática en cada cambio (B1) | P1 | Noche |
-| M-052 | Ficha de cliente y memoria por cliente | No existe | Esquema, plantilla y cuestionario (B3) | P1 | Noche |
+| M-050 | Paquete de seguros y corredurías con normas verificadas | Paquete `knowledge/sectores/seguros/` (B2); 37 de 39 fichas con fuente externa (K1) | Paquete completo con fuente oficial (B2) | P0 | Noche |
+| M-051 | Fichas de `knowledge/` cargadas en la base de datos con citas | Carga manual con `varios.db.carga_conocimiento` (B1) | Carga automática en cada cambio (B1) | P1 | Noche |
+| M-052 | Ficha de cliente y memoria por cliente | Esquema, plantilla y cuestionario (B3); falta la memoria por cliente | Esquema, plantilla y cuestionario (B3) | P1 | Noche |
 | M-053 | Vigilancia normativa: cambios en normas que afectan a clientes | Boletín de Esclusa | Revisión semanal unida a las fichas, que marca lo que caduca | P2 | Noche |
 | M-054 | Precedentes: cada proyecto deja lecciones y plantillas reutilizables | `precedents/` | Plantilla de cierre de proyecto | P2 | Noche |
 
@@ -169,8 +169,8 @@ Lo siguiente:
 |---|---|---|---|---|---|
 | M-060 | Cuenta bancaria de empresa y separación de gastos | Desconocido | Abierta tras elegir la forma jurídica | P0 | Socios |
 | M-061 | Facturación y cobros | No existe | Herramienta conforme con Verifactu, numeración y plantilla | P1 | Gestor; Noche compara opciones |
-| M-062 | Presupuesto de gastos fijos: IA, nube, dominios, seguros, asesoría | No existe | Hoja con parámetros (sin cifras inventadas) | P1 | Noche (D2) |
-| M-063 | Previsión de caja por escenarios | No existe | Tres escenarios con supuestos explícitos | P1 | Noche (D2) |
+| M-062 | Presupuesto de gastos fijos: IA, nube, dominios, seguros, asesoría | Hoja `precio-y-caja.xlsx` con parámetros vacíos (D2) | Hoja con parámetros (sin cifras inventadas) | P1 | Noche (D2) |
+| M-063 | Previsión de caja por escenarios | Caja a 18 meses en tres escenarios, con parámetros vacíos (D2) | Tres escenarios con supuestos explícitos | P1 | Noche (D2) |
 | M-064 | Ayudas públicas y financiación (ENISA, CDTI, ayudas autonómicas) | Sin estudiar | Lista verificada de lo que aplica y sus plazos | P2 | Noche |
 
 ### 2.9 Tecnología y seguridad interna

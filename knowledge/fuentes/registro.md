@@ -125,6 +125,7 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 | [OWASP-FASTAPI](#owasp-fastapi) | FastAPI Security Cheat Sheet | recomendacion-tecnica | media | vigente | draft |
 | [OWASP-IDOR](#owasp-idor) | Insecure Direct Object Reference Prevention Cheat Sheet | recomendacion-tecnica | media | vigente | draft |
 | [OEPM-LOCALIZADOR](#oepm-localizador) | Localizador de marcas (servicio web de la OEPM) | documentacion-producto | alta | vigente | draft |
+| [TMVIEW](#tmview) | TMview (ficha del catálogo de aplicaciones de datos.gob.es) | documentacion-producto | media | vigente | draft |
 | [UC3M-PACTOS](#uc3m-pactos) | Guía de los tipos de cláusulas en los pactos de socios en S.A. y S.L. | buena-practica | media | vigente | draft |
 | [HISCOX-RC-TIC](#hiscox-rc-tic) | Condicionado del seguro de Responsabilidad Civil TIC | documentacion-producto | baja | vigente | draft |
 | [INCIBE-CIBERSEGUROS](#incibe-ciberseguros) | Los ciberseguros, el complemento ideal de la gestión de riesgos | recomendacion-tecnica | alta | vigente | draft |
@@ -1305,7 +1306,17 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 - **Tipo:** documentacion-producto · **Jurisdicción:** ES · **Versión o fecha:** leída el 26/11/2026
 - **Consultada:** 2026-11-26 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
-- **Nota:** Permite «realizar búsquedas avanzadas de marcas y nombres comerciales con efectos en España»; está entre los servicios gratuitos de la OEPM y se entra con usuario y contraseña. La página no menciona marcas de la UE: para esas, TMview o eSearch plus de la EUIPO (sin comprobar).
+- **Nota:** Permite «realizar búsquedas avanzadas de marcas y nombres comerciales con efectos en España»; está entre los servicios gratuitos de la OEPM y se entra con usuario y contraseña. La página no menciona marcas de la UE: para esas, TMview (`TMVIEW`); eSearch plus de la EUIPO sin comprobar.
+
+<a id="tmview"></a>
+### TMVIEW
+- **Título:** TMview (ficha del catálogo de aplicaciones de datos.gob.es)
+- **Autor u organismo:** EUIPO y oficinas nacionales (ficha de datos.gob.es)
+- **URL:** <https://datos.gob.es/es/aplicaciones/tmview>
+- **Tipo:** documentacion-producto · **Jurisdicción:** UE · **Versión o fecha:** ficha actualizada el 03/11/2022, leída el 27/11/2026
+- **Consultada:** 2026-11-27 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** «Herramienta de consulta en línea que permite a cualquier usuario de Internet buscar gratuitamente las marcas de todas las oficinas oficiales de marcas participantes» desde una «ventanilla única». La desarrolla la EUIPO (antes OAMI) con las oficinas nacionales, que son las responsables de los datos; la OEPM participa desde agosto de 2010. La ficha no enumera las oficinas ni dice si hace falta registrarse: confirmarlo en tmview.europa.eu. Es una fuente secundaria: sustituirla por la página de la EUIPO cuando se lea.
 
 <a id="uc3m-pactos"></a>
 ### UC3M-PACTOS

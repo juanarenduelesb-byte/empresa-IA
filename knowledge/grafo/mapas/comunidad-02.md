@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 2
-miembros: 101
+miembros: 97
 cohesion: 0.07
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 2 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros
 
-101 nodos agrupados por el algoritmo de Louvain. Cohesión 0.07.
+97 nodos agrupados por el algoritmo de Louvain. Cohesión 0.07.
 
 ## Documentos
 
@@ -23,7 +23,6 @@ tags:
 - [[knowledge/sectores/seguros/excepciones|Catálogo de excepciones al abrir un siniestro]]
 - [[knowledge/sectores/sector-industria|Experto en industria manufacturera]]
 - [[knowledge/sectores/seguros/normas|Normas para abrir un siniestro en una correduría]]
-- [[knowledge/ingenieria/diseno-experiencia|Diseñador de producto y experiencia (UX)]]
 - [[knowledge/sectores/priorizacion|Priorización de sectores]]
 - [[knowledge/sectores/seguros/glosario-siniestros|Glosario de siniestros]]
 - [[docs/27-finanzas|Finanzas: forma jurídica, facturación, precio y caja (D2)]]
@@ -34,14 +33,10 @@ tags:
 - [[governance/legal/borradores/02-encargo-tratamiento|Contrato de encargo del tratamiento (art. 28 RGPD) · BORRADOR PARA ABOGADO]]
 - [[governance/legal/borradores/04-anexo-uso-ia|Anexo de uso de inteligencia artificial · BORRADOR PARA ABOGADO]]
 - [[governance/legal/borradores/03-acuerdo-confidencialidad|Acuerdo de confidencialidad (mutuo) · BORRADOR PARA ABOGADO]]
-- [[knowledge/plantillas/ficha-fuente|Ficha-fuente]]
 - [[governance/socios/03-preguntas-seguro-rc-y-ciber|M-020 · Preguntas para el corredor: responsabilidad civil profesional y ciberriesgos]]
+- [[knowledge/plantillas/ficha-fuente|Ficha-fuente]]
 - [[knowledge/metodologias-transversales/investigar|Protocolo: investigar fuera]]
 - [[knowledge/procesos/sectores|Especialistas sectoriales]]
-
-## Procesos
-
-- [[processes/catalog/P33-diseno-y-validacion-to-be|P33 · Diseño y validación TO-BE]]
 
 ## Especialistas
 
@@ -51,7 +46,6 @@ tags:
 - [[knowledge/sectores/sector-financiero|Experto en servicios financieros no bancarios]]
 - [[knowledge/sectores/sector-industria|Experto en industria manufacturera]]
 - [[knowledge/sectores/sector-logistica|Experto en logística y transporte]]
-- [[knowledge/ingenieria/diseno-experiencia|Diseñador de producto y experiencia (UX)]]
 
 ## Fuentes
 
@@ -64,7 +58,6 @@ tags:
 - [[knowledge/grafo/fuentes/LEY-10-2025|LEY-10-2025 · Ley 10/2025, de 26 de diciembre, por la que se regulan los servicios de atención a la clientela]]
 - [[knowledge/grafo/fuentes/RD-287-2021|RD-287-2021 · Real Decreto 287/2021, sobre formación y remisión de la información estadístico-contable de los distribuidores de seguros y reaseguros]]
 - [[knowledge/grafo/fuentes/UNESPA-CONVENIO-2026|UNESPA-CONVENIO-2026 · Convenio entre entidades aseguradoras de automóviles para la indemnización directa de daños materiales a vehículos (refunde CIDE, ASCIDE y CICOS)]]
-- [[knowledge/grafo/fuentes/LEY-ACCESIBILIDAD-11-2023|LEY-ACCESIBILIDAD-11-2023 · Ley 11/2023 (accesibilidad de productos y servicios, transpone la Directiva (UE) 2019/882)]]
 - [[knowledge/grafo/fuentes/NIS2-ES|NIS2-ES · Estado de la transposición de NIS2 en España]]
 - [[knowledge/grafo/fuentes/RGPD-2016-679|RGPD-2016-679 · Reglamento (UE) 2016/679, General de Protección de Datos]]
 - [[knowledge/grafo/fuentes/CCS-SOLICITUD|CCS-SOLICITUD · CCS: solicitud de indemnización por riesgos extraordinarios]]
@@ -88,15 +81,15 @@ tags:
 - [[knowledge/grafo/fuentes/ISO-42001|ISO-42001 · ISO/IEC 42001:2023 Sistema de gestión de IA]]
 - [[knowledge/grafo/fuentes/MAQUINARIA-2023-1230|MAQUINARIA-2023-1230 · Reglamento (UE) 2023/1230, relativo a las máquinas]]
 - [[knowledge/grafo/fuentes/MDR-2017-745|MDR-2017-745 · Reglamento (UE) 2017/745, productos sanitarios (en el anexo I del Reglamento de IA)]]
-- [[knowledge/grafo/fuentes/NNG-HEURISTICAS|NNG-HEURISTICAS · 10 heurísticas de usabilidad (Jakob Nielsen)]]
 - [[knowledge/grafo/fuentes/RDLEG-7-2004-CCS|RDLEG-7-2004-CCS · Real Decreto Legislativo 7/2004, texto refundido del Estatuto Legal del Consorcio de Compensación de Seguros]]
 - [[knowledge/grafo/fuentes/SANIDAD-IA-OMNIBUS|SANIDAD-IA-OMNIBUS · IA en el SNS: ómnibus digital sobre IA y simplificación MDR/IVDR]]
 - [[knowledge/grafo/fuentes/UNESPA-SDM|UNESPA-SDM · Reglamento articulado del Sistema Siniestros Daños Materiales (SDM)]]
-- [[knowledge/grafo/fuentes/W3C-WCAG22|W3C-WCAG22 · Web Content Accessibility Guidelines (WCAG) 2.2]]
 - [[knowledge/grafo/fuentes/CCT-ENCARGO-2021-915|CCT-ENCARGO-2021-915 · Decisión de Ejecución (UE) 2021/915, cláusulas contractuales tipo entre responsables y encargados del tratamiento]]
 - [[knowledge/grafo/fuentes/CNMC-CIDE-2014|CNMC-CIDE-2014 · CNMC, resolución de 25/09/2014, expediente S/0496/13 CIDE]]
 - [[knowledge/grafo/fuentes/CODIGO-CIVIL|CODIGO-CIVIL · Código Civil (Real Decreto de 24 de julio de 1889)]]
 - [[knowledge/grafo/fuentes/EEDS-2025-327|EEDS-2025-327 · Reglamento (UE) 2025/327, Espacio Europeo de Datos de Salud]]
+- [[knowledge/grafo/fuentes/OSS-PROMPTFOO|OSS-PROMPTFOO · promptfoo (evaluación y pruebas adversariales de LLM)]]
+- [[knowledge/grafo/fuentes/TMVIEW|TMVIEW · TMview (ficha del catálogo de aplicaciones de datos.gob.es)]]
 - [[knowledge/grafo/fuentes/ADCF-MONCLOA-2026|ADCF-MONCLOA-2026 · Autoridad Administrativa Independiente de Defensa del Cliente Financiero: compromiso de retomar la tramitación]]
 - [[knowledge/grafo/fuentes/AEAT-IS-TIPOS|AEAT-IS-TIPOS · Impuesto sobre Sociedades: tipo impositivo (microempresas, reducida dimensión y general)]]
 - [[knowledge/grafo/fuentes/AEPD-DIRECTRICES-ENCARGO|AEPD-DIRECTRICES-ENCARGO · Directrices para la elaboración de contratos entre responsables y encargados del tratamiento]]
@@ -115,4 +108,5 @@ tags:
 - [[knowledge/grafo/fuentes/NNG-HIDDEN-NAV|NNG-HIDDEN-NAV · Hamburger Menus and Hidden Navigation Hurt UX Metrics]]
 - [[knowledge/grafo/fuentes/OEPM-LOCALIZADOR|OEPM-LOCALIZADOR · Localizador de marcas (servicio web de la OEPM)]]
 - [[knowledge/grafo/fuentes/ORDEN-ECO-734-2004|ORDEN-ECO-734-2004 · Orden ECO/734/2004, sobre los departamentos y servicios de atención al cliente y el defensor del cliente de las entidades financieras]]
-- … y 8 más
+- [[knowledge/grafo/fuentes/OWASP-FASTAPI|OWASP-FASTAPI · FastAPI Security Cheat Sheet]]
+- … y 7 más

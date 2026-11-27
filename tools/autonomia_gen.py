@@ -68,9 +68,13 @@ def generar() -> str:
          "| Nivel | Qué hace el sistema |", "|---|---|"]
     s += ["| %s | %s |" % (k, v) for k, v in d["niveles"].items()]
     s += ["",
-          "Los niveles son los de [docs/22](22-plan-hasta-febrero.md) («La autonomía se gana con datos»). Coinciden con los cinco papeles del "
+          "Los niveles son los de [docs/22](22-plan-hasta-febrero.md) («La autonomía se gana con datos»). Se inspiran en los cinco papeles del "
           "usuario que proponen Feng, McDonald y Zhang (Knight First Amendment Institute, 2025): operador, colaborador, consultor, aprobador y "
-          "observador. De ellos se toma la idea central: la autonomía «can instead be a deliberate design decision» independiente de la "
+          "observador, pero no coinciden uno a uno. A0 se parece a su L1 (la persona manda y el agente ayuda cuando se le pide) y A1 a su L2 "
+          "(los dos planifican y ejecutan). A2 no tiene equivalente: en su L3 el agente toma la iniciativa y la persona da indicaciones, y en "
+          "su L4 («approver») el agente solo acude a la persona cuando se atasca, mientras que en A2 aprueba antes de cada acción. A3 se acerca "
+          "a su L4. A4 no es su L5: el observador de L5 «cannot provide input nor change the trajectory», y en A4 una persona sigue revisando "
+          "una muestra y puede bajar el nivel. De ellos se toma la idea central: la autonomía «can instead be a deliberate design decision» independiente de la "
           "capacidad, de modo que un agente capaz puede trabajar con poca autonomía si debe consultar antes de cada acción "
           "([KNIGHT-NIVELES-AUTONOMIA](../knowledge/fuentes/registro.md#knight-niveles-autonomia)). El techo de cada proceso sigue la tabla de "
           "riesgo de la [Guía v1.4](fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado.md) (§3: lo de riesgo alto se prepara pero no se "

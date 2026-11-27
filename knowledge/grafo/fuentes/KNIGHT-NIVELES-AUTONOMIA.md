@@ -18,7 +18,7 @@ tags:
 
 - Origen: <https://knightcolumbia.org/research/levels-of-autonomy-for-ai-agents>
 - Registro: [[knowledge/fuentes/registro|registro de fuentes]]
-- Nota: Cinco niveles según el papel del usuario: operator, collaborator, consultant, approver y observer. La autonomía «can instead be a deliberate design decision», independiente de la capacidad: un agente capaz puede trabajar con poca autonomía si consulta antes de cada acción. Propone certificados de autonomía con un nivel máximo; esa parte no se ha leído literalmente. Artículo académico, una sola fuente.
+- Nota: Cinco niveles según el papel del usuario: operator, collaborator, consultant, approver y observer. En L4 el agente solo acude al usuario «to resolve blockers»; en L5 el usuario «cannot provide input nor change the trajectory» (releído el 27/11/2026 en arXiv v2). La autonomía «can instead be a deliberate design decision», independiente de la capacidad: un agente capaz puede trabajar con poca autonomía si consulta antes de cada acción. Propone certificados de autonomía con un nivel máximo; esa parte no se ha leído literalmente. Artículo académico, una sola fuente.
 
 ## Citada en
 

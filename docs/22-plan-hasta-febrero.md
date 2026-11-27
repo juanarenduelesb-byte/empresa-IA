@@ -17,7 +17,7 @@ Del 15 al 28 de febrero, primeros clientes (D-011) y pulido con lo que digan.
 
 ## Cómo funciona cada día
 
-1. **07:15 · informe.** La última tanda de la noche escribe el informe en `docs/informes/AAAA-MM-DD.md` y lo sube antes de las 07:50.
+1. **07:00 · informe.** La tanda de las 07:00 escribe el informe en `docs/informes/AAAA-MM-DD.md` y lo sube antes de las 07:50. Si hay otra tanda después, no lo reescribe: añade al final un apartado con lo que haga.
 2. **Por la mañana · Juan lo lee (10 minutos).** Responde las preguntas y hace lo que le toca, que el informe pone en una lista aparte.
 3. **Durante el día · Juan elige.** Escribe a Claude «esta noche: tareas X, Y, Z», sacadas del menú de la semana o nuevas.
 4. **Claude prepara la noche.** Pone esas tareas en la lista de la noche ([21-trabajo-nocturno.md](21-trabajo-nocturno.md)) y programa **solo las tandas de esa noche**. Nada queda programado para otros días.

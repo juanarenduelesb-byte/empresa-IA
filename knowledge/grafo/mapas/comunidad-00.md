@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 0
-miembros: 112
+miembros: 116
 cohesion: 0.08
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 0 · claude/habilidades · Habilidades de los agentes y Administración
 
-112 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
+116 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
 
 ## Documentos
 
@@ -32,6 +32,7 @@ tags:
 - [[knowledge/agentes/cump|Cumplimiento normativo]]
 - [[knowledge/agentes/ceo|CEO digital]]
 - [[knowledge/agentes/prop|Propuestas]]
+- [[knowledge/agentes/exito|Éxito de cliente]]
 - [[knowledge/agentes/cont|Contenido]]
 - [[knowledge/agentes/bib|Bibliotecario]]
 - [[knowledge/agentes/pros|Prospección]]
@@ -53,6 +54,7 @@ tags:
 - [[knowledge/agentes/fnz|Experto en servicios financieros]]
 - [[knowledge/agentes/fin|Costes]]
 - [[knowledge/agentes/ind|Experto en industria]]
+- [[knowledge/administracion-finanzas/README|Administración y finanzas]]
 - [[claude/habilidades/acta-reunion|Acta de reunión]]
 - [[claude/habilidades/mapa-obligaciones|Mapa de obligaciones]]
 - [[claude/habilidades/claves-sector|Claves del sector para un encargo]]
@@ -71,9 +73,7 @@ tags:
 - [[claude/habilidades/contrato-de-tarea|Contrato de tarea]]
 - [[claude/habilidades/evaluacion-modelos|Evaluación de modelos]]
 - [[claude/habilidades/cierre-mensual|Cierre contable mensual]]
-- [[claude/habilidades/matriz-ia-regla-persona|Matriz IA · regla · persona]]
-- [[claude/habilidades/casos-sinteticos|Casos de prueba inventados]]
-- … y 34 más
+- … y 38 más
 
 ## Especialistas
 

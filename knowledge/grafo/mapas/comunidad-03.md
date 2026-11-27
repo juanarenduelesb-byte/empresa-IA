@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 3
-miembros: 93
+miembros: 95
 cohesion: 0.09
 tags:
   - "mapa"
@@ -9,12 +9,13 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 3 · docs · Registro de decisiones y Trabajo nocturno de Claude
 
-93 nodos agrupados por el algoritmo de Louvain. Cohesión 0.09.
+95 nodos agrupados por el algoritmo de Louvain. Cohesión 0.09.
 
 ## Documentos
 
 - [[DECISIONS|Registro de decisiones]]
 - [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]]
+- [[CLAUDE|Varios · empresa-ia]]
 - [[docs/informes/2026-11-27|Informe de la mañana · 27/11/2026]]
 - [[docs/informes/2026-11-26|Informe de la mañana · 26/11/2026]]
 - [[docs/23-plan-maestro|Plan maestro: la empresa completa, sin que se escape nada]]
@@ -59,6 +60,7 @@ tags:
 - [[web/README|Web para clientes (borrador)]]
 - [[knowledge/plantillas/entregables/06-acta-reunion|Acta de reunión · (Cliente) · (Tema) · (Fecha)]]
 - [[claude/instrucciones-proyecto|Instrucciones del proyecto "Varios · Cerebro" en Claude]]
+- [[claude/habilidades/revision-valor|Revisión de valor con el cliente]]
 - [[docs/02-arquitectura-general|Arquitectura general]]
 - [[docs/informes/README|Informes de la mañana]]
 - [[processes/ceo-control-a/README|Banco del Control A: 25 encargos para el CEO limitado (C2)]]
@@ -79,6 +81,7 @@ tags:
 - [[knowledge/grafo/decisiones/D-003|D-003 · Obsidian como interfaz humana]]
 - [[knowledge/grafo/decisiones/D-021|D-021 · El cerebro se abre en Obsidian: el repositorio es el vault]]
 - [[knowledge/grafo/decisiones/D-009|D-009 · Unificación de puertas y estados]]
+- [[knowledge/grafo/decisiones/D-006|D-006 · Primer proceso piloto]]
 - [[knowledge/grafo/decisiones/D-010|D-010 · Diagramas como código]]
 - [[knowledge/grafo/decisiones/D-015|D-015 · Entregables en archivos reales, memoria y Google Drive en la oficina de agentes]]
 - [[knowledge/grafo/decisiones/D-004|D-004 · PostgreSQL como fuente operativa]]

@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 10
-miembros: 11
-cohesion: 0.55
+miembros: 12
+cohesion: 0.48
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 10 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Conversaciones con IA y evaluación
 
-11 nodos agrupados por el algoritmo de Louvain. Cohesión 0.55.
+12 nodos agrupados por el algoritmo de Louvain. Cohesión 0.48.
 
 ## Documentos
 

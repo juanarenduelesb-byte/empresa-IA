@@ -112,6 +112,18 @@ def test_idempotencia_en_transiciones():
     assert len(m.auditoria) == n and e.estado == "EN_CLASIFICACION"
 
 
+def test_la_clave_de_idempotencia_es_de_cada_encargo_y_cliente():
+    """Como en la API (repaso N3a): una clave repetida en otro encargo o de otro cliente no lo deja sin aplicar."""
+    m = Motor()
+    a, b = m.alta(ANA, "a"), m.alta(ANA, "b")
+    m.mover(ANA, a.id, "EN_CLASIFICACION", "clasificar", clave_idempotencia="k1")
+    m.mover(ANA, b.id, "EN_CLASIFICACION", "clasificar", clave_idempotencia="k1")
+    assert b.estado == "EN_CLASIFICACION"
+    c = m.alta(OTRO, "c")
+    m.mover(OTRO, c.id, "EN_CLASIFICACION", "clasificar", clave_idempotencia="k1")
+    assert c.estado == "EN_CLASIFICACION"
+
+
 def test_salir_de_pendiente_de_aprobacion_exige_aprobador():
     """Guía v1.4 §4: devolver a retrabajo o rechazar también lo decide un aprobador, no el autor ni un agente."""
     m = Motor()

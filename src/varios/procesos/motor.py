@@ -68,7 +68,8 @@ class Motor:
     def __init__(self, maquina: MaquinaEstados | None = None) -> None:
         self.maquina = maquina or cargar()
         self._encargos: dict[str, Encargo] = {}
-        self._claves: dict[str, Evento] = {}
+        # La clave vale para un encargo de un cliente: la misma clave en otro encargo u otro cliente se aplica.
+        self._claves: dict[tuple[str, str, str], Evento] = {}
         self._ids = count(1)
         self.auditoria: list[Evento] = []
 
@@ -105,9 +106,10 @@ class Motor:
         motivo: str,
         clave_idempotencia: str | None = None,
     ) -> Encargo:
-        if clave_idempotencia and clave_idempotencia in self._claves:
-            return self.obtener(quien, encargo_id)
         enc = self.obtener(quien, encargo_id)
+        clave = (quien.tenant, enc.id, clave_idempotencia) if clave_idempotencia else None
+        if clave and clave in self._claves:
+            return enc
         if not motivo.strip():
             raise TransicionInvalida("Toda transición necesita motivo")
         if not self.maquina.permitida(enc.estado, a):
@@ -126,8 +128,8 @@ class Motor:
         antes = enc.estado
         enc.estado = a
         ev = self._registrar(enc, quien, "mover", antes, a, motivo, clave_idempotencia)
-        if clave_idempotencia:
-            self._claves[clave_idempotencia] = ev
+        if clave:
+            self._claves[clave] = ev
         return enc
 
     def resultado_qa(self, quien: Identidad, encargo_id: str, conforme: bool, motivo: str) -> Encargo:

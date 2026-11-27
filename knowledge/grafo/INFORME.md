@@ -6,7 +6,7 @@ Cómo está conectado el cerebro de Varios: qué sostiene todo, qué temas forma
 ## Resumen
 
 - 5101 nodos: seccion 4377, documento 383, fuente 122, habilidad 65, proceso 38, especialista 34, agente 34, decision 29, puerta 12, departamento 7.
-- 7238 relaciones: 63 % EXTRACTADAS (escritas en la fuente), 37 % INFERIDAS (temas compartidos, con puntuación) y 39 AMBIGUAS (para revisar).
+- 7237 relaciones: 63 % EXTRACTADAS (escritas en la fuente), 37 % INFERIDAS (temas compartidos, con puntuación) y 39 AMBIGUAS (para revisar).
 - 12 comunidades de temas.
 
 ## Nodos centrales
@@ -36,7 +36,7 @@ Nodos por los que pasa el camino entre comunidades distintas (intermediación).
 - **L2 (puerta técnica)** · intermediación 0.027 · une la comunidad 10 con 0, 1, 3, 4, 5, 6
 - **Índice del conocimiento de Varios** · intermediación 0.02 · une la comunidad 8 con 0, 1, 3, 4, 5, 6
 - **Estudios** · intermediación 0.018 · une la comunidad 11 con 0, 1, 3, 4, 5, 6
-- **Guia de Arranque Proyecto v1.4 Diseno Cerrado** · intermediación 0.017 · une la comunidad 9 con 0, 3, 4, 6, 7, 11
+- **Guia de Arranque Proyecto v1.4 Diseno Cerrado** · intermediación 0.016 · une la comunidad 9 con 0, 3, 4, 6, 7, 11
 - **Arquitecto de procesos** · intermediación 0.011 · une la comunidad 0 con 1, 2, 3, 5, 6, 8
 - **D-011 · Construir primero, clientes desde el 15/02/2027** · intermediación 0.01 · une la comunidad 5 con 0, 1, 3, 4, 8, 10
 - **CEO digital** · intermediación 0.01 · une la comunidad 6 con 0, 1, 3, 4, 7, 8

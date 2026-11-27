@@ -5,8 +5,8 @@ Cómo está conectado el cerebro de Varios: qué sostiene todo, qué temas forma
 
 ## Resumen
 
-- 5127 nodos: seccion 4399, documento 384, fuente 124, habilidad 65, proceso 38, especialista 34, agente 34, decision 30, puerta 12, departamento 7.
-- 7321 relaciones: 63 % EXTRACTADAS (escritas en la fuente), 36 % INFERIDAS (temas compartidos, con puntuación) y 39 AMBIGUAS (para revisar).
+- 5128 nodos: seccion 4400, documento 384, fuente 124, habilidad 65, proceso 38, especialista 34, agente 34, decision 30, puerta 12, departamento 7.
+- 7320 relaciones: 63 % EXTRACTADAS (escritas en la fuente), 36 % INFERIDAS (temas compartidos, con puntuación) y 39 AMBIGUAS (para revisar).
 - 12 comunidades de temas.
 
 ## Nodos centrales
@@ -34,7 +34,7 @@ Nodos por los que pasa el camino entre comunidades distintas (intermediación).
 - **Registro de decisiones** · intermediación 0.052 · une la comunidad 3 con 0, 1, 4, 5, 6, 7
 - **Habilidades de los agentes** · intermediación 0.042 · une la comunidad 0 con 2, 4, 5, 6, 7, 11
 - **L2 (puerta técnica)** · intermediación 0.029 · une la comunidad 10 con 0, 1, 3, 4, 5, 6
-- **Índice del conocimiento de Varios** · intermediación 0.02 · une la comunidad 7 con 0, 1, 3, 4, 5, 6
+- **Índice del conocimiento de Varios** · intermediación 0.021 · une la comunidad 7 con 0, 1, 3, 4, 5, 6
 - **Estudios** · intermediación 0.017 · une la comunidad 11 con 0, 1, 3, 4, 5, 6
 - **Guia de Arranque Proyecto v1.4 Diseno Cerrado** · intermediación 0.015 · une la comunidad 9 con 0, 1, 3, 4, 6, 8
 - **D-011 · Construir primero, clientes desde el 15/02/2027** · intermediación 0.011 · une la comunidad 5 con 0, 1, 3, 4, 6, 7
@@ -92,7 +92,7 @@ Cohesión 0.19 · 45 nodos: Índice del conocimiento de Varios; Arquitecto de pr
 
 ### 8 · processes/catalog · P22 · Gestión de errores y reintentos y Catálogo de procesos P01–P38
 
-Cohesión 0.5 · 37 nodos: P22 · Gestión de errores y reintentos; Catálogo de procesos P01–P38; P28 · Gestión de incidentes; P22 · Gestión de errores y reintentos; P27 · Gestión de proveedores y dependencias; P13 · Aprendizaje y actualización de la wiki; P05 · Diseño del plan; P11 · Entrega y cierre (y 29 más)
+Cohesión 0.5 · 37 nodos: P22 · Gestión de errores y reintentos; Catálogo de procesos P01–P38; P28 · Gestión de incidentes; P22 · Gestión de errores y reintentos; P27 · Gestión de proveedores y dependencias; P13 · Aprendizaje y actualización de la wiki; P05 · Diseño del plan; P25 · Gestión de cambios y versiones (y 29 más)
 
 ### 9 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Flujo ceo
 

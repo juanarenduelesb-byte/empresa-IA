@@ -56,6 +56,10 @@ Consultadas el 26/11/2026. Se eligieron consultoras de IA aplicada con una prueb
 - **Privacidad:** el formulario de contacto trata datos personales; responsable, finalidad, base y derechos van en una primera capa junto al formulario (RGPD art. 13).
 - **No describirnos como mediadores de seguros:** no lo somos.
 
+## Prototipo visual (27/11/2026)
+
+Primera propuesta de identidad propia para Varios, pedida por Juan: estilo «expediente» (papel gris claro, tinta casi negra, un solo azul de sello y ámbar solo para las excepciones), con Bricolage Grotesque en titulares, IBM Plex Sans en texto e IBM Plex Mono en etiquetas. Lienzo en el artefacto «Varios · Prototipo de la web para clientes» (https://claude.ai/artifact/Daf7ETWnBBM3ejSdiepTxf); copia de la página en [`web/prototipo-visual/inicio.dc.html`](../web/prototipo-visual/inicio.dc.html). Usa los textos de la maqueta de arriba. El área de clientes queda para la semana 10.
+
 ## 5. Qué falta para publicar
 Qué se aprovecha de la web interna `site/` y qué no: [docs/30](30-inventario-web.md).
 

@@ -11,7 +11,7 @@ Reglas que el esquema hace cumplir, además del código:
 from __future__ import annotations
 
 import uuid
-from datetime import datetime
+from datetime import date, datetime
 from decimal import Decimal
 
 from sqlalchemy import (
@@ -19,6 +19,7 @@ from sqlalchemy import (
     BigInteger,
     Boolean,
     CheckConstraint,
+    Date,
     DateTime,
     ForeignKey,
     Identity,
@@ -216,6 +217,24 @@ class Aprobacion(Base):
     creado_en: Mapped[datetime] = _creado()
     decidida_en: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
     caduca_en: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+
+
+class Poliza(Base):
+    """Póliza de la cartera del cliente (A5), copia de su sistema para el proceso de referencia. Inventadas hasta L2."""
+
+    __tablename__ = "poliza"
+    __table_args__ = (
+        CheckConstraint("vencimiento >= efecto", name="vigencia"),
+        UniqueConstraint("cliente_id", "numero", name="uq_poliza_cliente_numero"),
+    )
+    id: Mapped[uuid.UUID] = _id()
+    cliente_id: Mapped[uuid.UUID] = _cliente()
+    numero: Mapped[str] = mapped_column(String(60))
+    ramo: Mapped[str] = mapped_column(String(40))
+    aseguradora: Mapped[str] = mapped_column(String(200), default="", server_default="")
+    efecto: Mapped[date] = mapped_column(Date)
+    vencimiento: Mapped[date] = mapped_column(Date)
+    creado_en: Mapped[datetime] = _creado()
 
 
 class EventoAuditoria(Base):

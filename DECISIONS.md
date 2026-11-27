@@ -260,6 +260,15 @@ No construir primero un CEO omnisciente; descubrir, diseñar, integrar y medir u
 - Riesgo: la caducidad solo ocurre cuando ese cliente hace alguna petición, así que la base puede guardar como pendiente algo ya vencido hasta entonces; nadie puede decidirlo porque decidir comprueba el plazo. Cada petición hace una consulta más (índice parcial sobre las pendientes).
 - Estado: propuesta.
 
+## D-032 — La cartera de pólizas del cliente se guarda en su propia tabla
+- Fecha: 2026-11-27 (tanda de las 22:00, A5)
+- Decisión: tabla `poliza` (número, ramo, aseguradora, efecto y vencimiento) por cliente, con RLS forzada como el resto (migración 0004). Es la copia de la cartera que usan las reglas fijas de apertura de siniestros (`varios.seguros.apertura`), que hasta ahora solo existía en `cartera.json`. Los siniestros del proceso de referencia se guardan como encargos (`solicitud`), sin tabla propia.
+- Motivo: A5 pide cargar en la base las 11 pólizas inventadas repartidas entre los dos clientes, y no había dónde. Una tabla con columnas (no un JSON genérico) deja que la base compruebe la vigencia y que un cliente no repita número.
+- Alternativas descartadas: una tabla genérica de «datos del cliente» en JSON (sin comprobaciones y más fácil de llenar de cualquier cosa); dejar la cartera en archivos (no es multicliente ni pasa por RLS).
+- Riesgo: es la primera tabla de un sector concreto en el núcleo. Si Varios trabaja en otros sectores (pregunta 11), cada uno traerá las suyas; habrá que decidir si van en un esquema por sector.
+- Tecnología: ninguna nueva.
+- Estado: propuesta.
+
 ## Decisiones pendientes (con fecha límite)
 | Decisión | Quién | Antes de |
 |---|---|---|

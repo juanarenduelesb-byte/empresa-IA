@@ -5,22 +5,22 @@ Cómo está conectado el cerebro de Varios: qué sostiene todo, qué temas forma
 
 ## Resumen
 
-- 5137 nodos: seccion 4407, documento 384, fuente 125, habilidad 65, proceso 38, especialista 34, agente 34, decision 31, puerta 12, departamento 7.
-- 7348 relaciones: 63 % EXTRACTADAS (escritas en la fuente), 36 % INFERIDAS (temas compartidos, con puntuación) y 39 AMBIGUAS (para revisar).
-- 13 comunidades de temas.
+- 5143 nodos: seccion 4412, documento 384, fuente 125, habilidad 65, proceso 38, especialista 34, agente 34, decision 32, puerta 12, departamento 7.
+- 7349 relaciones: 63 % EXTRACTADAS (escritas en la fuente), 36 % INFERIDAS (temas compartidos, con puntuación) y 39 AMBIGUAS (para revisar).
+- 14 comunidades de temas.
 
 ## Nodos centrales
 
 Lo que más cosas conecta. Si cambia, cambia mucho.
 
 1. **Registro de fuentes** (`knowledge/fuentes/registro.md`) · 223 conexiones
-2. **Registro de decisiones** (`DECISIONS.md`) · 132 conexiones
+2. **Registro de decisiones** (`DECISIONS.md`) · 133 conexiones
 3. **Índice del conocimiento de Varios** (`knowledge/INDEX.md`) · 120 conexiones
 4. **Guia de Arranque Proyecto v1.4 Diseno Cerrado** (`docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado.md`) · 86 conexiones
 5. **Catálogo de procesos P01–P38** (`processes/catalog/README.md`) · 83 conexiones
 6. **L2 (puerta técnica)** · 71 conexiones
-7. **Habilidades de los agentes** (`claude/habilidades/README.md`) · 69 conexiones
-8. **Trabajo nocturno de Claude** (`docs/21-trabajo-nocturno.md`) · 69 conexiones
+7. **Trabajo nocturno de Claude** (`docs/21-trabajo-nocturno.md`) · 70 conexiones
+8. **Habilidades de los agentes** (`claude/habilidades/README.md`) · 69 conexiones
 9. **Mapa de autonomía por proceso, A0–A4 (M-045)** (`docs/29-autonomia.md`) · 66 conexiones
 10. **Varios · empresa-ia** (`CLAUDE.md`) · 65 conexiones
 11. **Auditoría de agentes y habilidades frente a los procesos (M-040)** (`docs/28-auditoria-agentes.md`) · 65 conexiones
@@ -30,16 +30,16 @@ Lo que más cosas conecta. Si cambia, cambia mucho.
 
 Nodos por los que pasa el camino entre comunidades distintas (intermediación).
 
-- **Registro de fuentes** · intermediación 0.14 · une la comunidad 1 con 2, 3, 4, 5, 6, 7
-- **Registro de decisiones** · intermediación 0.052 · une la comunidad 2 con 1, 3, 4, 5, 6, 7
-- **Habilidades de los agentes** · intermediación 0.042 · une la comunidad 3 con 0, 4, 5, 6, 7, 12
-- **L2 (puerta técnica)** · intermediación 0.026 · une la comunidad 11 con 1, 2, 3, 4, 5, 6
-- **Índice del conocimiento de Varios** · intermediación 0.02 · une la comunidad 6 con 1, 2, 4, 5, 7, 8
-- **Estudios** · intermediación 0.018 · une la comunidad 12 con 1, 2, 3, 4, 5, 6
-- **Guia de Arranque Proyecto v1.4 Diseno Cerrado** · intermediación 0.017 · une la comunidad 9 con 1, 2, 3, 4, 7, 8
+- **Registro de fuentes** · intermediación 0.137 · une la comunidad 1 con 2, 3, 4, 5, 6, 7
+- **Registro de decisiones** · intermediación 0.053 · une la comunidad 3 con 1, 2, 4, 5, 6, 7
+- **Habilidades de los agentes** · intermediación 0.042 · une la comunidad 2 con 0, 4, 5, 6, 7, 13
+- **L2 (puerta técnica)** · intermediación 0.029 · une la comunidad 12 con 1, 2, 3, 4, 5, 6
+- **Índice del conocimiento de Varios** · intermediación 0.021 · une la comunidad 6 con 1, 3, 4, 5, 7, 8
+- **Estudios** · intermediación 0.017 · une la comunidad 13 con 1, 2, 3, 4, 5, 6
+- **Guia de Arranque Proyecto v1.4 Diseno Cerrado** · intermediación 0.016 · une la comunidad 10 con 1, 2, 3, 4, 7, 8
 - **D-011 · Construir primero, clientes desde el 15/02/2027** · intermediación 0.011 · une la comunidad 5 con 1, 2, 3, 4, 6, 7
-- **CEO digital** · intermediación 0.01 · une la comunidad 7 con 1, 2, 3, 4, 6, 8
-- **Experto en asesorías y despachos** · intermediación 0.009 · une la comunidad 3 con 0, 1, 7, 10, 11
+- **Administración** · intermediación 0.01 · une la comunidad 2 con 0, 1, 7, 11, 12
+- **Trabajo nocturno de Claude** · intermediación 0.01 · une la comunidad 3 con 1, 4, 5, 6, 7, 9
 
 ## Conexiones sorprendentes
 
@@ -66,13 +66,13 @@ Cohesión 0.05 · 108 nodos: Legal y privacidad; Arquitecto de procesos; Segurid
 
 Cohesión 0.06 · 105 nodos: Registro de fuentes; Coordinación sectorial y seguros; Responsable de cumplimiento normativo; Experto en sanidad privada; Experto en servicios financieros no bancarios; Especialista legal y privacidad; Experto en logística y transporte; Catálogo de excepciones al abrir un siniestro (y 97 más)
 
-### 2 · docs · Registro de decisiones y Trabajo nocturno de Claude
-
-Cohesión 0.09 · 98 nodos: Registro de decisiones; Trabajo nocturno de Claude; Informe de la mañana · 27/11/2026; Plan maestro: la empresa completa, sin que se escape nada; Informe de la mañana · 26/11/2026; Base de datos (D-023, propuesta); Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue; 17 · Cerebro, conocimiento y procesos: auditoría e informe (y 90 más)
-
-### 3 · claude/habilidades · Habilidades de los agentes y Administración
+### 2 · claude/habilidades · Habilidades de los agentes y Administración
 
 Cohesión 0.1 · 93 nodos: Habilidades de los agentes; Administración; Experto en asesorías y despachos; Backend; Agentes de la oficina; Arquitecto de procesos; Director financiero; Legal y privacidad (y 85 más)
+
+### 3 · docs · Registro de decisiones y Trabajo nocturno de Claude
+
+Cohesión 0.11 · 64 nodos: Registro de decisiones; Trabajo nocturno de Claude; Informe de la mañana · 27/11/2026; Base de datos (D-023, propuesta); Plan maestro: la empresa completa, sin que se escape nada; Informe de la mañana · 26/11/2026; 17 · Cerebro, conocimiento y procesos: auditoría e informe; Varios — repositorio maestro (y 56 más)
 
 ### 4 · processes/runbooks · Auditoría de agentes y habilidades frente a los procesos (M-040) y Dependencias entre procesos
 
@@ -94,19 +94,23 @@ Cohesión 0.12 · 45 nodos: CEO digital; Varios · empresa-ia; Especialista en c
 
 Cohesión 0.52 · 36 nodos: P22 · Gestión de errores y reintentos; Catálogo de procesos P01–P38; P28 · Gestión de incidentes; P22 · Gestión de errores y reintentos; P27 · Gestión de proveedores y dependencias; P13 · Aprendizaje y actualización de la wiki; P05 · Diseño del plan; P25 · Gestión de cambios y versiones (y 28 más)
 
-### 9 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Flujo ceo
+### 9 · knowledge/plantillas · Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue y Matriz de aprobaciones · BORRADOR
 
-Cohesión 0.38 · 31 nodos: Guia de Arranque Proyecto v1.4 Diseno Cerrado; Flujo ceo; Ejecucion agentes; Motor conocimiento obsidian; 12 · Ciclo de vida de un proyecto con cliente; Comunicaciones estados; Calidad gobierno; 08 · Seguridad, identidad y aislamiento de clientes (y 23 más)
+Cohesión 0.21 · 35 nodos: Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue; G0 (puerta de cliente); L0 (puerta técnica); Matriz de aprobaciones · BORRADOR; Plantillas de entregables al cliente (E1); Propuesta de diagnóstico · Atalaya Correduría de Seguros (FICTICIA); G2 (puerta de cliente); G6 (puerta de cliente) (y 27 más)
 
-### 10 · knowledge/administracion-finanzas · Experto en asesorías, gestorías y despachos y Especialista en contabilidad y facturación
+### 10 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Flujo ceo
+
+Cohesión 0.37 · 31 nodos: Guia de Arranque Proyecto v1.4 Diseno Cerrado; Flujo ceo; Ejecucion agentes; Motor conocimiento obsidian; 12 · Ciclo de vida de un proyecto con cliente; Comunicaciones estados; Calidad gobierno; 08 · Seguridad, identidad y aislamiento de clientes (y 23 más)
+
+### 11 · knowledge/administracion-finanzas · Experto en asesorías, gestorías y despachos y Especialista en contabilidad y facturación
 
 Cohesión 0.23 · 25 nodos: Experto en asesorías, gestorías y despachos; Especialista en contabilidad y facturación; Director financiero (CFO); Especialista administrativo; Especialista financiero; VERIFACTU-RDL43 · Real Decreto-ley 43/2026: aplazamiento de la adaptación de los sistemas informáticos de facturación (Verifactu); Especialista en contabilidad y facturación; AEAT-FACTURA-CAL · Factura electrónica obligatoria: calendario de implantación (y 17 más)
 
-### 11 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Conversaciones con IA y evaluación
+### 12 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Conversaciones con IA y evaluación
 
 Cohesión 0.55 · 11 nodos: Acta de protección de la IA y examen de 50 casos; L2 (puerta técnica); Conversaciones con IA y evaluación; Reunión: IA y evaluación y Seguridad; Conversaciones con CEO digital; Conversaciones con Plan y seguimiento; Conversaciones con Bibliotecario; Conversaciones con Registro de decisiones (y 3 más)
 
-### 12 · knowledge/estudios · Estudios y Integraciones
+### 13 · knowledge/estudios · Estudios y Integraciones
 
 Cohesión 0.43 · 8 nodos: Estudios; Integraciones; Motor de conocimiento; Contratos de datos; Estudio de prospectos: automatización para pymes (Álvaro, noviembre de 2026); Pruebas de integración; Conocimiento; Conectores
 
@@ -134,10 +138,10 @@ Cohesión 0.43 · 8 nodos: Estudios; Integraciones; Motor de conocimiento; Contr
 _Preguntas que este grafo ayuda a responder o que conviene decidir:_
 
 - **¿Por qué «Registro de fuentes» conecta la comunidad 1 con las comunidades 2, 3, 4, 5?**
-  _Intermediación alta (0.14): es un puente entre temas._
-- **¿Por qué «Registro de decisiones» conecta la comunidad 2 con las comunidades 1, 3, 4, 5?**
-  _Intermediación alta (0.052): es un puente entre temas._
-- **¿Por qué «Habilidades de los agentes» conecta la comunidad 3 con las comunidades 0, 4, 5, 6?**
+  _Intermediación alta (0.137): es un puente entre temas._
+- **¿Por qué «Registro de decisiones» conecta la comunidad 3 con las comunidades 1, 2, 4, 5?**
+  _Intermediación alta (0.053): es un puente entre temas._
+- **¿Por qué «Habilidades de los agentes» conecta la comunidad 2 con las comunidades 0, 4, 5, 6?**
   _Intermediación alta (0.042): es un puente entre temas._
 - **¿Se aprueba D-019 · Calidad exigente, todo pasa por un socio y cada rechazo se rehace aprendiendo? Sigue en propuesta y la citan 19 secciones.**
   _Una decisión en propuesta que ya sostiene mucho contenido._

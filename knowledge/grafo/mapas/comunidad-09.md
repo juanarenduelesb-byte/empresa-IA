@@ -1,46 +1,46 @@
 ---
 tipo: "mapa"
 comunidad: 9
-miembros: 31
-cohesion: 0.38
+miembros: 35
+cohesion: 0.21
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 9 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Flujo ceo
+# Comunidad 9 · knowledge/plantillas · Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue y Matriz de aprobaciones · BORRADOR
 
-31 nodos agrupados por el algoritmo de Louvain. Cohesión 0.38.
+35 nodos agrupados por el algoritmo de Louvain. Cohesión 0.21.
 
 ## Documentos
 
-- [[docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado|Guia de Arranque Proyecto v1.4 Diseno Cerrado]]
-- [[docs/fuentes/02_02_flujo_ceo|Flujo ceo]]
-- [[docs/fuentes/04_04_ejecucion_agentes|Ejecucion agentes]]
-- [[docs/fuentes/03_03_motor_conocimiento_obsidian|Motor conocimiento obsidian]]
-- [[docs/atlas/12-ciclo-proyecto|12 · Ciclo de vida de un proyecto con cliente]]
-- [[docs/fuentes/09_09_comunicaciones_estados|Comunicaciones estados]]
-- [[docs/fuentes/06_06_calidad_gobierno|Calidad gobierno]]
-- [[docs/atlas/08-seguridad|08 · Seguridad, identidad y aislamiento de clientes]]
-- [[docs/fuentes/05_05_seguridad_clientes|Seguridad clientes]]
-- [[docs/fuentes/08_08_ciclo_vida_proyecto|Ciclo vida proyecto]]
-- [[docs/16-correcciones|Registro de correcciones a los documentos recibidos el 17/11/2026]]
-- [[docs/atlas/07-conocimiento|07 · Motor de conocimiento con Obsidian]]
-- [[docs/atlas/README|Atlas de diagramas]]
-- [[docs/atlas/16-estados|16 · Estados de un encargo]]
-- [[docs/atlas/02-flujo-ceo|02 · Flujo completo del CEO digital]]
-- [[docs/fuentes/07_07_infraestructura_portabilidad|Infraestructura portabilidad]]
-- [[docs/atlas/04-ejecucion|04 · Ejecución: motor de procesos, agentes y herramientas]]
-- [[docs/atlas/05-gateway|05 · Puerta de herramientas]]
-- [[docs/atlas/09-calidad|09 · Calidad, evaluación y aprobación humana]]
-- [[docs/atlas/00-arquitectura|00 · Arquitectura del cerebro digital]]
-- [[docs/atlas/03-decisiones-ceo|03 · Las cinco decisiones del CEO]]
-- [[docs/atlas/15-componentes|15 · Conversación entre componentes]]
-- [[docs/atlas/14-incidentes|14 · Operación y respuesta a incidentes]]
-- [[docs/atlas/01-organizacion|01 · Organización: modelo matricial]]
-- [[docs/atlas/11-infraestructura|11 · Infraestructura, desarrollo y portabilidad]]
-- [[docs/atlas/10-cambios-modelos|10 · Cambios y elección de modelos de IA]]
-- [[docs/14-reglas-del-ceo|Reglas del CEO digital]]
-- [[docs/atlas/13-ciclo-dato|13 · Ciclo de vida de un dato]]
-- [[docs/atlas/06-fallos|06 · Fallos, reintentos y recuperación]]
-- [[docs/03-ceo-digital-y-orquestacion|CEO digital y orquestación]]
-- [[precedents/lessons-learned/2026-11-correcciones-documentales|Lección: los documentos base también tienen errores]]
+- [[docs/fuentes/Atlas_Evolucion_v1.1_Modelo_Operativo_Procesos_y_Despliegue|Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue]]
+- [[governance/legal/borradores/05-matriz-aprobaciones|Matriz de aprobaciones · BORRADOR]]
+- [[knowledge/plantillas/entregables/README|Plantillas de entregables al cliente (E1)]]
+- [[precedents/projects/caso-correduria-atalaya/entregables/01-propuesta-diagnostico|Propuesta de diagnóstico · Atalaya Correduría de Seguros (FICTICIA)]]
+- [[knowledge/plantillas/entregables/01-propuesta-diagnostico|Propuesta de diagnóstico · (Cliente)]]
+- [[knowledge/plantillas/entregables/02-informe-diagnostico|Informe de diagnóstico · (Cliente) · (Proceso)]]
+- [[knowledge/plantillas/entregables/rubrica|Rúbrica de calidad de entregables y listas de comprobación (C3)]]
+- [[docs/08-roadmap-y-decisiones|Roadmap y decisiones]]
+- [[knowledge/plantillas/ficha-cliente|Plantilla · Ficha de cliente]]
+- [[knowledge/plantillas/entregables/03-diseno-to-be|Diseño del proceso nuevo (TO-BE) · (Cliente) · (Proceso)]]
+- [[knowledge/plantillas/entregables/04-plan-piloto|Plan de piloto · (Cliente) · (Proceso)]]
+- [[knowledge/metodologias-transversales/guion-validacion-semanal|Guion de la conversación semanal de validación]]
+- [[knowledge/metodologias-transversales/cuestionario-descubrimiento|Cuestionario de descubrimiento por puertas (G0–G2)]]
+- [[docs/05-agentes-procesos-e-integraciones|Agentes, procesos e integraciones]]
+- [[precedents/projects/caso-correduria-atalaya/entregables/01-propuesta-diagnostico.revision|Revisión con la rúbrica C3 · Propuesta de diagnóstico de Atalaya (FICTICIA)]]
+- [[knowledge/plantillas/entregables/05-informe-mensual-operacion|Informe mensual de operación · (Cliente) · (Mes)]]
+- [[knowledge/glosario/README|Glosario]]
+- [[knowledge/metodologias-transversales/README|Metodologías transversales]]
+- [[docs/01-vision-y-modelo-operativo|Visión y modelo operativo]]
+- [[knowledge/metodologias-transversales/contrastar|Protocolo: contrastar el conocimiento interno y el externo]]
+- [[knowledge/plantillas/entregables/06-acta-reunion|Acta de reunión · (Cliente) · (Tema) · (Fecha)]]
+
+## Decisiones
+
+- [[knowledge/grafo/decisiones/D-009|D-009 · Unificación de puertas y estados]]
+- [[knowledge/grafo/decisiones/D-002|D-002 · Modelo matricial]]
+
+## Fuentes
+
+- [[knowledge/grafo/fuentes/LEI-VSM|LEI-VSM · Value Stream Mapping (léxico del Lean Enterprise Institute)]]
+- [[knowledge/grafo/fuentes/MOM-TEST|MOM-TEST · The Mom Test (Rob Fitzpatrick): cómo hablar con clientes sin que te mientan]]

@@ -31,3 +31,7 @@ Resultado de hoy: oráculo 25/25, ingenuo 12/25 con las trampas 5/5. Las 13 que 
 1. Adaptador real con Claude que implemente `Modelo.senales` y que pase el mismo banco. El umbral de acierto está pendiente de decidir (22/01/2027).
 2. Medir el coste de cada ejecución.
 3. Añadir al banco cada error que encuentren los socios. Así crece hasta los 50 casos del examen (S9).
+
+## En la base de datos (A5)
+
+La semilla (`python -m varios.db.semilla`) carga estos casos inventados en PostgreSQL, repartidos entre los dos clientes de ejemplo, y `--vaciar` los quita. Reparto, riesgo y pruebas: [docs/24, «Datos de ejemplo»](../../docs/24-base-de-datos.md#datos-de-ejemplo-a5). Si cambias los casos, la prueba `tests/db/test_semilla.py` comprueba que la base sigue coincidiendo.

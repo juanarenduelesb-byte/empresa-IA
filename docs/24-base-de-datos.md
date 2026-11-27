@@ -11,6 +11,7 @@ PostgreSQL 16 es la fuente operativa (D-004). Código en `src/varios/db/`, migra
 | `solicitud` | El encargo, con su estado (`encargo.json`), su riesgo y hasta cuándo está pospuesto | P01, P02 |
 | `plan`, `tarea` | Plan del encargo y sus tareas, con reintentos y clave de idempotencia | P05, P06, P08, P22 |
 | `documento` | Documentos recibidos, identificados por su huella y en cuarentena hasta revisarlos | P07, P20 |
+| `poliza` | Cartera del cliente que usa el proceso de referencia (número, ramo, aseguradora y vigencia). Inventada hasta L2 (A5, D-032) | Proceso de referencia |
 | `aprobacion` | Aprobaciones humanas, con su hora de caducidad. La base de datos impide aprobar lo que pide uno mismo, y una caducada no tiene aprobador | P10 |
 | `evento_auditoria` | Todo cambio y toda acción. Nadie puede modificarlo ni borrarlo, tampoco el propietario | P15, P17 |
 | `ejecucion_modelo` | Cada llamada a un modelo de IA, con coste, tokens y resultado | P16, P29 |
@@ -34,7 +35,23 @@ La aplicación entra con el usuario `varios_app`, sin privilegios. Las migracion
 
 - **Con Docker:** `cp .env.example .env`, cambiar las contraseñas y ejecutar `docker compose up --build`. Después, http://localhost:8000/health.
 - **Sin Docker:** `python3 tools/pg_local.py` arranca un PostgreSQL desechable si está instalado. Luego, con `VARIOS_DATABASE_URL_ADMIN` apuntando a él, `alembic upgrade head`.
-- **Datos de ejemplo** (todos inventados): `python -m varios.db.semilla`.
+- **Datos de ejemplo** (todos inventados): `python -m varios.db.semilla` carga; `python -m varios.db.semilla --vaciar` quita los de A5. Con Docker: `docker compose exec api python -m varios.db.semilla`.
+
+## Datos de ejemplo (A5)
+
+La semilla carga, además de los dos clientes inventados (Correduría Atalaya y el señuelo de aislamiento) con sus usuarios:
+
+| Qué | De dónde | Cómo se reparte | Atalaya | Señuelo |
+|---|---|---|---|---|
+| 11 pólizas (tabla `poliza`) | `processes/referencia-seguros-apertura-siniestros/casos/cartera.json` | Por ramo: hogar y comercio a Atalaya; automóvil, RC y accidentes al señuelo | 6 | 5 |
+| 20 siniestros (encargos «Siniestro S01…») | `…/casos/casos.json` (el mensaje va en la descripción) | Con el cliente de su póliza; sin póliza, a Atalaya | 16 | 4 |
+| 25 encargos del Control A («Control A N01…») | `processes/ceo-control-a/encargos.json` | Alternos en el orden del archivo | 13 | 12 |
+
+Todos entran en RECIBIDO. **Riesgo:** el de los encargos del Control A sale de las reglas fijas del CEO (`varios.ceo.decision.REGLAS`) aplicadas a las señales etiquetadas de cada caso; el de los siniestros es alto si hay daños personales, una persona vulnerable o fallecida, dinero o un juzgado o atestado, y medio en el resto (abrirlo acaba en un envío a la aseguradora con el OK de un socio). Es una propuesta: lo ajusta quien valide los casos.
+
+Los identificadores son fijos, así que cargar dos veces no duplica y `--vaciar` quita solo estas filas: lo que haya creado una persona no se toca. Sus tareas y aprobaciones se van con ellas; la auditoría se queda, porque no se puede borrar. Las pruebas (`tests/db/test_semilla.py`) comprueban que cada caso de los archivos está una vez y en un solo cliente, que cada siniestro está con su póliza y que, por la API, cada cliente ve solo lo suyo.
+
+**Prueba de humo (27/11/2026, A5).** PostgreSQL desechable, migraciones, semilla y la API; la oficina en Chromium con el token de cada cliente: en «Encargos» la de Atalaya muestra sus 29 ejemplos (16 siniestros y 13 encargos del Control A, además de sus dos solicitudes de siempre) y la del señuelo sus 16 (4 y 12, además de la suya), y ninguna muestra uno del otro. Sin errores en la consola. **Arreglado:** la imagen de Docker solo copiaba `processes/definitions`, así que `docker compose exec api python -m varios.db.semilla` no habría encontrado el registro de fuentes (`tools/org_data`) ni los casos; ahora los copia y la semilla los busca también en la carpeta de trabajo.
 - **Pruebas:** `python -m pytest -q`. Usan `VARIOS_TEST_DATABASE_URL` o un PostgreSQL desechable. CI levanta PostgreSQL como servicio.
 
 ## Carga del cerebro

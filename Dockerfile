@@ -4,7 +4,9 @@ COPY pyproject.toml ./
 COPY src ./src
 COPY migrations ./migrations
 COPY alembic.ini ./
-COPY processes/definitions ./processes/definitions
+# processes: definiciones y casos inventados de la semilla (A5); tools/org_data: registro de fuentes de la semilla.
+COPY processes ./processes
+COPY tools/org_data ./tools/org_data
 COPY oficina ./oficina
 RUN pip install --no-cache-dir .
 EXPOSE 8000

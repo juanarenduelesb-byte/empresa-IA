@@ -29,3 +29,7 @@
 | Pasar a una persona | S04, S05, S08, S11, S12, S13, S14, S15, S17, S18, S19, S20 |
 
 Casos sin ninguna excepción: S01 y S03. Casos con varias a la vez: S12, S13 y S20.
+
+## En la base de datos (A5)
+
+La semilla (`python -m varios.db.semilla`) carga estos casos inventados en PostgreSQL, repartidos entre los dos clientes de ejemplo, y `--vaciar` los quita. Reparto, riesgo y pruebas: [docs/24, «Datos de ejemplo»](../../../docs/24-base-de-datos.md#datos-de-ejemplo-a5). Si cambias los casos, la prueba `tests/db/test_semilla.py` comprueba que la base sigue coincidiendo.

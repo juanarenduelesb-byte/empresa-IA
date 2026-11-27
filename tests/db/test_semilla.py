@@ -114,3 +114,31 @@ def test_vaciar_quita_solo_los_ejemplos(base, motor_admin, motor_app):
         assert s.execute(text("SELECT count(*) FROM poliza")).scalar() == 0
     assert vaciar(base[0]) == {"polizas": 0, "solicitudes": 0}
     cargar(base[0])  # se puede volver a cargar
+
+
+def test_cada_alta_y_cada_baja_de_la_semilla_queda_en_la_auditoria(base, motor_admin, motor_app):
+    """La semilla escribe sin pasar por la API, pero deja el mismo rastro: un alta por ejemplo, sin duplicar al
+    repetir la carga, y una baja por cada ejemplo que quita --vaciar. La base se comparte entre pruebas y la
+    auditoría no se puede borrar, así que solo se cuentan los eventos de esta prueba."""
+    vaciar(base[0])
+    with motor_admin.connect() as c:
+        desde = c.execute(text("SELECT coalesce(max(id), 0) FROM evento_auditoria")).scalar()
+    ej = ejemplos()
+    mios = {slug: {f"solicitud:{_id('ejemplo', slug, x['id'])}" for k in ("siniestros", "encargos") for x in ej[k]
+                   if x["cliente"] == slug} for slug, *_ in CLIENTES}
+
+    def objetos(s, accion):
+        return s.execute(text("SELECT objeto FROM evento_auditoria WHERE accion = :a AND actor = 'sistema:semilla' "
+                              "AND id > :d"), {"a": accion, "d": desde}).scalars().all()
+
+    cargar(base[0])
+    cargar(base[0])
+    for slug, *_ in CLIENTES:
+        with sesion_de_cliente(motor_app, _id("cliente", slug)) as s:
+            altas = objetos(s, "alta")
+            assert len(altas) == len(set(altas)) and set(altas) == mios[slug]
+    vaciar(base[0])
+    for slug, *_ in CLIENTES:
+        with sesion_de_cliente(motor_app, _id("cliente", slug)) as s:
+            bajas = objetos(s, "baja")
+            assert len(bajas) == len(set(bajas)) and set(bajas) == mios[slug]

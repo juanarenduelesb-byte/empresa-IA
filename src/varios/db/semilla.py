@@ -5,7 +5,8 @@ Carga, con la conexión de administrador:
 - dos clientes inventados (una correduría y un señuelo) con dos usuarios cada uno y unas solicitudes;
 - A5: las 11 pólizas y los 20 siniestros del proceso de referencia y los 25 encargos del Control A, leídos de sus
   archivos (`processes/…/casos/` y `processes/ceo-control-a/`) y repartidos entre los dos clientes (ver `REPARTO`).
-Se puede ejecutar varias veces: no duplica (los identificadores son fijos).
+Se puede ejecutar varias veces: no duplica (los identificadores son fijos). Cada alta y cada baja deja su evento
+en la auditoría con el actor `sistema:semilla`.
 
 Uso: VARIOS_DATABASE_URL_ADMIN=... python -m varios.db.semilla            (cargar)
      VARIOS_DATABASE_URL_ADMIN=... python -m varios.db.semilla --vaciar   (quitar los ejemplos de A5)
@@ -66,6 +67,19 @@ REPARTO_RAMO = {"hogar": "atalaya", "comercio": "atalaya", "automovil": "senuelo
 ALTO_SI = ("danos_personales", "vulnerable_o_fallecimiento", "movimiento_dinero", "reclamacion_judicial_o_atestado")
 
 
+ACTOR = "sistema:semilla"
+
+
+def _auditar(c, cliente_id: uuid.UUID, accion: str, solicitud_id: uuid.UUID, antes: str | None,
+             despues: str | None, motivo: str) -> None:
+    """Deja en la auditoría el alta o la baja de un ejemplo, como hace la API con cada cambio (la semilla escribe con
+    la conexión de administrador y no pasa por el repositorio)."""
+    c.execute(text("INSERT INTO evento_auditoria (cliente_id, actor, accion, objeto, antes, despues, motivo, datos) "
+                   "VALUES (:c, :a, :ac, :o, :an, :d, :m, CAST(:da AS json))"),
+              {"c": cliente_id, "a": ACTOR, "ac": accion, "o": f"solicitud:{solicitud_id}", "an": antes, "d": despues,
+               "m": motivo, "da": json.dumps({"solicitud": str(solicitud_id)})})
+
+
 def _json(ruta: Path) -> dict:
     return json.loads((RAIZ / ruta).read_text(encoding="utf-8"))
 
@@ -115,17 +129,22 @@ def _cargar_ejemplos(c) -> dict[str, int]:
             cuenta["polizas"] += r.rowcount
         for clave, tipo in (("siniestros", "siniestros"), ("encargos", "encargos_control_a")):
             for x in (y for y in ej[clave] if y["cliente"] == slug):
+                sid = _id("ejemplo", slug, x["id"])
                 r = c.execute(text("INSERT INTO solicitud (id, cliente_id, autor_id, titulo, descripcion, riesgo) "
-                                   "VALUES (:i, :c, :a, :t, :d, :r) ON CONFLICT DO NOTHING"),
-                              {"i": _id("ejemplo", slug, x["id"]), "c": _id("cliente", slug), "a": _autor(slug),
+                                   "VALUES (:i, :c, :a, :t, :d, :r) ON CONFLICT DO NOTHING RETURNING estado"),
+                              {"i": sid, "c": _id("cliente", slug), "a": _autor(slug),
                                "t": x["titulo"], "d": x["descripcion"], "r": x["riesgo"]})
-                cuenta[tipo] += r.rowcount
+                estado = r.scalar()
+                if estado is not None:
+                    cuenta[tipo] += 1
+                    _auditar(c, _id("cliente", slug), "alta", sid, None, estado, f"Ejemplo inventado {x['id']} (A5)")
     return cuenta
 
 
 def vaciar(url: str) -> dict[str, int]:
     """Quita los ejemplos de A5 (solo las filas con los identificadores fijos de la semilla; lo que hayan creado las
-    personas no se toca). Sus tareas y aprobaciones se van con ellos; la auditoría no se borra nunca (es inmutable)."""
+    personas no se toca). Sus tareas y aprobaciones se van con ellos; la auditoría no se borra nunca (es inmutable) y
+    cada baja deja su evento, igual que cada alta de la semilla."""
     cuenta = {"polizas": 0, "solicitudes": 0}
     ej = ejemplos()
     e = create_engine(url)
@@ -135,7 +154,11 @@ def vaciar(url: str) -> dict[str, int]:
             ids = [_id("ejemplo", slug, x["id"]) for k in ("siniestros", "encargos") for x in ej[k]
                    if x["cliente"] == slug]
             pol = [_id("poliza", slug, p["numero"]) for p in ej["polizas"] if p["cliente"] == slug]
-            cuenta["solicitudes"] += c.execute(text("DELETE FROM solicitud WHERE id = ANY(:i)"), {"i": ids}).rowcount
+            borradas = c.execute(text("DELETE FROM solicitud WHERE id = ANY(:i) RETURNING id, estado"),
+                                 {"i": ids}).all()
+            for sid, estado in borradas:
+                _auditar(c, _id("cliente", slug), "baja", sid, estado, None, "Ejemplo de A5 quitado con --vaciar")
+            cuenta["solicitudes"] += len(borradas)
             cuenta["polizas"] += c.execute(text("DELETE FROM poliza WHERE id = ANY(:i)"), {"i": pol}).rowcount
     e.dispose()
     return cuenta
@@ -171,10 +194,14 @@ def cargar(url: str) -> dict[str, int]:
                               {"i": uid, "c": cid, "e": email, "n": nom, "r": str(roles).replace("'", '"')})
                 cuenta["usuarios"] += r.rowcount
             for titulo, riesgo in solicitudes:
+                sid = _id("solicitud", slug, titulo)
                 r = c.execute(text("INSERT INTO solicitud (id, cliente_id, autor_id, titulo, riesgo) "
-                                   "VALUES (:i, :c, :a, :t, :r) ON CONFLICT DO NOTHING"),
-                              {"i": _id("solicitud", slug, titulo), "c": cid, "a": autor, "t": titulo, "r": riesgo})
-                cuenta["solicitudes"] += r.rowcount
+                                   "VALUES (:i, :c, :a, :t, :r) ON CONFLICT DO NOTHING RETURNING estado"),
+                              {"i": sid, "c": cid, "a": autor, "t": titulo, "r": riesgo})
+                estado = r.scalar()
+                if estado is not None:
+                    cuenta["solicitudes"] += 1
+                    _auditar(c, cid, "alta", sid, None, estado, "Ejemplo inventado de la semilla")
         cuenta.update(_cargar_ejemplos(c))
     e.dispose()
     return cuenta

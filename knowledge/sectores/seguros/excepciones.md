@@ -88,7 +88,7 @@ tags:
 ## EX-09 · Indicios de fraude o datos incoherentes
 - **Disparador:** fechas imposibles, contradicciones entre documentos o con el historial.
 - **Regla:** No acusar ni rechazar; marcar para revisión. La pérdida de la indemnización exige dolo o culpa grave, y eso no lo decide una máquina.
-- **IA:** Señala la incoherencia concreta, sin calificarla.
+- **IA:** Señala la incoherencia concreta, sin calificarla. Las fechas imposibles y un ramo distinto del de la póliza los comprueba el código, sin esperar a la IA.
 - **Decide:** persona.
 - **Base:** con fuente · [LCS-50-1980](../../fuentes/registro.md#lcs-50-1980), [INT-ATLAS](../../fuentes/registro.md#int-atlas)
 

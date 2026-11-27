@@ -38,7 +38,7 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 - [[processes/catalog/P22-gestion-de-errores-y-reintentos|P22 · Gestión de errores y reintentos]] · 64 vecinos
 - [[processes/catalog/P28-gestion-de-incidentes|P28 · Gestión de incidentes]] · 63 vecinos
 - [[knowledge/direccion/ceo-digital|CEO digital]] · 60 vecinos
-- [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]] · 58 vecinos
+- [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]] · 60 vecinos
 - [[knowledge/procesos/arquitecto-procesos|Arquitecto de procesos]] · 50 vecinos
 
 ## Puentes entre temas

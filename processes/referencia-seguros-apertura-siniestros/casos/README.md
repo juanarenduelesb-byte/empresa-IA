@@ -10,12 +10,14 @@
 
 ## Cómo se usa
 - `src/varios/seguros/apertura.py` aplica con código fijo el [catálogo de excepciones](../../../knowledge/sectores/seguros/excepciones.md). Plazos, listas y umbrales salen de [`dominio.json`](../../../knowledge/sectores/seguros/dominio.json).
+- El ramo lo da la póliza de la cartera, no el mensaje. Las incoherencias que se pueden comprobar con código (ocurrencia posterior a la recepción, conocimiento anterior a la ocurrencia, ramo del mensaje distinto del de la póliza) saltan como EX-09 aunque la IA no las vea.
 - `tests/test_casos_siniestros.py` comprueba:
   - que los 20 casos cumplen el esquema;
   - que cada excepción EX-01 a EX-15 tiene al menos un caso;
   - que hay casos limpios y salen las cuatro acciones;
   - que las reglas dan exactamente lo esperado;
-  - que el plazo se lee del dominio, no del código.
+  - que el plazo se lee del dominio, no del código;
+  - que las incoherencias comprobables y el ramo de la póliza no dependen de la IA.
 - Más adelante (S6–S9), la IA leerá `mensaje` y se medirá cuánto se parecen sus hechos a `hechos`. Esa será la parte del examen de 50 casos que mide la extracción.
 
 ## Cobertura

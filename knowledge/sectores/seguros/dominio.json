@@ -219,7 +219,7 @@
    "disparador": "fechas imposibles, contradicciones entre documentos o con el historial",
    "regla": "No acusar ni rechazar; marcar para revisión. La pérdida de la indemnización exige dolo o culpa grave, y eso no lo decide una máquina.",
    "decide": "persona",
-   "ia": "Señala la incoherencia concreta, sin calificarla.",
+   "ia": "Señala la incoherencia concreta, sin calificarla. Las fechas imposibles y un ramo distinto del de la póliza los comprueba el código, sin esperar a la IA.",
    "fuentes": [
     "LCS-50-1980",
     "INT-ATLAS"

@@ -5,7 +5,7 @@ from pathlib import Path
 
 import pytest
 
-from varios.seguros.apertura import Caso, Poliza, dominio, evaluar
+from varios.seguros.apertura import Caso, Hechos, Poliza, dominio, evaluar
 
 RAIZ = Path(__file__).resolve().parents[1]
 DIR = RAIZ / "processes" / "referencia-seguros-apertura-siniestros" / "casos"
@@ -61,3 +61,25 @@ def test_el_plazo_sale_del_dominio_y_no_del_codigo(monkeypatch):
     next(p for p in d["plazos"] if p["id"] == "PL-COMUNICACION")["dias"] = 30
     monkeypatch.setattr("varios.seguros.apertura.dominio", lambda: d)
     assert "EX-01" not in evaluar(c.hechos, c.fecha_recepcion, CARTERA).excepciones
+
+
+@pytest.mark.parametrize("cambio, texto", [
+    ({"fecha_ocurrencia": "2026-11-30", "fecha_conocimiento": "2026-11-30"}, "posterior a la de recepción"),
+    ({"fecha_conocimiento": "2026-11-18"}, "anterior a la de ocurrencia"),
+    ({"ramo": "automovil"}, "la póliza es de hogar"),
+])
+def test_las_incoherencias_que_se_pueden_comprobar_las_ve_el_codigo(cambio, texto):
+    """EX-09 no depende de que la IA vea fechas imposibles o un ramo que no es el de la póliza."""
+    c = next(c for c in CASOS if c.id == "S01")
+    h = Hechos.model_validate({**c.hechos.model_dump(), **cambio})
+    r = evaluar(h, c.fecha_recepcion, CARTERA)
+    assert "EX-09" in r.excepciones and texto in r.detalle["EX-09"]
+    assert r.accion == "pasar_a_persona"
+
+
+def test_el_ramo_lo_da_la_poliza_y_no_el_mensaje():
+    """Con dos vehículos, EX-05 (convenio) depende del ramo de la póliza aunque el mensaje diga otro."""
+    c = next(c for c in CASOS if c.id == "S06")
+    h = Hechos.model_validate({**c.hechos.model_dump(), "ramo": "hogar"})
+    r = evaluar(h, c.fecha_recepcion, CARTERA)
+    assert "EX-05" in r.excepciones and "EX-09" in r.excepciones

@@ -100,12 +100,28 @@ def _meses(desde: date, hasta: date) -> int:
     return (hasta.year - desde.year) * 12 + hasta.month - desde.month - (hasta.day < desde.day)
 
 
+def _incoherencias_fijas(h: Hechos, recepcion: date, pol: Poliza | None) -> list[str]:
+    """Incoherencias que se comprueban con código, sin depender de que la IA las vea (EX-09).
+
+    Solo se señalan; no se califican ni se acusa a nadie (catálogo de excepciones, EX-09).
+    """
+    out = []
+    if h.fecha_ocurrencia and h.fecha_ocurrencia > recepcion:
+        out.append("La fecha de ocurrencia es posterior a la de recepción")
+    if h.fecha_ocurrencia and h.fecha_conocimiento and h.fecha_conocimiento < h.fecha_ocurrencia:
+        out.append("La fecha de conocimiento es anterior a la de ocurrencia")
+    if pol and h.ramo and h.ramo != pol.ramo:
+        out.append(f"El mensaje habla de {h.ramo}, pero la póliza es de {pol.ramo}")
+    return out
+
+
 def evaluar(h: Hechos, recepcion: date, cartera: dict[str, Poliza]) -> Resultado:
     """Aplica las reglas del catálogo de excepciones (EX-01 a EX-15) a unos hechos."""
     r = dominio()["reglas"]
     ex: dict[str, str] = {}
     pol = cartera.get(h.poliza_numero) if h.poliza_numero else None
-    ramo = h.ramo or (pol.ramo if pol else None)
+    # La cartera manda: el ramo de la póliza es un dato del sistema; el del mensaje lo extrae la IA.
+    ramo = pol.ramo if pol else h.ramo
 
     faltan = [n for n, v in (("póliza", h.poliza_numero), ("fecha de ocurrencia", h.fecha_ocurrencia),
                              ("descripción", h.hay_descripcion), ("contacto", h.hay_contacto)) if not v]
@@ -145,8 +161,9 @@ def evaluar(h: Hechos, recepcion: date, cartera: dict[str, Poliza]) -> Resultado
         ex["EX-07"] = "Hay una queja: un mes para resolver"
     if h.pide_persona:
         ex["EX-08"] = "Pide hablar con una persona"
-    if h.incoherencias:
-        ex["EX-09"] = "; ".join(h.incoherencias)
+    incoherencias = list(h.incoherencias) + _incoherencias_fijas(h, recepcion, pol)
+    if incoherencias:
+        ex["EX-09"] = "; ".join(incoherencias)
 
     if h.fecha_ocurrencia:
         personas = ramo in r["ramos_de_personas"]["lista"]

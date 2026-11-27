@@ -3,239 +3,301 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Varios · IA que se firma</title>
+<title>Varios · IA con control</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-/* VOICE: sereno y preciso, como una ficha de producto; pocas palabras, mucho aire.
-   IDEA: el expediente de siniestro como objeto de cristal: la IA lo rellena, tu equipo lo firma.
-   PICTURE: una tarjeta de expediente flotando sobre una aurora suave, con el botón Aprobar como protagonista.
-   COLOUR and TYPE: porcelana y grafito, un solo índigo eléctrico; Geist en todo, titulares semibold muy prietos.
-   LAYOUT: bloques centrados, tarjetas de cristal con 28 px de radio, una banda oscura para los límites. */
+/* VOICE: sereno y preciso, como una ficha de producto; los textos salen del repositorio (docs/00 y docs/26).
+   IDEA: el expediente de siniestro como objeto de cristal: la IA lo prepara, vuestro equipo lo firma.
+   PICTURE: un expediente que se rellena solo sobre una aurora suave, y un pago que se desbloquea al cumplirse la métrica.
+   COLOUR and TYPE: porcelana y grafito con un solo índigo eléctrico; Geist en todo.
+   LAYOUT: bloques centrados, cristal con radios grandes, escenas fijas que avanzan al bajar. */
 :root{color-scheme:light dark;
 --bg:light-dark(#f5f5f3,#09090c);--bg2:light-dark(#ffffff,#111116);--ink:light-dark(#111114,#f2f2f5);--soft:light-dark(#5d5f66,#a1a3ad);
 --line:light-dark(rgba(17,17,20,.09),rgba(255,255,255,.09));--glass:light-dark(rgba(255,255,255,.62),rgba(28,28,36,.55));
---acc:light-dark(#3a3af4,#7c7cff);--acc2:light-dark(#ececff,#1c1c3a);--a1:light-dark(#c9ccff,#2b2b8a);--a2:light-dark(#d7ecf7,#123047);--a3:light-dark(#ffe0d2,#3b1e2c)}
+--acc:light-dark(#3a3af4,#7c7cff);--acc2:light-dark(#ececff,#1c1c3a);--ok:light-dark(#178a4a,#4ade80);--a1:light-dark(#c9ccff,#2b2b8a);--a2:light-dark(#d7ecf7,#123047);--a3:light-dark(#ffe0d2,#3b1e2c)}
 :root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
 *{box-sizing:border-box;min-width:0}
 html{scroll-behavior:smooth;scroll-padding-top:80px}
 body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 'Geist',-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif;overflow-x:clip;-webkit-font-smoothing:antialiased}
 h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.035em;text-wrap:balance}
-h1{font-size:clamp(46px,8vw,112px);line-height:.98;letter-spacing:-.05em}
+h1{font-size:clamp(42px,7vw,96px);line-height:1;letter-spacing:-.05em}
 h2{font-size:clamp(34px,4.6vw,60px);line-height:1.04}
 h3{font-size:21px;line-height:1.25;letter-spacing:-.02em}
 p{margin:0}
 .wrap{max-width:1180px;margin:0 auto;padding:0 max(5vw,20px)}
-.sec{padding:clamp(80px,11vw,160px) 0}
+.sec{padding:clamp(80px,11vw,150px) 0}
 .c{text-align:center}.c .lead{margin-inline:auto}
 .kick{color:var(--acc);font-weight:500;font-size:17px;margin-bottom:14px}
-.lead{color:var(--soft);font-size:clamp(18px,1.7vw,22px);line-height:1.45;max-width:36ch;margin-top:20px;font-weight:400}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 26px;border-radius:999px;font:500 16px 'Geist',sans-serif;text-decoration:none;border:0;cursor:pointer;transition:transform .3s cubic-bezier(.3,1.4,.5,1),background .2s,opacity .2s}
+.lead{color:var(--soft);font-size:clamp(18px,1.7vw,22px);line-height:1.45;max-width:40ch;margin-top:20px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 26px;border-radius:999px;font:500 16px 'Geist',sans-serif;text-decoration:none;border:0;cursor:pointer;transition:transform .35s cubic-bezier(.3,1.4,.5,1),background .2s}
 .btn:hover{transform:scale(1.03)}.btn:active{transform:scale(.98)}
 .bp{background:var(--acc);color:#fff}.bg{background:var(--glass);color:var(--ink);box-shadow:inset 0 0 0 1px var(--line);backdrop-filter:blur(20px)}
 a:focus-visible,.btn:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
-/* navegación */
 nav.top{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:20;width:min(1100px,calc(100% - 28px));display:flex;align-items:center;gap:10px 26px;padding:8px 8px 8px 20px;border-radius:999px;background:var(--glass);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);box-shadow:inset 0 0 0 1px var(--line),0 10px 30px rgba(0,0,0,.06)}
 .logo{display:flex;align-items:center;gap:9px;color:var(--ink);text-decoration:none;font-weight:600;font-size:19px;letter-spacing:-.03em}
 .links{display:flex;gap:24px;flex:1;justify-content:center}.links a{color:var(--soft);text-decoration:none;font-size:15px}.links a:hover{color:var(--ink)}
 nav .btn{min-height:40px;padding:0 18px;font-size:15px}
-/* aurora */
 .aurora{position:absolute;inset:-10% -10% auto;height:120%;z-index:-1;overflow:hidden;pointer-events:none}
 .aurora i{position:absolute;border-radius:50%;filter:blur(90px);opacity:.9;animation:drift 26s ease-in-out infinite alternate}
 .aurora i:nth-child(1){width:52vw;height:52vw;left:-8vw;top:4%;background:var(--a1)}
 .aurora i:nth-child(2){width:46vw;height:46vw;right:-6vw;top:12%;background:var(--a2);animation-duration:32s}
 .aurora i:nth-child(3){width:34vw;height:34vw;left:34vw;top:46%;background:var(--a3);animation-duration:38s}
 @keyframes drift{to{transform:translate3d(4vw,-3vw,0) scale(1.08)}}
-/* héroe */
-.hero{position:relative;isolation:isolate;padding:clamp(150px,18vw,210px) 0 clamp(70px,9vw,120px);text-align:center}
-.hero .lead{margin-inline:auto;max-width:40ch}
+.hero{position:relative;isolation:isolate;padding:clamp(150px,17vw,200px) 0 clamp(60px,8vw,110px);text-align:center}
+.hero .lead{margin-inline:auto;max-width:46ch}
 .cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:36px}
 .device{margin:clamp(56px,7vw,90px) auto 0;max-width:820px;perspective:1600px}
-.case{background:var(--glass);backdrop-filter:blur(30px) saturate(170%);-webkit-backdrop-filter:blur(30px) saturate(170%);border-radius:32px;box-shadow:inset 0 1px 0 rgba(255,255,255,.6),inset 0 0 0 1px var(--line),0 40px 80px -20px rgba(30,30,80,.25);padding:clamp(20px,3vw,32px);text-align:left;transform:rotateX(8deg);transform-origin:50% 0;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
-.device.on .case{transform:none}
+.case{background:var(--glass);backdrop-filter:blur(30px) saturate(170%);-webkit-backdrop-filter:blur(30px) saturate(170%);border-radius:32px;box-shadow:inset 0 1px 0 rgba(255,255,255,.6),inset 0 0 0 1px var(--line),0 40px 80px -20px rgba(30,30,80,.25);padding:clamp(20px,3vw,32px);text-align:left;transform:rotateX(var(--tilt,10deg)) scale(var(--sc,.96));transform-origin:50% 0;will-change:transform}
 .case-h{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;align-items:center;padding-bottom:18px;border-bottom:1px solid var(--line)}
-.pill{display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;background:var(--acc2);color:var(--acc);font-size:13px;font-weight:500}
-.dot{width:7px;height:7px;border-radius:50%;background:currentColor}
+.pill{display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;background:var(--acc2);color:var(--acc);font-size:13px;font-weight:500;transition:background .4s,color .4s}
+.pill.done{background:light-dark(#e6f6ec,#0f2a1b);color:var(--ok)}
+.dot{width:7px;height:7px;border-radius:50%;background:currentColor;animation:pulse 1.2s ease-in-out infinite}.pill.done .dot{animation:none}
+@keyframes pulse{50%{opacity:.25}}
 .rows{display:grid;gap:4px;margin-top:14px}
-.row{display:grid;grid-template-columns:110px minmax(0,1fr) auto;gap:16px;align-items:center;padding:14px 16px;border-radius:18px}
-.row:nth-child(odd){background:var(--bg2)}
+.row{display:grid;grid-template-columns:120px minmax(0,1fr) auto;gap:16px;align-items:center;padding:14px 16px;border-radius:18px;opacity:0;transform:translateY(10px);transition:opacity .5s,transform .5s cubic-bezier(.2,.8,.2,1)}
+.row.in{opacity:1;transform:none}.row:nth-child(odd){background:var(--bg2)}
 .row small{color:var(--soft);font-size:14px}.row span{font-size:15px}.row em{font-style:normal;font-size:13px;color:var(--soft);white-space:nowrap}
-.ok{color:#1f9d55}.warn{color:#c2410c}
 .case-f{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-top:18px;padding-top:18px;border-top:1px solid var(--line)}
 .case-f p{color:var(--soft);font-size:14px}
+.approve{min-height:44px;opacity:.35;transition:opacity .5s,transform .35s cubic-bezier(.3,1.4,.5,1)}.approve.ready{opacity:1;animation:nudge 2.4s 1s ease-in-out infinite}
+@keyframes nudge{0%,100%{box-shadow:0 0 0 0 rgba(58,58,244,.45)}50%{box-shadow:0 0 0 10px rgba(58,58,244,0)}}
 .sample{margin-top:16px;color:var(--soft);font-size:13px}
-/* frase */
-.say{font-size:clamp(34px,5.4vw,72px);line-height:1.08;font-weight:600;letter-spacing:-.045em;max-width:18ch;margin:0 auto;text-align:center}
-.say span{color:var(--soft);opacity:.35;transition:opacity .6s,color .6s}.say span.lit{opacity:1;color:var(--ink)}
-/* tarjetas */
+.say{font-size:clamp(32px,5vw,68px);line-height:1.08;font-weight:600;letter-spacing:-.045em;max-width:20ch;margin:0 auto;text-align:center}
+.say span{opacity:.18;transition:opacity .5s}.say span.lit{opacity:1}
 .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px;margin-top:56px}
 .card{background:var(--bg2);border-radius:28px;padding:34px 30px;box-shadow:inset 0 0 0 1px var(--line)}
 .card p{color:var(--soft);margin-top:10px;font-size:16px}
 .ico{width:46px;height:46px;border-radius:14px;background:var(--acc2);color:var(--acc);display:grid;place-items:center;margin-bottom:22px}
-/* pago */
-.pay{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:56px}
-.half{border-radius:32px;padding:clamp(28px,4vw,48px);min-height:300px;display:flex;flex-direction:column;justify-content:space-between;background:var(--bg2);box-shadow:inset 0 0 0 1px var(--line)}
-.half.b{background:var(--acc);color:#fff;box-shadow:none}.half.b p{color:rgba(255,255,255,.8)}
-.big{font-size:clamp(72px,11vw,150px);font-weight:600;letter-spacing:-.06em;line-height:.9}
-.half p{color:var(--soft);font-size:17px;max-width:30ch}
+/* escena fija del pago */
+.scene{height:260vh;position:relative}
+.stick{position:sticky;top:0;min-height:100vh;display:flex;align-items:center}
+.paycard{background:var(--bg2);border-radius:36px;padding:clamp(26px,4vw,52px);box-shadow:inset 0 0 0 1px var(--line),0 40px 80px -40px rgba(30,30,80,.25);margin-top:44px;text-align:left}
+.bar{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:28px}
+.seg{height:84px;border-radius:22px;background:var(--acc2);position:relative;overflow:hidden}
+.seg i{position:absolute;inset:0;background:var(--acc);transform-origin:left;transform:scaleX(var(--p,0));border-radius:22px}
+.seg b{position:absolute;left:22px;top:50%;transform:translateY(-50%);font-size:clamp(26px,3.4vw,40px);font-weight:600;letter-spacing:-.04em;color:#fff;mix-blend-mode:normal;z-index:1;transition:color .3s}
+.seg.off b{color:var(--acc)}
+.lock{position:absolute;right:20px;top:50%;transform:translateY(-50%);z-index:1;color:var(--acc);transition:color .3s}
+.seg.open .lock{color:#fff}
+.meter{margin-top:30px}
+.track{height:10px;border-radius:99px;background:var(--acc2);position:relative;margin-top:12px}
+.track i{position:absolute;inset:0 auto 0 0;width:calc(var(--m,0)*100%);border-radius:99px;background:linear-gradient(90deg,var(--a1),var(--acc))}
+.track s{position:absolute;left:70%;top:-8px;bottom:-8px;width:2px;background:var(--ink);text-decoration:none}
+.mlabels{display:flex;justify-content:space-between;color:var(--soft);font-size:14px;margin-top:12px}
+.captions{position:relative;min-height:5.6em;margin-top:26px}
+.captions p{position:absolute;inset:0;font-size:clamp(18px,1.8vw,22px);line-height:1.45;opacity:0;transform:translateY(8px);transition:opacity .5s,transform .5s}
+.captions p.on{opacity:1;transform:none}.captions b{font-weight:600}
 /* fases */
-.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:56px}
-.step{background:var(--bg2);border-radius:26px;padding:28px 24px;box-shadow:inset 0 0 0 1px var(--line);display:flex;flex-direction:column;gap:10px}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:56px;position:relative}
+.line{position:absolute;left:24px;right:24px;top:-22px;height:3px;border-radius:9px;background:var(--line)}
+.line i{position:absolute;inset:0;background:var(--acc);transform-origin:left;transform:scaleX(var(--f,0));border-radius:9px}
+.step{background:var(--bg2);border-radius:26px;padding:28px 24px;box-shadow:inset 0 0 0 1px var(--line);display:flex;flex-direction:column;gap:10px;opacity:.35;transform:translateY(16px);transition:opacity .6s,transform .6s cubic-bezier(.2,.8,.2,1)}
+.step.on{opacity:1;transform:none}
 .step small{color:var(--acc);font-weight:500;font-size:14px}.step p{color:var(--soft);font-size:15px}
 .step b{margin-top:auto;padding-top:14px;border-top:1px solid var(--line);font-weight:500;font-size:14px}
-/* oscuro */
 .dark{background:#09090c;color:#f2f2f5;border-radius:44px;margin:0 max(2vw,10px);position:relative;overflow:hidden;isolation:isolate}
 .dark::before{content:"";position:absolute;width:60%;height:70%;left:20%;top:-30%;background:radial-gradient(closest-side,rgba(124,124,255,.35),transparent);z-index:-1;filter:blur(40px)}
 .dark .lead{color:#a1a3ad}
 .never{list-style:none;padding:0;margin:56px auto 0;max-width:880px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.never li{display:flex;align-items:center;gap:14px;padding:20px 22px;border-radius:22px;background:rgba(255,255,255,.05);box-shadow:inset 0 0 0 1px rgba(255,255,255,.08);font-size:18px;font-weight:500}
+.never li{display:flex;align-items:center;gap:14px;padding:20px 22px;border-radius:22px;background:rgba(255,255,255,.05);box-shadow:inset 0 0 0 1px rgba(255,255,255,.08);font-size:18px;font-weight:500;opacity:0;transform:scale(.96);transition:opacity .5s,transform .5s cubic-bezier(.3,1.4,.5,1)}
+.never.on li{opacity:1;transform:none}
 .never svg{flex:none;color:#ff6b6b}
-/* seguros */
 .split{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:56px}
 .list{list-style:none;padding:0;margin:18px 0 0}.list li{padding:14px 0;border-top:1px solid var(--line);color:var(--soft);font-size:16px}.list li b{color:var(--ink);font-weight:500}
 .tagline{display:inline-block;margin-top:18px;font-size:13px;color:var(--soft);padding:6px 12px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--line)}
-/* contacto */
+.vs{display:grid;gap:8px;margin-top:48px;text-align:left}
+.vs div{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:20px;padding:22px 26px;border-radius:22px;background:var(--bg2);box-shadow:inset 0 0 0 1px var(--line)}
+.vs span{color:var(--soft)}.vs b{font-weight:500}
 .contact{position:relative;isolation:isolate;overflow:hidden}
 form{display:grid;gap:14px;max-width:560px;margin:48px auto 0;background:var(--glass);backdrop-filter:blur(30px);-webkit-backdrop-filter:blur(30px);border-radius:32px;padding:clamp(22px,3vw,34px);box-shadow:inset 0 0 0 1px var(--line),0 30px 60px -30px rgba(30,30,80,.25);text-align:left}
 label{display:grid;gap:7px;font-size:14px;font-weight:500;color:var(--soft)}
 input,textarea{font:16px 'Geist',sans-serif;min-height:50px;border:0;border-radius:14px;padding:12px 16px;background:var(--bg2);color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
 .msg{min-height:1.4em;font-size:14px;color:var(--acc);text-align:center}
-footer{padding:48px 0 60px;color:var(--soft);font-size:14px}
+footer{padding:48px 0 70px;color:var(--soft);font-size:14px}
 footer .wrap{display:flex;flex-wrap:wrap;gap:14px 30px;justify-content:space-between;border-top:1px solid var(--line);padding-top:28px}
 .proto{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);z-index:20;font-size:12px;color:var(--soft);background:var(--glass);backdrop-filter:blur(20px);padding:6px 14px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--line);white-space:nowrap}
 .fade{opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.2,.8,.2,1),transform 1s cubic-bezier(.2,.8,.2,1)}.fade.on{opacity:1;transform:none}
-@media(max-width:900px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.links{display:none}nav.top{justify-content:space-between}}
-@media(max-width:640px){.pay,.split,.never{grid-template-columns:1fr}.row{grid-template-columns:1fr auto}.row small{grid-column:1/-1}.steps{grid-template-columns:1fr}.proto{white-space:normal;width:calc(100% - 28px);text-align:center}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.fade{opacity:1;transform:none}.case{transform:none}.say span{opacity:1;color:var(--ink)}}
+@media(max-width:900px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.line{display:none}.links{display:none}nav.top{justify-content:space-between}}
+@media(max-width:640px){.split,.never,.bar{grid-template-columns:1fr}.row{grid-template-columns:1fr auto}.row small{grid-column:1/-1}.steps{grid-template-columns:1fr}.vs div{grid-template-columns:1fr;gap:6px}.proto{white-space:normal;width:calc(100% - 28px);text-align:center}.captions{min-height:8em}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.fade,.row,.step,.never li{opacity:1;transform:none}.say span{opacity:1}.case{transform:none}.scene{height:auto}.stick{position:static}}
 </style>
 </head>
 <body>
 <nav class="top" aria-label="Principal">
 <a class="logo" href="#inicio"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="7" fill="currentColor"/><path d="M6.5 12.4l3.6 3.6L17.5 8.5" fill="none" stroke="var(--bg)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Varios</a>
-<div class="links"><a href="#como">Cómo funciona</a><a href="#pago">Garantía</a><a href="#seguros">Seguros</a><a href="#seguridad">Seguridad</a></div>
-<a class="btn bp" href="#contacto">Hablemos</a>
+<div class="links"><a href="#como">Cómo trabajamos</a><a href="#pago">Pago 50/50</a><a href="#seguros">Seguros</a><a href="#seguridad">Seguridad</a></div>
+<a class="btn bp" href="#contacto">Pedir un diagnóstico</a>
 </nav>
 
 <header class="hero" id="inicio">
-<div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+<div class="aurora" id="aur" aria-hidden="true"><i></i><i></i><i></i></div>
 <div class="wrap">
-<p class="kick">Para corredurías de seguros</p>
-<h1>Inteligencia<br>que se firma.</h1>
-<p class="lead">La IA prepara cada siniestro. Tu equipo lo aprueba con un toque. Y solo pagas el piloto entero si funciona.</p>
-<div class="cta"><a class="btn bp" href="#contacto">Pedir un diagnóstico</a><a class="btn bg" href="#como">Ver cómo funciona</a></div>
-<div class="device" id="device">
-<div class="case" role="img" aria-label="Ejemplo de expediente de siniestro preparado por la IA y pendiente de aprobación">
-<div class="case-h"><div><h3>Daños por agua · Hogar</h3><p style="color:var(--soft);font-size:14px;margin-top:4px">Aviso recibido por correo</p></div><span class="pill"><span class="dot"></span>Listo para tu firma</span></div>
-<div class="rows">
-<div class="row"><small>Póliza</small><span>Identificada y vigente</span><em class="ok">Comprobado</em></div>
-<div class="row"><small>Plazo de aviso</small><span>Dentro de plazo</span><em class="ok">Regla</em></div>
-<div class="row"><small>Datos</small><span>Fecha, lugar y descripción extraídos</span><em>IA</em></div>
-<div class="row"><small>Falta</small><span>Fotos de los daños y factura del fontanero</span><em class="warn">Petición redactada</em></div>
-<div class="row"><small>Parte</small><span>Borrador listo para el portal de la aseguradora</span><em>IA</em></div>
+<p class="kick">IA aplicada a procesos, con control en cada paso</p>
+<h1>IA que abre siniestros con vosotros, no por vosotros.</h1>
+<p class="lead">Ayudamos a corredurías y aseguradoras medianas a que la IA haga trabajo real en un proceso concreto, como la apertura de siniestros, con una persona aprobando lo importante y un resultado medido antes de escalar.</p>
+<div class="cta"><a class="btn bp" href="#contacto">Pedir un diagnóstico de 3 semanas</a><a class="btn bg" href="#como">Ver cómo trabajamos</a></div>
+<div class="device">
+<div class="case" id="case" role="img" aria-label="Ejemplo de expediente de siniestro preparado por la IA y pendiente de la aprobación de una persona">
+<div class="case-h"><div><h3>Daños por agua · Hogar</h3><p style="color:var(--soft);font-size:14px;margin-top:4px">Aviso recibido por correo</p></div><span class="pill" id="pill"><span class="dot"></span><span id="pillT">Leyendo el aviso…</span></span></div>
+<div class="rows" id="rows">
+<div class="row"><small>Póliza y cliente</small><span>Identificados; póliza vigente</span><em>Regla fija</em></div>
+<div class="row"><small>Plazo</small><span>Dentro del plazo de comunicación</span><em>Regla fija</em></div>
+<div class="row"><small>Datos del aviso</small><span>Fecha, lugar y descripción extraídos</span><em>IA</em></div>
+<div class="row"><small>Lo que falta</small><span>Petición de documentación redactada</span><em>IA</em></div>
+<div class="row"><small>Parte</small><span>Borrador para el portal de la aseguradora</span><em>IA</em></div>
 </div>
-<div class="case-f"><p>Nada sale sin la aprobación de una persona.</p><span class="btn bp" style="min-height:44px">Aprobar y enviar</span></div>
+<div class="case-f"><p>Lo envía una persona de vuestro equipo.</p><span class="btn bp approve" id="approve">Aprobar y enviar</span></div>
 </div>
-<p class="sample">Expediente de ejemplo, con datos inventados.</p>
+<p class="sample">Ejemplo con datos inventados.</p>
 </div>
 </div>
 </header>
 
 <section class="sec" id="como"><div class="wrap">
-<p class="say" id="say"><span>La IA lee.</span> <span>El código comprueba.</span> <span>Tu equipo decide.</span></p>
+<p class="say" id="say"><span>El código fijo aplica plazos y reglas.</span> <span>La IA lee, extrae y redacta.</span> <span>Una persona de vuestro equipo aprueba lo que sale.</span></p>
 <div class="grid3">
-<div class="card fade"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h10M4 18h7"/></svg></div><h3>Lee cada aviso</h3><p>Correo, WhatsApp, teléfono o formulario. Identifica póliza y cliente, extrae los datos y detecta lo que falta.</p></div>
-<div class="card fade"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg></div><h3>Aplica tus reglas</h3><p>Vigencia, plazos y excepciones los comprueba código fijo, siempre igual. La IA no se inventa una norma.</p></div>
-<div class="card fade"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c1.2-3.5 4-5 7-5s5.8 1.5 7 5"/></svg></div><h3>Tú firmas</h3><p>Parte, petición de documentación o respuesta al cliente: todo llega preparado y nada sale sin tu aprobación.</p></div>
+<div class="card fade"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h10M4 18h7"/></svg></div><h3>Mensajes por todos los canales</h3><p>Correo, teléfono, WhatsApp y formularios. Leemos el mensaje, identificamos póliza y cliente y detectamos lo que falta.</p></div>
+<div class="card fade"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M8 12h8M12 8v8"/></svg></div><h3>Portales distintos por aseguradora</h3><p>El borrador del parte llega prellenado para el portal de cada aseguradora. Lo envía una persona.</p></div>
+<div class="card fade"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 3l8 4v5c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V7z"/></svg></div><h3>Miedo a equivocarse</h3><p>Datos de clientes, normas del sector y el Reglamento Europeo de IA, tenidos en cuenta desde el primer día.</p></div>
 </div>
 </div></section>
 
-<section class="sec" id="pago" style="padding-top:0"><div class="wrap c">
-<p class="kick">Garantía</p>
-<h2>Pagas por resultados.<br>No por promesas.</h2>
-<p class="lead">Antes de construir nada, medimos tu proceso y firmamos juntos una métrica. El piloto se paga en dos mitades.</p>
-<div class="pay">
-<div class="half fade" style="text-align:left"><span style="font-weight:500">Al empezar</span><div class="big">50 %</div><p>Construimos el piloto en tu correduría, en producción limitada.</p></div>
-<div class="half b fade" style="text-align:left"><span style="font-weight:500">Solo si funciona</span><div class="big">50 %</div><p>Si no se alcanza la métrica firmada, la segunda mitad no se paga.</p></div>
+<section class="scene" id="pago" aria-label="Pago del piloto en dos mitades">
+<div class="stick"><div class="wrap c" style="width:100%">
+<p class="kick">Pago 50/50</p>
+<h2>La segunda mitad, solo si se cumple la métrica firmada.</h2>
+<div class="paycard">
+<div class="bar">
+<div class="seg off" id="s1"><i></i><b>50 %</b></div>
+<div class="seg off" id="s2"><i></i><b>50 %</b><svg class="lock" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="3"/><path id="shack" d="M8 11V8a4 4 0 018 0v3"/></svg></div>
 </div>
-</div></section>
+<div class="meter"><div style="display:flex;justify-content:space-between;font-weight:500"><span>Métrica del piloto</span><span style="color:var(--soft)">Umbral firmado en el diseño</span></div>
+<div class="track" id="track"><i></i><s></s></div>
+<div class="mlabels"><span>Línea base medida en el diagnóstico</span><span>Umbral</span></div></div>
+<div class="captions">
+<p data-k="0"><b>Pagáis la mitad al empezar.</b> Construimos el piloto en producción limitada, con pruebas y registro de todo.</p>
+<p data-k="1"><b>Medimos contra la línea base.</b> La métrica y su umbral se firmaron en la fase de diseño, antes de construir nada.</p>
+<p data-k="2"><b>Solo si se cumple, se paga la otra mitad.</b> Si el piloto no alcanza la métrica firmada, la segunda mitad no se cobra.</p>
+</div>
+</div>
+<p class="sample">Ilustración del mecanismo; la métrica real se mide en vuestra correduría.</p>
+</div></div>
+</section>
 
-<section class="sec" style="padding-top:0"><div class="wrap c">
-<p class="kick">El camino</p>
-<h2>Empieza pequeño. Crece con datos.</h2>
-<p class="lead">Cuatro fases con precio cerrado. Al final de cada una decides si seguimos.</p>
-<div class="steps" style="text-align:left">
-<div class="step fade"><small>3 semanas</small><h3>Diagnóstico</h3><p>Medimos el proceso y dónde aporta la IA, con su riesgo.</p><b>Decides qué se diseña</b></div>
-<div class="step fade"><small>2 semanas</small><h3>Diseño</h3><p>Proceso nuevo, controles y la métrica que firmamos.</p><b>Firmas la métrica</b></div>
-<div class="step fade"><small>4 a 8 semanas</small><h3>Piloto</h3><p>Funcionando con tu equipo, en producción limitada.</p><b>Escalar, ajustar o parar</b></div>
-<div class="step fade"><small>Continua</small><h3>Operación</h3><p>Seguimiento, mejoras e informe cada mes.</p><b>Revisión trimestral</b></div>
+<section class="sec" style="padding-top:clamp(40px,6vw,80px)"><div class="wrap c">
+<p class="kick">Cuatro fases, precio cerrado por fase</p>
+<h2>Empezamos por un proceso, lo medimos y solo escalamos lo que funciona.</h2>
+<p class="lead">En cada fase decidís vosotros si seguimos.</p>
+<div class="steps" id="steps" style="text-align:left">
+<div class="line"><i></i></div>
+<div class="step"><small>3 semanas</small><h3>Diagnosticar</h3><p>Medimos el proceso actual y puntuamos dónde la IA aporta y con qué riesgo.</p><b>Qué pasa a diseño</b></div>
+<div class="step"><small>2 semanas</small><h3>Diseñar</h3><p>Proceso nuevo, controles y una métrica de éxito firmada.</p><b>Aprobar el diseño y la métrica</b></div>
+<div class="step"><small>4–8 semanas</small><h3>Construir el piloto</h3><p>En producción limitada, con el pago 50/50 ligado a la métrica.</p><b>Escalar, ajustar o parar</b></div>
+<div class="step"><small>Continuo</small><h3>Operar</h3><p>Seguimiento, actualizaciones, soporte y cuota mensual.</p><b>Revisión trimestral</b></div>
 </div>
 </div></section>
 
 <section class="sec dark"><div class="wrap c">
-<p class="kick" style="color:#9c9cff">Límites por contrato</p>
-<h2>Lo que la IA no hará nunca.</h2>
-<p class="lead">Escrito en el contrato, no en una presentación.</p>
-<ul class="never" style="text-align:left">
-<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Decidir si hay cobertura</li>
-<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Decidir quién tiene la culpa</li>
-<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Calificar un fraude</li>
-<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Fijar cuánto se paga</li>
+<p class="kick" style="color:#9c9cff">Lo que la IA no decide nunca</p>
+<h2>Las decisiones importantes son de una persona.</h2>
+<ul class="never" id="never" style="text-align:left">
+<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Si hay cobertura</li>
+<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Quién tiene la culpa</li>
+<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Si hay fraude</li>
+<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Cuánto se paga</li>
 <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Rechazar un siniestro</li>
-<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Enviar algo sin tu aprobación</li>
+<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Enviar algo fuera sin vuestro OK</li>
 </ul>
 </div></section>
 
 <section class="sec" id="seguros"><div class="wrap c">
-<p class="kick">Especialistas</p>
-<h2>Solo seguros.<br>Por eso lo hacemos bien.</h2>
-<p class="lead">Hablamos tu idioma: parte, libro de siniestros, Consorcio, convenios entre aseguradoras.</p>
+<p class="kick">Seguros y corredurías</p>
+<h2>Empezamos por un solo sector para conocerlo de verdad.</h2>
+<p class="lead">Hablamos vuestro idioma: parte, libro de siniestros, Consorcio, convenios entre aseguradoras, declaración amistosa.</p>
 <div class="split" style="text-align:left">
-<div class="card fade"><h3>Lo que prepara por ti</h3><ul class="list"><li><b>Recepción</b> en cualquier canal, con póliza y cliente identificados</li><li><b>Borrador del parte</b> para el portal de cada aseguradora</li><li><b>Petición de documentación</b> con la lista exacta de lo que falta</li><li><b>Libro de siniestros</b> al día, fecha a fecha</li></ul></div>
-<div class="card fade"><h3>Lo que siempre pasa a una persona</h3><ul class="list"><li>Riesgos extraordinarios, con posible vía Consorcio</li><li>Daños personales o fallecimiento</li><li>Un tercero que reclama</li><li>Pólizas no vigentes o recibos pendientes</li><li>Un cliente que pide hablar con alguien</li></ul></div>
+<div class="card fade"><h3>Lo que prepara la IA</h3><ul class="list"><li><b>Recepción en cualquier canal</b>, con póliza y cliente identificados</li><li><b>Borrador del parte</b>, prellenado para el portal de la aseguradora</li><li><b>Petición de documentación</b> con la lista exacta de lo que falta</li><li><b>Libro de siniestros al día</b>, con sus fechas</li></ul></div>
+<div class="card fade"><h3>Excepciones que siempre pasan a una persona</h3><ul class="list"><li>Riesgos extraordinarios (posible vía Consorcio)</li><li>Daños personales o fallecimiento</li><li>Un tercero que reclama</li><li>Pólizas no vigentes o recibos pendientes</li><li>Incoherencias en fechas o documentos</li><li>Un cliente que pide hablar con una persona</li></ul></div>
 </div>
 <span class="tagline">No somos mediadores de seguros ni damos asesoramiento jurídico.</span>
 </div></section>
 
+<section class="sec" style="padding-top:0"><div class="wrap c">
+<p class="kick">Por qué nosotros</p>
+<h2>Quien vende es quien ejecuta.</h2>
+<div class="vs">
+<div class="fade"><span>Gran consultora: 4 a 9 meses hasta producción, por horas</span><b>6 a 10 semanas hasta el piloto, con precio cerrado por fase</b></div>
+<div class="fade"><span>Agencia de automatización: sin cumplimiento ni seguridad de IA</span><b>Cumplimiento y pruebas de seguridad de serie</b></div>
+<div class="fade"><span>Equipo interno: perfiles escasos</span><b>Lo montamos y lo dejamos documentado</b></div>
+<div class="fade"><span>Una promesa de cero errores</span><b>Una métrica medida y una persona en control</b></div>
+</div>
+</div></section>
+
 <section class="sec" id="seguridad" style="padding-top:0"><div class="wrap c">
-<p class="kick">Privacidad y seguridad</p>
-<h2>Tus datos son tuyos.<br>Y se quedan contigo.</h2>
+<p class="kick">Seguridad y cumplimiento</p>
+<h2>Lo diseñamos desde el primer día, no al final.</h2>
+<p class="lead">Aquí decimos lo que hacemos; no ponemos sellos que no tenemos.</p>
 <div class="grid3" style="text-align:left">
-<div class="card fade"><h3>Separados por cliente</h3><p>Cada correduría ve solo lo suyo, garantizado en la propia base de datos y probado.</p></div>
-<div class="card fade"><h3>Sin entrenar con ellos</h3><p>Nunca usamos tus datos para entrenar modelos, ni para nosotros ni para nadie.</p></div>
-<div class="card fade"><h3>Todo queda registrado</h3><p>Quién hizo qué y quién lo aprobó, en un registro que no se puede borrar.</p></div>
-<div class="card fade"><h3>Nadie se aprueba a sí mismo</h3><p>Quien prepara algo no puede firmarlo. Ni una persona ni la IA.</p></div>
-<div class="card fade"><h3>Reglamento Europeo de IA</h3><p>Te damos por escrito qué sistema es y qué obligaciones tiene cada uno.</p></div>
-<div class="card fade"><h3>Datos reales, solo con contrato</h3><p>Hasta el piloto trabajamos con datos inventados o agregados.</p></div>
+<div class="card fade"><h3>Una persona aprueba</h3><p>Nada sale fuera, se paga o se firma sin alguien de vuestro equipo. Nadie aprueba su propio trabajo.</p></div>
+<div class="card fade"><h3>Vuestros datos, separados</h3><p>Cada cliente ve solo lo suyo, garantizado en la propia base de datos y probado.</p></div>
+<div class="card fade"><h3>Todo queda registrado</h3><p>Quién hizo qué, cuándo y qué se aprobó, en un registro que no se puede modificar.</p></div>
+<div class="card fade"><h3>Datos inventados hasta el piloto</h3><p>Los datos reales llegan solo con el contrato de encargo firmado.</p></div>
+<div class="card fade"><h3>Reglamento Europeo de IA</h3><p>Os decimos qué sistema es, qué papel tiene cada uno y qué obligaciones aplican, por escrito.</p></div>
+<div class="card fade"><h3>No entrenamos con vuestros datos</h3><p>Ni para nosotros ni para otros clientes.</p></div>
 </div>
 </div></section>
 
 <section class="sec contact" id="contacto">
 <div class="aurora" aria-hidden="true" style="top:10%"><i></i><i></i><i></i></div>
 <div class="wrap c">
-<h2>Empieza por un diagnóstico.</h2>
-<p class="lead">Tres semanas para saber dónde te ahorra tiempo la IA y con qué riesgo. Después decides.</p>
+<p class="kick">Pedir un diagnóstico</p>
+<h2>¿Qué proceso os quita más tiempo?</h2>
+<p class="lead">Contádnoslo y os proponemos una primera conversación de 30 minutos, sin compromiso.</p>
 <form id="f" novalidate>
 <label for="n">Nombre<input id="n" name="n" autocomplete="name"></label>
 <label for="e">Correo de trabajo<input id="e" name="e" type="email" autocomplete="email"></label>
-<label for="c">Correduría<input id="c" name="c" autocomplete="organization"></label>
-<label for="m">¿Qué proceso te quita más tiempo?<textarea id="m" name="m" rows="3"></textarea></label>
-<button class="btn bp" type="submit" style="width:100%;margin-top:6px">Solicitar diagnóstico</button>
+<label for="c">Empresa<input id="c" name="c" autocomplete="organization"></label>
+<label for="m">¿Qué proceso queréis mejorar?<textarea id="m" name="m" rows="3"></textarea></label>
+<p style="font-size:13px;color:var(--soft)">No incluyáis datos de vuestros clientes. Responsable del tratamiento y política de privacidad: pendientes de la forma jurídica.</p>
+<button class="btn bp" type="submit" style="width:100%;margin-top:6px">Enviar</button>
 <p class="msg" id="msg" role="status"></p>
 </form>
 </div></section>
 
-<footer><div class="wrap"><span>Varios · Consultora de IA para seguros</span><span>Aviso legal, privacidad y cookies: pendientes de la forma jurídica</span><span>© 2026</span></div></footer>
+<footer><div class="wrap"><span>Varios · IA aplicada a procesos, con control en cada paso</span><span>Aviso legal, privacidad y cookies: pendientes de la forma jurídica</span><span>© 2026</span></div></footer>
 <p class="proto">Prototipo · nombre provisional · ejemplos con datos inventados</p>
 
 <script>
 {
 const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.2});
-document.querySelectorAll('.fade,#device').forEach((el,i)=>{el.style.transitionDelay=(el.classList.contains('fade')?(i%3)*90:0)+'ms';io.observe(el)});
-const parts=[...document.querySelectorAll('#say span')];
-const light=()=>{const r=document.getElementById('say').getBoundingClientRect(),h=innerHeight;const p=Math.min(1,Math.max(0,(h*.85-r.top)/(h*.5)));parts.forEach((s,i)=>s.classList.toggle('lit',rm||p>i/parts.length+.05))};
-addEventListener('scroll',light,{passive:true});light();
-document.getElementById('f').addEventListener('submit',ev=>{ev.preventDefault();document.getElementById('msg').textContent='Es un prototipo: la solicitud no se ha enviado.'});
+const $=id=>document.getElementById(id);
+const clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
+// expediente que se rellena al cargar
+const rows=[...$('rows').children];
+const fill=()=>{rows.forEach((r,i)=>setTimeout(()=>r.classList.add('in'),rm?0:500+i*420));setTimeout(()=>{$('pill').classList.add('done');$('pillT').textContent='Listo para vuestra firma';$('approve').classList.add('ready')},rm?0:500+rows.length*420+200)};
+fill();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.25});
+document.querySelectorAll('.fade,#never').forEach((el,i)=>{el.style.transitionDelay=(i%3)*90+'ms';io.observe(el)});
+document.querySelectorAll('#never li').forEach((li,i)=>li.style.transitionDelay=i*80+'ms');
+const say=[...$('say').children],steps=[...$('steps').querySelectorAll('.step')],caps=[...document.querySelectorAll('.captions p')];
+const onScroll=()=>{
+const h=innerHeight,y=scrollY;
+$('aur').style.transform='translate3d(0,'+(y*.25)+'px,0)';
+const cr=$('case').getBoundingClientRect();const k=clamp(1-(cr.top-h*.25)/(h*.6));
+$('case').style.setProperty('--tilt',(10*(1-k))+'deg');$('case').style.setProperty('--sc',(.96+.04*k));
+const sr=$('say').getBoundingClientRect();const sp=clamp((h*.85-sr.top)/(h*.55));say.forEach((s,i)=>s.classList.toggle('lit',rm||sp>i/say.length+.08));
+const sc=$('pago'),r=sc.getBoundingClientRect(),p=clamp(-r.top/(r.height-h));
+const a=clamp(p/.3),m=clamp((p-.3)/.4),u=clamp((p-.72)/.2);
+$('s1').style.setProperty('--p',a);$('s1').classList.toggle('off',a<.5);$('track').style.setProperty('--m',.38+.42*m);
+$('s2').style.setProperty('--p',u);$('s2').classList.toggle('off',u<.5);$('s2').classList.toggle('open',u>.5);
+$('shack').setAttribute('d',u>.5?'M8 11V8a4 4 0 017.6-1.7':'M8 11V8a4 4 0 018 0v3');
+const ci=p<.3?0:p<.72?1:2;caps.forEach((c,i)=>c.classList.toggle('on',i===ci));
+const st=$('steps').getBoundingClientRect();const f=clamp((h*.8-st.top)/(st.height+h*.2));
+$('steps').querySelector('.line').style.setProperty('--f',f);steps.forEach((s,i)=>s.classList.toggle('on',rm||f>i/steps.length));
+};
+if(rm){steps.forEach(s=>s.classList.add('on'));say.forEach(s=>s.classList.add('lit'));$('s1').style.setProperty('--p',1);$('s1').classList.remove('off');$('s2').style.setProperty('--p',1);$('s2').classList.remove('off');$('s2').classList.add('open');$('track').style.setProperty('--m',.8);caps.forEach(c=>{c.classList.add('on');c.style.position='static';c.style.marginBottom='10px'})}
+else{addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);onScroll()}
+$('f').addEventListener('submit',ev=>{ev.preventDefault();$('msg').textContent='Es un prototipo: el mensaje no se ha enviado.'});
 }
 </script>
 </body>

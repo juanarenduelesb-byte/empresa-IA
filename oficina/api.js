@@ -67,7 +67,9 @@
     var destino = DESTINO[t.status];
     // Una pregunta es una pregunta: si en la API ya espera a una persona (por ejemplo, ESCALADO tras caducar), no se
     // mueve para que coincida el nombre del estado; eso dejaría en la auditoría pasos que nadie dio.
-    if (t.status === 'preg' && DESDE_API[api.estado] === 'preg') destino = api.estado;
+    // Lo mismo si el estado de la API ya corresponde al de la oficina (por ejemplo, decidido en otra oficina), y una
+    // pregunta también vale para un encargo devuelto a RETRABAJO: espera a que una persona decida cómo seguir.
+    if (DESDE_API[api.estado] === t.status || (t.status === 'preg' && api.estado === 'RETRABAJO')) destino = api.estado;
     if (destino && destino !== api.estado) {
       var antes = api.estado;
       if (destino === 'PENDIENTE_APROBACION' || destino === 'ENTREGADO' || antes === 'PENDIENTE_APROBACION') {
@@ -230,7 +232,16 @@
         if (api.caduca) c.caduca = api.caduca;
         if (pos) c.pospuesto = pos;
         else if (t.pospuesto && t.api.pospuesto === t.pospuesto) c.pospuesto = null;  // la API lo retiró
-        if (caducada && t.status === 'aprob') {
+        var decidida = ap && (ap.decision === 'aprobada' || ap.decision === 'rechazada') && t.status === 'aprob' &&
+          e.estado !== 'PENDIENTE_APROBACION' && t.api.aprobacion === ap.id;
+        if (decidida) {
+          // La decidió otra oficina: esta oficina se pone al día y no la vuelve a pedir ni reabre el encargo.
+          api.aprobacion = '';
+          var st = ap.decision === 'aprobada' ? 'hecha' : e.estado === 'RECHAZADO' ? 'rech' : 'preg';
+          Object.assign(c, {status: st, caduca: null});
+          if (st === 'preg') c.question = 'Otra persona lo devolvió para rehacerlo: ' + (ap.motivo || 'sin motivo') + '. Decide cómo seguir.';
+          A.ops.actualizar(t.id, c, 'Decidido en la API por otra persona (' + ap.decision + '): ' + (ap.motivo || ''));
+        } else if (caducada && t.status === 'aprob') {
           Object.assign(c, {status: 'preg', caducada: iso(ap.decidida_en), caduca: null, question: 'La aprobación ' +
             'caducó sin que nadie la decidiera. No se ha aprobado ni enviado nada. Revísala y decide si sigue.'});
           A.ops.actualizar(t.id, c, 'Caducada la aprobación en la API: no continúa, vuelve a Inicio');

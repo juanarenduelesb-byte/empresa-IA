@@ -1,28 +1,30 @@
 ---
 tipo: "mapa"
 comunidad: 11
-miembros: 11
-cohesion: 0.55
+miembros: 9
+cohesion: 0.42
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 11 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Conversaciones con IA y evaluación
+# Comunidad 11 · knowledge/administracion-finanzas · Director financiero (CFO) y Especialista financiero
 
-11 nodos agrupados por el algoritmo de Louvain. Cohesión 0.55.
+9 nodos agrupados por el algoritmo de Louvain. Cohesión 0.42.
 
 ## Documentos
 
-- [[precedents/oficina/encargos/2026-11/2026-11-17-acta-de-proteccion-de-la-ia-y-examen-de-50-casos-6sxjn|Acta de protección de la IA y examen de 50 casos]]
-- [[precedents/oficina/chats/ia-y-evaluacion|Conversaciones con IA y evaluación]]
-- [[precedents/oficina/encargos/2026-11/2026-11-17-reunion-ia-y-evaluacion-y-seguridad-zyn2w|Reunión: IA y evaluación y Seguridad]]
-- [[precedents/oficina/chats/ceo-digital|Conversaciones con CEO digital]]
-- [[precedents/oficina/chats/plan-y-seguimiento|Conversaciones con Plan y seguimiento]]
-- [[precedents/oficina/chats/registro-de-decisiones|Conversaciones con Registro de decisiones]]
-- [[precedents/oficina/chats/bibliotecario|Conversaciones con Bibliotecario]]
-- [[precedents/oficina/chats/seguridad|Conversaciones con Seguridad]]
+- [[knowledge/administracion-finanzas/direccion-financiera|Director financiero (CFO)]]
+- [[knowledge/administracion-finanzas/financiero|Especialista financiero]]
 
-## Decisiones
+## Especialistas
 
-- [[knowledge/grafo/decisiones/D-013|D-013 · Conocimiento y catálogo de procesos generados desde datos]]
-- [[knowledge/grafo/decisiones/D-017|D-017 · La oficina se vuelca cada noche a GitHub y las automatizaciones van por GitHub Actions]]
+- [[knowledge/administracion-finanzas/direccion-financiera|Director financiero (CFO)]]
+- [[knowledge/administracion-finanzas/financiero|Especialista financiero]]
+
+## Fuentes
+
+- [[knowledge/grafo/fuentes/PGC-PYMES|PGC-PYMES · Real Decreto 1515/2007, Plan General de Contabilidad de Pymes]]
+- [[knowledge/grafo/fuentes/LIS-27-2014|LIS-27-2014 · Ley 27/2014, del Impuesto sobre Sociedades]]
+- [[knowledge/grafo/fuentes/LEY-STARTUPS-28-2022|LEY-STARTUPS-28-2022 · Ley 28/2022, de fomento del ecosistema de las empresas emergentes]]
+- [[knowledge/grafo/fuentes/CDTI-NEOTEC-2026|CDTI-NEOTEC-2026 · Programa NEOTEC 2026 (CDTI)]]
+- [[knowledge/grafo/fuentes/ENISA-2026|ENISA-2026 · ENISA: préstamos participativos (líneas 2026)]]

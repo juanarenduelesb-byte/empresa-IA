@@ -6,7 +6,7 @@ Cómo está conectado el cerebro de Varios: qué sostiene todo, qué temas forma
 ## Resumen
 
 - 5237 nodos: seccion 4481, documento 390, fuente 143, habilidad 65, proceso 38, especialista 34, agente 34, decision 33, puerta 12, departamento 7.
-- 7564 relaciones: 64 % EXTRACTADAS (escritas en la fuente), 35 % INFERIDAS (temas compartidos, con puntuación) y 40 AMBIGUAS (para revisar).
+- 7570 relaciones: 64 % EXTRACTADAS (escritas en la fuente), 35 % INFERIDAS (temas compartidos, con puntuación) y 40 AMBIGUAS (para revisar).
 - 14 comunidades de temas.
 
 ## Nodos centrales
@@ -16,7 +16,7 @@ Lo que más cosas conecta. Si cambia, cambia mucho.
 1. **Registro de fuentes** (`knowledge/fuentes/registro.md`) · 249 conexiones
 2. **Registro de decisiones** (`DECISIONS.md`) · 143 conexiones
 3. **Índice del conocimiento de Varios** (`knowledge/INDEX.md`) · 123 conexiones
-4. **Guia de Arranque Proyecto v1.4 Diseno Cerrado** (`docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado.md`) · 84 conexiones
+4. **Guia de Arranque Proyecto v1.4 Diseno Cerrado** (`docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado.md`) · 85 conexiones
 5. **Catálogo de procesos P01–P38** (`processes/catalog/README.md`) · 83 conexiones
 6. **L2 (puerta técnica)** · 75 conexiones
 7. **Trabajo nocturno de Claude** (`docs/21-trabajo-nocturno.md`) · 75 conexiones
@@ -30,8 +30,8 @@ Lo que más cosas conecta. Si cambia, cambia mucho.
 
 Nodos por los que pasa el camino entre comunidades distintas (intermediación).
 
-- **Registro de fuentes** · intermediación 0.15 · une la comunidad 0 con 2, 3, 4, 5, 6, 7
-- **Registro de decisiones** · intermediación 0.053 · une la comunidad 3 con 0, 2, 4, 5, 6, 7
+- **Registro de fuentes** · intermediación 0.149 · une la comunidad 0 con 2, 3, 4, 5, 6, 7
+- **Registro de decisiones** · intermediación 0.052 · une la comunidad 3 con 0, 2, 4, 5, 6, 7
 - **Habilidades de los agentes** · intermediación 0.039 · une la comunidad 2 con 1, 4, 5, 6, 9, 13
 - **L2 (puerta técnica)** · intermediación 0.028 · une la comunidad 12 con 0, 2, 3, 4, 5, 7
 - **Índice del conocimiento de Varios** · intermediación 0.022 · une la comunidad 6 con 0, 2, 3, 4, 5, 7
@@ -138,9 +138,9 @@ Cohesión 0.43 · 8 nodos: Estudios; Integraciones; Motor de conocimiento; Contr
 _Preguntas que este grafo ayuda a responder o que conviene decidir:_
 
 - **¿Por qué «Registro de fuentes» conecta la comunidad 0 con las comunidades 2, 3, 4, 5?**
-  _Intermediación alta (0.15): es un puente entre temas._
+  _Intermediación alta (0.149): es un puente entre temas._
 - **¿Por qué «Registro de decisiones» conecta la comunidad 3 con las comunidades 0, 2, 4, 5?**
-  _Intermediación alta (0.053): es un puente entre temas._
+  _Intermediación alta (0.052): es un puente entre temas._
 - **¿Por qué «Habilidades de los agentes» conecta la comunidad 2 con las comunidades 1, 4, 5, 6?**
   _Intermediación alta (0.039): es un puente entre temas._
 - **¿Se aprueba D-019 · Calidad exigente, todo pasa por un socio y cada rechazo se rehace aprendiendo? Sigue en propuesta y la citan 22 secciones.**

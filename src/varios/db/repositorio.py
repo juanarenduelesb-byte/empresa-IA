@@ -163,9 +163,9 @@ class Repositorio:
     def mover_tarea(self, tarea_id: uuid.UUID, a: str, motivo: str, clave: str | None = None) -> Tarea:
         """Cambio de estado de una tarea según objetos.json (N3c). Cada cambio deja auditoría.
 
-        Una tarea que pide aprobación (needs_approval) solo pasa a hecha (succeeded) con una persona con rol de
-        aprobación que no sea quien la puso a esperar ni el autor del encargo (las mismas reglas que las
-        aprobaciones, P10)."""
+        De una tarea que pide aprobación (needs_approval) solo sale (a succeeded, running o cancelled) una persona con
+        rol de aprobación que no sea quien la puso a esperar ni el autor del encargo (las mismas reglas que las
+        aprobaciones, P10). Una tarea que alguna vez pidió aprobación solo acaba en succeeded aprobándola."""
         t = self.tarea(tarea_id)
         sol = self.solicitud(t.solicitud_id, bloquear=True)  # primero el encargo, como en el resto de operaciones
         self.sesion.refresh(t, with_for_update=True)
@@ -177,18 +177,23 @@ class Repositorio:
             raise TransicionInvalida(f"Un encargo en {sol.estado} no admite cambios en sus tareas")
         if not MAQUINA_TAREA.permitida(t.estado, a):
             raise TransicionInvalida(f"Tarea: {t.estado} → {a} no está permitida")
-        if t.estado == "needs_approval" and a == "succeeded":
+        q = (select(EventoAuditoria.actor)
+             .where(EventoAuditoria.cliente_id == self.cliente_id, EventoAuditoria.objeto == f"tarea:{t.id}",
+                    EventoAuditoria.despues == "needs_approval")
+             .order_by(EventoAuditoria.id.desc()).limit(1))
+        pidio = self.sesion.scalar(q)  # quien la puso a esperar la última vez (None si nunca pidió aprobación)
+        if t.estado == "needs_approval":
+            # Toda salida de needs_approval (aprobar, devolver a running o cancelar) es de un aprobador, como las de
+            # PENDIENTE_APROBACION (Guía v1.4 §4): si no, se volvía a running y de ahí a succeeded sin aprobar.
             if not self.quien.persona:
-                raise AprobacionInvalida("Solo una persona puede aprobar")
+                raise AprobacionInvalida("Solo una persona puede decidir una tarea que pide aprobación")
             if "aprobador" not in self.quien.roles:
                 raise AprobacionInvalida("Falta el rol de aprobación")
-            q = (select(EventoAuditoria.actor)
-                 .where(EventoAuditoria.cliente_id == self.cliente_id, EventoAuditoria.objeto == f"tarea:{t.id}",
-                        EventoAuditoria.despues == "needs_approval")
-                 .order_by(EventoAuditoria.id.desc()).limit(1))
-            if self.quien.usuario in (self.sesion.scalar(q), str(sol.autor_id)):
+            if self.quien.usuario in (pidio, str(sol.autor_id)):
                 # Igual que en decidir_aprobacion: ni quien la pidió ni el autor del encargo.
-                raise AprobacionInvalida("Nadie aprueba lo que ha pedido él mismo")
+                raise AprobacionInvalida("Nadie decide lo que ha pedido él mismo")
+        elif a == "succeeded" and pidio is not None:
+            raise TransicionInvalida("Esta tarea pidió aprobación: solo se da por hecha aprobándola")
         antes = t.estado
         t.estado = a
         self.sesion.flush()

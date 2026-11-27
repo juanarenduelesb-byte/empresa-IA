@@ -30,7 +30,7 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 - [[knowledge/fuentes/registro|Registro de fuentes]] · 249 vecinos
 - [[DECISIONS|Registro de decisiones]] · 143 vecinos
 - [[knowledge/INDEX|Índice del conocimiento de Varios]] · 123 vecinos
-- [[docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado|Guia de Arranque Proyecto v1.4 Diseno Cerrado]] · 84 vecinos
+- [[docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado|Guia de Arranque Proyecto v1.4 Diseno Cerrado]] · 85 vecinos
 - [[processes/catalog/README|Catálogo de procesos P01–P38]] · 83 vecinos
 - L2 (puerta técnica) · 75 vecinos
 - [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]] · 75 vecinos
@@ -59,9 +59,9 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 ## Preguntas abiertas
 
 - ¿Por qué «Registro de fuentes» conecta la comunidad 0 con las comunidades 2, 3, 4, 5?  
-  Intermediación alta (0.15): es un puente entre temas.
+  Intermediación alta (0.149): es un puente entre temas.
 - ¿Por qué «Registro de decisiones» conecta la comunidad 3 con las comunidades 0, 2, 4, 5?  
-  Intermediación alta (0.053): es un puente entre temas.
+  Intermediación alta (0.052): es un puente entre temas.
 - ¿Por qué «Habilidades de los agentes» conecta la comunidad 2 con las comunidades 1, 4, 5, 6?  
   Intermediación alta (0.039): es un puente entre temas.
 - ¿Se aprueba D-019 · Calidad exigente, todo pasa por un socio y cada rechazo se rehace aprendiendo? Sigue en propuesta y la citan 22 secciones.  

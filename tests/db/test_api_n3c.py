@@ -200,3 +200,24 @@ def test_el_autor_del_encargo_no_da_por_buena_una_tarea_aunque_la_pida_otro(api,
         assert api.post(url, json={"a": a, "motivo": a}, headers=h(aprobador2)).status_code == 200
     ok = {"a": "succeeded", "motivo": "Visto"}
     assert api.post(url, json=ok, headers=h(aprobador)).status_code == 403
+
+
+def test_una_tarea_que_pide_aprobacion_no_se_da_por_hecha_dando_un_rodeo(api, gente):  # noqa: F811
+    """Repaso de N3c (tanda 23:30): de needs_approval se puede volver a running, y de running a succeeded no hacía
+    falta aprobador, así que quien la puso a esperar (o un agente) la daba por hecha en dos pasos. Ahora toda salida
+    de needs_approval es de un aprobador, como las de PENDIENTE_APROBACION (Guía v1.4 §4), y una tarea que pidió
+    aprobación solo acaba en succeeded aprobándola."""
+    aprobador, aprobador2, agente = gente["aprobador"], gente["aprobador2"], gente["agente"]
+    _, t = _con_tarea(api, aprobador)
+    url = f"/tareas/{t['id']}/estado"
+    for a in ("running", "needs_approval"):
+        assert api.post(url, json={"a": a, "motivo": a}, headers=h(aprobador)).status_code == 200
+    for quien in (aprobador, agente):
+        for a in ("running", "cancelled"):
+            assert api.post(url, json={"a": a, "motivo": "rodeo"}, headers=h(quien)).status_code == 403, (quien, a)
+    # Otro aprobador la devuelve a trabajar: después no se da por hecha sin volver a pedir aprobación.
+    assert api.post(url, json={"a": "running", "motivo": "Falta un dato"}, headers=h(aprobador2)).status_code == 200
+    for quien in (aprobador, aprobador2):
+        assert api.post(url, json={"a": "succeeded", "motivo": "x"}, headers=h(quien)).status_code == 409
+    assert api.post(url, json={"a": "needs_approval", "motivo": "Corregido"}, headers=h(aprobador)).status_code == 200
+    assert api.post(url, json={"a": "succeeded", "motivo": "Visto"}, headers=h(aprobador2)).status_code == 200

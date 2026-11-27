@@ -10,10 +10,10 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 
 ## Comunidades
 
-- [[knowledge/grafo/mapas/comunidad-00|Comunidad 0 · claude/habilidades · Habilidades de los agentes y Administración]] (109 nodos)
+- [[knowledge/grafo/mapas/comunidad-00|Comunidad 0 · claude/habilidades · Habilidades de los agentes y Administración]] (110 nodos)
 - [[knowledge/grafo/mapas/comunidad-01|Comunidad 1 · Habilidades · Legal y privacidad y Arquitecto de procesos]] (101 nodos)
-- [[knowledge/grafo/mapas/comunidad-02|Comunidad 2 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros]] (97 nodos)
-- [[knowledge/grafo/mapas/comunidad-03|Comunidad 3 · docs · Registro de decisiones y Trabajo nocturno de Claude]] (83 nodos)
+- [[knowledge/grafo/mapas/comunidad-02|Comunidad 2 · docs · Registro de decisiones y Trabajo nocturno de Claude]] (95 nodos)
+- [[knowledge/grafo/mapas/comunidad-03|Comunidad 3 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros]] (84 nodos)
 - [[knowledge/grafo/mapas/comunidad-04|Comunidad 4 · processes/runbooks · Auditoría de agentes y habilidades frente a los procesos (M-040) y Dependencias entre procesos]] (67 nodos)
 - [[knowledge/grafo/mapas/comunidad-05|Comunidad 5 · precedents/oficina · Propuesta de proceso de referencia: siniestros en corredurías y Conversaciones con Coordinación sectorial · Seguros]] (59 nodos)
 - [[knowledge/grafo/mapas/comunidad-06|Comunidad 6 · processes/catalog · P22 · Gestión de errores y reintentos y Catálogo de procesos P01–P38]] (45 nodos)
@@ -38,29 +38,29 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 - [[processes/catalog/P22-gestion-de-errores-y-reintentos|P22 · Gestión de errores y reintentos]] · 64 vecinos
 - [[processes/catalog/P28-gestion-de-incidentes|P28 · Gestión de incidentes]] · 63 vecinos
 - [[docs/28-auditoria-agentes|Auditoría de agentes y habilidades frente a los procesos (M-040)]] · 63 vecinos
-- [[knowledge/direccion/ceo-digital|CEO digital]] · 60 vecinos
 - [[docs/29-autonomia|Mapa de autonomía por proceso, A0–A4 (M-045)]] · 60 vecinos
-- [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]] · 51 vecinos
+- [[knowledge/direccion/ceo-digital|CEO digital]] · 59 vecinos
+- [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]] · 52 vecinos
 - [[knowledge/procesos/arquitecto-procesos|Arquitecto de procesos]] · 50 vecinos
 
 ## Puentes entre temas
 
-- [[knowledge/fuentes/registro|Registro de fuentes]] · conecta las comunidades 0, 3, 4, 5, 6, 7
-- [[DECISIONS|Registro de decisiones]] · conecta las comunidades 0, 2, 4, 5, 7, 8
+- [[knowledge/fuentes/registro|Registro de fuentes]] · conecta las comunidades 0, 2, 4, 5, 6, 7
+- [[DECISIONS|Registro de decisiones]] · conecta las comunidades 0, 3, 4, 5, 7, 8
 - [[claude/habilidades/README|Habilidades de los agentes]] · conecta las comunidades 4, 5, 8, 9, 10, 12
 - L2 (puerta técnica) · conecta las comunidades 0, 2, 3, 4, 5, 6
 - [[knowledge/INDEX|Índice del conocimiento de Varios]] · conecta las comunidades 0, 2, 3, 4, 5, 6
-- [[docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado|Guia de Arranque Proyecto v1.4 Diseno Cerrado]] · conecta las comunidades 0, 3, 4, 6, 9
+- [[docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado|Guia de Arranque Proyecto v1.4 Diseno Cerrado]] · conecta las comunidades 0, 2, 4, 6, 9
 - [[knowledge/estudios/README|Estudios]] · conecta las comunidades 0, 2, 3, 4, 5, 6
 - [[knowledge/grafo/decisiones/D-011|D-011 · Construir primero, clientes desde el 15/02/2027]] · conecta las comunidades 0, 2, 3, 4, 7, 8
 - [[knowledge/direccion/ceo-digital|CEO digital]] · conecta las comunidades 0, 2, 3, 4, 6, 7
-- [[knowledge/agentes/admj|Administración]] · conecta las comunidades 1, 2, 8, 10, 11, 12
+- [[knowledge/agentes/admj|Administración]] · conecta las comunidades 1, 3, 8, 10, 11, 12
 
 ## Preguntas abiertas
 
-- ¿Por qué «Registro de fuentes» conecta la comunidad 2 con las comunidades 0, 3, 4, 5?  
+- ¿Por qué «Registro de fuentes» conecta la comunidad 3 con las comunidades 0, 2, 4, 5?  
   Intermediación alta (0.139): es un puente entre temas.
-- ¿Por qué «Registro de decisiones» conecta la comunidad 3 con las comunidades 0, 2, 4, 5?  
+- ¿Por qué «Registro de decisiones» conecta la comunidad 2 con las comunidades 0, 3, 4, 5?  
   Intermediación alta (0.048): es un puente entre temas.
 - ¿Por qué «Habilidades de los agentes» conecta la comunidad 0 con las comunidades 4, 5, 8, 9?  
   Intermediación alta (0.042): es un puente entre temas.

@@ -23,8 +23,8 @@ En tres semanas mediremos cómo se hace hoy [proceso] y os diremos dónde la IA 
 | 2 | Medición: tiempo activo, esperas, retrabajo; catálogo de excepciones | [·] | Línea base |
 | 3 | Casos de uso puntuados, riesgo (IA y datos), hoja de ruta | [quien decide] | Informe de diagnóstico |
 
-**Qué entra:** [proceso y su alcance]. **Qué no entra:** construir nada, tocar sistemas, datos reales de vuestros clientes.
-**Qué necesitamos:** una persona que conozca el proceso, una hora a la semana para validar y acceso a [registros o ejemplos], vistos en vuestras instalaciones.
+**Qué entra:** [proceso y su alcance]. **Qué no entra:** construir nada, tocar sistemas, llevarnos datos reales de vuestros clientes.
+**Qué necesitamos:** una persona que conozca el proceso, una hora a la semana para validar y acceso a [registros o ejemplos], vistos en vuestras instalaciones (si el cliente no permite ver datos reales en esta fase, se trabaja con su descripción y con casos inventados, y se dice aquí).
 **Cómo medimos sin datos personales:** [qué se anota para la línea base (pasos, tiempos, recuentos) y qué no se anota nunca (nombres, pólizas, contenido)].
 **Entregables:** mapa AS-IS, línea base medida, casos de uso puntuados con su riesgo, hoja de ruta a 12 meses e informe de diagnóstico.
 

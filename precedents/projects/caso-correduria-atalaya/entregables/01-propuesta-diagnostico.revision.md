@@ -30,3 +30,7 @@
 | Lista de la propuesta | Nada comprobaba cómo se mide la línea base sin datos personales | Punto nuevo **PD5** |
 | Lista común, C01 | «datos usados (L0–L4)» no decía qué se declara | «datos usados (inventados o reales, con su nivel L0–L4)», como el README de E1 |
 | Código de la rúbrica | Un punto mal escrito o de otra lista (por ejemplo «PD9» o «ID1» en una propuesta) se ignoraba sin avisar, y un problema podía citar un criterio que no existe | Ahora es un error; prueba nueva en `tests/test_rubrica_entregables.py` |
+| Plantilla, §3 | Decía a la vez que no entran datos reales del cliente y que se ven registros en sus instalaciones | «Qué no entra»: llevarnos datos reales; «Qué necesitamos» dice qué hacer si el cliente no deja ver datos reales |
+
+## Repaso del 27/11/2026 (tanda 02:30)
+La v1 contradecía una restricción del caso: la dirección no permite usar ningún dato real durante el diagnóstico («trabajaremos con su descripción y con casos inventados», [sistemas y restricciones](../documentos/04-sistemas-y-restricciones.md)), y la propuesta prometía observar la apertura y ver expedientes en las instalaciones. Corregido en §3 y §5. También en §5: el art. 16 de la LCS obliga al tomador, al asegurado o al beneficiario, no solo al tomador. Las notas no cambian: el fallo era de coherencia y lo debía haber cazado esta revisión, lo que confirma que hace falta un segundo revisor.

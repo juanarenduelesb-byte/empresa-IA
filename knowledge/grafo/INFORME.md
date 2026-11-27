@@ -5,8 +5,8 @@ Cómo está conectado el cerebro de Varios: qué sostiene todo, qué temas forma
 
 ## Resumen
 
-- 5092 nodos: seccion 4369, documento 383, fuente 122, habilidad 65, proceso 38, especialista 34, agente 34, decision 28, puerta 12, departamento 7.
-- 7200 relaciones: 63 % EXTRACTADAS (escritas en la fuente), 37 % INFERIDAS (temas compartidos, con puntuación) y 39 AMBIGUAS (para revisar).
+- 5094 nodos: seccion 4371, documento 383, fuente 122, habilidad 65, proceso 38, especialista 34, agente 34, decision 28, puerta 12, departamento 7.
+- 7208 relaciones: 63 % EXTRACTADAS (escritas en la fuente), 37 % INFERIDAS (temas compartidos, con puntuación) y 39 AMBIGUAS (para revisar).
 - 14 comunidades de temas.
 
 ## Nodos centrales
@@ -24,22 +24,22 @@ Lo que más cosas conecta. Si cambia, cambia mucho.
 9. **P22 · Gestión de errores y reintentos** · 64 conexiones
 10. **P28 · Gestión de incidentes** · 63 conexiones
 11. **Auditoría de agentes y habilidades frente a los procesos (M-040)** (`docs/28-auditoria-agentes.md`) · 63 conexiones
-12. **CEO digital** (`knowledge/direccion/ceo-digital.md`) · 60 conexiones
+12. **Mapa de autonomía por proceso, A0–A4 (M-045)** (`docs/29-autonomia.md`) · 60 conexiones
 
 ## Puentes entre temas
 
 Nodos por los que pasa el camino entre comunidades distintas (intermediación).
 
-- **Registro de fuentes** · intermediación 0.139 · une la comunidad 2 con 0, 3, 4, 5, 6, 7
-- **Registro de decisiones** · intermediación 0.048 · une la comunidad 3 con 0, 2, 4, 5, 7, 8
+- **Registro de fuentes** · intermediación 0.139 · une la comunidad 3 con 0, 2, 4, 5, 6, 7
+- **Registro de decisiones** · intermediación 0.048 · une la comunidad 2 con 0, 3, 4, 5, 7, 8
 - **Habilidades de los agentes** · intermediación 0.042 · une la comunidad 0 con 4, 5, 8, 9, 10, 12
 - **L2 (puerta técnica)** · intermediación 0.026 · une la comunidad 11 con 0, 2, 3, 4, 5, 6
 - **Índice del conocimiento de Varios** · intermediación 0.021 · une la comunidad 8 con 0, 2, 3, 4, 5, 6
-- **Guia de Arranque Proyecto v1.4 Diseno Cerrado** · intermediación 0.017 · une la comunidad 7 con 0, 3, 4, 6, 9
+- **Guia de Arranque Proyecto v1.4 Diseno Cerrado** · intermediación 0.017 · une la comunidad 7 con 0, 2, 4, 6, 9
 - **Estudios** · intermediación 0.017 · une la comunidad 13 con 0, 2, 3, 4, 5, 6
 - **D-011 · Construir primero, clientes desde el 15/02/2027** · intermediación 0.011 · une la comunidad 5 con 0, 2, 3, 4, 7, 8
 - **CEO digital** · intermediación 0.01 · une la comunidad 9 con 0, 2, 3, 4, 6, 7
-- **Administración** · intermediación 0.01 · une la comunidad 0 con 1, 2, 8, 10, 11, 12
+- **Administración** · intermediación 0.01 · une la comunidad 0 con 1, 3, 8, 10, 11, 12
 
 ## Conexiones sorprendentes
 
@@ -60,19 +60,19 @@ Secciones de carpetas y comunidades distintas que tratan lo mismo y no se enlaza
 
 ### 0 · claude/habilidades · Habilidades de los agentes y Administración
 
-Cohesión 0.08 · 109 nodos: Habilidades de los agentes; Administración; Experto en asesorías y despachos; Experto en asesorías, gestorías y despachos; Especialista en contabilidad y facturación; Backend; Director financiero (CFO); Agentes de la oficina (y 101 más)
+Cohesión 0.08 · 110 nodos: Habilidades de los agentes; Administración; Experto en asesorías y despachos; Experto en asesorías, gestorías y despachos; Especialista en contabilidad y facturación; Backend; Director financiero (CFO); Agentes de la oficina (y 102 más)
 
 ### 1 · Habilidades · Legal y privacidad y Arquitecto de procesos
 
 Cohesión 0.05 · 101 nodos: Legal y privacidad; Arquitecto de procesos; Seguridad; Coordinación sectorial · Seguros; Director financiero; Jefe comercial; Separar hecho, hipótesis y propuesta; Arquitecto técnico (y 93 más)
 
-### 2 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros
+### 2 · docs · Registro de decisiones y Trabajo nocturno de Claude
 
-Cohesión 0.07 · 97 nodos: Registro de fuentes; Coordinación sectorial y seguros; Experto en sanidad privada; Responsable de cumplimiento normativo; Experto en servicios financieros no bancarios; Especialista legal y privacidad; Experto en logística y transporte; Catálogo de excepciones al abrir un siniestro (y 89 más)
+Cohesión 0.07 · 95 nodos: Registro de decisiones; Trabajo nocturno de Claude; Plan maestro: la empresa completa, sin que se escape nada; Informe de la mañana · 26/11/2026; 17 · Cerebro, conocimiento y procesos: auditoría e informe; G0 (puerta de cliente); Plan de trabajo diario · 26/11/2026 → 28/02/2027; L0 (puerta técnica) (y 87 más)
 
-### 3 · docs · Registro de decisiones y Trabajo nocturno de Claude
+### 3 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros
 
-Cohesión 0.09 · 83 nodos: Registro de decisiones; Trabajo nocturno de Claude; Plan maestro: la empresa completa, sin que se escape nada; Informe de la mañana · 26/11/2026; 17 · Cerebro, conocimiento y procesos: auditoría e informe; G0 (puerta de cliente); L0 (puerta técnica); Plan de trabajo diario · 26/11/2026 → 28/02/2027 (y 75 más)
+Cohesión 0.08 · 84 nodos: Registro de fuentes; Coordinación sectorial y seguros; Experto en sanidad privada; Responsable de cumplimiento normativo; Experto en servicios financieros no bancarios; Especialista legal y privacidad; Experto en logística y transporte; Catálogo de excepciones al abrir un siniestro (y 76 más)
 
 ### 4 · processes/runbooks · Auditoría de agentes y habilidades frente a los procesos (M-040) y Dependencias entre procesos
 
@@ -80,7 +80,7 @@ Cohesión 0.18 · 67 nodos: Auditoría de agentes y habilidades frente a los pro
 
 ### 5 · precedents/oficina · Propuesta de proceso de referencia: siniestros en corredurías y Conversaciones con Coordinación sectorial · Seguros
 
-Cohesión 0.15 · 59 nodos: Propuesta de proceso de referencia: siniestros en corredurías; Conversaciones con Coordinación sectorial · Seguros; Guion de validación semanal: apertura de siniestros; Conversaciones con Arquitecto de procesos; Memoria de la oficina; D-011 · Construir primero, clientes desde el 15/02/2027; CCS · Consorcio de Compensación de Seguros: riesgos extraordinarios; Línea base y fichas de métricas · Atalaya (y 51 más)
+Cohesión 0.15 · 59 nodos: Propuesta de proceso de referencia: siniestros en corredurías; Conversaciones con Coordinación sectorial · Seguros; Guion de validación semanal: apertura de siniestros; Conversaciones con Arquitecto de procesos; Memoria de la oficina; D-011 · Construir primero, clientes desde el 15/02/2027; Línea base y fichas de métricas · Atalaya; CCS · Consorcio de Compensación de Seguros: riesgos extraordinarios (y 51 más)
 
 ### 6 · processes/catalog · P22 · Gestión de errores y reintentos y Catálogo de procesos P01–P38
 
@@ -137,9 +137,9 @@ Cohesión 0.52 · 7 nodos: Estudios; Integraciones; Contratos de datos; Estudio 
 
 _Preguntas que este grafo ayuda a responder o que conviene decidir:_
 
-- **¿Por qué «Registro de fuentes» conecta la comunidad 2 con las comunidades 0, 3, 4, 5?**
+- **¿Por qué «Registro de fuentes» conecta la comunidad 3 con las comunidades 0, 2, 4, 5?**
   _Intermediación alta (0.139): es un puente entre temas._
-- **¿Por qué «Registro de decisiones» conecta la comunidad 3 con las comunidades 0, 2, 4, 5?**
+- **¿Por qué «Registro de decisiones» conecta la comunidad 2 con las comunidades 0, 3, 4, 5?**
   _Intermediación alta (0.048): es un puente entre temas._
 - **¿Por qué «Habilidades de los agentes» conecta la comunidad 0 con las comunidades 4, 5, 8, 9?**
   _Intermediación alta (0.042): es un puente entre temas._

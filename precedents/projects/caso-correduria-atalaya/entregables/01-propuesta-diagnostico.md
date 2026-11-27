@@ -23,7 +23,7 @@ En tres semanas mediremos cómo abrís hoy los siniestros y os diremos qué part
 ## 3. Qué haremos
 | Semana | Qué | Con quién (rol) | Resultado |
 |---|---|---|---|
-| 1 | Entrevistas y observación de la apertura en cada canal; volúmenes por canal, ramo y aseguradora | Directora de siniestros y dos tramitadoras | Mapa AS-IS en borrador, con las excepciones que ya conocéis (lesionados, Consorcio, sospecha de fraude, impagos, siniestros de empresa con varios implicados) |
+| 1 | Entrevistas y recorrido de la apertura en cada canal, contado por quien la hace y con casos inventados; recuentos de volumen por canal, ramo y aseguradora | Directora de siniestros y dos tramitadoras | Mapa AS-IS en borrador, con las excepciones que ya conocéis (lesionados, Consorcio, sospecha de fraude, impagos, siniestros de empresa con varios implicados) |
 | 2 | Medición: tiempo activo y esperas por paso, partes rehechos y por qué, siniestros que llegan completos | Tramitadoras (registro de tiempos de [número de días] días laborables) | Línea base medida, que sustituye las cifras declaradas |
 | 3 | Casos de uso puntuados con el mismo criterio, riesgo (Reglamento de IA y protección de datos), hoja de ruta a 12 meses | Director general, directora de siniestros y responsable de cumplimiento | Informe de diagnóstico para el comité |
 
@@ -32,7 +32,7 @@ En tres semanas mediremos cómo abrís hoy los siniestros y os diremos qué part
 **Qué necesitamos:** la directora de siniestros [horas] a la semana; dos tramitadoras que registren sus tiempos [número de días] días (sin anotar datos de clientes; lo que les cuesta se estima en la sesión de arranque); una hora a la semana para validar; y, del responsable de sistemas, una lista de los campos que exporta el programa de gestión (dentro de sus 4 horas al mes).
 **Entregables:** mapa AS-IS validado por quien hace el proceso, línea base medida, catálogo de excepciones con su frecuencia, casos de uso puntuados con su riesgo, hoja de ruta a 12 meses e informe de diagnóstico.
 
-**Cómo medimos sin datos personales.** El registro de tiempos anota canal, ramo, aseguradora (A–F), paso, minutos y si faltaba algo; nunca nombres, pólizas, matrículas ni contenido de los mensajes. Lo que haya que ver de un expediente se ve en vuestras instalaciones y no sale de ellas.
+**Cómo medimos sin datos personales.** El registro de tiempos anota canal, ramo, aseguradora (A–F), paso, minutos y si faltaba algo; nunca nombres, pólizas, matrículas ni contenido de los mensajes. No veremos expedientes reales: lo que haga falta entender de un caso nos lo contáis o lo reconstruimos con un caso inventado, como pidió la dirección ([sistemas y restricciones](../documentos/04-sistemas-y-restricciones.md)).
 
 ## 4. Decisiones que se piden
 | Decisión | Opciones | Recomendación | Quién | Fecha |
@@ -42,8 +42,8 @@ En tres semanas mediremos cómo abrís hoy los siniestros y os diremos qué part
 | Cómo se registran los tiempos | Hoja sencilla / formulario / observación directa | Hoja sencilla sin datos de clientes: no toca sistemas y se puede empezar el primer día | Directora de siniestros y responsable de cumplimiento | [fecha] |
 
 ## 5. Riesgos, supuestos y límites
-- **Hecho:** no usamos datos reales de vuestros clientes en esta fase; la confidencialidad se firma antes de empezar.
-- **Hecho:** el tomador tiene que comunicar el siniestro en un máximo de 7 días desde que lo conoce, salvo plazo mayor en la póliza ([Ley 50/1980, art. 16](../../../../knowledge/fuentes/registro.md#lcs-50-1980)). Por eso el plazo de comunicación aparece como paso y como excepción en el mapa. Esta referencia no es asesoría jurídica.
+- **Hecho:** no usamos ni vemos datos reales de vuestros clientes en esta fase, como pidió la dirección; la confidencialidad se firma antes de empezar.
+- **Hecho:** el tomador, el asegurado o el beneficiario tienen que comunicar el siniestro en un máximo de 7 días desde que lo conocen, salvo plazo mayor en la póliza ([Ley 50/1980, art. 16](../../../../knowledge/fuentes/registro.md#lcs-50-1980)). Por eso el plazo de comunicación aparece como paso y como excepción en el mapa. Esta referencia no es asesoría jurídica.
 - **Supuesto:** las tramitadoras pueden registrar tiempos [número de días] días sin que baje el servicio. Si coincide con un temporal, se aplaza la semana 2 y se dice.
 - **Hipótesis:** el mayor ahorro está en identificar al cliente y la póliza, pedir lo que falta y copiar los datos al portal de cada aseguradora, porque es lo que las tramitadoras describen como «buscar, copiar y pedir». La medición de la semana 2 la confirma o la descarta.
 - **Riesgo:** que la medición dé un ahorro menor del que esperáis. El diagnóstico no garantiza que haya un caso rentable; si no lo hay, lo diremos.

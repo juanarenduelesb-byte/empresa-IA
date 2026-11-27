@@ -164,7 +164,7 @@ class Repositorio:
         """Cambio de estado de una tarea según objetos.json (N3c). Cada cambio deja auditoría.
 
         Una tarea que pide aprobación (needs_approval) solo pasa a hecha (succeeded) con una persona con rol de
-        aprobación que no sea quien la puso a esperar (las mismas reglas que las aprobaciones, P10)."""
+        aprobación que no sea quien la puso a esperar ni el autor del encargo (las mismas reglas que las aprobaciones, P10)."""
         t = self.tarea(tarea_id)
         sol = self.solicitud(t.solicitud_id, bloquear=True)  # primero el encargo, como en el resto de operaciones
         self.sesion.refresh(t, with_for_update=True)
@@ -185,7 +185,8 @@ class Repositorio:
                  .where(EventoAuditoria.cliente_id == self.cliente_id, EventoAuditoria.objeto == f"tarea:{t.id}",
                         EventoAuditoria.despues == "needs_approval")
                  .order_by(EventoAuditoria.id.desc()).limit(1))
-            if self.sesion.scalar(q) == self.quien.usuario:
+            if self.quien.usuario in (self.sesion.scalar(q), str(sol.autor_id)):
+                # Igual que en decidir_aprobacion: ni quien la pidió ni el autor del encargo.
                 raise AprobacionInvalida("Nadie aprueba lo que ha pedido él mismo")
         antes = t.estado
         t.estado = a

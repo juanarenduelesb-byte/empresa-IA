@@ -6,7 +6,7 @@ Cómo está conectado el cerebro de Varios: qué sostiene todo, qué temas forma
 ## Resumen
 
 - 5235 nodos: seccion 4479, documento 390, fuente 143, habilidad 65, proceso 38, especialista 34, agente 34, decision 33, puerta 12, departamento 7.
-- 7565 relaciones: 64 % EXTRACTADAS (escritas en la fuente), 35 % INFERIDAS (temas compartidos, con puntuación) y 40 AMBIGUAS (para revisar).
+- 7560 relaciones: 64 % EXTRACTADAS (escritas en la fuente), 35 % INFERIDAS (temas compartidos, con puntuación) y 40 AMBIGUAS (para revisar).
 - 13 comunidades de temas.
 
 ## Nodos centrales
@@ -30,8 +30,8 @@ Lo que más cosas conecta. Si cambia, cambia mucho.
 
 Nodos por los que pasa el camino entre comunidades distintas (intermediación).
 
-- **Registro de fuentes** · intermediación 0.149 · une la comunidad 2 con 0, 3, 4, 5, 6, 7
-- **Registro de decisiones** · intermediación 0.052 · une la comunidad 0 con 2, 3, 4, 5, 6, 8
+- **Registro de fuentes** · intermediación 0.15 · une la comunidad 2 con 0, 3, 4, 5, 6, 7
+- **Registro de decisiones** · intermediación 0.053 · une la comunidad 0 con 2, 3, 4, 5, 6, 8
 - **Habilidades de los agentes** · intermediación 0.039 · une la comunidad 3 con 1, 4, 5, 6, 9, 12
 - **L2 (puerta técnica)** · intermediación 0.028 · une la comunidad 11 con 0, 2, 3, 4, 5, 6
 - **Índice del conocimiento de Varios** · intermediación 0.022 · une la comunidad 6 con 0, 2, 3, 4, 5, 7
@@ -60,7 +60,7 @@ Secciones de carpetas y comunidades distintas que tratan lo mismo y no se enlaza
 
 ### 0 · docs · Registro de decisiones y Trabajo nocturno de Claude
 
-Cohesión 0.07 · 118 nodos: Registro de decisiones; Trabajo nocturno de Claude; Varios · empresa-ia; Informe de la mañana · 27/11/2026; Base de datos (D-023, propuesta); Plan maestro: la empresa completa, sin que se escape nada; Informe de la mañana · 26/11/2026; Política de uso de inteligencia artificial de Varios · BORRADOR PARA ABOGADO (y 110 más)
+Cohesión 0.07 · 118 nodos: Registro de decisiones; Trabajo nocturno de Claude; Varios · empresa-ia; Informe de la mañana · 27/11/2026; Plan maestro: la empresa completa, sin que se escape nada; Base de datos (D-023, propuesta); Informe de la mañana · 26/11/2026; Política de uso de inteligencia artificial de Varios · BORRADOR PARA ABOGADO (y 110 más)
 
 ### 1 · claude/habilidades · Legal y privacidad y Arquitecto de procesos
 
@@ -134,9 +134,9 @@ Cohesión 0.43 · 8 nodos: Estudios; Integraciones; Motor de conocimiento; Contr
 _Preguntas que este grafo ayuda a responder o que conviene decidir:_
 
 - **¿Por qué «Registro de fuentes» conecta la comunidad 2 con las comunidades 0, 3, 4, 5?**
-  _Intermediación alta (0.149): es un puente entre temas._
+  _Intermediación alta (0.15): es un puente entre temas._
 - **¿Por qué «Registro de decisiones» conecta la comunidad 0 con las comunidades 2, 3, 4, 5?**
-  _Intermediación alta (0.052): es un puente entre temas._
+  _Intermediación alta (0.053): es un puente entre temas._
 - **¿Por qué «Habilidades de los agentes» conecta la comunidad 3 con las comunidades 1, 4, 5, 6?**
   _Intermediación alta (0.039): es un puente entre temas._
 - **¿Se aprueba D-019 · Calidad exigente, todo pasa por un socio y cada rechazo se rehace aprendiendo? Sigue en propuesta y la citan 22 secciones.**

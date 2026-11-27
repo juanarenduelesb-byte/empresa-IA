@@ -189,3 +189,14 @@ def test_las_tareas_no_cambian_cuando_el_encargo_ya_no_trabaja(api, gente):  # n
                     headers=h(autor)).status_code == 200
     r = api.post(f"/tareas/{t['id']}/estado", json={"a": "running", "motivo": "tarde"}, headers=h(autor))
     assert r.status_code == 409
+
+
+def test_el_autor_del_encargo_no_da_por_buena_una_tarea_aunque_la_pida_otro(api, gente):  # noqa: F811
+    """Repaso de N3c: la misma regla que en las aprobaciones (decidir_aprobacion), también en las tareas."""
+    aprobador, aprobador2 = gente["aprobador"], gente["aprobador2"]
+    _, t = _con_tarea(api, aprobador)  # autor del encargo: aprobador
+    url = f"/tareas/{t['id']}/estado"
+    for a in ("running", "needs_approval"):
+        assert api.post(url, json={"a": a, "motivo": a}, headers=h(aprobador2)).status_code == 200
+    ok = {"a": "succeeded", "motivo": "Visto"}
+    assert api.post(url, json=ok, headers=h(aprobador)).status_code == 403

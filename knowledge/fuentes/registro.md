@@ -118,6 +118,17 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 | [AEAT-IS-TIPOS](#aeat-is-tipos) | Impuesto sobre Sociedades: tipo impositivo (microempresas, reducida dimensión y general) | obligacion-legal | alta | vigente | validated |
 | [SEGSOC-RETA-2026](#segsoc-reta-2026) | Cotización de trabajadores autónomos 2026 y encuadramiento de socios con control efectivo | obligacion-legal | alta | vigente | draft |
 | [MINTO-PIRAMIDE](#minto-piramide) | The Pyramid Principle (Barbara Minto): la respuesta primero y la estructura situación, complicación, pregunta y respuesta | buena-practica | media | vigente | draft |
+| [KEYCLOAK-SIZING](#keycloak-sizing) | Keycloak: Concepts for sizing CPU and memory resources | documentacion-producto | media | vigente | draft |
+| [KEYCLOAK-DB](#keycloak-db) | Keycloak: Configuring the database | documentacion-producto | media | vigente | draft |
+| [KEYCLOAK-ADMIN](#keycloak-admin) | Keycloak: Server Administration Guide | documentacion-producto | media | vigente | draft |
+| [KEYCLOAK-DOCKER](#keycloak-docker) | Keycloak: Getting started with Docker | documentacion-producto | media | vigente | draft |
+| [KEYCLOAK-REPO](#keycloak-repo) | Repositorio keycloak/keycloak | documentacion-producto | media | vigente | draft |
+| [CNCF-KEYCLOAK](#cncf-keycloak) | Keycloak | CNCF | documentacion-producto | media | vigente | draft |
+| [ZITADEL-AGPL](#zitadel-agpl) | Strengthening Our Open Source Foundation: Moving to AGPL 3.0 | documentacion-producto | media | vigente | draft |
+| [ZITADEL-MFA](#zitadel-mfa) | ZITADEL Default Settings (segundos factores) | documentacion-producto | media | vigente | draft |
+| [AUTHENTIK-REPO](#authentik-repo) | Repositorio goauthentik/authentik | documentacion-producto | media | vigente | draft |
+| [ENTRA-EXTERNAL-ID-PRECIOS](#entra-external-id-precios) | Microsoft Entra External ID pricing | documentacion-producto | media | vigente | draft |
+| [AUTHLIB](#authlib) | Authlib: Python Authentication (documentación y licencias) | documentacion-producto | media | vigente | draft |
 | [REDIS-EXPIRE](#redis-expire) | Redis: comando EXPIRE (cómo caducan las claves) | documentacion-producto | media | vigente | draft |
 | [GEPA-2026](#gepa-2026) | GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning (Agrawal et al., ICLR 2026, ponencia oral) | recomendacion-tecnica | media | vigente | draft |
 | [NEAT-2002](#neat-2002) | Neuroevolution of augmenting topologies (NEAT) | buena-practica | baja | vigente | draft |
@@ -1240,6 +1251,116 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 - **Consultada:** 2026-11-26 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
 - **Nota:** Empezar por la conclusión, agrupar los argumentos que la sostienen y abrir con situación, complicación y pregunta. Fuente secundaria; coincide con otros resúmenes (BetterUp, Think Insights).
+
+<a id="keycloak-sizing"></a>
+### KEYCLOAK-SIZING
+- **Título:** Keycloak: Concepts for sizing CPU and memory resources
+- **Autor u organismo:** Keycloak Team
+- **URL:** <https://www.keycloak.org/high-availability/single-cluster/concepts-memory-and-cpu-sizing>
+- **Tipo:** documentacion-producto · **Jurisdicción:** — · **Versión o fecha:** selector 26.8.2; sin fecha
+- **Consultada:** 2026-11-27 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** «The base memory usage for a Pod including caches of Realm data and 10,000 cached sessions is 1250 MB of RAM.» «For each 15 password-based user logins per second, allocate 1 vCPU to the cluster». Base de docs/31.
+
+<a id="keycloak-db"></a>
+### KEYCLOAK-DB
+- **Título:** Keycloak: Configuring the database
+- **Autor u organismo:** Keycloak Team
+- **URL:** <https://www.keycloak.org/server/db>
+- **Tipo:** documentacion-producto · **Jurisdicción:** — · **Versión o fecha:** selector 26.8.2
+- **Consultada:** 2026-11-27 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** Soporta PostgreSQL 14.x–18.x, MariaDB, MySQL, SQL Server y Oracle. «By default, the server uses the dev-file database», que «is not suitable for production use-cases».
+
+<a id="keycloak-admin"></a>
+### KEYCLOAK-ADMIN
+- **Título:** Keycloak: Server Administration Guide
+- **Autor u organismo:** Keycloak Team
+- **URL:** <https://www.keycloak.org/docs/latest/server_admin/index.html>
+- **Tipo:** documentacion-producto · **Jurisdicción:** — · **Versión o fecha:** 26.8.2
+- **Consultada:** 2026-11-27 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** «Two-factor Authentication - Support for passkey, recovery codes and TOTP/HOTP via Google Authenticator or FreeOTP.» Solo leído el índice de funciones, no las secciones de WebAuthn.
+
+<a id="keycloak-docker"></a>
+### KEYCLOAK-DOCKER
+- **Título:** Keycloak: Getting started with Docker
+- **Autor u organismo:** Keycloak Team
+- **URL:** <https://www.keycloak.org/getting-started/getting-started-docker>
+- **Tipo:** documentacion-producto · **Jurisdicción:** — · **Versión o fecha:** imagen 26.8.2
+- **Consultada:** 2026-11-27 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** Arranque de desarrollo: quay.io/keycloak/keycloak:26.8.2 start-dev con administrador por variables. «Switch to a production ready database such as PostgreSQL.»
+
+<a id="keycloak-repo"></a>
+### KEYCLOAK-REPO
+- **Título:** Repositorio keycloak/keycloak
+- **Autor u organismo:** Keycloak (GitHub)
+- **URL:** <https://github.com/keycloak/keycloak>
+- **Tipo:** documentacion-producto · **Jurisdicción:** — · **Versión o fecha:** leído el 27/11/2026
+- **Consultada:** 2026-11-27 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** Licencia Apache 2.0.
+
+<a id="cncf-keycloak"></a>
+### CNCF-KEYCLOAK
+- **Título:** Keycloak | CNCF
+- **Autor u organismo:** Cloud Native Computing Foundation
+- **URL:** <https://www.cncf.io/projects/keycloak>
+- **Tipo:** documentacion-producto · **Jurisdicción:** — · **Versión o fecha:** página del 26/11/2026
+- **Consultada:** 2026-11-27 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** «Keycloak was accepted to CNCF on April 10, 2023 at the Incubating maturity level.»
+
+<a id="zitadel-agpl"></a>
+### ZITADEL-AGPL
+- **Título:** Strengthening Our Open Source Foundation: Moving to AGPL 3.0
+- **Autor u organismo:** Zitadel (Florian Forster)
+- **URL:** <https://zitadel.com/blog/apache-to-agpl>
+- **Tipo:** documentacion-producto · **Jurisdicción:** — · **Versión o fecha:** 13/03/2025
+- **Consultada:** 2026-11-27 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** Núcleo, consola e inicio de sesión a AGPL 3.0 con la v3 (prevista el 31/03/2025); API, SDK y proto siguen en Apache 2.0. «Using Zitadel's APIs without modifying the code doesn't trigger reciprocal requirements.» No es asesoría legal.
+
+<a id="zitadel-mfa"></a>
+### ZITADEL-MFA
+- **Título:** ZITADEL Default Settings (segundos factores)
+- **Autor u organismo:** Zitadel
+- **URL:** <https://zitadel.com/docs/guides/manage/console/default-settings>
+- **Tipo:** documentacion-producto · **Jurisdicción:** — · **Versión o fecha:** documentación v4
+- **Consultada:** 2026-11-27 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** TOTP, U2F (huella, Windows Hello, llaves), OTP por correo y por SMS (proveedor Twilio). Se puede obligar con «Force MFA».
+
+<a id="authentik-repo"></a>
+### AUTHENTIK-REPO
+- **Título:** Repositorio goauthentik/authentik
+- **Autor u organismo:** authentik (GitHub)
+- **URL:** <https://github.com/goauthentik/authentik>
+- **Tipo:** documentacion-producto · **Jurisdicción:** — · **Versión o fecha:** leído el 27/11/2026
+- **Consultada:** 2026-11-27 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** Núcleo con licencia MIT; carpeta enterprise con «authentik EE License» (texto no leído).
+
+<a id="entra-external-id-precios"></a>
+### ENTRA-EXTERNAL-ID-PRECIOS
+- **Título:** Microsoft Entra External ID pricing
+- **Autor u organismo:** Microsoft Azure
+- **URL:** <https://azure.microsoft.com/pricing/details/microsoft-entra-external-id/>
+- **Tipo:** documentacion-producto · **Jurisdicción:** — · **Versión o fecha:** sin fecha (leída el 27/11/2026)
+- **Consultada:** 2026-11-27 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** «The Microsoft Entra External ID core offering is free for the first 50,000 MAUs». El precio por encima no se mostraba. El SMS como segundo factor es un complemento sin tramo gratis. Contrastado con la página de facturación de Microsoft Learn (22/06/2026).
+
+<a id="authlib"></a>
+### AUTHLIB
+- **Título:** Authlib: Python Authentication (documentación y licencias)
+- **Autor u organismo:** Authlib (Hsiaoming Yang)
+- **URL:** <https://docs.authlib.org/en/latest/>
+- **Tipo:** documentacion-producto · **Jurisdicción:** — · **Versión o fecha:** 1.10.0b1 (licencias en la página de la 1.8.0)
+- **Consultada:** 2026-11-27 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** «The ultimate Python library in building OAuth and OpenID Connect servers and clients.» Licencia BSD o comercial. Integración de cliente web con Starlette y FastAPI.
 
 <a id="redis-expire"></a>
 ### REDIS-EXPIRE

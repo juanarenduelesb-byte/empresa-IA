@@ -41,4 +41,5 @@ Añadido el 26/11/2026: los documentos nuevos de las noches no estaban en este �
 | [28-auditoria-agentes.md](28-auditoria-agentes.md) | Auditoría de agentes y habilidades frente a los procesos (D-026, propuesta). |
 | [29-autonomia.md](29-autonomia.md) | Mapa de autonomía A0–A4 por proceso (D-027, propuesta). |
 | [30-inventario-web.md](30-inventario-web.md) | Inventario de la web interna frente a la web para clientes (N5). |
+| [31-identidad.md](31-identidad.md) | Identidad y roles: comparativa de proveedores con fuente y pruebas con un proveedor simulado (S3a, D-033 propuesta). |
 | [informes/](informes/2026-11-26.md) | Informes de la mañana. |

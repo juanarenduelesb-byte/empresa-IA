@@ -5,24 +5,24 @@ Cómo está conectado el cerebro de Varios: qué sostiene todo, qué temas forma
 
 ## Resumen
 
-- 5143 nodos: seccion 4412, documento 384, fuente 125, habilidad 65, proceso 38, especialista 34, agente 34, decision 32, puerta 12, departamento 7.
-- 7349 relaciones: 63 % EXTRACTADAS (escritas en la fuente), 36 % INFERIDAS (temas compartidos, con puntuación) y 39 AMBIGUAS (para revisar).
+- 5178 nodos: seccion 4434, documento 385, fuente 136, habilidad 65, proceso 38, especialista 34, agente 34, decision 33, puerta 12, departamento 7.
+- 7421 relaciones: 63 % EXTRACTADAS (escritas en la fuente), 36 % INFERIDAS (temas compartidos, con puntuación) y 39 AMBIGUAS (para revisar).
 - 14 comunidades de temas.
 
 ## Nodos centrales
 
 Lo que más cosas conecta. Si cambia, cambia mucho.
 
-1. **Registro de fuentes** (`knowledge/fuentes/registro.md`) · 223 conexiones
-2. **Registro de decisiones** (`DECISIONS.md`) · 133 conexiones
+1. **Registro de fuentes** (`knowledge/fuentes/registro.md`) · 236 conexiones
+2. **Registro de decisiones** (`DECISIONS.md`) · 140 conexiones
 3. **Índice del conocimiento de Varios** (`knowledge/INDEX.md`) · 120 conexiones
-4. **Guia de Arranque Proyecto v1.4 Diseno Cerrado** (`docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado.md`) · 86 conexiones
+4. **Guia de Arranque Proyecto v1.4 Diseno Cerrado** (`docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado.md`) · 85 conexiones
 5. **Catálogo de procesos P01–P38** (`processes/catalog/README.md`) · 83 conexiones
-6. **L2 (puerta técnica)** · 71 conexiones
-7. **Trabajo nocturno de Claude** (`docs/21-trabajo-nocturno.md`) · 70 conexiones
+6. **L2 (puerta técnica)** · 72 conexiones
+7. **Trabajo nocturno de Claude** (`docs/21-trabajo-nocturno.md`) · 71 conexiones
 8. **Habilidades de los agentes** (`claude/habilidades/README.md`) · 69 conexiones
-9. **Mapa de autonomía por proceso, A0–A4 (M-045)** (`docs/29-autonomia.md`) · 66 conexiones
-10. **Varios · empresa-ia** (`CLAUDE.md`) · 65 conexiones
+9. **Varios · empresa-ia** (`CLAUDE.md`) · 66 conexiones
+10. **Mapa de autonomía por proceso, A0–A4 (M-045)** (`docs/29-autonomia.md`) · 66 conexiones
 11. **Auditoría de agentes y habilidades frente a los procesos (M-040)** (`docs/28-auditoria-agentes.md`) · 65 conexiones
 12. **P22 · Gestión de errores y reintentos** · 64 conexiones
 
@@ -30,21 +30,22 @@ Lo que más cosas conecta. Si cambia, cambia mucho.
 
 Nodos por los que pasa el camino entre comunidades distintas (intermediación).
 
-- **Registro de fuentes** · intermediación 0.137 · une la comunidad 1 con 2, 3, 4, 5, 6, 7
-- **Registro de decisiones** · intermediación 0.053 · une la comunidad 3 con 1, 2, 4, 5, 6, 7
-- **Habilidades de los agentes** · intermediación 0.042 · une la comunidad 2 con 0, 4, 5, 6, 7, 13
-- **L2 (puerta técnica)** · intermediación 0.029 · une la comunidad 12 con 1, 2, 3, 4, 5, 6
-- **Índice del conocimiento de Varios** · intermediación 0.021 · une la comunidad 6 con 1, 3, 4, 5, 7, 8
-- **Estudios** · intermediación 0.017 · une la comunidad 13 con 1, 2, 3, 4, 5, 6
-- **Guia de Arranque Proyecto v1.4 Diseno Cerrado** · intermediación 0.016 · une la comunidad 10 con 1, 2, 3, 4, 7, 8
-- **D-011 · Construir primero, clientes desde el 15/02/2027** · intermediación 0.011 · une la comunidad 5 con 1, 2, 3, 4, 6, 7
-- **Administración** · intermediación 0.01 · une la comunidad 2 con 0, 1, 7, 11, 12
-- **Trabajo nocturno de Claude** · intermediación 0.01 · une la comunidad 3 con 1, 4, 5, 6, 7, 9
+- **Registro de fuentes** · intermediación 0.146 · une la comunidad 0 con 2, 3, 4, 5, 6, 7
+- **Registro de decisiones** · intermediación 0.054 · une la comunidad 3 con 0, 2, 4, 5, 6, 7
+- **Habilidades de los agentes** · intermediación 0.041 · une la comunidad 2 con 1, 4, 5, 6, 7, 12
+- **L2 (puerta técnica)** · intermediación 0.028 · une la comunidad 11 con 0, 2, 3, 4, 5, 6
+- **Índice del conocimiento de Varios** · intermediación 0.02 · une la comunidad 6 con 0, 3, 4, 5, 7, 8
+- **Estudios** · intermediación 0.015 · une la comunidad 12 con 0, 2, 3, 4, 5, 6
+- **Guia de Arranque Proyecto v1.4 Diseno Cerrado** · intermediación 0.015 · une la comunidad 10 con 0, 2, 3, 4, 7, 8
+- **D-011 · Construir primero, clientes desde el 15/02/2027** · intermediación 0.011 · une la comunidad 5 con 0, 2, 3, 4, 6, 7
+- **Trabajo nocturno de Claude** · intermediación 0.01 · une la comunidad 3 con 0, 4, 5, 6, 7, 8
+- **Arquitecto de procesos** · intermediación 0.01 · une la comunidad 2 con 0, 1, 3, 5, 6, 7
 
 ## Conexiones sorprendentes
 
 Secciones de carpetas y comunidades distintas que tratan lo mismo y no se enlazan. Relación INFERIDA: compruébala.
 
+- `DECISIONS.md` › D-005 — Aislamiento multi-cliente  ↔  `docs/06-seguridad-y-gobierno.md` › Multi-tenancy  [INFERIDA 0.85]
 - `knowledge/plantillas/entregables/02-informe-diagnostico.md` › 3.5 Riesgo  ↔  `processes/templates/proceso-cliente.md` › 4. Riesgo  [INFERIDA 0.85]
 - `docs/26-web-clientes.md` › 4. Requisitos legales de la web  ↔  `knowledge/fuentes/registro.md` › LSSI-34-2002  [INFERIDA 0.85]
 - `docs/28-auditoria-agentes.md` › Criterio  ↔  `knowledge/fuentes/registro.md` › ANTHROPIC-AGENTES  [INFERIDA 0.85]
@@ -54,17 +55,16 @@ Secciones de carpetas y comunidades distintas que tratan lo mismo y no se enlaza
 - `governance/legal/borradores/03-acuerdo-confidencialidad.md` › Acuerdo de confidencialidad (mutuo) · BORRADOR PARA ABOGADO  ↔  `knowledge/plantillas/entregables/01-propuesta-diagnostico.md` › 6. Siguientes pasos  [INFERIDA 0.75]
 - `governance/legal/borradores/04-anexo-uso-ia.md` › 1. Qué sistema es y para qué se usa  ↔  `knowledge/agentes/proj.md` › Reglas del puesto  [INFERIDA 0.75]
 - `governance/legal/borradores/05-matriz-aprobaciones.md` › 4. Reglas de la aprobación  ↔  `knowledge/fuentes/registro.md` › ZAPIER-HITL  [INFERIDA 0.75]
-- `governance/socios/01-marca-esclusa-o-varios.md` › Búsqueda de anterioridades (sin hacer)  ↔  `knowledge/fuentes/registro.md` › OEPM-LOCALIZADOR  [INFERIDA 0.75]
 
 ## Comunidades
 
-### 0 · claude/habilidades · Legal y privacidad y Arquitecto de procesos
+### 0 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros
+
+Cohesión 0.06 · 124 nodos: Registro de fuentes; Coordinación sectorial y seguros; Experto en sanidad privada; Responsable de cumplimiento normativo; Experto en servicios financieros no bancarios; Especialista legal y privacidad; Experto en asesorías, gestorías y despachos; Especialista en contabilidad y facturación (y 116 más)
+
+### 1 · claude/habilidades · Legal y privacidad y Arquitecto de procesos
 
 Cohesión 0.05 · 108 nodos: Legal y privacidad; Arquitecto de procesos; Seguridad; Coordinación sectorial · Seguros; Director financiero; Jefe comercial; Separar hecho, hipótesis y propuesta; Arquitecto técnico (y 100 más)
-
-### 1 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros
-
-Cohesión 0.06 · 105 nodos: Registro de fuentes; Coordinación sectorial y seguros; Responsable de cumplimiento normativo; Experto en sanidad privada; Experto en servicios financieros no bancarios; Especialista legal y privacidad; Experto en logística y transporte; Catálogo de excepciones al abrir un siniestro (y 97 más)
 
 ### 2 · claude/habilidades · Habilidades de los agentes y Administración
 
@@ -72,7 +72,7 @@ Cohesión 0.1 · 93 nodos: Habilidades de los agentes; Administración; Experto 
 
 ### 3 · docs · Registro de decisiones y Trabajo nocturno de Claude
 
-Cohesión 0.11 · 64 nodos: Registro de decisiones; Trabajo nocturno de Claude; Informe de la mañana · 27/11/2026; Base de datos (D-023, propuesta); Plan maestro: la empresa completa, sin que se escape nada; Informe de la mañana · 26/11/2026; 17 · Cerebro, conocimiento y procesos: auditoría e informe; Varios — repositorio maestro (y 56 más)
+Cohesión 0.09 · 74 nodos: Registro de decisiones; Trabajo nocturno de Claude; Informe de la mañana · 27/11/2026; Base de datos (D-023, propuesta); Plan maestro: la empresa completa, sin que se escape nada; Informe de la mañana · 26/11/2026; 17 · Cerebro, conocimiento y procesos: auditoría e informe; Identidad y roles: opciones para los socios y, más adelante, los clientes (S3a) (y 66 más)
 
 ### 4 · processes/runbooks · Auditoría de agentes y habilidades frente a los procesos (M-040) y Dependencias entre procesos
 
@@ -88,31 +88,31 @@ Cohesión 0.17 · 50 nodos: Índice del conocimiento de Varios; Arquitecto de pr
 
 ### 7 · knowledge/ingenieria · CEO digital y Varios · empresa-ia
 
-Cohesión 0.12 · 45 nodos: CEO digital; Varios · empresa-ia; Especialista en ciberseguridad; Ingeniero de plataforma y operaciones (DevOps/SRE); Arquitecto de datos e IA; Responsable de decisiones y seguimiento; Bibliotecario / responsable de conocimiento; Especialista en automatización (y 37 más)
+Cohesión 0.11 · 46 nodos: CEO digital; Varios · empresa-ia; Especialista en ciberseguridad; Ingeniero de plataforma y operaciones (DevOps/SRE); Arquitecto de datos e IA; Responsable de decisiones y seguimiento; Bibliotecario / responsable de conocimiento; Especialista en automatización (y 38 más)
 
-### 8 · processes/catalog · P22 · Gestión de errores y reintentos y Catálogo de procesos P01–P38
+### 8 · knowledge/plantillas · Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue y Matriz de aprobaciones · BORRADOR
+
+Cohesión 0.19 · 37 nodos: Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue; G0 (puerta de cliente); L0 (puerta técnica); Matriz de aprobaciones · BORRADOR; Plantillas de entregables al cliente (E1); Propuesta de diagnóstico · Atalaya Correduría de Seguros (FICTICIA); G2 (puerta de cliente); G6 (puerta de cliente) (y 29 más)
+
+### 9 · processes/catalog · P22 · Gestión de errores y reintentos y Catálogo de procesos P01–P38
 
 Cohesión 0.52 · 36 nodos: P22 · Gestión de errores y reintentos; Catálogo de procesos P01–P38; P28 · Gestión de incidentes; P22 · Gestión de errores y reintentos; P27 · Gestión de proveedores y dependencias; P13 · Aprendizaje y actualización de la wiki; P05 · Diseño del plan; P25 · Gestión de cambios y versiones (y 28 más)
-
-### 9 · knowledge/plantillas · Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue y Matriz de aprobaciones · BORRADOR
-
-Cohesión 0.21 · 35 nodos: Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue; G0 (puerta de cliente); L0 (puerta técnica); Matriz de aprobaciones · BORRADOR; Plantillas de entregables al cliente (E1); Propuesta de diagnóstico · Atalaya Correduría de Seguros (FICTICIA); G2 (puerta de cliente); G6 (puerta de cliente) (y 27 más)
 
 ### 10 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Flujo ceo
 
 Cohesión 0.37 · 31 nodos: Guia de Arranque Proyecto v1.4 Diseno Cerrado; Flujo ceo; Ejecucion agentes; Motor conocimiento obsidian; 12 · Ciclo de vida de un proyecto con cliente; Comunicaciones estados; Calidad gobierno; 08 · Seguridad, identidad y aislamiento de clientes (y 23 más)
 
-### 11 · knowledge/administracion-finanzas · Experto en asesorías, gestorías y despachos y Especialista en contabilidad y facturación
+### 11 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Conversaciones con IA y evaluación
 
-Cohesión 0.23 · 25 nodos: Experto en asesorías, gestorías y despachos; Especialista en contabilidad y facturación; Director financiero (CFO); Especialista administrativo; Especialista financiero; VERIFACTU-RDL43 · Real Decreto-ley 43/2026: aplazamiento de la adaptación de los sistemas informáticos de facturación (Verifactu); Especialista en contabilidad y facturación; AEAT-FACTURA-CAL · Factura electrónica obligatoria: calendario de implantación (y 17 más)
+Cohesión 0.52 · 12 nodos: Acta de protección de la IA y examen de 50 casos; L2 (puerta técnica); Conversaciones con IA y evaluación; Reunión: IA y evaluación y Seguridad; Conversaciones con CEO digital; Conversaciones con Plan y seguimiento; Conversaciones con Bibliotecario; Plan de construcción · 18/11/2026 → 12/02/2027 (y 4 más)
 
-### 12 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Conversaciones con IA y evaluación
-
-Cohesión 0.55 · 11 nodos: Acta de protección de la IA y examen de 50 casos; L2 (puerta técnica); Conversaciones con IA y evaluación; Reunión: IA y evaluación y Seguridad; Conversaciones con CEO digital; Conversaciones con Plan y seguimiento; Conversaciones con Bibliotecario; Conversaciones con Registro de decisiones (y 3 más)
-
-### 13 · knowledge/estudios · Estudios y Integraciones
+### 12 · knowledge/estudios · Estudios y Integraciones
 
 Cohesión 0.43 · 8 nodos: Estudios; Integraciones; Motor de conocimiento; Contratos de datos; Estudio de prospectos: automatización para pymes (Álvaro, noviembre de 2026); Pruebas de integración; Conocimiento; Conectores
+
+### 13 · knowledge/ingenieria · Diseñador de producto y experiencia (UX) y Diseñador de producto y experiencia (UX)
+
+Cohesión 0.7 · 5 nodos: Diseñador de producto y experiencia (UX); LEY-ACCESIBILIDAD-11-2023 · Ley 11/2023 (accesibilidad de productos y servicios, transpone la Directiva (UE) 2019/882); Diseñador de producto y experiencia (UX); NNG-HEURISTICAS · 10 heurísticas de usabilidad (Jakob Nielsen); W3C-WCAG22 · Web Content Accessibility Guidelines (WCAG) 2.2
 
 ## Huecos
 
@@ -137,21 +137,21 @@ Cohesión 0.43 · 8 nodos: Estudios; Integraciones; Motor de conocimiento; Contr
 
 _Preguntas que este grafo ayuda a responder o que conviene decidir:_
 
-- **¿Por qué «Registro de fuentes» conecta la comunidad 1 con las comunidades 2, 3, 4, 5?**
-  _Intermediación alta (0.137): es un puente entre temas._
-- **¿Por qué «Registro de decisiones» conecta la comunidad 3 con las comunidades 1, 2, 4, 5?**
-  _Intermediación alta (0.053): es un puente entre temas._
-- **¿Por qué «Habilidades de los agentes» conecta la comunidad 2 con las comunidades 0, 4, 5, 6?**
-  _Intermediación alta (0.042): es un puente entre temas._
+- **¿Por qué «Registro de fuentes» conecta la comunidad 0 con las comunidades 2, 3, 4, 5?**
+  _Intermediación alta (0.146): es un puente entre temas._
+- **¿Por qué «Registro de decisiones» conecta la comunidad 3 con las comunidades 0, 2, 4, 5?**
+  _Intermediación alta (0.054): es un puente entre temas._
+- **¿Por qué «Habilidades de los agentes» conecta la comunidad 2 con las comunidades 1, 4, 5, 6?**
+  _Intermediación alta (0.041): es un puente entre temas._
 - **¿Se aprueba D-019 · Calidad exigente, todo pasa por un socio y cada rechazo se rehace aprendiendo? Sigue en propuesta y la citan 19 secciones.**
   _Una decisión en propuesta que ya sostiene mucho contenido._
 - **¿Se aprueba D-013 · Conocimiento y catálogo de procesos generados desde datos? Sigue en propuesta y la citan 12 secciones.**
   _Una decisión en propuesta que ya sostiene mucho contenido._
 - **¿Se aprueba D-024 · Paquete de dominio de seguros con un archivo máquina como fuente de las reglas? Sigue en propuesta y la citan 12 secciones.**
   _Una decisión en propuesta que ya sostiene mucho contenido._
-- **¿Deberían enlazarse «knowledge/plantillas/entregables/02-informe-diagnostico.md» y «processes/templates/proceso-cliente.md»?**
+- **¿Deberían enlazarse «DECISIONS.md» y «docs/06-seguridad-y-gobierno.md»?**
   _Tratan lo mismo (relación INFERIDA 0.85) pero no se citan._
-- **¿Deberían enlazarse «docs/26-web-clientes.md» y «knowledge/fuentes/registro.md»?**
+- **¿Deberían enlazarse «knowledge/plantillas/entregables/02-informe-diagnostico.md» y «processes/templates/proceso-cliente.md»?**
   _Tratan lo mismo (relación INFERIDA 0.85) pero no se citan._
 - **¿Siguen vigentes D-008, D-016? Ningún documento las cita.**
   _Decisiones que nadie menciona._

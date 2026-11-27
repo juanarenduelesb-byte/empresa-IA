@@ -8,7 +8,7 @@ version: "sin fecha visible (leída el 26/11/2026)"
 autoridad: "media"
 vigencia: "vigente"
 estado: "draft"
-citada: 0
+citada: 1
 tags:
   - "fuente"
   - "vigencia/vigente"
@@ -22,4 +22,4 @@ tags:
 
 ## Citada en
 
-- Ningún documento la cita todavía.
+- [[docs/31-identidad|Identidad y roles: opciones para los socios y, más adelante, los clientes (S3a)]]

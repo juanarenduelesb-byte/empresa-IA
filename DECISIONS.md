@@ -269,6 +269,16 @@ No construir primero un CEO omnisciente; descubrir, diseñar, integrar y medir u
 - Tecnología: ninguna nueva.
 - Estado: propuesta.
 
+## D-033 — Identidad: Keycloak autoalojado para el piloto; los roles siguen en la base de Varios
+- Fecha: 2026-11-27 (tanda de las 22:00, S3a)
+- Decisión (propuesta, sin añadir nada todavía): comparativa en `docs/31-identidad.md`. Para el piloto, Keycloak autoalojado en el mismo Docker Compose, con su propia base en nuestro PostgreSQL, OpenID Connect y segundo factor obligatorio para los socios (passkey o TOTP). La API verificaría RS256 con las claves públicas del proveedor, con `exp`, `iss` y `aud` obligatorios. Con cualquier proveedor: el proveedor dice quién es; los roles se leen de la base de Varios y lo que diga el token sobre roles se ignora; el cliente sale del token y tiene que casar con un usuario activo de ese cliente; el sujeto del proveedor (`iss` + `sub`) se enlaza con el usuario de Varios con una columna nueva.
+- Motivo: M-047 y S3; el token de hoy (HS256 con un secreto compartido, D-028) no vale para L2. Keycloak tiene licencia Apache 2.0, es proyecto de la CNCF, trae passkeys y TOTP y deja los datos en nuestro servidor (fuentes `KEYCLOAK-REPO`, `CNCF-KEYCLOAK`, `KEYCLOAK-ADMIN`).
+- Alternativas: Microsoft Entra External ID (gratis hasta 50.000 usuarios activos al mes, sin servidor; región de datos y segundo factor sin confirmar; buena si ya usáis Microsoft 365, pregunta 12 de docs/21); Zitadel (AGPL 3.0 desde la v3: revisar con el abogado antes de ofrecerlo modificado a clientes); authentik (parte *enterprise* con licencia propia sin leer); Authlib con una cuenta que ya tengáis (no es un proveedor).
+- Tecnología que entraría al aprobarla: Keycloak (contenedor) y el extra `crypto` de PyJWT (`cryptography`) para RS256. Ninguna se añade con esta propuesta.
+- Riesgo: alrededor de 1,25 GB más de memoria en el servidor según la guía de Keycloak (`KEYCLOAK-SIZING`) y una pieza más que actualizar. Mitigación: imagen fijada por versión y copia de su base con las de Varios.
+- Pruebas: `tests/db/test_identidad_proveedor.py` con un proveedor simulado (roles socio, agente y cliente; emisor, audiencia, caducidad, firma, `nbf` y `alg: none`).
+- Estado: propuesta.
+
 ## Decisiones pendientes (con fecha límite)
 | Decisión | Quién | Antes de |
 |---|---|---|

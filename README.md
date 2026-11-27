@@ -58,6 +58,7 @@ Este repositorio es **la memoria oficial del proyecto**. Si algo no está aquí,
 - [28 · Auditoría de agentes](docs/28-auditoria-agentes.md)
 - [29 · Autonomía por proceso](docs/29-autonomia.md)
 - [30 · Inventario de la web interna](docs/30-inventario-web.md)
+- [31 · Identidad y roles](docs/31-identidad.md)
 - [Atlas de diagramas](docs/atlas/README.md)
 - [Documentos fuente en Markdown](docs/fuentes/) (Guía v1.4, Atlas Evolución v1.1, Marco legal v1.0, mapas 2–9)
 

@@ -564,6 +564,7 @@ var COLS=['tasks','rules','routines','agents','skills','decisions','chats','proj
 var LS='varios-oficina-v1';
 // N4 (docs/25, hallazgo 7): una aprobación caduca si nadie la decide. La acción por defecto es siempre la segura:
 // no continúa, vuelve a Inicio como pregunta. Plazo propuesto: 72 horas (lo ajustan los socios).
+// Posponer vale para aprobaciones y preguntas; se pierde solo cuando el encargo cambia de estado.
 var APROB_CADUCA_H=72;
 function pospuesta(t){return !!(t.pospuesto&&new Date(t.pospuesto)>new Date())}
 var FICHAS=null;
@@ -579,7 +580,7 @@ async function put(col,id,obj){
   if(col==='tasks'&&S.tasks[id]&&S.tasks[id].api&&!obj.api)obj.api=S.tasks[id].api;
   if(col==='tasks'&&!obj.piece){var prev=S.tasks[id];
     if(obj.status==='aprob'&&!(prev&&prev.status==='aprob'&&prev.aprobDesde)){obj.aprobDesde=now();obj.caduca=new Date(Date.now()+APROB_CADUCA_H*36e5).toISOString();delete obj.pospuesto}
-    else if(obj.status!=='aprob'){delete obj.caduca;delete obj.pospuesto}}
+    else if(obj.status!=='aprob'){delete obj.caduca;if(!prev||prev.status!==obj.status)delete obj.pospuesto}}
   obj._ts=now();S[col][id]=obj;if(col==='agents'){applyAgents();refreshLabels()}
   render();
   if(window.VariosAPI)VariosAPI.guardar(col,obj);

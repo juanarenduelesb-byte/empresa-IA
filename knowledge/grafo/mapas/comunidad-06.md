@@ -1,72 +1,62 @@
 ---
 tipo: "mapa"
 comunidad: 6
-miembros: 49
-cohesion: 0.1
+miembros: 45
+cohesion: 0.41
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 6 · knowledge/ingenieria · CEO digital y Especialista en ciberseguridad
+# Comunidad 6 · processes/catalog · P22 · Gestión de errores y reintentos y Catálogo de procesos P01–P38
 
-49 nodos agrupados por el algoritmo de Louvain. Cohesión 0.1.
+45 nodos agrupados por el algoritmo de Louvain. Cohesión 0.41.
 
 ## Documentos
 
-- [[knowledge/direccion/ceo-digital|CEO digital]]
-- [[knowledge/seguridad-legal/ciberseguridad|Especialista en ciberseguridad]]
-- [[knowledge/ingenieria/plataforma-operaciones|Ingeniero de plataforma y operaciones (DevOps/SRE)]]
-- [[knowledge/ingenieria/datos-ia|Arquitecto de datos e IA]]
-- [[knowledge/direccion/decisiones-seguimiento|Responsable de decisiones y seguimiento]]
-- [[knowledge/direccion/bibliotecario|Bibliotecario / responsable de conocimiento]]
-- [[precedents/README|Biblioteca de precedentes]]
-- [[knowledge/procesos/automatizacion|Especialista en automatización]]
-- [[knowledge/ingenieria/arquitecto-tecnico|Arquitecto técnico]]
-- [[knowledge/ingenieria/backend|Especialista backend]]
-- [[knowledge/seguridad-legal/calidad-riesgos|Especialista en calidad y riesgos]]
-- [[knowledge/administracion-finanzas/costes-proveedores|Especialista en costes y proveedores]]
-- [[knowledge/ingenieria/evaluacion-ia|Especialista en evaluación de IA]]
-- [[knowledge/ingenieria/integraciones|Especialista en integraciones]]
-- [[knowledge/agentes/ops|Plataforma y operaciones]]
-- [[integrations/catalog/README|Catálogo de integraciones]]
-- [[knowledge/metodologias-transversales/consultar-historico|Protocolo: consultar el histórico antes de empezar]]
-- [[claude/habilidades/cinco-decisiones|Las cinco decisiones del CEO]]
-- [[claude/habilidades/copias-restauracion|Copias y restauración probada]]
-- [[claude/habilidades/observabilidad|Observabilidad y alertas]]
-- [[claude/habilidades/integracion-continua|Integración continua]]
-- [[claude/habilidades/runbook-incidente|Runbook y gestión de incidentes]]
+- [[processes/catalog/README|Catálogo de procesos P01–P38]]
+- [[processes/catalog/P22-gestion-de-errores-y-reintentos|P22 · Gestión de errores y reintentos]]
+- [[processes/catalog/P27-gestion-de-proveedores-y-dependencias|P27 · Gestión de proveedores y dependencias]]
+- [[processes/catalog/P33-diseno-y-validacion-to-be|P33 · Diseño y validación TO-BE]]
+- [[processes/catalog/P05-diseno-del-plan|P05 · Diseño del plan]]
+- [[processes/catalog/P13-aprendizaje-y-actualizacion-de-la-wiki|P13 · Aprendizaje y actualización de la wiki]]
+- [[processes/catalog/P32-descubrimiento-de-procesos|P32 · Descubrimiento de procesos]]
+- [[processes/catalog/P25-gestion-de-cambios-y-versiones|P25 · Gestión de cambios y versiones]]
+- [[processes/catalog/P02-clasificacion-y-triaje|P02 · Clasificación y triaje]]
+- [[processes/catalog/P11-entrega-y-cierre|P11 · Entrega y cierre]]
+- [[processes/catalog/P38-gestion-de-despliegue-por-cliente|P38 · Gestión de despliegue por cliente]]
+- [[processes/catalog/P09-control-de-calidad|P09 · Control de calidad]]
+- [[processes/catalog/P23-evaluacion-de-agentes-y-modelos|P23 · Evaluación de agentes y modelos]]
+- [[processes/catalog/P16-gobierno-de-modelos-e-instrucciones|P16 · Gobierno de modelos e instrucciones]]
+- [[processes/catalog/P12-gestion-de-cambios|P12 · Gestión de cambios]]
+- [[processes/catalog/P19-politica-de-uso-y-limites|P19 · Política de uso y límites]]
+- [[processes/catalog/P21-ejecucion-segura-de-herramientas|P21 · Ejecución segura de herramientas]]
+- [[processes/catalog/P37-medicion-de-rendimiento-y-valor|P37 · Medición de rendimiento y valor]]
+- [[processes/catalog/P08-ejecucion-de-tareas|P08 · Ejecución de tareas]]
+- [[processes/catalog/P29-gestion-de-costes-y-capacidad|P29 · Gestión de costes y capacidad]]
+- [[processes/catalog/P14-gestion-de-permisos-y-aislamiento|P14 · Gestión de permisos y aislamiento]]
+- [[processes/catalog/P01-alta-y-recepcion-de-peticion|P01 · Alta y recepción de petición]]
+- [[processes/catalog/P20-seguridad-de-entradas-e-inyeccion-de-instrucciones|P20 · Seguridad de entradas e inyección de instrucciones]]
+- [[processes/catalog/P30-gestion-de-identidades-y-secretos|P30 · Gestión de identidades y secretos]]
+- [[processes/catalog/P18-evaluacion-y-mejora|P18 · Evaluación y mejora]]
+- [[processes/catalog/P10-aprobacion-humana|P10 · Aprobación humana]]
+- [[processes/catalog/P04-recuperacion-de-conocimiento|P04 · Recuperación de conocimiento]]
+- [[processes/catalog/P36-gestion-del-catalogo-de-conectores|P36 · Gestión del catálogo de conectores]]
+- [[processes/catalog/P28-gestion-de-incidentes|P28 · Gestión de incidentes]]
+- [[processes/catalog/P15-observabilidad-e-incidencias|P15 · Observabilidad e incidencias]]
+- [[processes/catalog/P34-gestion-de-definiciones-de-proceso|P34 · Gestión de definiciones de proceso]]
+- [[processes/catalog/P06-asignacion-y-coordinacion|P06 · Asignación y coordinación]]
+- [[processes/catalog/P35-gestion-de-instancias-y-excepciones|P35 · Gestión de instancias y excepciones]]
+- [[processes/catalog/P24-gestion-del-ciclo-de-vida-del-dato|P24 · Gestión del ciclo de vida del dato]]
+- [[processes/catalog/P07-ingesta-documental|P07 · Ingesta documental]]
+- [[processes/catalog/P17-seguridad-y-continuidad|P17 · Seguridad y continuidad]]
+- [[processes/catalog/P26-continuidad-y-recuperacion|P26 · Continuidad y recuperación]]
+- [[processes/templates/proceso-cliente|<sector> · <proceso>]]
+- [[processes/catalog/P03-gestion-de-aclaraciones|P03 · Gestión de aclaraciones]]
+- [[precedents/plantilla-incidente|Incidente: <título>]]
+- [[processes/runbooks/fuga-sospechada|Fuga de datos sospechada]]
+- [[processes/runbooks/workflow-fallido|Workflow bloqueado o fallido]]
 
-## Especialistas
+## Procesos
 
-- [[knowledge/procesos/automatizacion|Especialista en automatización]]
-- [[knowledge/ingenieria/plataforma-operaciones|Ingeniero de plataforma y operaciones (DevOps/SRE)]]
-- [[knowledge/administracion-finanzas/costes-proveedores|Especialista en costes y proveedores]]
-
-## Habilidades
-
-- [[claude/habilidades/observabilidad|Observabilidad y alertas]]
-- [[claude/habilidades/runbook-incidente|Runbook y gestión de incidentes]]
-
-## Fuentes
-
-- [[knowledge/grafo/fuentes/INT-GUIA|INT-GUIA · Guía de Arranque v1.4 (diseño cerrado)]]
-- [[knowledge/grafo/fuentes/ENS-RD311|ENS-RD311 · Real Decreto 311/2022, Esquema Nacional de Seguridad]]
-- [[knowledge/grafo/fuentes/ISO-27001|ISO-27001 · ISO/IEC 27001:2022 (transición desde 2013 terminada el 31/10/2025)]]
-- [[knowledge/grafo/fuentes/OWASP-LLM-2025|OWASP-LLM-2025 · OWASP Top 10 for LLM Applications 2025]]
-- [[knowledge/grafo/fuentes/OSS-CAMUNDA|OSS-CAMUNDA · Camunda 8: licencia para Self-Managed]]
-- [[knowledge/grafo/fuentes/OSS-N8N|OSS-N8N · n8n: Sustainable Use License]]
-- [[knowledge/grafo/fuentes/OTEL-GENAI|OTEL-GENAI · OpenTelemetry: convenciones semánticas para IA generativa]]
-- [[knowledge/grafo/fuentes/AEPD-AGENTICA|AEPD-AGENTICA · Inteligencia artificial agéntica desde la perspectiva de protección de datos]]
-- [[knowledge/grafo/fuentes/APQC-PCF|APQC-PCF · APQC Process Classification Framework, versión intersectorial]]
-- [[knowledge/grafo/fuentes/IETF-IDEMPOTENCY|IETF-IDEMPOTENCY · The Idempotency-Key HTTP Header Field (borrador 07)]]
-- [[knowledge/grafo/fuentes/PG-RLS|PG-RLS · Recomendaciones de seguridad a nivel de fila para SaaS multicliente]]
-- [[knowledge/grafo/fuentes/NIST-AI-600-1|NIST-AI-600-1 · AI RMF: Generative Artificial Intelligence Profile (NIST AI 600-1)]]
-- [[knowledge/grafo/fuentes/OSS-LANGFUSE|OSS-LANGFUSE · Langfuse (observabilidad de LLM)]]
-- [[knowledge/grafo/fuentes/OSS-TEMPORAL|OSS-TEMPORAL · Temporal (motor de ejecución duradera)]]
-- [[knowledge/grafo/fuentes/DORA-DEVOPS|DORA-DEVOPS · Métricas DORA de entrega de software (DevOps Research and Assessment)]]
-- [[knowledge/grafo/fuentes/GOOGLE-SRE|GOOGLE-SRE · Site Reliability Engineering (libros de Google SRE)]]
-- [[knowledge/grafo/fuentes/OSS-DOCLING|OSS-DOCLING · Docling (conversión de documentos)]]
-- [[knowledge/grafo/fuentes/OSS-PRESIDIO|OSS-PRESIDIO · Microsoft Presidio (detección y anonimización de datos personales)]]
-- [[knowledge/grafo/fuentes/TWELVE-FACTOR|TWELVE-FACTOR · The Twelve-Factor App]]
-- [[knowledge/grafo/fuentes/OSS-PROMPTFOO|OSS-PROMPTFOO · promptfoo (evaluación y pruebas adversariales de LLM)]]
-- [[knowledge/grafo/fuentes/OSS-SPIFF|OSS-SPIFF · SpiffWorkflow (motor BPMN/DMN en Python)]]
+- [[processes/catalog/P22-gestion-de-errores-y-reintentos|P22 · Gestión de errores y reintentos]]
+- [[processes/catalog/P28-gestion-de-incidentes|P28 · Gestión de incidentes]]

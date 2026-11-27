@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 3
-miembros: 92
-cohesion: 0.09
+miembros: 61
+cohesion: 0.11
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 3 · docs · Registro de decisiones y Trabajo nocturno de Claude
 
-92 nodos agrupados por el algoritmo de Louvain. Cohesión 0.09.
+61 nodos agrupados por el algoritmo de Louvain. Cohesión 0.11.
 
 ## Documentos
 
@@ -18,43 +18,26 @@ tags:
 - [[docs/informes/2026-11-27|Informe de la mañana · 27/11/2026]]
 - [[docs/informes/2026-11-26|Informe de la mañana · 26/11/2026]]
 - [[docs/23-plan-maestro|Plan maestro: la empresa completa, sin que se escape nada]]
-- [[docs/fuentes/Atlas_Evolucion_v1.1_Modelo_Operativo_Procesos_y_Despliegue|Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue]]
 - [[docs/17-cerebro-y-procesos|17 · Cerebro, conocimiento y procesos: auditoría e informe]]
 - [[README|Varios — repositorio maestro]]
 - [[docs/24-base-de-datos|Base de datos (D-023, propuesta)]]
 - [[docs/10-plan-12-semanas|Plan de construcción · 18/11/2026 → 12/02/2027]]
 - [[docs/22-plan-hasta-febrero|Plan de trabajo diario · 26/11/2026 → 28/02/2027]]
-- [[governance/legal/borradores/05-matriz-aprobaciones|Matriz de aprobaciones · BORRADOR]]
-- [[knowledge/plantillas/entregables/README|Plantillas de entregables al cliente (E1)]]
 - [[docs/25-portal-interno|Portal interno: auditoría de la oficina y distribución propuesta (F1)]]
-- [[precedents/projects/caso-correduria-atalaya/entregables/01-propuesta-diagnostico|Propuesta de diagnóstico · Atalaya Correduría de Seguros (FICTICIA)]]
 - [[docs/30-inventario-web|Inventario de la web interna (site/) frente a la web para clientes (N5)]]
-- [[knowledge/plantillas/entregables/01-propuesta-diagnostico|Propuesta de diagnóstico · (Cliente)]]
-- [[knowledge/plantillas/entregables/02-informe-diagnostico|Informe de diagnóstico · (Cliente) · (Proceso)]]
-- [[knowledge/plantillas/entregables/rubrica|Rúbrica de calidad de entregables y listas de comprobación (C3)]]
-- [[docs/08-roadmap-y-decisiones|Roadmap y decisiones]]
-- [[knowledge/plantillas/ficha-cliente|Plantilla · Ficha de cliente]]
 - [[docs/19-obsidian|Obsidian: el cerebro abierto en tu equipo]]
-- [[knowledge/plantillas/entregables/03-diseno-to-be|Diseño del proceso nuevo (TO-BE) · (Cliente) · (Proceso)]]
 - [[docs/09-inventario-documental|Inventario documental]]
-- [[knowledge/plantillas/entregables/04-plan-piloto|Plan de piloto · (Cliente) · (Proceso)]]
-- [[processes/templates/proceso-cliente|<sector> · <proceso>]]
 - [[docs/26-web-clientes|Web para clientes: estudio de referencias, estructura y textos (F2)]]
-- [[knowledge/metodologias-transversales/guion-validacion-semanal|Guion de la conversación semanal de validación]]
-- [[knowledge/metodologias-transversales/cuestionario-descubrimiento|Cuestionario de descubrimiento por puertas (G0–G2)]]
-- [[docs/05-agentes-procesos-e-integraciones|Agentes, procesos e integraciones]]
-- [[precedents/projects/caso-correduria-atalaya/entregables/01-propuesta-diagnostico.revision|Revisión con la rúbrica C3 · Propuesta de diagnóstico de Atalaya (FICTICIA)]]
+- [[governance/socios/01-marca-esclusa-o-varios|M-002 · ¿Una sola marca: Esclusa o Varios?]]
 - [[governance/socios/02-acuerdo-de-socios-puntos|M-003 · Acuerdo de socios: lo que tenéis que decidir]]
 - [[Inicio|Inicio · cerebro de Varios]]
-- [[knowledge/plantillas/entregables/05-informe-mensual-operacion|Informe mensual de operación · (Cliente) · (Mes)]]
-- [[knowledge/glosario/README|Glosario]]
-- [[knowledge/metodologias-transversales/README|Metodologías transversales]]
-- [[docs/01-vision-y-modelo-operativo|Visión y modelo operativo]]
-- [[knowledge/metodologias-transversales/contrastar|Protocolo: contrastar el conocimiento interno y el externo]]
+- [[governance/socios/README|Decisiones de los socios (borradores)]]
 - [[docs/11-cerebro-en-claude|Cerebro en Claude]]
+- [[governance/README|Gobierno, seguridad y legal]]
+- [[docs/06-seguridad-y-gobierno|Seguridad, privacidad y gobierno]]
+- [[docs/07-calidad-infraestructura-y-operacion|Calidad, infraestructura y operación]]
 - [[docs/18-flujo-de-calidad-y-aprendizaje|18 · Flujo de calidad y aprendizaje continuo en la oficina]]
 - [[web/README|Web para clientes (borrador)]]
-- [[knowledge/plantillas/entregables/06-acta-reunion|Acta de reunión · (Cliente) · (Tema) · (Fecha)]]
 - [[claude/instrucciones-proyecto|Instrucciones del proyecto "Varios · Cerebro" en Claude]]
 - [[docs/02-arquitectura-general|Arquitectura general]]
 - [[docs/informes/README|Informes de la mañana]]
@@ -76,7 +59,6 @@ tags:
 - [[knowledge/grafo/decisiones/D-014|D-014 · Adelantar un prototipo mínimo del motor de procesos]]
 - [[knowledge/grafo/decisiones/D-003|D-003 · Obsidian como interfaz humana]]
 - [[knowledge/grafo/decisiones/D-021|D-021 · El cerebro se abre en Obsidian: el repositorio es el vault]]
-- [[knowledge/grafo/decisiones/D-009|D-009 · Unificación de puertas y estados]]
 - [[knowledge/grafo/decisiones/D-010|D-010 · Diagramas como código]]
 - [[knowledge/grafo/decisiones/D-015|D-015 · Entregables en archivos reales, memoria y Google Drive en la oficina de agentes]]
 - [[knowledge/grafo/decisiones/D-004|D-004 · PostgreSQL como fuente operativa]]
@@ -84,7 +66,6 @@ tags:
 - [[knowledge/grafo/decisiones/D-018|D-018 · El cerebro pasa a ser un grafo de conocimiento con relaciones explicadas]]
 - [[knowledge/grafo/decisiones/D-020|D-020 · Seis puestos nuevos en la oficina: CFO, contabilidad, éxito de cliente, plataforma, diseño y cumplimiento]]
 - [[knowledge/grafo/decisiones/D-001|D-001 · Arquitectura orientada a procesos]]
-- [[knowledge/grafo/decisiones/D-002|D-002 · Modelo matricial]]
 - [[knowledge/grafo/decisiones/D-005|D-005 · Aislamiento multi-cliente]]
 - [[knowledge/grafo/decisiones/D-008|D-008 · Repositorio como memoria oficial y web visual]]
 - [[knowledge/grafo/decisiones/D-016|D-016 · Vista 3D de la oficina de agentes con Three.js]]
@@ -97,7 +78,5 @@ tags:
 - [[knowledge/grafo/fuentes/ZAPIER-HITL|ZAPIER-HITL · Zapier: Human in the Loop (pedir aprobación para seguir)]]
 - [[knowledge/grafo/fuentes/BASECAMP-5|BASECAMP-5 · Basecamp 5: inicio orientado a la acción]]
 - [[knowledge/grafo/fuentes/GEPA-2026|GEPA-2026 · GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning (Agrawal et al., ICLR 2026, ponencia oral)]]
-- [[knowledge/grafo/fuentes/LEI-VSM|LEI-VSM · Value Stream Mapping (léxico del Lean Enterprise Institute)]]
 - [[knowledge/grafo/fuentes/LINEAR-TRIAGE|LINEAR-TRIAGE · Linear: Triage e Inbox]]
-- [[knowledge/grafo/fuentes/MOM-TEST|MOM-TEST · The Mom Test (Rob Fitzpatrick): cómo hablar con clientes sin que te mientan]]
 - [[knowledge/grafo/fuentes/NEAT-2002|NEAT-2002 · Neuroevolution of augmenting topologies (NEAT)]]

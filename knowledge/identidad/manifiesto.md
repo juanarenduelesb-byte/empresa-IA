@@ -36,4 +36,4 @@ Ayudamos a empresas medianas de sectores regulados a que la IA haga trabajo real
 - **Todos los sectores a la vez.** Uno bien antes que seis a medias.
 
 ## Quiénes somos
-Dos socios: uno construye el producto y otro lleva la relación con los clientes. Quien vende es quien ejecuta. [Biografías y nombre de la empresa, cuando los socios lo decidan.]
+Dos socios: uno construye el producto y otro lleva la relación con los clientes (reparto pendiente de confirmar, `CLAUDE.md`). Quien vende es quien ejecuta. [Biografías y nombre de la empresa, cuando los socios lo decidan.]

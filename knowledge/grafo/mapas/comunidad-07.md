@@ -1,66 +1,55 @@
 ---
 tipo: "mapa"
 comunidad: 7
-miembros: 45
-cohesion: 0.12
+miembros: 44
+cohesion: 0.15
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 7 · knowledge/ingenieria · CEO digital y Responsable de cumplimiento normativo
+# Comunidad 7 · knowledge/plantillas · Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue y Matriz de aprobaciones · BORRADOR
 
-45 nodos agrupados por el algoritmo de Louvain. Cohesión 0.12.
+44 nodos agrupados por el algoritmo de Louvain. Cohesión 0.15.
 
 ## Documentos
 
-- [[knowledge/direccion/ceo-digital|CEO digital]]
-- [[knowledge/seguridad-legal/cumplimiento|Responsable de cumplimiento normativo]]
-- [[knowledge/seguridad-legal/ciberseguridad|Especialista en ciberseguridad]]
-- [[knowledge/ingenieria/plataforma-operaciones|Ingeniero de plataforma y operaciones (DevOps/SRE)]]
-- [[knowledge/seguridad-legal/legal-privacidad|Especialista legal y privacidad]]
-- [[knowledge/ingenieria/datos-ia|Arquitecto de datos e IA]]
-- [[knowledge/direccion/decisiones-seguimiento|Responsable de decisiones y seguimiento]]
-- [[knowledge/direccion/bibliotecario|Bibliotecario / responsable de conocimiento]]
-- [[precedents/README|Biblioteca de precedentes]]
-- [[knowledge/ingenieria/arquitecto-tecnico|Arquitecto técnico]]
-- [[knowledge/ingenieria/backend|Especialista backend]]
-- [[knowledge/ingenieria/diseno-experiencia|Diseñador de producto y experiencia (UX)]]
-- [[knowledge/seguridad-legal/calidad-riesgos|Especialista en calidad y riesgos]]
-- [[knowledge/ingenieria/evaluacion-ia|Especialista en evaluación de IA]]
-- [[knowledge/agentes/ops|Plataforma y operaciones]]
-- [[claude/habilidades/cinco-decisiones|Las cinco decisiones del CEO]]
-- [[claude/habilidades/copias-restauracion|Copias y restauración probada]]
-- [[docs/02-arquitectura-general|Arquitectura general]]
-- [[claude/habilidades/integracion-continua|Integración continua]]
+- [[docs/fuentes/Atlas_Evolucion_v1.1_Modelo_Operativo_Procesos_y_Despliegue|Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue]]
+- [[governance/legal/borradores/05-matriz-aprobaciones|Matriz de aprobaciones · BORRADOR]]
+- [[knowledge/plantillas/entregables/README|Plantillas de entregables al cliente (E1)]]
+- [[precedents/projects/caso-correduria-atalaya/entregables/01-propuesta-diagnostico|Propuesta de diagnóstico · Atalaya Correduría de Seguros (FICTICIA)]]
+- [[knowledge/plantillas/README|Plantillas]]
+- [[knowledge/plantillas/entregables/rubrica|Rúbrica de calidad de entregables y listas de comprobación (C3)]]
+- [[knowledge/plantillas/entregables/01-propuesta-diagnostico|Propuesta de diagnóstico · (Cliente)]]
+- [[docs/08-roadmap-y-decisiones|Roadmap y decisiones]]
+- [[knowledge/plantillas/ficha-cliente|Plantilla · Ficha de cliente]]
+- [[knowledge/plantillas/entregables/02-informe-diagnostico|Informe de diagnóstico · (Cliente) · (Proceso)]]
+- [[knowledge/plantillas/entregables/03-diseno-to-be|Diseño del proceso nuevo (TO-BE) · (Cliente) · (Proceso)]]
+- [[knowledge/plantillas/entregables/04-plan-piloto|Plan de piloto · (Cliente) · (Proceso)]]
+- [[knowledge/metodologias-transversales/guion-validacion-semanal|Guion de la conversación semanal de validación]]
+- [[processes/templates/proceso-cliente|<sector> · <proceso>]]
+- [[knowledge/metodologias-transversales/cuestionario-descubrimiento|Cuestionario de descubrimiento por puertas (G0–G2)]]
+- [[docs/05-agentes-procesos-e-integraciones|Agentes, procesos e integraciones]]
+- [[precedents/projects/caso-correduria-atalaya/entregables/01-propuesta-diagnostico.revision|Revisión con la rúbrica C3 · Propuesta de diagnóstico de Atalaya (FICTICIA)]]
+- [[knowledge/plantillas/entregables/05-informe-mensual-operacion|Informe mensual de operación · (Cliente) · (Mes)]]
+- [[knowledge/glosario/README|Glosario]]
+- [[knowledge/metodologias-transversales/README|Metodologías transversales]]
+- [[knowledge/metodologias-transversales/consultar-historico|Protocolo: consultar el histórico antes de empezar]]
+- [[docs/01-vision-y-modelo-operativo|Visión y modelo operativo]]
+- [[knowledge/metodologias-transversales/contrastar|Protocolo: contrastar el conocimiento interno y el externo]]
+- [[knowledge/plantillas/entregables/06-acta-reunion|Acta de reunión · (Cliente) · (Tema) · (Fecha)]]
+- [[knowledge/metodologias-transversales/guardar|Protocolo: guardar el conocimiento]]
+- [[precedents/plantilla-precedente|<título>]]
+- [[knowledge/plantillas/entrada-decision|Entrada-decision]]
+- [[knowledge/plantillas/ficha-proveedor|Proveedor: <nombre>]]
+- [[knowledge/plantillas/ficha-conocimiento|Título]]
+- [[knowledge/plantillas/ficha-investigacion|Investigación: <pregunta>]]
 
-## Especialistas
+## Decisiones
 
-- [[knowledge/seguridad-legal/cumplimiento|Responsable de cumplimiento normativo]]
-- [[knowledge/ingenieria/plataforma-operaciones|Ingeniero de plataforma y operaciones (DevOps/SRE)]]
-- [[knowledge/ingenieria/diseno-experiencia|Diseñador de producto y experiencia (UX)]]
+- [[knowledge/grafo/decisiones/D-009|D-009 · Unificación de puertas y estados]]
+- [[knowledge/grafo/decisiones/D-002|D-002 · Modelo matricial]]
 
 ## Fuentes
 
-- [[knowledge/grafo/fuentes/INT-GUIA|INT-GUIA · Guía de Arranque v1.4 (diseño cerrado)]]
-- [[knowledge/grafo/fuentes/UE-RIA-OMNIBUS|UE-RIA-OMNIBUS · Reglamento (UE) 2026/1744 (ómnibus digital sobre IA), que modifica el Reglamento (UE) 2024/1689]]
-- [[knowledge/grafo/fuentes/ENS-RD311|ENS-RD311 · Real Decreto 311/2022, Esquema Nacional de Seguridad]]
-- [[knowledge/grafo/fuentes/ISO-27001|ISO-27001 · ISO/IEC 27001:2022 (transición desde 2013 terminada el 31/10/2025)]]
-- [[knowledge/grafo/fuentes/LEY-ACCESIBILIDAD-11-2023|LEY-ACCESIBILIDAD-11-2023 · Ley 11/2023 (accesibilidad de productos y servicios, transpone la Directiva (UE) 2019/882)]]
-- [[knowledge/grafo/fuentes/NIS2-ES|NIS2-ES · Estado de la transposición de NIS2 en España]]
-- [[knowledge/grafo/fuentes/OWASP-LLM-2025|OWASP-LLM-2025 · OWASP Top 10 for LLM Applications 2025]]
-- [[knowledge/grafo/fuentes/AEPD-AGENTICA|AEPD-AGENTICA · Inteligencia artificial agéntica desde la perspectiva de protección de datos]]
-- [[knowledge/grafo/fuentes/OTEL-GENAI|OTEL-GENAI · OpenTelemetry: convenciones semánticas para IA generativa]]
-- [[knowledge/grafo/fuentes/APQC-PCF|APQC-PCF · APQC Process Classification Framework, versión intersectorial]]
-- [[knowledge/grafo/fuentes/IETF-IDEMPOTENCY|IETF-IDEMPOTENCY · The Idempotency-Key HTTP Header Field (borrador 07)]]
-- [[knowledge/grafo/fuentes/PG-RLS|PG-RLS · Recomendaciones de seguridad a nivel de fila para SaaS multicliente]]
-- [[knowledge/grafo/fuentes/RIA-ART4-ALFABETIZACION|RIA-ART4-ALFABETIZACION · Reglamento de IA, artículo 4: alfabetización en IA]]
-- [[knowledge/grafo/fuentes/AEPD-RIA-ART5|AEPD-RIA-ART5 · La AEPD recuerda que ya puede actuar ante sistemas de IA]]
-- [[knowledge/grafo/fuentes/DORA-DEVOPS|DORA-DEVOPS · Métricas DORA de entrega de software (DevOps Research and Assessment)]]
-- [[knowledge/grafo/fuentes/GOOGLE-SRE|GOOGLE-SRE · Site Reliability Engineering (libros de Google SRE)]]
-- [[knowledge/grafo/fuentes/ISO-42001|ISO-42001 · ISO/IEC 42001:2023 Sistema de gestión de IA]]
-- [[knowledge/grafo/fuentes/NNG-HEURISTICAS|NNG-HEURISTICAS · 10 heurísticas de usabilidad (Jakob Nielsen)]]
-- [[knowledge/grafo/fuentes/OSS-DOCLING|OSS-DOCLING · Docling (conversión de documentos)]]
-- [[knowledge/grafo/fuentes/OSS-PRESIDIO|OSS-PRESIDIO · Microsoft Presidio (detección y anonimización de datos personales)]]
-- [[knowledge/grafo/fuentes/TWELVE-FACTOR|TWELVE-FACTOR · The Twelve-Factor App]]
-- [[knowledge/grafo/fuentes/W3C-WCAG22|W3C-WCAG22 · Web Content Accessibility Guidelines (WCAG) 2.2]]
-- [[knowledge/grafo/fuentes/OSS-PROMPTFOO|OSS-PROMPTFOO · promptfoo (evaluación y pruebas adversariales de LLM)]]
+- [[knowledge/grafo/fuentes/LEI-VSM|LEI-VSM · Value Stream Mapping (léxico del Lean Enterprise Institute)]]
+- [[knowledge/grafo/fuentes/MOM-TEST|MOM-TEST · The Mom Test (Rob Fitzpatrick): cómo hablar con clientes sin que te mientan]]

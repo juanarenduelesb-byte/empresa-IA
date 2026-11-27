@@ -31,7 +31,7 @@ Entrada adicional: formación en IA para la plantilla (artículo 4 del Reglament
 | Alternativa | Punto débil para una empresa mediana | Nuestra respuesta |
 |---|---|---|
 | Sapira / Pharo y similares | Cuentas grandes, ventas largas | Empresas medianas, proyectos cortos, precio cerrado |
-| Gran consultora | 4–9 meses hasta producción, por horas | 6–10 semanas, quien vende ejecuta |
+| Gran consultora | 4–9 meses hasta producción, por horas (**sin fuente**: pregunta 13 de [docs/21](21-trabajo-nocturno.md)) | 6–10 semanas, quien vende ejecuta (**por cuadrar** con las fases: 3 + 2 + 4–8 = 9–13 semanas hasta terminar el piloto) |
 | Agencia de automatización | Sin cumplimiento ni seguridad de IA | Cumplimiento y pruebas de seguridad de serie |
 | Equipo interno | Perfiles escasos | Lo montamos y lo dejamos documentado |
 

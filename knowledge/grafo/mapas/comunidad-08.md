@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 8
-miembros: 37
-cohesion: 0.5
+miembros: 36
+cohesion: 0.52
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 8 · processes/catalog · P22 · Gestión de errores y reintentos y Catálogo de procesos P01–P38
 
-37 nodos agrupados por el algoritmo de Louvain. Cohesión 0.5.
+36 nodos agrupados por el algoritmo de Louvain. Cohesión 0.52.
 
 ## Documentos
 
@@ -33,10 +33,10 @@ tags:
 - [[processes/catalog/P30-gestion-de-identidades-y-secretos|P30 · Gestión de identidades y secretos]]
 - [[processes/catalog/P01-alta-y-recepcion-de-peticion|P01 · Alta y recepción de petición]]
 - [[processes/catalog/P20-seguridad-de-entradas-e-inyeccion-de-instrucciones|P20 · Seguridad de entradas e inyección de instrucciones]]
-- [[processes/catalog/P04-recuperacion-de-conocimiento|P04 · Recuperación de conocimiento]]
-- [[processes/catalog/P28-gestion-de-incidentes|P28 · Gestión de incidentes]]
 - [[processes/catalog/P18-evaluacion-y-mejora|P18 · Evaluación y mejora]]
+- [[processes/catalog/P28-gestion-de-incidentes|P28 · Gestión de incidentes]]
 - [[processes/catalog/P10-aprobacion-humana|P10 · Aprobación humana]]
+- [[processes/catalog/P04-recuperacion-de-conocimiento|P04 · Recuperación de conocimiento]]
 - [[processes/catalog/P36-gestion-del-catalogo-de-conectores|P36 · Gestión del catálogo de conectores]]
 - [[processes/catalog/P15-observabilidad-e-incidencias|P15 · Observabilidad e incidencias]]
 - [[processes/catalog/P06-asignacion-y-coordinacion|P06 · Asignación y coordinación]]
@@ -45,7 +45,6 @@ tags:
 - [[processes/catalog/P07-ingesta-documental|P07 · Ingesta documental]]
 - [[processes/catalog/P26-continuidad-y-recuperacion|P26 · Continuidad y recuperación]]
 - [[processes/catalog/P03-gestion-de-aclaraciones|P03 · Gestión de aclaraciones]]
-- [[precedents/plantilla-incidente|Incidente: <título>]]
 - [[processes/runbooks/workflow-fallido|Workflow bloqueado o fallido]]
 - [[processes/runbooks/fuga-sospechada|Fuga de datos sospechada]]
 

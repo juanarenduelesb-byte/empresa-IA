@@ -1,6 +1,6 @@
 {
  "id": "encargo",
- "version": "1.0.0",
+ "version": "1.1.0",
  "estado": "draft",
  "fuente": "docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado.md §4 y Estados mínimos",
  "inicial": "RECIBIDO",
@@ -109,6 +109,14 @@
    ],
    "regla": "Aprobador autorizado, acción, alcance y versión exactos.",
    "origen": "Guía v1.4 §4"
+  },
+  {
+   "de": "PENDIENTE_APROBACION",
+   "a": [
+    "ESCALADO"
+   ],
+   "regla": "Solo al caducar la aprobación sin decisión: no continúa y vuelve como pregunta para que una persona decida cómo seguir (P10: nunca aprobación tácita; D-019). No es un cambio libre: lo hace solo la caducidad.",
+   "origen": "añadida (N3c, 27/11/2026; hueco de la Guía; confirmar)"
   },
   {
    "de": "ENTREGADO",

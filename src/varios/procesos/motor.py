@@ -118,6 +118,8 @@ class Motor:
             raise TransicionInvalida("Entrega directa desde QA solo con riesgo bajo y QA conforme")
         if enc.estado == "PENDIENTE_APROBACION" and a == "ENTREGADO":
             raise AprobacionInvalida("Usa aprobar(): la entrega tras aprobación exige una persona")
+        if enc.estado == "PENDIENTE_APROBACION" and a == "ESCALADO":
+            raise TransicionInvalida("PENDIENTE_APROBACION → ESCALADO solo ocurre al caducar la aprobación (N3c)")
         if enc.estado == "PENDIENTE_APROBACION":
             # Guía v1.4 §4: también devolver a retrabajo o rechazar exige un aprobador autorizado.
             self._comprobar_aprobador(quien, enc)

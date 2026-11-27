@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 5
-miembros: 59
-cohesion: 0.15
+miembros: 58
+cohesion: 0.16
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 5 · precedents/oficina · Propuesta de proceso de referencia: siniestros en corredurías y Conversaciones con Coordinación sectorial · Seguros
 
-59 nodos agrupados por el algoritmo de Louvain. Cohesión 0.15.
+58 nodos agrupados por el algoritmo de Louvain. Cohesión 0.16.
 
 ## Documentos
 
@@ -50,7 +50,6 @@ tags:
 - [[precedents/oficina/encargos/2026-11/2026-11-25-prepara-el-guion-y-las-8-preguntas-clave-para-la-c-lgxmr|Prepara el guion y las 8 preguntas clave para la conversación de valid]]
 - [[processes/referencia-seguros-apertura-siniestros/casos/README|Casos de prueba: 20 siniestros inventados (C1)]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-datos-de-prueba-a-calidad-y-riesgo-dvsoz|Datos de prueba → Calidad y riesgo]]
-- [[knowledge/plantillas/ficha-kpi|KPI: <nombre>]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-legal-y-privacidad-a-calidad-y-riesgo-7k9sg|Legal y privacidad → Calidad y riesgo]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-ceo-digital-a-coordinacion-sectorial-seguros-fws4y|CEO digital → Coordinación sectorial · Seguros]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-arquitecto-de-procesos-a-calidad-y-riesgo-61ars|Arquitecto de procesos → Calidad y riesgo]]

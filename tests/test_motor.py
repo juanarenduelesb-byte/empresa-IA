@@ -52,7 +52,7 @@ def test_auditoria_completa():
     esperado = ["RECIBIDO", "EN_CLASIFICACION", "PLANIFICADO", "EN_EJECUCION", "EN_QA"]
     assert [ev.despues for ev in e.historial] == esperado
     ev = e.historial[-1]
-    assert ev.actor == "ana" and ev.antes == "EN_EJECUCION" and ev.motivo and ev.version_definicion == "1.0.0"
+    assert ev.actor == "ana" and ev.antes == "EN_EJECUCION" and ev.motivo and ev.version_definicion == "1.1.0"
     with pytest.raises(AttributeError):
         ev.motivo = "cambiado"  # inmutable
 
@@ -138,3 +138,13 @@ def test_salir_de_pendiente_de_aprobacion_exige_aprobador():
     m.mover(LUIS, e.id, "RETRABAJO", "falta un dato")
     assert e.estado == "RETRABAJO" and e.version_entregable == 2
 
+
+
+def test_escalar_una_aprobacion_solo_lo_hace_la_caducidad():
+    """N3c: PENDIENTE_APROBACION → ESCALADO existe en encargo.json solo para la caducidad (D-031)."""
+    m = Motor()
+    e = llevar_a_qa(m, ANA, "alto")
+    m.mover(ANA, e.id, "PENDIENTE_APROBACION", "riesgo alto")
+    with pytest.raises(TransicionInvalida):
+        m.mover(LUIS, e.id, "ESCALADO", "me salto la aprobación")
+    assert e.estado == "PENDIENTE_APROBACION"

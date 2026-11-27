@@ -1488,6 +1488,20 @@
    "consultada": "2026-11-26"
   },
   {
+   "id": "REDIS-EXPIRE",
+   "titulo": "Redis: comando EXPIRE (cómo caducan las claves)",
+   "organismo": "Redis (documentación de comandos; copia en redis.antirez.com)",
+   "url": "https://redis.antirez.com/commands/content/commands/expire.md",
+   "tipo": "documentacion-producto",
+   "jurisdiccion": "—",
+   "version": "sin fecha en la página",
+   "autoridad": "media",
+   "vigencia": "vigente",
+   "estado": "draft",
+   "nota": "«Redis keys are expired in two ways: a passive way and an active way.» «A key is passively expired when a client tries to access it and the key is timed out.» Base de la caducidad perezosa de las aprobaciones en la API (D-031). Es una copia de la documentación, no redis.io.",
+   "consultada": "2026-11-27"
+  },
+  {
    "id": "GEPA-2026",
    "titulo": "GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning (Agrawal et al., ICLR 2026, ponencia oral)",
    "organismo": "UC Berkeley, Stanford, Databricks y otros",

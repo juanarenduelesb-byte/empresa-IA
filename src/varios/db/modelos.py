@@ -22,6 +22,7 @@ from sqlalchemy import (
     DateTime,
     ForeignKey,
     Identity,
+    Index,
     Integer,
     MetaData,
     Numeric,
@@ -30,6 +31,7 @@ from sqlalchemy import (
     UniqueConstraint,
     Uuid,
     func,
+    text,
 )
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 
@@ -51,7 +53,7 @@ ESTADOS_FICHA = ("raw", "draft", "validated", "approved", "deprecated", "dispute
 RIESGOS = ("bajo", "medio", "alto", "critico")
 CLASIFICACIONES = ("publico", "interno", "confidencial", "datos_personales", "datos_salud")
 ESTADOS_DOCUMENTO = ("cuarentena", "aceptado", "rechazado")
-DECISIONES = ("pendiente", "aprobada", "rechazada")
+DECISIONES = ("pendiente", "aprobada", "rechazada", "caducada")  # caducada: sin decidir en plazo (N3c)
 RESULTADOS_MODELO = ("ok", "error", "rechazado")
 RESULTADOS_HERRAMIENTA = ("ok", "error", "bloqueado", "pendiente")
 
@@ -117,6 +119,8 @@ class Solicitud(Base):
     riesgo: Mapped[str] = mapped_column(String(10), default="bajo", server_default="bajo")
     version: Mapped[int] = mapped_column(Integer, default=1, server_default="1")
     version_definicion: Mapped[str | None] = mapped_column(String(20))
+    # Apartado por un socio hasta esta hora (N3c). No decide nada; se pierde al cambiar de estado.
+    pospuesto_hasta: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
     creado_en: Mapped[datetime] = _creado()
     actualizado_en: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now(), onupdate=func.now()
@@ -189,9 +193,15 @@ class Aprobacion(Base):
     __tablename__ = "aprobacion"
     __table_args__ = (
         CheckConstraint(_en("decision", DECISIONES), name="decision"),
+        # Caducada: no la ha decidido nadie, así que no tiene aprobador (P10: nunca aprobación tácita).
         CheckConstraint(
-            "decision = 'pendiente' OR (aprobador_id IS NOT NULL AND decidida_en IS NOT NULL)", name="decidida"
+            "decision = 'pendiente' "
+            "OR (decision = 'caducada' AND aprobador_id IS NULL AND decidida_en IS NOT NULL) "
+            "OR (decision IN ('aprobada', 'rechazada') AND aprobador_id IS NOT NULL AND decidida_en IS NOT NULL)",
+            name="decidida",
         ),
+        Index("ix_aprobacion_pendiente_caduca", "cliente_id", "caduca_en",
+              postgresql_where=text("decision = 'pendiente'")),
         CheckConstraint("aprobador_id IS NULL OR solicitada_por <> aprobador_id::text", name="no_autoaprobacion"),
     )
     id: Mapped[uuid.UUID] = _id()
@@ -205,6 +215,7 @@ class Aprobacion(Base):
     motivo: Mapped[str] = mapped_column(Text, default="", server_default="")
     creado_en: Mapped[datetime] = _creado()
     decidida_en: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    caduca_en: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
 
 
 class EventoAuditoria(Base):

@@ -6,6 +6,9 @@
  *   alta, cambios de estado según encargo.json (camino más corto), petición de aprobación y decisión.
  * - El token va en sessionStorage (se borra al cerrar la pestaña). Es solo para desarrollo con datos inventados.
  * - Si la API rechaza algo (por ejemplo, aprobar lo que has pedido tú), la oficina lo avisa y no se fuerza nada.
+ * - N3c: con la API, posponer, caducar y las piezas (tareas) se guardan en PostgreSQL. La caducidad la decide la API
+ *   (la oficina no caduca por su cuenta lo que está en la API) y la oficina la lee cada minuto. Lo que llega de la API
+ *   se puede decidir desde esta oficina si espera el OK, salvo que lo pidiera quien está conectado.
  */
 (function () {
   'use strict';
@@ -19,7 +22,12 @@
     PENDIENTE_APROBACION: 'aprob', ENTREGADO: 'hecha', CERRADO: 'hecha', RECHAZADO: 'rech', CANCELADO: 'rech',
     REABIERTO: 'preg'};
   var RIESGOS = {bajo: 1, medio: 1, alto: 1, critico: 1};
-  var A = {activa: false, base: '', token: '', grafo: null, colas: {}, ops: null, avisado: {}, apis: {}};
+  // Estado de una pieza de la oficina → estado de la tarea en la API (objetos.json; la API valida cada paso).
+  var PIEZA = {marcha: 'running', hecha: 'succeeded', rech: 'failed'};
+  var DESDE_TAREA = {queued: 'marcha', running: 'marcha', needs_approval: 'preg', blocked: 'preg', succeeded: 'hecha',
+    failed: 'rech', cancelled: 'rech'};
+  var A = {activa: false, base: '', token: '', grafo: null, colas: {}, ops: null, avisado: {}, apis: {}, yo: '',
+    sondeo: null};
 
   function cab() { return {'Content-Type': 'application/json', 'Authorization': 'Bearer ' + A.token}; }
   async function llamar(metodo, ruta, cuerpo) {
@@ -57,6 +65,9 @@
       api = {id: e.id, estado: e.estado, version: e.version}; cambio = true;
     }
     var destino = DESTINO[t.status];
+    // Una pregunta es una pregunta: si en la API ya espera a una persona (por ejemplo, ESCALADO tras caducar), no se
+    // mueve para que coincida el nombre del estado; eso dejaría en la auditoría pasos que nadie dio.
+    if (t.status === 'preg' && DESDE_API[api.estado] === 'preg') destino = api.estado;
     if (destino && destino !== api.estado) {
       var antes = api.estado;
       if (destino === 'PENDIENTE_APROBACION' || destino === 'ENTREGADO' || antes === 'PENDIENTE_APROBACION') {
@@ -68,6 +79,7 @@
           if (api.estado === 'EN_QA') {
             var ap = await llamar('POST', '/encargos/' + api.id + '/aprobaciones', {motivo: 'La oficina pide el OK de un socio'});
             api.aprobacion = ap.id; api.estado = 'PENDIENTE_APROBACION'; api.pedida = new Date().toISOString();
+            api.caduca = ap.caduca_en ? new Date(ap.caduca_en).toISOString() : ''; api.solicitadaPor = ap.solicitada_por;
           }
         }
         if (api.estado === 'PENDIENTE_APROBACION' && destino !== 'PENDIENTE_APROBACION' && api.aprobacion) {
@@ -87,7 +99,7 @@
             var siRechaza = destino === 'RECHAZADO' ? 'RECHAZADO' : 'RETRABAJO';
             await llamar('POST', '/aprobaciones/' + api.aprobacion + '/decision',
               {decision: aprobada ? 'aprobada' : 'rechazada', motivo: ult.m, si_rechaza: siRechaza});
-            api.estado = aprobada ? 'ENTREGADO' : siRechaza; api.aprobacion = '';
+            api.estado = aprobada ? 'ENTREGADO' : siRechaza; api.aprobacion = ''; api.caduca = '';
             if (!aprobada) for (var q of (camino(api.estado, destino) || [])) { api.estado = (await mover(api.id, q, 'Oficina: ' + t.status)).estado; }
           } catch (err) {
             if (err.status === 403) {
@@ -103,6 +115,76 @@
       }
       cambio = cambio || api.estado !== antes;
     }
+    if (await posponer(t, api)) cambio = true;
+    A.apis[t.id] = api;
+    if (cambio) A.ops.guardarApi(t.id, api);
+  }
+
+  // Posponer (N3c): si la oficina lo ha pospuesto y la API aún no lo sabe, se guarda allí. Devuelve si cambió algo.
+  async function posponer(t, api) {
+    if (!t.pospuesto || !api.id || api.pospuesto === t.pospuesto || new Date(t.pospuesto) <= new Date()) return false;
+    try {
+      await llamar('POST', '/encargos/' + api.id + '/posponer', {hasta: t.pospuesto, motivo: 'Pospuesto en la oficina'});
+      api.pospuesto = t.pospuesto; return true;
+    } catch (err) {
+      if (err.status === 409 || err.status === 403) {
+        api.pospuesto = t.pospuesto;  // no se reintenta en bucle
+        aviso(t.id, 'La API no ha guardado el aplazamiento: ' + err.message);
+        return true;
+      }
+      throw err;
+    }
+  }
+
+  // Lo que llega de la API (otra oficina u otra persona): solo se pospone o se decide, nunca se crea ni se mueve.
+  async function sincronizarLectura(t) {
+    var api = Object.assign({}, A.apis[t.id] || t.api || {}), cambio = await posponer(t, api);
+    if (api.estado === 'PENDIENTE_APROBACION' && api.aprobacion && api.rehusada !== api.aprobacion &&
+        (t.status === 'hecha' || t.status === 'rech' || t.status === 'prog')) {
+      var ult = (t.log || []).filter(function (l) {
+        return (!api.pedida || l.t >= api.pedida) && /^(Aprobado|Rechazado|Descartado) por un socio/.test(l.m || '');
+      }).slice(-1)[0];
+      if (ult) {
+        var aprobada = t.status === 'hecha', siRechaza = t.status === 'rech' ? 'RECHAZADO' : 'RETRABAJO';
+        try {
+          await llamar('POST', '/aprobaciones/' + api.aprobacion + '/decision',
+            {decision: aprobada ? 'aprobada' : 'rechazada', motivo: ult.m, si_rechaza: siRechaza});
+          api.estado = aprobada ? 'ENTREGADO' : siRechaza; api.aprobacion = ''; api.caduca = ''; cambio = true;
+        } catch (err) {
+          if (err.status !== 403) throw err;
+          api.rehusada = api.aprobacion;
+          A.apis[t.id] = api;
+          // Vuelve a como está en la API: la decisión no se ha tomado.
+          A.ops.actualizar(t.id, {status: 'aprob', api: api}, 'La API no acepta la decisión: ' + err.message);
+          aviso(t.id, 'La API no acepta esta decisión: ' + err.message + '. Sigue pendiente del OK de otra persona.');
+          return;
+        }
+      }
+    }
+    A.apis[t.id] = api;
+    if (cambio) A.ops.guardarApi(t.id, api);
+  }
+
+  // Piezas de un encargo en equipo → tareas del encargo en la API (N3c). La clave de idempotencia es el id de la
+  // pieza, así que repetir no duplica.
+  async function sincronizarPieza(t) {
+    var padre = A.ops.tareas()[t.parent], papi = (padre && (A.apis[padre.id] || padre.api)) || {};
+    if (!papi.id) return;  // el encargo no está en la API (se creó antes de conectar)
+    var api = Object.assign({}, A.apis[t.id] || t.api || {}), cambio = false;
+    if (!api.id) {
+      var n = await llamar('POST', '/encargos/' + papi.id + '/tareas', {titulo: (t.title || 'Pieza').slice(0, 300),
+        responsable: String(t.agent || 'agente').slice(0, 200), clave_idempotencia: 'oficina:' + t.id});
+      api = {id: n.id, estado: n.estado, tarea: 1}; cambio = true;
+    }
+    var destino = PIEZA[t.status];
+    if (destino === 'failed' && api.estado === 'queued') destino = 'cancelled';
+    var pasos = !destino || destino === api.estado ? [] :
+      (api.estado === 'queued' && destino !== 'running' && destino !== 'cancelled') ? ['running', destino] : [destino];
+    for (var p of pasos) {
+      api.estado = (await llamar('POST', '/tareas/' + api.id + '/estado', {a: p, motivo: 'Oficina: pieza ' + t.status,
+        clave_idempotencia: 'oficina:' + t.id + ':' + p})).estado;
+      cambio = true;
+    }
     A.apis[t.id] = api;
     if (cambio) A.ops.guardarApi(t.id, api);
   }
@@ -111,27 +193,61 @@
 
   // Cola por encargo: los cambios de un mismo encargo se aplican en orden.
   function guardar(col, t) {
-    // Las piezas son trabajo interno de un encargo y lo que llega de la API se muestra sin reescribirlo.
-    if (!A.activa || col !== 'tasks' || !t || t.piece || !t.id || t.apiLectura) return;
-    var previa = A.colas[t.id] || Promise.resolve();
-    A.colas[t.id] = previa.then(function () { return sincronizar(t); }).catch(function (err) {
+    if (!A.activa || col !== 'tasks' || !t || !t.id) return;
+    if (t.piece && t.apiLectura) return;  // piezas que llegan de la API: solo se muestran
+    // Las piezas van en la cola de su encargo: así la tarea se crea después del encargo y en orden con él.
+    var cola = t.piece ? t.parent : t.id;
+    if (!cola) return;
+    var hacer = t.piece ? sincronizarPieza : t.apiLectura ? sincronizarLectura : sincronizar;
+    var previa = A.colas[cola] || Promise.resolve();
+    A.colas[cola] = previa.then(function () { return hacer(t); }).catch(function (err) {
       aviso(t.id, 'No se ha podido guardar «' + (t.title || '').slice(0, 40) + '» en la API: ' + err.message);
     });
-    return A.colas[t.id];
+    return A.colas[cola];
+  }
+
+  function iso(x) { return x ? new Date(x).toISOString() : ''; }
+
+  // Lo que la oficina tiene que saber de la aprobación y el aplazamiento que guarda la API (N3c).
+  function deApi(e, api) {
+    var ap = e.aprobacion, pend = ap && ap.decision === 'pendiente';
+    return Object.assign({}, api, {id: e.id, estado: e.estado, version: e.version,
+      aprobacion: pend ? ap.id : '', caduca: pend ? iso(ap.caduca_en) : '', solicitadaPor: pend ? ap.solicitada_por : '',
+      pedida: pend ? iso(ap.creado_en) : (api.pedida || ''), pospuesto: iso(e.pospuesto_hasta)});
   }
 
   async function leer() {
-    var lista = await llamar('GET', '/encargos'), locales = {};
-    Object.values(A.ops.tareas()).forEach(function (t) { if (t.api && t.api.id) locales[t.api.id] = t; });
+    var lista = await llamar('GET', '/encargos'), todas = A.ops.tareas(), locales = {};
+    Object.values(todas).forEach(function (t) { if (t.api && t.api.id && !t.piece) locales[t.api.id] = t; });
     lista.forEach(function (e) {
-      var t = locales[e.id];
-      if (t) {
-        if (t.api.estado !== e.estado) {
-          A.apis[t.id] = Object.assign({}, t.api, {estado: e.estado, version: e.version});
-          A.ops.guardarApi(t.id, A.apis[t.id]);
-        }
+      var t = locales[e.id], ap = e.aprobacion, caducada = ap && ap.decision === 'caducada' && e.estado === 'ESCALADO';
+      var pos = iso(e.pospuesto_hasta);
+      if (t && !t.apiLectura) {
+        var api = deApi(e, t.api);
+        if (!api.aprobacion && t.api.aprobacion && !caducada) api.aprobacion = t.api.aprobacion;
+        A.apis[t.id] = api;
+        var c = {api: api};
+        if (api.caduca) c.caduca = api.caduca;
+        if (pos) c.pospuesto = pos;
+        else if (t.pospuesto && t.api.pospuesto === t.pospuesto) c.pospuesto = null;  // la API lo retiró
+        if (caducada && t.status === 'aprob') {
+          Object.assign(c, {status: 'preg', caducada: iso(ap.decidida_en), caduca: null, question: 'La aprobación ' +
+            'caducó sin que nadie la decidiera. No se ha aprobado ni enviado nada. Revísala y decide si sigue.'});
+          A.ops.actualizar(t.id, c, 'Caducada la aprobación en la API: no continúa, vuelve a Inicio');
+        } else A.ops.actualizar(t.id, c);
+        return;
       }
-      else A.ops.importar(e, DESDE_API[e.estado] || 'preg');
+      var st = DESDE_API[e.estado] || 'preg', id = A.ops.importar(e, st), cambios = {status: st, api: deApi(e, (t && t.api) || {}),
+        pospuesto: pos || null, caduca: (ap && ap.decision === 'pendiente') ? iso(ap.caduca_en) : null};
+      if (caducada) cambios.question = 'La aprobación caducó sin que nadie la decidiera (API). No se ha aprobado nada.';
+      A.apis[id] = cambios.api;
+      var piezas = (e.tareas || []).map(function (x) {
+        var pid = 'api-t-' + x.id;
+        A.ops.importarPieza(pid, id, x, DESDE_TAREA[x.estado] || 'marcha');
+        return pid;
+      });
+      if (piezas.length) cambios.pieces = piezas;
+      A.ops.actualizar(id, cambios);
     });
     return lista.length;
   }
@@ -141,8 +257,12 @@
     var def = await llamar('GET', '/definiciones/encargo');
     A.grafo = def.transiciones; A.activa = true;
     try { sessionStorage.setItem(CLAVE, token); } catch (e) { /* sin almacén: vale para esta visita */ }
+    try { A.yo = JSON.parse(atob(token.split('.')[1].replace(/-/g, '+').replace(/_/g, '/'))).sub || ''; }
+    catch (e) { A.yo = ''; }
     var n = await leer();
     A.ops.estado();
+    // La caducidad la decide la API: se vuelve a leer cada minuto para que la oficina la vea sin recargar.
+    if (!A.sondeo) A.sondeo = setInterval(function () { if (A.activa) leer().catch(function () {}); }, 60000);
     return n;
   }
 
@@ -166,6 +286,10 @@
   window.VariosAPI = {
     iniciar: iniciar, guardar: guardar, conectar: conectar, leer: leer,
     activa: function () { return A.activa; }, disponible: function () { return !!A.disponible; },
+    // Quién está conectado (el `sub` del token), solo para avisar en pantalla: quien manda es la API.
+    yo: function () { return A.yo; },
+    // Si la API guarda la caducidad de este encargo, la oficina no lo caduca por su cuenta.
+    caducaEnApi: function (t) { return A.activa && !!(t && t.api && t.api.id && (t.api.aprobacion || t.apiLectura)); },
     _camino: function (de, a, grafo) { var g = A.grafo; A.grafo = grafo; try { return camino(de, a); } finally { A.grafo = g; } }
   };
 })();

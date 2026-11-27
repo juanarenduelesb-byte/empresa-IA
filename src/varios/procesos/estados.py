@@ -56,3 +56,28 @@ def cargar(nombre: str = "encargo", carpeta: Path = DEFINICIONES) -> MaquinaEsta
         estados=estados,
         transiciones={k: frozenset(v) for k, v in tabla.items()},
     )
+
+
+def cargar_objeto(nombre: str, carpeta: Path = DEFINICIONES) -> MaquinaEstados:
+    """Máquina de un objeto de objetos.json (tarea, instancia de proceso…). Sin estados finales declarados: son
+    finales los que no tienen salida."""
+    datos = json.loads((carpeta / "objetos.json").read_text(encoding="utf-8"))
+    obj = next((o for o in datos["objetos"] if o["id"] == nombre), None)
+    if obj is None:
+        raise ValueError(f"Objeto desconocido en objetos.json: {nombre}")
+    tabla: dict[str, set[str]] = {}
+    for t in obj["transiciones"]:
+        tabla.setdefault(t["de"], set()).update(t["a"])
+    estados = frozenset(obj["estados"])
+    for de, destinos in tabla.items():
+        desconocidos = ({de} | destinos) - estados
+        if desconocidos:
+            raise ValueError(f"Estados no declarados en {nombre}: {sorted(desconocidos)}")
+    return MaquinaEstados(
+        id=obj["id"],
+        version=datos["version"],
+        inicial=obj["inicial"],
+        finales=frozenset(e for e in estados if e not in tabla),
+        estados=estados,
+        transiciones={k: frozenset(v) for k, v in tabla.items()},
+    )

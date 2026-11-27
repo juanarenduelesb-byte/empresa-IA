@@ -8,10 +8,10 @@ PostgreSQL 16 es la fuente operativa (D-004). Código en `src/varios/db/`, migra
 |---|---|---|
 | `cliente` | El tenant. Varios también es un cliente para su trabajo interno | P14 |
 | `usuario` | Personas y agentes de cada cliente, con sus roles | P14, P30 |
-| `solicitud` | El encargo, con su estado (`encargo.json`) y su riesgo | P01, P02 |
+| `solicitud` | El encargo, con su estado (`encargo.json`), su riesgo y hasta cuándo está pospuesto | P01, P02 |
 | `plan`, `tarea` | Plan del encargo y sus tareas, con reintentos y clave de idempotencia | P05, P06, P08, P22 |
 | `documento` | Documentos recibidos, identificados por su huella y en cuarentena hasta revisarlos | P07, P20 |
-| `aprobacion` | Aprobaciones humanas. La base de datos impide aprobar lo que pide uno mismo | P10 |
+| `aprobacion` | Aprobaciones humanas, con su hora de caducidad. La base de datos impide aprobar lo que pide uno mismo, y una caducada no tiene aprobador | P10 |
 | `evento_auditoria` | Todo cambio y toda acción. Nadie puede modificarlo ni borrarlo, tampoco el propietario | P15, P17 |
 | `ejecucion_modelo` | Cada llamada a un modelo de IA, con coste, tokens y resultado | P16, P29 |
 | `uso_herramienta` | Cada intento de usar una herramienta, esté autorizado o no | P21 |
@@ -49,18 +49,23 @@ Es idempotente. Lo que desaparece del repositorio queda como obsoleto, no se bor
 
 **Foto del 26/11/2026 por la noche (K1):** 757 fichas; 220 (29,1 %) citan una fuente externa. **Cambio de medida:** hasta ahora contaban como externas las fuentes internas del registro (Guía, Atlas, DECISIONS.md); con el cómputo antiguo saldría un 32,8 %. El paquete de seguros: 37 de 39 fichas (94,9 %); las otras dos solo citan fuentes internas y lo dicen. Se mide sin base de datos con `varios.db.carga_conocimiento.medir()`.
 
-## API de la oficina (N3a, D-028)
+## API de la oficina (N3a y N3c, D-028 y D-031)
 
-Rutas en `src/varios/api/oficina.py`; pruebas en `tests/db/test_api_oficina.py`, contra PostgreSQL real.
+Rutas en `src/varios/api/oficina.py`; pruebas en `tests/db/test_api_oficina.py` y `tests/db/test_api_n3c.py`, contra PostgreSQL real.
 
 | Ruta | Qué hace | Regla |
 |---|---|---|
-| `POST /encargos` · `GET /encargos` · `GET /encargos/{id}` | Alta y lectura de encargos | El cliente y el autor salen del token; si el cuerpo trae `cliente_id` o `autor_id`, se ignoran |
+| `POST /encargos` · `GET /encargos` · `GET /encargos/{id}` | Alta y lectura de encargos. La lista trae también la última aprobación de cada uno (con `caduca_en`) y sus tareas: la oficina se puede rehacer solo con ella | El cliente y el autor salen del token; si el cuerpo trae `cliente_id` o `autor_id`, se ignoran |
 | `POST /encargos/{id}/estado` | Cambio de estado según `encargo.json`, con motivo y clave de idempotencia opcional | A PENDIENTE_APROBACION y a ENTREGADO solo se llega por las rutas de aprobación (D-019), y de PENDIENTE_APROBACION solo se sale decidiendo la aprobación, también para devolver a retrabajo o rechazar (Guía v1.4 §4; arreglado el 27/11) |
 | `POST /encargos/{id}/tareas` · `GET …/tareas` | Tareas del encargo | Solo en PLANIFICADO, EN_EJECUCION o RETRABAJO; la misma clave devuelve la misma tarea |
 | `POST /encargos/{id}/aprobaciones` · `GET …/aprobaciones` | Pedir aprobación de la versión actual (EN_QA → PENDIENTE_APROBACION) | Queda quién la pide |
 | `POST /aprobaciones/{id}/decision` | Aprobar (→ ENTREGADO) o rechazar: devolver para rehacer (→ RETRABAJO, versión + 1, por defecto) o rechazar del todo con `"si_rechaza": "RECHAZADO"` (→ RECHAZADO) | Solo una persona con rol `aprobador`, que no la ha pedido ni es autora del encargo, y sobre la misma versión |
+| `POST /encargos/{id}/posponer` | Apartar hasta una hora (`hasta`, con zona horaria) un encargo que espera a una persona (N3c) | Solo una persona; solo en PENDIENTE_APROBACION, PENDIENTE_INFO, ESCALADO o BLOQUEADO; como mucho 7 días; no decide nada, no para la caducidad y se pierde al cambiar de estado |
+| `POST /tareas/{id}/estado` | Cambio de estado de una tarea según `objetos.json` (N3c) | Solo mientras el encargo trabaja (PLANIFICADO, EN_EJECUCION o RETRABAJO). De `needs_approval` a `succeeded`, solo una persona con rol `aprobador` que no la puso a esperar |
+| `GET /definiciones/tarea` | Transiciones de la tarea, para que la oficina no copie la tabla | — |
 | `GET /encargos/{id}/auditoria` | Eventos del encargo, sus tareas y sus aprobaciones | Cada cambio deja uno; la tabla no se puede modificar |
+
+**Caducidad (N3c, D-031).** Cada aprobación se pide con `caduca_en` (72 h por defecto, `VARIOS_APROBACION_CADUCA_H`; lo fijan los socios). Al empezar cada petición de un cliente, en una transacción aparte y con su RLS, se caducan sus aprobaciones vencidas: la decisión pasa a `caducada` sin aprobador y el encargo de PENDIENTE_APROBACION a ESCALADO, con dos eventos firmados por `sistema:caducidad` (`aprobacion_caducada` y `mover`). Vuelve como pregunta y nunca se aprueba sola (P10). Es la expiración pasiva de Redis (`REDIS-EXPIRE`): no hace falta un proceso programado. Decidir una aprobación vencida responde 403. PENDIENTE_APROBACION → ESCALADO es una transición añadida a `encargo.json` (1.1.0) que solo hace la caducidad: como cambio libre responde 409. Desde ESCALADO una persona decide cómo seguir (por ejemplo, volver a PLANIFICADO y pedir el OK otra vez).
 
 **Identidad (provisional hasta el proveedor de S3).** Cabecera `Authorization: Bearer <token>`. El token es un JWT HS256 con `sub` (usuario), `cliente`, `exp`, `iss` y `aud`, firmado con `VARIOS_JWT_SECRETO` (al menos 32 caracteres; si se deja el valor de `.env.example`, la API no emite ni acepta tokens). El usuario tiene que existir y estar activo en ese cliente; sus roles se leen de la base. Para probar en local: `python -c "from varios.api.identidad import emitir; print(emitir('<usuario>', '<cliente>'))"` con los identificadores de la semilla.
 
@@ -81,11 +86,19 @@ La oficina (`oficina/`) es la misma en los dos casos; `oficina/api.js` decide d�
 
 **Qué se lee.** Al conectar, la oficina actualiza el estado de los encargos que ya conoce y muestra los que se crearon fuera (otra persona u otro equipo) como «Llega de la API», en solo lectura.
 
-**Lo que aún no hace.** Las piezas de un encargo en equipo no se suben como tareas; la aprobación de un encargo que llegó de la API no se puede dar desde otra oficina; reglas, memoria, proyectos y entregables siguen solo en el almacén de la oficina. Es el paso siguiente de M-041 (y N4 para editar, posponer y caducar aprobaciones).
+**Posponer, caducar y tareas (N3c, 27/11/2026).** Con la API conectada:
+- *Posponer* en la oficina llama a `POST /encargos/{id}/posponer`; al leer, la oficina toma `pospuesto_hasta` de la API, así que una recarga u otra oficina lo ven igual.
+- *Caducar* lo decide la API. La oficina toma de ella la hora de caducidad, no caduca por su cuenta lo que está en la API y vuelve a leer la lista cada minuto: una aprobación caducada pasa a pregunta en Inicio. Si el encargo ya espera a una persona en la API (ESCALADO), la oficina no lo mueve para que coincida el nombre del estado. Lo que no está en la API sigue la regla de N4 en el navegador.
+- *Piezas.* Cada pieza de un encargo en equipo se sube como tarea del encargo (clave de idempotencia: el id de la pieza), en la misma cola que su encargo para que lleguen en orden: «en marcha» → `running`, «hecha» → `succeeded`.
+- *Desde otra oficina.* Lo que llega de la API se muestra con sus piezas, su aplazamiento y su caducidad, y si espera el OK se puede aprobar, devolver (lo rehace quien lo pidió, no un agente de esta oficina) o descartar. Si lo pidió quien está conectado, la oficina lo avisa y la API no lo acepta: vuelve a «espera tu OK».
+
+**Lo que aún no hace.** Reglas, memoria, proyectos y entregables siguen solo en el almacén de la oficina. Si la API no acepta una decisión sobre un encargo de esta misma oficina, la oficina lo avisa, pero el encargo queda como decidido en ella y pendiente en la API (en los que llegan de la API sí vuelve a «espera tu OK»).
 
 **Prueba de humo (26/11/2026, Chromium sin interfaz).** Con PostgreSQL desechable, migraciones, semilla y la API: un encargo creado en la oficina queda en la tabla `solicitud` en PENDIENTE_APROBACION con 7 eventos de auditoría (alta, cinco cambios de estado y la petición de aprobación); en modo demostración la oficina lo da por hecho sin un socio y la API no lo acepta como aprobado. Los dos encargos de la semilla aparecen en Inicio como preguntas. La misma oficina servida como archivos sin API guarda como siempre y no muestra el botón. Sin errores en la consola en ninguno de los dos casos. `docker compose up` sigue sin poder probarse aquí (ver «Pendiente de tu aprobación» en docs/21).
 
 **Segunda prueba de humo (27/11/2026).** Mismo montaje. Un encargo inventado que espera el OK se pospone (la oficina lo crea en la API y pide la aprobación: PENDIENTE_APROBACION) y después se descarta: la oficina envía la decisión «rechazada» en vez de un cambio libre, la API la rechaza con 403 porque quien decide es quien la pidió, la oficina lo avisa y en la API sigue pendiente. Antes del arreglo, el mismo usuario lo sacaba a RECHAZADO sin decidir y la aprobación quedaba pendiente para siempre.
+
+**Tercera prueba de humo (27/11/2026, N3c).** PostgreSQL desechable, migraciones, semilla y la API; dos oficinas en Chromium (tramitadora y gerente, dos tokens del mismo cliente inventado). (1) La tramitadora crea tres encargos: uno espera el OK (la hora de caducidad de la oficina es la de la API), otro en equipo con una pieza que acaba como tarea `succeeded`, y lo pospone hasta mañana: en la API queda `pospuesto_hasta` y sigue PENDIENTE_APROBACION. (2) Se borra el almacén del navegador y se recarga: el encargo vuelve de PostgreSQL pospuesto, con su caducidad y con su pieza hecha. (3) La tramitadora intenta aprobar lo que pidió ella: la API responde 403 y la oficina lo devuelve a «espera tu OK». (4) El gerente lo ve pospuesto en su oficina y lo aprueba: ENTREGADO. (5) Se adelanta el plazo de dos aprobaciones (una importada y otra de la propia oficina): tras leer la API, las dos son preguntas en Inicio y en la API quedan en ESCALADO con los dos eventos de `sistema:caducidad`, sin pasos de más. Único error en la consola: el 403 esperado del paso 3.
 
 ## Lo que falta (plan)
 

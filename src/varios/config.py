@@ -19,6 +19,10 @@ class Ajustes(BaseSettings):
     jwt_secreto: str | None = None
     jwt_emisor: str = "varios-local"
     jwt_audiencia: str = "varios-api"
+    # N3c: una aprobación sin decidir caduca a las 72 h (plazo propuesto en N4; lo fijan los socios) y un encargo se
+    # puede posponer como mucho 7 días (propuesta: que nada quede apartado sin que nadie lo vuelva a ver).
+    aprobacion_caduca_h: int = 72
+    posponer_max_dias: int = 7
 
 
 @lru_cache

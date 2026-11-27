@@ -1,38 +1,47 @@
 ---
 tipo: "mapa"
 comunidad: 10
-miembros: 17
-cohesion: 0.21
+miembros: 26
+cohesion: 0.22
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 10 · knowledge/administracion-finanzas · Director financiero (CFO) y Especialista en costes y proveedores
+# Comunidad 10 · knowledge/administracion-finanzas · Experto en asesorías, gestorías y despachos y Especialista en contabilidad y facturación
 
-17 nodos agrupados por el algoritmo de Louvain. Cohesión 0.21.
+26 nodos agrupados por el algoritmo de Louvain. Cohesión 0.22.
 
 ## Documentos
 
+- [[knowledge/sectores/sector-despachos|Experto en asesorías, gestorías y despachos]]
+- [[knowledge/administracion-finanzas/contabilidad|Especialista en contabilidad y facturación]]
 - [[knowledge/administracion-finanzas/direccion-financiera|Director financiero (CFO)]]
-- [[knowledge/administracion-finanzas/costes-proveedores|Especialista en costes y proveedores]]
+- [[knowledge/administracion-finanzas/administrativo|Especialista administrativo]]
 - [[knowledge/administracion-finanzas/financiero|Especialista financiero]]
 
 ## Especialistas
 
-- [[knowledge/procesos/automatizacion|Especialista en automatización]]
-- [[knowledge/administracion-finanzas/costes-proveedores|Especialista en costes y proveedores]]
+- [[knowledge/sectores/sector-despachos|Experto en asesorías, gestorías y despachos]]
+- [[knowledge/administracion-finanzas/contabilidad|Especialista en contabilidad y facturación]]
+- [[knowledge/administracion-finanzas/administrativo|Especialista administrativo]]
 - [[knowledge/administracion-finanzas/direccion-financiera|Director financiero (CFO)]]
 - [[knowledge/administracion-finanzas/financiero|Especialista financiero]]
 
 ## Fuentes
 
-- [[knowledge/grafo/fuentes/DORA-CNMV|DORA-CNMV · Preguntas frecuentes sobre el Reglamento (UE) 2022/2554 (DORA)]]
+- [[knowledge/grafo/fuentes/VERIFACTU-RDL43|VERIFACTU-RDL43 · Real Decreto-ley 43/2026: aplazamiento de la adaptación de los sistemas informáticos de facturación (Verifactu)]]
+- [[knowledge/grafo/fuentes/AEAT-FACTURA-CAL|AEAT-FACTURA-CAL · Factura electrónica obligatoria: calendario de implantación]]
+- [[knowledge/grafo/fuentes/VERIFACTU-RDL15|VERIFACTU-RDL15 · Real Decreto-ley 15/2025, de 2 de diciembre (modifica el RD 1007/2023: plazos de Verifactu)]]
+- [[knowledge/grafo/fuentes/FACTURA-B2B|FACTURA-B2B · Real Decreto 238/2026, factura electrónica obligatoria entre empresas]]
 - [[knowledge/grafo/fuentes/PGC-PYMES|PGC-PYMES · Real Decreto 1515/2007, Plan General de Contabilidad de Pymes]]
-- [[knowledge/grafo/fuentes/OSS-CAMUNDA|OSS-CAMUNDA · Camunda 8: licencia para Self-Managed]]
-- [[knowledge/grafo/fuentes/OSS-N8N|OSS-N8N · n8n: Sustainable Use License]]
+- [[knowledge/grafo/fuentes/VERIFACTU-2028|VERIFACTU-2028 · Hacienda anuncia el aplazamiento de Verifactu a octubre de 2028]]
+- [[knowledge/grafo/fuentes/ORDEN-HAC-1028-2026|ORDEN-HAC-1028-2026 · Orden HAC/1028/2026, de 2 de octubre, por la que se regula la solución pública de facturación electrónica]]
+- [[knowledge/grafo/fuentes/LIS-27-2014|LIS-27-2014 · Ley 27/2014, del Impuesto sobre Sociedades]]
+- [[knowledge/grafo/fuentes/LEY-MOROSIDAD-3-2004|LEY-MOROSIDAD-3-2004 · Ley 3/2004, medidas de lucha contra la morosidad en operaciones comerciales]]
+- [[knowledge/grafo/fuentes/RD-1619-2012|RD-1619-2012 · Real Decreto 1619/2012, Reglamento por el que se regulan las obligaciones de facturación]]
+- [[knowledge/grafo/fuentes/HOLDED-ASESORIAS-2026|HOLDED-ASESORIAS-2026 · Impacto normativo 2026-2027 en asesorías y despachos]]
 - [[knowledge/grafo/fuentes/LEY-STARTUPS-28-2022|LEY-STARTUPS-28-2022 · Ley 28/2022, de fomento del ecosistema de las empresas emergentes]]
-- [[knowledge/grafo/fuentes/OSS-LANGFUSE|OSS-LANGFUSE · Langfuse (observabilidad de LLM)]]
-- [[knowledge/grafo/fuentes/OSS-TEMPORAL|OSS-TEMPORAL · Temporal (motor de ejecución duradera)]]
+- [[knowledge/grafo/fuentes/AEAT-FE-OBLIGADOS|AEAT-FE-OBLIGADOS · Factura electrónica: quiénes están obligados y qué operaciones incluye]]
 - [[knowledge/grafo/fuentes/CDTI-NEOTEC-2026|CDTI-NEOTEC-2026 · Programa NEOTEC 2026 (CDTI)]]
 - [[knowledge/grafo/fuentes/ENISA-2026|ENISA-2026 · ENISA: préstamos participativos (líneas 2026)]]
-- [[knowledge/grafo/fuentes/OSS-SPIFF|OSS-SPIFF · SpiffWorkflow (motor BPMN/DMN en Python)]]
+- [[knowledge/grafo/fuentes/LIVA-37-1992|LIVA-37-1992 · Ley 37/1992, del Impuesto sobre el Valor Añadido]]

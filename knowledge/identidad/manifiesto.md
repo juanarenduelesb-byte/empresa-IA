@@ -8,7 +8,7 @@ tags:
 ---
 # Manifiesto
 
-**Estado:** draft (I1), pendiente de los dos socios. Formato tomado del manifiesto ágil (`AGILE-MANIFESTO`): valoramos lo de la izquierda más que lo de la derecha, sin decir que lo de la derecha no valga nada.
+**Estado:** draft (I1), pendiente de los dos socios. Formato tomado del manifiesto ágil ([AGILE-MANIFESTO](../fuentes/registro.md#agile-manifesto)): valoramos lo de la izquierda más que lo de la derecha, sin decir que lo de la derecha no valga nada.
 
 ## En una frase
 Ayudamos a empresas medianas de sectores regulados a que la IA haga trabajo real en un proceso concreto, con control en cada paso y un resultado medido antes de escalar ([docs/00](../../docs/00-negocio.md)).

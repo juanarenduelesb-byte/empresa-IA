@@ -22,7 +22,7 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 | [DORA-CNMV](#dora-cnmv) | Preguntas frecuentes sobre el Reglamento (UE) 2022/2554 (DORA) | recomendacion-tecnica | alta | vigente | validated |
 | [ENS-RD311](#ens-rd311) | Real Decreto 311/2022, Esquema Nacional de Seguridad | obligacion-legal | media | vigente | validated |
 | [ISO-27001](#iso-27001) | ISO/IEC 27001:2022 (transición desde 2013 terminada el 31/10/2025) | estandar-voluntario | media | vigente | validated |
-| [VERIFACTU-RDL15](#verifactu-rdl15) | Real Decreto-ley 15/2025: plazos de Verifactu | obligacion-legal | media | historico | validated |
+| [VERIFACTU-RDL15](#verifactu-rdl15) | Real Decreto-ley 15/2025, de 2 de diciembre (modifica el RD 1007/2023: plazos de Verifactu) | obligacion-legal | alta | historico | validated |
 | [VERIFACTU-2028](#verifactu-2028) | Hacienda anuncia el aplazamiento de Verifactu a octubre de 2028 | prensa-especializada | media | historico | validated |
 | [FACTURA-B2B](#factura-b2b) | Real Decreto 238/2026, factura electrónica obligatoria entre empresas | obligacion-legal | media | vigente | validated |
 | [PGC-PYMES](#pgc-pymes) | Real Decreto 1515/2007, Plan General de Contabilidad de Pymes | obligacion-legal | alta | vigente | validated |
@@ -120,6 +120,8 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 | [MINTO-PIRAMIDE](#minto-piramide) | The Pyramid Principle (Barbara Minto): la respuesta primero y la estructura situación, complicación, pregunta y respuesta | buena-practica | media | vigente | draft |
 | [AEPD-POLITICA-IAG](#aepd-politica-iag) | Política general para el uso de IA generativa en procesos administrativos de la AEPD | buena-practica | alta | vigente | draft |
 | [CE-ALFABETIZACION-QA](#ce-alfabetizacion-qa) | AI Literacy - Questions & Answers | recomendacion-tecnica | alta | vigente | draft |
+| [ORDEN-HAC-1028-2026](#orden-hac-1028-2026) | Orden HAC/1028/2026, de 2 de octubre, por la que se regula la solución pública de facturación electrónica | obligacion-legal | alta | vigente | validated |
+| [AEAT-FE-OBLIGADOS](#aeat-fe-obligados) | Factura electrónica: quiénes están obligados y qué operaciones incluye | obligacion-legal | alta | vigente | draft |
 | [AGILE-MANIFESTO](#agile-manifesto) | Manifesto for Agile Software Development | buena-practica | media | vigente | draft |
 | [MAILCHIMP-VOZ](#mailchimp-voz) | Voice and Tone | Mailchimp Content Style Guide | buena-practica | media | vigente | draft |
 | [GOVUK-LENGUAJE-CLARO](#govuk-lenguaje-claro) | Use clear language (Writing to GOV.UK standards) | buena-practica | media | vigente | draft |
@@ -300,13 +302,13 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 
 <a id="verifactu-rdl15"></a>
 ### VERIFACTU-RDL15
-- **Título:** Real Decreto-ley 15/2025: plazos de Verifactu
-- **Autor u organismo:** KPMG (alerta fiscal)
-- **URL:** <https://assets.kpmg.com/content/dam/kpmgsites/es/pdf/2025/12/tax-alert-el-real-decreto-ley-15-2025-amplia-plazos-adaptacion-reglamento-verifactu.pdf.coredownload.inline.pdf>
-- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** BOE 03/12/2025
-- **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** historico · **Estado:** validated
+- **Título:** Real Decreto-ley 15/2025, de 2 de diciembre (modifica el RD 1007/2023: plazos de Verifactu)
+- **Autor u organismo:** BOE
+- **URL:** <https://www.boe.es/boe/dias/2025/12/03/pdfs/BOE-A-2025-24446.pdf>
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** BOE núm. 290, 03/12/2025 (BOE-A-2025-24446)
+- **Consultada:** 2026-11-27 · **Autoridad:** alta · **Vigencia:** historico · **Estado:** validated
 - **Especialistas relacionados:** Experto en asesorías, gestorías y despachos, Especialista administrativo, Especialista en contabilidad y facturación
-- **Nota:** Fijaba el 01/01/2027 para el Impuesto sobre Sociedades y el 01/07/2027 para el resto. Desplazado por el RDL 43/2026 (VERIFACTU-RDL43), en vigor desde el 26/11/2026. Vuelve a regir si el RDL 43/2026 no se convalida.
+- **Nota:** Disposición final primera (nueva redacción de la disposición final cuarta del RD 1007/2023): obligados del art. 3.1.a), «antes del 1 de enero de 2027»; resto, «antes del 1 de julio de 2027». Leído en el BOE el 27/11/2026 (K2); antes se citaba una alerta de KPMG. Desplazado por el RDL 43/2026 (VERIFACTU-RDL43), en vigor desde el 26/11/2026. Vuelve a regir si el RDL 43/2026 no se convalida.
 
 <a id="verifactu-2028"></a>
 ### VERIFACTU-2028
@@ -326,7 +328,7 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 - **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** BOE 31/03/2026; en vigor 20/04/2026
 - **Consultada:** 2026-11-17 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** Experto en asesorías, gestorías y despachos, Especialista administrativo, Especialista en contabilidad y facturación
-- **Nota:** Calendario activado por la Orden HAC/1028/2026 (BOE 05/10/2026, en vigor el 06/10/2026): obligatoria desde octubre de 2027 para facturación superior a 8 millones de euros y desde octubre de 2028 para el resto. Ver AEAT-FACTURA-CAL.
+- **Nota:** Calendario activado por la Orden HAC/1028/2026 (BOE 05/10/2026, en vigor el 06/10/2026): obligatoria desde octubre de 2027 para facturación superior a 8 millones de euros y desde octubre de 2028 para el resto. Ver AEAT-FACTURA-CAL. Es el resumen de un despacho: el 27/11/2026 el texto del BOE (BOE-A-2026-7295) no se pudo leer (K2), así que lo que dice del RD 238/2026 está sin confirmar en la fuente oficial.
 
 <a id="pgc-pymes"></a>
 ### PGC-PYMES
@@ -622,10 +624,10 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 - **Título:** Factura electrónica obligatoria: calendario de implantación
 - **Autor u organismo:** Agencia Tributaria
 - **URL:** <https://sede.agenciatributaria.gob.es/Sede/eu_es/iva/factura-electronica/calendario-implantacion.html>
-- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** consultado 17/11/2026
-- **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** página actualizada el 13/10/2026
+- **Consultada:** 2026-11-27 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
 - **Especialistas relacionados:** Experto en asesorías, gestorías y despachos, Especialista administrativo, Especialista en contabilidad y facturación
-- **Nota:** Los plazos del RD 238/2026 corren desde el 06/10/2026. Contrastado con Garrigues: octubre de 2027 para facturación superior a 8 millones de euros y octubre de 2028 para el resto.
+- **Nota:** «el 6 de octubre de 2026 es la fecha a partir de la cual empiezan a computar los plazos». Emitir y recibir: «A los 12 meses (6 de octubre de 2027)» si el volumen de operaciones del año anterior «haya excedido de 8 millones de euros»; «A los 24 meses (6 de octubre de 2028)» el resto. Estados y pagos: 12, 24 y 36 meses (06/10/2029 para personas físicas). Releída el 27/11/2026 (K2). Es un resumen de la AEAT; el texto del RD 238/2026 en el BOE no se pudo leer de noche. Contrastado con Garrigues.
 
 <a id="holded-asesorias-2026"></a>
 ### HOLDED-ASESORIAS-2026
@@ -824,7 +826,7 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 - **URL:** <https://eur-lex.europa.eu/eli/reg/2016/679/oj>
 - **Tipo:** obligacion-legal · **Jurisdicción:** UE · **Versión o fecha:** texto vigente
 - **Consultada:** 2026-11-17 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
-- **Especialistas relacionados:** Responsable de cumplimiento normativo
+- **Especialistas relacionados:** Experto en asesorías, gestorías y despachos, Responsable de cumplimiento normativo
 - **Nota:** Art. 28 (encargado del tratamiento), 30 (registro de actividades), 32 (seguridad), 33 (brechas, 72 h), 35 (evaluación de impacto).
 
 <a id="dgsfp-importes-2024"></a>
@@ -1276,6 +1278,26 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 - **Consultada:** 2026-11-27 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
 - **Nota:** «There is no need for a certificate.» «Organisations can keep an internal record of trainings and/or other guiding initiatives.» Un programa debe considerar al menos: comprensión general de la IA, el papel de la organización (proveedor o responsable del despliegue), el riesgo de los sistemas y el nivel de cada persona. Supervisión y sanciones desde el 02/08/2026.
+
+<a id="orden-hac-1028-2026"></a>
+### ORDEN-HAC-1028-2026
+- **Título:** Orden HAC/1028/2026, de 2 de octubre, por la que se regula la solución pública de facturación electrónica
+- **Autor u organismo:** BOE (Ministerio de Hacienda)
+- **URL:** <https://www.boe.es/boe/dias/2026/10/05/pdfs/BOE-A-2026-20587.pdf>
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** BOE núm. 247, 05/10/2026 (BOE-A-2026-20587); en vigor el 06/10/2026
+- **Consultada:** 2026-11-27 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** validated
+- **Especialistas relacionados:** Experto en asesorías, gestorías y despachos, Especialista administrativo
+- **Nota:** «Con la entrada en vigor de esta orden ministerial se dará inicio al cómputo de los plazos previstos en la disposición final octava de la Ley 18/2022». Dice que la Ley 18/2022 introduce la obligación «mediante la modificación del artículo 2 bis de la Ley 56/2007». Leída la primera parte literal. Contrastada con AEAT-FACTURA-CAL, que da el 06/10/2026 como inicio del cómputo pero cita la disposición final tercera del RD 238/2026 (la Orden cita la disposición final octava de la Ley 18/2022 y las transitorias del RD): diferencia de remisión, no de fecha.
+
+<a id="aeat-fe-obligados"></a>
+### AEAT-FE-OBLIGADOS
+- **Título:** Factura electrónica: quiénes están obligados y qué operaciones incluye
+- **Autor u organismo:** Agencia Tributaria
+- **URL:** <https://sede.agenciatributaria.gob.es/Sede/iva/factura-electronica/cuestiones-generales/quienes-estan-obligados-que-operaciones-incluyen.html>
+- **Tipo:** obligacion-legal · **Jurisdicción:** ES · **Versión o fecha:** página actualizada el 13/10/2026
+- **Consultada:** 2026-11-27 · **Autoridad:** alta · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** Experto en asesorías, gestorías y despachos
+- **Nota:** Obligación de emitir factura electrónica estructurada en las operaciones con otro empresario o profesional establecido en España. «NO es obligatorio expedir factura electrónica» en facturas simplificadas (salvo cualificadas), operaciones con particulares y operaciones con empresarios no establecidos en España. Resumen de la AEAT, no la norma.
 
 <a id="agile-manifesto"></a>
 ### AGILE-MANIFESTO

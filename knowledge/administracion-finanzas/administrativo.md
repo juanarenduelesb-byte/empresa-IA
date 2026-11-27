@@ -59,7 +59,7 @@ Todavía no hay precedentes de este tipo.
 
 ### Fundamentos y terminología
 - Verifactu: adaptación antes del 06/10/2028 para todos según el RDL 43/2026, publicado el 25/11/2026 y pendiente de convalidación; si no se convalida, vuelven el 01/01/2027 (Impuesto sobre Sociedades) y el 01/07/2027 (resto) del RDL 15/2025 ([VERIFACTU-RDL43](../fuentes/registro.md#verifactu-rdl43), [VERIFACTU-RDL15](../fuentes/registro.md#verifactu-rdl15)).
-- Factura electrónica B2B: RD 238/2026 en vigor desde el 20/04/2026; con la Orden HAC/1028/2026 es obligatoria desde octubre de 2027 si se facturan más de 8 millones de euros y desde octubre de 2028 para el resto ([FACTURA-B2B](../fuentes/registro.md#factura-b2b), [AEAT-FACTURA-CAL](../fuentes/registro.md#aeat-factura-cal)).
+- Factura electrónica B2B: RD 238/2026 en vigor desde el 20/04/2026 ([FACTURA-B2B](../fuentes/registro.md#factura-b2b), resumen de un despacho; **sin confirmar** en el BOE). Los plazos corren desde el 06/10/2026, entrada en vigor de la Orden HAC/1028/2026 ([ORDEN-HAC-1028-2026](../fuentes/registro.md#orden-hac-1028-2026)): obligatoria desde el 06/10/2027 si el volumen de operaciones del año anterior pasó de 8 millones de euros y desde el 06/10/2028 para el resto ([AEAT-FACTURA-CAL](../fuentes/registro.md#aeat-factura-cal)).
 
 ### Metodologías y marcos
 - Elegir un software de facturación que ya cumpla Verifactu, no construirlo.
@@ -95,10 +95,11 @@ Ver *A quién convoca* y [`knowledge/navigation.json`](../navigation.json).
 
 ## 3. Fuentes
 - [VERIFACTU-RDL43](../fuentes/registro.md#verifactu-rdl43) · Real Decreto-ley 43/2026: aplazamiento de la adaptación de los sistemas informáticos de facturación (Verifactu)
-- [VERIFACTU-RDL15](../fuentes/registro.md#verifactu-rdl15) · Real Decreto-ley 15/2025: plazos de Verifactu
+- [VERIFACTU-RDL15](../fuentes/registro.md#verifactu-rdl15) · Real Decreto-ley 15/2025, de 2 de diciembre (modifica el RD 1007/2023: plazos de Verifactu)
 - [VERIFACTU-2028](../fuentes/registro.md#verifactu-2028) · Hacienda anuncia el aplazamiento de Verifactu a octubre de 2028
 - [FACTURA-B2B](../fuentes/registro.md#factura-b2b) · Real Decreto 238/2026, factura electrónica obligatoria entre empresas
 - [AEAT-FACTURA-CAL](../fuentes/registro.md#aeat-factura-cal) · Factura electrónica obligatoria: calendario de implantación
+- [ORDEN-HAC-1028-2026](../fuentes/registro.md#orden-hac-1028-2026) · Orden HAC/1028/2026, de 2 de octubre, por la que se regula la solución pública de facturación electrónica
 
 ## 4. Lagunas conocidas
 - Forma jurídica y facturación pendientes (08/01/2027, Álvaro con gestor).

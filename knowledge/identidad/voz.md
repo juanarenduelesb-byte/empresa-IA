@@ -8,7 +8,7 @@ tags:
 ---
 # Guía de voz
 
-**Estado:** draft (I1), pendiente de los dos socios. Para cualquier texto que lea un cliente o el público: propuestas, correos, la web, informes, publicaciones. Separa, como la guía de Mailchimp, la **voz** (no cambia) del **tono** (cambia con la situación): «Our voice doesn't change much from day to day, but our tone changes all the time» (`MAILCHIMP-VOZ`).
+**Estado:** draft (I1), pendiente de los dos socios. Para cualquier texto que lea un cliente o el público: propuestas, correos, la web, informes, publicaciones. Separa, como la guía de Mailchimp, la **voz** (no cambia) del **tono** (cambia con la situación): «Our voice doesn't change much from day to day, but our tone changes all the time» ([MAILCHIMP-VOZ](../fuentes/registro.md#mailchimp-voz)).
 
 ## La voz: cómo somos siempre
 | Somos | No somos |
@@ -20,7 +20,7 @@ tags:
 | **Cercanos y serios.** Tratamos de usted si el cliente lo hace; si no, de tú, sin coleguismo | Ni fríos, ni graciosos a costa del cliente |
 
 ## Reglas de escritura
-Adaptadas de la guía de lenguaje claro de GOV.UK (`GOVUK-LENGUAJE-CLARO`): «Plain English is mandatory», párrafos de cinco frases como mucho y frases de más de 25 palabras partidas en dos.
+Adaptadas de la guía de lenguaje claro de GOV.UK ([GOVUK-LENGUAJE-CLARO](../fuentes/registro.md#govuk-lenguaje-claro)): «Plain English is mandatory», párrafos de cinco frases como mucho y frases de más de 25 palabras partidas en dos.
 1. **Lo importante, arriba.** La primera frase dice la conclusión o lo que pedimos.
 2. **Frases cortas.** Si pasa de 25 palabras, se parte.
 3. **Sin jerga.** Si el cliente no la usa, no la usamos. Si hace falta un término técnico, se explica la primera vez.

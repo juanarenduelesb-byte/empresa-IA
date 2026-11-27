@@ -5,15 +5,15 @@ Cómo está conectado el cerebro de Varios: qué sostiene todo, qué temas forma
 
 ## Resumen
 
-- 5230 nodos: seccion 4476, documento 390, fuente 141, habilidad 65, proceso 38, especialista 34, agente 34, decision 33, puerta 12, departamento 7.
-- 7548 relaciones: 64 % EXTRACTADAS (escritas en la fuente), 36 % INFERIDAS (temas compartidos, con puntuación) y 40 AMBIGUAS (para revisar).
+- 5235 nodos: seccion 4479, documento 390, fuente 143, habilidad 65, proceso 38, especialista 34, agente 34, decision 33, puerta 12, departamento 7.
+- 7565 relaciones: 64 % EXTRACTADAS (escritas en la fuente), 35 % INFERIDAS (temas compartidos, con puntuación) y 40 AMBIGUAS (para revisar).
 - 13 comunidades de temas.
 
 ## Nodos centrales
 
 Lo que más cosas conecta. Si cambia, cambia mucho.
 
-1. **Registro de fuentes** (`knowledge/fuentes/registro.md`) · 244 conexiones
+1. **Registro de fuentes** (`knowledge/fuentes/registro.md`) · 249 conexiones
 2. **Registro de decisiones** (`DECISIONS.md`) · 143 conexiones
 3. **Índice del conocimiento de Varios** (`knowledge/INDEX.md`) · 123 conexiones
 4. **Guia de Arranque Proyecto v1.4 Diseno Cerrado** (`docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado.md`) · 85 conexiones
@@ -30,16 +30,16 @@ Lo que más cosas conecta. Si cambia, cambia mucho.
 
 Nodos por los que pasa el camino entre comunidades distintas (intermediación).
 
-- **Registro de fuentes** · intermediación 0.148 · une la comunidad 2 con 0, 3, 4, 5, 6, 7
-- **Registro de decisiones** · intermediación 0.053 · une la comunidad 0 con 2, 3, 4, 5, 6, 7
-- **Habilidades de los agentes** · intermediación 0.039 · une la comunidad 3 con 1, 4, 5, 6, 7, 12
+- **Registro de fuentes** · intermediación 0.149 · une la comunidad 2 con 0, 3, 4, 5, 6, 7
+- **Registro de decisiones** · intermediación 0.052 · une la comunidad 0 con 2, 3, 4, 5, 6, 8
+- **Habilidades de los agentes** · intermediación 0.039 · une la comunidad 3 con 1, 4, 5, 6, 9, 12
 - **L2 (puerta técnica)** · intermediación 0.028 · une la comunidad 11 con 0, 2, 3, 4, 5, 6
 - **Índice del conocimiento de Varios** · intermediación 0.022 · une la comunidad 6 con 0, 2, 3, 4, 5, 7
 - **Estudios** · intermediación 0.016 · une la comunidad 12 con 0, 2, 3, 4, 5, 6
-- **Guia de Arranque Proyecto v1.4 Diseno Cerrado** · intermediación 0.015 · une la comunidad 9 con 0, 3, 4, 6, 7, 8
+- **Guia de Arranque Proyecto v1.4 Diseno Cerrado** · intermediación 0.015 · une la comunidad 8 con 0, 3, 4, 6, 7, 9
 - **D-011 · Construir primero, clientes desde el 15/02/2027** · intermediación 0.011 · une la comunidad 5 con 0, 2, 3, 4, 6, 11
-- **CEO digital** · intermediación 0.01 · une la comunidad 7 con 0, 2, 3, 4, 6, 8
-- **Arquitecto de procesos** · intermediación 0.009 · une la comunidad 3 con 0, 1, 5, 6, 7, 11
+- **CEO digital** · intermediación 0.01 · une la comunidad 9 con 0, 2, 3, 4, 6, 7
+- **Arquitecto de procesos** · intermediación 0.009 · une la comunidad 3 con 0, 1, 5, 6, 9, 11
 
 ## Conexiones sorprendentes
 
@@ -64,11 +64,11 @@ Cohesión 0.07 · 118 nodos: Registro de decisiones; Trabajo nocturno de Claude;
 
 ### 1 · claude/habilidades · Legal y privacidad y Arquitecto de procesos
 
-Cohesión 0.05 · 108 nodos: Legal y privacidad; Arquitecto de procesos; Seguridad; Coordinación sectorial · Seguros; Director financiero; Jefe comercial; Separar hecho, hipótesis y propuesta; Arquitecto técnico (y 100 más)
+Cohesión 0.05 · 106 nodos: Legal y privacidad; Arquitecto de procesos; Seguridad; Coordinación sectorial · Seguros; Director financiero; Jefe comercial; Separar hecho, hipótesis y propuesta; Arquitecto técnico (y 98 más)
 
 ### 2 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros
 
-Cohesión 0.06 · 103 nodos: Registro de fuentes; Coordinación sectorial y seguros; Experto en sanidad privada; Experto en servicios financieros no bancarios; Experto en asesorías, gestorías y despachos; Especialista en contabilidad y facturación; P33 · Diseño y validación TO-BE; Experto en logística y transporte (y 95 más)
+Cohesión 0.06 · 103 nodos: Registro de fuentes; Coordinación sectorial y seguros; Experto en sanidad privada; Responsable de cumplimiento normativo; Experto en servicios financieros no bancarios; Especialista legal y privacidad; P33 · Diseño y validación TO-BE; Catálogo de excepciones al abrir un siniestro (y 95 más)
 
 ### 3 · claude/habilidades · Habilidades de los agentes y Administración
 
@@ -84,23 +84,23 @@ Cohesión 0.15 · 59 nodos: Propuesta de proceso de referencia: siniestros en co
 
 ### 6 · processes/catalog · Índice del conocimiento de Varios y Arquitecto de procesos
 
-Cohesión 0.16 · 48 nodos: Índice del conocimiento de Varios; Arquitecto de procesos; P32 · Descubrimiento de procesos; P38 · Gestión de despliegue por cliente; P31 · Calificación de oportunidad; P33 · Diseño y validación TO-BE; Director comercial; Especialista en automatización (y 40 más)
+Cohesión 0.13 · 56 nodos: Índice del conocimiento de Varios; Arquitecto de procesos; P32 · Descubrimiento de procesos; P38 · Gestión de despliegue por cliente; P31 · Calificación de oportunidad; P33 · Diseño y validación TO-BE; Director comercial; P32 · Descubrimiento de procesos (y 48 más)
 
-### 7 · knowledge/ingenieria · CEO digital y Responsable de cumplimiento normativo
-
-Cohesión 0.11 · 47 nodos: CEO digital; Responsable de cumplimiento normativo; Especialista en ciberseguridad; Ingeniero de plataforma y operaciones (DevOps/SRE); Especialista legal y privacidad; Arquitecto de datos e IA; Responsable de decisiones y seguimiento; Bibliotecario / responsable de conocimiento (y 39 más)
-
-### 8 · processes/catalog · P22 · Gestión de errores y reintentos y Catálogo de procesos P01–P38
+### 7 · processes/catalog · P22 · Gestión de errores y reintentos y Catálogo de procesos P01–P38
 
 Cohesión 0.5 · 37 nodos: P22 · Gestión de errores y reintentos; Catálogo de procesos P01–P38; P28 · Gestión de incidentes; P22 · Gestión de errores y reintentos; P27 · Gestión de proveedores y dependencias; P13 · Aprendizaje y actualización de la wiki; P05 · Diseño del plan; P25 · Gestión de cambios y versiones (y 29 más)
 
-### 9 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue
+### 8 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue
 
 Cohesión 0.3 · 36 nodos: Guia de Arranque Proyecto v1.4 Diseno Cerrado; Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue; Flujo ceo; Ejecucion agentes; Motor conocimiento obsidian; Marco Integral Legal Ciberseguridad IA Espana UE 2026-11-16; 12 · Ciclo de vida de un proyecto con cliente; Comunicaciones estados (y 28 más)
 
-### 10 · knowledge/administracion-finanzas · Director financiero (CFO) y Especialista en costes y proveedores
+### 9 · knowledge/ingenieria · CEO digital y Especialista en ciberseguridad
 
-Cohesión 0.21 · 17 nodos: Director financiero (CFO); Especialista en costes y proveedores; Especialista financiero; DORA-CNMV · Preguntas frecuentes sobre el Reglamento (UE) 2022/2554 (DORA); Especialista en automatización; Especialista en costes y proveedores; PGC-PYMES · Real Decreto 1515/2007, Plan General de Contabilidad de Pymes; Director financiero (CFO) (y 9 más)
+Cohesión 0.13 · 34 nodos: CEO digital; Especialista en ciberseguridad; Ingeniero de plataforma y operaciones (DevOps/SRE); Arquitecto de datos e IA; Responsable de decisiones y seguimiento; Bibliotecario / responsable de conocimiento; Biblioteca de precedentes; Arquitecto técnico (y 26 más)
+
+### 10 · knowledge/administracion-finanzas · Experto en asesorías, gestorías y despachos y Especialista en contabilidad y facturación
+
+Cohesión 0.22 · 26 nodos: Experto en asesorías, gestorías y despachos; Especialista en contabilidad y facturación; Director financiero (CFO); Especialista administrativo; Especialista financiero; Experto en asesorías, gestorías y despachos; VERIFACTU-RDL43 · Real Decreto-ley 43/2026: aplazamiento de la adaptación de los sistemas informáticos de facturación (Verifactu); AEAT-FACTURA-CAL · Factura electrónica obligatoria: calendario de implantación (y 18 más)
 
 ### 11 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Conversaciones con IA y evaluación
 
@@ -134,9 +134,9 @@ Cohesión 0.43 · 8 nodos: Estudios; Integraciones; Motor de conocimiento; Contr
 _Preguntas que este grafo ayuda a responder o que conviene decidir:_
 
 - **¿Por qué «Registro de fuentes» conecta la comunidad 2 con las comunidades 0, 3, 4, 5?**
-  _Intermediación alta (0.148): es un puente entre temas._
+  _Intermediación alta (0.149): es un puente entre temas._
 - **¿Por qué «Registro de decisiones» conecta la comunidad 0 con las comunidades 2, 3, 4, 5?**
-  _Intermediación alta (0.053): es un puente entre temas._
+  _Intermediación alta (0.052): es un puente entre temas._
 - **¿Por qué «Habilidades de los agentes» conecta la comunidad 3 con las comunidades 1, 4, 5, 6?**
   _Intermediación alta (0.039): es un puente entre temas._
 - **¿Se aprueba D-019 · Calidad exigente, todo pasa por un socio y cada rechazo se rehace aprendiendo? Sigue en propuesta y la citan 22 secciones.**

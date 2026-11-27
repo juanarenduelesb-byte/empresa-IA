@@ -13,7 +13,7 @@ tags:
 ## 1. Proceso antes que agente
 - Empezamos por el proceso: quién hace qué hoy, cuánto tarda, dónde se equivoca (AS-IS). Después decidimos, paso a paso, qué hace una regla, qué la IA y qué una persona (TO-BE).
 - **Código fijo para reglas y cálculos; IA para lenguaje y ambigüedad.** Un plazo, una vigencia o un importe los calcula el código; la IA lee el correo y propone el borrador (`CLAUDE.md`, D-024).
-- Lo más simple que funcione. Solo añadimos complejidad cuando hace falta (`ANTHROPIC-AGENTES`, D-026).
+- Lo más simple que funcione. Solo añadimos complejidad cuando hace falta ([ANTHROPIC-AGENTES](../fuentes/registro.md#anthropic-agentes), D-026).
 - La autonomía se gana: cada proceso empieza con una persona aprobándolo todo y solo sube de nivel con una métrica cumplida durante un periodo; lo externo, legal o financiero nunca pasa de «una persona aprueba antes» (D-027).
 
 ## 2. Pruebas antes que promesas

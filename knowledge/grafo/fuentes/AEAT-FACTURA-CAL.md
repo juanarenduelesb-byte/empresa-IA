@@ -4,7 +4,7 @@ id: "AEAT-FACTURA-CAL"
 titulo: "Factura electrónica obligatoria: calendario de implantación"
 organismo: "Agencia Tributaria"
 fuente_tipo: "obligacion-legal"
-version: "consultado 17/11/2026"
+version: "página actualizada el 13/10/2026"
 autoridad: "alta"
 vigencia: "vigente"
 estado: "validated"
@@ -18,7 +18,7 @@ tags:
 
 - Origen: <https://sede.agenciatributaria.gob.es/Sede/eu_es/iva/factura-electronica/calendario-implantacion.html>
 - Registro: [[knowledge/fuentes/registro|registro de fuentes]]
-- Nota: Los plazos del RD 238/2026 corren desde el 06/10/2026. Contrastado con Garrigues: octubre de 2027 para facturación superior a 8 millones de euros y octubre de 2028 para el resto.
+- Nota: «el 6 de octubre de 2026 es la fecha a partir de la cual empiezan a computar los plazos». Emitir y recibir: «A los 12 meses (6 de octubre de 2027)» si el volumen de operaciones del año anterior «haya excedido de 8 millones de euros»; «A los 24 meses (6 de octubre de 2028)» el resto. Estados y pagos: 12, 24 y 36 meses (06/10/2029 para personas físicas). Releída el 27/11/2026 (K2). Es un resumen de la AEAT; el texto del RD 238/2026 en el BOE no se pudo leer de noche. Contrastado con Garrigues.
 
 ## Citada en
 

@@ -18,7 +18,7 @@ tags:
 
 - Origen: <https://www.cuatrecasas.com/resources/reglamento-facturacion-text-69ccd76c3b2f3438807460.pdf>
 - Registro: [[knowledge/fuentes/registro|registro de fuentes]]
-- Nota: Calendario activado por la Orden HAC/1028/2026 (BOE 05/10/2026, en vigor el 06/10/2026): obligatoria desde octubre de 2027 para facturación superior a 8 millones de euros y desde octubre de 2028 para el resto. Ver AEAT-FACTURA-CAL.
+- Nota: Calendario activado por la Orden HAC/1028/2026 (BOE 05/10/2026, en vigor el 06/10/2026): obligatoria desde octubre de 2027 para facturación superior a 8 millones de euros y desde octubre de 2028 para el resto. Ver AEAT-FACTURA-CAL. Es el resumen de un despacho: el 27/11/2026 el texto del BOE (BOE-A-2026-7295) no se pudo leer (K2), así que lo que dice del RD 238/2026 está sin confirmar en la fuente oficial.
 
 ## Citada en
 

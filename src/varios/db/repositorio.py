@@ -164,7 +164,8 @@ class Repositorio:
         """Cambio de estado de una tarea según objetos.json (N3c). Cada cambio deja auditoría.
 
         Una tarea que pide aprobación (needs_approval) solo pasa a hecha (succeeded) con una persona con rol de
-        aprobación que no sea quien la puso a esperar ni el autor del encargo (las mismas reglas que las aprobaciones, P10)."""
+        aprobación que no sea quien la puso a esperar ni el autor del encargo (las mismas reglas que las
+        aprobaciones, P10)."""
         t = self.tarea(tarea_id)
         sol = self.solicitud(t.solicitud_id, bloquear=True)  # primero el encargo, como en el resto de operaciones
         self.sesion.refresh(t, with_for_update=True)

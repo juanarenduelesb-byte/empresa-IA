@@ -5,7 +5,7 @@ Cómo está conectado el cerebro de Varios: qué sostiene todo, qué temas forma
 
 ## Resumen
 
-- 5235 nodos: seccion 4479, documento 390, fuente 143, habilidad 65, proceso 38, especialista 34, agente 34, decision 33, puerta 12, departamento 7.
+- 5236 nodos: seccion 4480, documento 390, fuente 143, habilidad 65, proceso 38, especialista 34, agente 34, decision 33, puerta 12, departamento 7.
 - 7560 relaciones: 64 % EXTRACTADAS (escritas en la fuente), 35 % INFERIDAS (temas compartidos, con puntuación) y 40 AMBIGUAS (para revisar).
 - 13 comunidades de temas.
 
@@ -51,10 +51,10 @@ Secciones de carpetas y comunidades distintas que tratan lo mismo y no se enlaza
 - `docs/28-auditoria-agentes.md` › Criterio  ↔  `knowledge/fuentes/registro.md` › ANTHROPIC-AGENTES  [INFERIDA 0.85]
 - `docs/29-autonomia.md` › Niveles  ↔  `knowledge/fuentes/registro.md` › KNIGHT-NIVELES-AUTONOMIA  [INFERIDA 0.85]
 - `docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado.md` › 4.1 Reintentos y operaciones duplicadas  ↔  `processes/catalog/P22-gestion-de-errores-y-reintentos.md` › 9. Entradas y salidas de cada tarea  [INFERIDA 0.85]
+- `docs/fuentes/Marco_Integral_Legal_Ciberseguridad_IA_Espana_UE_2026-11-16.md` › 2.5 Encargados y subencargados  ↔  `governance/legal/borradores/02-encargo-tratamiento.md` › 7. Comprobación del art. 28.3 RGPD  [INFERIDA 0.75]
 - `docs/fuentes/Marco_Integral_Legal_Ciberseguridad_IA_Espana_UE_2026-11-16.md` › 8.1 LSSI-CE, web y comercio electrónico  ↔  `knowledge/fuentes/registro.md` › LSSI-34-2002  [INFERIDA 0.75]
 - `governance/legal/borradores/03-acuerdo-confidencialidad.md` › Acuerdo de confidencialidad (mutuo) · BORRADOR PARA ABOGADO  ↔  `knowledge/plantillas/entregables/01-propuesta-diagnostico.md` › 6. Siguientes pasos  [INFERIDA 0.75]
 - `governance/legal/borradores/04-anexo-uso-ia.md` › 1. Qué sistema es y para qué se usa  ↔  `knowledge/agentes/proj.md` › Reglas del puesto  [INFERIDA 0.75]
-- `governance/legal/borradores/04-anexo-uso-ia.md` › 4. Clasificación del riesgo  ↔  `knowledge/fuentes/registro.md` › RIA-2024-1689  [INFERIDA 0.75]
 
 ## Comunidades
 

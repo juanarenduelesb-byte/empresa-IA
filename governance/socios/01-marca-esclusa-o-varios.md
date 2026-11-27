@@ -15,14 +15,14 @@ Corrijo lo que recomendé ayer: **no recomiendo Esclusa para la consultora**, sa
 | | Varios | Esclusa |
 |---|---|---|
 | Quién lo decidió | Los dos socios, como nombre provisional (D-007, 17/11/2026) | Juan, para su proyecto propio (antes Cauce) |
-| Qué lo usa hoy | Este repositorio, la web interna `site/`, la oficina de agentes, la maqueta de la web para clientes (que dice «[Marca]» a la espera de M-002) y unas 440 menciones en 157 archivos | Web pública esclusa.eu, sistema de diseño, mascota, boletín semanal y comité de especialistas (`docs/23`, punto 2) |
+| Qué lo usa hoy | Este repositorio, la web interna `site/`, la oficina de agentes, la maqueta de la web para clientes (que dice «[Marca]» a la espera de M-002) y unas 530 apariciones de la palabra en unos 160 archivos (27/11, sin contar los generados; algunas son el adjetivo «varios») | Web pública esclusa.eu, sistema de diseño, mascota, boletín semanal y comité de especialistas (`docs/23`, punto 2) |
 | Para qué se usa hoy | La consultora de los dos socios | **Hecho (lo dijo Juan en noviembre de 2026):** web personal de portfolio y de aprendizaje de IA; no debe aparecer como consultora ni agencia |
 | Titular | Nadie: no hay sociedad ni marca solicitada | Las páginas legales de esclusa.eu están a nombre de Juan como persona física |
 | Dominio | **Sin comprobar.** Es una palabra común; lo normal es que los dominios cortos estén cogidos | esclusa.eu, de Juan |
 | Identidad visual | Burdeos, turquesa y champán; Instrument Sans (D-007) | Propia de Esclusa |
 
 ## Lo que cuesta cambiar
-- **Quedarse con Varios:** nada ahora. Si la búsqueda encuentra un conflicto, se cambia el nombre en unos 157 archivos con una sustitución revisada; la web para clientes aún no existe.
+- **Quedarse con Varios:** nada ahora. Si la búsqueda encuentra un conflicto, se cambia el nombre en unos 160 archivos con una sustitución revisada a mano (no automática: «varios» también es un adjetivo); la web para clientes aún no existe.
 - **Pasar a Esclusa:** el repositorio igual que arriba, más traspasar a la sociedad dominio, redes y marca, rehacer las páginas legales de esclusa.eu y separar el contenido personal de Juan. Además deshace lo que Juan decidió para Esclusa en noviembre.
 - **Nombre nuevo:** lo mismo que Varios, más buscar y elegir el nombre (una o dos tardes) y una identidad visual nueva antes de la web (semana 10 del plan).
 

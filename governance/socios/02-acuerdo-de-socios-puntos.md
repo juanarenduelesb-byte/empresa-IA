@@ -9,14 +9,14 @@ decision: "M-003"
 **Estado:** borrador para los dos socios. **No es redacción legal ni asesoría jurídica:** es la lista de puntos a decidir, con opciones, para llevarla al abogado, que redacta. Preparado en la tarea S1 (26/11/2026). Pendiente desde el 22/11/2026 (`DECISIONS.md`).
 
 ## Conclusión
-Hay **catorce puntos**. Cinco no pueden esperar porque bloquean otras cosas: el reparto y la dedicación (sin ellos no hay forma jurídica, `docs/27`), qué pasa si uno se va, quién es dueño de lo construido hasta ahora (repositorio, oficina, web), cómo se desbloquea un empate al 50 % y la compatibilidad con vuestros empleos (M-001). El resto se puede cerrar con el abogado.
+Hay **catorce puntos**. Siete no pueden esperar porque bloquean otras cosas: el reparto, la dedicación y la consolidación por permanencia (sin ellos no hay forma jurídica, `docs/27`), qué pasa si uno se va, quién es dueño de lo construido hasta ahora (repositorio, oficina, web), cómo se desbloquea un empate al 50 % y la compatibilidad con vuestros empleos (M-001, antes del primer cliente). El resto se puede cerrar con el abogado.
 
 Base: la guía de tipos de cláusulas de pactos de socios de la Clínica Jurídica de Emprendimiento de la Universidad Carlos III ([UC3M-PACTOS](../../knowledge/fuentes/registro.md#uc3m-pactos)). Según esa guía, el pacto obliga a quienes lo firman, pero «nunca va a poder servir para anular una decisión que se adopte con respeto a la ley y a los estatutos»: lo importante hay que llevarlo también a los estatutos. Cómo hacerlo lo dice el abogado.
 
 ## Lo que ya está escrito
 - Socios: Juan (producto y construcción) y Álvaro (clientes y relación); reparto pendiente (`CLAUDE.md`).
 - Propuesta para el gestor: una SL de dos socios (`docs/27`, sección 2). Sus cálculos de Seguridad Social suponen el 50 % cada uno: es una hipótesis, no una decisión.
-- Dedicación prevista en el plan: 10–15 horas semanales por socio (`tools/org_data/agentes.py`, ficha del PMO).
+- Dedicación prevista en el plan: 10–15 horas semanales por socio (`docs/10-plan-12-semanas.md`, supuestos). Es un supuesto del plan, no un compromiso firmado.
 
 ## Puntos a decidir
 | # | Punto | Por qué importa | Opciones | Urgente |

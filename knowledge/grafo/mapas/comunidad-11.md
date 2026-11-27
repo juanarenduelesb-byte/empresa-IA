@@ -1,30 +1,33 @@
 ---
 tipo: "mapa"
 comunidad: 11
-miembros: 13
-cohesion: 0.47
+miembros: 9
+cohesion: 0.33
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 11 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Conversaciones con IA y evaluación
+# Comunidad 11 · claude/habilidades · Diseñador de producto y experiencia (UX) y Diseño y experiencia
 
-13 nodos agrupados por el algoritmo de Louvain. Cohesión 0.47.
+9 nodos agrupados por el algoritmo de Louvain. Cohesión 0.33.
 
 ## Documentos
 
-- [[precedents/oficina/encargos/2026-11/2026-11-17-acta-de-proteccion-de-la-ia-y-examen-de-50-casos-6sxjn|Acta de protección de la IA y examen de 50 casos]]
-- [[precedents/oficina/chats/ia-y-evaluacion|Conversaciones con IA y evaluación]]
-- [[precedents/oficina/encargos/2026-11/2026-11-17-reunion-ia-y-evaluacion-y-seguridad-zyn2w|Reunión: IA y evaluación y Seguridad]]
-- [[precedents/oficina/chats/ceo-digital|Conversaciones con CEO digital]]
-- [[precedents/oficina/chats/plan-y-seguimiento|Conversaciones con Plan y seguimiento]]
-- [[precedents/oficina/chats/registro-de-decisiones|Conversaciones con Registro de decisiones]]
-- [[precedents/oficina/chats/bibliotecario|Conversaciones con Bibliotecario]]
-- [[docs/10-plan-12-semanas|Plan de construcción · 18/11/2026 → 12/02/2027]]
-- [[precedents/oficina/chats/seguridad|Conversaciones con Seguridad]]
-- [[docs/11-cerebro-en-claude|Cerebro en Claude]]
+- [[knowledge/ingenieria/diseno-experiencia|Diseñador de producto y experiencia (UX)]]
+- [[knowledge/agentes/ux|Diseño y experiencia]]
+- [[claude/habilidades/flujo-pantallas|Flujo y pantallas de una tarea]]
+- [[claude/habilidades/prueba-usabilidad|Prueba de usabilidad]]
 
-## Decisiones
+## Especialistas
 
-- [[knowledge/grafo/decisiones/D-013|D-013 · Conocimiento y catálogo de procesos generados desde datos]]
-- [[knowledge/grafo/decisiones/D-017|D-017 · La oficina se vuelca cada noche a GitHub y las automatizaciones van por GitHub Actions]]
+- [[knowledge/ingenieria/diseno-experiencia|Diseñador de producto y experiencia (UX)]]
+
+## Habilidades
+
+- [[claude/habilidades/prueba-usabilidad|Prueba de usabilidad]]
+
+## Fuentes
+
+- [[knowledge/grafo/fuentes/LEY-ACCESIBILIDAD-11-2023|LEY-ACCESIBILIDAD-11-2023 · Ley 11/2023 (accesibilidad de productos y servicios, transpone la Directiva (UE) 2019/882)]]
+- [[knowledge/grafo/fuentes/NNG-HEURISTICAS|NNG-HEURISTICAS · 10 heurísticas de usabilidad (Jakob Nielsen)]]
+- [[knowledge/grafo/fuentes/W3C-WCAG22|W3C-WCAG22 · Web Content Accessibility Guidelines (WCAG) 2.2]]

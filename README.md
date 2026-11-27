@@ -13,7 +13,7 @@ Este repositorio es **la memoria oficial del proyecto**. Si algo no está aquí,
 | Socios | 2 (Juan y Álvaro) |
 | Arquitectura y método | Diseñados: Guía v1.4, Atlas Evolución v1.1, Marco legal v1.0 (ver `docs/fuentes/`) |
 | Clientes con contrato | 0 |
-| Código del sistema | En construcción desde el 26/11, solo con datos inventados: unas 2.100 líneas de Python en `src/` (motor de estados, API con PostgreSQL y RLS, reglas del proceso de referencia, CEO limitado y rúbrica) y unas 190 pruebas, varias contra PostgreSQL real. Nada en producción |
+| Código del sistema | En construcción desde el 26/11, solo con datos inventados: unas 2.500 líneas de Python en `src/` (motor de estados, API con PostgreSQL y RLS, reglas del proceso de referencia, CEO limitado y rúbrica) y unas 220 pruebas, varias contra PostgreSQL real. Nada en producción |
 | Siguiente objetivo | Construir el proceso de referencia y estar listo para el primer cliente el 12/02/2027 (D-011) |
 
 ## Empieza aquí

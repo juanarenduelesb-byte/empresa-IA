@@ -67,7 +67,7 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
   Una decisión en propuesta que ya sostiene mucho contenido.
 - ¿Se aprueba D-024 · Paquete de dominio de seguros con un archivo máquina como fuente de las reglas? Sigue en propuesta y la citan 16 secciones.  
   Una decisión en propuesta que ya sostiene mucho contenido.
-- ¿Se aprueba D-027 · Cada proceso tiene un nivel de autonomía A0–A4 con techo y criterio? Sigue en propuesta y la citan 13 secciones.  
+- ¿Se aprueba D-027 · Cada proceso tiene un nivel de autonomía A0–A4 con techo y criterio? Sigue en propuesta y la citan 14 secciones.  
   Una decisión en propuesta que ya sostiene mucho contenido.
 - ¿Deberían enlazarse «DECISIONS.md» y «docs/06-seguridad-y-gobierno.md»?  
   Tratan lo mismo (relación INFERIDA 0.85) pero no se citan.

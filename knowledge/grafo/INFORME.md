@@ -6,7 +6,7 @@ Cómo está conectado el cerebro de Varios: qué sostiene todo, qué temas forma
 ## Resumen
 
 - 5236 nodos: seccion 4480, documento 390, fuente 143, habilidad 65, proceso 38, especialista 34, agente 34, decision 33, puerta 12, departamento 7.
-- 7560 relaciones: 64 % EXTRACTADAS (escritas en la fuente), 35 % INFERIDAS (temas compartidos, con puntuación) y 40 AMBIGUAS (para revisar).
+- 7562 relaciones: 64 % EXTRACTADAS (escritas en la fuente), 35 % INFERIDAS (temas compartidos, con puntuación) y 40 AMBIGUAS (para revisar).
 - 13 comunidades de temas.
 
 ## Nodos centrales
@@ -60,7 +60,7 @@ Secciones de carpetas y comunidades distintas que tratan lo mismo y no se enlaza
 
 ### 0 · docs · Registro de decisiones y Trabajo nocturno de Claude
 
-Cohesión 0.07 · 118 nodos: Registro de decisiones; Trabajo nocturno de Claude; Varios · empresa-ia; Informe de la mañana · 27/11/2026; Base de datos (D-023, propuesta); Plan maestro: la empresa completa, sin que se escape nada; Informe de la mañana · 26/11/2026; Política de uso de inteligencia artificial de Varios · BORRADOR PARA ABOGADO (y 110 más)
+Cohesión 0.07 · 118 nodos: Registro de decisiones; Trabajo nocturno de Claude; Varios · empresa-ia; Informe de la mañana · 27/11/2026; Base de datos (D-023, propuesta); Plan maestro: la empresa completa, sin que se escape nada; Informe de la mañana · 26/11/2026; 17 · Cerebro, conocimiento y procesos: auditoría e informe (y 110 más)
 
 ### 1 · claude/habilidades · Legal y privacidad y Arquitecto de procesos
 
@@ -143,7 +143,7 @@ _Preguntas que este grafo ayuda a responder o que conviene decidir:_
   _Una decisión en propuesta que ya sostiene mucho contenido._
 - **¿Se aprueba D-024 · Paquete de dominio de seguros con un archivo máquina como fuente de las reglas? Sigue en propuesta y la citan 16 secciones.**
   _Una decisión en propuesta que ya sostiene mucho contenido._
-- **¿Se aprueba D-027 · Cada proceso tiene un nivel de autonomía A0–A4 con techo y criterio? Sigue en propuesta y la citan 13 secciones.**
+- **¿Se aprueba D-027 · Cada proceso tiene un nivel de autonomía A0–A4 con techo y criterio? Sigue en propuesta y la citan 14 secciones.**
   _Una decisión en propuesta que ya sostiene mucho contenido._
 - **¿Deberían enlazarse «DECISIONS.md» y «docs/06-seguridad-y-gobierno.md»?**
   _Tratan lo mismo (relación INFERIDA 0.85) pero no se citan._

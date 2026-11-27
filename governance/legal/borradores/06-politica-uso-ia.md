@@ -21,7 +21,7 @@ Solo se usan las herramientas de esta tabla, para lo que dice su fila. Dar de al
 
 | Herramienta | Para qué | Datos permitidos hoy | Estado |
 |---|---|---|---|
-| Claude (Anthropic), en la aplicación y por la API | Trabajo de los socios, trabajo nocturno sobre el repositorio y la oficina de agentes | Solo L0: documentos internos sin datos personales y datos inventados | En uso. [El abogado revisa las condiciones del proveedor: uso de los datos para entrenar, conservación y región] |
+| Claude (Anthropic), en la aplicación de Claude (también la oficina de agentes, que hoy es un artefacto de Claude) | Trabajo de los socios, trabajo nocturno sobre el repositorio y la oficina de agentes | Solo L0: documentos internos sin datos personales y datos inventados | En uso. Por la API, cuando exista el adaptador (S4). [El abogado revisa las condiciones del proveedor: uso de los datos para entrenar, conservación y región] |
 | [Otras que usen hoy los socios] | [·] | [·] | [Los socios completan la lista; lo que no esté, no se usa con nada de Varios] |
 | Herramientas de IA de terceros con cuenta personal o gratuita | — | Ninguno | **No autorizadas** para nada de Varios |
 
@@ -41,7 +41,8 @@ Como en la AEPD, en las herramientas externas que no controla Varios rige la pro
 | Qué | Quién | Dónde consta |
 |---|---|---|
 | Dar de alta o de baja una herramienta del catálogo | Los dos socios | `DECISIONS.md` |
-| Un caso de uso nuevo de IA en un proceso (qué hace la IA y qué el código) | Un socio, con su prueba en el banco de casos; si sube el nivel de autonomía de un proceso con techo A2, los dos (D-027) | `processes/autonomia.json` y la decisión |
+| Un caso de uso nuevo de IA en un proceso (qué hace la IA y qué el código) | Un socio, con su prueba en el banco de casos | La decisión y el banco de casos |
+| Subir un nivel de autonomía a un proceso | Un socio, si la métrica cumple el umbral durante el periodo fijado; lo externo, legal o financiero no pasa de A2 (D-027) | `processes/autonomia.json` |
 | Usar datos de un nivel superior | Los dos socios | Matriz, §1 |
 | Enviar a un cliente o a un tercero algo hecho con IA | Un socio, que lo revisa antes | Auditoría de la oficina |
 | Cambiar el modelo o las instrucciones de un sistema en servicio | Un socio, tras pasar el banco de casos; se comunica al cliente (anexo de IA, §7.3) | Registro del cambio |

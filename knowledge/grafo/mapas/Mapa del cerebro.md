@@ -27,7 +27,7 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 
 ## Nodos centrales
 
-- [[knowledge/fuentes/registro|Registro de fuentes]] · 216 vecinos
+- [[knowledge/fuentes/registro|Registro de fuentes]] · 217 vecinos
 - [[DECISIONS|Registro de decisiones]] · 123 vecinos
 - [[knowledge/INDEX|Índice del conocimiento de Varios]] · 119 vecinos
 - [[docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado|Guia de Arranque Proyecto v1.4 Diseno Cerrado]] · 85 vecinos
@@ -36,12 +36,12 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 - [[claude/habilidades/README|Habilidades de los agentes]] · 69 vecinos
 - [[CLAUDE|Varios · empresa-ia]] · 66 vecinos
 - [[processes/catalog/P22-gestion-de-errores-y-reintentos|P22 · Gestión de errores y reintentos]] · 64 vecinos
-- [[docs/28-auditoria-agentes|Auditoría de agentes y habilidades frente a los procesos (M-040)]] · 64 vecinos
 - [[processes/catalog/P28-gestion-de-incidentes|P28 · Gestión de incidentes]] · 63 vecinos
+- [[docs/28-auditoria-agentes|Auditoría de agentes y habilidades frente a los procesos (M-040)]] · 63 vecinos
 - [[knowledge/direccion/ceo-digital|CEO digital]] · 60 vecinos
 - [[docs/29-autonomia|Mapa de autonomía por proceso, A0–A4 (M-045)]] · 60 vecinos
+- [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]] · 51 vecinos
 - [[knowledge/procesos/arquitecto-procesos|Arquitecto de procesos]] · 50 vecinos
-- [[knowledge/sectores/especialista-sectorial|Coordinación sectorial y seguros]] · 50 vecinos
 
 ## Puentes entre temas
 
@@ -50,8 +50,8 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 - [[claude/habilidades/README|Habilidades de los agentes]] · conecta las comunidades 4, 5, 8, 9, 10, 12
 - L2 (puerta técnica) · conecta las comunidades 0, 2, 3, 4, 5, 6
 - [[knowledge/INDEX|Índice del conocimiento de Varios]] · conecta las comunidades 0, 2, 3, 4, 5, 6
-- [[knowledge/estudios/README|Estudios]] · conecta las comunidades 0, 2, 3, 4, 5, 6
 - [[docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado|Guia de Arranque Proyecto v1.4 Diseno Cerrado]] · conecta las comunidades 0, 3, 4, 6, 9
+- [[knowledge/estudios/README|Estudios]] · conecta las comunidades 0, 2, 3, 4, 5, 6
 - [[knowledge/grafo/decisiones/D-011|D-011 · Construir primero, clientes desde el 15/02/2027]] · conecta las comunidades 0, 2, 3, 4, 7, 8
 - [[knowledge/direccion/ceo-digital|CEO digital]] · conecta las comunidades 0, 2, 3, 4, 6, 7
 - [[knowledge/agentes/admj|Administración]] · conecta las comunidades 1, 2, 8, 10, 11, 12

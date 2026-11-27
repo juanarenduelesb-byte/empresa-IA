@@ -8,7 +8,7 @@ version: "ficha actualizada el 03/11/2022, leída el 27/11/2026"
 autoridad: "media"
 vigencia: "vigente"
 estado: "draft"
-citada: 1
+citada: 2
 tags:
   - "fuente"
   - "vigencia/vigente"
@@ -22,4 +22,5 @@ tags:
 
 ## Citada en
 
+- [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]]
 - [[governance/socios/01-marca-esclusa-o-varios|M-002 · ¿Una sola marca: Esclusa o Varios?]]

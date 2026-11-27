@@ -5,15 +5,15 @@ Cómo está conectado el cerebro de Varios: qué sostiene todo, qué temas forma
 
 ## Resumen
 
-- 5091 nodos: seccion 4368, documento 383, fuente 122, habilidad 65, proceso 38, especialista 34, agente 34, decision 28, puerta 12, departamento 7.
-- 7196 relaciones: 63 % EXTRACTADAS (escritas en la fuente), 37 % INFERIDAS (temas compartidos, con puntuación) y 39 AMBIGUAS (para revisar).
+- 5092 nodos: seccion 4369, documento 383, fuente 122, habilidad 65, proceso 38, especialista 34, agente 34, decision 28, puerta 12, departamento 7.
+- 7200 relaciones: 63 % EXTRACTADAS (escritas en la fuente), 37 % INFERIDAS (temas compartidos, con puntuación) y 39 AMBIGUAS (para revisar).
 - 14 comunidades de temas.
 
 ## Nodos centrales
 
 Lo que más cosas conecta. Si cambia, cambia mucho.
 
-1. **Registro de fuentes** (`knowledge/fuentes/registro.md`) · 216 conexiones
+1. **Registro de fuentes** (`knowledge/fuentes/registro.md`) · 217 conexiones
 2. **Registro de decisiones** (`DECISIONS.md`) · 123 conexiones
 3. **Índice del conocimiento de Varios** (`knowledge/INDEX.md`) · 119 conexiones
 4. **Guia de Arranque Proyecto v1.4 Diseno Cerrado** (`docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado.md`) · 85 conexiones
@@ -22,8 +22,8 @@ Lo que más cosas conecta. Si cambia, cambia mucho.
 7. **Habilidades de los agentes** (`claude/habilidades/README.md`) · 69 conexiones
 8. **Varios · empresa-ia** (`CLAUDE.md`) · 66 conexiones
 9. **P22 · Gestión de errores y reintentos** · 64 conexiones
-10. **Auditoría de agentes y habilidades frente a los procesos (M-040)** (`docs/28-auditoria-agentes.md`) · 64 conexiones
-11. **P28 · Gestión de incidentes** · 63 conexiones
+10. **P28 · Gestión de incidentes** · 63 conexiones
+11. **Auditoría de agentes y habilidades frente a los procesos (M-040)** (`docs/28-auditoria-agentes.md`) · 63 conexiones
 12. **CEO digital** (`knowledge/direccion/ceo-digital.md`) · 60 conexiones
 
 ## Puentes entre temas
@@ -34,9 +34,9 @@ Nodos por los que pasa el camino entre comunidades distintas (intermediación).
 - **Registro de decisiones** · intermediación 0.048 · une la comunidad 3 con 0, 2, 4, 5, 7, 8
 - **Habilidades de los agentes** · intermediación 0.042 · une la comunidad 0 con 4, 5, 8, 9, 10, 12
 - **L2 (puerta técnica)** · intermediación 0.026 · une la comunidad 11 con 0, 2, 3, 4, 5, 6
-- **Índice del conocimiento de Varios** · intermediación 0.022 · une la comunidad 8 con 0, 2, 3, 4, 5, 6
-- **Estudios** · intermediación 0.017 · une la comunidad 13 con 0, 2, 3, 4, 5, 6
+- **Índice del conocimiento de Varios** · intermediación 0.021 · une la comunidad 8 con 0, 2, 3, 4, 5, 6
 - **Guia de Arranque Proyecto v1.4 Diseno Cerrado** · intermediación 0.017 · une la comunidad 7 con 0, 3, 4, 6, 9
+- **Estudios** · intermediación 0.017 · une la comunidad 13 con 0, 2, 3, 4, 5, 6
 - **D-011 · Construir primero, clientes desde el 15/02/2027** · intermediación 0.011 · une la comunidad 5 con 0, 2, 3, 4, 7, 8
 - **CEO digital** · intermediación 0.01 · une la comunidad 9 con 0, 2, 3, 4, 6, 7
 - **Administración** · intermediación 0.01 · une la comunidad 0 con 1, 2, 8, 10, 11, 12
@@ -80,11 +80,11 @@ Cohesión 0.18 · 67 nodos: Auditoría de agentes y habilidades frente a los pro
 
 ### 5 · precedents/oficina · Propuesta de proceso de referencia: siniestros en corredurías y Conversaciones con Coordinación sectorial · Seguros
 
-Cohesión 0.15 · 59 nodos: Propuesta de proceso de referencia: siniestros en corredurías; Conversaciones con Coordinación sectorial · Seguros; Guion de validación semanal: apertura de siniestros; Conversaciones con Arquitecto de procesos; Memoria de la oficina; D-011 · Construir primero, clientes desde el 15/02/2027; Línea base y fichas de métricas · Atalaya; CCS · Consorcio de Compensación de Seguros: riesgos extraordinarios (y 51 más)
+Cohesión 0.15 · 59 nodos: Propuesta de proceso de referencia: siniestros en corredurías; Conversaciones con Coordinación sectorial · Seguros; Guion de validación semanal: apertura de siniestros; Conversaciones con Arquitecto de procesos; Memoria de la oficina; D-011 · Construir primero, clientes desde el 15/02/2027; CCS · Consorcio de Compensación de Seguros: riesgos extraordinarios; Línea base y fichas de métricas · Atalaya (y 51 más)
 
 ### 6 · processes/catalog · P22 · Gestión de errores y reintentos y Catálogo de procesos P01–P38
 
-Cohesión 0.4 · 45 nodos: P22 · Gestión de errores y reintentos; Catálogo de procesos P01–P38; P28 · Gestión de incidentes; P22 · Gestión de errores y reintentos; P27 · Gestión de proveedores y dependencias; P33 · Diseño y validación TO-BE; P05 · Diseño del plan; P11 · Entrega y cierre (y 37 más)
+Cohesión 0.41 · 45 nodos: P22 · Gestión de errores y reintentos; Catálogo de procesos P01–P38; P28 · Gestión de incidentes; P22 · Gestión de errores y reintentos; P27 · Gestión de proveedores y dependencias; P33 · Diseño y validación TO-BE; P05 · Diseño del plan; P13 · Aprendizaje y actualización de la wiki (y 37 más)
 
 ### 7 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue
 

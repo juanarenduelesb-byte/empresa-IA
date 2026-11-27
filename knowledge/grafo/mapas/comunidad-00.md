@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 0
-miembros: 116
-cohesion: 0.08
+miembros: 117
+cohesion: 0.07
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 0 · claude/habilidades · Habilidades de los agentes y Administración
 
-116 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
+117 nodos agrupados por el algoritmo de Louvain. Cohesión 0.07.
 
 ## Documentos
 
@@ -73,7 +73,7 @@ tags:
 - [[claude/habilidades/contrato-de-tarea|Contrato de tarea]]
 - [[claude/habilidades/evaluacion-modelos|Evaluación de modelos]]
 - [[claude/habilidades/cierre-mensual|Cierre contable mensual]]
-- … y 38 más
+- … y 39 más
 
 ## Especialistas
 

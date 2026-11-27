@@ -32,12 +32,12 @@ Nodos por los que pasa el camino entre comunidades distintas (intermediación).
 
 - **Registro de fuentes** · intermediación 0.137 · une la comunidad 2 con 0, 3, 4, 5, 6, 7
 - **Registro de decisiones** · intermediación 0.047 · une la comunidad 3 con 0, 2, 4, 5, 6, 7
-- **Habilidades de los agentes** · intermediación 0.043 · une la comunidad 0 con 1, 3, 4, 5, 6, 7
+- **Habilidades de los agentes** · intermediación 0.043 · une la comunidad 0 con 1, 4, 5, 6, 7, 11
 - **L2 (puerta técnica)** · intermediación 0.026 · une la comunidad 10 con 0, 2, 3, 4, 5, 6
 - **Índice del conocimiento de Varios** · intermediación 0.021 · une la comunidad 6 con 0, 2, 3, 4, 5, 7
 - **Estudios** · intermediación 0.018 · une la comunidad 11 con 0, 2, 3, 4, 5, 6
 - **Guia de Arranque Proyecto v1.4 Diseno Cerrado** · intermediación 0.017 · une la comunidad 9 con 0, 2, 3, 4, 6, 7
-- **D-011 · Construir primero, clientes desde el 15/02/2027** · intermediación 0.011 · une la comunidad 5 con 0, 2, 3, 4, 6, 10
+- **D-011 · Construir primero, clientes desde el 15/02/2027** · intermediación 0.011 · une la comunidad 5 con 0, 2, 3, 4, 6, 7
 - **CEO digital** · intermediación 0.01 · une la comunidad 7 con 0, 2, 3, 4, 6, 8
 - **Experto en asesorías y despachos** · intermediación 0.009 · une la comunidad 0 con 1, 2, 7, 10
 
@@ -60,7 +60,7 @@ Secciones de carpetas y comunidades distintas que tratan lo mismo y no se enlaza
 
 ### 0 · claude/habilidades · Habilidades de los agentes y Administración
 
-Cohesión 0.08 · 116 nodos: Habilidades de los agentes; Administración; Experto en asesorías y despachos; Experto en asesorías, gestorías y despachos; Especialista en contabilidad y facturación; Director financiero (CFO); Backend; Agentes de la oficina (y 108 más)
+Cohesión 0.07 · 117 nodos: Habilidades de los agentes; Administración; Experto en asesorías y despachos; Experto en asesorías, gestorías y despachos; Especialista en contabilidad y facturación; Director financiero (CFO); Backend; Agentes de la oficina (y 109 más)
 
 ### 1 · claude/habilidades · Legal y privacidad y Arquitecto de procesos
 
@@ -72,7 +72,7 @@ Cohesión 0.06 · 104 nodos: Registro de fuentes; Coordinación sectorial y segu
 
 ### 3 · docs · Registro de decisiones y Trabajo nocturno de Claude
 
-Cohesión 0.09 · 95 nodos: Registro de decisiones; Trabajo nocturno de Claude; Varios · empresa-ia; Informe de la mañana · 27/11/2026; Informe de la mañana · 26/11/2026; Plan maestro: la empresa completa, sin que se escape nada; Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue; 17 · Cerebro, conocimiento y procesos: auditoría e informe (y 87 más)
+Cohesión 0.09 · 93 nodos: Registro de decisiones; Trabajo nocturno de Claude; Informe de la mañana · 27/11/2026; Informe de la mañana · 26/11/2026; Plan maestro: la empresa completa, sin que se escape nada; Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue; 17 · Cerebro, conocimiento y procesos: auditoría e informe; Varios — repositorio maestro (y 85 más)
 
 ### 4 · processes/runbooks · Auditoría de agentes y habilidades frente a los procesos (M-040) y Dependencias entre procesos
 
@@ -86,9 +86,9 @@ Cohesión 0.15 · 59 nodos: Propuesta de proceso de referencia: siniestros en co
 
 Cohesión 0.18 · 47 nodos: Índice del conocimiento de Varios; Arquitecto de procesos; P32 · Descubrimiento de procesos; P38 · Gestión de despliegue por cliente; P31 · Calificación de oportunidad; P33 · Diseño y validación TO-BE; P33 · Diseño y validación TO-BE; Director comercial (y 39 más)
 
-### 7 · knowledge/ingenieria · CEO digital y Especialista en ciberseguridad
+### 7 · knowledge/ingenieria · CEO digital y Varios · empresa-ia
 
-Cohesión 0.12 · 45 nodos: CEO digital; Especialista en ciberseguridad; Ingeniero de plataforma y operaciones (DevOps/SRE); Arquitecto de datos e IA; Responsable de decisiones y seguimiento; Bibliotecario / responsable de conocimiento; Biblioteca de precedentes; Especialista en automatización (y 37 más)
+Cohesión 0.12 · 47 nodos: CEO digital; Varios · empresa-ia; Especialista en ciberseguridad; Ingeniero de plataforma y operaciones (DevOps/SRE); Arquitecto de datos e IA; Responsable de decisiones y seguimiento; Bibliotecario / responsable de conocimiento; Biblioteca de precedentes (y 39 más)
 
 ### 8 · processes/catalog · P22 · Gestión de errores y reintentos y Catálogo de procesos P01–P38
 
@@ -100,7 +100,7 @@ Cohesión 0.37 · 31 nodos: Guia de Arranque Proyecto v1.4 Diseno Cerrado; Flujo
 
 ### 10 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Conversaciones con IA y evaluación
 
-Cohesión 0.48 · 12 nodos: Acta de protección de la IA y examen de 50 casos; L2 (puerta técnica); Conversaciones con IA y evaluación; Reunión: IA y evaluación y Seguridad; Conversaciones con CEO digital; Conversaciones con Plan y seguimiento; Conversaciones con Bibliotecario; Conversaciones con Registro de decisiones (y 4 más)
+Cohesión 0.55 · 11 nodos: Acta de protección de la IA y examen de 50 casos; L2 (puerta técnica); Conversaciones con IA y evaluación; Reunión: IA y evaluación y Seguridad; Conversaciones con CEO digital; Conversaciones con Plan y seguimiento; Conversaciones con Bibliotecario; Conversaciones con Registro de decisiones (y 3 más)
 
 ### 11 · knowledge/estudios · Estudios y Integraciones
 
@@ -133,7 +133,7 @@ _Preguntas que este grafo ayuda a responder o que conviene decidir:_
   _Intermediación alta (0.137): es un puente entre temas._
 - **¿Por qué «Registro de decisiones» conecta la comunidad 3 con las comunidades 0, 2, 4, 5?**
   _Intermediación alta (0.047): es un puente entre temas._
-- **¿Por qué «Habilidades de los agentes» conecta la comunidad 0 con las comunidades 1, 3, 4, 5?**
+- **¿Por qué «Habilidades de los agentes» conecta la comunidad 0 con las comunidades 1, 4, 5, 6?**
   _Intermediación alta (0.043): es un puente entre temas._
 - **¿Se aprueba D-019 · Calidad exigente, todo pasa por un socio y cada rechazo se rehace aprendiendo? Sigue en propuesta y la citan 17 secciones.**
   _Una decisión en propuesta que ya sostiene mucho contenido._

@@ -1,19 +1,20 @@
 ---
 tipo: "mapa"
 comunidad: 7
-miembros: 45
+miembros: 47
 cohesion: 0.12
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 7 · knowledge/ingenieria · CEO digital y Especialista en ciberseguridad
+# Comunidad 7 · knowledge/ingenieria · CEO digital y Varios · empresa-ia
 
-45 nodos agrupados por el algoritmo de Louvain. Cohesión 0.12.
+47 nodos agrupados por el algoritmo de Louvain. Cohesión 0.12.
 
 ## Documentos
 
 - [[knowledge/direccion/ceo-digital|CEO digital]]
+- [[CLAUDE|Varios · empresa-ia]]
 - [[knowledge/seguridad-legal/ciberseguridad|Especialista en ciberseguridad]]
 - [[knowledge/ingenieria/plataforma-operaciones|Ingeniero de plataforma y operaciones (DevOps/SRE)]]
 - [[knowledge/ingenieria/datos-ia|Arquitecto de datos e IA]]
@@ -33,6 +34,10 @@ tags:
 - [[claude/habilidades/cinco-decisiones|Las cinco decisiones del CEO]]
 - [[claude/habilidades/copias-restauracion|Copias y restauración probada]]
 - [[claude/habilidades/integracion-continua|Integración continua]]
+
+## Decisiones
+
+- [[knowledge/grafo/decisiones/D-006|D-006 · Primer proceso piloto]]
 
 ## Especialistas
 

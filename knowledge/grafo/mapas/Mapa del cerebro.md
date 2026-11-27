@@ -10,17 +10,17 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 
 ## Comunidades
 
-- [[knowledge/grafo/mapas/comunidad-00|Comunidad 0 · claude/habilidades · Habilidades de los agentes y Administración]] (116 nodos)
+- [[knowledge/grafo/mapas/comunidad-00|Comunidad 0 · claude/habilidades · Habilidades de los agentes y Administración]] (117 nodos)
 - [[knowledge/grafo/mapas/comunidad-01|Comunidad 1 · claude/habilidades · Legal y privacidad y Arquitecto de procesos]] (108 nodos)
 - [[knowledge/grafo/mapas/comunidad-02|Comunidad 2 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros]] (104 nodos)
-- [[knowledge/grafo/mapas/comunidad-03|Comunidad 3 · docs · Registro de decisiones y Trabajo nocturno de Claude]] (95 nodos)
+- [[knowledge/grafo/mapas/comunidad-03|Comunidad 3 · docs · Registro de decisiones y Trabajo nocturno de Claude]] (93 nodos)
 - [[knowledge/grafo/mapas/comunidad-04|Comunidad 4 · processes/runbooks · Auditoría de agentes y habilidades frente a los procesos (M-040) y Dependencias entre procesos]] (61 nodos)
 - [[knowledge/grafo/mapas/comunidad-05|Comunidad 5 · precedents/oficina · Propuesta de proceso de referencia: siniestros en corredurías y Conversaciones con Coordinación sectorial · Seguros]] (59 nodos)
 - [[knowledge/grafo/mapas/comunidad-06|Comunidad 6 · processes/catalog · Índice del conocimiento de Varios y Arquitecto de procesos]] (47 nodos)
-- [[knowledge/grafo/mapas/comunidad-07|Comunidad 7 · knowledge/ingenieria · CEO digital y Especialista en ciberseguridad]] (45 nodos)
+- [[knowledge/grafo/mapas/comunidad-07|Comunidad 7 · knowledge/ingenieria · CEO digital y Varios · empresa-ia]] (47 nodos)
 - [[knowledge/grafo/mapas/comunidad-08|Comunidad 8 · processes/catalog · P22 · Gestión de errores y reintentos y Catálogo de procesos P01–P38]] (37 nodos)
 - [[knowledge/grafo/mapas/comunidad-09|Comunidad 9 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Flujo ceo]] (31 nodos)
-- [[knowledge/grafo/mapas/comunidad-10|Comunidad 10 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Conversaciones con IA y evaluación]] (12 nodos)
+- [[knowledge/grafo/mapas/comunidad-10|Comunidad 10 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Conversaciones con IA y evaluación]] (11 nodos)
 - [[knowledge/grafo/mapas/comunidad-11|Comunidad 11 · knowledge/estudios · Estudios y Integraciones]] (8 nodos)
 
 ## Nodos centrales
@@ -45,12 +45,12 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 
 - [[knowledge/fuentes/registro|Registro de fuentes]] · conecta las comunidades 0, 3, 4, 5, 6, 7
 - [[DECISIONS|Registro de decisiones]] · conecta las comunidades 0, 2, 4, 5, 6, 7
-- [[claude/habilidades/README|Habilidades de los agentes]] · conecta las comunidades 1, 3, 4, 5, 6, 7
+- [[claude/habilidades/README|Habilidades de los agentes]] · conecta las comunidades 1, 4, 5, 6, 7, 11
 - L2 (puerta técnica) · conecta las comunidades 0, 2, 3, 4, 5, 6
 - [[knowledge/INDEX|Índice del conocimiento de Varios]] · conecta las comunidades 0, 2, 3, 4, 5, 7
 - [[knowledge/estudios/README|Estudios]] · conecta las comunidades 0, 2, 3, 4, 5, 6
 - [[docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado|Guia de Arranque Proyecto v1.4 Diseno Cerrado]] · conecta las comunidades 0, 2, 3, 4, 6, 7
-- [[knowledge/grafo/decisiones/D-011|D-011 · Construir primero, clientes desde el 15/02/2027]] · conecta las comunidades 0, 2, 3, 4, 6, 10
+- [[knowledge/grafo/decisiones/D-011|D-011 · Construir primero, clientes desde el 15/02/2027]] · conecta las comunidades 0, 2, 3, 4, 6, 7
 - [[knowledge/direccion/ceo-digital|CEO digital]] · conecta las comunidades 0, 2, 3, 4, 6, 8
 - [[knowledge/agentes/ase|Experto en asesorías y despachos]] · conecta las comunidades 1, 2, 7, 10
 
@@ -60,7 +60,7 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
   Intermediación alta (0.137): es un puente entre temas.
 - ¿Por qué «Registro de decisiones» conecta la comunidad 3 con las comunidades 0, 2, 4, 5?  
   Intermediación alta (0.047): es un puente entre temas.
-- ¿Por qué «Habilidades de los agentes» conecta la comunidad 0 con las comunidades 1, 3, 4, 5?  
+- ¿Por qué «Habilidades de los agentes» conecta la comunidad 0 con las comunidades 1, 4, 5, 6?  
   Intermediación alta (0.043): es un puente entre temas.
 - ¿Se aprueba D-019 · Calidad exigente, todo pasa por un socio y cada rechazo se rehace aprendiendo? Sigue en propuesta y la citan 17 secciones.  
   Una decisión en propuesta que ya sostiene mucho contenido.

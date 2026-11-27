@@ -39,7 +39,7 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 - [[docs/28-auditoria-agentes|Auditoría de agentes y habilidades frente a los procesos (M-040)]] · 64 vecinos
 - [[processes/catalog/P28-gestion-de-incidentes|P28 · Gestión de incidentes]] · 63 vecinos
 - [[knowledge/direccion/ceo-digital|CEO digital]] · 60 vecinos
-- [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]] · 57 vecinos
+- [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]] · 58 vecinos
 - [[knowledge/procesos/arquitecto-procesos|Arquitecto de procesos]] · 50 vecinos
 
 ## Puentes entre temas

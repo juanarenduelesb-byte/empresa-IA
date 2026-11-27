@@ -28,8 +28,8 @@ tags:
 - [[governance/legal/borradores/01-contrato-marco-servicios|Contrato marco de prestación de servicios · BORRADOR PARA ABOGADO]]
 - [[governance/legal/borradores/02-encargo-tratamiento|Contrato de encargo del tratamiento (art. 28 RGPD) · BORRADOR PARA ABOGADO]]
 - [[governance/legal/borradores/04-anexo-uso-ia|Anexo de uso de inteligencia artificial · BORRADOR PARA ABOGADO]]
-- [[governance/legal/borradores/03-acuerdo-confidencialidad|Acuerdo de confidencialidad (mutuo) · BORRADOR PARA ABOGADO]]
 - [[governance/socios/03-preguntas-seguro-rc-y-ciber|M-020 · Preguntas para el corredor: responsabilidad civil profesional y ciberriesgos]]
+- [[governance/legal/borradores/03-acuerdo-confidencialidad|Acuerdo de confidencialidad (mutuo) · BORRADOR PARA ABOGADO]]
 - [[knowledge/plantillas/ficha-fuente|Ficha-fuente]]
 - [[knowledge/metodologias-transversales/investigar|Protocolo: investigar fuera]]
 

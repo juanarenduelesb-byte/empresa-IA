@@ -3,258 +3,239 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Varios · IA que firma contigo</title>
+<title>Varios · IA que se firma</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;800;900&family=Red+Hat+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-/* VOICE: seguro de sí, directo, sin humo; habla a una correduría que teme equivocarse.
-   IDEA: un tablero de operaciones en directo: cada aviso es una celda que cambia de color hasta que una persona la firma.
-   PICTURE: campo de celdas a sangre, de rojo (entra) a amarillo, turquesa y azul (firmado), con su leyenda como barra larga.
-   COLOUR and TYPE: noche #0b1433 en ambos temas; escala #e8452c → #f7e463 → #4fc1c6 → #3b4fd8; Red Hat Display 800 + Red Hat Text.
-   LAYOUT: título a todo el ancho arriba, tablero debajo a sangre; bandas de color planas hasta el pie. */
-:root{color-scheme:dark;--bg:#0b1433;--bg2:#111d45;--line:#25336b;--ink:#eef1fb;--soft:#b8c0e0;--red:#e8452c;--yel:#f7e463;--tea:#4fc1c6;--blu:#3b4fd8;--blu2:#6f82ff}
-:root[data-theme=light]{color-scheme:dark}:root[data-theme=dark]{color-scheme:dark}
+/* VOICE: sereno y preciso, como una ficha de producto; pocas palabras, mucho aire.
+   IDEA: el expediente de siniestro como objeto de cristal: la IA lo rellena, tu equipo lo firma.
+   PICTURE: una tarjeta de expediente flotando sobre una aurora suave, con el botón Aprobar como protagonista.
+   COLOUR and TYPE: porcelana y grafito, un solo índigo eléctrico; Geist en todo, titulares semibold muy prietos.
+   LAYOUT: bloques centrados, tarjetas de cristal con 28 px de radio, una banda oscura para los límites. */
+:root{color-scheme:light dark;
+--bg:light-dark(#f5f5f3,#09090c);--bg2:light-dark(#ffffff,#111116);--ink:light-dark(#111114,#f2f2f5);--soft:light-dark(#5d5f66,#a1a3ad);
+--line:light-dark(rgba(17,17,20,.09),rgba(255,255,255,.09));--glass:light-dark(rgba(255,255,255,.62),rgba(28,28,36,.55));
+--acc:light-dark(#3a3af4,#7c7cff);--acc2:light-dark(#ececff,#1c1c3a);--a1:light-dark(#c9ccff,#2b2b8a);--a2:light-dark(#d7ecf7,#123047);--a3:light-dark(#ffe0d2,#3b1e2c)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
 *{box-sizing:border-box;min-width:0}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 'Red Hat Text',system-ui,sans-serif;overflow-x:clip}
-h1,h2,h3{font-family:'Red Hat Display',system-ui,sans-serif;margin:0;text-wrap:balance}
-h1{font-weight:900;font-size:clamp(40px,7.2vw,104px);line-height:.98;letter-spacing:-.03em}
-h2{font-weight:800;font-size:clamp(32px,4vw,52px);line-height:1.05;letter-spacing:-.02em}
-h3{font-weight:700;font-size:21px;line-height:1.2}
-p{margin:0}a{color:var(--blu2)}
-.wrap{max-width:1240px;margin:0 auto}
-.band{padding:clamp(56px,8vw,120px) max(5vw,16px)}
-.lead{font-size:clamp(17px,1.6vw,20px);color:var(--soft);max-width:62ch}
-.tag{font-weight:600;font-size:14px;color:var(--tea)}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 26px;border-radius:999px;font:700 16px 'Red Hat Display',sans-serif;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .2s,background .2s,color .2s}
-.btn:hover{transform:translateY(-2px)}.btn:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--yel);outline-offset:3px}
-.b1{background:var(--yel);color:#0b1433}.b1:hover{background:#fff}
-.b2{border-color:var(--ink);color:var(--ink);background:none}.b2:hover{background:var(--ink);color:#0b1433}
-nav.top{position:sticky;top:0;z-index:10;background:rgba(11,20,51,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-nav.top .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:10px 28px;padding:12px max(5vw,16px)}
-.logo{display:flex;align-items:center;gap:10px;font:900 24px 'Red Hat Display';letter-spacing:-.03em;color:var(--ink);text-decoration:none}
-.links{display:flex;flex-wrap:wrap;gap:4px 22px;flex:1}.links a{color:var(--soft);text-decoration:none;font-weight:500;font-size:15px}.links a:hover{color:var(--ink)}
-.proto{background:var(--yel);color:#0b1433;text-align:center;font-size:13px;font-weight:600;padding:6px 16px}
-/* tablero */
-.board{position:relative;margin-top:clamp(36px,5vw,64px);background:#091030;border-block:1px solid var(--line)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(38px,1fr));gap:4px;padding:20px max(5vw,16px);min-height:300px}
-.c{aspect-ratio:1;border-radius:5px;background:var(--line);transition:background .6s ease,transform .6s ease}
-.c[data-s="0"]{background:var(--red)}.c[data-s="1"]{background:var(--yel)}.c[data-s="2"]{background:var(--tea)}.c[data-s="3"]{background:var(--blu);transform:scale(.86)}.c[data-s="4"]{background:#1a2758}
-.legend{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));padding:0 max(5vw,16px) 22px;gap:4px}
-.legend div{border-top:6px solid;padding-top:10px;font-size:14px;color:var(--soft)}.legend b{display:block;color:var(--ink);font:700 16px 'Red Hat Display'}
-.count{position:absolute;right:max(5vw,16px);top:-58px;font-size:14px;color:var(--soft);text-align:right}
-.count b{font:800 30px 'Red Hat Display';color:var(--yel);display:block;line-height:1}
-/* comparativa */
-table{width:100%;border-collapse:collapse;font-size:16px}
-th,td{text-align:left;padding:18px 16px;border-bottom:1px solid var(--line);vertical-align:top}
-th{font:700 15px 'Red Hat Display';color:var(--soft)}
-td:first-child{color:var(--soft);font-weight:600;width:22%}
-td.us{color:var(--ink);font-weight:500;background:rgba(79,193,198,.08)}
-td.them{color:#8b94bf;text-decoration:line-through;text-decoration-color:rgba(232,69,44,.7)}
-/* garantía */
-.yel{background:var(--yel);color:#0b1433}.yel .lead{color:#33395a}
-.split{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:40px;border:3px solid #0b1433;border-radius:16px;overflow:hidden}
-.split div{padding:26px;min-height:170px;display:flex;flex-direction:column;justify-content:space-between}
-.split div+div{background:#0b1433;color:var(--yel)}
-.split b{font:900 clamp(40px,6vw,76px)/1 'Red Hat Display'}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 'Geist',-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif;overflow-x:clip;-webkit-font-smoothing:antialiased}
+h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.035em;text-wrap:balance}
+h1{font-size:clamp(46px,8vw,112px);line-height:.98;letter-spacing:-.05em}
+h2{font-size:clamp(34px,4.6vw,60px);line-height:1.04}
+h3{font-size:21px;line-height:1.25;letter-spacing:-.02em}
+p{margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding:0 max(5vw,20px)}
+.sec{padding:clamp(80px,11vw,160px) 0}
+.c{text-align:center}.c .lead{margin-inline:auto}
+.kick{color:var(--acc);font-weight:500;font-size:17px;margin-bottom:14px}
+.lead{color:var(--soft);font-size:clamp(18px,1.7vw,22px);line-height:1.45;max-width:36ch;margin-top:20px;font-weight:400}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 26px;border-radius:999px;font:500 16px 'Geist',sans-serif;text-decoration:none;border:0;cursor:pointer;transition:transform .3s cubic-bezier(.3,1.4,.5,1),background .2s,opacity .2s}
+.btn:hover{transform:scale(1.03)}.btn:active{transform:scale(.98)}
+.bp{background:var(--acc);color:#fff}.bg{background:var(--glass);color:var(--ink);box-shadow:inset 0 0 0 1px var(--line);backdrop-filter:blur(20px)}
+a:focus-visible,.btn:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+/* navegación */
+nav.top{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:20;width:min(1100px,calc(100% - 28px));display:flex;align-items:center;gap:10px 26px;padding:8px 8px 8px 20px;border-radius:999px;background:var(--glass);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);box-shadow:inset 0 0 0 1px var(--line),0 10px 30px rgba(0,0,0,.06)}
+.logo{display:flex;align-items:center;gap:9px;color:var(--ink);text-decoration:none;font-weight:600;font-size:19px;letter-spacing:-.03em}
+.links{display:flex;gap:24px;flex:1;justify-content:center}.links a{color:var(--soft);text-decoration:none;font-size:15px}.links a:hover{color:var(--ink)}
+nav .btn{min-height:40px;padding:0 18px;font-size:15px}
+/* aurora */
+.aurora{position:absolute;inset:-10% -10% auto;height:120%;z-index:-1;overflow:hidden;pointer-events:none}
+.aurora i{position:absolute;border-radius:50%;filter:blur(90px);opacity:.9;animation:drift 26s ease-in-out infinite alternate}
+.aurora i:nth-child(1){width:52vw;height:52vw;left:-8vw;top:4%;background:var(--a1)}
+.aurora i:nth-child(2){width:46vw;height:46vw;right:-6vw;top:12%;background:var(--a2);animation-duration:32s}
+.aurora i:nth-child(3){width:34vw;height:34vw;left:34vw;top:46%;background:var(--a3);animation-duration:38s}
+@keyframes drift{to{transform:translate3d(4vw,-3vw,0) scale(1.08)}}
+/* héroe */
+.hero{position:relative;isolation:isolate;padding:clamp(150px,18vw,210px) 0 clamp(70px,9vw,120px);text-align:center}
+.hero .lead{margin-inline:auto;max-width:40ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:36px}
+.device{margin:clamp(56px,7vw,90px) auto 0;max-width:820px;perspective:1600px}
+.case{background:var(--glass);backdrop-filter:blur(30px) saturate(170%);-webkit-backdrop-filter:blur(30px) saturate(170%);border-radius:32px;box-shadow:inset 0 1px 0 rgba(255,255,255,.6),inset 0 0 0 1px var(--line),0 40px 80px -20px rgba(30,30,80,.25);padding:clamp(20px,3vw,32px);text-align:left;transform:rotateX(8deg);transform-origin:50% 0;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.device.on .case{transform:none}
+.case-h{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;align-items:center;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.pill{display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;background:var(--acc2);color:var(--acc);font-size:13px;font-weight:500}
+.dot{width:7px;height:7px;border-radius:50%;background:currentColor}
+.rows{display:grid;gap:4px;margin-top:14px}
+.row{display:grid;grid-template-columns:110px minmax(0,1fr) auto;gap:16px;align-items:center;padding:14px 16px;border-radius:18px}
+.row:nth-child(odd){background:var(--bg2)}
+.row small{color:var(--soft);font-size:14px}.row span{font-size:15px}.row em{font-style:normal;font-size:13px;color:var(--soft);white-space:nowrap}
+.ok{color:#1f9d55}.warn{color:#c2410c}
+.case-f{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-top:18px;padding-top:18px;border-top:1px solid var(--line)}
+.case-f p{color:var(--soft);font-size:14px}
+.sample{margin-top:16px;color:var(--soft);font-size:13px}
+/* frase */
+.say{font-size:clamp(34px,5.4vw,72px);line-height:1.08;font-weight:600;letter-spacing:-.045em;max-width:18ch;margin:0 auto;text-align:center}
+.say span{color:var(--soft);opacity:.35;transition:opacity .6s,color .6s}.say span.lit{opacity:1;color:var(--ink)}
+/* tarjetas */
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px;margin-top:56px}
+.card{background:var(--bg2);border-radius:28px;padding:34px 30px;box-shadow:inset 0 0 0 1px var(--line)}
+.card p{color:var(--soft);margin-top:10px;font-size:16px}
+.ico{width:46px;height:46px;border-radius:14px;background:var(--acc2);color:var(--acc);display:grid;place-items:center;margin-bottom:22px}
+/* pago */
+.pay{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:56px}
+.half{border-radius:32px;padding:clamp(28px,4vw,48px);min-height:300px;display:flex;flex-direction:column;justify-content:space-between;background:var(--bg2);box-shadow:inset 0 0 0 1px var(--line)}
+.half.b{background:var(--acc);color:#fff;box-shadow:none}.half.b p{color:rgba(255,255,255,.8)}
+.big{font-size:clamp(72px,11vw,150px);font-weight:600;letter-spacing:-.06em;line-height:.9}
+.half p{color:var(--soft);font-size:17px;max-width:30ch}
 /* fases */
-.phases{display:grid;grid-template-columns:3fr 2fr 6fr 3fr;gap:6px;margin-top:44px}
-.ph{border-top:10px solid;padding:18px 18px 0 0}.ph small{font-weight:600;color:var(--soft)}.ph h3{font-size:26px;margin:6px 0 10px}.ph p{color:var(--soft);font-size:15px}.ph .d{margin-top:14px;font-weight:600;font-size:14px;color:var(--ink)}
-/* nunca */
-.never{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:0 40px;margin-top:40px}
-.never li{list-style:none;font:800 clamp(24px,2.6vw,34px)/1.2 'Red Hat Display';padding:16px 0;border-bottom:1px solid var(--line);position:relative}
-.never li::after{content:"";position:absolute;left:0;top:50%;height:4px;width:0;background:var(--red);transition:width .8s cubic-bezier(.7,0,.2,1)}
-.never.on li::after{width:100%}.never.on li:nth-child(2)::after{transition-delay:.12s}.never.on li:nth-child(3)::after{transition-delay:.24s}.never.on li:nth-child(4)::after{transition-delay:.36s}.never.on li:nth-child(5)::after{transition-delay:.48s}.never.on li:nth-child(6)::after{transition-delay:.6s}
-.tea{background:var(--tea);color:#0b1433}.tea .lead,.tea .tag{color:#173a40}
-.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(28px,4vw,56px)}
-.steps{margin:28px 0 0;padding:0;list-style:none;counter-reset:s}
-.steps li{padding:18px 0 18px 56px;border-top:2px solid rgba(11,20,51,.2);position:relative;counter-increment:s}
-.steps li::before{content:counter(s);position:absolute;left:0;top:14px;width:38px;height:38px;border-radius:50%;background:#0b1433;color:var(--tea);display:grid;place-items:center;font:800 17px 'Red Hat Display'}
-.exc{background:#0b1433;color:var(--ink);border-radius:20px;padding:32px}.exc ul{margin:16px 0 0;padding:0;list-style:none}.exc li{padding:11px 0 11px 22px;border-bottom:1px solid var(--line);position:relative}.exc li::before{content:"";position:absolute;left:0;top:20px;width:10px;height:10px;border-radius:2px;background:var(--red)}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:14px;margin-top:40px}
-.card{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:26px}.card p{color:var(--soft);margin-top:8px;font-size:15px}
-.hole{font:800 24px 'Red Hat Display';color:var(--yel);margin-top:8px}
-.note{display:inline-block;margin-top:14px;font-size:13px;font-weight:600;color:#0b1433;background:var(--yel);padding:4px 10px;border-radius:6px}
-form{display:grid;gap:16px;background:var(--ink);color:#0b1433;border-radius:22px;padding:clamp(22px,3vw,36px)}
-label{display:grid;gap:6px;font-weight:600;font-size:15px}
-input,textarea{font:16px 'Red Hat Text';min-height:48px;border:2px solid #c3c9e4;border-radius:12px;padding:10px 14px;background:#fff;color:#0b1433}
-.ok{font-weight:600;color:#1d6b70;min-height:1.5em}
-footer{border-top:1px solid var(--line);padding:36px max(5vw,16px);color:var(--soft);font-size:14px}
-footer .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:space-between;align-items:center}footer a{color:var(--soft)}
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}.reveal.on{opacity:1;transform:none}
-@media(max-width:820px){.phases{grid-template-columns:repeat(2,minmax(0,1fr))}.legend{grid-template-columns:repeat(2,minmax(0,1fr))}.count{position:static;text-align:left;padding:16px max(5vw,16px) 0}}
-@media(max-width:600px){.links{display:none}.split{grid-template-columns:1fr}.grid{grid-template-columns:repeat(auto-fill,minmax(26px,1fr));min-height:200px}table{font-size:14px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px;border-bottom:1px solid var(--line)}.stack td{display:flow-root;border:0;padding:3px 0;padding-inline-start:8em}.stack td::before{content:attr(data-l);float:inline-start;width:7.5em;margin-inline-start:-8em;white-space:normal;color:var(--soft);text-decoration:none;font-weight:600}td:first-child{width:auto}}
-@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}.reveal{opacity:1;transform:none}.never li::after{width:100%}}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:56px}
+.step{background:var(--bg2);border-radius:26px;padding:28px 24px;box-shadow:inset 0 0 0 1px var(--line);display:flex;flex-direction:column;gap:10px}
+.step small{color:var(--acc);font-weight:500;font-size:14px}.step p{color:var(--soft);font-size:15px}
+.step b{margin-top:auto;padding-top:14px;border-top:1px solid var(--line);font-weight:500;font-size:14px}
+/* oscuro */
+.dark{background:#09090c;color:#f2f2f5;border-radius:44px;margin:0 max(2vw,10px);position:relative;overflow:hidden;isolation:isolate}
+.dark::before{content:"";position:absolute;width:60%;height:70%;left:20%;top:-30%;background:radial-gradient(closest-side,rgba(124,124,255,.35),transparent);z-index:-1;filter:blur(40px)}
+.dark .lead{color:#a1a3ad}
+.never{list-style:none;padding:0;margin:56px auto 0;max-width:880px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.never li{display:flex;align-items:center;gap:14px;padding:20px 22px;border-radius:22px;background:rgba(255,255,255,.05);box-shadow:inset 0 0 0 1px rgba(255,255,255,.08);font-size:18px;font-weight:500}
+.never svg{flex:none;color:#ff6b6b}
+/* seguros */
+.split{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:56px}
+.list{list-style:none;padding:0;margin:18px 0 0}.list li{padding:14px 0;border-top:1px solid var(--line);color:var(--soft);font-size:16px}.list li b{color:var(--ink);font-weight:500}
+.tagline{display:inline-block;margin-top:18px;font-size:13px;color:var(--soft);padding:6px 12px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--line)}
+/* contacto */
+.contact{position:relative;isolation:isolate;overflow:hidden}
+form{display:grid;gap:14px;max-width:560px;margin:48px auto 0;background:var(--glass);backdrop-filter:blur(30px);-webkit-backdrop-filter:blur(30px);border-radius:32px;padding:clamp(22px,3vw,34px);box-shadow:inset 0 0 0 1px var(--line),0 30px 60px -30px rgba(30,30,80,.25);text-align:left}
+label{display:grid;gap:7px;font-size:14px;font-weight:500;color:var(--soft)}
+input,textarea{font:16px 'Geist',sans-serif;min-height:50px;border:0;border-radius:14px;padding:12px 16px;background:var(--bg2);color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
+.msg{min-height:1.4em;font-size:14px;color:var(--acc);text-align:center}
+footer{padding:48px 0 60px;color:var(--soft);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px 30px;justify-content:space-between;border-top:1px solid var(--line);padding-top:28px}
+.proto{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);z-index:20;font-size:12px;color:var(--soft);background:var(--glass);backdrop-filter:blur(20px);padding:6px 14px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--line);white-space:nowrap}
+.fade{opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.2,.8,.2,1),transform 1s cubic-bezier(.2,.8,.2,1)}.fade.on{opacity:1;transform:none}
+@media(max-width:900px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.links{display:none}nav.top{justify-content:space-between}}
+@media(max-width:640px){.pay,.split,.never{grid-template-columns:1fr}.row{grid-template-columns:1fr auto}.row small{grid-column:1/-1}.steps{grid-template-columns:1fr}.proto{white-space:normal;width:calc(100% - 28px);text-align:center}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.fade{opacity:1;transform:none}.case{transform:none}.say span{opacity:1;color:var(--ink)}}
 </style>
-<script>new MutationObserver(()=>{for(const c of document.querySelectorAll('.stack td:not([data-l])')){let i=0,p=c;while(p=p.previousElementSibling)i+=p.colSpan;c.dataset.l=c.closest('table').rows[0].cells[i]?.textContent||''}}).observe(document,{childList:true,subtree:true})</script>
 </head>
 <body>
-<div class="proto">Prototipo · marca provisional · el caso de referencia y el tablero usan datos inventados</div>
-<nav class="top" aria-label="Principal"><div class="wrap">
-<a class="logo" href="#inicio"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="7" fill="#3b4fd8"/><path d="M7 14.5l4.5 4.5L21 9" fill="none" stroke="#f7e463" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>varios</a>
-<div class="links"><a href="#diferente">Por qué nosotros</a><a href="#fases">Cómo trabajamos</a><a href="#seguros">Seguros</a><a href="#caso">Caso</a><a href="#seguridad">Seguridad</a></div>
-<a class="btn b1" href="#contacto">Pedir un diagnóstico</a>
-</div></nav>
+<nav class="top" aria-label="Principal">
+<a class="logo" href="#inicio"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="7" fill="currentColor"/><path d="M6.5 12.4l3.6 3.6L17.5 8.5" fill="none" stroke="var(--bg)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Varios</a>
+<div class="links"><a href="#como">Cómo funciona</a><a href="#pago">Garantía</a><a href="#seguros">Seguros</a><a href="#seguridad">Seguridad</a></div>
+<a class="btn bp" href="#contacto">Hablemos</a>
+</nav>
 
-<header id="inicio">
-<div class="band wrap" style="padding-bottom:0">
-<p class="tag">IA aplicada a la apertura de siniestros, para corredurías</p>
-<h1 style="margin-top:18px;max-width:14ch">La mitad del piloto solo se cobra si funciona.</h1>
-<div style="display:flex;flex-wrap:wrap;gap:24px 48px;align-items:flex-end;justify-content:space-between;margin-top:28px">
-<p class="lead">La IA lee el aviso, extrae los datos y prepara el parte. El código aplica plazos y reglas. Una persona de tu equipo firma. Y si no llegamos a la métrica que firmamos juntos, no cobramos la segunda mitad.</p>
-<div style="display:flex;flex-wrap:wrap;gap:12px"><a class="btn b1" href="#contacto">Pedir un diagnóstico de 3 semanas</a><a class="btn b2" href="#diferente">Qué nos hace distintos</a></div>
+<header class="hero" id="inicio">
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+<div class="wrap">
+<p class="kick">Para corredurías de seguros</p>
+<h1>Inteligencia<br>que se firma.</h1>
+<p class="lead">La IA prepara cada siniestro. Tu equipo lo aprueba con un toque. Y solo pagas el piloto entero si funciona.</p>
+<div class="cta"><a class="btn bp" href="#contacto">Pedir un diagnóstico</a><a class="btn bg" href="#como">Ver cómo funciona</a></div>
+<div class="device" id="device">
+<div class="case" role="img" aria-label="Ejemplo de expediente de siniestro preparado por la IA y pendiente de aprobación">
+<div class="case-h"><div><h3>Daños por agua · Hogar</h3><p style="color:var(--soft);font-size:14px;margin-top:4px">Aviso recibido por correo</p></div><span class="pill"><span class="dot"></span>Listo para tu firma</span></div>
+<div class="rows">
+<div class="row"><small>Póliza</small><span>Identificada y vigente</span><em class="ok">Comprobado</em></div>
+<div class="row"><small>Plazo de aviso</small><span>Dentro de plazo</span><em class="ok">Regla</em></div>
+<div class="row"><small>Datos</small><span>Fecha, lugar y descripción extraídos</span><em>IA</em></div>
+<div class="row"><small>Falta</small><span>Fotos de los daños y factura del fontanero</span><em class="warn">Petición redactada</em></div>
+<div class="row"><small>Parte</small><span>Borrador listo para el portal de la aseguradora</span><em>IA</em></div>
 </div>
+<div class="case-f"><p>Nada sale sin la aprobación de una persona.</p><span class="btn bp" style="min-height:44px">Aprobar y enviar</span></div>
 </div>
-<div class="board" aria-label="Tablero simulado: avisos de siniestro pasando por cada etapa hasta que una persona los firma">
-<div class="count" aria-live="off"><b id="nSig">0</b>firmados por una persona en esta simulación</div>
-<div class="grid" id="grid"></div>
-<div class="legend">
-<div style="border-color:var(--red)"><b>Entra el aviso</b>Correo, WhatsApp, teléfono o formulario</div>
-<div style="border-color:var(--yel)"><b>La IA extrae</b>Póliza, cliente, fecha y lo que falta</div>
-<div style="border-color:var(--tea)"><b>La regla comprueba</b>Vigencia, plazos y excepciones</div>
-<div style="border-color:var(--blu)"><b>Una persona firma</b>Nada sale sin su visto bueno</div>
+<p class="sample">Expediente de ejemplo, con datos inventados.</p>
 </div>
 </div>
 </header>
 
-<section id="diferente" class="band"><div class="wrap">
-<p class="tag">Por qué nosotros</p>
-<h2 style="margin-top:12px;max-width:20ch">Otros venden inteligencia artificial. Nosotros vendemos un proceso que funciona.</h2>
-<div class="scroll" style="margin-top:40px"><table class="stack">
-<thead><tr><th></th><th>Lo habitual</th><th>Con nosotros</th></tr></thead>
-<tbody>
-<tr><td>Qué compras</td><td class="them">Una «transformación» o una plataforma que adaptar</td><td class="us">Un proceso concreto rediseñado y funcionando: la apertura de siniestros</td></tr>
-<tr><td>Cuándo pagas</td><td class="them">Todo, salga como salga</td><td class="us">La mitad del piloto al empezar y la otra mitad solo si se cumple la métrica firmada</td></tr>
-<tr><td>Quién decide</td><td class="them">El modelo, a veces sin que nadie lo vea</td><td class="us">Una persona de tu equipo aprueba todo lo que sale fuera</td></tr>
-<tr><td>Cómo se mide</td><td class="them">Con promesas y demos</td><td class="us">Con una línea base medida antes de empezar y un umbral acordado</td></tr>
-<tr><td>Quién lo hace</td><td class="them">Un comercial vende y otro equipo ejecuta</td><td class="us">Los dos socios que te lo venden son los que lo construyen</td></tr>
-<tr><td>Tu sector</td><td class="them">Cualquiera, con el mismo discurso</td><td class="us">Seguros: parte, libro de siniestros, Consorcio, convenios</td></tr>
-</tbody></table></div>
-</div></section>
-
-<section class="band yel"><div class="wrap">
-<p class="tag" style="color:#33395a">La garantía</p>
-<h2 style="margin-top:12px;max-width:22ch">Si el piloto no cumple la métrica, no pagas la segunda mitad.</h2>
-<p class="lead" style="margin-top:18px">La métrica se firma en la fase de diseño, con la línea base medida en tu correduría. Sin letra pequeña: o se cumple o no.</p>
-<div class="split reveal">
-<div><span style="font-weight:700">Al empezar el piloto</span><b>50 %</b><span>Para construirlo en producción limitada.</span></div>
-<div><span style="font-weight:700">Solo si se cumple la métrica</span><b>50 %</b><span>Si no se alcanza el umbral firmado, no se cobra.</span></div>
+<section class="sec" id="como"><div class="wrap">
+<p class="say" id="say"><span>La IA lee.</span> <span>El código comprueba.</span> <span>Tu equipo decide.</span></p>
+<div class="grid3">
+<div class="card fade"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h10M4 18h7"/></svg></div><h3>Lee cada aviso</h3><p>Correo, WhatsApp, teléfono o formulario. Identifica póliza y cliente, extrae los datos y detecta lo que falta.</p></div>
+<div class="card fade"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg></div><h3>Aplica tus reglas</h3><p>Vigencia, plazos y excepciones los comprueba código fijo, siempre igual. La IA no se inventa una norma.</p></div>
+<div class="card fade"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c1.2-3.5 4-5 7-5s5.8 1.5 7 5"/></svg></div><h3>Tú firmas</h3><p>Parte, petición de documentación o respuesta al cliente: todo llega preparado y nada sale sin tu aprobación.</p></div>
 </div>
 </div></section>
 
-<section id="fases" class="band"><div class="wrap">
-<p class="tag">Cómo trabajamos</p>
-<h2 style="margin-top:12px;max-width:22ch">Cuatro fases. Al final de cada una decides tú.</h2>
-<p class="lead" style="margin-top:18px">Precio cerrado por fase. El ancho de cada fase es su duración.</p>
-<div class="phases reveal">
-<div class="ph" style="border-color:var(--red)"><small>3 semanas</small><h3>Diagnosticar</h3><p>Medimos el proceso actual y puntuamos dónde aporta la IA y con qué riesgo.</p><p class="d">Decides qué pasa a diseño</p></div>
-<div class="ph" style="border-color:var(--yel)"><small>2 semanas</small><h3>Diseñar</h3><p>Proceso nuevo, controles y la métrica firmada.</p><p class="d">Firmas la métrica</p></div>
-<div class="ph" style="border-color:var(--tea)"><small>4 a 8 semanas</small><h3>Construir el piloto</h3><p>En producción limitada, con pruebas y registro de todo. La segunda mitad, solo si se cumple la métrica.</p><p class="d">Escalar, ajustar o parar</p></div>
-<div class="ph" style="border-color:var(--blu)"><small>Continua</small><h3>Operar</h3><p>Seguimiento, mejoras e informe mensual, con cuota.</p><p class="d">Revisión trimestral</p></div>
-</div>
-<div class="cards">
-<div class="card"><h3>Una persona que conozca el proceso</h3><p>Y una hora a la semana para validar lo que hacemos.</p></div>
-<div class="card"><h3>Ejemplos del trabajo real</h3><p>Anonimizados o en tus instalaciones. Hasta el piloto, trabajamos con datos inventados.</p></div>
-<div class="card"><h3>Alguien que decida</h3><p>Al final de cada fase, con un sí, un ajuste o un no.</p></div>
+<section class="sec" id="pago" style="padding-top:0"><div class="wrap c">
+<p class="kick">Garantía</p>
+<h2>Pagas por resultados.<br>No por promesas.</h2>
+<p class="lead">Antes de construir nada, medimos tu proceso y firmamos juntos una métrica. El piloto se paga en dos mitades.</p>
+<div class="pay">
+<div class="half fade" style="text-align:left"><span style="font-weight:500">Al empezar</span><div class="big">50 %</div><p>Construimos el piloto en tu correduría, en producción limitada.</p></div>
+<div class="half b fade" style="text-align:left"><span style="font-weight:500">Solo si funciona</span><div class="big">50 %</div><p>Si no se alcanza la métrica firmada, la segunda mitad no se paga.</p></div>
 </div>
 </div></section>
 
-<section class="band" style="background:var(--bg2);border-block:1px solid var(--line)"><div class="wrap">
-<p class="tag">Límites escritos en el contrato</p>
-<h2 style="margin-top:12px;max-width:20ch">Lo que la IA no decide nunca.</h2>
-<ul class="never" id="never" style="padding:0">
-<li>Si hay cobertura</li><li>Quién tiene la culpa</li><li>Si hay fraude</li><li>Cuánto se paga</li><li>Rechazar un siniestro</li><li>Enviar algo sin tu visto bueno</li>
+<section class="sec" style="padding-top:0"><div class="wrap c">
+<p class="kick">El camino</p>
+<h2>Empieza pequeño. Crece con datos.</h2>
+<p class="lead">Cuatro fases con precio cerrado. Al final de cada una decides si seguimos.</p>
+<div class="steps" style="text-align:left">
+<div class="step fade"><small>3 semanas</small><h3>Diagnóstico</h3><p>Medimos el proceso y dónde aporta la IA, con su riesgo.</p><b>Decides qué se diseña</b></div>
+<div class="step fade"><small>2 semanas</small><h3>Diseño</h3><p>Proceso nuevo, controles y la métrica que firmamos.</p><b>Firmas la métrica</b></div>
+<div class="step fade"><small>4 a 8 semanas</small><h3>Piloto</h3><p>Funcionando con tu equipo, en producción limitada.</p><b>Escalar, ajustar o parar</b></div>
+<div class="step fade"><small>Continua</small><h3>Operación</h3><p>Seguimiento, mejoras e informe cada mes.</p><b>Revisión trimestral</b></div>
+</div>
+</div></section>
+
+<section class="sec dark"><div class="wrap c">
+<p class="kick" style="color:#9c9cff">Límites por contrato</p>
+<h2>Lo que la IA no hará nunca.</h2>
+<p class="lead">Escrito en el contrato, no en una presentación.</p>
+<ul class="never" style="text-align:left">
+<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Decidir si hay cobertura</li>
+<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Decidir quién tiene la culpa</li>
+<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Calificar un fraude</li>
+<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Fijar cuánto se paga</li>
+<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Rechazar un siniestro</li>
+<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Enviar algo sin tu aprobación</li>
 </ul>
-<p class="lead" style="margin-top:28px">El código fijo aplica plazos y reglas. La IA lee, extrae y redacta. Lo demás lo decide una persona.</p>
 </div></section>
 
-<section id="seguros" class="band tea"><div class="wrap cols">
-<div>
-<p class="tag">Seguros y corredurías</p>
-<h2 style="margin-top:12px">Un sector. Un proceso. Hasta el fondo.</h2>
-<p class="lead" style="margin-top:16px">Empezamos solo por seguros para conocerlo de verdad, y por la apertura de siniestros, porque es donde más se repite el trabajo.</p>
-<ol class="steps">
-<li><b>Recepción en cualquier canal.</b> Identificamos póliza y cliente y detectamos lo que falta.</li>
-<li><b>Borrador del parte</b>, prellenado para el portal de cada aseguradora. Lo envía una persona.</li>
-<li><b>Petición de documentación</b> con la lista exacta de lo que falta. La aprueba una persona.</li>
-<li><b>Libro de siniestros al día</b>, con cada fecha anotada en cuanto se conoce.</li>
-</ol>
+<section class="sec" id="seguros"><div class="wrap c">
+<p class="kick">Especialistas</p>
+<h2>Solo seguros.<br>Por eso lo hacemos bien.</h2>
+<p class="lead">Hablamos tu idioma: parte, libro de siniestros, Consorcio, convenios entre aseguradoras.</p>
+<div class="split" style="text-align:left">
+<div class="card fade"><h3>Lo que prepara por ti</h3><ul class="list"><li><b>Recepción</b> en cualquier canal, con póliza y cliente identificados</li><li><b>Borrador del parte</b> para el portal de cada aseguradora</li><li><b>Petición de documentación</b> con la lista exacta de lo que falta</li><li><b>Libro de siniestros</b> al día, fecha a fecha</li></ul></div>
+<div class="card fade"><h3>Lo que siempre pasa a una persona</h3><ul class="list"><li>Riesgos extraordinarios, con posible vía Consorcio</li><li>Daños personales o fallecimiento</li><li>Un tercero que reclama</li><li>Pólizas no vigentes o recibos pendientes</li><li>Un cliente que pide hablar con alguien</li></ul></div>
 </div>
-<div class="exc" style="align-self:start">
-<h3 style="font-size:26px">Siempre pasan a una persona</h3>
-<ul><li>Riesgos extraordinarios, con posible vía Consorcio</li><li>Daños personales o fallecimiento</li><li>Un tercero que reclama</li><li>Pólizas no vigentes o recibos pendientes</li><li>Incoherencias en fechas o documentos</li><li>Un cliente que pide hablar con una persona</li></ul>
-<p style="margin-top:18px;font-size:14px;color:var(--soft)">No somos mediadores de seguros ni damos asesoramiento jurídico.</p>
-</div>
+<span class="tagline">No somos mediadores de seguros ni damos asesoramiento jurídico.</span>
 </div></section>
 
-<section id="caso" class="band"><div class="wrap">
-<p class="tag">Caso de referencia</p>
-<h2 style="margin-top:12px;max-width:22ch">Correduría Atalaya: así sería tu diagnóstico.</h2>
-<span class="note">Correduría inventada · ningún dato es real</span>
-<p class="lead" style="margin-top:18px">Todavía no tenemos clientes que enseñar, así que no inventamos resultados. Los números se miden en la primera fase.</p>
-<div class="cards">
-<div class="card"><h3>Qué medimos</h3><p>Del aviso al parte registrado, trabajo activo frente a espera y partes que hay que rehacer.</p></div>
-<div class="card"><h3>Línea base</h3><div class="hole">Se mide en el diagnóstico</div><p>Con los registros y entrevistas de la correduría.</p></div>
-<div class="card"><h3>Métrica firmada</h3><div class="hole">Se acuerda en el diseño</div><p>Si el piloto no la alcanza, no se cobra la segunda mitad.</p></div>
-<div class="card"><h3>Probado antes de tocar nada real</h3><p>Con 20 siniestros inventados, cada uno con su resultado esperado.</p></div>
+<section class="sec" id="seguridad" style="padding-top:0"><div class="wrap c">
+<p class="kick">Privacidad y seguridad</p>
+<h2>Tus datos son tuyos.<br>Y se quedan contigo.</h2>
+<div class="grid3" style="text-align:left">
+<div class="card fade"><h3>Separados por cliente</h3><p>Cada correduría ve solo lo suyo, garantizado en la propia base de datos y probado.</p></div>
+<div class="card fade"><h3>Sin entrenar con ellos</h3><p>Nunca usamos tus datos para entrenar modelos, ni para nosotros ni para nadie.</p></div>
+<div class="card fade"><h3>Todo queda registrado</h3><p>Quién hizo qué y quién lo aprobó, en un registro que no se puede borrar.</p></div>
+<div class="card fade"><h3>Nadie se aprueba a sí mismo</h3><p>Quien prepara algo no puede firmarlo. Ni una persona ni la IA.</p></div>
+<div class="card fade"><h3>Reglamento Europeo de IA</h3><p>Te damos por escrito qué sistema es y qué obligaciones tiene cada uno.</p></div>
+<div class="card fade"><h3>Datos reales, solo con contrato</h3><p>Hasta el piloto trabajamos con datos inventados o agregados.</p></div>
 </div>
 </div></section>
 
-<section id="seguridad" class="band" style="background:var(--bg2);border-block:1px solid var(--line)"><div class="wrap">
-<p class="tag">Seguridad y cumplimiento</p>
-<h2 style="margin-top:12px;max-width:22ch">Desde el primer día. Y sin sellos que no tenemos.</h2>
-<div class="cards">
-<div class="card"><h3>Una persona aprueba</h3><p>Nada sale, se paga o se firma sin alguien de tu equipo. Nadie aprueba su propio trabajo.</p></div>
-<div class="card"><h3>Tus datos, separados</h3><p>Cada cliente ve solo lo suyo, garantizado en la propia base de datos y probado.</p></div>
-<div class="card"><h3>Todo queda registrado</h3><p>Quién hizo qué y qué se aprobó, en un registro que no se puede modificar.</p></div>
-<div class="card"><h3>Datos inventados hasta el piloto</h3><p>Los datos reales llegan solo con el contrato de encargo firmado.</p></div>
-<div class="card"><h3>Reglamento Europeo de IA</h3><p>Te decimos por escrito qué sistema es, qué papel tiene cada uno y qué obligaciones aplican.</p></div>
-<div class="card"><h3>No entrenamos con tus datos</h3><p>Ni para nosotros ni para otros clientes.</p></div>
-</div>
-</div></section>
-
-<section class="band"><div class="wrap cols" style="align-items:center">
-<div><p class="tag">Nosotros</p><h2 style="margin-top:12px">Dos socios. Pequeños a propósito.</h2><p class="lead" style="margin-top:16px">Quien te vende el proyecto es quien lo construye y lo opera. Uno lleva el producto y la construcción; el otro, los clientes y la relación.</p></div>
-<div class="cards" style="margin-top:0">
-<div class="card"><h3>Juan</h3><p>Producto y construcción.</p><p style="font-size:13px">Biografía pendiente de los socios.</p></div>
-<div class="card"><h3>Álvaro</h3><p>Clientes y relación.</p><p style="font-size:13px">Biografía pendiente de los socios.</p></div>
-</div>
-</div></section>
-
-<section id="contacto" class="band" style="background:var(--blu)"><div class="wrap cols" style="align-items:center">
-<div><p class="tag" style="color:var(--yel)">Pedir un diagnóstico</p><h2 style="margin-top:12px;font-size:clamp(36px,5vw,64px)">¿Qué proceso te quita más tiempo?</h2><p class="lead" style="margin-top:18px;color:#dfe4ff">Cuéntanoslo y te proponemos una primera conversación de 30 minutos, sin compromiso.</p></div>
+<section class="sec contact" id="contacto">
+<div class="aurora" aria-hidden="true" style="top:10%"><i></i><i></i><i></i></div>
+<div class="wrap c">
+<h2>Empieza por un diagnóstico.</h2>
+<p class="lead">Tres semanas para saber dónde te ahorra tiempo la IA y con qué riesgo. Después decides.</p>
 <form id="f" novalidate>
 <label for="n">Nombre<input id="n" name="n" autocomplete="name"></label>
 <label for="e">Correo de trabajo<input id="e" name="e" type="email" autocomplete="email"></label>
-<label for="c">Correduría o empresa<input id="c" name="c" autocomplete="organization"></label>
-<label for="m">¿Qué proceso quieres mejorar?<textarea id="m" name="m" rows="3"></textarea></label>
-<p style="font-size:13px;color:#4a5175">No incluyas datos de tus clientes. Responsable y política de privacidad: pendientes de la forma jurídica.</p>
-<button class="btn" style="background:#0b1433;color:var(--yel);justify-self:start" type="submit">Enviar</button>
-<p class="ok" id="ok" role="status"></p>
+<label for="c">Correduría<input id="c" name="c" autocomplete="organization"></label>
+<label for="m">¿Qué proceso te quita más tiempo?<textarea id="m" name="m" rows="3"></textarea></label>
+<button class="btn bp" type="submit" style="width:100%;margin-top:6px">Solicitar diagnóstico</button>
+<p class="msg" id="msg" role="status"></p>
 </form>
 </div></section>
 
-<footer><div class="wrap">
-<a class="logo" href="#inicio" style="font-size:20px">varios</a>
-<span>Aviso legal, privacidad y cookies: pendientes de la forma jurídica. Esta web no usa cookies de seguimiento.</span>
-<span>© 2026 · prototipo</span>
-</div></footer>
+<footer><div class="wrap"><span>Varios · Consultora de IA para seguros</span><span>Aviso legal, privacidad y cookies: pendientes de la forma jurídica</span><span>© 2026</span></div></footer>
+<p class="proto">Prototipo · nombre provisional · ejemplos con datos inventados</p>
 
 <script>
 {
-const grid=document.getElementById('grid'),nSig=document.getElementById('nSig');
 const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
-let cells=[],signed=0;
-const build=()=>{const w=grid.clientWidth,size=innerWidth<600?30:42,cols=Math.max(6,Math.floor(w/size)),rows=innerWidth<600?6:7;const n=cols*rows;
-grid.innerHTML=Array.from({length:n},()=>'<div class="c" data-s="4"></div>').join('');cells=[...grid.children];
-cells.forEach(c=>{const r=Math.random();c.dataset.s=r<.12?'0':r<.22?'1':r<.32?'2':r<.5?'3':'4'});};
-build();let t;addEventListener('resize',()=>{clearTimeout(t);t=setTimeout(build,250)});
-const tick=()=>{if(!cells.length)return;for(let k=0;k<Math.max(3,cells.length/40);k++){const c=cells[Math.floor(Math.random()*cells.length)],s=+c.dataset.s;
-if(s===4){c.dataset.s='0'}else if(s===3){c.dataset.s='4'}else{c.dataset.s=String(s+1);if(s===2){signed++;nSig.textContent=signed.toLocaleString('es-ES')}}}};
-if(!rm)setInterval(tick,420);else{signed=cells.filter(c=>c.dataset.s==='3').length;nSig.textContent=signed}
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.3});
-document.querySelectorAll('.reveal,#never').forEach(el=>io.observe(el));
-document.getElementById('f').addEventListener('submit',ev=>{ev.preventDefault();document.getElementById('ok').textContent='Es un prototipo: el mensaje no se ha enviado.'});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.2});
+document.querySelectorAll('.fade,#device').forEach((el,i)=>{el.style.transitionDelay=(el.classList.contains('fade')?(i%3)*90:0)+'ms';io.observe(el)});
+const parts=[...document.querySelectorAll('#say span')];
+const light=()=>{const r=document.getElementById('say').getBoundingClientRect(),h=innerHeight;const p=Math.min(1,Math.max(0,(h*.85-r.top)/(h*.5)));parts.forEach((s,i)=>s.classList.toggle('lit',rm||p>i/parts.length+.05))};
+addEventListener('scroll',light,{passive:true});light();
+document.getElementById('f').addEventListener('submit',ev=>{ev.preventDefault();document.getElementById('msg').textContent='Es un prototipo: la solicitud no se ha enviado.'});
 }
 </script>
 </body>

@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 3
-miembros: 93
+miembros: 89
 cohesion: 0.09
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 3 · docs · Registro de decisiones y Trabajo nocturno de Claude
 
-93 nodos agrupados por el algoritmo de Louvain. Cohesión 0.09.
+89 nodos agrupados por el algoritmo de Louvain. Cohesión 0.09.
 
 ## Documentos
 
@@ -21,6 +21,7 @@ tags:
 - [[docs/fuentes/Atlas_Evolucion_v1.1_Modelo_Operativo_Procesos_y_Despliegue|Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue]]
 - [[docs/17-cerebro-y-procesos|17 · Cerebro, conocimiento y procesos: auditoría e informe]]
 - [[README|Varios — repositorio maestro]]
+- [[docs/24-base-de-datos|Base de datos (D-023, propuesta)]]
 - [[docs/10-plan-12-semanas|Plan de construcción · 18/11/2026 → 12/02/2027]]
 - [[docs/22-plan-hasta-febrero|Plan de trabajo diario · 26/11/2026 → 28/02/2027]]
 - [[governance/legal/borradores/05-matriz-aprobaciones|Matriz de aprobaciones · BORRADOR]]
@@ -40,7 +41,6 @@ tags:
 - [[knowledge/metodologias-transversales/guion-validacion-semanal|Guion de la conversación semanal de validación]]
 - [[docs/26-web-clientes|Web para clientes: estudio de referencias, estructura y textos (F2)]]
 - [[docs/05-agentes-procesos-e-integraciones|Agentes, procesos e integraciones]]
-- [[governance/socios/01-marca-esclusa-o-varios|M-002 · ¿Una sola marca: Esclusa o Varios?]]
 - [[knowledge/metodologias-transversales/cuestionario-descubrimiento|Cuestionario de descubrimiento por puertas (G0–G2)]]
 - [[precedents/projects/caso-correduria-atalaya/entregables/01-propuesta-diagnostico.revision|Revisión con la rúbrica C3 · Propuesta de diagnóstico de Atalaya (FICTICIA)]]
 - [[governance/socios/02-acuerdo-de-socios-puntos|M-003 · Acuerdo de socios: lo que tenéis que decidir]]
@@ -49,12 +49,8 @@ tags:
 - [[knowledge/glosario/README|Glosario]]
 - [[knowledge/metodologias-transversales/README|Metodologías transversales]]
 - [[docs/01-vision-y-modelo-operativo|Visión y modelo operativo]]
-- [[governance/socios/README|Decisiones de los socios (borradores)]]
 - [[knowledge/metodologias-transversales/contrastar|Protocolo: contrastar el conocimiento interno y el externo]]
 - [[docs/11-cerebro-en-claude|Cerebro en Claude]]
-- [[governance/README|Gobierno, seguridad y legal]]
-- [[docs/06-seguridad-y-gobierno|Seguridad, privacidad y gobierno]]
-- [[docs/07-calidad-infraestructura-y-operacion|Calidad, infraestructura y operación]]
 - [[docs/18-flujo-de-calidad-y-aprendizaje|18 · Flujo de calidad y aprendizaje continuo en la oficina]]
 - [[web/README|Web para clientes (borrador)]]
 - [[knowledge/plantillas/entregables/06-acta-reunion|Acta de reunión · (Cliente) · (Tema) · (Fecha)]]
@@ -69,8 +65,8 @@ tags:
 - [[knowledge/grafo/decisiones/D-019|D-019 · Calidad exigente, todo pasa por un socio y cada rechazo se rehace aprendiendo]]
 - [[knowledge/grafo/decisiones/D-023|D-023 · Base de datos real: PostgreSQL con RLS, auditoría inmutable y conocimiento con citas]]
 - [[knowledge/grafo/decisiones/D-024|D-024 · Paquete de dominio de seguros con un archivo máquina como fuente de las reglas]]
-- [[knowledge/grafo/decisiones/D-025|D-025 · La oficina se organiza en siete secciones y se abre en Inicio]]
 - [[knowledge/grafo/decisiones/D-026|D-026 · Cada agente sirve a un proceso medido: de 34 se quedan 22]]
+- [[knowledge/grafo/decisiones/D-025|D-025 · La oficina se organiza en siete secciones y se abre en Inicio]]
 - [[knowledge/grafo/decisiones/D-022|D-022 · Trabajo nocturno de Claude con plan diario e informe de la mañana]]
 - [[knowledge/grafo/decisiones/D-027|D-027 · Cada proceso tiene un nivel de autonomía A0–A4 con techo y criterio]]
 - [[knowledge/grafo/decisiones/D-029|D-029 · El trabajo nocturno de Claude sube directo a `main`, sin propuesta de cambios]]

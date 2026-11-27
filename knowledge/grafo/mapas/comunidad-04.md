@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 4
-miembros: 61
-cohesion: 0.19
+miembros: 63
+cohesion: 0.18
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 4 · processes/runbooks · Auditoría de agentes y habilidades frente a los procesos (M-040) y Dependencias entre procesos
 
-61 nodos agrupados por el algoritmo de Louvain. Cohesión 0.19.
+63 nodos agrupados por el algoritmo de Louvain. Cohesión 0.18.
 
 ## Documentos
 
@@ -17,14 +17,15 @@ tags:
 - [[processes/diagrams/dependencias|Dependencias entre procesos]]
 - [[docs/29-autonomia|Mapa de autonomía por proceso, A0–A4 (M-045)]]
 - [[docs/13-procesos-y-estados|Procesos y estados]]
-- [[docs/24-base-de-datos|Base de datos (D-023, propuesta)]]
 - [[knowledge/ingenieria/README|Ingeniería y tecnología]]
 - [[knowledge/seguridad-legal/README|Seguridad, privacidad, legal y cumplimiento]]
 - [[knowledge/direccion/README|Dirección y gobierno]]
 - [[processes/diagrams/ciclo-encargo|Ciclo completo de un encargo (P01 → P11)]]
+- [[knowledge/procesos/README|Procesos y operaciones]]
 - [[processes/tests/README|Plan de pruebas de procesos]]
 - [[processes/README|Procesos]]
 - [[processes/runbooks/README|Runbooks]]
+- [[knowledge/administracion-finanzas/README|Administración y finanzas]]
 - [[processes/definitions/README|Definiciones ejecutables]]
 - [[processes/runbooks/caida-proveedor-ia|Caída del proveedor de IA]]
 - [[processes/runbooks/restauracion|Restauración de copias]]
@@ -37,6 +38,7 @@ tags:
 - [[processes/catalog/P02-clasificacion-y-triaje|P02 · Clasificación y triaje]]
 - [[processes/catalog/P10-aprobacion-humana|P10 · Aprobación humana]]
 - [[processes/catalog/P29-gestion-de-costes-y-capacidad|P29 · Gestión de costes y capacidad]]
+- [[processes/catalog/P37-medicion-de-rendimiento-y-valor|P37 · Medición de rendimiento y valor]]
 - [[processes/catalog/P01-alta-y-recepcion-de-peticion|P01 · Alta y recepción de petición]]
 - [[processes/catalog/P15-observabilidad-e-incidencias|P15 · Observabilidad e incidencias]]
 - [[processes/catalog/P21-ejecucion-segura-de-herramientas|P21 · Ejecución segura de herramientas]]
@@ -46,12 +48,12 @@ tags:
 - [[processes/catalog/P08-ejecucion-de-tareas|P08 · Ejecución de tareas]]
 - [[processes/catalog/P04-recuperacion-de-conocimiento|P04 · Recuperación de conocimiento]]
 - [[processes/catalog/P13-aprendizaje-y-actualizacion-de-la-wiki|P13 · Aprendizaje y actualización de la wiki]]
+- [[processes/catalog/P19-politica-de-uso-y-limites|P19 · Política de uso y límites]]
 - [[processes/catalog/P20-seguridad-de-entradas-e-inyeccion-de-instrucciones|P20 · Seguridad de entradas e inyección de instrucciones]]
 - [[processes/catalog/P23-evaluacion-de-agentes-y-modelos|P23 · Evaluación de agentes y modelos]]
 - [[processes/catalog/P12-gestion-de-cambios|P12 · Gestión de cambios]]
 - [[processes/catalog/P07-ingesta-documental|P07 · Ingesta documental]]
 - [[processes/catalog/P14-gestion-de-permisos-y-aislamiento|P14 · Gestión de permisos y aislamiento]]
-- [[processes/catalog/P19-politica-de-uso-y-limites|P19 · Política de uso y límites]]
 - [[processes/catalog/P25-gestion-de-cambios-y-versiones|P25 · Gestión de cambios y versiones]]
 - [[processes/catalog/P34-gestion-de-definiciones-de-proceso|P34 · Gestión de definiciones de proceso]]
 - [[processes/catalog/P18-evaluacion-y-mejora|P18 · Evaluación y mejora]]
@@ -77,9 +79,6 @@ tags:
 - [[knowledge/direccion/decisiones-seguimiento|Responsable de decisiones y seguimiento]]
 - [[knowledge/ingenieria/evaluacion-ia|Especialista en evaluación de IA]]
 - [[knowledge/direccion/bibliotecario|Bibliotecario / responsable de conocimiento]]
+- [[knowledge/procesos/metricas|Especialista en métricas]]
 - [[knowledge/ingenieria/arquitecto-tecnico|Arquitecto técnico]]
 - [[knowledge/ingenieria/integraciones|Especialista en integraciones]]
-
-## Fuentes
-
-- [[knowledge/grafo/fuentes/NIST-AI-600-1|NIST-AI-600-1 · AI RMF: Generative Artificial Intelligence Profile (NIST AI 600-1)]]

@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 0
-miembros: 117
+miembros: 118
 cohesion: 0.07
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 0 · claude/habilidades · Habilidades de los agentes y Administración
 
-117 nodos agrupados por el algoritmo de Louvain. Cohesión 0.07.
+118 nodos agrupados por el algoritmo de Louvain. Cohesión 0.07.
 
 ## Documentos
 
@@ -20,6 +20,7 @@ tags:
 - [[knowledge/administracion-finanzas/contabilidad|Especialista en contabilidad y facturación]]
 - [[knowledge/administracion-finanzas/direccion-financiera|Director financiero (CFO)]]
 - [[knowledge/agentes/back|Backend]]
+- [[knowledge/comercial/gestion-clientes|Especialista en éxito de cliente]]
 - [[knowledge/agentes/README|Agentes de la oficina]]
 - [[knowledge/agentes/proj|Arquitecto de procesos]]
 - [[knowledge/administracion-finanzas/administrativo|Especialista administrativo]]
@@ -54,7 +55,6 @@ tags:
 - [[knowledge/agentes/fnz|Experto en servicios financieros]]
 - [[knowledge/agentes/fin|Costes]]
 - [[knowledge/agentes/ind|Experto en industria]]
-- [[knowledge/administracion-finanzas/README|Administración y finanzas]]
 - [[claude/habilidades/acta-reunion|Acta de reunión]]
 - [[claude/habilidades/mapa-obligaciones|Mapa de obligaciones]]
 - [[claude/habilidades/claves-sector|Claves del sector para un encargo]]
@@ -82,6 +82,10 @@ tags:
 - [[knowledge/administracion-finanzas/administrativo|Especialista administrativo]]
 - [[knowledge/administracion-finanzas/direccion-financiera|Director financiero (CFO)]]
 - [[knowledge/administracion-finanzas/financiero|Especialista financiero]]
+
+## Habilidades
+
+- [[claude/habilidades/salud-cuenta|Salud de la cuenta]]
 
 ## Fuentes
 

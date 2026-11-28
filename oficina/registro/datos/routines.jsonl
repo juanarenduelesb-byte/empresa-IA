@@ -1,2 +1,4 @@
 {"data": {"_ts": "2026-11-23T08:28:57.605Z", "active": true, "id": "r1", "last": "2026-11-23T08:28:57.601Z", "needOk": false, "team": false}, "id": "r1"}
 {"data": {"_ts": "2026-11-25T00:01:09.313Z", "active": true, "id": "r2", "last": "2026-11-25T00:01:09.296Z", "needOk": false, "team": false}, "id": "r2"}
+{"data": {"_ts": "2026-11-27T16:47:07.296Z", "active": true, "id": "r3", "last": "2026-11-27T16:47:07.296Z", "needOk": false, "team": false}, "id": "r3"}
+{"data": {"_ts": "2026-11-27T16:47:07.305Z", "active": true, "id": "r4", "last": "2026-11-27T16:47:07.305Z", "needOk": false, "team": false}, "id": "r4"}

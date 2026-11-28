@@ -4,12 +4,14 @@
 
 Volcado automático de lo que pasa en la oficina (D-017). La copia fiel está en `oficina/registro/datos/`; aquí, la versión legible que entra en el cerebro.
 
-- Encargos: 13 · Conversaciones: 24 · Proyectos: 1 · Entradas de memoria: 31
+- Encargos: 15 · Conversaciones: 26 · Proyectos: 1 · Entradas de memoria: 31
 
 - [Memoria](memoria.md) · [Reglas y habilidades](reglas-y-habilidades.md) · [Decisiones](decisiones.md)
 
 ## Últimos encargos
 
+- [Propuestas de entradas para DECISIONS.md](encargos/2026-11/2026-11-27-propuestas-de-entradas-para-decisions-md-l4uc4.md) · Registro de decisiones · En cola
+- [Revisión semanal del plan de 12 semanas](encargos/2026-11/2026-11-27-revision-semanal-del-plan-de-12-semanas-le3xy.md) · Plan y seguimiento · En cola
 - [Prepara el guion y las 8 preguntas clave para la conversación de valid](encargos/2026-11/2026-11-25-prepara-el-guion-y-las-8-preguntas-clave-para-la-c-lgxmr.md) · — · En cola
 - [Lee el plan de construcción y prepara la lista de tareas de ](encargos/2026-11/2026-11-23-lee-el-plan-de-construccion-y-prepara-la-lista-de-uqvwy.md) · Plan y seguimiento · En cola
 - [Examen de 25 casos ficticios para Atalaya](encargos/2026-11/2026-11-17-examen-de-25-casos-ficticios-para-atalaya-qq164.md) · Datos de prueba · Hecha

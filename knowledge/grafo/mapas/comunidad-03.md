@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 3
-miembros: 83
+miembros: 85
 cohesion: 0.08
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 3 · docs · Registro de decisiones y Trabajo nocturno de Claude
 
-83 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
+85 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
 
 ## Documentos
 
@@ -20,16 +20,18 @@ tags:
 - [[docs/informes/2026-11-27|Informe de la mañana · 27/11/2026]]
 - [[docs/23-plan-maestro|Plan maestro: la empresa completa, sin que se escape nada]]
 - [[docs/informes/2026-11-26|Informe de la mañana · 26/11/2026]]
-- [[governance/legal/borradores/06-politica-uso-ia|Política de uso de inteligencia artificial de Varios · BORRADOR PARA ABOGADO]]
 - [[docs/17-cerebro-y-procesos|17 · Cerebro, conocimiento y procesos: auditoría e informe]]
+- [[governance/legal/borradores/06-politica-uso-ia|Política de uso de inteligencia artificial de Varios · BORRADOR PARA ABOGADO]]
 - [[docs/31-identidad|Identidad y roles: opciones para los socios y, más adelante, los clientes (S3a)]]
 - [[README|Varios — repositorio maestro]]
 - [[docs/22-plan-hasta-febrero|Plan de trabajo diario · 26/11/2026 → 28/02/2027]]
 - [[docs/25-portal-interno|Portal interno: auditoría de la oficina y distribución propuesta (F1)]]
 - [[knowledge/identidad/forma-de-trabajar|Forma de trabajar]]
+- [[docs/00-negocio|Negocio]]
 - [[docs/30-inventario-web|Inventario de la web interna (site/) frente a la web para clientes (N5)]]
 - [[knowledge/identidad/README|Identidad de la empresa]]
 - [[docs/19-obsidian|Obsidian: el cerebro abierto en tu equipo]]
+- [[knowledge/identidad/manifiesto|Manifiesto]]
 - [[docs/26-web-clientes|Web para clientes: estudio de referencias, estructura y textos (F2)]]
 - [[docs/09-inventario-documental|Inventario documental]]
 - [[governance/legal/borradores/04-anexo-uso-ia|Anexo de uso de inteligencia artificial · BORRADOR PARA ABOGADO]]
@@ -58,20 +60,19 @@ tags:
 - [[knowledge/grafo/decisiones/D-030|D-030 · La oficina mejora evolucionando sus instrucciones contra un examen, no sus modelos]]
 - [[knowledge/grafo/decisiones/D-031|D-031 · Posponer, caducar y tareas se guardan en la API; una aprobación caducada vuelve como pregunta]]
 - [[knowledge/grafo/decisiones/D-033|D-033 · Identidad: Keycloak autoalojado para el piloto; los roles siguen en la base de Varios]]
-- [[knowledge/grafo/decisiones/D-014|D-014 · Adelantar un prototipo mínimo del motor de procesos]]
 - [[knowledge/grafo/decisiones/D-003|D-003 · Obsidian como interfaz humana]]
 - [[knowledge/grafo/decisiones/D-006|D-006 · Primer proceso piloto]]
 - [[knowledge/grafo/decisiones/D-021|D-021 · El cerebro se abre en Obsidian: el repositorio es el vault]]
+- [[knowledge/grafo/decisiones/D-015|D-015 · Entregables en archivos reales, memoria y Google Drive en la oficina de agentes]]
 - [[knowledge/grafo/decisiones/D-007|D-007 · Nombre provisional: Varios]]
 - [[knowledge/grafo/decisiones/D-010|D-010 · Diagramas como código]]
-- [[knowledge/grafo/decisiones/D-015|D-015 · Entregables en archivos reales, memoria y Google Drive en la oficina de agentes]]
 - [[knowledge/grafo/decisiones/D-004|D-004 · PostgreSQL como fuente operativa]]
 - [[knowledge/grafo/decisiones/D-018|D-018 · El cerebro pasa a ser un grafo de conocimiento con relaciones explicadas]]
 - [[knowledge/grafo/decisiones/D-020|D-020 · Seis puestos nuevos en la oficina: CFO, contabilidad, éxito de cliente, plataforma, diseño y cumplimiento]]
 - [[knowledge/grafo/decisiones/D-001|D-001 · Arquitectura orientada a procesos]]
+- [[knowledge/grafo/decisiones/D-005|D-005 · Aislamiento multi-cliente]]
 - [[knowledge/grafo/decisiones/D-032|D-032 · La cartera de pólizas del cliente se guarda en su propia tabla]]
 - [[knowledge/grafo/decisiones/D-008|D-008 · Repositorio como memoria oficial y web visual]]
-- [[knowledge/grafo/decisiones/D-016|D-016 · Vista 3D de la oficina de agentes con Three.js]]
 
 ## Fuentes
 
@@ -88,6 +89,7 @@ tags:
 - [[knowledge/grafo/fuentes/OWASP-FASTAPI|OWASP-FASTAPI · FastAPI Security Cheat Sheet]]
 - [[knowledge/grafo/fuentes/REDIS-EXPIRE|REDIS-EXPIRE · Redis: comando EXPIRE (cómo caducan las claves)]]
 - [[knowledge/grafo/fuentes/ZAPIER-HITL|ZAPIER-HITL · Zapier: Human in the Loop (pedir aprobación para seguir)]]
+- [[knowledge/grafo/fuentes/AGILE-MANIFESTO|AGILE-MANIFESTO · Manifesto for Agile Software Development]]
 - [[knowledge/grafo/fuentes/AUTHENTIK-REPO|AUTHENTIK-REPO · Repositorio goauthentik/authentik]]
 - [[knowledge/grafo/fuentes/BASECAMP-5|BASECAMP-5 · Basecamp 5: inicio orientado a la acción]]
 - [[knowledge/grafo/fuentes/DOCKER-PUERTOS|DOCKER-PUERTOS · Docker: Port publishing and mapping]]

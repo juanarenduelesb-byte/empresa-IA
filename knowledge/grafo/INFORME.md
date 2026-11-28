@@ -5,20 +5,20 @@ Cómo está conectado el cerebro de Varios: qué sostiene todo, qué temas forma
 
 ## Resumen
 
-- 5270 nodos: seccion 4507, documento 394, fuente 146, habilidad 65, proceso 38, especialista 34, agente 34, decision 33, puerta 12, departamento 7.
-- 7618 relaciones: 64 % EXTRACTADAS (escritas en la fuente), 35 % INFERIDAS (temas compartidos, con puntuación) y 40 AMBIGUAS (para revisar).
+- 5272 nodos: seccion 4508, documento 394, fuente 147, habilidad 65, proceso 38, especialista 34, agente 34, decision 33, puerta 12, departamento 7.
+- 7624 relaciones: 64 % EXTRACTADAS (escritas en la fuente), 35 % INFERIDAS (temas compartidos, con puntuación) y 40 AMBIGUAS (para revisar).
 - 14 comunidades de temas.
 
 ## Nodos centrales
 
 Lo que más cosas conecta. Si cambia, cambia mucho.
 
-1. **Registro de fuentes** (`knowledge/fuentes/registro.md`) · 252 conexiones
+1. **Registro de fuentes** (`knowledge/fuentes/registro.md`) · 255 conexiones
 2. **Registro de decisiones** (`DECISIONS.md`) · 143 conexiones
 3. **Índice del conocimiento de Varios** (`knowledge/INDEX.md`) · 123 conexiones
 4. **Guia de Arranque Proyecto v1.4 Diseno Cerrado** (`docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado.md`) · 85 conexiones
 5. **Catálogo de procesos P01–P38** (`processes/catalog/README.md`) · 83 conexiones
-6. **Trabajo nocturno de Claude** (`docs/21-trabajo-nocturno.md`) · 78 conexiones
+6. **Trabajo nocturno de Claude** (`docs/21-trabajo-nocturno.md`) · 79 conexiones
 7. **L2 (puerta técnica)** · 75 conexiones
 8. **Varios · empresa-ia** (`CLAUDE.md`) · 71 conexiones
 9. **Habilidades de los agentes** (`claude/habilidades/README.md`) · 69 conexiones
@@ -30,16 +30,16 @@ Lo que más cosas conecta. Si cambia, cambia mucho.
 
 Nodos por los que pasa el camino entre comunidades distintas (intermediación).
 
-- **Registro de fuentes** · intermediación 0.152 · une la comunidad 1 con 2, 3, 4, 5, 6, 7
-- **Registro de decisiones** · intermediación 0.052 · une la comunidad 3 con 1, 2, 4, 5, 6, 7
+- **Registro de fuentes** · intermediación 0.157 · une la comunidad 1 con 2, 3, 4, 5, 6, 7
+- **Registro de decisiones** · intermediación 0.051 · une la comunidad 3 con 1, 2, 4, 5, 6, 7
 - **Habilidades de los agentes** · intermediación 0.039 · une la comunidad 2 con 0, 4, 5, 6, 7, 13
 - **L2 (puerta técnica)** · intermediación 0.027 · une la comunidad 12 con 1, 2, 3, 4, 5, 6
-- **Índice del conocimiento de Varios** · intermediación 0.023 · une la comunidad 7 con 1, 2, 3, 4, 5, 6
-- **Guia de Arranque Proyecto v1.4 Diseno Cerrado** · intermediación 0.016 · une la comunidad 10 con 2, 3, 4, 6, 7, 8
+- **Índice del conocimiento de Varios** · intermediación 0.022 · une la comunidad 7 con 1, 2, 3, 4, 5, 6
+- **Guia de Arranque Proyecto v1.4 Diseno Cerrado** · intermediación 0.015 · une la comunidad 10 con 2, 3, 4, 6, 7, 8
 - **Estudios** · intermediación 0.015 · une la comunidad 13 con 1, 2, 3, 4, 5, 6
 - **D-011 · Construir primero, clientes desde el 15/02/2027** · intermediación 0.012 · une la comunidad 5 con 1, 2, 3, 4, 7, 9
 - **Trabajo nocturno de Claude** · intermediación 0.01 · une la comunidad 3 con 1, 4, 5, 7, 9, 11
-- **Experto en asesorías y despachos** · intermediación 0.009 · une la comunidad 2 con 0, 1, 6, 10, 11, 12
+- **CEO digital** · intermediación 0.009 · une la comunidad 6 con 1, 2, 3, 4, 7, 8
 
 ## Conexiones sorprendentes
 
@@ -72,7 +72,7 @@ Cohesión 0.1 · 94 nodos: Habilidades de los agentes; Administración; Experto 
 
 ### 3 · docs · Registro de decisiones y Trabajo nocturno de Claude
 
-Cohesión 0.08 · 85 nodos: Registro de decisiones; Trabajo nocturno de Claude; Varios · empresa-ia; Base de datos (D-023, propuesta); Informe de la mañana · 27/11/2026; Plan maestro: la empresa completa, sin que se escape nada; Informe de la mañana · 26/11/2026; 17 · Cerebro, conocimiento y procesos: auditoría e informe (y 77 más)
+Cohesión 0.08 · 86 nodos: Registro de decisiones; Trabajo nocturno de Claude; Varios · empresa-ia; Informe de la mañana · 27/11/2026; Base de datos (D-023, propuesta); Plan maestro: la empresa completa, sin que se escape nada; Informe de la mañana · 26/11/2026; 17 · Cerebro, conocimiento y procesos: auditoría e informe (y 78 más)
 
 ### 4 · processes/runbooks · Auditoría de agentes y habilidades frente a los procesos (M-040) y Dependencias entre procesos
 
@@ -138,9 +138,9 @@ Cohesión 0.43 · 8 nodos: Estudios; Integraciones; Motor de conocimiento; Contr
 _Preguntas que este grafo ayuda a responder o que conviene decidir:_
 
 - **¿Por qué «Registro de fuentes» conecta la comunidad 1 con las comunidades 2, 3, 4, 5?**
-  _Intermediación alta (0.152): es un puente entre temas._
+  _Intermediación alta (0.157): es un puente entre temas._
 - **¿Por qué «Registro de decisiones» conecta la comunidad 3 con las comunidades 1, 2, 4, 5?**
-  _Intermediación alta (0.052): es un puente entre temas._
+  _Intermediación alta (0.051): es un puente entre temas._
 - **¿Por qué «Habilidades de los agentes» conecta la comunidad 2 con las comunidades 0, 4, 5, 6?**
   _Intermediación alta (0.039): es un puente entre temas._
 - **¿Se aprueba D-019 · Calidad exigente, todo pasa por un socio y cada rechazo se rehace aprendiendo? Sigue en propuesta y la citan 22 secciones.**

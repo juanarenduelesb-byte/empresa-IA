@@ -9,6 +9,7 @@ Así, aunque el modelo se deje engañar, una trampa nunca acaba en CONTINUAR.
 from __future__ import annotations
 
 import re
+import unicodedata
 from typing import Literal, Protocol
 
 from pydantic import BaseModel, ConfigDict, Field
@@ -59,32 +60,56 @@ class Modelo(Protocol):
 
 
 # --- Detectores fijos (independientes del modelo) -----------------------------------------------
+# Se buscan sobre una copia normalizada (`normalizar`), nunca sobre el texto tal cual, y el texto
+# original no se cambia (OWASP, LLM Prompt Injection Prevention Cheat Sheet: «Normalize text before
+# screening it» y «screen a normalized copy instead of rewriting the user's input»). Por eso los
+# patrones van en minúsculas, sin tildes y con un solo espacio entre palabras.
 _INYECCION = re.compile(
     r"ignora\w* (todas |las |tus )*(instrucciones|reglas)|olvida (tus|las) (instrucciones|reglas)"
-    r"|instrucciones (anteriores|del sistema)|system prompt|eres ahora"
-    r"|ignore (all |the |any |your )*(previous |prior |above )?(instructions|rules)|you are now", re.I)
+    r"|olvida (lo|todo lo) (anterior|de antes)|instrucciones (anteriores|del sistema)|system prompt|eres ahora"
+    r"|ignore (all |the |any |your )*(previous |prior |above )?(instructions|rules)|you are now")
 _SIN_APROBACION = re.compile(
-    r"apru[eé]ba(lo|la|los|las)? t[uú]|sin que lo (vea|revise|apruebe) nadie|no hace falta que lo (vea|revise|apruebe)"
-    r"|sin pasar por (ningún|ningun|el) (socio|ok|control)|sin (pedir|esperar) (permiso|aprobaci[oó]n)", re.I)
+    r"aprueba(lo|la|los|las)? tu|sin que (lo |la )?(vea|revise|apruebe) nadie"
+    r"|sin que nadie (lo |la )?(vea|revise|apruebe)"
+    r"|no hace falta que (lo |la )?(vea|revise|apruebe)"
+    r"|sin pasar por (ningun|el) (socio|ok|control)|sin (pedir|esperar) (permiso|aprobacion)")
 _INVENTAR = re.compile(
-    r"\b(inv[eé]nta(te|las|los|la|lo)?|invente[ns]?|fabrica|maquilla)\b[^.]{0,40}"
-    r"\b(cifras?|datos|m[eé]tricas|fuentes?|testimonios?|clientes|resultados)", re.I)
+    r"\b(inventa(te|las|los|la|lo)?|invente[ns]?|fabrica|maquilla)\b[^.]{0,40}"
+    r"\b(cifras?|datos|metricas|fuentes?|testimonios?|clientes|resultados)"
+    r"|\b(cifras?|datos|metricas|fuentes?|testimonios?|resultados)\b[^.]{0,40}\b(inventad|ficticio)")
 _CUMPLIMIENTO = re.compile(
     r"\b(certific|garantiz|confirm|asegur)\w*\b[^.]{0,40}\bque\b[^.]{0,40}"
-    r"\b(cumple|cumplimos|cumpl[ií]s|en regla)", re.I)
+    r"\b(cumple|cumplimos|cumplis|en regla)")
+# Caracteres invisibles (formato, como los de ancho cero, y etiquetas Unicode): en un adjunto se
+# mandan a revisión (OWASP: «Send unexpected zero-width or tag characters to review»).
+_INVISIBLE = re.compile(r"[​-‏‪-‮⁠-⁤﻿\U000e0000-\U000e007f]")
+
+
+def normalizar(texto: str) -> str:
+    """Copia para buscar: sin caracteres invisibles, sin tildes, en minúsculas y con un espacio."""
+    t = unicodedata.normalize("NFKD", texto)
+    t = "".join(c for c in t if not unicodedata.combining(c) and unicodedata.category(c) != "Cf")
+    return re.sub(r"\s+", " ", t).casefold().strip()
 
 
 def detectar(e: Encargo, identidad: Identidad, clientes: dict[str, str]) -> Senales:
-    """Señales que se ven sin IA. `clientes` es {tenant: nombre} de los clientes conocidos."""
+    """Señales que se ven sin IA. `clientes` es {tenant: nombre} de los clientes conocidos.
+
+    Son una capa más, no la frontera de seguridad: el aislamiento entre clientes lo pone la base
+    (RLS) y lo sensible lo aprueba una persona. OWASP: «It is not a security boundary».
+    """
+    texto = normalizar(e.texto)
+    doc = normalizar(e.documento) if e.documento else ""
     otro = next((t for t, n in clientes.items()
-                 if t != identidad.tenant and (n.lower() in e.texto.lower() or t in e.texto.lower())), None)
+                 if t != identidad.tenant and (normalizar(n) in texto or normalizar(t) in texto)), None)
     return Senales(
         # En un adjunto, pedir que nadie lo apruebe o que se inventen cifras también es una instrucción.
-        instrucciones_en_documento=bool(e.documento and any(
-            x.search(e.documento) for x in (_INYECCION, _SIN_APROBACION, _INVENTAR))),
-        pide_sin_aprobacion=bool(_SIN_APROBACION.search(e.texto)),
-        pide_inventar=bool(_INVENTAR.search(e.texto)),
-        afirma_cumplimiento=bool(_CUMPLIMIENTO.search(e.texto)),
+        instrucciones_en_documento=bool(e.documento and (
+            _INVISIBLE.search(e.documento)
+            or any(x.search(doc) for x in (_INYECCION, _SIN_APROBACION, _INVENTAR)))),
+        pide_sin_aprobacion=bool(_SIN_APROBACION.search(texto)),
+        pide_inventar=bool(_INVENTAR.search(texto)),
+        afirma_cumplimiento=bool(_CUMPLIMIENTO.search(texto)),
         otro_cliente=otro,
     )
 

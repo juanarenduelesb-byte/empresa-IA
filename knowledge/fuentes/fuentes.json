@@ -1882,6 +1882,20 @@
    "nota": "«employ the principle of least privilege»: «the accounts should only have the minimal permissions required for the application to function» y «Only grant the required permissions on the databases»; la cuenta no debe ser dueña de la base. Base de que varios_app solo lea cliente y usuario (migración 0005, repaso del 28/11)."
   },
   {
+   "id": "OWASP-INYECCION",
+   "titulo": "LLM Prompt Injection Prevention Cheat Sheet",
+   "organismo": "OWASP Cheat Sheet Series",
+   "url": "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html",
+   "tipo": "recomendacion-tecnica",
+   "jurisdiccion": "Internacional",
+   "version": "sin fecha visible (leída el 28/11/2026)",
+   "autoridad": "media",
+   "vigencia": "vigente",
+   "estado": "draft",
+   "consultada": "2026-11-28",
+   "nota": "«Normalize text before screening it», «screen a normalized copy instead of rewriting the user's input» y «Send unexpected zero-width or tag characters to review»; el filtro por frases «is not a security boundary» y conviene «Require human approval for consequential tool actions before execution». Base de la normalización de los detectores del CEO limitado (repaso del 28/11)."
+  },
+  {
    "id": "SECRETLINT-ANTHROPIC",
    "titulo": "@secretlint/secretlint-rule-anthropic (README, v13.0.3)",
    "organismo": "secretlint (proyecto de código abierto)",

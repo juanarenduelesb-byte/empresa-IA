@@ -13,7 +13,7 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 - [[knowledge/grafo/mapas/comunidad-00|Comunidad 0 · claude/habilidades · Legal y privacidad y Arquitecto de procesos]] (108 nodos)
 - [[knowledge/grafo/mapas/comunidad-01|Comunidad 1 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros]] (101 nodos)
 - [[knowledge/grafo/mapas/comunidad-02|Comunidad 2 · claude/habilidades · Habilidades de los agentes y Administración]] (94 nodos)
-- [[knowledge/grafo/mapas/comunidad-03|Comunidad 3 · docs · Registro de decisiones y Trabajo nocturno de Claude]] (85 nodos)
+- [[knowledge/grafo/mapas/comunidad-03|Comunidad 3 · docs · Registro de decisiones y Trabajo nocturno de Claude]] (86 nodos)
 - [[knowledge/grafo/mapas/comunidad-04|Comunidad 4 · processes/runbooks · Auditoría de agentes y habilidades frente a los procesos (M-040) y Dependencias entre procesos]] (65 nodos)
 - [[knowledge/grafo/mapas/comunidad-05|Comunidad 5 · precedents/oficina · Propuesta de proceso de referencia: siniestros en corredurías y Conversaciones con Coordinación sectorial · Seguros]] (58 nodos)
 - [[knowledge/grafo/mapas/comunidad-06|Comunidad 6 · knowledge/ingenieria · CEO digital y Arquitecto de procesos]] (53 nodos)
@@ -27,12 +27,12 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 
 ## Nodos centrales
 
-- [[knowledge/fuentes/registro|Registro de fuentes]] · 252 vecinos
+- [[knowledge/fuentes/registro|Registro de fuentes]] · 255 vecinos
 - [[DECISIONS|Registro de decisiones]] · 143 vecinos
 - [[knowledge/INDEX|Índice del conocimiento de Varios]] · 123 vecinos
 - [[docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado|Guia de Arranque Proyecto v1.4 Diseno Cerrado]] · 85 vecinos
 - [[processes/catalog/README|Catálogo de procesos P01–P38]] · 83 vecinos
-- [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]] · 78 vecinos
+- [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]] · 79 vecinos
 - L2 (puerta técnica) · 75 vecinos
 - [[CLAUDE|Varios · empresa-ia]] · 71 vecinos
 - [[claude/habilidades/README|Habilidades de los agentes]] · 69 vecinos
@@ -54,14 +54,14 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 - [[knowledge/estudios/README|Estudios]] · conecta las comunidades 1, 2, 3, 4, 5, 6
 - [[knowledge/grafo/decisiones/D-011|D-011 · Construir primero, clientes desde el 15/02/2027]] · conecta las comunidades 1, 2, 3, 4, 7, 9
 - [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]] · conecta las comunidades 1, 4, 5, 7, 9, 11
-- [[knowledge/agentes/ase|Experto en asesorías y despachos]] · conecta las comunidades 0, 1, 6, 10, 11, 12
+- [[knowledge/direccion/ceo-digital|CEO digital]] · conecta las comunidades 1, 2, 3, 4, 7, 8
 
 ## Preguntas abiertas
 
 - ¿Por qué «Registro de fuentes» conecta la comunidad 1 con las comunidades 2, 3, 4, 5?  
-  Intermediación alta (0.152): es un puente entre temas.
+  Intermediación alta (0.157): es un puente entre temas.
 - ¿Por qué «Registro de decisiones» conecta la comunidad 3 con las comunidades 1, 2, 4, 5?  
-  Intermediación alta (0.052): es un puente entre temas.
+  Intermediación alta (0.051): es un puente entre temas.
 - ¿Por qué «Habilidades de los agentes» conecta la comunidad 2 con las comunidades 0, 4, 5, 6?  
   Intermediación alta (0.039): es un puente entre temas.
 - ¿Se aprueba D-019 · Calidad exigente, todo pasa por un socio y cada rechazo se rehace aprendiendo? Sigue en propuesta y la citan 22 secciones.  

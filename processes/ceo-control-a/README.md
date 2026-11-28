@@ -7,7 +7,7 @@
 | `encargos.json` | 20 encargos normales y 5 trampas. Cada uno lleva el texto, el adjunto si lo hay, las señales que un extractor perfecto vería, la decisión esperada con sus alternativas aceptables y el porqué. |
 | `src/varios/ceo/decision.py` | El CEO limitado. El modelo solo extrae señales; la decisión la toma código fijo con las reglas de `docs/14-reglas-del-ceo.md`, en orden de prioridad. Los detectores fijos sobre el texto no dependen del modelo. |
 | `src/varios/ceo/banco.py` | Ejecuta el banco con un modelo simulado y saca un informe: `python -m varios.ceo.banco` (oráculo) o `python -m varios.ceo.banco ingenuo`. |
-| `tests/test_ceo_control_a.py` | 35 pruebas. |
+| `tests/test_ceo_control_a.py` | 47 pruebas. |
 
 ## Qué se prueba
 - **Con un extractor perfecto** (`ModeloOraculo`), las 25 decisiones son correctas: comprueba las reglas.
@@ -15,6 +15,8 @@
 - Los detectores fijos **no disparan** en ninguno de los 20 encargos normales.
 - En un adjunto, cuenta como instrucción escondida tanto «ignora las instrucciones» (también en inglés) como pedir que nadie lo apruebe o que se inventen cifras: el adjunto es un dato y el encargo se escala.
 - Variantes de cada trampa con otras palabras.
+- Los detectores buscan sobre una **copia normalizada** del texto (sin tildes, en minúsculas, con un solo espacio y sin caracteres invisibles); el texto que recibe el modelo no se cambia. Un adjunto con caracteres invisibles (de ancho cero o etiquetas Unicode) se escala para revisión. Así lo recomienda OWASP ([LLM Prompt Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html), fuente `OWASP-INYECCION`), que avisa también de que este filtro «is not a security boundary»: el aislamiento entre clientes lo pone la RLS de la base y lo sensible lo aprueba una persona.
+- **Límites conocidos** (repaso del 28/11): el nombre de otro cliente solo se reconoce entero («Correduría Faro», con o sin tilde), no por una parte («Faro»), para no disparar con palabras corrientes; y «dile al cliente que cumple el RGPD», sin «certificar», «garantizar», «confirmar» o «asegurar», depende del modelo. El banco de 50 casos (S9) y las pruebas de instrucciones escondidas (semana 9) tienen que buscar más variantes.
 
 Resultado de hoy: oráculo 25/25, ingenuo 12/25 con las trampas 5/5. Las 13 que falla el ingenuo son las que necesitan entender el encargo, y para eso está el modelo real.
 

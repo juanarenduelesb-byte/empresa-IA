@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 3
-miembros: 85
+miembros: 86
 cohesion: 0.08
 tags:
   - "mapa"
@@ -9,15 +9,15 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 3 · docs · Registro de decisiones y Trabajo nocturno de Claude
 
-85 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
+86 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
 
 ## Documentos
 
 - [[DECISIONS|Registro de decisiones]]
 - [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]]
 - [[CLAUDE|Varios · empresa-ia]]
-- [[docs/24-base-de-datos|Base de datos (D-023, propuesta)]]
 - [[docs/informes/2026-11-27|Informe de la mañana · 27/11/2026]]
+- [[docs/24-base-de-datos|Base de datos (D-023, propuesta)]]
 - [[docs/23-plan-maestro|Plan maestro: la empresa completa, sin que se escape nada]]
 - [[docs/informes/2026-11-26|Informe de la mañana · 26/11/2026]]
 - [[docs/17-cerebro-y-procesos|17 · Cerebro, conocimiento y procesos: auditoría e informe]]
@@ -38,10 +38,10 @@ tags:
 - [[precedents/projects/caso-correduria-atalaya/entregables/01-propuesta-diagnostico.revision|Revisión con la rúbrica C3 · Propuesta de diagnóstico de Atalaya (FICTICIA)]]
 - [[governance/socios/02-acuerdo-de-socios-puntos|M-003 · Acuerdo de socios: lo que tenéis que decidir]]
 - [[Inicio|Inicio · cerebro de Varios]]
+- [[processes/ceo-control-a/README|Banco del Control A: 25 encargos para el CEO limitado (C2)]]
 - [[docs/18-flujo-de-calidad-y-aprendizaje|18 · Flujo de calidad y aprendizaje continuo en la oficina]]
 - [[web/README|Web para clientes (borrador)]]
 - [[docs/11-cerebro-en-claude|Cerebro en Claude]]
-- [[processes/ceo-control-a/README|Banco del Control A: 25 encargos para el CEO limitado (C2)]]
 - [[claude/instrucciones-proyecto|Instrucciones del proyecto "Varios · Cerebro" en Claude]]
 - [[docs/informes/README|Informes de la mañana]]
 
@@ -100,6 +100,7 @@ tags:
 - [[knowledge/grafo/fuentes/LINEAR-TRIAGE|LINEAR-TRIAGE · Linear: Triage e Inbox]]
 - [[knowledge/grafo/fuentes/NEAT-2002|NEAT-2002 · Neuroevolution of augmenting topologies (NEAT)]]
 - [[knowledge/grafo/fuentes/OWASP-BD|OWASP-BD · Database Security Cheat Sheet]]
+- [[knowledge/grafo/fuentes/OWASP-INYECCION|OWASP-INYECCION · LLM Prompt Injection Prevention Cheat Sheet]]
 - [[knowledge/grafo/fuentes/RIA-2024-1689|RIA-2024-1689 · Reglamento (UE) 2024/1689, de inteligencia artificial]]
 - [[knowledge/grafo/fuentes/ZITADEL-AGPL|ZITADEL-AGPL · Strengthening Our Open Source Foundation: Moving to AGPL 3.0]]
 - [[knowledge/grafo/fuentes/ZITADEL-MFA|ZITADEL-MFA · ZITADEL Default Settings (segundos factores)]]

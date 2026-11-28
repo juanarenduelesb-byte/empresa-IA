@@ -65,14 +65,15 @@ class Repositorio:
         return list(self.sesion.scalars(consulta))
 
     # --- encargo: cambios de estado -------------------------------------------------
-    def _ya_aplicada(self, clave: str | None, solicitud_id: uuid.UUID) -> bool:
-        """La clave vale para un encargo: la misma clave en otro encargo no lo deja sin aplicar."""
+    def _ya_aplicada(self, clave: str | None, objeto: str, accion: str) -> bool:
+        """La clave vale para un cambio de estado de un objeto (un encargo o una tarea): la misma clave en otro encargo,
+        en otra tarea del mismo encargo o en el alta de la tarea no deja sin aplicar el cambio (repaso del 28/11)."""
         if not clave:
             return False
         q = select(EventoAuditoria.id).where(EventoAuditoria.cliente_id == self.cliente_id,
                                              EventoAuditoria.clave_idempotencia == clave,
-                                             EventoAuditoria.datos["solicitud"].as_string() == str(solicitud_id))
-        return self.sesion.scalar(q) is not None
+                                             EventoAuditoria.objeto == objeto, EventoAuditoria.accion == accion)
+        return self.sesion.scalar(q.limit(1)) is not None
 
     def _cambiar(self, sol: Solicitud, a: str, motivo: str, clave: str | None = None, actor: str | None = None,
                  **datos: object) -> None:
@@ -94,7 +95,7 @@ class Repositorio:
     def mover_solicitud(self, solicitud_id: uuid.UUID, a: str, motivo: str, clave: str | None = None) -> Solicitud:
         """Cambio de estado según encargo.json. Toda transición lleva motivo y deja evento de auditoría."""
         sol = self.solicitud(solicitud_id, bloquear=True)
-        if self._ya_aplicada(clave, sol.id):
+        if self._ya_aplicada(clave, f"solicitud:{sol.id}", "mover"):
             return sol
         if not motivo.strip():
             raise TransicionInvalida("Toda transición necesita motivo")
@@ -177,7 +178,7 @@ class Repositorio:
         t = self.tarea(tarea_id)
         sol = self.solicitud(t.solicitud_id, bloquear=True)  # primero el encargo, como en el resto de operaciones
         self.sesion.refresh(t, with_for_update=True)
-        if self._ya_aplicada(clave, sol.id):
+        if self._ya_aplicada(clave, f"tarea:{t.id}", "tarea_mover"):
             return t
         if not motivo.strip():
             raise TransicionInvalida("Toda transición necesita motivo")

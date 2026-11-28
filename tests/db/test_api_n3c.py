@@ -243,3 +243,31 @@ def test_reabrir_da_nueva_version_y_un_cerrado_pide_autorizacion(api, gente):  #
     assert e["estado"] == "CERRADO" and e["version"] == v
     assert api.post(url, json={"a": "REABIERTO", "motivo": "Piden un cambio"}, headers=h(aprobador)).status_code == 200
     assert api.get(f"/encargos/{enc['id']}", headers=h(autor)).json()["version"] == v + 1
+
+
+def test_la_clave_de_idempotencia_es_de_cada_tarea(api, gente):  # noqa: F811
+    """Repaso del 28/11: la clave valía para todo el encargo, así que repetirla en otra tarea del mismo encargo (o
+    usar en una tarea la de un cambio del encargo, o la de su alta) devolvía 200 sin aplicar el cambio."""
+    autor = gente["autor"]
+    enc, t1 = _con_tarea(api, autor)
+    t2 = api.post(f"/encargos/{enc['id']}/tareas", json={"titulo": "Otra pieza (inventada)", "responsable": "r",
+                                                         "clave_idempotencia": "p2"}, headers=h(autor)).json()
+    cambio = {"a": "running", "motivo": "Empieza", "clave_idempotencia": "k1"}
+    assert api.post(f"/tareas/{t1['id']}/estado", json=cambio, headers=h(autor)).json()["estado"] == "running"
+    assert api.post(f"/tareas/{t1['id']}/estado", json=cambio, headers=h(autor)).json()["estado"] == "running"
+    assert api.post(f"/tareas/{t2['id']}/estado", json=cambio, headers=h(autor)).json()["estado"] == "running"
+    # La clave de un cambio del encargo, o la del alta de la tarea, no vale para un cambio de la tarea.
+    url = f"/encargos/{enc['id']}/estado"
+    assert api.post(url, json={"a": "BLOQUEADO", "motivo": "Espera", "clave_idempotencia": "k2"},
+                    headers=h(autor)).status_code == 200
+    assert api.post(url, json={"a": "EN_EJECUCION", "motivo": "Sigue"}, headers=h(autor)).status_code == 200
+    t3 = api.post(f"/encargos/{enc['id']}/tareas", json={"titulo": "Tercera (inventada)", "responsable": "r",
+                                                         "clave_idempotencia": "p3"}, headers=h(autor)).json()
+    for clave in ("k2", "p3"):
+        r = api.post(f"/tareas/{t3['id']}/estado", json={"a": "running", "motivo": "x", "clave_idempotencia": clave},
+                     headers=h(autor))
+        assert r.json()["estado"] == "running", clave
+        api.post(f"/tareas/{t3['id']}/estado", json={"a": "blocked", "motivo": "x"}, headers=h(autor))
+    ev = [e for e in api.get(f"/encargos/{enc['id']}/auditoria", headers=h(autor)).json()
+          if e["accion"] == "tarea_mover"]
+    assert len(ev) == 6  # t1, t2, y t3 dos veces a running y dos a blocked; la repetición de t1 no deja rastro

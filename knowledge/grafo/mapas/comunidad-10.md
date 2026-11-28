@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 10
-miembros: 32
-cohesion: 0.36
+miembros: 31
+cohesion: 0.38
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 10 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Flujo ceo
 
-32 nodos agrupados por el algoritmo de Louvain. Cohesión 0.36.
+31 nodos agrupados por el algoritmo de Louvain. Cohesión 0.38.
 
 ## Documentos
 
@@ -17,23 +17,22 @@ tags:
 - [[docs/fuentes/02_02_flujo_ceo|Flujo ceo]]
 - [[docs/fuentes/04_04_ejecucion_agentes|Ejecucion agentes]]
 - [[docs/fuentes/03_03_motor_conocimiento_obsidian|Motor conocimiento obsidian]]
-- [[docs/fuentes/Marco_Integral_Legal_Ciberseguridad_IA_Espana_UE_2026-11-16|Marco Integral Legal Ciberseguridad IA Espana UE 2026-11-16]]
 - [[docs/atlas/12-ciclo-proyecto|12 · Ciclo de vida de un proyecto con cliente]]
 - [[docs/fuentes/09_09_comunicaciones_estados|Comunicaciones estados]]
-- [[docs/fuentes/06_06_calidad_gobierno|Calidad gobierno]]
 - [[docs/atlas/08-seguridad|08 · Seguridad, identidad y aislamiento de clientes]]
+- [[docs/fuentes/06_06_calidad_gobierno|Calidad gobierno]]
 - [[docs/fuentes/05_05_seguridad_clientes|Seguridad clientes]]
 - [[docs/16-correcciones|Registro de correcciones a los documentos recibidos el 17/11/2026]]
-- [[docs/atlas/07-conocimiento|07 · Motor de conocimiento con Obsidian]]
 - [[docs/atlas/README|Atlas de diagramas]]
+- [[docs/atlas/07-conocimiento|07 · Motor de conocimiento con Obsidian]]
 - [[docs/fuentes/07_07_infraestructura_portabilidad|Infraestructura portabilidad]]
 - [[docs/fuentes/08_08_ciclo_vida_proyecto|Ciclo vida proyecto]]
 - [[docs/atlas/02-flujo-ceo|02 · Flujo completo del CEO digital]]
 - [[docs/atlas/04-ejecucion|04 · Ejecución: motor de procesos, agentes y herramientas]]
 - [[docs/atlas/05-gateway|05 · Puerta de herramientas]]
 - [[docs/atlas/16-estados|16 · Estados de un encargo]]
-- [[docs/atlas/00-arquitectura|00 · Arquitectura del cerebro digital]]
 - [[docs/atlas/09-calidad|09 · Calidad, evaluación y aprobación humana]]
+- [[docs/atlas/00-arquitectura|00 · Arquitectura del cerebro digital]]
 - [[docs/atlas/03-decisiones-ceo|03 · Las cinco decisiones del CEO]]
 - [[docs/atlas/15-componentes|15 · Conversación entre componentes]]
 - [[docs/atlas/14-incidentes|14 · Operación y respuesta a incidentes]]
@@ -42,6 +41,6 @@ tags:
 - [[docs/14-reglas-del-ceo|Reglas del CEO digital]]
 - [[docs/atlas/10-cambios-modelos|10 · Cambios y elección de modelos de IA]]
 - [[docs/atlas/13-ciclo-dato|13 · Ciclo de vida de un dato]]
-- [[docs/04-motor-de-conocimiento|Motor de conocimiento]]
+- [[docs/03-ceo-digital-y-orquestacion|CEO digital y orquestación]]
 - [[docs/atlas/06-fallos|06 · Fallos, reintentos y recuperación]]
 - [[precedents/lessons-learned/2026-11-correcciones-documentales|Lección: los documentos base también tienen errores]]

@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 6
-miembros: 50
-cohesion: 0.17
+miembros: 47
+cohesion: 0.18
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 6 · processes/catalog · Índice del conocimiento de Varios y Arquitecto de procesos
 
-50 nodos agrupados por el algoritmo de Louvain. Cohesión 0.17.
+47 nodos agrupados por el algoritmo de Louvain. Cohesión 0.18.
 
 ## Documentos
 
@@ -17,7 +17,6 @@ tags:
 - [[knowledge/procesos/arquitecto-procesos|Arquitecto de procesos]]
 - [[processes/catalog/P33-diseno-y-validacion-to-be|P33 · Diseño y validación TO-BE]]
 - [[knowledge/comercial/director-comercial|Director comercial]]
-- [[precedents/README|Biblioteca de precedentes]]
 - [[processes/catalog/P32-descubrimiento-de-procesos|P32 · Descubrimiento de procesos]]
 - [[knowledge/comercial/gestion-clientes|Especialista en éxito de cliente]]
 - [[processes/catalog/P38-gestion-de-despliegue-por-cliente|P38 · Gestión de despliegue por cliente]]
@@ -35,9 +34,7 @@ tags:
 - [[knowledge/comercial/marketing-contenido|Especialista en marketing y contenido]]
 - [[processes/templates/proceso-cliente|<sector> · <proceso>]]
 - [[knowledge/comercial/README|Comercial y clientes]]
-- [[knowledge/metodologias-transversales/consultar-historico|Protocolo: consultar el histórico antes de empezar]]
 - [[claude/habilidades/cualificacion-oportunidad|Cualificación de oportunidad]]
-- [[precedents/plantilla-incidente|Incidente: <título>]]
 - [[knowledge/plantillas/ficha-kpi|KPI: <nombre>]]
 - [[knowledge/metodologias-transversales/guardar|Protocolo: guardar el conocimiento]]
 - [[precedents/plantilla-precedente|<título>]]

@@ -35,10 +35,10 @@ tags:
 
 - [[processes/catalog/P02-clasificacion-y-triaje|P02 · Clasificación y triaje]]
 - [[processes/catalog/P10-aprobacion-humana|P10 · Aprobación humana]]
+- [[processes/catalog/P19-politica-de-uso-y-limites|P19 · Política de uso y límites]]
 - [[processes/catalog/P29-gestion-de-costes-y-capacidad|P29 · Gestión de costes y capacidad]]
 - [[processes/catalog/P01-alta-y-recepcion-de-peticion|P01 · Alta y recepción de petición]]
 - [[processes/catalog/P15-observabilidad-e-incidencias|P15 · Observabilidad e incidencias]]
-- [[processes/catalog/P19-politica-de-uso-y-limites|P19 · Política de uso y límites]]
 - [[processes/catalog/P21-ejecucion-segura-de-herramientas|P21 · Ejecución segura de herramientas]]
 - [[processes/catalog/P30-gestion-de-identidades-y-secretos|P30 · Gestión de identidades y secretos]]
 - [[processes/catalog/P27-gestion-de-proveedores-y-dependencias|P27 · Gestión de proveedores y dependencias]]

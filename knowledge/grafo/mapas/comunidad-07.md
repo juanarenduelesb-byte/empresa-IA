@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 7
-miembros: 43
-cohesion: 0.12
+miembros: 45
+cohesion: 0.13
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 7 · knowledge/ingenieria · Varios · empresa-ia y CEO digital
 
-43 nodos agrupados por el algoritmo de Louvain. Cohesión 0.12.
+45 nodos agrupados por el algoritmo de Louvain. Cohesión 0.13.
 
 ## Documentos
 
@@ -20,6 +20,7 @@ tags:
 - [[knowledge/direccion/decisiones-seguimiento|Responsable de decisiones y seguimiento]]
 - [[knowledge/ingenieria/datos-ia|Arquitecto de datos e IA]]
 - [[knowledge/direccion/bibliotecario|Bibliotecario / responsable de conocimiento]]
+- [[precedents/README|Biblioteca de precedentes]]
 - [[knowledge/ingenieria/arquitecto-tecnico|Arquitecto técnico]]
 - [[knowledge/procesos/automatizacion|Especialista en automatización]]
 - [[knowledge/ingenieria/backend|Especialista backend]]
@@ -29,6 +30,7 @@ tags:
 - [[knowledge/ingenieria/integraciones|Especialista en integraciones]]
 - [[knowledge/agentes/ops|Plataforma y operaciones]]
 - [[integrations/catalog/README|Catálogo de integraciones]]
+- [[knowledge/metodologias-transversales/consultar-historico|Protocolo: consultar el histórico antes de empezar]]
 - [[claude/habilidades/cinco-decisiones|Las cinco decisiones del CEO]]
 - [[claude/habilidades/copias-restauracion|Copias y restauración probada]]
 - [[claude/habilidades/integracion-continua|Integración continua]]

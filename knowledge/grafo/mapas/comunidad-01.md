@@ -31,10 +31,10 @@ tags:
 - [[governance/legal/borradores/README|Borradores legales para abogado (D1)]]
 - [[governance/legal/borradores/01-contrato-marco-servicios|Contrato marco de prestación de servicios · BORRADOR PARA ABOGADO]]
 - [[governance/legal/borradores/02-encargo-tratamiento|Contrato de encargo del tratamiento (art. 28 RGPD) · BORRADOR PARA ABOGADO]]
+- [[knowledge/metodologias-transversales/investigar|Protocolo: investigar fuera]]
 - [[governance/socios/03-preguntas-seguro-rc-y-ciber|M-020 · Preguntas para el corredor: responsabilidad civil profesional y ciberriesgos]]
 - [[governance/legal/borradores/03-acuerdo-confidencialidad|Acuerdo de confidencialidad (mutuo) · BORRADOR PARA ABOGADO]]
 - [[knowledge/plantillas/ficha-fuente|Ficha-fuente]]
-- [[knowledge/metodologias-transversales/investigar|Protocolo: investigar fuera]]
 - [[knowledge/procesos/sectores|Especialistas sectoriales]]
 
 ## Especialistas

@@ -8,7 +8,7 @@ version: "nota del 05/10/2026"
 autoridad: "media"
 vigencia: "historico"
 estado: "validated"
-citada: 4
+citada: 6
 tags:
   - "fuente"
   - "vigencia/historico"
@@ -23,6 +23,8 @@ tags:
 ## Citada en
 
 - [[docs/17-cerebro-y-procesos|17 · Cerebro, conocimiento y procesos: auditoría e informe]]
+- [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]]
 - [[knowledge/administracion-finanzas/administrativo|Especialista administrativo]]
 - [[knowledge/administracion-finanzas/contabilidad|Especialista en contabilidad y facturación]]
+- [[knowledge/metodologias-transversales/investigar|Protocolo: investigar fuera]]
 - [[knowledge/sectores/sector-despachos|Experto en asesorías, gestorías y despachos]]

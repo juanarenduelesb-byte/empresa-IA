@@ -5,18 +5,18 @@ Cómo está conectado el cerebro de Varios: qué sostiene todo, qué temas forma
 
 ## Resumen
 
-- 5280 nodos: seccion 4516, documento 394, fuente 147, habilidad 65, proceso 38, especialista 34, agente 34, decision 33, puerta 12, departamento 7.
-- 7701 relaciones: 64 % EXTRACTADAS (escritas en la fuente), 35 % INFERIDAS (temas compartidos, con puntuación) y 81 AMBIGUAS (para revisar).
+- 5281 nodos: seccion 4517, documento 394, fuente 147, habilidad 65, proceso 38, especialista 34, agente 34, decision 33, puerta 12, departamento 7.
+- 7709 relaciones: 64 % EXTRACTADAS (escritas en la fuente), 35 % INFERIDAS (temas compartidos, con puntuación) y 81 AMBIGUAS (para revisar).
 - 14 comunidades de temas.
 
 ## Nodos centrales
 
 Lo que más cosas conecta. Si cambia, cambia mucho.
 
-1. **Registro de fuentes** (`knowledge/fuentes/registro.md`) · 254 conexiones
+1. **Registro de fuentes** (`knowledge/fuentes/registro.md`) · 255 conexiones
 2. **Registro de decisiones** (`DECISIONS.md`) · 142 conexiones
 3. **Índice del conocimiento de Varios** (`knowledge/INDEX.md`) · 123 conexiones
-4. **Trabajo nocturno de Claude** (`docs/21-trabajo-nocturno.md`) · 117 conexiones
+4. **Trabajo nocturno de Claude** (`docs/21-trabajo-nocturno.md`) · 119 conexiones
 5. **Guia de Arranque Proyecto v1.4 Diseno Cerrado** (`docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado.md`) · 85 conexiones
 6. **Catálogo de procesos P01–P38** (`processes/catalog/README.md`) · 84 conexiones
 7. **L2 (puerta técnica)** · 75 conexiones
@@ -33,9 +33,9 @@ Nodos por los que pasa el camino entre comunidades distintas (intermediación).
 - **Registro de fuentes** · intermediación 0.15 · une la comunidad 1 con 2, 3, 4, 5, 6, 7
 - **Habilidades de los agentes** · intermediación 0.048 · une la comunidad 2 con 0, 3, 4, 5, 6, 7
 - **Registro de decisiones** · intermediación 0.046 · une la comunidad 3 con 1, 2, 4, 5, 6, 7
-- **Trabajo nocturno de Claude** · intermediación 0.037 · une la comunidad 3 con 1, 2, 4, 5, 6, 7
+- **Trabajo nocturno de Claude** · intermediación 0.038 · une la comunidad 3 con 1, 2, 4, 5, 6, 7
 - **L2 (puerta técnica)** · intermediación 0.025 · une la comunidad 12 con 1, 2, 3, 4, 5, 6
-- **Índice del conocimiento de Varios** · intermediación 0.021 · une la comunidad 6 con 1, 2, 3, 4, 5, 7
+- **Índice del conocimiento de Varios** · intermediación 0.02 · une la comunidad 6 con 1, 2, 3, 4, 5, 7
 - **Guia de Arranque Proyecto v1.4 Diseno Cerrado** · intermediación 0.014 · une la comunidad 10 con 2, 3, 4, 7, 8, 9
 - **D-011 · Construir primero, clientes desde el 15/02/2027** · intermediación 0.012 · une la comunidad 5 con 1, 2, 3, 4, 6, 7
 - **Estudios** · intermediación 0.009 · une la comunidad 13 con 1, 2, 3, 4, 5, 6
@@ -72,7 +72,7 @@ Cohesión 0.1 · 97 nodos: Habilidades de los agentes; Administración; Experto 
 
 ### 3 · docs · Registro de decisiones y Trabajo nocturno de Claude
 
-Cohesión 0.08 · 85 nodos: Registro de decisiones; Trabajo nocturno de Claude; Base de datos (D-023, propuesta); Informe de la mañana · 27/11/2026; Plan maestro: la empresa completa, sin que se escape nada; Informe de la mañana · 26/11/2026; Política de uso de inteligencia artificial de Varios · BORRADOR PARA ABOGADO; 17 · Cerebro, conocimiento y procesos: auditoría e informe (y 77 más)
+Cohesión 0.08 · 84 nodos: Registro de decisiones; Trabajo nocturno de Claude; Informe de la mañana · 27/11/2026; Base de datos (D-023, propuesta); Plan maestro: la empresa completa, sin que se escape nada; Informe de la mañana · 26/11/2026; 17 · Cerebro, conocimiento y procesos: auditoría e informe; Política de uso de inteligencia artificial de Varios · BORRADOR PARA ABOGADO (y 76 más)
 
 ### 4 · processes/runbooks · Auditoría de agentes y habilidades frente a los procesos (M-040) y Dependencias entre procesos
 
@@ -100,7 +100,7 @@ Cohesión 0.49 · 37 nodos: P22 · Gestión de errores y reintentos; Catálogo d
 
 ### 10 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Flujo ceo
 
-Cohesión 0.36 · 32 nodos: Guia de Arranque Proyecto v1.4 Diseno Cerrado; Flujo ceo; Ejecucion agentes; Motor conocimiento obsidian; Marco Integral Legal Ciberseguridad IA Espana UE 2026-11-16; 12 · Ciclo de vida de un proyecto con cliente; Comunicaciones estados; Calidad gobierno (y 24 más)
+Cohesión 0.34 · 33 nodos: Guia de Arranque Proyecto v1.4 Diseno Cerrado; Flujo ceo; Ejecucion agentes; Motor conocimiento obsidian; Marco Integral Legal Ciberseguridad IA Espana UE 2026-11-16; 12 · Ciclo de vida de un proyecto con cliente; Comunicaciones estados; Calidad gobierno (y 25 más)
 
 ### 11 · knowledge/administracion-finanzas · Experto en asesorías, gestorías y despachos y Especialista en contabilidad y facturación
 

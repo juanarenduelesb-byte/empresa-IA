@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 3
-miembros: 85
+miembros: 84
 cohesion: 0.08
 tags:
   - "mapa"
@@ -9,18 +9,18 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 3 · docs · Registro de decisiones y Trabajo nocturno de Claude
 
-85 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
+84 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
 
 ## Documentos
 
 - [[DECISIONS|Registro de decisiones]]
 - [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]]
-- [[docs/24-base-de-datos|Base de datos (D-023, propuesta)]]
 - [[docs/informes/2026-11-27|Informe de la mañana · 27/11/2026]]
+- [[docs/24-base-de-datos|Base de datos (D-023, propuesta)]]
 - [[docs/23-plan-maestro|Plan maestro: la empresa completa, sin que se escape nada]]
 - [[docs/informes/2026-11-26|Informe de la mañana · 26/11/2026]]
-- [[governance/legal/borradores/06-politica-uso-ia|Política de uso de inteligencia artificial de Varios · BORRADOR PARA ABOGADO]]
 - [[docs/17-cerebro-y-procesos|17 · Cerebro, conocimiento y procesos: auditoría e informe]]
+- [[governance/legal/borradores/06-politica-uso-ia|Política de uso de inteligencia artificial de Varios · BORRADOR PARA ABOGADO]]
 - [[docs/31-identidad|Identidad y roles: opciones para los socios y, más adelante, los clientes (S3a)]]
 - [[README|Varios — repositorio maestro]]
 - [[docs/09-inventario-documental|Inventario documental]]
@@ -41,7 +41,6 @@ tags:
 - [[docs/07-calidad-infraestructura-y-operacion|Calidad, infraestructura y operación]]
 - [[docs/18-flujo-de-calidad-y-aprendizaje|18 · Flujo de calidad y aprendizaje continuo en la oficina]]
 - [[governance/README|Gobierno, seguridad y legal]]
-- [[docs/03-ceo-digital-y-orquestacion|CEO digital y orquestación]]
 - [[docs/11-cerebro-en-claude|Cerebro en Claude]]
 - [[web/README|Web para clientes (borrador)]]
 - [[claude/instrucciones-proyecto|Instrucciones del proyecto "Varios · Cerebro" en Claude]]

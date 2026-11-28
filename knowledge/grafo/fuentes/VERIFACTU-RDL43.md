@@ -8,7 +8,7 @@ version: "BOE núm. 293, 25/11/2026; en vigor 26/11/2026; convalidación pendien
 autoridad: "alta"
 vigencia: "vigente"
 estado: "validated"
-citada: 6
+citada: 7
 tags:
   - "fuente"
   - "vigencia/vigente"
@@ -26,5 +26,6 @@ tags:
 - [[docs/27-finanzas|Finanzas: forma jurídica, facturación, precio y caja (D2)]]
 - [[knowledge/administracion-finanzas/administrativo|Especialista administrativo]]
 - [[knowledge/administracion-finanzas/contabilidad|Especialista en contabilidad y facturación]]
+- [[knowledge/metodologias-transversales/investigar|Protocolo: investigar fuera]]
 - [[knowledge/sectores/priorizacion|Priorización de sectores]]
 - [[knowledge/sectores/sector-despachos|Experto en asesorías, gestorías y despachos]]

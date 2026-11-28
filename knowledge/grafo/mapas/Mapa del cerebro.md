@@ -30,10 +30,10 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 - [[knowledge/fuentes/registro|Registro de fuentes]] · 249 vecinos
 - [[DECISIONS|Registro de decisiones]] · 143 vecinos
 - [[knowledge/INDEX|Índice del conocimiento de Varios]] · 123 vecinos
-- [[docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado|Guia de Arranque Proyecto v1.4 Diseno Cerrado]] · 85 vecinos
+- [[docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado|Guia de Arranque Proyecto v1.4 Diseno Cerrado]] · 84 vecinos
 - [[processes/catalog/README|Catálogo de procesos P01–P38]] · 83 vecinos
+- [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]] · 76 vecinos
 - L2 (puerta técnica) · 75 vecinos
-- [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]] · 75 vecinos
 - [[CLAUDE|Varios · empresa-ia]] · 71 vecinos
 - [[claude/habilidades/README|Habilidades de los agentes]] · 69 vecinos
 - [[docs/29-autonomia|Mapa de autonomía por proceso, A0–A4 (M-045)]] · 67 vecinos
@@ -53,8 +53,8 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 - [[knowledge/estudios/README|Estudios]] · conecta las comunidades 0, 2, 3, 4, 5, 6
 - [[docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado|Guia de Arranque Proyecto v1.4 Diseno Cerrado]] · conecta las comunidades 2, 3, 4, 7, 8, 9
 - [[knowledge/grafo/decisiones/D-011|D-011 · Construir primero, clientes desde el 15/02/2027]] · conecta las comunidades 0, 2, 3, 4, 6, 7
+- [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]] · conecta las comunidades 0, 4, 5, 6, 7, 10
 - [[knowledge/direccion/ceo-digital|CEO digital]] · conecta las comunidades 0, 2, 3, 4, 6, 7
-- [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]] · conecta las comunidades 0, 4, 5, 6, 7, 12
 
 ## Preguntas abiertas
 

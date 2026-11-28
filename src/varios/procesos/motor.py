@@ -120,6 +120,9 @@ class Motor:
             raise AprobacionInvalida("Usa aprobar(): la entrega tras aprobación exige una persona")
         if enc.estado == "PENDIENTE_APROBACION" and a == "ESCALADO":
             raise TransicionInvalida("PENDIENTE_APROBACION → ESCALADO solo ocurre al caducar la aprobación (N3c)")
+        if enc.estado == "CERRADO" and not (quien.persona and "aprobador" in quien.roles):
+            # Guía v1.4 §4: CERRADO → REABIERTO «solo con motivo, autorización y nueva versión» (repaso del 28/11).
+            raise AprobacionInvalida("Reabrir un encargo cerrado necesita una persona con rol de aprobación")
         if enc.estado == "ESCALADO" and not quien.persona:
             # encargo.json: de ESCALADO sale «una persona identificada» que decide cómo seguir (repaso del 28/11).
             raise AprobacionInvalida("De ESCALADO solo sale una persona que decide cómo seguir")
@@ -128,7 +131,8 @@ class Motor:
             self._comprobar_aprobador(quien, enc)
         if a == "EN_QA":
             enc.qa_conforme = False
-        if a == "RETRABAJO":
+        if a in ("RETRABAJO", "REABIERTO"):
+            # Guía v1.4 §4: reabrir es «con nueva versión»; una aprobación vieja nunca vale para lo que se rehaga.
             enc.version_entregable += 1
         antes = enc.estado
         enc.estado = a

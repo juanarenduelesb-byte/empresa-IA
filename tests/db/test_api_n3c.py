@@ -226,3 +226,20 @@ def test_una_tarea_que_pide_aprobacion_no_se_da_por_hecha_dando_un_rodeo(api, ge
         assert api.post(url, json={"a": "succeeded", "motivo": "x"}, headers=h(quien)).status_code == 409
     assert api.post(url, json={"a": "needs_approval", "motivo": "Corregido"}, headers=h(aprobador)).status_code == 200
     assert api.post(url, json={"a": "succeeded", "motivo": "Visto"}, headers=h(aprobador2)).status_code == 200
+
+
+def test_reabrir_da_nueva_version_y_un_cerrado_pide_autorizacion(api, gente):  # noqa: F811
+    """Guía v1.4 §4: reabrir es con nueva versión y, desde CERRADO, con autorización (repaso del 28/11)."""
+    autor, aprobador, agente = gente["autor"], gente["aprobador"], gente["agente"]
+    enc, ap = _pendiente(api, autor)
+    ok = {"decision": "aprobada", "motivo": "Revisado"}
+    assert api.post(f"/aprobaciones/{ap['id']}/decision", json=ok, headers=h(aprobador)).status_code == 200
+    url = f"/encargos/{enc['id']}/estado"
+    assert api.post(url, json={"a": "CERRADO", "motivo": "Aceptado"}, headers=h(autor)).status_code == 200
+    v = api.get(f"/encargos/{enc['id']}", headers=h(autor)).json()["version"]
+    for quien in (autor, agente):  # sin rol de aprobación, o sin ser persona
+        assert api.post(url, json={"a": "REABIERTO", "motivo": "Lo reabro"}, headers=h(quien)).status_code == 403
+    e = api.get(f"/encargos/{enc['id']}", headers=h(autor)).json()
+    assert e["estado"] == "CERRADO" and e["version"] == v
+    assert api.post(url, json={"a": "REABIERTO", "motivo": "Piden un cambio"}, headers=h(aprobador)).status_code == 200
+    assert api.get(f"/encargos/{enc['id']}", headers=h(autor)).json()["version"] == v + 1

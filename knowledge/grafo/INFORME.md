@@ -5,8 +5,8 @@ Cómo está conectado el cerebro de Varios: qué sostiene todo, qué temas forma
 
 ## Resumen
 
-- 5238 nodos: seccion 4482, documento 390, fuente 143, habilidad 65, proceso 38, especialista 34, agente 34, decision 33, puerta 12, departamento 7.
-- 7572 relaciones: 64 % EXTRACTADAS (escritas en la fuente), 35 % INFERIDAS (temas compartidos, con puntuación) y 40 AMBIGUAS (para revisar).
+- 5239 nodos: seccion 4483, documento 390, fuente 143, habilidad 65, proceso 38, especialista 34, agente 34, decision 33, puerta 12, departamento 7.
+- 7571 relaciones: 64 % EXTRACTADAS (escritas en la fuente), 35 % INFERIDAS (temas compartidos, con puntuación) y 40 AMBIGUAS (para revisar).
 - 14 comunidades de temas.
 
 ## Nodos centrales
@@ -16,10 +16,10 @@ Lo que más cosas conecta. Si cambia, cambia mucho.
 1. **Registro de fuentes** (`knowledge/fuentes/registro.md`) · 249 conexiones
 2. **Registro de decisiones** (`DECISIONS.md`) · 143 conexiones
 3. **Índice del conocimiento de Varios** (`knowledge/INDEX.md`) · 123 conexiones
-4. **Guia de Arranque Proyecto v1.4 Diseno Cerrado** (`docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado.md`) · 85 conexiones
+4. **Guia de Arranque Proyecto v1.4 Diseno Cerrado** (`docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado.md`) · 84 conexiones
 5. **Catálogo de procesos P01–P38** (`processes/catalog/README.md`) · 83 conexiones
-6. **L2 (puerta técnica)** · 75 conexiones
-7. **Trabajo nocturno de Claude** (`docs/21-trabajo-nocturno.md`) · 75 conexiones
+6. **Trabajo nocturno de Claude** (`docs/21-trabajo-nocturno.md`) · 76 conexiones
+7. **L2 (puerta técnica)** · 75 conexiones
 8. **Varios · empresa-ia** (`CLAUDE.md`) · 71 conexiones
 9. **Habilidades de los agentes** (`claude/habilidades/README.md`) · 69 conexiones
 10. **Mapa de autonomía por proceso, A0–A4 (M-045)** (`docs/29-autonomia.md`) · 67 conexiones
@@ -38,8 +38,8 @@ Nodos por los que pasa el camino entre comunidades distintas (intermediación).
 - **Estudios** · intermediación 0.016 · une la comunidad 13 con 0, 2, 3, 4, 5, 6
 - **Guia de Arranque Proyecto v1.4 Diseno Cerrado** · intermediación 0.015 · une la comunidad 10 con 2, 3, 4, 7, 8, 9
 - **D-011 · Construir primero, clientes desde el 15/02/2027** · intermediación 0.011 · une la comunidad 5 con 0, 2, 3, 4, 6, 7
+- **Trabajo nocturno de Claude** · intermediación 0.01 · une la comunidad 3 con 0, 4, 5, 6, 7, 10
 - **CEO digital** · intermediación 0.01 · une la comunidad 9 con 0, 2, 3, 4, 6, 7
-- **Trabajo nocturno de Claude** · intermediación 0.009 · une la comunidad 3 con 0, 4, 5, 6, 7, 12
 
 ## Conexiones sorprendentes
 

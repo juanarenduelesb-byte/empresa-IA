@@ -80,7 +80,8 @@ class Repositorio:
             raise TransicionInvalida(f"{sol.estado} → {a} no está permitida")
         antes = sol.estado
         sol.estado = a
-        if a == "RETRABAJO":
+        if a in ("RETRABAJO", "REABIERTO"):
+            # Guía v1.4 §4: reabrir es «con nueva versión»; una aprobación vieja nunca vale para lo que se rehaga.
             sol.version += 1
         if sol.pospuesto_hasta is not None:
             # Posponer vale para el estado en que se pospuso; al cambiar de estado se pierde (regla de la oficina, N4).
@@ -103,6 +104,9 @@ class Repositorio:
             # Guía v1.4 §4: de aquí solo se sale con un aprobador autorizado y la versión exacta, es decir, decidiendo
             # la aprobación. Un cambio libre la dejaría «pendiente» para siempre y lo podría hacer cualquiera.
             raise TransicionInvalida("Un encargo pendiente de aprobación solo sale con decidir_aprobacion")
+        if sol.estado == "CERRADO" and not (self.quien.persona and "aprobador" in self.quien.roles):
+            # Guía v1.4 §4: CERRADO → REABIERTO «solo con motivo, autorización y nueva versión» (repaso del 28/11).
+            raise AprobacionInvalida("Reabrir un encargo cerrado necesita una persona con rol de aprobación")
         if sol.estado == "ESCALADO" and not self.quien.persona:
             # encargo.json: de ESCALADO sale «una persona identificada» que decide cómo seguir (también tras caducar
             # una aprobación). Un agente que lo devolviera a PLANIFICADO decidiría por ella (repaso del 28/11).

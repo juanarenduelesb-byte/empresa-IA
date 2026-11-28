@@ -162,3 +162,19 @@ def test_de_escalado_solo_sale_una_persona():
     assert e.estado == "ESCALADO" and len(m.auditoria) == n
     m.mover(ANA, e.id, "PLANIFICADO", "decido seguir")
     assert e.estado == "PLANIFICADO"
+
+
+def test_reabrir_un_cerrado_pide_autorizacion_y_da_nueva_version():
+    """Guía v1.4 §4: CERRADO → REABIERTO «solo con motivo, autorización y nueva versión» (repaso del 28/11)."""
+    m = Motor()
+    e = llevar_a_qa(m, ANA, "bajo")
+    m.resultado_qa(ANA, e.id, True, "cumple")
+    m.mover(ANA, e.id, "ENTREGADO", "QA conforme")
+    m.mover(ANA, e.id, "CERRADO", "aceptado")
+    v = e.version_entregable
+    for quien in (ANA, AGENTE):  # sin rol de aprobación, o sin ser persona
+        with pytest.raises(AprobacionInvalida):
+            m.mover(quien, e.id, "REABIERTO", "lo reabro")
+    assert e.estado == "CERRADO" and e.version_entregable == v
+    m.mover(LUIS, e.id, "REABIERTO", "el cliente pide un cambio")
+    assert e.estado == "REABIERTO" and e.version_entregable == v + 1

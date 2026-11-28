@@ -62,3 +62,12 @@ def test_navegacion_apunta_a_archivos_existentes():
 
     for ruta in set(re.findall(r'"((?:knowledge|processes|precedents|docs)/[^"#]+\.(?:md|json))"', texto)):
         assert (RAIZ / ruta).exists(), ruta
+
+
+def test_no_hay_archivos_env_subidos():
+    assert check_repo.entornos_subidos() == []
+
+
+def test_un_env_subido_se_ve_aunque_no_tenga_patron_de_secreto():
+    rastreados = [".env", "docker/.env.local", ".env.example", "docs/entorno.md", "src/.envoltorio.py"]
+    assert check_repo.entornos_subidos(rastreados) == [".env", "docker/.env.local"]

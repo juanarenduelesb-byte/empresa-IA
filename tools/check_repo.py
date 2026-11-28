@@ -11,6 +11,7 @@
 from __future__ import annotations
 
 import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -94,6 +95,18 @@ def secretos(raiz: Path = RAIZ) -> list[str]:
     return sorted(hallados)
 
 
+def entornos_subidos(rastreados: list[str] | None = None) -> list[str]:
+    """Un `.env` subido al repositorio lleva contraseñas aunque ningún patrón de `secretos()` las reconozca.
+
+    `.gitignore` los excluye, pero `git add -f` se lo salta (repaso del 28/11). Solo vale `.env.example`.
+    """
+    if rastreados is None:
+        salida = subprocess.run(["git", "ls-files", "-z"], cwd=RAIZ, capture_output=True, check=True).stdout
+        rastreados = [x for x in salida.decode("utf-8").split("\0") if x]
+    return sorted(r for r in rastreados
+                  if re.fullmatch(r"\.env(\..+)?", Path(r).name) and Path(r).name != ".env.example")
+
+
 def agentes() -> list[str]:
     import agentes_gen
 
@@ -110,6 +123,7 @@ def main() -> int:
         "fichas incompletas": fichas_incompletas(),
         "fuentes inexistentes": fuentes_inexistentes(),
         "posibles secretos": secretos(),
+        "archivos .env subidos": entornos_subidos(),
     }
     total = 0
     for nombre, lista in problemas.items():

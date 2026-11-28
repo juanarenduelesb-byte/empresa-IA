@@ -1756,6 +1756,20 @@
    "consultada": "2026-11-27"
   },
   {
+   "id": "DOCKER-PUERTOS",
+   "titulo": "Docker: Port publishing and mapping",
+   "organismo": "Docker (documentación oficial)",
+   "url": "https://docs.docker.com/engine/network/port-publishing/",
+   "tipo": "documentacion-producto",
+   "jurisdiccion": "—",
+   "version": "consultado 28/11/2026",
+   "autoridad": "media",
+   "vigencia": "vigente",
+   "estado": "draft",
+   "consultada": "2026-11-28",
+   "nota": "«Publishing container ports is insecure by default.» Por defecto publica en todas las direcciones del ordenador (0.0.0.0 y [::]); con 127.0.0.1 «only the Docker host can access the published container port». Base de publicar la base y la API solo en 127.0.0.1 en docker-compose.yml (repaso del 28/11)."
+  },
+  {
    "id": "GEPA-2026",
    "titulo": "GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning (Agrawal et al., ICLR 2026, ponencia oral)",
    "organismo": "UC Berkeley, Stanford, Databricks y otros",

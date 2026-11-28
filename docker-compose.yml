@@ -6,7 +6,8 @@ services:
       POSTGRES_DB: varios
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Define POSTGRES_PASSWORD en .env}
       VARIOS_APP_PASSWORD: ${VARIOS_APP_PASSWORD:?Define VARIOS_APP_PASSWORD en .env}
-    ports: ["5432:5432"]
+    # Solo en este ordenador: Docker publica por defecto en todas las direcciones (DOCKER-PUERTOS).
+    ports: ["127.0.0.1:5432:5432"]
     volumes:
       - datos:/var/lib/postgresql/data
       - ./docker/postgres:/docker-entrypoint-initdb.d:ro
@@ -23,6 +24,6 @@ services:
       VARIOS_DATABASE_URL: postgresql+psycopg://varios_app:${VARIOS_APP_PASSWORD}@db:5432/varios
       VARIOS_DATABASE_URL_ADMIN: postgresql+psycopg://postgres:${POSTGRES_PASSWORD}@db:5432/varios
       VARIOS_JWT_SECRETO: ${VARIOS_JWT_SECRETO:?Define VARIOS_JWT_SECRETO en .env}
-    ports: ["8000:8000"]
+    ports: ["127.0.0.1:8000:8000"]
 volumes:
   datos:

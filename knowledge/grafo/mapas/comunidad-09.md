@@ -1,47 +1,61 @@
 ---
 tipo: "mapa"
 comunidad: 9
-miembros: 36
-cohesion: 0.21
+miembros: 37
+cohesion: 0.2
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 9 · knowledge/plantillas · Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue y Matriz de aprobaciones · BORRADOR
+# Comunidad 9 · processes/catalog · Índice del conocimiento de Varios y P32 · Descubrimiento de procesos
 
-36 nodos agrupados por el algoritmo de Louvain. Cohesión 0.21.
+37 nodos agrupados por el algoritmo de Louvain. Cohesión 0.2.
 
 ## Documentos
 
-- [[docs/fuentes/Atlas_Evolucion_v1.1_Modelo_Operativo_Procesos_y_Despliegue|Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue]]
-- [[governance/legal/borradores/05-matriz-aprobaciones|Matriz de aprobaciones · BORRADOR]]
-- [[knowledge/plantillas/entregables/README|Plantillas de entregables al cliente (E1)]]
-- [[precedents/projects/caso-correduria-atalaya/entregables/01-propuesta-diagnostico|Propuesta de diagnóstico · Atalaya Correduría de Seguros (FICTICIA)]]
-- [[knowledge/plantillas/entregables/rubrica|Rúbrica de calidad de entregables y listas de comprobación (C3)]]
-- [[knowledge/plantillas/entregables/01-propuesta-diagnostico|Propuesta de diagnóstico · (Cliente)]]
-- [[docs/08-roadmap-y-decisiones|Roadmap y decisiones]]
-- [[knowledge/plantillas/ficha-cliente|Plantilla · Ficha de cliente]]
-- [[knowledge/plantillas/entregables/02-informe-diagnostico|Informe de diagnóstico · (Cliente) · (Proceso)]]
-- [[knowledge/plantillas/entregables/03-diseno-to-be|Diseño del proceso nuevo (TO-BE) · (Cliente) · (Proceso)]]
-- [[knowledge/plantillas/entregables/04-plan-piloto|Plan de piloto · (Cliente) · (Proceso)]]
-- [[knowledge/metodologias-transversales/guion-validacion-semanal|Guion de la conversación semanal de validación]]
-- [[processes/templates/proceso-cliente|<sector> · <proceso>]]
-- [[knowledge/metodologias-transversales/cuestionario-descubrimiento|Cuestionario de descubrimiento por puertas (G0–G2)]]
-- [[docs/05-agentes-procesos-e-integraciones|Agentes, procesos e integraciones]]
-- [[precedents/projects/caso-correduria-atalaya/entregables/01-propuesta-diagnostico.revision|Revisión con la rúbrica C3 · Propuesta de diagnóstico de Atalaya (FICTICIA)]]
-- [[knowledge/plantillas/entregables/05-informe-mensual-operacion|Informe mensual de operación · (Cliente) · (Mes)]]
-- [[knowledge/glosario/README|Glosario]]
-- [[knowledge/metodologias-transversales/README|Metodologías transversales]]
-- [[docs/01-vision-y-modelo-operativo|Visión y modelo operativo]]
-- [[knowledge/metodologias-transversales/contrastar|Protocolo: contrastar el conocimiento interno y el externo]]
-- [[knowledge/plantillas/entregables/06-acta-reunion|Acta de reunión · (Cliente) · (Tema) · (Fecha)]]
+- [[knowledge/INDEX|Índice del conocimiento de Varios]]
+- [[processes/catalog/P33-diseno-y-validacion-to-be|P33 · Diseño y validación TO-BE]]
+- [[knowledge/comercial/director-comercial|Director comercial]]
+- [[processes/catalog/P32-descubrimiento-de-procesos|P32 · Descubrimiento de procesos]]
+- [[knowledge/comercial/gestion-clientes|Especialista en éxito de cliente]]
+- [[processes/catalog/P38-gestion-de-despliegue-por-cliente|P38 · Gestión de despliegue por cliente]]
+- [[processes/catalog/P37-medicion-de-rendimiento-y-valor|P37 · Medición de rendimiento y valor]]
+- [[processes/catalog/P31-calificacion-de-oportunidad|P31 · Calificación de oportunidad]]
+- [[knowledge/procesos/metricas|Especialista en métricas]]
+- [[processes/catalog/P34-gestion-de-definiciones-de-proceso|P34 · Gestión de definiciones de proceso]]
+- [[knowledge/comercial/propuestas-licitaciones|Especialista en propuestas y licitaciones]]
+- [[processes/catalog/P35-gestion-de-instancias-y-excepciones|P35 · Gestión de instancias y excepciones]]
+- [[docs/00-negocio|Negocio]]
+- [[knowledge/plantillas/README|Plantillas]]
+- [[knowledge/comercial/marketing-contenido|Especialista en marketing y contenido]]
+- [[knowledge/comercial/prospeccion|Especialista en prospección]]
+- [[knowledge/comercial/README|Comercial y clientes]]
+- [[knowledge/metodologias-transversales/consultar-historico|Protocolo: consultar el histórico antes de empezar]]
+- [[claude/habilidades/cualificacion-oportunidad|Cualificación de oportunidad]]
+- [[knowledge/metodologias-transversales/guardar|Protocolo: guardar el conocimiento]]
+- [[precedents/plantilla-precedente|<título>]]
+- [[knowledge/plantillas/ficha-oportunidad|Oportunidad: <empresa> (ejemplo inventado hasta que exista una real)]]
+- [[knowledge/plantillas/entrada-decision|Entrada-decision]]
+- [[knowledge/plantillas/ficha-proveedor|Proveedor: <nombre>]]
+- [[knowledge/plantillas/ficha-conocimiento|Título]]
+- [[knowledge/plantillas/ficha-investigacion|Investigación: <pregunta>]]
 
-## Decisiones
+## Procesos
 
-- [[knowledge/grafo/decisiones/D-009|D-009 · Unificación de puertas y estados]]
-- [[knowledge/grafo/decisiones/D-002|D-002 · Modelo matricial]]
+- [[processes/catalog/P32-descubrimiento-de-procesos|P32 · Descubrimiento de procesos]]
+- [[processes/catalog/P38-gestion-de-despliegue-por-cliente|P38 · Gestión de despliegue por cliente]]
+- [[processes/catalog/P31-calificacion-de-oportunidad|P31 · Calificación de oportunidad]]
+- [[processes/catalog/P37-medicion-de-rendimiento-y-valor|P37 · Medición de rendimiento y valor]]
+
+## Especialistas
+
+- [[knowledge/procesos/metricas|Especialista en métricas]]
+- [[knowledge/comercial/gestion-clientes|Especialista en éxito de cliente]]
+- [[knowledge/comercial/director-comercial|Director comercial]]
+- [[knowledge/comercial/propuestas-licitaciones|Especialista en propuestas y licitaciones]]
+- [[knowledge/comercial/prospeccion|Especialista en prospección]]
+- [[knowledge/comercial/marketing-contenido|Especialista en marketing y contenido]]
 
 ## Fuentes
 
-- [[knowledge/grafo/fuentes/LEI-VSM|LEI-VSM · Value Stream Mapping (léxico del Lean Enterprise Institute)]]
-- [[knowledge/grafo/fuentes/MOM-TEST|MOM-TEST · The Mom Test (Rob Fitzpatrick): cómo hablar con clientes sin que te mientan]]
+- [[knowledge/grafo/fuentes/MEDDICC|MEDDICC · MEDDIC/MEDDPICC: método de cualificación B2B]]

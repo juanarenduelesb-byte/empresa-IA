@@ -137,6 +137,7 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 | [ENTRA-EXTERNAL-ID-PRECIOS](#entra-external-id-precios) | Microsoft Entra External ID pricing | documentacion-producto | media | vigente | draft |
 | [AUTHLIB](#authlib) | Authlib: Python Authentication (documentación y licencias) | documentacion-producto | media | vigente | draft |
 | [REDIS-EXPIRE](#redis-expire) | Redis: comando EXPIRE (cómo caducan las claves) | documentacion-producto | media | vigente | draft |
+| [DOCKER-PUERTOS](#docker-puertos) | Docker: Port publishing and mapping | documentacion-producto | media | vigente | draft |
 | [GEPA-2026](#gepa-2026) | GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning (Agrawal et al., ICLR 2026, ponencia oral) | recomendacion-tecnica | media | vigente | draft |
 | [NEAT-2002](#neat-2002) | Neuroevolution of augmenting topologies (NEAT) | buena-practica | baja | vigente | draft |
 | [LANGFUSE-CLOUD](#langfuse-cloud) | Langfuse Cloud: planes y precios | documentacion-producto | media | vigente | draft |
@@ -1448,6 +1449,16 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 - **Consultada:** 2026-11-27 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
 - **Nota:** «Redis keys are expired in two ways: a passive way and an active way.» «A key is passively expired when a client tries to access it and the key is timed out.» Base de la caducidad perezosa de las aprobaciones en la API (D-031). Es una copia de la documentación, no redis.io.
+
+<a id="docker-puertos"></a>
+### DOCKER-PUERTOS
+- **Título:** Docker: Port publishing and mapping
+- **Autor u organismo:** Docker (documentación oficial)
+- **URL:** <https://docs.docker.com/engine/network/port-publishing/>
+- **Tipo:** documentacion-producto · **Jurisdicción:** — · **Versión o fecha:** consultado 28/11/2026
+- **Consultada:** 2026-11-28 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** «Publishing container ports is insecure by default.» Por defecto publica en todas las direcciones del ordenador (0.0.0.0 y [::]); con 127.0.0.1 «only the Docker host can access the published container port». Base de publicar la base y la API solo en 127.0.0.1 en docker-compose.yml (repaso del 28/11).
 
 <a id="gepa-2026"></a>
 ### GEPA-2026

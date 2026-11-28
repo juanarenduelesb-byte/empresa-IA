@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 11
-miembros: 27
-cohesion: 0.21
+miembros: 31
+cohesion: 0.19
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 11 · knowledge/administracion-finanzas · Experto en asesorías, gestorías y despachos y Especialista en contabilidad y facturación
 
-27 nodos agrupados por el algoritmo de Louvain. Cohesión 0.21.
+31 nodos agrupados por el algoritmo de Louvain. Cohesión 0.19.
 
 ## Documentos
 
@@ -17,6 +17,7 @@ tags:
 - [[knowledge/administracion-finanzas/contabilidad|Especialista en contabilidad y facturación]]
 - [[knowledge/administracion-finanzas/direccion-financiera|Director financiero (CFO)]]
 - [[knowledge/administracion-finanzas/administrativo|Especialista administrativo]]
+- [[docs/27-finanzas|Finanzas: forma jurídica, facturación, precio y caja (D2)]]
 - [[knowledge/administracion-finanzas/financiero|Especialista financiero]]
 - [[knowledge/administracion-finanzas/README|Administración y finanzas]]
 
@@ -46,3 +47,6 @@ tags:
 - [[knowledge/grafo/fuentes/CDTI-NEOTEC-2026|CDTI-NEOTEC-2026 · Programa NEOTEC 2026 (CDTI)]]
 - [[knowledge/grafo/fuentes/ENISA-2026|ENISA-2026 · ENISA: préstamos participativos (líneas 2026)]]
 - [[knowledge/grafo/fuentes/LIVA-37-1992|LIVA-37-1992 · Ley 37/1992, del Impuesto sobre el Valor Añadido]]
+- [[knowledge/grafo/fuentes/AEAT-IS-TIPOS|AEAT-IS-TIPOS · Impuesto sobre Sociedades: tipo impositivo (microempresas, reducida dimensión y general)]]
+- [[knowledge/grafo/fuentes/LSC-ART4|LSC-ART4 · Ley de Sociedades de Capital (RDLeg 1/2010), art. 4: capital mínimo]]
+- [[knowledge/grafo/fuentes/SEGSOC-RETA-2026|SEGSOC-RETA-2026 · Cotización de trabajadores autónomos 2026 y encuadramiento de socios con control efectivo]]

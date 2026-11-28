@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 3
-miembros: 78
+miembros: 81
 cohesion: 0.09
 tags:
   - "mapa"
@@ -9,21 +9,22 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 3 · docs · Registro de decisiones y Trabajo nocturno de Claude
 
-78 nodos agrupados por el algoritmo de Louvain. Cohesión 0.09.
+81 nodos agrupados por el algoritmo de Louvain. Cohesión 0.09.
 
 ## Documentos
 
 - [[DECISIONS|Registro de decisiones]]
 - [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]]
 - [[CLAUDE|Varios · empresa-ia]]
-- [[docs/informes/2026-11-27|Informe de la mañana · 27/11/2026]]
 - [[docs/24-base-de-datos|Base de datos (D-023, propuesta)]]
+- [[docs/informes/2026-11-27|Informe de la mañana · 27/11/2026]]
 - [[docs/23-plan-maestro|Plan maestro: la empresa completa, sin que se escape nada]]
 - [[docs/informes/2026-11-26|Informe de la mañana · 26/11/2026]]
-- [[docs/17-cerebro-y-procesos|17 · Cerebro, conocimiento y procesos: auditoría e informe]]
 - [[governance/legal/borradores/06-politica-uso-ia|Política de uso de inteligencia artificial de Varios · BORRADOR PARA ABOGADO]]
+- [[docs/17-cerebro-y-procesos|17 · Cerebro, conocimiento y procesos: auditoría e informe]]
 - [[docs/31-identidad|Identidad y roles: opciones para los socios y, más adelante, los clientes (S3a)]]
 - [[README|Varios — repositorio maestro]]
+- [[docs/10-plan-12-semanas|Plan de construcción · 18/11/2026 → 12/02/2027]]
 - [[docs/22-plan-hasta-febrero|Plan de trabajo diario · 26/11/2026 → 28/02/2027]]
 - [[docs/25-portal-interno|Portal interno: auditoría de la oficina y distribución propuesta (F1)]]
 - [[knowledge/identidad/forma-de-trabajar|Forma de trabajar]]
@@ -33,6 +34,7 @@ tags:
 - [[docs/19-obsidian|Obsidian: el cerebro abierto en tu equipo]]
 - [[docs/26-web-clientes|Web para clientes: estudio de referencias, estructura y textos (F2)]]
 - [[governance/legal/borradores/04-anexo-uso-ia|Anexo de uso de inteligencia artificial · BORRADOR PARA ABOGADO]]
+- [[governance/socios/02-acuerdo-de-socios-puntos|M-003 · Acuerdo de socios: lo que tenéis que decidir]]
 - [[Inicio|Inicio · cerebro de Varios]]
 - [[docs/18-flujo-de-calidad-y-aprendizaje|18 · Flujo de calidad y aprendizaje continuo en la oficina]]
 - [[web/README|Web para clientes (borrador)]]
@@ -88,6 +90,7 @@ tags:
 - [[knowledge/grafo/fuentes/ZAPIER-HITL|ZAPIER-HITL · Zapier: Human in the Loop (pedir aprobación para seguir)]]
 - [[knowledge/grafo/fuentes/AUTHENTIK-REPO|AUTHENTIK-REPO · Repositorio goauthentik/authentik]]
 - [[knowledge/grafo/fuentes/BASECAMP-5|BASECAMP-5 · Basecamp 5: inicio orientado a la acción]]
+- [[knowledge/grafo/fuentes/DOCKER-PUERTOS|DOCKER-PUERTOS · Docker: Port publishing and mapping]]
 - [[knowledge/grafo/fuentes/ENTRA-EXTERNAL-ID-PRECIOS|ENTRA-EXTERNAL-ID-PRECIOS · Microsoft Entra External ID pricing]]
 - [[knowledge/grafo/fuentes/GEPA-2026|GEPA-2026 · GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning (Agrawal et al., ICLR 2026, ponencia oral)]]
 - [[knowledge/grafo/fuentes/KEYCLOAK-DB|KEYCLOAK-DB · Keycloak: Configuring the database]]

@@ -39,7 +39,7 @@ def test_todo_dato_dice_de_donde_sale():
             assert d is None or (d.base and d.fuente)
 
 
-@pytest.mark.parametrize("texto", ["Gerente (gerente@correduria-inventada.es)", "Gerente, móvil 612 345 678",
+@pytest.mark.parametrize("texto", ["Gerente (gerente@correduria-inventada.invalid)", "Gerente, móvil 612 345 678",
                                    "Tramitadora +34 912345678", "Responsable con DNI 12345678Z", "NIE X1234567L"])
 def test_ningun_texto_de_la_ficha_admite_correos_telefonos_ni_dni(texto):
     """Repaso del 28/11: antes solo se miraba el archivo de ejemplo; el modelo admitía «Gerente, móvil 612…»."""

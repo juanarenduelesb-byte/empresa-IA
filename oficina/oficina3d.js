@@ -44,7 +44,7 @@ export function mount(host, bridge) {
     world = buildOffice({ night, depts });
     lights(world.scene, renderer, night, depts);
     renderer.toneMappingExposure = night ? 1.0 : 0.94;
-    renderer.setClearColor(night ? '#141518' : '#F4F1EA', 1);
+    renderer.setClearColor(night ? '#0B0B0F' : '#F5F5F3', 1);
     cam = camera(W, H, target, dist);
     comp = makeComposer(renderer, world.scene, cam, W, H, night, quality < 1); gtao = comp.gtao;
     if (quality >= 2) shadows2048();
@@ -332,7 +332,7 @@ export function mount(host, bridge) {
   function flashPath(path) {
     if (pathLine) { world.scene.remove(pathLine); pathLine.geometry.dispose(); }
     const g = new THREE.BufferGeometry().setFromPoints(path.map((p) => new THREE.Vector3(p.x, 0.03, p.y)));
-    pathLine = new THREE.Line(g, new THREE.LineDashedMaterial({ color: '#7A1F2E', dashSize: 0.25, gapSize: 0.18 })); pathLine.computeLineDistances();
+    pathLine = new THREE.Line(g, new THREE.LineDashedMaterial({ color: '#4646F0', dashSize: 0.25, gapSize: 0.18 })); pathLine.computeLineDistances();
     world.scene.add(pathLine); const pl = pathLine;
     setTimeout(() => { if (pathLine === pl) { world.scene.remove(pl); pl.geometry.dispose(); pathLine = null; dirty = true; } }, 1000);
   }

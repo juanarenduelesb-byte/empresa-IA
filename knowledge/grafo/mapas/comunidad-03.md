@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 3
-miembros: 85
+miembros: 89
 cohesion: 0.08
 tags:
   - "mapa"
@@ -9,23 +9,22 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 3 · docs · Registro de decisiones y Trabajo nocturno de Claude
 
-85 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
+89 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
 
 ## Documentos
 
 - [[DECISIONS|Registro de decisiones]]
 - [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]]
-- [[CLAUDE|Varios · empresa-ia]]
 - [[docs/informes/2026-11-27|Informe de la mañana · 27/11/2026]]
 - [[docs/24-base-de-datos|Base de datos (D-023, propuesta)]]
 - [[docs/23-plan-maestro|Plan maestro: la empresa completa, sin que se escape nada]]
 - [[docs/informes/2026-11-26|Informe de la mañana · 26/11/2026]]
-- [[docs/17-cerebro-y-procesos|17 · Cerebro, conocimiento y procesos: auditoría e informe]]
 - [[governance/legal/borradores/06-politica-uso-ia|Política de uso de inteligencia artificial de Varios · BORRADOR PARA ABOGADO]]
+- [[docs/17-cerebro-y-procesos|17 · Cerebro, conocimiento y procesos: auditoría e informe]]
 - [[docs/31-identidad|Identidad y roles: opciones para los socios y, más adelante, los clientes (S3a)]]
 - [[README|Varios — repositorio maestro]]
-- [[docs/10-plan-12-semanas|Plan de construcción · 18/11/2026 → 12/02/2027]]
 - [[docs/22-plan-hasta-febrero|Plan de trabajo diario · 26/11/2026 → 28/02/2027]]
+- [[knowledge/estudios/README|Estudios]]
 - [[docs/25-portal-interno|Portal interno: auditoría de la oficina y distribución propuesta (F1)]]
 - [[knowledge/identidad/forma-de-trabajar|Forma de trabajar]]
 - [[docs/30-inventario-web|Inventario de la web interna (site/) frente a la web para clientes (N5)]]
@@ -35,6 +34,7 @@ tags:
 - [[docs/09-inventario-documental|Inventario documental]]
 - [[governance/legal/borradores/04-anexo-uso-ia|Anexo de uso de inteligencia artificial · BORRADOR PARA ABOGADO]]
 - [[governance/socios/01-marca-esclusa-o-varios|M-002 · ¿Una sola marca: Esclusa o Varios?]]
+- [[integrations/README|Integraciones]]
 - [[governance/socios/02-acuerdo-de-socios-puntos|M-003 · Acuerdo de socios: lo que tenéis que decidir]]
 - [[Inicio|Inicio · cerebro de Varios]]
 - [[governance/socios/README|Decisiones de los socios (borradores)]]
@@ -43,9 +43,14 @@ tags:
 - [[web/README|Web para clientes (borrador)]]
 - [[docs/07-calidad-infraestructura-y-operacion|Calidad, infraestructura y operación]]
 - [[docs/18-flujo-de-calidad-y-aprendizaje|18 · Flujo de calidad y aprendizaje continuo en la oficina]]
+- [[integrations/contracts/README|Contratos de datos]]
 - [[docs/11-cerebro-en-claude|Cerebro en Claude]]
+- [[knowledge/estudios/2026-11-26-prospectos-pymes-alvaro/README|Estudio de prospectos: automatización para pymes (Álvaro, noviembre de 2026)]]
+- [[integrations/tests/README|Pruebas de integración]]
 - [[claude/instrucciones-proyecto|Instrucciones del proyecto "Varios · Cerebro" en Claude]]
 - [[docs/informes/README|Informes de la mañana]]
+- [[knowledge/README|Conocimiento]]
+- [[integrations/connectors/README|Conectores]]
 
 ## Decisiones
 
@@ -57,13 +62,12 @@ tags:
 - [[knowledge/grafo/decisiones/D-026|D-026 · Cada agente sirve a un proceso medido: de 34 se quedan 22]]
 - [[knowledge/grafo/decisiones/D-025|D-025 · La oficina se organiza en siete secciones y se abre en Inicio]]
 - [[knowledge/grafo/decisiones/D-028|D-028 · La oficina guarda en la API: identidad por token firmado y PyJWT]]
-- [[knowledge/grafo/decisiones/D-022|D-022 · Trabajo nocturno de Claude con plan diario e informe de la mañana]]
-- [[knowledge/grafo/decisiones/D-029|D-029 · El trabajo nocturno de Claude sube directo a `main`, sin propuesta de cambios]]
 - [[knowledge/grafo/decisiones/D-030|D-030 · La oficina mejora evolucionando sus instrucciones contra un examen, no sus modelos]]
 - [[knowledge/grafo/decisiones/D-031|D-031 · Posponer, caducar y tareas se guardan en la API; una aprobación caducada vuelve como pregunta]]
+- [[knowledge/grafo/decisiones/D-022|D-022 · Trabajo nocturno de Claude con plan diario e informe de la mañana]]
+- [[knowledge/grafo/decisiones/D-029|D-029 · El trabajo nocturno de Claude sube directo a `main`, sin propuesta de cambios]]
 - [[knowledge/grafo/decisiones/D-033|D-033 · Identidad: Keycloak autoalojado para el piloto; los roles siguen en la base de Varios]]
 - [[knowledge/grafo/decisiones/D-003|D-003 · Obsidian como interfaz humana]]
-- [[knowledge/grafo/decisiones/D-006|D-006 · Primer proceso piloto]]
 - [[knowledge/grafo/decisiones/D-021|D-021 · El cerebro se abre en Obsidian: el repositorio es el vault]]
 - [[knowledge/grafo/decisiones/D-015|D-015 · Entregables en archivos reales, memoria y Google Drive en la oficina de agentes]]
 - [[knowledge/grafo/decisiones/D-007|D-007 · Nombre provisional: Varios]]

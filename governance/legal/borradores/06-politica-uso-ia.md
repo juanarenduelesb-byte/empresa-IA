@@ -45,7 +45,7 @@ Como en la AEPD, en las herramientas externas que no controla Varios rige la pro
 | Subir un nivel de autonomía a un proceso | Un socio, si la métrica cumple el umbral durante el periodo fijado; lo externo, legal o financiero no pasa de A2 (D-027) | `processes/autonomia.json` |
 | Usar datos de un nivel superior | Los dos socios | Matriz, §1 |
 | Enviar a un cliente o a un tercero algo hecho con IA | Un socio, que lo revisa antes | Auditoría de la oficina |
-| Cambiar el modelo o las instrucciones de un sistema en servicio | Un socio, tras pasar el banco de casos; se comunica al cliente (anexo de IA, §7.3) | Registro del cambio |
+| Cambiar el modelo o las instrucciones de un sistema en servicio | Un socio, tras pasar el banco de casos; en procesos con techo A2 (lo externo, legal, financiero o contractual), los dos (D-030, regla 4). Se comunica al cliente (anexo de IA, §7.3) | Registro del cambio, con su versión y su nota del examen (D-030, regla 5) |
 
 Nadie aprueba su propio trabajo y un agente nunca aprueba (matriz; `tests/test_motor.py` y `tests/db/test_api_oficina.py`).
 

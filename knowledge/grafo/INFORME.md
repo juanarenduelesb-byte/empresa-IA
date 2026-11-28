@@ -6,8 +6,8 @@ Cómo está conectado el cerebro de Varios: qué sostiene todo, qué temas forma
 ## Resumen
 
 - 5275 nodos: seccion 4511, documento 394, fuente 147, habilidad 65, proceso 38, especialista 34, agente 34, decision 33, puerta 12, departamento 7.
-- 7667 relaciones: 64 % EXTRACTADAS (escritas en la fuente), 35 % INFERIDAS (temas compartidos, con puntuación) y 81 AMBIGUAS (para revisar).
-- 15 comunidades de temas.
+- 7674 relaciones: 64 % EXTRACTADAS (escritas en la fuente), 35 % INFERIDAS (temas compartidos, con puntuación) y 81 AMBIGUAS (para revisar).
+- 13 comunidades de temas.
 
 ## Nodos centrales
 
@@ -37,9 +37,9 @@ Nodos por los que pasa el camino entre comunidades distintas (intermediación).
 - **L2 (puerta técnica)** · intermediación 0.025 · une la comunidad 12 con 1, 2, 3, 4, 5, 6
 - **Índice del conocimiento de Varios** · intermediación 0.021 · une la comunidad 6 con 1, 2, 3, 4, 5, 7
 - **Guia de Arranque Proyecto v1.4 Diseno Cerrado** · intermediación 0.014 · une la comunidad 10 con 2, 3, 4, 7, 8, 9
-- **D-011 · Construir primero, clientes desde el 15/02/2027** · intermediación 0.012 · une la comunidad 5 con 1, 2, 3, 4, 6, 8
-- **Estudios** · intermediación 0.009 · une la comunidad 14 con 1, 2, 3, 4, 5, 6
-- **CEO digital** · intermediación 0.009 · une la comunidad 13 con 1, 2, 3, 4, 6, 7
+- **D-011 · Construir primero, clientes desde el 15/02/2027** · intermediación 0.012 · une la comunidad 5 con 1, 2, 3, 4, 6, 7
+- **Estudios** · intermediación 0.009 · une la comunidad 3 con 1, 2, 4, 5, 6, 7
+- **CEO digital** · intermediación 0.009 · une la comunidad 7 con 1, 2, 3, 4, 6, 8
 
 ## Conexiones sorprendentes
 
@@ -60,19 +60,19 @@ Secciones de carpetas y comunidades distintas que tratan lo mismo y no se enlaza
 
 ### 0 · claude/habilidades · Legal y privacidad y Arquitecto de procesos
 
-Cohesión 0.05 · 106 nodos: Legal y privacidad; Arquitecto de procesos; Seguridad; Coordinación sectorial · Seguros; Director financiero; Jefe comercial; Separar hecho, hipótesis y propuesta; Arquitecto técnico (y 98 más)
+Cohesión 0.05 · 108 nodos: Legal y privacidad; Arquitecto de procesos; Seguridad; Coordinación sectorial · Seguros; Director financiero; Jefe comercial; Separar hecho, hipótesis y propuesta; Arquitecto técnico (y 100 más)
 
 ### 1 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros
 
-Cohesión 0.07 · 95 nodos: Registro de fuentes; Coordinación sectorial y seguros; Experto en sanidad privada; Responsable de cumplimiento normativo; Experto en servicios financieros no bancarios; Especialista legal y privacidad; Catálogo de excepciones al abrir un siniestro; Experto en logística y transporte (y 87 más)
+Cohesión 0.06 · 100 nodos: Registro de fuentes; Coordinación sectorial y seguros; Experto en sanidad privada; Responsable de cumplimiento normativo; Experto en servicios financieros no bancarios; Especialista legal y privacidad; Catálogo de excepciones al abrir un siniestro; Experto en logística y transporte (y 92 más)
 
 ### 2 · claude/habilidades · Habilidades de los agentes y Administración
 
-Cohesión 0.1 · 95 nodos: Habilidades de los agentes; Administración; Experto en asesorías y despachos; Backend; Agentes de la oficina; Arquitecto de procesos; Jefe comercial; Director financiero (y 87 más)
+Cohesión 0.1 · 96 nodos: Habilidades de los agentes; Administración; Experto en asesorías y despachos; Backend; Agentes de la oficina; Arquitecto de procesos; Jefe comercial; Director financiero (y 88 más)
 
 ### 3 · docs · Registro de decisiones y Trabajo nocturno de Claude
 
-Cohesión 0.08 · 85 nodos: Registro de decisiones; Trabajo nocturno de Claude; Varios · empresa-ia; Informe de la mañana · 27/11/2026; Base de datos (D-023, propuesta); Plan maestro: la empresa completa, sin que se escape nada; Informe de la mañana · 26/11/2026; 17 · Cerebro, conocimiento y procesos: auditoría e informe (y 77 más)
+Cohesión 0.08 · 89 nodos: Registro de decisiones; Trabajo nocturno de Claude; Informe de la mañana · 27/11/2026; Base de datos (D-023, propuesta); Plan maestro: la empresa completa, sin que se escape nada; Informe de la mañana · 26/11/2026; Política de uso de inteligencia artificial de Varios · BORRADOR PARA ABOGADO; 17 · Cerebro, conocimiento y procesos: auditoría e informe (y 81 más)
 
 ### 4 · processes/runbooks · Auditoría de agentes y habilidades frente a los procesos (M-040) y Dependencias entre procesos
 
@@ -86,9 +86,9 @@ Cohesión 0.16 · 57 nodos: Propuesta de proceso de referencia: siniestros en co
 
 Cohesión 0.16 · 52 nodos: Índice del conocimiento de Varios; Arquitecto de procesos; P32 · Descubrimiento de procesos; P38 · Gestión de despliegue por cliente; P31 · Calificación de oportunidad; P33 · Diseño y validación TO-BE; P33 · Diseño y validación TO-BE; Director comercial (y 44 más)
 
-### 7 · knowledge/ingenieria · Especialista en ciberseguridad y Ingeniero de plataforma y operaciones (DevOps/SRE)
+### 7 · knowledge/ingenieria · Varios · empresa-ia y CEO digital
 
-Cohesión 0.11 · 40 nodos: Especialista en ciberseguridad; Ingeniero de plataforma y operaciones (DevOps/SRE); Arquitecto de datos e IA; Arquitecto técnico; Especialista en automatización; Especialista backend; Especialista en calidad y riesgos; INT-GUIA · Guía de Arranque v1.4 (diseño cerrado) (y 32 más)
+Cohesión 0.12 · 44 nodos: Varios · empresa-ia; CEO digital; Especialista en ciberseguridad; Ingeniero de plataforma y operaciones (DevOps/SRE); Responsable de decisiones y seguimiento; Arquitecto de datos e IA; Bibliotecario / responsable de conocimiento; Arquitecto técnico (y 36 más)
 
 ### 8 · knowledge/plantillas · Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue y Matriz de aprobaciones · BORRADOR
 
@@ -96,7 +96,7 @@ Cohesión 0.19 · 37 nodos: Atlas Evolucion v1.1 Modelo Operativo Procesos y Des
 
 ### 9 · processes/catalog · P22 · Gestión de errores y reintentos y Catálogo de procesos P01–P38
 
-Cohesión 0.5 · 37 nodos: P22 · Gestión de errores y reintentos; Catálogo de procesos P01–P38; P28 · Gestión de incidentes; P22 · Gestión de errores y reintentos; P27 · Gestión de proveedores y dependencias; P13 · Aprendizaje y actualización de la wiki; P05 · Diseño del plan; P25 · Gestión de cambios y versiones (y 29 más)
+Cohesión 0.49 · 37 nodos: P22 · Gestión de errores y reintentos; Catálogo de procesos P01–P38; P28 · Gestión de incidentes; P22 · Gestión de errores y reintentos; P27 · Gestión de proveedores y dependencias; P13 · Aprendizaje y actualización de la wiki; P05 · Diseño del plan; P11 · Entrega y cierre (y 29 más)
 
 ### 10 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Flujo ceo
 
@@ -108,15 +108,7 @@ Cohesión 0.19 · 31 nodos: Experto en asesorías, gestorías y despachos; Espec
 
 ### 12 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Conversaciones con IA y evaluación
 
-Cohesión 0.3 · 18 nodos: Acta de protección de la IA y examen de 50 casos; L2 (puerta técnica); Conversaciones con IA y evaluación; Reunión: IA y evaluación y Seguridad; Conversaciones con CEO digital; Conversaciones con Registro de decisiones; Conversaciones con Plan y seguimiento; Conversaciones con Bibliotecario (y 10 más)
-
-### 13 · knowledge/direccion · CEO digital y Responsable de decisiones y seguimiento
-
-Cohesión 0.31 · 10 nodos: CEO digital; Responsable de decisiones y seguimiento; Bibliotecario / responsable de conocimiento; Diseñador de producto y experiencia (UX); LEY-ACCESIBILIDAD-11-2023 · Ley 11/2023 (accesibilidad de productos y servicios, transpone la Directiva (UE) 2019/882); Diseñador de producto y experiencia (UX); Las cinco decisiones del CEO; APQC-PCF · APQC Process Classification Framework, versión intersectorial (y 2 más)
-
-### 14 · knowledge/estudios · Estudios y Integraciones
-
-Cohesión 0.52 · 7 nodos: Estudios; Integraciones; Contratos de datos; Estudio de prospectos: automatización para pymes (Álvaro, noviembre de 2026); Pruebas de integración; Conocimiento; Conectores
+Cohesión 0.29 · 19 nodos: Acta de protección de la IA y examen de 50 casos; L2 (puerta técnica); Conversaciones con IA y evaluación; Reunión: IA y evaluación y Seguridad; Conversaciones con CEO digital; Conversaciones con Registro de decisiones; Conversaciones con Plan y seguimiento; Conversaciones con Bibliotecario (y 11 más)
 
 ## Huecos
 

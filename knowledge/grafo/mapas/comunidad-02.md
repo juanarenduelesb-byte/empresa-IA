@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 2
-miembros: 95
+miembros: 96
 cohesion: 0.1
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 2 · claude/habilidades · Habilidades de los agentes y Administración
 
-95 nodos agrupados por el algoritmo de Louvain. Cohesión 0.1.
+96 nodos agrupados por el algoritmo de Louvain. Cohesión 0.1.
 
 ## Documentos
 
@@ -74,3 +74,7 @@ tags:
 - [[claude/habilidades/flujo-pantallas|Flujo y pantallas de una tarea]]
 - [[claude/habilidades/preguntas-profesional|Preguntas para un profesional externo]]
 - … y 35 más
+
+## Decisiones
+
+- [[knowledge/grafo/decisiones/D-006|D-006 · Primer proceso piloto]]

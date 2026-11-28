@@ -1,21 +1,25 @@
 ---
 tipo: "mapa"
 comunidad: 7
-miembros: 40
-cohesion: 0.11
+miembros: 44
+cohesion: 0.12
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 7 · knowledge/ingenieria · Especialista en ciberseguridad y Ingeniero de plataforma y operaciones (DevOps/SRE)
+# Comunidad 7 · knowledge/ingenieria · Varios · empresa-ia y CEO digital
 
-40 nodos agrupados por el algoritmo de Louvain. Cohesión 0.11.
+44 nodos agrupados por el algoritmo de Louvain. Cohesión 0.12.
 
 ## Documentos
 
+- [[CLAUDE|Varios · empresa-ia]]
+- [[knowledge/direccion/ceo-digital|CEO digital]]
 - [[knowledge/seguridad-legal/ciberseguridad|Especialista en ciberseguridad]]
 - [[knowledge/ingenieria/plataforma-operaciones|Ingeniero de plataforma y operaciones (DevOps/SRE)]]
+- [[knowledge/direccion/decisiones-seguimiento|Responsable de decisiones y seguimiento]]
 - [[knowledge/ingenieria/datos-ia|Arquitecto de datos e IA]]
+- [[knowledge/direccion/bibliotecario|Bibliotecario / responsable de conocimiento]]
 - [[knowledge/ingenieria/arquitecto-tecnico|Arquitecto técnico]]
 - [[knowledge/procesos/automatizacion|Especialista en automatización]]
 - [[knowledge/ingenieria/backend|Especialista backend]]
@@ -25,20 +29,16 @@ tags:
 - [[knowledge/ingenieria/integraciones|Especialista en integraciones]]
 - [[knowledge/agentes/ops|Plataforma y operaciones]]
 - [[integrations/catalog/README|Catálogo de integraciones]]
+- [[claude/habilidades/cinco-decisiones|Las cinco decisiones del CEO]]
 - [[claude/habilidades/copias-restauracion|Copias y restauración probada]]
 - [[docs/02-arquitectura-general|Arquitectura general]]
 - [[claude/habilidades/integracion-continua|Integración continua]]
-- [[claude/habilidades/runbook-incidente|Runbook y gestión de incidentes]]
 
 ## Especialistas
 
 - [[knowledge/procesos/automatizacion|Especialista en automatización]]
 - [[knowledge/ingenieria/plataforma-operaciones|Ingeniero de plataforma y operaciones (DevOps/SRE)]]
 - [[knowledge/administracion-finanzas/costes-proveedores|Especialista en costes y proveedores]]
-
-## Habilidades
-
-- [[claude/habilidades/runbook-incidente|Runbook y gestión de incidentes]]
 
 ## Fuentes
 
@@ -50,6 +50,7 @@ tags:
 - [[knowledge/grafo/fuentes/OSS-CAMUNDA|OSS-CAMUNDA · Camunda 8: licencia para Self-Managed]]
 - [[knowledge/grafo/fuentes/OSS-N8N|OSS-N8N · n8n: Sustainable Use License]]
 - [[knowledge/grafo/fuentes/OTEL-GENAI|OTEL-GENAI · OpenTelemetry: convenciones semánticas para IA generativa]]
+- [[knowledge/grafo/fuentes/APQC-PCF|APQC-PCF · APQC Process Classification Framework, versión intersectorial]]
 - [[knowledge/grafo/fuentes/IETF-IDEMPOTENCY|IETF-IDEMPOTENCY · The Idempotency-Key HTTP Header Field (borrador 07)]]
 - [[knowledge/grafo/fuentes/PG-RLS|PG-RLS · Recomendaciones de seguridad a nivel de fila para SaaS multicliente]]
 - [[knowledge/grafo/fuentes/OSS-LANGFUSE|OSS-LANGFUSE · Langfuse (observabilidad de LLM)]]

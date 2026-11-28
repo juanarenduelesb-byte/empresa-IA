@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 1
-miembros: 95
-cohesion: 0.07
+miembros: 100
+cohesion: 0.06
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 1 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros
 
-95 nodos agrupados por el algoritmo de Louvain. Cohesión 0.07.
+100 nodos agrupados por el algoritmo de Louvain. Cohesión 0.06.
 
 ## Documentos
 
@@ -23,6 +23,7 @@ tags:
 - [[knowledge/sectores/sector-logistica|Experto en logística y transporte]]
 - [[knowledge/sectores/sector-industria|Experto en industria manufacturera]]
 - [[knowledge/sectores/seguros/normas|Normas para abrir un siniestro en una correduría]]
+- [[knowledge/ingenieria/diseno-experiencia|Diseñador de producto y experiencia (UX)]]
 - [[knowledge/sectores/priorizacion|Priorización de sectores]]
 - [[knowledge/sectores/seguros/README|Paquete de dominio · seguros y corredurías]]
 - [[knowledge/sectores/seguros/glosario-siniestros|Glosario de siniestros]]
@@ -44,6 +45,7 @@ tags:
 - [[knowledge/sectores/sector-financiero|Experto en servicios financieros no bancarios]]
 - [[knowledge/sectores/sector-industria|Experto en industria manufacturera]]
 - [[knowledge/sectores/sector-logistica|Experto en logística y transporte]]
+- [[knowledge/ingenieria/diseno-experiencia|Diseñador de producto y experiencia (UX)]]
 
 ## Fuentes
 
@@ -58,6 +60,7 @@ tags:
 - [[knowledge/grafo/fuentes/RDL-3-2020|RDL-3-2020 · Real Decreto-ley 3/2020, libro II: distribución de seguros y reaseguros privados]]
 - [[knowledge/grafo/fuentes/RD-287-2021|RD-287-2021 · Real Decreto 287/2021, sobre formación y remisión de la información estadístico-contable de los distribuidores de seguros y reaseguros]]
 - [[knowledge/grafo/fuentes/UNESPA-CONVENIO-2026|UNESPA-CONVENIO-2026 · Convenio entre entidades aseguradoras de automóviles para la indemnización directa de daños materiales a vehículos (refunde CIDE, ASCIDE y CICOS)]]
+- [[knowledge/grafo/fuentes/LEY-ACCESIBILIDAD-11-2023|LEY-ACCESIBILIDAD-11-2023 · Ley 11/2023 (accesibilidad de productos y servicios, transpone la Directiva (UE) 2019/882)]]
 - [[knowledge/grafo/fuentes/NIS2-ES|NIS2-ES · Estado de la transposición de NIS2 en España]]
 - [[knowledge/grafo/fuentes/CCS-SOLICITUD|CCS-SOLICITUD · CCS: solicitud de indemnización por riesgos extraordinarios]]
 - [[knowledge/grafo/fuentes/INT-MARCO|INT-MARCO · Marco integral legal, ciberseguridad e IA (España/UE) 16/11/2026]]
@@ -79,10 +82,12 @@ tags:
 - [[knowledge/grafo/fuentes/ISO-42001|ISO-42001 · ISO/IEC 42001:2023 Sistema de gestión de IA]]
 - [[knowledge/grafo/fuentes/MAQUINARIA-2023-1230|MAQUINARIA-2023-1230 · Reglamento (UE) 2023/1230, relativo a las máquinas]]
 - [[knowledge/grafo/fuentes/MDR-2017-745|MDR-2017-745 · Reglamento (UE) 2017/745, productos sanitarios (en el anexo I del Reglamento de IA)]]
+- [[knowledge/grafo/fuentes/NNG-HEURISTICAS|NNG-HEURISTICAS · 10 heurísticas de usabilidad (Jakob Nielsen)]]
 - [[knowledge/grafo/fuentes/RDLEG-7-2004-CCS|RDLEG-7-2004-CCS · Real Decreto Legislativo 7/2004, texto refundido del Estatuto Legal del Consorcio de Compensación de Seguros]]
 - [[knowledge/grafo/fuentes/SANIDAD-IA-OMNIBUS|SANIDAD-IA-OMNIBUS · IA en el SNS: ómnibus digital sobre IA y simplificación MDR/IVDR]]
 - [[knowledge/grafo/fuentes/TMVIEW|TMVIEW · TMview (ficha del catálogo de aplicaciones de datos.gob.es)]]
 - [[knowledge/grafo/fuentes/UNESPA-SDM|UNESPA-SDM · Reglamento articulado del Sistema Siniestros Daños Materiales (SDM)]]
+- [[knowledge/grafo/fuentes/W3C-WCAG22|W3C-WCAG22 · Web Content Accessibility Guidelines (WCAG) 2.2]]
 - [[knowledge/grafo/fuentes/AGILE-MANIFESTO|AGILE-MANIFESTO · Manifesto for Agile Software Development]]
 - [[knowledge/grafo/fuentes/CCT-ENCARGO-2021-915|CCT-ENCARGO-2021-915 · Decisión de Ejecución (UE) 2021/915, cláusulas contractuales tipo entre responsables y encargados del tratamiento]]
 - [[knowledge/grafo/fuentes/CNMC-CIDE-2014|CNMC-CIDE-2014 · CNMC, resolución de 25/09/2014, expediente S/0496/13 CIDE]]
@@ -104,7 +109,4 @@ tags:
 - [[knowledge/grafo/fuentes/LEY-35-2015|LEY-35-2015 · Ley 35/2015, de reforma del sistema para la valoración de los daños y perjuicios causados a las personas en accidentes de circulación]]
 - [[knowledge/grafo/fuentes/LEY-5-2025|LEY-5-2025 · Ley 5/2025, de 24 de julio, por la que se modifican el texto refundido de la Ley sobre responsabilidad civil y seguro en la circulación de vehículos a motor y la Ley 20/2015]]
 - [[knowledge/grafo/fuentes/LOPDGDD-DA17|LOPDGDD-DA17 · Ley Orgánica 3/2018 (LOPDGDD), disposición adicional decimoséptima: tratamientos de datos de salud]]
-- [[knowledge/grafo/fuentes/LSSI-34-2002|LSSI-34-2002 · Ley 34/2002, de servicios de la sociedad de la información y de comercio electrónico (LSSI-CE)]]
-- [[knowledge/grafo/fuentes/NNG-HIDDEN-NAV|NNG-HIDDEN-NAV · Hamburger Menus and Hidden Navigation Hurt UX Metrics]]
-- [[knowledge/grafo/fuentes/OEPM-LOCALIZADOR|OEPM-LOCALIZADOR · Localizador de marcas (servicio web de la OEPM)]]
-- … y 7 más
+- … y 10 más

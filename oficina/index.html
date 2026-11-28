@@ -362,6 +362,57 @@ body.v3d #iso,body.v3d #ovl{visibility:hidden}
 .wc p{margin:5px 0 2px;font-size:12.5px;line-height:1.35}.wc .why{display:block;color:var(--warn);font-size:11.5px;margin-bottom:7px}.wc .row{display:flex;gap:6px}.btn.sm{padding:5px 10px;font-size:12px}
 .lnk{border:0;background:none;color:var(--accent);font:inherit;font-size:12px;font-weight:600;cursor:pointer;padding:2px 0}
 body.v3d #dtoday.o3only,body.v3d #dwait.o3only{display:block!important}
+/* ===== Móvil (patrón Banderín): barra inferior, una vista a pantalla completa, hojas para lo secundario ===== */
+.mtab,.msheet,.mveil{display:none}
+@media (max-width:700px){
+body{padding-bottom:calc(86px + env(safe-area-inset-bottom))}
+.top{flex-wrap:nowrap;padding:8px 14px;padding-top:max(8px,env(safe-area-inset-top));gap:8px}
+.top .nav,.top .nsep,#bNewP,#bDec,#bMeet,#bFocus,.clock,.logo small{display:none!important}
+.logo{font-size:18px}.status{font-size:11.5px;padding:4px 9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:46vw}
+.top .tbtn.ic{width:40px;height:40px;justify-content:center;padding:0}
+.foot{display:none}
+.wrap{padding:10px 10px 16px;gap:12px}
+.scene{height:56vh;min-height:360px;border-radius:20px}
+.full{inset:0!important;top:var(--toph,57px)!important;bottom:calc(78px + env(safe-area-inset-bottom))!important;border:0;border-radius:0}
+.dh{flex-wrap:wrap;padding:12px 14px;gap:8px}.dh h2{font-size:20px}.dh>div:first-child{flex:1 1 60%}
+.dh label{white-space:nowrap}
+.dh .btn,.dh button{min-height:40px}
+.home{padding:12px;gap:12px}.home .hb{border-radius:18px;padding:14px}
+.home .hi{flex-wrap:wrap}.home .acts{width:100%}
+.home .hi .btn,.home .acts .btn{min-height:40px}
+.board{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:86%;scroll-snap-type:x mandatory;padding:12px;gap:10px;align-items:start}
+.col{scroll-snap-align:center;min-height:0}
+.calgrid{gap:2px}.day{min-height:54px;border-radius:8px;padding:3px}.ev{font-size:10px;padding:1px 3px}
+.drawer{width:100vw;border-left:0}
+nav.mtab{display:block;position:fixed;left:0;right:0;bottom:0;z-index:78;padding:0 10px calc(10px + env(safe-area-inset-bottom));pointer-events:none}
+.mtab .in{pointer-events:auto;display:grid;grid-template-columns:repeat(5,1fr);gap:2px;max-width:460px;margin:0 auto;padding:6px;border-radius:999px;
+ background:color-mix(in srgb,var(--paper) 78%,transparent);-webkit-backdrop-filter:blur(24px) saturate(180%);backdrop-filter:blur(24px) saturate(180%);
+ border:1px solid color-mix(in srgb,var(--ink) 9%,transparent);box-shadow:0 1px 0 rgba(255,255,255,.35) inset,0 12px 32px -10px rgba(0,0,0,.45),0 2px 6px rgba(0,0,0,.12)}
+.mt{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:54px;border:0;border-radius:999px;background:none;color:var(--ink-muted);cursor:pointer;-webkit-tap-highlight-color:transparent;transition:color .2s,background .3s cubic-bezier(.3,1.3,.5,1),transform .2s;padding:0}
+.mt svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.mt span{font-size:10.5px;font-weight:600;line-height:1}
+.mt.on{color:var(--accent);background:var(--accent-tint)}
+.mt:active{transform:scale(.94)}
+.mt.plus svg{width:44px;height:44px;padding:10px;border-radius:50%;background:var(--accent);color:var(--on-accent);stroke-width:2.2;box-shadow:0 6px 16px -6px var(--accent)}
+.mt.plus span{display:none}
+.mt b{position:absolute;top:5px;left:calc(50% + 6px);min-width:17px;height:17px;padding:0 5px;border-radius:999px;background:var(--warn);color:#fff;font-size:10.5px;line-height:17px;text-align:center}
+.mt b:empty,.mt b[data-z]{display:none}
+.mveil{display:block;position:fixed;inset:0;z-index:81;background:rgba(12,12,16,.38);opacity:0;pointer-events:none;transition:opacity .25s}
+.mveil.on{opacity:1;pointer-events:auto}
+.msheet{display:block;position:fixed;left:0;right:0;bottom:0;z-index:82;max-height:86vh;overflow:auto;background:var(--surface);border-radius:26px 26px 0 0;padding:8px 16px calc(18px + env(safe-area-inset-bottom));transform:translateY(105%);transition:transform .34s cubic-bezier(.3,1.1,.4,1);box-shadow:0 -12px 40px -12px rgba(0,0,0,.35)}
+.msheet.on{transform:none}
+.msheet .grab{width:40px;height:5px;border-radius:9px;background:var(--hairline);margin:0 auto 10px}
+.msheet h3{margin:4px 2px 12px;font-size:20px;letter-spacing:-.02em}
+.msheet .box{border:0;padding:0;background:none;box-shadow:none}.msheet .box h4{display:none}
+.msheet textarea{min-height:110px;font-size:16px}.msheet select{font-size:16px;min-height:44px}
+.mlist{display:grid;gap:8px}
+.mlist button{display:flex;align-items:center;gap:14px;min-height:56px;padding:0 16px;border-radius:18px;border:1px solid var(--hairline);background:var(--card);font-size:16px;font-weight:500;text-align:left;cursor:pointer;color:var(--ink)}
+.mlist button small{display:block;color:var(--ink-muted);font-size:12.5px;font-weight:400}
+.mlist button i{margin-left:auto;font-style:normal;background:var(--warn);color:#fff;border-radius:999px;font-size:11.5px;padding:0 8px;font-weight:700}
+.mlist button i:empty,.mlist button i[data-z]{display:none}
+.mlist svg{width:22px;height:22px;flex:none;fill:none;stroke:var(--accent);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.mclose{margin-top:12px;width:100%;min-height:50px;border-radius:999px;border:0;background:var(--track);font-weight:600;font-size:15px;cursor:pointer;color:var(--ink)}
+}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -438,6 +489,11 @@ body.v3d #dtoday.o3only,body.v3d #dwait.o3only{display:block!important}
 <div class="ov" id="ov"></div>
 <aside class="drawer" id="drawer" aria-label="Detalle"></aside>
 <section class="full" id="full" aria-label="Vista"></section>
+<nav class="mtab" aria-label="Secciones (móvil)"><div class="in"><button class="mt" type="button" data-go="bApr"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-6.5 8 6.5"/><path d="M6 10v9h12v-9"/></svg><span>Inicio</span><b id="mtApr"></b></button><button class="mt" type="button" data-go="bBoard"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="4.5" height="16" rx="1.5"/><rect x="10" y="4" width="4.5" height="10" rx="1.5"/><rect x="16" y="4" width="4" height="13" rx="1.5"/></svg><span>Encargos</span></button><button class="mt plus" type="button" id="mtNew" aria-label="Nuevo encargo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span>Encargar</span></button><button class="mt" type="button" data-go="bProj"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 7.5a2 2 0 012-2h4l2 2h7a2 2 0 012 2v8a2 2 0 01-2 2h-13a2 2 0 01-2-2z"/></svg><span>Proyectos</span></button><button class="mt" type="button" id="mtMore"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.3"/><circle cx="12" cy="12" r="1.3"/><circle cx="18" cy="12" r="1.3"/></svg><span>Más</span><b id="mtDec"></b></button></div></nav>
+<div class="mveil" id="mveil"></div>
+<section class="msheet" id="mNew" role="dialog" aria-modal="true" aria-label="Nuevo encargo"><div class="grab"></div><h3>Nuevo encargo</h3><div id="mNewSlot"></div><button class="mclose" type="button" data-mclose>Cerrar</button></section>
+<section class="msheet" id="mMore" role="dialog" aria-modal="true" aria-label="Más secciones"><div class="grab"></div><h3>Más</h3><div class="mlist"><button type="button" data-go="bAg"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="8.5" r="2.4"/><circle cx="16" cy="8.5" r="2.4"/><path d="M3.5 18c.5-2.6 2.2-4 4.5-4s4 1.4 4.5 4M11.5 18c.5-2.6 2.2-4 4.5-4s4 1.4 4.5 4"/></svg><span>Agentes<small>La planta con los 34 agentes</small></span></button><button type="button" data-go="bDec"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Decisiones<small>Lo que decidís y cuándo</small></span><i id="mlDec"></i></button><button type="button" data-go="bCal"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5.5" width="16" height="14" rx="2.5"/><path d="M4 10h16M8.5 3.5v4M15.5 3.5v4"/></svg><span>Calendario<small>Plan, rutinas y fechas</small></span></button><button type="button" data-go="bCli"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="9" r="3.2"/><path d="M3.5 19c.6-3 2.8-4.6 5.5-4.6s4.9 1.6 5.5 4.6"/><path d="M16 6.2a3 3 0 010 5.6M17.5 14.6c1.6.6 2.6 2 3 4.4"/></svg><span>Clientes</span></button><button type="button" data-go="bBrain"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="2.5"/><circle cx="5" cy="6" r="1.6"/><circle cx="19" cy="6" r="1.6"/><circle cx="5" cy="18" r="1.6"/><circle cx="19" cy="18" r="1.6"/><path d="M6.3 7l3.8 3.4M17.7 7l-3.8 3.4M6.3 17l3.8-3.4M17.7 17l-3.8-3.4"/></svg><span>Cerebro<small>Los documentos que comparten los agentes</small></span></button><button type="button" data-go="bNewP"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 7.5a2 2 0 012-2h4l2 2h7a2 2 0 012 2v8a2 2 0 01-2 2h-13a2 2 0 01-2-2z"/><path d="M12 11v5M9.5 13.5h5"/></svg><span>Nuevo proyecto</span></button><button type="button" data-go="bMeet"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6.5h14a1.5 1.5 0 011.5 1.5v8a1.5 1.5 0 01-1.5 1.5H10l-4.5 3v-3H5A1.5 1.5 0 013.5 16V8A1.5 1.5 0 015 6.5z"/></svg><span>Reunión</span></button></div><button class="mclose" type="button" data-mclose>Cerrar</button></section>
+
 <div class="toast" id="toast" role="status"></div>
 
 <script type="importmap">{"imports":{"three":"./vendor/three/three.module.js","three/addons/":"./vendor/three/addons/"}}</script>
@@ -1117,12 +1173,12 @@ function bounds(){var xs=[],ys=[];
   DEP.forEach(function(d){var L=LAY[d.id],c=P(L.cx,L.cy,0),ux=c[0]/Math.hypot(c[0],c[1]);if(ux>.9)b.x1+=360;if(ux<-.9)b.x0-=360});
   return b}
 function fit(){var sc=document.getElementById('scene'),W=sc.clientWidth,H=sc.clientHeight,small=W<640,mx=small?8:28,my=small?44:122,bw=BB.x1-BB.x0,bh=BB.y1-BB.y0;
-  cam.z=Math.max(.3,Math.min(1.3,Math.min((W-mx*2)/bw,(H-my*2-30)/bh)));
+  cam.z=Math.max(small?.18:.3,Math.min(1.3,Math.min((W-mx*2)/bw,(H-my*2-30)/bh)));
   cam.x=W/2-(BB.x0+bw/2)*cam.z;cam.y=(H-30)/2-(BB.y0+bh/2)*cam.z;applyCam()}
 function applyCam(){document.getElementById('cam').setAttribute('transform','translate('+cam.x.toFixed(1)+','+cam.y.toFixed(1)+') scale('+cam.z.toFixed(3)+')');
   var ov=document.getElementById('ovl');ov.classList.toggle('far',cam.z<.72);
   ov.querySelectorAll('[data-wx]').forEach(function(e){e.style.left=(cam.x+e.dataset.wx*cam.z)+'px';e.style.top=(cam.y+e.dataset.wy*cam.z)+'px'})}
-function zoomAt(f,px,py){var z=Math.max(.35,Math.min(2.6,cam.z*f));cam.x=px-(px-cam.x)*z/cam.z;cam.y=py-(py-cam.y)*z/cam.z;cam.z=z;applyCam()}
+function zoomAt(f,px,py){var z=Math.max(Math.min(.35,cam.z),Math.min(2.6,cam.z*f));cam.x=px-(px-cam.x)*z/cam.z;cam.y=py-(py-cam.y)*z/cam.z;cam.z=z;applyCam()}
 function showTip(id){var a=ag(id),d=dep(a.dep),st=agentState(id),t=document.getElementById('tip');
   var n=Object.values(S.tasks).filter(function(x){return x.agent===id}),act=n.filter(function(x){return x.status==='marcha'})[0];
   t.innerHTML='<b>'+esc(a.n)+'</b><br>'+esc(a.r)+' · '+esc(d.n)+(a.lead?' · jefe':'')+'<br>'+(st==='work'?'Trabajando'+(act?': '+esc(act.title):''):st==='wait'?'Tiene algo que espera tu OK o una respuesta':'Libre')+' · '+n.length+' encargo'+(n.length===1?'':'s');
@@ -2096,6 +2152,26 @@ fetch('brain.json').then(function(r){if(!r.ok)throw 0;return r.json()}).then(fun
 setInterval(function(){tick();renderFeed()},30000);
 })();
 
+</script>
+<script>
+(function(){
+var mq=matchMedia('(max-width:700px)');function g(i){return document.getElementById(i)}
+var box=g('tTxt')&&g('tTxt').closest('.box'),home=box&&box.parentNode,next=box&&box.nextSibling;
+function shut(){['mNew','mMore'].forEach(function(i){g(i).classList.remove('on')});g('mveil').classList.remove('on');if(box&&box.parentNode===g('mNewSlot'))home.insertBefore(box,next)}
+function open(i){shut();if(i==='mNew'&&box)g('mNewSlot').appendChild(box);g(i).classList.add('on');g('mveil').classList.add('on');if(i==='mNew')setTimeout(function(){g('tTxt').focus()},350)}
+document.addEventListener('click',function(e){var t=e.target.closest('[data-go]');if(t&&t.closest('.mtab,.msheet')){shut();var b=g(t.dataset.go);if(b)b.click();sync();return}
+ if(e.target.closest('[data-mclose]')||e.target.id==='mveil')shut()});
+g('mtNew').addEventListener('click',function(){open('mNew')});g('mtMore').addEventListener('click',function(){open('mMore')});
+g('tAdd')&&g('tAdd').addEventListener('click',function(){setTimeout(function(){if(!g('tTxt').value.trim())shut()},60)});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')shut()});
+mq.addEventListener('change',function(){if(!mq.matches)shut()});
+function badge(src,dst){var s=g(src),v=s?s.textContent.trim():'';dst.forEach(function(d){var x=g(d);if(!x)return;x.textContent=v;if(!v||v==='0')x.setAttribute('data-z','');else x.removeAttribute('data-z')})}
+function sync(){var c=document.querySelector('.top [data-nav][aria-current=page]'),id=c?c.id:'',main={bApr:1,bBoard:1,bProj:1};
+ document.querySelectorAll('.mtab .mt').forEach(function(m){m.classList.toggle('on',m.dataset.go?m.dataset.go===id:(m.id==='mtMore'&&!!id&&!main[id]))});
+ badge('nApr',['mtApr']);badge('nDec',['mtDec','mlDec'])}
+new MutationObserver(sync).observe(document.querySelector('.top'),{subtree:true,attributes:true,attributeFilter:['aria-current'],childList:true,characterData:true});
+new MutationObserver(sync).observe(g('full'),{attributes:true,attributeFilter:['class']});sync();
+})();
 </script>
 </body>
 </html>

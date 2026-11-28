@@ -529,12 +529,12 @@ export function mount(host, bridge) {
     for (let i = 0; i < 24; i++) { dist = (lo + hi) / 2; setCam(); const ok = corners.every((v) => { const [x, y] = project(v, cam, W, H); return x > 8 && x < W - 8 && y > 30 && y < H - 50; }); if (ok) hi = dist; else lo = dist; }
     if (anim) { const t1 = target.clone(); target.copy(t0); dist = d0; setCam(); animateCam(t1, hi); } else { dist = hi; setCam(); }
   }
-  let drag = null, moved = false;
-  canvas.addEventListener('pointerdown', (e) => { camAnim = null; drag = { x: e.offsetX, y: e.offsetY, g: groundAt(e.offsetX, e.offsetY) }; moved = false; canvas.setPointerCapture(e.pointerId); canvas.classList.add('grab'); });
+  let drag = null, moved = false, touched = false;
+  canvas.addEventListener('pointerdown', (e) => { touched = true; camAnim = null; drag = { x: e.offsetX, y: e.offsetY, g: groundAt(e.offsetX, e.offsetY) }; moved = false; canvas.setPointerCapture(e.pointerId); canvas.classList.add('grab'); });
   canvas.addEventListener('pointermove', (e) => { if (!drag) return; if (Math.abs(e.offsetX - drag.x) + Math.abs(e.offsetY - drag.y) > 3) moved = true; const g = groundAt(e.offsetX, e.offsetY); if (g && drag.g) { target.add(drag.g.clone().sub(g)); setCam(); } });
   const endDrag = (e) => { if (drag && !moved) pick(e.offsetX, e.offsetY); drag = null; canvas.classList.remove('grab'); };
   canvas.addEventListener('pointerup', endDrag); canvas.addEventListener('pointercancel', () => { drag = null; canvas.classList.remove('grab'); });
-  canvas.addEventListener('wheel', (e) => { e.preventDefault(); zoomBy(Math.exp(e.deltaY * 0.0012), e.offsetX, e.offsetY); }, { passive: false });
+  canvas.addEventListener('wheel', (e) => { touched = true; e.preventDefault(); zoomBy(Math.exp(e.deltaY * 0.0012), e.offsetX, e.offsetY); }, { passive: false });
   function pick(px, py) {
     ndc.set((px / W) * 2 - 1, -(py / H) * 2 + 1); ray.setFromCamera(ndc, cam);
     const hits = ray.intersectObjects(world.scene.children, true);
@@ -583,6 +583,7 @@ export function mount(host, bridge) {
     if (w === W && h === H) return; W = w; H = h;
     renderer.setSize(W, H, false); comp.comp.setSize(W, H); if (gtao) gtao.setSize(W, H);
     cam.aspect = W / H; cam.updateProjectionMatrix(); setCam();
+    if (!touched) fit();
   }
   const ro = new ResizeObserver(resize); ro.observe(host);
   const onKey = (e) => { if (e.key !== 'Escape') return; if (card) { closeCard(); e.stopPropagation(); } else if (focusDep) { unfocus(); e.stopPropagation(); } };

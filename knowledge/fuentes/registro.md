@@ -146,6 +146,7 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 | [KNIGHT-NIVELES-AUTONOMIA](#knight-niveles-autonomia) | Levels of Autonomy for AI Agents | buena-practica | media | vigente | draft |
 | [OWASP-FASTAPI](#owasp-fastapi) | FastAPI Security Cheat Sheet | recomendacion-tecnica | media | vigente | draft |
 | [OWASP-BD](#owasp-bd) | Database Security Cheat Sheet | recomendacion-tecnica | media | vigente | draft |
+| [SECRETLINT-ANTHROPIC](#secretlint-anthropic) | @secretlint/secretlint-rule-anthropic (README, v13.0.3) | documentacion-producto | media | vigente | draft |
 | [OWASP-IDOR](#owasp-idor) | Insecure Direct Object Reference Prevention Cheat Sheet | recomendacion-tecnica | media | vigente | draft |
 | [OEPM-LOCALIZADOR](#oepm-localizador) | Localizador de marcas (servicio web de la OEPM) | documentacion-producto | alta | vigente | draft |
 | [TMVIEW](#tmview) | TMview (ficha del catálogo de aplicaciones de datos.gob.es) | documentacion-producto | media | vigente | draft |
@@ -1540,6 +1541,16 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 - **Consultada:** 2026-11-28 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
 - **Nota:** «employ the principle of least privilege»: «the accounts should only have the minimal permissions required for the application to function» y «Only grant the required permissions on the databases»; la cuenta no debe ser dueña de la base. Base de que varios_app solo lea cliente y usuario (migración 0005, repaso del 28/11).
+
+<a id="secretlint-anthropic"></a>
+### SECRETLINT-ANTHROPIC
+- **Título:** @secretlint/secretlint-rule-anthropic (README, v13.0.3)
+- **Autor u organismo:** secretlint (proyecto de código abierto)
+- **URL:** <https://cdn.jsdelivr.net/npm/@secretlint/secretlint-rule-anthropic@13.0.3/README.md>
+- **Tipo:** documentacion-producto · **Jurisdicción:** — · **Versión o fecha:** 13.0.3 (leída el 28/11/2026)
+- **Consultada:** 2026-11-28 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** Regla que detecta claves de la API de Anthropic (ANTHROPIC_API_KEY); su ejemplo empieza por «sk-ant-api03-». No da expresión regular ni longitud. Base del patrón sk-ant- de tools/check_repo.py (repaso del 28/11).
 
 <a id="owasp-idor"></a>
 ### OWASP-IDOR

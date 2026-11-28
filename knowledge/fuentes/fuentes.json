@@ -1882,6 +1882,20 @@
    "nota": "«employ the principle of least privilege»: «the accounts should only have the minimal permissions required for the application to function» y «Only grant the required permissions on the databases»; la cuenta no debe ser dueña de la base. Base de que varios_app solo lea cliente y usuario (migración 0005, repaso del 28/11)."
   },
   {
+   "id": "SECRETLINT-ANTHROPIC",
+   "titulo": "@secretlint/secretlint-rule-anthropic (README, v13.0.3)",
+   "organismo": "secretlint (proyecto de código abierto)",
+   "url": "https://cdn.jsdelivr.net/npm/@secretlint/secretlint-rule-anthropic@13.0.3/README.md",
+   "tipo": "documentacion-producto",
+   "jurisdiccion": "—",
+   "version": "13.0.3 (leída el 28/11/2026)",
+   "autoridad": "media",
+   "vigencia": "vigente",
+   "estado": "draft",
+   "consultada": "2026-11-28",
+   "nota": "Regla que detecta claves de la API de Anthropic (ANTHROPIC_API_KEY); su ejemplo empieza por «sk-ant-api03-». No da expresión regular ni longitud. Base del patrón sk-ant- de tools/check_repo.py (repaso del 28/11)."
+  },
+  {
    "id": "OWASP-IDOR",
    "titulo": "Insecure Direct Object Reference Prevention Cheat Sheet",
    "organismo": "OWASP Cheat Sheet Series",

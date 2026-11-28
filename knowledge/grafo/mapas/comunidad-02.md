@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 2
-miembros: 88
+miembros: 89
 cohesion: 0.07
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 2 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros
 
-88 nodos agrupados por el algoritmo de Louvain. Cohesión 0.07.
+89 nodos agrupados por el algoritmo de Louvain. Cohesión 0.07.
 
 ## Documentos
 
@@ -106,7 +106,7 @@ tags:
 - [[knowledge/grafo/fuentes/OEPM-LOCALIZADOR|OEPM-LOCALIZADOR · Localizador de marcas (servicio web de la OEPM)]]
 - [[knowledge/grafo/fuentes/ORDEN-ECO-734-2004|ORDEN-ECO-734-2004 · Orden ECO/734/2004, sobre los departamentos y servicios de atención al cliente y el defensor del cliente de las entidades financieras]]
 - [[knowledge/grafo/fuentes/OWASP-IDOR|OWASP-IDOR · Insecure Direct Object Reference Prevention Cheat Sheet]]
+- [[knowledge/grafo/fuentes/SECRETLINT-ANTHROPIC|SECRETLINT-ANTHROPIC · @secretlint/secretlint-rule-anthropic (README, v13.0.3)]]
 - [[knowledge/grafo/fuentes/UC3M-PACTOS|UC3M-PACTOS · Guía de los tipos de cláusulas en los pactos de socios en S.A. y S.L.]]
 - [[knowledge/grafo/fuentes/CCS-MEDIADOR|CCS-MEDIADOR · Aprendizajes del CCS en la gestión de catástrofes]]
-- [[knowledge/grafo/fuentes/DGT-MANUAL-SEGURO-2026|DGT-MANUAL-SEGURO-2026 · DGT, manual X «Seguro del automóvil»]]
-- … y 1 más
+- … y 2 más

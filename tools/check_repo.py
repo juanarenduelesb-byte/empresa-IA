@@ -18,7 +18,15 @@ RAIZ = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(RAIZ / "tools"))
 
 ENLACE = re.compile(r"\]\(([^)\s]+)\)")
-SECRETO = re.compile(r"(sk-[A-Za-z0-9]{20,}|ghp_[A-Za-z0-9]{30,}|AKIA[0-9A-Z]{16}|-----BEGIN [A-Z ]*PRIVATE KEY-----)")
+# sk-ant-: claves de la API de Anthropic (formato del ejemplo de secretlint, `SECRETLINT-ANTHROPIC`); el patrón antiguo
+# `sk-[A-Za-z0-9]{20,}` no las veía por el guion de «sk-ant-api03-» (repaso del 28/11).
+SECRETO = re.compile(r"(sk-ant-[A-Za-z0-9_-]{20,}|sk-[A-Za-z0-9]{20,}|ghp_[A-Za-z0-9]{30,}|AKIA[0-9A-Z]{16}"
+                     r"|-----BEGIN [A-Z ]*PRIVATE KEY-----)")
+# Los secretos se buscan en TODO el repositorio, también en archive/ y en .sh, .env.example, Dockerfile o .ini (antes
+# solo en siete extensiones y sin archive/). Solo se saltan la carpeta de git, las cachés y los binarios.
+SIN_SECRETOS = (".git/", "node_modules/", "__pycache__/", ".pytest_cache/", ".ruff_cache/")
+BINARIOS = {".png", ".jpg", ".jpeg", ".gif", ".webp", ".ico", ".pdf", ".xlsx", ".docx", ".pptx", ".zip", ".pyc",
+            ".woff", ".woff2", ".ttf", ".glb"}
 EXCLUIR = ("archive/", "node_modules/", ".git/")
 CARPETAS = ("knowledge", "processes", "integrations", "precedents", "governance", "docs")
 
@@ -72,15 +80,16 @@ def fuentes_inexistentes() -> list[str]:
     return [f"{e['id']} cita {s}" for e in ESPECIALISTAS for s in e.get("fuentes", []) if s not in ids]
 
 
-def secretos() -> list[str]:
+def secretos(raiz: Path = RAIZ) -> list[str]:
     hallados = []
-    for p in RAIZ.rglob("*"):
-        if p.is_file() and p.suffix in {".md", ".py", ".json", ".js", ".html", ".toml", ".yml", ".yaml"}:
-            if any(x in p.as_posix() for x in EXCLUIR):
-                continue
-            if SECRETO.search(p.read_text(encoding="utf-8", errors="ignore")):
-                hallados.append(str(p.relative_to(RAIZ)))
-    return hallados
+    for p in raiz.rglob("*"):
+        rel = p.relative_to(raiz).as_posix()
+        if not p.is_file() or p.suffix.lower() in BINARIOS or any(rel.startswith(x) or f"/{x}" in rel
+                                                                    for x in SIN_SECRETOS):
+            continue
+        if SECRETO.search(p.read_text(encoding="utf-8", errors="ignore")):
+            hallados.append(rel)
+    return sorted(hallados)
 
 
 def agentes() -> list[str]:

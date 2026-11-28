@@ -1,7 +1,8 @@
 """PostgreSQL real para las pruebas de base de datos.
 
 Usa VARIOS_TEST_DATABASE_URL (administrador, p. ej. el servicio de CI) o, si no existe, arranca un PostgreSQL
-desechable con tools/pg_local.py. Si no hay ninguno, las pruebas de base de datos se saltan con un aviso.
+desechable con tools/pg_local.py. Si no hay ninguno, las pruebas de base de datos se saltan con un aviso, salvo con
+VARIOS_EXIGIR_POSTGRES=1 (tools/comprobar.sh y CI), que las da por falladas.
 """
 
 from __future__ import annotations
@@ -33,6 +34,11 @@ def servidor():
     cluster = None
     if not url:
         if not pg_local.disponible():
+            # tools/comprobar.sh lo exige: sin PostgreSQL se saltarían en silencio las pruebas de aislamiento,
+            # aprobaciones y auditoría (52 de 228 el 28/11) y aun así diría «Todo en verde» (repaso del 28/11).
+            if os.environ.get("VARIOS_EXIGIR_POSTGRES") == "1":
+                pytest.fail("Sin PostgreSQL y VARIOS_EXIGIR_POSTGRES=1: instala PostgreSQL o define "
+                            "VARIOS_TEST_DATABASE_URL; no se sube sin las pruebas de base de datos")
             pytest.skip("Sin PostgreSQL: define VARIOS_TEST_DATABASE_URL o instala PostgreSQL")
         cluster = pg_local.arrancar()
         url = cluster.url()

@@ -34,7 +34,7 @@ La aplicación entra con el usuario `varios_app`, sin privilegios. Las migracion
 ## Cómo arrancarla
 
 - **Con Docker:** `cp .env.example .env`, cambiar las contraseñas y ejecutar `docker compose up --build`. Después, http://localhost:8000/health. La base y la API se publican solo en `127.0.0.1`: Docker publica por defecto en todas las direcciones del ordenador y lo considera «insecure by default» (`DOCKER-PUERTOS`); así nadie de la misma red (una wifi pública) llega a la base ni a la oficina.
-- **Sin Docker:** `python3 tools/pg_local.py` arranca un PostgreSQL desechable si está instalado. Luego, con `VARIOS_DATABASE_URL_ADMIN` apuntando a él, `alembic upgrade head`.
+- **Sin Docker:** `python3 tools/pg_local.py` arranca un PostgreSQL desechable si está instalado. Luego, con `VARIOS_DATABASE_URL_ADMIN` apuntando a él, `alembic upgrade head`. Las pruebas de base de datos lo arrancan solas; si no hay PostgreSQL se saltan, pero `tools/comprobar.sh` y CI las dan por falladas (`VARIOS_EXIGIR_POSTGRES=1`), para que nadie suba «en verde» sin las pruebas de aislamiento, aprobaciones y auditoría.
 - **Datos de ejemplo** (todos inventados): `python -m varios.db.semilla` carga; `python -m varios.db.semilla --vaciar` quita los de A5. Con Docker: `docker compose exec api python -m varios.db.semilla`.
 
 ## Datos de ejemplo (A5)

@@ -8,7 +8,7 @@ version: "borrador 07, 15/10/2025; caducó el 18/04/2026 (leída el 28/11/2026; 
 autoridad: "media"
 vigencia: "borrador"
 estado: "draft"
-citada: 2
+citada: 3
 tags:
   - "fuente"
   - "vigencia/borrador"
@@ -24,3 +24,4 @@ tags:
 
 - [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]]
 - [[docs/24-base-de-datos|Base de datos (D-023, propuesta)]]
+- [[docs/informes/2026-11-28|Informe de la mañana · 28/11/2026]]

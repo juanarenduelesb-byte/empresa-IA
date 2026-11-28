@@ -25,6 +25,31 @@ Assets: Mapa_Maestro_Cerebro_Digital_Completo.png, Arquitectura_Cerebro_Digital_
 
 **Nota de alcance:** esta primera carga incorpora la síntesis Markdown y el inventario. La tabla identifica los originales, pero no significa que cada binario Word/HTML/PNG/ZIP esté adjuntado aún. La carga de binarios y su verificación debe hacerse como operación separada.
 
+## Documentos base (docs/00 a docs/19)
+
+Añadido el 28/11/2026 (repaso): no estaban en este índice. Los números 15 y 20 no existen.
+
+| Documento | Función |
+|---|---|
+| [00-negocio.md](00-negocio.md) | Negocio: qué ofrecemos, a quién y en qué fases (precios por decidir). Por aquí se empieza (CLAUDE.md). |
+| [01-vision-y-modelo-operativo.md](01-vision-y-modelo-operativo.md) | Visión y modelo operativo. |
+| [02-arquitectura-general.md](02-arquitectura-general.md) | Arquitectura general: del canal a los sistemas del cliente. |
+| [03-ceo-digital-y-orquestacion.md](03-ceo-digital-y-orquestacion.md) | CEO digital y orquestación: coordinador gobernado, no autoridad ilimitada. |
+| [04-motor-de-conocimiento.md](04-motor-de-conocimiento.md) | Motor de conocimiento: patrón RAW, WIKI y SCHEMA. |
+| [05-agentes-procesos-e-integraciones.md](05-agentes-procesos-e-integraciones.md) | Agentes, procesos e integraciones. |
+| [06-seguridad-y-gobierno.md](06-seguridad-y-gobierno.md) | Seguridad, privacidad y gobierno. |
+| [07-calidad-infraestructura-y-operacion.md](07-calidad-infraestructura-y-operacion.md) | Calidad, infraestructura y operación. |
+| [08-roadmap-y-decisiones.md](08-roadmap-y-decisiones.md) | Hoja de ruta y decisiones de partida. |
+| [10-plan-12-semanas.md](10-plan-12-semanas.md) | Plan de construcción del 18/11/2026 al 12/02/2027, con los controles A, B y C (D-011). |
+| [11-cerebro-en-claude.md](11-cerebro-en-claude.md) | Los dos cerebros (proyecto de Claude y repositorio) y cómo no se mezclan. |
+| [12-simulacion.md](12-simulacion.md) | Simulación del cerebro con tres casos inventados. |
+| [13-procesos-y-estados.md](13-procesos-y-estados.md) | Procesos y estados de un encargo. |
+| [14-reglas-del-ceo.md](14-reglas-del-ceo.md) | Las cinco decisiones del CEO, la política de confianza y la matriz de riesgo. |
+| [16-correcciones.md](16-correcciones.md) | Registro de correcciones a los documentos recibidos el 17/11/2026. |
+| [17-cerebro-y-procesos.md](17-cerebro-y-procesos.md) | Auditoría e informe del cerebro, el conocimiento y los procesos (17/11/2026). |
+| [18-flujo-de-calidad-y-aprendizaje.md](18-flujo-de-calidad-y-aprendizaje.md) | Flujo de calidad y aprendizaje de la oficina (D-019). |
+| [19-obsidian.md](19-obsidian.md) | El cerebro abierto en Obsidian (D-021, propuesta). |
+
 ## Documentos de trabajo (docs/21 en adelante)
 
 Añadido el 26/11/2026: los documentos nuevos de las noches no estaban en este índice.

@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 3
-miembros: 89
+miembros: 85
 cohesion: 0.08
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 3 · docs · Registro de decisiones y Trabajo nocturno de Claude
 
-89 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
+85 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
 
 ## Documentos
 
@@ -23,34 +23,30 @@ tags:
 - [[docs/17-cerebro-y-procesos|17 · Cerebro, conocimiento y procesos: auditoría e informe]]
 - [[docs/31-identidad|Identidad y roles: opciones para los socios y, más adelante, los clientes (S3a)]]
 - [[README|Varios — repositorio maestro]]
+- [[docs/09-inventario-documental|Inventario documental]]
+- [[docs/10-plan-12-semanas|Plan de construcción · 18/11/2026 → 12/02/2027]]
 - [[docs/22-plan-hasta-febrero|Plan de trabajo diario · 26/11/2026 → 28/02/2027]]
-- [[knowledge/estudios/README|Estudios]]
 - [[docs/25-portal-interno|Portal interno: auditoría de la oficina y distribución propuesta (F1)]]
 - [[knowledge/identidad/forma-de-trabajar|Forma de trabajar]]
 - [[docs/30-inventario-web|Inventario de la web interna (site/) frente a la web para clientes (N5)]]
 - [[knowledge/identidad/README|Identidad de la empresa]]
 - [[docs/19-obsidian|Obsidian: el cerebro abierto en tu equipo]]
 - [[docs/26-web-clientes|Web para clientes: estudio de referencias, estructura y textos (F2)]]
-- [[docs/09-inventario-documental|Inventario documental]]
 - [[governance/legal/borradores/04-anexo-uso-ia|Anexo de uso de inteligencia artificial · BORRADOR PARA ABOGADO]]
 - [[governance/socios/01-marca-esclusa-o-varios|M-002 · ¿Una sola marca: Esclusa o Varios?]]
-- [[integrations/README|Integraciones]]
 - [[governance/socios/02-acuerdo-de-socios-puntos|M-003 · Acuerdo de socios: lo que tenéis que decidir]]
 - [[Inicio|Inicio · cerebro de Varios]]
 - [[governance/socios/README|Decisiones de los socios (borradores)]]
+- [[docs/06-seguridad-y-gobierno|Seguridad, privacidad y gobierno]]
 - [[processes/ceo-control-a/README|Banco del Control A: 25 encargos para el CEO limitado (C2)]]
-- [[governance/README|Gobierno, seguridad y legal]]
-- [[web/README|Web para clientes (borrador)]]
 - [[docs/07-calidad-infraestructura-y-operacion|Calidad, infraestructura y operación]]
 - [[docs/18-flujo-de-calidad-y-aprendizaje|18 · Flujo de calidad y aprendizaje continuo en la oficina]]
-- [[integrations/contracts/README|Contratos de datos]]
+- [[governance/README|Gobierno, seguridad y legal]]
 - [[docs/11-cerebro-en-claude|Cerebro en Claude]]
-- [[knowledge/estudios/2026-11-26-prospectos-pymes-alvaro/README|Estudio de prospectos: automatización para pymes (Álvaro, noviembre de 2026)]]
-- [[integrations/tests/README|Pruebas de integración]]
+- [[web/README|Web para clientes (borrador)]]
 - [[claude/instrucciones-proyecto|Instrucciones del proyecto "Varios · Cerebro" en Claude]]
+- [[docs/02-arquitectura-general|Arquitectura general]]
 - [[docs/informes/README|Informes de la mañana]]
-- [[knowledge/README|Conocimiento]]
-- [[integrations/connectors/README|Conectores]]
 
 ## Decisiones
 
@@ -67,8 +63,8 @@ tags:
 - [[knowledge/grafo/decisiones/D-022|D-022 · Trabajo nocturno de Claude con plan diario e informe de la mañana]]
 - [[knowledge/grafo/decisiones/D-029|D-029 · El trabajo nocturno de Claude sube directo a `main`, sin propuesta de cambios]]
 - [[knowledge/grafo/decisiones/D-033|D-033 · Identidad: Keycloak autoalojado para el piloto; los roles siguen en la base de Varios]]
-- [[knowledge/grafo/decisiones/D-003|D-003 · Obsidian como interfaz humana]]
 - [[knowledge/grafo/decisiones/D-021|D-021 · El cerebro se abre en Obsidian: el repositorio es el vault]]
+- [[knowledge/grafo/decisiones/D-003|D-003 · Obsidian como interfaz humana]]
 - [[knowledge/grafo/decisiones/D-015|D-015 · Entregables en archivos reales, memoria y Google Drive en la oficina de agentes]]
 - [[knowledge/grafo/decisiones/D-007|D-007 · Nombre provisional: Varios]]
 - [[knowledge/grafo/decisiones/D-010|D-010 · Diagramas como código]]

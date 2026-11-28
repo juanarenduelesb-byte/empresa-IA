@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 5
-miembros: 58
+miembros: 57
 cohesion: 0.16
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 5 · precedents/oficina · Propuesta de proceso de referencia: siniestros en corredurías y Conversaciones con Coordinación sectorial · Seguros
 
-58 nodos agrupados por el algoritmo de Louvain. Cohesión 0.16.
+57 nodos agrupados por el algoritmo de Louvain. Cohesión 0.16.
 
 ## Documentos
 
@@ -41,16 +41,15 @@ tags:
 - [[docs/12-simulacion|Simulación del cerebro]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-datos-de-prueba-a-coordinacion-sectorial-seguros-j4rxd|Datos de prueba → Coordinación sectorial · Seguros]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-validacion-a-coordinacion-sectorial-seguros-3yt5x|Validación → Coordinación sectorial · Seguros]]
+- [[precedents/projects/caso-correduria-atalaya/README|Caso de práctica · Atalaya Correduría de Seguros (ficticia)]]
 - [[claude/habilidades/revision-riesgo-ia|Revisión de riesgo de IA y datos]]
 - [[precedents/oficina/encargos/2026-11/2026-11-25-prepara-el-guion-y-las-8-preguntas-clave-para-la-c-lgxmr|Prepara el guion y las 8 preguntas clave para la conversación de valid]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-metricas-a-calidad-y-riesgo-7jvup|Métricas → Calidad y riesgo]]
-- [[precedents/projects/caso-correduria-atalaya/README|Caso de práctica · Atalaya Correduría de Seguros (ficticia)]]
 - [[processes/referencia-seguros-apertura-siniestros/casos/README|Casos de prueba: 20 siniestros inventados (C1)]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-arquitecto-de-procesos-a-coordinacion-sectorial-seguros-hh6fv|Arquitecto de procesos → Coordinación sectorial · Seguros]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-validacion-a-calidad-y-riesgo-u2br2|Validación → Calidad y riesgo]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-legal-y-privacidad-a-calidad-y-riesgo-7k9sg|Legal y privacidad → Calidad y riesgo]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-datos-de-prueba-a-calidad-y-riesgo-dvsoz|Datos de prueba → Calidad y riesgo]]
-- [[knowledge/plantillas/ficha-kpi|KPI: <nombre>]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-ceo-digital-a-coordinacion-sectorial-seguros-fws4y|CEO digital → Coordinación sectorial · Seguros]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-ceo-digital-a-metricas-sj6cp|CEO digital → Métricas]]
 - [[precedents/oficina/conversaciones/2026-11/2026-11-17-metricas-a-calidad-y-riesgo-4xyvo|Métricas → Calidad y riesgo]]

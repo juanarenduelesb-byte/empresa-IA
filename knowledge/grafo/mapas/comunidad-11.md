@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 11
-miembros: 30
+miembros: 31
 cohesion: 0.19
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 11 · knowledge/administracion-finanzas · Experto en asesorías, gestorías y despachos y Especialista en contabilidad y facturación
 
-30 nodos agrupados por el algoritmo de Louvain. Cohesión 0.19.
+31 nodos agrupados por el algoritmo de Louvain. Cohesión 0.19.
 
 ## Documentos
 
@@ -19,6 +19,7 @@ tags:
 - [[knowledge/administracion-finanzas/administrativo|Especialista administrativo]]
 - [[docs/27-finanzas|Finanzas: forma jurídica, facturación, precio y caja (D2)]]
 - [[knowledge/administracion-finanzas/financiero|Especialista financiero]]
+- [[knowledge/administracion-finanzas/README|Administración y finanzas]]
 
 ## Especialistas
 

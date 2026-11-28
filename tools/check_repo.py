@@ -28,10 +28,12 @@ SIN_SECRETOS = (".git/", "node_modules/", "__pycache__/", ".pytest_cache/", ".ru
 BINARIOS = {".png", ".jpg", ".jpeg", ".gif", ".webp", ".ico", ".pdf", ".xlsx", ".docx", ".pptx", ".zip", ".pyc",
             ".woff", ".woff2", ".ttf", ".glb"}
 EXCLUIR = ("archive/", "node_modules/", ".git/")
-CARPETAS = ("knowledge", "processes", "integrations", "precedents", "governance", "docs")
+CARPETAS = ("knowledge", "processes", "integrations", "precedents", "governance", "docs", "claude", "web")
 
 
 def md_archivos():
+    # También los de la raíz (README, DECISIONS, CLAUDE): antes no se miraban (repaso del 28/11).
+    yield from sorted(RAIZ.glob("*.md"))
     for c in CARPETAS:
         for p in (RAIZ / c).rglob("*.md"):
             if not any(x in p.as_posix() for x in EXCLUIR):

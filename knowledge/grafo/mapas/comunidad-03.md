@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 3
-miembros: 86
+miembros: 85
 cohesion: 0.08
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 3 · docs · Registro de decisiones y Trabajo nocturno de Claude
 
-86 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
+85 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
 
 ## Documentos
 
@@ -24,23 +24,25 @@ tags:
 - [[governance/legal/borradores/06-politica-uso-ia|Política de uso de inteligencia artificial de Varios · BORRADOR PARA ABOGADO]]
 - [[docs/31-identidad|Identidad y roles: opciones para los socios y, más adelante, los clientes (S3a)]]
 - [[README|Varios — repositorio maestro]]
+- [[docs/10-plan-12-semanas|Plan de construcción · 18/11/2026 → 12/02/2027]]
 - [[docs/22-plan-hasta-febrero|Plan de trabajo diario · 26/11/2026 → 28/02/2027]]
 - [[docs/25-portal-interno|Portal interno: auditoría de la oficina y distribución propuesta (F1)]]
 - [[knowledge/identidad/forma-de-trabajar|Forma de trabajar]]
-- [[docs/00-negocio|Negocio]]
 - [[docs/30-inventario-web|Inventario de la web interna (site/) frente a la web para clientes (N5)]]
 - [[knowledge/identidad/README|Identidad de la empresa]]
 - [[docs/19-obsidian|Obsidian: el cerebro abierto en tu equipo]]
-- [[knowledge/identidad/manifiesto|Manifiesto]]
 - [[docs/26-web-clientes|Web para clientes: estudio de referencias, estructura y textos (F2)]]
 - [[docs/09-inventario-documental|Inventario documental]]
 - [[governance/legal/borradores/04-anexo-uso-ia|Anexo de uso de inteligencia artificial · BORRADOR PARA ABOGADO]]
-- [[precedents/projects/caso-correduria-atalaya/entregables/01-propuesta-diagnostico.revision|Revisión con la rúbrica C3 · Propuesta de diagnóstico de Atalaya (FICTICIA)]]
+- [[governance/socios/01-marca-esclusa-o-varios|M-002 · ¿Una sola marca: Esclusa o Varios?]]
 - [[governance/socios/02-acuerdo-de-socios-puntos|M-003 · Acuerdo de socios: lo que tenéis que decidir]]
 - [[Inicio|Inicio · cerebro de Varios]]
+- [[governance/socios/README|Decisiones de los socios (borradores)]]
 - [[processes/ceo-control-a/README|Banco del Control A: 25 encargos para el CEO limitado (C2)]]
-- [[docs/18-flujo-de-calidad-y-aprendizaje|18 · Flujo de calidad y aprendizaje continuo en la oficina]]
+- [[governance/README|Gobierno, seguridad y legal]]
 - [[web/README|Web para clientes (borrador)]]
+- [[docs/07-calidad-infraestructura-y-operacion|Calidad, infraestructura y operación]]
+- [[docs/18-flujo-de-calidad-y-aprendizaje|18 · Flujo de calidad y aprendizaje continuo en la oficina]]
 - [[docs/11-cerebro-en-claude|Cerebro en Claude]]
 - [[claude/instrucciones-proyecto|Instrucciones del proyecto "Varios · Cerebro" en Claude]]
 - [[docs/informes/README|Informes de la mañana]]
@@ -70,7 +72,6 @@ tags:
 - [[knowledge/grafo/decisiones/D-018|D-018 · El cerebro pasa a ser un grafo de conocimiento con relaciones explicadas]]
 - [[knowledge/grafo/decisiones/D-020|D-020 · Seis puestos nuevos en la oficina: CFO, contabilidad, éxito de cliente, plataforma, diseño y cumplimiento]]
 - [[knowledge/grafo/decisiones/D-001|D-001 · Arquitectura orientada a procesos]]
-- [[knowledge/grafo/decisiones/D-005|D-005 · Aislamiento multi-cliente]]
 - [[knowledge/grafo/decisiones/D-032|D-032 · La cartera de pólizas del cliente se guarda en su propia tabla]]
 - [[knowledge/grafo/decisiones/D-008|D-008 · Repositorio como memoria oficial y web visual]]
 
@@ -89,7 +90,6 @@ tags:
 - [[knowledge/grafo/fuentes/OWASP-FASTAPI|OWASP-FASTAPI · FastAPI Security Cheat Sheet]]
 - [[knowledge/grafo/fuentes/REDIS-EXPIRE|REDIS-EXPIRE · Redis: comando EXPIRE (cómo caducan las claves)]]
 - [[knowledge/grafo/fuentes/ZAPIER-HITL|ZAPIER-HITL · Zapier: Human in the Loop (pedir aprobación para seguir)]]
-- [[knowledge/grafo/fuentes/AGILE-MANIFESTO|AGILE-MANIFESTO · Manifesto for Agile Software Development]]
 - [[knowledge/grafo/fuentes/AUTHENTIK-REPO|AUTHENTIK-REPO · Repositorio goauthentik/authentik]]
 - [[knowledge/grafo/fuentes/BASECAMP-5|BASECAMP-5 · Basecamp 5: inicio orientado a la acción]]
 - [[knowledge/grafo/fuentes/DOCKER-PUERTOS|DOCKER-PUERTOS · Docker: Port publishing and mapping]]

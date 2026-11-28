@@ -1,64 +1,63 @@
 ---
 tipo: "mapa"
 comunidad: 7
-miembros: 38
-cohesion: 0.18
+miembros: 40
+cohesion: 0.11
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
-# Comunidad 7 · processes/catalog · Índice del conocimiento de Varios y P32 · Descubrimiento de procesos
+# Comunidad 7 · knowledge/ingenieria · Especialista en ciberseguridad y Ingeniero de plataforma y operaciones (DevOps/SRE)
 
-38 nodos agrupados por el algoritmo de Louvain. Cohesión 0.18.
+40 nodos agrupados por el algoritmo de Louvain. Cohesión 0.11.
 
 ## Documentos
 
-- [[knowledge/INDEX|Índice del conocimiento de Varios]]
-- [[processes/catalog/P33-diseno-y-validacion-to-be|P33 · Diseño y validación TO-BE]]
-- [[knowledge/comercial/director-comercial|Director comercial]]
-- [[processes/catalog/P32-descubrimiento-de-procesos|P32 · Descubrimiento de procesos]]
-- [[knowledge/comercial/gestion-clientes|Especialista en éxito de cliente]]
-- [[processes/catalog/P38-gestion-de-despliegue-por-cliente|P38 · Gestión de despliegue por cliente]]
-- [[processes/catalog/P37-medicion-de-rendimiento-y-valor|P37 · Medición de rendimiento y valor]]
-- [[processes/catalog/P31-calificacion-de-oportunidad|P31 · Calificación de oportunidad]]
-- [[processes/catalog/P34-gestion-de-definiciones-de-proceso|P34 · Gestión de definiciones de proceso]]
-- [[knowledge/comercial/propuestas-licitaciones|Especialista en propuestas y licitaciones]]
-- [[processes/catalog/P35-gestion-de-instancias-y-excepciones|P35 · Gestión de instancias y excepciones]]
-- [[knowledge/plantillas/README|Plantillas]]
-- [[knowledge/comercial/prospeccion|Especialista en prospección]]
-- [[knowledge/comercial/marketing-contenido|Especialista en marketing y contenido]]
-- [[knowledge/comercial/README|Comercial y clientes]]
-- [[knowledge/glosario/README|Glosario]]
-- [[knowledge/metodologias-transversales/README|Metodologías transversales]]
-- [[knowledge/metodologias-transversales/consultar-historico|Protocolo: consultar el histórico antes de empezar]]
-- [[claude/habilidades/cualificacion-oportunidad|Cualificación de oportunidad]]
-- [[knowledge/metodologias-transversales/investigar|Protocolo: investigar fuera]]
-- [[knowledge/metodologias-transversales/guardar|Protocolo: guardar el conocimiento]]
-- [[precedents/plantilla-precedente|<título>]]
-- [[knowledge/plantillas/ficha-oportunidad|Oportunidad: <empresa> (ejemplo inventado hasta que exista una real)]]
-- [[knowledge/plantillas/entrada-decision|Entrada-decision]]
-- [[knowledge/plantillas/ficha-proveedor|Proveedor: <nombre>]]
-- [[knowledge/plantillas/ficha-conocimiento|Título]]
-- [[knowledge/plantillas/ficha-investigacion|Investigación: <pregunta>]]
-
-## Decisiones
-
-- [[knowledge/grafo/decisiones/D-002|D-002 · Modelo matricial]]
-
-## Procesos
-
-- [[processes/catalog/P32-descubrimiento-de-procesos|P32 · Descubrimiento de procesos]]
-- [[processes/catalog/P38-gestion-de-despliegue-por-cliente|P38 · Gestión de despliegue por cliente]]
-- [[processes/catalog/P31-calificacion-de-oportunidad|P31 · Calificación de oportunidad]]
+- [[knowledge/seguridad-legal/ciberseguridad|Especialista en ciberseguridad]]
+- [[knowledge/ingenieria/plataforma-operaciones|Ingeniero de plataforma y operaciones (DevOps/SRE)]]
+- [[knowledge/ingenieria/datos-ia|Arquitecto de datos e IA]]
+- [[knowledge/ingenieria/arquitecto-tecnico|Arquitecto técnico]]
+- [[knowledge/procesos/automatizacion|Especialista en automatización]]
+- [[knowledge/ingenieria/backend|Especialista backend]]
+- [[knowledge/seguridad-legal/calidad-riesgos|Especialista en calidad y riesgos]]
+- [[knowledge/administracion-finanzas/costes-proveedores|Especialista en costes y proveedores]]
+- [[knowledge/ingenieria/evaluacion-ia|Especialista en evaluación de IA]]
+- [[knowledge/ingenieria/integraciones|Especialista en integraciones]]
+- [[knowledge/agentes/ops|Plataforma y operaciones]]
+- [[integrations/catalog/README|Catálogo de integraciones]]
+- [[claude/habilidades/copias-restauracion|Copias y restauración probada]]
+- [[docs/02-arquitectura-general|Arquitectura general]]
+- [[claude/habilidades/integracion-continua|Integración continua]]
+- [[claude/habilidades/runbook-incidente|Runbook y gestión de incidentes]]
 
 ## Especialistas
 
-- [[knowledge/comercial/gestion-clientes|Especialista en éxito de cliente]]
-- [[knowledge/comercial/director-comercial|Director comercial]]
-- [[knowledge/comercial/propuestas-licitaciones|Especialista en propuestas y licitaciones]]
-- [[knowledge/comercial/prospeccion|Especialista en prospección]]
-- [[knowledge/comercial/marketing-contenido|Especialista en marketing y contenido]]
+- [[knowledge/procesos/automatizacion|Especialista en automatización]]
+- [[knowledge/ingenieria/plataforma-operaciones|Ingeniero de plataforma y operaciones (DevOps/SRE)]]
+- [[knowledge/administracion-finanzas/costes-proveedores|Especialista en costes y proveedores]]
+
+## Habilidades
+
+- [[claude/habilidades/runbook-incidente|Runbook y gestión de incidentes]]
 
 ## Fuentes
 
-- [[knowledge/grafo/fuentes/MEDDICC|MEDDICC · MEDDIC/MEDDPICC: método de cualificación B2B]]
+- [[knowledge/grafo/fuentes/INT-GUIA|INT-GUIA · Guía de Arranque v1.4 (diseño cerrado)]]
+- [[knowledge/grafo/fuentes/ENS-RD311|ENS-RD311 · Real Decreto 311/2022, Esquema Nacional de Seguridad]]
+- [[knowledge/grafo/fuentes/ISO-27001|ISO-27001 · ISO/IEC 27001:2022 (transición desde 2013 terminada el 31/10/2025)]]
+- [[knowledge/grafo/fuentes/OWASP-LLM-2025|OWASP-LLM-2025 · OWASP Top 10 for LLM Applications 2025]]
+- [[knowledge/grafo/fuentes/AEPD-AGENTICA|AEPD-AGENTICA · Inteligencia artificial agéntica desde la perspectiva de protección de datos]]
+- [[knowledge/grafo/fuentes/OSS-CAMUNDA|OSS-CAMUNDA · Camunda 8: licencia para Self-Managed]]
+- [[knowledge/grafo/fuentes/OSS-N8N|OSS-N8N · n8n: Sustainable Use License]]
+- [[knowledge/grafo/fuentes/OTEL-GENAI|OTEL-GENAI · OpenTelemetry: convenciones semánticas para IA generativa]]
+- [[knowledge/grafo/fuentes/IETF-IDEMPOTENCY|IETF-IDEMPOTENCY · The Idempotency-Key HTTP Header Field (borrador 07)]]
+- [[knowledge/grafo/fuentes/PG-RLS|PG-RLS · Recomendaciones de seguridad a nivel de fila para SaaS multicliente]]
+- [[knowledge/grafo/fuentes/OSS-LANGFUSE|OSS-LANGFUSE · Langfuse (observabilidad de LLM)]]
+- [[knowledge/grafo/fuentes/OSS-TEMPORAL|OSS-TEMPORAL · Temporal (motor de ejecución duradera)]]
+- [[knowledge/grafo/fuentes/DORA-DEVOPS|DORA-DEVOPS · Métricas DORA de entrega de software (DevOps Research and Assessment)]]
+- [[knowledge/grafo/fuentes/GOOGLE-SRE|GOOGLE-SRE · Site Reliability Engineering (libros de Google SRE)]]
+- [[knowledge/grafo/fuentes/OSS-DOCLING|OSS-DOCLING · Docling (conversión de documentos)]]
+- [[knowledge/grafo/fuentes/OSS-PRESIDIO|OSS-PRESIDIO · Microsoft Presidio (detección y anonimización de datos personales)]]
+- [[knowledge/grafo/fuentes/TWELVE-FACTOR|TWELVE-FACTOR · The Twelve-Factor App]]
+- [[knowledge/grafo/fuentes/OSS-PROMPTFOO|OSS-PROMPTFOO · promptfoo (evaluación y pruebas adversariales de LLM)]]
+- [[knowledge/grafo/fuentes/OSS-SPIFF|OSS-SPIFF · SpiffWorkflow (motor BPMN/DMN en Python)]]

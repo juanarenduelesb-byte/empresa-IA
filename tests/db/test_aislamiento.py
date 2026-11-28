@@ -106,3 +106,26 @@ def test_ninguna_tabla_de_cliente_deja_ver_filas_de_otro(base, motor_admin, moto
     with motor_app.connect() as c:  # sin cliente en la sesión
         for t in tablas:
             assert c.execute(text(f"SELECT count(*) FROM {t} WHERE cliente_id IS NOT NULL")).scalar() == 0, t
+
+
+def test_la_aplicacion_no_cambia_clientes_ni_usuarios(motor_app, dos_clientes):
+    """Repaso del 28/11 (tanda 02:30): los papeles que deciden quién aprueba están en `usuario.roles` (N3a), pero el rol
+    de la aplicación podía cambiarlos (UPDATE en `usuario`) y dar de alta, renombrar o borrar su propio cliente: la API
+    nunca lo hace, así que con un fallo en el código bastaba para que alguien se diera el papel de aprobador. Mínimo
+    privilegio (`OWASP-BD`): la aplicación solo lee `cliente` y `usuario`; las altas y los papeles, el administrador."""
+    ca, ua = dos_clientes["A"]
+    intentos = (
+        "UPDATE usuario SET roles = '[\"aprobador\", \"socio\"]' WHERE id = :u",
+        "INSERT INTO usuario (id, cliente_id, email, nombre, roles) "
+        "VALUES (gen_random_uuid(), :c, 'nuevo@a.invalid', 'Nuevo', '[\"aprobador\"]')",
+        "DELETE FROM usuario WHERE id = :u",
+        "UPDATE cliente SET nombre = 'cambiado' WHERE id = :c",
+        "DELETE FROM cliente WHERE id = :c",
+    )
+    for sql in intentos:
+        with pytest.raises(DBAPIError, match="permission denied"):
+            with sesion_de_cliente(motor_app, ca) as s:
+                s.execute(text(sql), {"u": ua, "c": ca})
+    with sesion_de_cliente(motor_app, ca) as s:  # leer sí
+        assert s.execute(text("SELECT roles FROM usuario WHERE id = :u"), {"u": ua}).scalar() == ["aprobador"]
+        assert s.execute(text("SELECT count(*) FROM cliente")).scalar() == 1

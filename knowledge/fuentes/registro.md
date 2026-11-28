@@ -145,6 +145,7 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 | [ANTHROPIC-AGENTES](#anthropic-agentes) | Building effective agents | buena-practica | media | vigente | draft |
 | [KNIGHT-NIVELES-AUTONOMIA](#knight-niveles-autonomia) | Levels of Autonomy for AI Agents | buena-practica | media | vigente | draft |
 | [OWASP-FASTAPI](#owasp-fastapi) | FastAPI Security Cheat Sheet | recomendacion-tecnica | media | vigente | draft |
+| [OWASP-BD](#owasp-bd) | Database Security Cheat Sheet | recomendacion-tecnica | media | vigente | draft |
 | [OWASP-IDOR](#owasp-idor) | Insecure Direct Object Reference Prevention Cheat Sheet | recomendacion-tecnica | media | vigente | draft |
 | [OEPM-LOCALIZADOR](#oepm-localizador) | Localizador de marcas (servicio web de la OEPM) | documentacion-producto | alta | vigente | draft |
 | [TMVIEW](#tmview) | TMview (ficha del catálogo de aplicaciones de datos.gob.es) | documentacion-producto | media | vigente | draft |
@@ -1529,6 +1530,16 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 - **Consultada:** 2026-11-26 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
 - **Nota:** Autenticar y autorizar con Depends(); OAuth2PasswordBearer no verifica el token. JWT con PyJWT, algoritmo fijo y exp, iss y aud obligatorios; secretos fuera del código. «Authentication alone does not authorize an operation». Pydantic ignora por defecto los campos no declarados; usar esquemas de entrada separados.
+
+<a id="owasp-bd"></a>
+### OWASP-BD
+- **Título:** Database Security Cheat Sheet
+- **Autor u organismo:** OWASP Cheat Sheet Series
+- **URL:** <https://cheatsheetseries.owasp.org/cheatsheets/Database_Security_Cheat_Sheet.html>
+- **Tipo:** recomendacion-tecnica · **Jurisdicción:** Internacional · **Versión o fecha:** sin fecha visible (leída el 28/11/2026)
+- **Consultada:** 2026-11-28 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** «employ the principle of least privilege»: «the accounts should only have the minimal permissions required for the application to function» y «Only grant the required permissions on the databases»; la cuenta no debe ser dueña de la base. Base de que varios_app solo lea cliente y usuario (migración 0005, repaso del 28/11).
 
 <a id="owasp-idor"></a>
 ### OWASP-IDOR

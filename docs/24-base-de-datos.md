@@ -25,7 +25,7 @@ Hay dos defensas independientes:
 1. **En la aplicación.** El repositorio (`varios.db.repositorio`) toma el cliente de la identidad autenticada y filtra siempre por él. Si llega un `cliente_id` en los datos de la petición, se ignora.
 2. **En PostgreSQL (RLS forzada en todas las tablas).** Cada transacción fija su cliente con `set_config('varios.cliente_id', …, true)` (`varios.db.sesion.sesion_de_cliente`). Una fila de otro cliente no se ve ni se puede escribir, aunque la consulta no filtre. Una conexión sin cliente fijado no ve nada.
 
-La aplicación entra con el usuario `varios_app`, sin privilegios. Las migraciones y el conocimiento común (normas, sectores) los carga el propietario. El conocimiento común lo leen todos los clientes, pero no lo puede escribir ninguno.
+La aplicación entra con el usuario `varios_app`, sin privilegios. Las migraciones y el conocimiento común (normas, sectores) los carga el propietario. El conocimiento común lo leen todos los clientes, pero no lo puede escribir ninguno. `varios_app` solo **lee** `cliente` y `usuario` (migración 0005, repaso del 28/11): los papeles que deciden quién aprueba están en `usuario.roles`, así que ni un fallo en la API puede dar a nadie el papel de aprobador, crear personas o borrar un cliente. Las altas y los papeles los da el administrador (mínimo privilegio, `OWASP-BD`); `tests/db/test_aislamiento.py` lo comprueba.
 
 ## Cómo se busca en el cerebro
 

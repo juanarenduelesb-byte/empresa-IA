@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 3
-miembros: 81
-cohesion: 0.09
+miembros: 83
+cohesion: 0.08
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 3 · docs · Registro de decisiones y Trabajo nocturno de Claude
 
-81 nodos agrupados por el algoritmo de Louvain. Cohesión 0.09.
+83 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
 
 ## Documentos
 
@@ -24,7 +24,6 @@ tags:
 - [[docs/17-cerebro-y-procesos|17 · Cerebro, conocimiento y procesos: auditoría e informe]]
 - [[docs/31-identidad|Identidad y roles: opciones para los socios y, más adelante, los clientes (S3a)]]
 - [[README|Varios — repositorio maestro]]
-- [[docs/10-plan-12-semanas|Plan de construcción · 18/11/2026 → 12/02/2027]]
 - [[docs/22-plan-hasta-febrero|Plan de trabajo diario · 26/11/2026 → 28/02/2027]]
 - [[docs/25-portal-interno|Portal interno: auditoría de la oficina y distribución propuesta (F1)]]
 - [[knowledge/identidad/forma-de-trabajar|Forma de trabajar]]
@@ -34,6 +33,7 @@ tags:
 - [[docs/19-obsidian|Obsidian: el cerebro abierto en tu equipo]]
 - [[docs/26-web-clientes|Web para clientes: estudio de referencias, estructura y textos (F2)]]
 - [[governance/legal/borradores/04-anexo-uso-ia|Anexo de uso de inteligencia artificial · BORRADOR PARA ABOGADO]]
+- [[precedents/projects/caso-correduria-atalaya/entregables/01-propuesta-diagnostico.revision|Revisión con la rúbrica C3 · Propuesta de diagnóstico de Atalaya (FICTICIA)]]
 - [[governance/socios/02-acuerdo-de-socios-puntos|M-003 · Acuerdo de socios: lo que tenéis que decidir]]
 - [[Inicio|Inicio · cerebro de Varios]]
 - [[docs/18-flujo-de-calidad-y-aprendizaje|18 · Flujo de calidad y aprendizaje continuo en la oficina]]
@@ -97,6 +97,7 @@ tags:
 - [[knowledge/grafo/fuentes/KEYCLOAK-DOCKER|KEYCLOAK-DOCKER · Keycloak: Getting started with Docker]]
 - [[knowledge/grafo/fuentes/LINEAR-TRIAGE|LINEAR-TRIAGE · Linear: Triage e Inbox]]
 - [[knowledge/grafo/fuentes/NEAT-2002|NEAT-2002 · Neuroevolution of augmenting topologies (NEAT)]]
+- [[knowledge/grafo/fuentes/OWASP-BD|OWASP-BD · Database Security Cheat Sheet]]
 - [[knowledge/grafo/fuentes/RIA-2024-1689|RIA-2024-1689 · Reglamento (UE) 2024/1689, de inteligencia artificial]]
 - [[knowledge/grafo/fuentes/ZITADEL-AGPL|ZITADEL-AGPL · Strengthening Our Open Source Foundation: Moving to AGPL 3.0]]
 - [[knowledge/grafo/fuentes/ZITADEL-MFA|ZITADEL-MFA · ZITADEL Default Settings (segundos factores)]]

@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 10
-miembros: 33
-cohesion: 0.34
+miembros: 32
+cohesion: 0.36
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 10 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Flujo ceo
 
-33 nodos agrupados por el algoritmo de Louvain. Cohesión 0.34.
+32 nodos agrupados por el algoritmo de Louvain. Cohesión 0.36.
 
 ## Documentos
 
@@ -45,4 +45,3 @@ tags:
 - [[docs/06-seguridad-y-gobierno|Seguridad, privacidad y gobierno]]
 - [[docs/atlas/06-fallos|06 · Fallos, reintentos y recuperación]]
 - [[docs/03-ceo-digital-y-orquestacion|CEO digital y orquestación]]
-- [[precedents/lessons-learned/2026-11-correcciones-documentales|Lección: los documentos base también tienen errores]]

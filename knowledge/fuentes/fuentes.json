@@ -1868,6 +1868,20 @@
    "nota": "Autenticar y autorizar con Depends(); OAuth2PasswordBearer no verifica el token. JWT con PyJWT, algoritmo fijo y exp, iss y aud obligatorios; secretos fuera del código. «Authentication alone does not authorize an operation». Pydantic ignora por defecto los campos no declarados; usar esquemas de entrada separados."
   },
   {
+   "id": "OWASP-BD",
+   "titulo": "Database Security Cheat Sheet",
+   "organismo": "OWASP Cheat Sheet Series",
+   "url": "https://cheatsheetseries.owasp.org/cheatsheets/Database_Security_Cheat_Sheet.html",
+   "tipo": "recomendacion-tecnica",
+   "jurisdiccion": "Internacional",
+   "version": "sin fecha visible (leída el 28/11/2026)",
+   "autoridad": "media",
+   "vigencia": "vigente",
+   "estado": "draft",
+   "consultada": "2026-11-28",
+   "nota": "«employ the principle of least privilege»: «the accounts should only have the minimal permissions required for the application to function» y «Only grant the required permissions on the databases»; la cuenta no debe ser dueña de la base. Base de que varios_app solo lea cliente y usuario (migración 0005, repaso del 28/11)."
+  },
+  {
    "id": "OWASP-IDOR",
    "titulo": "Insecure Direct Object Reference Prevention Cheat Sheet",
    "organismo": "OWASP Cheat Sheet Series",

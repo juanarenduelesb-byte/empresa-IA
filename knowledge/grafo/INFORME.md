@@ -6,7 +6,7 @@ Cómo está conectado el cerebro de Varios: qué sostiene todo, qué temas forma
 ## Resumen
 
 - 5250 nodos: seccion 4491, documento 390, fuente 146, habilidad 65, proceso 38, especialista 34, agente 34, decision 33, puerta 12, departamento 7.
-- 7587 relaciones: 64 % EXTRACTADAS (escritas en la fuente), 35 % INFERIDAS (temas compartidos, con puntuación) y 40 AMBIGUAS (para revisar).
+- 7586 relaciones: 64 % EXTRACTADAS (escritas en la fuente), 35 % INFERIDAS (temas compartidos, con puntuación) y 40 AMBIGUAS (para revisar).
 - 14 comunidades de temas.
 
 ## Nodos centrales
@@ -23,8 +23,8 @@ Lo que más cosas conecta. Si cambia, cambia mucho.
 8. **Varios · empresa-ia** (`CLAUDE.md`) · 71 conexiones
 9. **Habilidades de los agentes** (`claude/habilidades/README.md`) · 69 conexiones
 10. **Mapa de autonomía por proceso, A0–A4 (M-045)** (`docs/29-autonomia.md`) · 67 conexiones
-11. **Auditoría de agentes y habilidades frente a los procesos (M-040)** (`docs/28-auditoria-agentes.md`) · 65 conexiones
-12. **P22 · Gestión de errores y reintentos** · 64 conexiones
+11. **P22 · Gestión de errores y reintentos** · 64 conexiones
+12. **Auditoría de agentes y habilidades frente a los procesos (M-040)** (`docs/28-auditoria-agentes.md`) · 64 conexiones
 
 ## Puentes entre temas
 

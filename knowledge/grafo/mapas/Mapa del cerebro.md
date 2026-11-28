@@ -37,8 +37,8 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 - [[CLAUDE|Varios · empresa-ia]] · 71 vecinos
 - [[claude/habilidades/README|Habilidades de los agentes]] · 69 vecinos
 - [[docs/29-autonomia|Mapa de autonomía por proceso, A0–A4 (M-045)]] · 67 vecinos
-- [[docs/28-auditoria-agentes|Auditoría de agentes y habilidades frente a los procesos (M-040)]] · 65 vecinos
 - [[processes/catalog/P22-gestion-de-errores-y-reintentos|P22 · Gestión de errores y reintentos]] · 64 vecinos
+- [[docs/28-auditoria-agentes|Auditoría de agentes y habilidades frente a los procesos (M-040)]] · 64 vecinos
 - [[processes/catalog/P28-gestion-de-incidentes|P28 · Gestión de incidentes]] · 63 vecinos
 - [[knowledge/direccion/ceo-digital|CEO digital]] · 59 vecinos
 - [[knowledge/grafo/decisiones/D-011|D-011 · Construir primero, clientes desde el 15/02/2027]] · 54 vecinos

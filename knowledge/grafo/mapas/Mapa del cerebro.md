@@ -61,7 +61,7 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 - ¿Por qué «Registro de fuentes» conecta la comunidad 0 con las comunidades 2, 3, 4, 5?  
   Intermediación alta (0.148): es un puente entre temas.
 - ¿Por qué «Registro de decisiones» conecta la comunidad 3 con las comunidades 0, 2, 4, 5?  
-  Intermediación alta (0.053): es un puente entre temas.
+  Intermediación alta (0.052): es un puente entre temas.
 - ¿Por qué «Habilidades de los agentes» conecta la comunidad 2 con las comunidades 1, 4, 5, 6?  
   Intermediación alta (0.039): es un puente entre temas.
 - ¿Se aprueba D-019 · Calidad exigente, todo pasa por un socio y cada rechazo se rehace aprendiendo? Sigue en propuesta y la citan 22 secciones.  

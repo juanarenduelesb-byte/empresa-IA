@@ -11,7 +11,7 @@ from sqlalchemy.orm import Session
 
 from varios.config import ajustes
 from varios.procesos.estados import cargar, cargar_objeto
-from varios.procesos.motor import RIESGOS, AprobacionInvalida, Identidad, TransicionInvalida
+from varios.procesos.motor import RIESGOS, AprobacionInvalida, ClaveReutilizada, Identidad, TransicionInvalida
 
 from .modelos import Aprobacion, EventoAuditoria, Solicitud, Tarea
 
@@ -28,11 +28,6 @@ ACTOR_SISTEMA = "sistema:caducidad"
 
 class NoEncontrado(LookupError):
     """Lo mismo si no existe que si es de otro cliente: no se revela la existencia (OWASP IDOR)."""
-
-
-class ClaveReutilizada(Exception):
-    """La clave de idempotencia ya se usó para otro cambio del mismo objeto (borrador IETF del Idempotency-Key, §2.7:
-    reusar la clave con otra petición se responde con 422, `IETF-IDEMPOTENCY-KEY`)."""
 
 
 @dataclass

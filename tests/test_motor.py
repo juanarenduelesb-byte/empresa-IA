@@ -1,6 +1,6 @@
 import pytest
 
-from varios.procesos.motor import AprobacionInvalida, Identidad, Motor, TransicionInvalida
+from varios.procesos.motor import AprobacionInvalida, ClaveReutilizada, Identidad, Motor, TransicionInvalida
 
 ANA = Identidad("ana", "cliente-ficticio-a")
 LUIS = Identidad("luis", "cliente-ficticio-a", frozenset({"aprobador"}))
@@ -109,6 +109,17 @@ def test_idempotencia_en_transiciones():
     m.mover(ANA, e.id, "EN_CLASIFICACION", "clasificar", clave_idempotencia="k1")
     n = len(m.auditoria)
     m.mover(ANA, e.id, "EN_CLASIFICACION", "clasificar", clave_idempotencia="k1")
+    assert len(m.auditoria) == n and e.estado == "EN_CLASIFICACION"
+
+
+def test_la_misma_clave_con_otro_destino_es_un_error():
+    """Repaso del 28/11, como en la API: antes devolvía el encargo sin moverlo y el cambio se perdía en silencio."""
+    m = Motor()
+    e = m.alta(ANA, "x")
+    m.mover(ANA, e.id, "EN_CLASIFICACION", "clasificar", clave_idempotencia="k1")
+    n = len(m.auditoria)
+    with pytest.raises(ClaveReutilizada):
+        m.mover(ANA, e.id, "CANCELADO", "otra cosa", clave_idempotencia="k1")
     assert len(m.auditoria) == n and e.estado == "EN_CLASIFICACION"
 
 

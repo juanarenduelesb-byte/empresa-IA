@@ -28,6 +28,11 @@ class AprobacionInvalida(Exception):
     pass
 
 
+class ClaveReutilizada(Exception):
+    """La clave de idempotencia ya se usó para otro cambio del mismo encargo (borrador IETF del Idempotency-Key, §2.7:
+    reusar la clave con otra petición es un error, `IETF-IDEMPOTENCY-KEY`; la API responde 422)."""
+
+
 @dataclass(frozen=True)
 class Identidad:
     usuario: str
@@ -109,6 +114,9 @@ class Motor:
         enc = self.obtener(quien, encargo_id)
         clave = (quien.tenant, enc.id, clave_idempotencia) if clave_idempotencia else None
         if clave and clave in self._claves:
+            previo = self._claves[clave].despues
+            if previo != a:  # otra petición con la misma clave: no se pierde en silencio (repaso del 28/11)
+                raise ClaveReutilizada(f"La clave de idempotencia ya se usó para pasar a {previo}, no a {a}")
             return enc
         if not motivo.strip():
             raise TransicionInvalida("Toda transición necesita motivo")

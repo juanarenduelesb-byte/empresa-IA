@@ -70,7 +70,7 @@ Todavía no hay precedentes de este tipo.
 ### Fundamentos y terminología
 - Contabilidad según el PGC de Pymes ([PGC-PYMES](../fuentes/registro.md#pgc-pymes)).
 - La factura tiene un contenido mínimo obligatorio y plazos de expedición y conservación ([RD-1619-2012](../fuentes/registro.md#rd-1619-2012)).
-- Los sistemas de facturación deberán cumplir Verifactu en los plazos del RDL 15/2025; el aplazamiento a 2028 está anunciado pero sin norma ([VERIFACTU-RDL15](../fuentes/registro.md#verifactu-rdl15), [VERIFACTU-2028](../fuentes/registro.md#verifactu-2028)).
+- Los sistemas de facturación deberán cumplir Verifactu antes del 06/10/2028 según el RDL 43/2026 (BOE 25/11/2026), pendiente de convalidación; si no se convalida, vuelven los plazos del RDL 15/2025 ([VERIFACTU-RDL43](../fuentes/registro.md#verifactu-rdl43), [VERIFACTU-RDL15](../fuentes/registro.md#verifactu-rdl15)).
 - La factura electrónica entre empresas será obligatoria según el RD 238/2026 y el calendario de la AEAT ([FACTURA-B2B](../fuentes/registro.md#factura-b2b), [AEAT-FACTURA-CAL](../fuentes/registro.md#aeat-factura-cal)).
 - Plazos máximos de pago entre empresas: Ley 3/2004 ([LEY-MOROSIDAD-3-2004](../fuentes/registro.md#ley-morosidad-3-2004)).
 

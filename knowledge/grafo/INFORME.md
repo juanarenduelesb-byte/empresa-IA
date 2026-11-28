@@ -6,14 +6,14 @@ Cómo está conectado el cerebro de Varios: qué sostiene todo, qué temas forma
 ## Resumen
 
 - 5240 nodos: seccion 4484, documento 390, fuente 143, habilidad 65, proceso 38, especialista 34, agente 34, decision 33, puerta 12, departamento 7.
-- 7571 relaciones: 64 % EXTRACTADAS (escritas en la fuente), 35 % INFERIDAS (temas compartidos, con puntuación) y 40 AMBIGUAS (para revisar).
+- 7570 relaciones: 64 % EXTRACTADAS (escritas en la fuente), 35 % INFERIDAS (temas compartidos, con puntuación) y 40 AMBIGUAS (para revisar).
 - 14 comunidades de temas.
 
 ## Nodos centrales
 
 Lo que más cosas conecta. Si cambia, cambia mucho.
 
-1. **Registro de fuentes** (`knowledge/fuentes/registro.md`) · 248 conexiones
+1. **Registro de fuentes** (`knowledge/fuentes/registro.md`) · 247 conexiones
 2. **Registro de decisiones** (`DECISIONS.md`) · 143 conexiones
 3. **Índice del conocimiento de Varios** (`knowledge/INDEX.md`) · 123 conexiones
 4. **Guia de Arranque Proyecto v1.4 Diseno Cerrado** (`docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado.md`) · 84 conexiones
@@ -104,7 +104,7 @@ Cohesión 0.34 · 33 nodos: Guia de Arranque Proyecto v1.4 Diseno Cerrado; Flujo
 
 ### 11 · knowledge/administracion-finanzas · Experto en asesorías, gestorías y despachos y Especialista en contabilidad y facturación
 
-Cohesión 0.21 · 27 nodos: Experto en asesorías, gestorías y despachos; Especialista en contabilidad y facturación; Director financiero (CFO); Especialista administrativo; Especialista financiero; Experto en asesorías, gestorías y despachos; VERIFACTU-RDL43 · Real Decreto-ley 43/2026: aplazamiento de la adaptación de los sistemas informáticos de facturación (Verifactu); AEAT-FACTURA-CAL · Factura electrónica obligatoria: calendario de implantación (y 19 más)
+Cohesión 0.21 · 27 nodos: Experto en asesorías, gestorías y despachos; Especialista en contabilidad y facturación; Director financiero (CFO); Especialista administrativo; Especialista financiero; VERIFACTU-RDL43 · Real Decreto-ley 43/2026: aplazamiento de la adaptación de los sistemas informáticos de facturación (Verifactu); Experto en asesorías, gestorías y despachos; AEAT-FACTURA-CAL · Factura electrónica obligatoria: calendario de implantación (y 19 más)
 
 ### 12 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Conversaciones con IA y evaluación
 

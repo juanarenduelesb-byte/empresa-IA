@@ -27,7 +27,7 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 
 ## Nodos centrales
 
-- [[knowledge/fuentes/registro|Registro de fuentes]] · 248 vecinos
+- [[knowledge/fuentes/registro|Registro de fuentes]] · 247 vecinos
 - [[DECISIONS|Registro de decisiones]] · 143 vecinos
 - [[knowledge/INDEX|Índice del conocimiento de Varios]] · 123 vecinos
 - [[docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado|Guia de Arranque Proyecto v1.4 Diseno Cerrado]] · 84 vecinos

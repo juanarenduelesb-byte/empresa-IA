@@ -6,7 +6,7 @@ Cómo está conectado el cerebro de Varios: qué sostiene todo, qué temas forma
 ## Resumen
 
 - 5281 nodos: seccion 4517, documento 394, fuente 147, habilidad 65, proceso 38, especialista 34, agente 34, decision 33, puerta 12, departamento 7.
-- 7709 relaciones: 64 % EXTRACTADAS (escritas en la fuente), 35 % INFERIDAS (temas compartidos, con puntuación) y 81 AMBIGUAS (para revisar).
+- 7711 relaciones: 64 % EXTRACTADAS (escritas en la fuente), 35 % INFERIDAS (temas compartidos, con puntuación) y 81 AMBIGUAS (para revisar).
 - 14 comunidades de temas.
 
 ## Nodos centrales
@@ -72,7 +72,7 @@ Cohesión 0.1 · 97 nodos: Habilidades de los agentes; Administración; Experto 
 
 ### 3 · docs · Registro de decisiones y Trabajo nocturno de Claude
 
-Cohesión 0.08 · 84 nodos: Registro de decisiones; Trabajo nocturno de Claude; Informe de la mañana · 27/11/2026; Base de datos (D-023, propuesta); Plan maestro: la empresa completa, sin que se escape nada; Informe de la mañana · 26/11/2026; 17 · Cerebro, conocimiento y procesos: auditoría e informe; Política de uso de inteligencia artificial de Varios · BORRADOR PARA ABOGADO (y 76 más)
+Cohesión 0.08 · 85 nodos: Registro de decisiones; Trabajo nocturno de Claude; Base de datos (D-023, propuesta); Informe de la mañana · 27/11/2026; Plan maestro: la empresa completa, sin que se escape nada; Informe de la mañana · 26/11/2026; 17 · Cerebro, conocimiento y procesos: auditoría e informe; Política de uso de inteligencia artificial de Varios · BORRADOR PARA ABOGADO (y 77 más)
 
 ### 4 · processes/runbooks · Auditoría de agentes y habilidades frente a los procesos (M-040) y Dependencias entre procesos
 
@@ -100,7 +100,7 @@ Cohesión 0.49 · 37 nodos: P22 · Gestión de errores y reintentos; Catálogo d
 
 ### 10 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Flujo ceo
 
-Cohesión 0.34 · 33 nodos: Guia de Arranque Proyecto v1.4 Diseno Cerrado; Flujo ceo; Ejecucion agentes; Motor conocimiento obsidian; Marco Integral Legal Ciberseguridad IA Espana UE 2026-11-16; 12 · Ciclo de vida de un proyecto con cliente; Comunicaciones estados; Calidad gobierno (y 25 más)
+Cohesión 0.36 · 32 nodos: Guia de Arranque Proyecto v1.4 Diseno Cerrado; Flujo ceo; Ejecucion agentes; Motor conocimiento obsidian; Marco Integral Legal Ciberseguridad IA Espana UE 2026-11-16; 12 · Ciclo de vida de un proyecto con cliente; Comunicaciones estados; Calidad gobierno (y 24 más)
 
 ### 11 · knowledge/administracion-finanzas · Experto en asesorías, gestorías y despachos y Especialista en contabilidad y facturación
 

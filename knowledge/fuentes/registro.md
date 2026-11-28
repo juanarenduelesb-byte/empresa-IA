@@ -148,6 +148,7 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 | [OWASP-BD](#owasp-bd) | Database Security Cheat Sheet | recomendacion-tecnica | media | vigente | draft |
 | [OWASP-INYECCION](#owasp-inyeccion) | LLM Prompt Injection Prevention Cheat Sheet | recomendacion-tecnica | media | vigente | draft |
 | [SECRETLINT-ANTHROPIC](#secretlint-anthropic) | @secretlint/secretlint-rule-anthropic (README, v13.0.3) | documentacion-producto | media | vigente | draft |
+| [IETF-IDEMPOTENCY-KEY](#ietf-idempotency-key) | The Idempotency-Key HTTP Header Field (draft-ietf-httpapi-idempotency-key-header-07) | recomendacion-tecnica | media | borrador | draft |
 | [OWASP-IDOR](#owasp-idor) | Insecure Direct Object Reference Prevention Cheat Sheet | recomendacion-tecnica | media | vigente | draft |
 | [OEPM-LOCALIZADOR](#oepm-localizador) | Localizador de marcas (servicio web de la OEPM) | documentacion-producto | alta | vigente | draft |
 | [TMVIEW](#tmview) | TMview (ficha del catálogo de aplicaciones de datos.gob.es) | documentacion-producto | media | vigente | draft |
@@ -1562,6 +1563,16 @@ Consultadas el 2026-11-17 salvo las que indican otra fecha en su ficha. Tipos: o
 - **Consultada:** 2026-11-28 · **Autoridad:** media · **Vigencia:** vigente · **Estado:** draft
 - **Especialistas relacionados:** —
 - **Nota:** Regla que detecta claves de la API de Anthropic (ANTHROPIC_API_KEY); su ejemplo empieza por «sk-ant-api03-». No da expresión regular ni longitud. Base del patrón sk-ant- de tools/check_repo.py (repaso del 28/11).
+
+<a id="ietf-idempotency-key"></a>
+### IETF-IDEMPOTENCY-KEY
+- **Título:** The Idempotency-Key HTTP Header Field (draft-ietf-httpapi-idempotency-key-header-07)
+- **Autor u organismo:** IETF, grupo HTTPAPI (J. Jena y S. Dalal)
+- **URL:** <https://www.ietf.org/archive/id/draft-ietf-httpapi-idempotency-key-header-07.html>
+- **Tipo:** recomendacion-tecnica · **Jurisdicción:** Internacional · **Versión o fecha:** borrador 07, 15/10/2025; caducó el 18/04/2026 (leída el 28/11/2026; no se ha mirado si hay una versión más nueva)
+- **Consultada:** 2026-11-28 · **Autoridad:** media · **Vigencia:** borrador · **Estado:** draft
+- **Especialistas relacionados:** —
+- **Nota:** §2.2: la clave «MUST NOT be reused with another request with a different request payload». §2.7: «If there is an attempt to reuse an idempotency key with a different request payload» «the resource SHOULD reply with a HTTP `422` status code». Es un borrador, no una norma. Base de que la API responda 422 cuando una clave de idempotencia se repite con otro estado de destino (repaso del 28/11).
 
 <a id="owasp-idor"></a>
 ### OWASP-IDOR

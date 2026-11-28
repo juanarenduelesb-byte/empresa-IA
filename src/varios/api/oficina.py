@@ -19,7 +19,7 @@ from pydantic import AwareDatetime, BaseModel, ConfigDict, Field
 from sqlalchemy import Engine, select
 
 from varios.db.modelos import RIESGOS, Usuario
-from varios.db.repositorio import MAQUINA, MAQUINA_TAREA, NoEncontrado, Repositorio
+from varios.db.repositorio import MAQUINA, MAQUINA_TAREA, ClaveReutilizada, NoEncontrado, Repositorio
 from varios.db.sesion import motor, sesion_de_cliente
 from varios.procesos.motor import AprobacionInvalida, Identidad, TransicionInvalida
 
@@ -91,7 +91,7 @@ def errores_de_dominio(app) -> None:
 
     # Solo errores del dominio, con mensajes escritos por nosotros. Un ValueError cualquiera no se traduce: su texto
     # podría enseñar detalles internos (hoja de FastAPI de OWASP). La validación de entrada la hace Pydantic (422).
-    codigos = {NoEncontrado: 404, AprobacionInvalida: 403, TransicionInvalida: 409}
+    codigos = {NoEncontrado: 404, AprobacionInvalida: 403, TransicionInvalida: 409, ClaveReutilizada: 422}
     for clase, codigo in codigos.items():
         def manejar(_peticion, exc, codigo=codigo, clase=clase):
             detalle = "No encontrado" if clase is NoEncontrado else str(exc)

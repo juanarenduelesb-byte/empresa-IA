@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 3
-miembros: 93
+miembros: 94
 cohesion: 0.08
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 3 · docs · Registro de decisiones y Trabajo nocturno de Claude
 
-93 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
+94 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
 
 ## Documentos
 
@@ -52,8 +52,8 @@ tags:
 - [[knowledge/estudios/2026-11-26-prospectos-pymes-alvaro/README|Estudio de prospectos: automatización para pymes (Álvaro, noviembre de 2026)]]
 - [[integrations/tests/README|Pruebas de integración]]
 - [[claude/instrucciones-proyecto|Instrucciones del proyecto "Varios · Cerebro" en Claude]]
-- [[docs/02-arquitectura-general|Arquitectura general]]
 - [[knowledge/README|Conocimiento]]
+- [[docs/02-arquitectura-general|Arquitectura general]]
 - [[integrations/connectors/README|Conectores]]
 
 ## Decisiones
@@ -103,6 +103,7 @@ tags:
 - [[knowledge/grafo/fuentes/DOCKER-PUERTOS|DOCKER-PUERTOS · Docker: Port publishing and mapping]]
 - [[knowledge/grafo/fuentes/ENTRA-EXTERNAL-ID-PRECIOS|ENTRA-EXTERNAL-ID-PRECIOS · Microsoft Entra External ID pricing]]
 - [[knowledge/grafo/fuentes/GEPA-2026|GEPA-2026 · GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning (Agrawal et al., ICLR 2026, ponencia oral)]]
+- [[knowledge/grafo/fuentes/IETF-IDEMPOTENCY-KEY|IETF-IDEMPOTENCY-KEY · The Idempotency-Key HTTP Header Field (draft-ietf-httpapi-idempotency-key-header-07)]]
 - [[knowledge/grafo/fuentes/KEYCLOAK-DB|KEYCLOAK-DB · Keycloak: Configuring the database]]
 - [[knowledge/grafo/fuentes/KEYCLOAK-DOCKER|KEYCLOAK-DOCKER · Keycloak: Getting started with Docker]]
 - [[knowledge/grafo/fuentes/LINEAR-TRIAGE|LINEAR-TRIAGE · Linear: Triage e Inbox]]

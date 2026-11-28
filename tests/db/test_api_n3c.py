@@ -271,3 +271,29 @@ def test_la_clave_de_idempotencia_es_de_cada_tarea(api, gente):  # noqa: F811
     ev = [e for e in api.get(f"/encargos/{enc['id']}/auditoria", headers=h(autor)).json()
           if e["accion"] == "tarea_mover"]
     assert len(ev) == 6  # t1, t2, y t3 dos veces a running y dos a blocked; la repetición de t1 no deja rastro
+
+
+def test_repetir_la_clave_con_otro_destino_es_un_error_y_no_se_pierde_en_silencio(api, gente):  # noqa: F811
+    """Repaso de las 07:50 del 28/11: la misma clave con otro estado de destino devolvía 200 sin mover nada, así que
+    quien la reusaba creía hecho un cambio que no se había hecho. Ahora responde 422 (borrador IETF del
+    Idempotency-Key, §2.7) y no cambia nada; repetir la misma petición sigue siendo idempotente."""
+    autor = gente["autor"]
+    enc, t = _con_tarea(api, autor)
+    url_t = f"/tareas/{t['id']}/estado"
+    assert api.post(url_t, json={"a": "running", "motivo": "Empieza", "clave_idempotencia": "kt"},
+                    headers=h(autor)).status_code == 200
+    r = api.post(url_t, json={"a": "cancelled", "motivo": "Otra cosa", "clave_idempotencia": "kt"}, headers=h(autor))
+    assert r.status_code == 422 and "running" in r.json()["detail"]
+    assert api.post(url_t, json={"a": "running", "motivo": "Empieza", "clave_idempotencia": "kt"},
+                    headers=h(autor)).status_code == 200
+    url_e = f"/encargos/{enc['id']}/estado"
+    assert api.post(url_e, json={"a": "BLOQUEADO", "motivo": "Espera", "clave_idempotencia": "ke"},
+                    headers=h(autor)).status_code == 200
+    assert api.post(url_e, json={"a": "EN_EJECUCION", "motivo": "Sigue"}, headers=h(autor)).status_code == 200
+    r = api.post(url_e, json={"a": "CANCELADO", "motivo": "Lo dejo", "clave_idempotencia": "ke"}, headers=h(autor))
+    assert r.status_code == 422
+    e = api.get(f"/encargos/{enc['id']}", headers=h(autor)).json()
+    assert e["estado"] == "EN_EJECUCION"
+    assert [x["estado"] for x in api.get(f"/encargos/{enc['id']}/tareas", headers=h(autor)).json()] == ["running"]
+    ev = api.get(f"/encargos/{enc['id']}/auditoria", headers=h(autor)).json()
+    assert not any(x["despues"] in ("CANCELADO", "cancelled") for x in ev)

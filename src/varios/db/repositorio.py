@@ -30,6 +30,11 @@ class NoEncontrado(LookupError):
     """Lo mismo si no existe que si es de otro cliente: no se revela la existencia (OWASP IDOR)."""
 
 
+class ClaveReutilizada(Exception):
+    """La clave de idempotencia ya se usó para otro cambio del mismo objeto (borrador IETF del Idempotency-Key, §2.7:
+    reusar la clave con otra petición se responde con 422, `IETF-IDEMPOTENCY-KEY`)."""
+
+
 @dataclass
 class Repositorio:
     sesion: Session
@@ -65,15 +70,22 @@ class Repositorio:
         return list(self.sesion.scalars(consulta))
 
     # --- encargo: cambios de estado -------------------------------------------------
-    def _ya_aplicada(self, clave: str | None, objeto: str, accion: str) -> bool:
+    def _ya_aplicada(self, clave: str | None, objeto: str, accion: str, a: str) -> bool:
         """La clave vale para un cambio de estado de un objeto (un encargo o una tarea): la misma clave en otro encargo,
-        en otra tarea del mismo encargo o en el alta de la tarea no deja sin aplicar el cambio (repaso del 28/11)."""
+        en otra tarea del mismo encargo o en el alta de la tarea no deja sin aplicar el cambio (repaso del 28/11).
+        Repetir la clave con otro estado de destino no es una repetición sino otra petición: antes devolvía 200 sin
+        mover nada y el cambio se perdía en silencio; ahora es un error (repaso de las 07:50 del 28/11)."""
         if not clave:
             return False
-        q = select(EventoAuditoria.id).where(EventoAuditoria.cliente_id == self.cliente_id,
-                                             EventoAuditoria.clave_idempotencia == clave,
-                                             EventoAuditoria.objeto == objeto, EventoAuditoria.accion == accion)
-        return self.sesion.scalar(q.limit(1)) is not None
+        q = select(EventoAuditoria.despues).where(EventoAuditoria.cliente_id == self.cliente_id,
+                                                  EventoAuditoria.clave_idempotencia == clave,
+                                                  EventoAuditoria.objeto == objeto, EventoAuditoria.accion == accion)
+        previos = list(self.sesion.scalars(q.limit(1)))
+        if not previos:
+            return False
+        if previos[0] != a:
+            raise ClaveReutilizada(f"La clave de idempotencia ya se usó para pasar a {previos[0]}, no a {a}")
+        return True
 
     def _cambiar(self, sol: Solicitud, a: str, motivo: str, clave: str | None = None, actor: str | None = None,
                  **datos: object) -> None:
@@ -95,7 +107,7 @@ class Repositorio:
     def mover_solicitud(self, solicitud_id: uuid.UUID, a: str, motivo: str, clave: str | None = None) -> Solicitud:
         """Cambio de estado según encargo.json. Toda transición lleva motivo y deja evento de auditoría."""
         sol = self.solicitud(solicitud_id, bloquear=True)
-        if self._ya_aplicada(clave, f"solicitud:{sol.id}", "mover"):
+        if self._ya_aplicada(clave, f"solicitud:{sol.id}", "mover", a):
             return sol
         if not motivo.strip():
             raise TransicionInvalida("Toda transición necesita motivo")
@@ -178,7 +190,7 @@ class Repositorio:
         t = self.tarea(tarea_id)
         sol = self.solicitud(t.solicitud_id, bloquear=True)  # primero el encargo, como en el resto de operaciones
         self.sesion.refresh(t, with_for_update=True)
-        if self._ya_aplicada(clave, f"tarea:{t.id}", "tarea_mover"):
+        if self._ya_aplicada(clave, f"tarea:{t.id}", "tarea_mover", a):
             return t
         if not motivo.strip():
             raise TransicionInvalida("Toda transición necesita motivo")

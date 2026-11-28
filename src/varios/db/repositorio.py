@@ -103,6 +103,10 @@ class Repositorio:
             # Guía v1.4 §4: de aquí solo se sale con un aprobador autorizado y la versión exacta, es decir, decidiendo
             # la aprobación. Un cambio libre la dejaría «pendiente» para siempre y lo podría hacer cualquiera.
             raise TransicionInvalida("Un encargo pendiente de aprobación solo sale con decidir_aprobacion")
+        if sol.estado == "ESCALADO" and not self.quien.persona:
+            # encargo.json: de ESCALADO sale «una persona identificada» que decide cómo seguir (también tras caducar
+            # una aprobación). Un agente que lo devolviera a PLANIFICADO decidiría por ella (repaso del 28/11).
+            raise AprobacionInvalida("De ESCALADO solo sale una persona que decide cómo seguir")
         self._cambiar(sol, a, motivo, clave)
         return sol
 

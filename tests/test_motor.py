@@ -148,3 +148,17 @@ def test_escalar_una_aprobacion_solo_lo_hace_la_caducidad():
     with pytest.raises(TransicionInvalida):
         m.mover(LUIS, e.id, "ESCALADO", "me salto la aprobación")
     assert e.estado == "PENDIENTE_APROBACION"
+
+
+def test_de_escalado_solo_sale_una_persona():
+    """encargo.json: de ESCALADO sale «una persona identificada» que decide cómo seguir (repaso del 28/11)."""
+    m = Motor()
+    e = m.alta(ANA, "x")
+    m.mover(ANA, e.id, "EN_CLASIFICACION", "clasificar")
+    m.mover(ANA, e.id, "ESCALADO", "el CEO no sabe cómo seguir")
+    n = len(m.auditoria)
+    with pytest.raises(AprobacionInvalida):
+        m.mover(AGENTE, e.id, "PLANIFICADO", "sigo yo")
+    assert e.estado == "ESCALADO" and len(m.auditoria) == n
+    m.mover(ANA, e.id, "PLANIFICADO", "decido seguir")
+    assert e.estado == "PLANIFICADO"

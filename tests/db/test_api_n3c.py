@@ -90,7 +90,12 @@ def test_aprobacion_caducada_vuelve_como_pregunta_sin_aprobarse(api, gente, moto
     assert {x["actor"] for x in ev[-2:]} == {"sistema:caducidad"}
     assert ev[-1]["antes"] == "PENDIENTE_APROBACION" and ev[-1]["despues"] == "ESCALADO"
     assert not any(x["despues"] == "ENTREGADO" for x in ev)
-    # Desde ESCALADO una persona decide cómo seguir: puede volver a pedir el OK por el camino normal.
+    # Desde ESCALADO una persona decide cómo seguir; un agente no (encargo.json, repaso del 28/11).
+    r = api.post(f"/encargos/{enc['id']}/estado", json={"a": "PLANIFICADO", "motivo": "Sigo yo"},
+                 headers=h(gente["agente"]))
+    assert r.status_code == 403
+    assert api.get(f"/encargos/{enc['id']}", headers=h(autor)).json()["estado"] == "ESCALADO"
+    # La persona puede volver a pedir el OK por el camino normal.
     for a in ("PLANIFICADO", "EN_EJECUCION", "EN_QA"):
         assert api.post(f"/encargos/{enc['id']}/estado", json={"a": a, "motivo": "Sigue"},
                         headers=h(autor)).status_code == 200

@@ -120,6 +120,9 @@ class Motor:
             raise AprobacionInvalida("Usa aprobar(): la entrega tras aprobación exige una persona")
         if enc.estado == "PENDIENTE_APROBACION" and a == "ESCALADO":
             raise TransicionInvalida("PENDIENTE_APROBACION → ESCALADO solo ocurre al caducar la aprobación (N3c)")
+        if enc.estado == "ESCALADO" and not quien.persona:
+            # encargo.json: de ESCALADO sale «una persona identificada» que decide cómo seguir (repaso del 28/11).
+            raise AprobacionInvalida("De ESCALADO solo sale una persona que decide cómo seguir")
         if enc.estado == "PENDIENTE_APROBACION":
             # Guía v1.4 §4: también devolver a retrabajo o rechazar exige un aprobador autorizado.
             self._comprobar_aprobador(quien, enc)

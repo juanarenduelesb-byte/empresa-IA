@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 0
-miembros: 109
+miembros: 110
 cohesion: 0.06
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 0 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros
 
-109 nodos agrupados por el algoritmo de Louvain. Cohesión 0.06.
+110 nodos agrupados por el algoritmo de Louvain. Cohesión 0.06.
 
 ## Documentos
 
@@ -97,6 +97,7 @@ tags:
 - [[knowledge/grafo/fuentes/TMVIEW|TMVIEW · TMview (ficha del catálogo de aplicaciones de datos.gob.es)]]
 - [[knowledge/grafo/fuentes/UNESPA-SDM|UNESPA-SDM · Reglamento articulado del Sistema Siniestros Daños Materiales (SDM)]]
 - [[knowledge/grafo/fuentes/W3C-WCAG22|W3C-WCAG22 · Web Content Accessibility Guidelines (WCAG) 2.2]]
+- [[knowledge/grafo/fuentes/AGILE-MANIFESTO|AGILE-MANIFESTO · Manifesto for Agile Software Development]]
 - [[knowledge/grafo/fuentes/CCT-ENCARGO-2021-915|CCT-ENCARGO-2021-915 · Decisión de Ejecución (UE) 2021/915, cláusulas contractuales tipo entre responsables y encargados del tratamiento]]
 - [[knowledge/grafo/fuentes/CNMC-CIDE-2014|CNMC-CIDE-2014 · CNMC, resolución de 25/09/2014, expediente S/0496/13 CIDE]]
 - [[knowledge/grafo/fuentes/CODIGO-CIVIL|CODIGO-CIVIL · Código Civil (Real Decreto de 24 de julio de 1889)]]
@@ -117,5 +118,4 @@ tags:
 - [[knowledge/grafo/fuentes/LEY-1-2019-SECRETOS|LEY-1-2019-SECRETOS · Ley 1/2019, de 20 de febrero, de Secretos Empresariales]]
 - [[knowledge/grafo/fuentes/LEY-35-2015|LEY-35-2015 · Ley 35/2015, de reforma del sistema para la valoración de los daños y perjuicios causados a las personas en accidentes de circulación]]
 - [[knowledge/grafo/fuentes/LEY-5-2025|LEY-5-2025 · Ley 5/2025, de 24 de julio, por la que se modifican el texto refundido de la Ley sobre responsabilidad civil y seguro en la circulación de vehículos a motor y la Ley 20/2015]]
-- [[knowledge/grafo/fuentes/LOPDGDD-DA17|LOPDGDD-DA17 · Ley Orgánica 3/2018 (LOPDGDD), disposición adicional decimoséptima: tratamientos de datos de salud]]
-- … y 13 más
+- … y 14 más

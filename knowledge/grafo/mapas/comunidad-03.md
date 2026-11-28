@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 3
-miembros: 82
-cohesion: 0.08
+miembros: 78
+cohesion: 0.09
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 3 · docs · Registro de decisiones y Trabajo nocturno de Claude
 
-82 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
+78 nodos agrupados por el algoritmo de Louvain. Cohesión 0.09.
 
 ## Documentos
 
@@ -27,12 +27,10 @@ tags:
 - [[docs/22-plan-hasta-febrero|Plan de trabajo diario · 26/11/2026 → 28/02/2027]]
 - [[docs/25-portal-interno|Portal interno: auditoría de la oficina y distribución propuesta (F1)]]
 - [[knowledge/identidad/forma-de-trabajar|Forma de trabajar]]
-- [[docs/00-negocio|Negocio]]
 - [[docs/30-inventario-web|Inventario de la web interna (site/) frente a la web para clientes (N5)]]
 - [[knowledge/identidad/README|Identidad de la empresa]]
 - [[docs/09-inventario-documental|Inventario documental]]
 - [[docs/19-obsidian|Obsidian: el cerebro abierto en tu equipo]]
-- [[knowledge/identidad/manifiesto|Manifiesto]]
 - [[docs/26-web-clientes|Web para clientes: estudio de referencias, estructura y textos (F2)]]
 - [[governance/legal/borradores/04-anexo-uso-ia|Anexo de uso de inteligencia artificial · BORRADOR PARA ABOGADO]]
 - [[Inicio|Inicio · cerebro de Varios]]
@@ -69,7 +67,6 @@ tags:
 - [[knowledge/grafo/decisiones/D-018|D-018 · El cerebro pasa a ser un grafo de conocimiento con relaciones explicadas]]
 - [[knowledge/grafo/decisiones/D-020|D-020 · Seis puestos nuevos en la oficina: CFO, contabilidad, éxito de cliente, plataforma, diseño y cumplimiento]]
 - [[knowledge/grafo/decisiones/D-001|D-001 · Arquitectura orientada a procesos]]
-- [[knowledge/grafo/decisiones/D-005|D-005 · Aislamiento multi-cliente]]
 - [[knowledge/grafo/decisiones/D-032|D-032 · La cartera de pólizas del cliente se guarda en su propia tabla]]
 - [[knowledge/grafo/decisiones/D-008|D-008 · Repositorio como memoria oficial y web visual]]
 - [[knowledge/grafo/decisiones/D-016|D-016 · Vista 3D de la oficina de agentes con Three.js]]
@@ -89,7 +86,6 @@ tags:
 - [[knowledge/grafo/fuentes/OWASP-FASTAPI|OWASP-FASTAPI · FastAPI Security Cheat Sheet]]
 - [[knowledge/grafo/fuentes/REDIS-EXPIRE|REDIS-EXPIRE · Redis: comando EXPIRE (cómo caducan las claves)]]
 - [[knowledge/grafo/fuentes/ZAPIER-HITL|ZAPIER-HITL · Zapier: Human in the Loop (pedir aprobación para seguir)]]
-- [[knowledge/grafo/fuentes/AGILE-MANIFESTO|AGILE-MANIFESTO · Manifesto for Agile Software Development]]
 - [[knowledge/grafo/fuentes/AUTHENTIK-REPO|AUTHENTIK-REPO · Repositorio goauthentik/authentik]]
 - [[knowledge/grafo/fuentes/BASECAMP-5|BASECAMP-5 · Basecamp 5: inicio orientado a la acción]]
 - [[knowledge/grafo/fuentes/ENTRA-EXTERNAL-ID-PRECIOS|ENTRA-EXTERNAL-ID-PRECIOS · Microsoft Entra External ID pricing]]

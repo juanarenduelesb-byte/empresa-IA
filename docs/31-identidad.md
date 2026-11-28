@@ -37,6 +37,7 @@ Arranque de prueba de Keycloak según su guía: `docker run … quay.io/keycloak
    - El cliente sale del token y tiene que casar con un usuario activo de ese cliente en la base.
    - Hace falta una correspondencia entre el sujeto del proveedor (`iss` + `sub`) y el usuario de Varios: hoy `sub` tiene que ser el identificador de Varios, y un sujeto externo responde 401 (prueba incluida). Sería una columna nueva en `usuario`, con su migración, cuando se apruebe.
    - Algoritmo fijo (RS256 con las claves públicas del proveedor) y `exp`, `iss` y `aud` obligatorios, como hoy con HS256 (hoja de FastAPI de OWASP, `OWASP-FASTAPI`).
+   - **Lo que todavía no separa (hecho, repaso del 28/11):** hoy el papel **cliente** solo se distingue al aprobar. Cualquier persona activa de un cliente, tenga el papel que tenga, puede crear encargos, moverlos (también a CANCELADO o RECHAZADO cuando la máquina lo deja), crear y mover tareas y posponer. Con dos socios y datos inventados no importa; antes de dar acceso a personas de un cliente (después de L2) hay que decidir qué puede hacer cada papel y que la API lo compruebe en cada ruta, empezando por negarlo todo (propuesta, sin decidir).
 5. **Tecnología que entraría al aprobarlo:** Keycloak (contenedor) y, para verificar RS256, el extra `crypto` de PyJWT (la librería `cryptography`). Cada una con su línea en `DECISIONS.md` cuando se apruebe; ninguna se añade ahora.
 
 ## Pruebas con un proveedor simulado

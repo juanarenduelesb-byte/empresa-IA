@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 2
-miembros: 94
-cohesion: 0.1
+miembros: 96
+cohesion: 0.09
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 2 · claude/habilidades · Habilidades de los agentes y Administración
 
-94 nodos agrupados por el algoritmo de Louvain. Cohesión 0.1.
+96 nodos agrupados por el algoritmo de Louvain. Cohesión 0.09.
 
 ## Documentos
 
@@ -42,6 +42,7 @@ tags:
 - [[claude/habilidades/hecho-hipotesis-propuesta|Separar hecho, hipótesis y propuesta]]
 - [[knowledge/agentes/dat|Datos de prueba]]
 - [[knowledge/agentes/ia|IA y evaluación]]
+- [[knowledge/identidad/manifiesto|Manifiesto]]
 - [[knowledge/agentes/prov|Proveedores]]
 - [[knowledge/agentes/sal|Experto en sanidad privada]]
 - [[knowledge/agentes/int|Integraciones]]
@@ -72,5 +73,8 @@ tags:
 - [[claude/habilidades/propuesta-diagnostico|Propuesta de diagnóstico]]
 - [[claude/habilidades/flujo-pantallas|Flujo y pantallas de una tarea]]
 - [[claude/habilidades/preguntas-profesional|Preguntas para un profesional externo]]
-- [[claude/habilidades/entrevista-descubrimiento|Entrevista de descubrimiento]]
-- … y 34 más
+- … y 35 más
+
+## Decisiones
+
+- [[knowledge/grafo/decisiones/D-005|D-005 · Aislamiento multi-cliente]]

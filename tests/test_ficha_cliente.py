@@ -37,3 +37,17 @@ def test_todo_dato_dice_de_donde_sale():
     for p in f.procesos:
         for d in (p.volumen_mes, p.tiempo_activo_min, p.tiempo_total, p.retrabajo):
             assert d is None or (d.base and d.fuente)
+
+
+@pytest.mark.parametrize("texto", ["Gerente (gerente@correduria-inventada.es)", "Gerente, móvil 612 345 678",
+                                   "Tramitadora +34 912345678", "Responsable con DNI 12345678Z", "NIE X1234567L"])
+def test_ningun_texto_de_la_ficha_admite_correos_telefonos_ni_dni(texto):
+    """Repaso del 28/11: antes solo se miraba el archivo de ejemplo; el modelo admitía «Gerente, móvil 612…»."""
+    with pytest.raises(ValidationError, match="datos personales"):
+        Interlocutor(rol=texto)
+
+
+def test_las_cifras_corrientes_no_parecen_datos_personales():
+    f = FichaCliente(**json.loads(EJEMPLO.read_text(encoding="utf-8")))
+    resto = {k: v for k, v in f.interlocutores[0].model_dump().items() if k != "rol"}
+    assert Interlocutor(rol="Gerente; 1.200 pólizas y 2026", **resto)

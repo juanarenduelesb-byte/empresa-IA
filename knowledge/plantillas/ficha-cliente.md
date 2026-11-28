@@ -8,7 +8,7 @@ estado: "draft"
 Una ficha por cliente. Es la versión legible del esquema [`ficha-cliente.schema.json`](ficha-cliente.schema.json), que sale de `src/varios/clientes/ficha.py`. Ejemplo relleno, con un cliente inventado: [`ejemplos/ficha-cliente-atalaya.json`](ejemplos/ficha-cliente-atalaya.json).
 
 ## Reglas
-- **Sin datos personales.** Los interlocutores se guardan por **rol**. Nombres, correos y teléfonos van al CRM (M-014), no aquí.
+- **Sin datos personales.** Los interlocutores se guardan por **rol**. Nombres, correos y teléfonos van al CRM (M-014), no aquí. El modelo rechaza cualquier texto con un correo, un teléfono o un DNI o NIE; un nombre no se puede reconocer con un patrón, así que lo vigila quien escribe la ficha.
 - **Cada dato dice de dónde sale:** `medido` (lo hemos visto o cronometrado), `declarado` (lo dice el cliente) o `hipotesis` (lo suponemos nosotros). Una cifra sin origen no entra.
 - **Tamaño por rangos**, no cifras exactas.
 - **Hasta L2, solo clientes inventados** y marcados como `ficticio` (D-011).

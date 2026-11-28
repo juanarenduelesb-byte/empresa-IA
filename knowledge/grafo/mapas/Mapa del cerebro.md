@@ -20,11 +20,11 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 - [[knowledge/grafo/mapas/comunidad-07|Comunidad 7 · knowledge/ingenieria · Especialista en ciberseguridad y Ingeniero de plataforma y operaciones (DevOps/SRE)]] (40 nodos)
 - [[knowledge/grafo/mapas/comunidad-08|Comunidad 8 · knowledge/plantillas · Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue y Matriz de aprobaciones · BORRADOR]] (37 nodos)
 - [[knowledge/grafo/mapas/comunidad-09|Comunidad 9 · processes/catalog · P22 · Gestión de errores y reintentos y Catálogo de procesos P01–P38]] (37 nodos)
-- [[knowledge/grafo/mapas/comunidad-10|Comunidad 10 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Flujo ceo]] (33 nodos)
+- [[knowledge/grafo/mapas/comunidad-10|Comunidad 10 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Flujo ceo]] (34 nodos)
 - [[knowledge/grafo/mapas/comunidad-11|Comunidad 11 · knowledge/administracion-finanzas · Experto en asesorías, gestorías y despachos y Especialista en contabilidad y facturación]] (31 nodos)
 - [[knowledge/grafo/mapas/comunidad-12|Comunidad 12 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Conversaciones con IA y evaluación]] (18 nodos)
 - [[knowledge/grafo/mapas/comunidad-13|Comunidad 13 · knowledge/direccion · CEO digital y Responsable de decisiones y seguimiento]] (10 nodos)
-- [[knowledge/grafo/mapas/comunidad-14|Comunidad 14 · knowledge/estudios · Estudios y Integraciones]] (8 nodos)
+- [[knowledge/grafo/mapas/comunidad-14|Comunidad 14 · knowledge/estudios · Estudios y Integraciones]] (7 nodos)
 
 ## Nodos centrales
 

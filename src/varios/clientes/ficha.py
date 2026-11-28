@@ -1,7 +1,9 @@
 """Ficha de cliente (tarea B3). Modelo Pydantic del que sale el esquema JSON publicado.
 
 Reglas que el modelo impone:
-- Sin datos personales: los interlocutores se guardan por rol, nunca con nombre, correo o teléfono.
+- Sin datos personales: los interlocutores se guardan por rol, nunca con nombre, correo o teléfono. Ningún texto de
+  la ficha admite un correo, un teléfono o un DNI o NIE (un nombre no se reconoce con un patrón: lo vigila quien
+  escribe la ficha).
 - Cada dato del proceso dice de dónde sale: medido, declarado por el cliente o hipótesis nuestra.
 - Las cifras de tamaño van por rangos, no exactas.
 - Una ficha de un cliente inventado lo dice (`ficticio`), y hasta L2 solo hay fichas inventadas (D-011).
@@ -12,11 +14,12 @@ Uso: python -m varios.clientes.ficha   → escribe knowledge/plantillas/ficha-cl
 from __future__ import annotations
 
 import json
+import re
 from datetime import date
 from pathlib import Path
 from typing import Literal
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, field_validator
 
 RAIZ = Path(__file__).resolve().parents[3]
 ESQUEMA = RAIZ / "knowledge" / "plantillas" / "ficha-cliente.schema.json"
@@ -27,8 +30,29 @@ Nivel = Literal["L0", "L1", "L2", "L3", "L4"]
 SiNo = Literal["si", "no", "por_confirmar"]
 
 
+# Lo que se puede reconocer sin IA: correo, teléfono español y DNI o NIE. Un nombre no se reconoce con un patrón;
+# para eso están los campos por rol y la revisión de quien escribe la ficha.
+_PERSONAL = {
+    "un correo": re.compile(r"[\w.+-]+@[\w-]+(\.[\w-]+)+"),
+    "un teléfono": re.compile(r"(?<!\d)(\+?34)?[6789]\d{8}(?!\d)"),
+    "un DNI o NIE": re.compile(r"\b[XYZ]?\d{7,8}[A-Z]\b", re.I),
+}
+
+
 class Estricto(BaseModel):
     model_config = ConfigDict(extra="forbid")
+
+    @field_validator("*", mode="after")
+    @classmethod
+    def _sin_datos_personales(cls, v):
+        """La ficha no guarda datos personales: rechaza correos, teléfonos y DNI en cualquier texto (repaso 28/11)."""
+        for t in ([v] if isinstance(v, str) else v if isinstance(v, list) else []):
+            if isinstance(t, str):
+                plano = re.sub(r"[\s.()-]", "", t)
+                for que, patron in _PERSONAL.items():
+                    if patron.search(plano if que == "un teléfono" else t):
+                        raise ValueError(f"La ficha no guarda datos personales: parece {que}")
+        return v
 
 
 class Dato(Estricto):

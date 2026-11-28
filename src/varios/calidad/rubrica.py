@@ -27,6 +27,9 @@ class Problema(Estricto):
     gravedad: Literal["grave", "medio", "leve"]
     donde: str
     como_arreglarlo: str
+    # Si el problema es uno de los bloqueantes de rubrica.json, su texto exacto. Un bloqueante es siempre grave
+    # (rubrica.md), aunque el revisor le ponga otra gravedad: lo decide la regla, no el revisor (repaso del 28/11).
+    bloqueante: str | None = None
 
 
 class Revision(Estricto):
@@ -66,7 +69,13 @@ def evaluar(r: Revision) -> Veredicto:
         motivos.append("Por debajo de " + str(regla["minimo_por_criterio"]) + ": " + ", ".join(bajos))
     if media < regla["media_minima"]:
         motivos.append(f"Media {media} por debajo de {regla['media_minima']}")
-    graves = [p for p in r.problemas if p.gravedad in regla["gravedades_que_bloquean"]]
+    desconocidos = sorted({p.bloqueante for p in r.problemas if p.bloqueante} - set(ru["bloqueantes"]))
+    if desconocidos:
+        raise ValueError(f"Bloqueantes que no están en la rúbrica: {desconocidos}")
+    bloq = [p for p in r.problemas if p.bloqueante]
+    if bloq:
+        motivos.append("Bloqueante: " + "; ".join(sorted({p.bloqueante for p in bloq})))
+    graves = [p for p in r.problemas if p.gravedad in regla["gravedades_que_bloquean"] or p.bloqueante]
     if graves:
         motivos.append(f"{len(graves)} problemas graves o medios sin resolver")
     lista = listas()["tipos"].get(r.tipo)

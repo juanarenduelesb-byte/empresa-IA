@@ -16,6 +16,8 @@ estado: "draft"
 Aunque cumpla, lo aprueba un socio antes de enviarlo.
 
 ## Bloqueantes (son siempre problema grave)
+Al anotarlo, el problema lleva en `bloqueante` el texto exacto de la lista (`rubrica.json`): la regla lo cuenta como grave aunque se le haya puesto otra gravedad.
+
 - Cifra, cliente, fuente o norma inventada.
 - Datos personales de terceros en el cuerpo.
 - Afirmar cumplimiento legal sin revisión competente.

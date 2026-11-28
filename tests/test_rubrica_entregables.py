@@ -73,3 +73,14 @@ def test_un_punto_de_otra_lista_no_cuenta_como_cumplido():
         evaluar(Revision(tipo="propuesta-diagnostico", puntos=puntos, comprobaciones={"PD9": True}))
     with pytest.raises(ValueError, match="no son de la lista"):
         evaluar(Revision(tipo="propuesta-diagnostico", puntos=puntos, comprobaciones={"ID1": True}))
+
+
+def test_un_bloqueante_no_cumple_aunque_el_revisor_lo_marque_leve():
+    """Repaso del 28/11: los bloqueantes «son siempre problema grave» (rubrica.md); antes la regla no los miraba."""
+    b = rubrica()["bloqueantes"][0]
+    leve = Problema(criterio="veracidad", gravedad="leve", donde="§2", como_arreglarlo="Quitar la cifra",
+                    bloqueante=b)
+    v = evaluar(rev([5, 5, 5, 5, 5, 5], problemas=[leve]))
+    assert not v.cumple and any(b in m for m in v.motivos)
+    with pytest.raises(ValueError):
+        evaluar(rev([5, 5, 5, 5, 5, 5], problemas=[leve.model_copy(update={"bloqueante": "otra cosa"})]))

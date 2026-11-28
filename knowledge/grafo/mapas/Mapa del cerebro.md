@@ -32,12 +32,12 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 - [[knowledge/INDEX|Índice del conocimiento de Varios]] · 123 vecinos
 - [[docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado|Guia de Arranque Proyecto v1.4 Diseno Cerrado]] · 85 vecinos
 - [[processes/catalog/README|Catálogo de procesos P01–P38]] · 83 vecinos
-- [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]] · 79 vecinos
+- [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]] · 80 vecinos
 - L2 (puerta técnica) · 75 vecinos
 - [[CLAUDE|Varios · empresa-ia]] · 71 vecinos
 - [[claude/habilidades/README|Habilidades de los agentes]] · 69 vecinos
 - [[docs/29-autonomia|Mapa de autonomía por proceso, A0–A4 (M-045)]] · 67 vecinos
-- [[processes/catalog/P22-gestion-de-errores-y-reintentos|P22 · Gestión de errores y reintentos]] · 64 vecinos
+- [[processes/catalog/P22-gestion-de-errores-y-reintentos|P22 · Gestión de errores y reintentos]] · 65 vecinos
 - [[docs/28-auditoria-agentes|Auditoría de agentes y habilidades frente a los procesos (M-040)]] · 64 vecinos
 - [[processes/catalog/P28-gestion-de-incidentes|P28 · Gestión de incidentes]] · 63 vecinos
 - [[knowledge/direccion/ceo-digital|CEO digital]] · 60 vecinos
@@ -50,16 +50,16 @@ Resumen del grafo calculado sin IA (D-018). El detalle está en [[knowledge/graf
 - [[claude/habilidades/README|Habilidades de los agentes]] · conecta las comunidades 0, 4, 5, 6, 7, 13
 - L2 (puerta técnica) · conecta las comunidades 1, 2, 3, 4, 5, 6
 - [[knowledge/INDEX|Índice del conocimiento de Varios]] · conecta las comunidades 1, 2, 3, 4, 5, 6
-- [[docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado|Guia de Arranque Proyecto v1.4 Diseno Cerrado]] · conecta las comunidades 2, 3, 4, 6, 7, 8
 - [[knowledge/estudios/README|Estudios]] · conecta las comunidades 1, 2, 3, 4, 5, 6
+- [[docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado|Guia de Arranque Proyecto v1.4 Diseno Cerrado]] · conecta las comunidades 2, 3, 4, 6, 7, 8
 - [[knowledge/grafo/decisiones/D-011|D-011 · Construir primero, clientes desde el 15/02/2027]] · conecta las comunidades 1, 2, 3, 4, 7, 9
-- [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]] · conecta las comunidades 1, 4, 5, 7, 9, 11
-- [[knowledge/direccion/ceo-digital|CEO digital]] · conecta las comunidades 1, 2, 3, 4, 7, 8
+- [[docs/21-trabajo-nocturno|Trabajo nocturno de Claude]] · conecta las comunidades 1, 4, 5, 7, 8, 9
+- [[knowledge/agentes/proj|Arquitecto de procesos]] · conecta las comunidades 0, 3, 5, 6, 7, 12
 
 ## Preguntas abiertas
 
 - ¿Por qué «Registro de fuentes» conecta la comunidad 1 con las comunidades 2, 3, 4, 5?  
-  Intermediación alta (0.157): es un puente entre temas.
+  Intermediación alta (0.156): es un puente entre temas.
 - ¿Por qué «Registro de decisiones» conecta la comunidad 3 con las comunidades 1, 2, 4, 5?  
   Intermediación alta (0.051): es un puente entre temas.
 - ¿Por qué «Habilidades de los agentes» conecta la comunidad 2 con las comunidades 0, 4, 5, 6?  

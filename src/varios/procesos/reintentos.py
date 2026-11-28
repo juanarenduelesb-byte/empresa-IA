@@ -7,6 +7,7 @@ seguridad, política y errores permanentes no se reintentan nunca.
 from __future__ import annotations
 
 import random
+import time
 from collections.abc import Callable
 from dataclasses import dataclass, field
 from typing import TypeVar
@@ -41,11 +42,15 @@ def espera(intento: int, base: float = 1.0, tope: float = 60.0, azar: random.Ran
 def con_reintentos(
     accion: Callable[[], T],
     max_intentos: int = 3,
-    dormir: Callable[[float], None] = lambda s: None,
+    dormir: Callable[[float], None] | None = None,
     base: float = 1.0,
     tope: float = 60.0,
 ) -> T:
-    """Ejecuta la acción reintentando solo errores reintentables."""
+    """Ejecuta la acción reintentando solo errores reintentables.
+
+    Por defecto duerme de verdad (`time.sleep`) entre intentos; las pruebas pasan su propio `dormir`.
+    """
+    dormir = dormir or time.sleep
     for intento in range(1, max_intentos + 1):
         try:
             return accion()

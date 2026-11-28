@@ -20,7 +20,7 @@ def fallos(*tipos, ok="hecho"):
 
 def test_transitorio_se_reintenta_y_termina():
     accion, llamadas = fallos("transitorio", "dependencia_externa")
-    assert con_reintentos(accion, max_intentos=3) == "hecho"
+    assert con_reintentos(accion, max_intentos=3, dormir=lambda s: None) == "hecho"
     assert len(llamadas) == 3
 
 
@@ -28,14 +28,14 @@ def test_transitorio_se_reintenta_y_termina():
 def test_no_reintentables_fallan_a_la_primera(tipo):
     accion, llamadas = fallos(tipo)
     with pytest.raises(ErrorClasificado):
-        con_reintentos(accion, max_intentos=5)
+        con_reintentos(accion, max_intentos=5, dormir=lambda s: None)
     assert len(llamadas) == 1
 
 
 def test_agotado_tras_max_intentos():
     accion, llamadas = fallos("transitorio", "transitorio", "transitorio")
     with pytest.raises(Agotado) as e:
-        con_reintentos(accion, max_intentos=3)
+        con_reintentos(accion, max_intentos=3, dormir=lambda s: None)
     assert e.value.intentos == 3 and len(llamadas) == 3
 
 
@@ -51,6 +51,15 @@ def test_duerme_entre_intentos():
     esperas = []
     accion, _ = fallos("transitorio", "transitorio")
     con_reintentos(accion, max_intentos=3, dormir=esperas.append)
+    assert len(esperas) == 2
+
+
+def test_sin_dormir_explicito_espera_de_verdad(monkeypatch):
+    """Repaso del 28/11: por defecto no esperaba nada y reintentaba seguido, sin espera creciente."""
+    esperas = []
+    monkeypatch.setattr("varios.procesos.reintentos.time.sleep", esperas.append)
+    accion, _ = fallos("transitorio", "transitorio")
+    con_reintentos(accion, max_intentos=3)
     assert len(esperas) == 2
 
 

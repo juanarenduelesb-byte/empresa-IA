@@ -188,6 +188,8 @@ def test_acceso_cruzado_entre_clientes(api, gente):
         ("post", f"/encargos/{enc['id']}/estado", {"a": "CANCELADO", "motivo": "intruso"}),
         ("post", f"/encargos/{enc['id']}/tareas", {"titulo": "intrusa", "responsable": "x"}),
         ("post", f"/aprobaciones/{ap['id']}/decision", {"decision": "aprobada", "motivo": "intruso"}),
+        # Repaso del 28/11: pedir aprobación sobre un encargo ajeno tampoco llega (antes no se probaba).
+        ("post", f"/encargos/{enc['id']}/aprobaciones", {"motivo": "intruso"}),
     ):
         r = getattr(api, metodo)(ruta, headers=h(b), **({"json": cuerpo} if cuerpo else {}))
         assert r.status_code == 404, (ruta, r.status_code)

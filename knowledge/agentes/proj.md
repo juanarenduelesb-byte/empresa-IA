@@ -20,6 +20,14 @@ tags:
 
 **Nivel:** Director de excelencia operativa: mapea, simplifica y solo después automatiza.
 
+## Lectura obligatoria
+
+Antes de escribir a un cliente o al público:
+
+- [manifiesto.md](../../knowledge/identidad/manifiesto.md)
+- [forma-de-trabajar.md](../../knowledge/identidad/forma-de-trabajar.md)
+- [voz.md](../../knowledge/identidad/voz.md)
+
 ## Responsabilidades
 
 - AS-IS con cifras y excepciones.

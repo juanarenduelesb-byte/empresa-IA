@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 2
-miembros: 96
+miembros: 97
 cohesion: 0.1
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 2 · claude/habilidades · Habilidades de los agentes y Administración
 
-96 nodos agrupados por el algoritmo de Louvain. Cohesión 0.1.
+97 nodos agrupados por el algoritmo de Louvain. Cohesión 0.1.
 
 ## Documentos
 
@@ -17,24 +17,26 @@ tags:
 - [[knowledge/agentes/admj|Administración]]
 - [[knowledge/agentes/ase|Experto en asesorías y despachos]]
 - [[knowledge/agentes/back|Backend]]
-- [[knowledge/agentes/README|Agentes de la oficina]]
 - [[knowledge/agentes/proj|Arquitecto de procesos]]
+- [[knowledge/agentes/README|Agentes de la oficina]]
 - [[knowledge/agentes/comj|Jefe comercial]]
 - [[knowledge/agentes/cfo|Director financiero]]
 - [[knowledge/agentes/leg|Legal y privacidad]]
 - [[knowledge/agentes/ingj|Arquitecto técnico]]
 - [[knowledge/agentes/prop|Propuestas]]
-- [[knowledge/agentes/conta|Contabilidad y facturación]]
-- [[knowledge/agentes/cont|Contenido]]
-- [[knowledge/agentes/exito|Éxito de cliente]]
-- [[knowledge/agentes/pros|Prospección]]
-- [[knowledge/agentes/val|Validación]]
-- [[knowledge/agentes/seg|Coordinación sectorial · Seguros]]
 - [[knowledge/agentes/cump|Cumplimiento normativo]]
+- [[knowledge/agentes/cont|Contenido]]
+- [[knowledge/agentes/conta|Contabilidad y facturación]]
+- [[knowledge/agentes/exito|Éxito de cliente]]
+- [[knowledge/identidad/forma-de-trabajar|Forma de trabajar]]
+- [[knowledge/agentes/val|Validación]]
+- [[knowledge/agentes/pros|Prospección]]
+- [[knowledge/agentes/seg|Coordinación sectorial · Seguros]]
 - [[knowledge/agentes/ceo|CEO digital]]
 - [[knowledge/agentes/pmo|Plan y seguimiento]]
-- [[knowledge/agentes/dec|Registro de decisiones]]
 - [[knowledge/agentes/bib|Bibliotecario]]
+- [[knowledge/identidad/manifiesto|Manifiesto]]
+- [[knowledge/agentes/dec|Registro de decisiones]]
 - [[knowledge/agentes/ux|Diseño y experiencia]]
 - [[knowledge/agentes/calj|Calidad y riesgo]]
 - [[knowledge/agentes/kpi|Métricas]]
@@ -42,12 +44,11 @@ tags:
 - [[claude/habilidades/hecho-hipotesis-propuesta|Separar hecho, hipótesis y propuesta]]
 - [[knowledge/agentes/dat|Datos de prueba]]
 - [[knowledge/agentes/ia|IA y evaluación]]
-- [[knowledge/identidad/manifiesto|Manifiesto]]
 - [[knowledge/agentes/prov|Proveedores]]
 - [[knowledge/agentes/sal|Experto en sanidad privada]]
+- [[knowledge/identidad/voz|Guía de voz]]
 - [[knowledge/agentes/int|Integraciones]]
 - [[knowledge/agentes/logi|Experto en logística]]
-- [[knowledge/identidad/voz|Guía de voz]]
 - [[knowledge/agentes/fnz|Experto en servicios financieros]]
 - [[knowledge/agentes/fin|Costes]]
 - [[knowledge/agentes/ind|Experto en industria]]
@@ -62,18 +63,17 @@ tags:
 - [[claude/habilidades/glosario-sector|Glosario del sector]]
 - [[claude/habilidades/plan-con-criterio|Plan con responsables y criterio]]
 - [[claude/habilidades/pruebas|Pruebas antes que código]]
+- [[claude/habilidades/ficha-proveedor|Ficha de proveedor]]
 - [[claude/habilidades/ficha-metrica|Ficha de métrica]]
 - [[claude/habilidades/modelo-amenazas|Modelo de amenazas]]
 - [[claude/habilidades/spec-tecnica|Especificación para Claude Code]]
-- [[claude/habilidades/ficha-proveedor|Ficha de proveedor]]
 - [[claude/habilidades/contrato-de-tarea|Contrato de tarea]]
 - [[claude/habilidades/evaluacion-modelos|Evaluación de modelos]]
 - [[claude/habilidades/cierre-mensual|Cierre contable mensual]]
 - [[claude/habilidades/casos-sinteticos|Casos de prueba inventados]]
 - [[claude/habilidades/propuesta-diagnostico|Propuesta de diagnóstico]]
 - [[claude/habilidades/flujo-pantallas|Flujo y pantallas de una tarea]]
-- [[claude/habilidades/preguntas-profesional|Preguntas para un profesional externo]]
-- … y 35 más
+- … y 36 más
 
 ## Decisiones
 

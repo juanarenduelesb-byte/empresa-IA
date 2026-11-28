@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 4
-miembros: 58
-cohesion: 0.2
+miembros: 60
+cohesion: 0.19
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 4 · processes/runbooks · Auditoría de agentes y habilidades frente a los procesos (M-040) y Dependencias entre procesos
 
-58 nodos agrupados por el algoritmo de Louvain. Cohesión 0.2.
+60 nodos agrupados por el algoritmo de Louvain. Cohesión 0.19.
 
 ## Documentos
 
@@ -22,7 +22,9 @@ tags:
 - [[knowledge/direccion/README|Dirección y gobierno]]
 - [[processes/diagrams/ciclo-encargo|Ciclo completo de un encargo (P01 → P11)]]
 - [[processes/tests/README|Plan de pruebas de procesos]]
+- [[processes/README|Procesos]]
 - [[processes/runbooks/README|Runbooks]]
+- [[processes/definitions/README|Definiciones ejecutables]]
 - [[processes/runbooks/caida-proveedor-ia|Caída del proveedor de IA]]
 - [[processes/runbooks/restauracion|Restauración de copias]]
 - [[processes/runbooks/coste-anomalo|Coste anómalo]]

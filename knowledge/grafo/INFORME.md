@@ -5,18 +5,18 @@ Cómo está conectado el cerebro de Varios: qué sostiene todo, qué temas forma
 
 ## Resumen
 
-- 5278 nodos: seccion 4514, documento 394, fuente 147, habilidad 65, proceso 38, especialista 34, agente 34, decision 33, puerta 12, departamento 7.
-- 7695 relaciones: 64 % EXTRACTADAS (escritas en la fuente), 35 % INFERIDAS (temas compartidos, con puntuación) y 81 AMBIGUAS (para revisar).
+- 5280 nodos: seccion 4516, documento 394, fuente 147, habilidad 65, proceso 38, especialista 34, agente 34, decision 33, puerta 12, departamento 7.
+- 7701 relaciones: 64 % EXTRACTADAS (escritas en la fuente), 35 % INFERIDAS (temas compartidos, con puntuación) y 81 AMBIGUAS (para revisar).
 - 14 comunidades de temas.
 
 ## Nodos centrales
 
 Lo que más cosas conecta. Si cambia, cambia mucho.
 
-1. **Registro de fuentes** (`knowledge/fuentes/registro.md`) · 255 conexiones
-2. **Registro de decisiones** (`DECISIONS.md`) · 143 conexiones
+1. **Registro de fuentes** (`knowledge/fuentes/registro.md`) · 254 conexiones
+2. **Registro de decisiones** (`DECISIONS.md`) · 142 conexiones
 3. **Índice del conocimiento de Varios** (`knowledge/INDEX.md`) · 123 conexiones
-4. **Trabajo nocturno de Claude** (`docs/21-trabajo-nocturno.md`) · 116 conexiones
+4. **Trabajo nocturno de Claude** (`docs/21-trabajo-nocturno.md`) · 117 conexiones
 5. **Guia de Arranque Proyecto v1.4 Diseno Cerrado** (`docs/fuentes/Guia_de_Arranque_Proyecto_v1.4_Diseno_Cerrado.md`) · 85 conexiones
 6. **Catálogo de procesos P01–P38** (`processes/catalog/README.md`) · 84 conexiones
 7. **L2 (puerta técnica)** · 75 conexiones
@@ -30,9 +30,9 @@ Lo que más cosas conecta. Si cambia, cambia mucho.
 
 Nodos por los que pasa el camino entre comunidades distintas (intermediación).
 
-- **Registro de fuentes** · intermediación 0.152 · une la comunidad 1 con 2, 3, 4, 5, 6, 7
+- **Registro de fuentes** · intermediación 0.15 · une la comunidad 1 con 2, 3, 4, 5, 6, 7
 - **Habilidades de los agentes** · intermediación 0.048 · une la comunidad 2 con 0, 3, 4, 5, 6, 7
-- **Registro de decisiones** · intermediación 0.047 · une la comunidad 3 con 1, 2, 4, 5, 6, 7
+- **Registro de decisiones** · intermediación 0.046 · une la comunidad 3 con 1, 2, 4, 5, 6, 7
 - **Trabajo nocturno de Claude** · intermediación 0.037 · une la comunidad 3 con 1, 2, 4, 5, 6, 7
 - **L2 (puerta técnica)** · intermediación 0.025 · une la comunidad 12 con 1, 2, 3, 4, 5, 6
 - **Índice del conocimiento de Varios** · intermediación 0.021 · une la comunidad 6 con 1, 2, 3, 4, 5, 7
@@ -64,19 +64,19 @@ Cohesión 0.05 · 108 nodos: Legal y privacidad; Arquitecto de procesos; Segurid
 
 ### 1 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros
 
-Cohesión 0.06 · 100 nodos: Registro de fuentes; Coordinación sectorial y seguros; Experto en sanidad privada; Responsable de cumplimiento normativo; Experto en servicios financieros no bancarios; Especialista legal y privacidad; Catálogo de excepciones al abrir un siniestro; Experto en logística y transporte (y 92 más)
+Cohesión 0.06 · 100 nodos: Registro de fuentes; Coordinación sectorial y seguros; Responsable de cumplimiento normativo; Experto en sanidad privada; Experto en servicios financieros no bancarios; Especialista legal y privacidad; Catálogo de excepciones al abrir un siniestro; Experto en logística y transporte (y 92 más)
 
 ### 2 · claude/habilidades · Habilidades de los agentes y Administración
 
-Cohesión 0.1 · 96 nodos: Habilidades de los agentes; Administración; Experto en asesorías y despachos; Backend; Agentes de la oficina; Arquitecto de procesos; Jefe comercial; Director financiero (y 88 más)
+Cohesión 0.1 · 97 nodos: Habilidades de los agentes; Administración; Experto en asesorías y despachos; Backend; Arquitecto de procesos; Agentes de la oficina; Jefe comercial; Director financiero (y 89 más)
 
 ### 3 · docs · Registro de decisiones y Trabajo nocturno de Claude
 
-Cohesión 0.08 · 85 nodos: Registro de decisiones; Trabajo nocturno de Claude; Informe de la mañana · 27/11/2026; Base de datos (D-023, propuesta); Plan maestro: la empresa completa, sin que se escape nada; Informe de la mañana · 26/11/2026; Política de uso de inteligencia artificial de Varios · BORRADOR PARA ABOGADO; 17 · Cerebro, conocimiento y procesos: auditoría e informe (y 77 más)
+Cohesión 0.08 · 85 nodos: Registro de decisiones; Trabajo nocturno de Claude; Base de datos (D-023, propuesta); Informe de la mañana · 27/11/2026; Plan maestro: la empresa completa, sin que se escape nada; Informe de la mañana · 26/11/2026; Política de uso de inteligencia artificial de Varios · BORRADOR PARA ABOGADO; 17 · Cerebro, conocimiento y procesos: auditoría e informe (y 77 más)
 
 ### 4 · processes/runbooks · Auditoría de agentes y habilidades frente a los procesos (M-040) y Dependencias entre procesos
 
-Cohesión 0.2 · 58 nodos: Auditoría de agentes y habilidades frente a los procesos (M-040); Dependencias entre procesos; Mapa de autonomía por proceso, A0–A4 (M-045); Procesos y estados; P02 · Clasificación y triaje; P10 · Aprobación humana; P29 · Gestión de costes y capacidad; P01 · Alta y recepción de petición (y 50 más)
+Cohesión 0.19 · 60 nodos: Auditoría de agentes y habilidades frente a los procesos (M-040); Dependencias entre procesos; Mapa de autonomía por proceso, A0–A4 (M-045); Procesos y estados; P02 · Clasificación y triaje; P10 · Aprobación humana; P29 · Gestión de costes y capacidad; P01 · Alta y recepción de petición (y 52 más)
 
 ### 5 · precedents/oficina · Propuesta de proceso de referencia: siniestros en corredurías y Conversaciones con Coordinación sectorial · Seguros
 
@@ -84,7 +84,7 @@ Cohesión 0.16 · 57 nodos: Propuesta de proceso de referencia: siniestros en co
 
 ### 6 · processes/catalog · Índice del conocimiento de Varios y Arquitecto de procesos
 
-Cohesión 0.16 · 52 nodos: Índice del conocimiento de Varios; Arquitecto de procesos; P32 · Descubrimiento de procesos; P38 · Gestión de despliegue por cliente; P31 · Calificación de oportunidad; P33 · Diseño y validación TO-BE; P33 · Diseño y validación TO-BE; Director comercial (y 44 más)
+Cohesión 0.17 · 50 nodos: Índice del conocimiento de Varios; Arquitecto de procesos; P32 · Descubrimiento de procesos; P38 · Gestión de despliegue por cliente; P31 · Calificación de oportunidad; P33 · Diseño y validación TO-BE; P33 · Diseño y validación TO-BE; Director comercial (y 42 más)
 
 ### 7 · knowledge/ingenieria · Varios · empresa-ia y CEO digital
 
@@ -96,11 +96,11 @@ Cohesión 0.19 · 37 nodos: Atlas Evolucion v1.1 Modelo Operativo Procesos y Des
 
 ### 9 · processes/catalog · P22 · Gestión de errores y reintentos y Catálogo de procesos P01–P38
 
-Cohesión 0.49 · 37 nodos: P22 · Gestión de errores y reintentos; Catálogo de procesos P01–P38; P28 · Gestión de incidentes; P22 · Gestión de errores y reintentos; P27 · Gestión de proveedores y dependencias; P13 · Aprendizaje y actualización de la wiki; P05 · Diseño del plan; P11 · Entrega y cierre (y 29 más)
+Cohesión 0.49 · 37 nodos: P22 · Gestión de errores y reintentos; Catálogo de procesos P01–P38; P28 · Gestión de incidentes; P22 · Gestión de errores y reintentos; P27 · Gestión de proveedores y dependencias; P05 · Diseño del plan; P13 · Aprendizaje y actualización de la wiki; P11 · Entrega y cierre (y 29 más)
 
 ### 10 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Flujo ceo
 
-Cohesión 0.34 · 33 nodos: Guia de Arranque Proyecto v1.4 Diseno Cerrado; Flujo ceo; Ejecucion agentes; Motor conocimiento obsidian; Marco Integral Legal Ciberseguridad IA Espana UE 2026-11-16; 12 · Ciclo de vida de un proyecto con cliente; Comunicaciones estados; Calidad gobierno (y 25 más)
+Cohesión 0.36 · 32 nodos: Guia de Arranque Proyecto v1.4 Diseno Cerrado; Flujo ceo; Ejecucion agentes; Motor conocimiento obsidian; Marco Integral Legal Ciberseguridad IA Espana UE 2026-11-16; 12 · Ciclo de vida de un proyecto con cliente; Comunicaciones estados; Calidad gobierno (y 24 más)
 
 ### 11 · knowledge/administracion-finanzas · Experto en asesorías, gestorías y despachos y Especialista en contabilidad y facturación
 
@@ -108,7 +108,7 @@ Cohesión 0.19 · 31 nodos: Experto en asesorías, gestorías y despachos; Espec
 
 ### 12 · precedents/oficina · Acta de protección de la IA y examen de 50 casos y Conversaciones con IA y evaluación
 
-Cohesión 0.3 · 18 nodos: Acta de protección de la IA y examen de 50 casos; L2 (puerta técnica); Conversaciones con IA y evaluación; Reunión: IA y evaluación y Seguridad; Conversaciones con CEO digital; Conversaciones con Registro de decisiones; Conversaciones con Plan y seguimiento; Conversaciones con Bibliotecario (y 10 más)
+Cohesión 0.3 · 18 nodos: Acta de protección de la IA y examen de 50 casos; L2 (puerta técnica); Conversaciones con IA y evaluación; Reunión: IA y evaluación y Seguridad; Conversaciones con CEO digital; Conversaciones con Plan y seguimiento; Conversaciones con Bibliotecario; Conversaciones con Registro de decisiones (y 10 más)
 
 ### 13 · knowledge/estudios · Estudios y Integraciones
 
@@ -138,16 +138,16 @@ Cohesión 0.52 · 7 nodos: Estudios; Integraciones; Contratos de datos; Estudio 
 _Preguntas que este grafo ayuda a responder o que conviene decidir:_
 
 - **¿Por qué «Registro de fuentes» conecta la comunidad 1 con las comunidades 2, 3, 4, 5?**
-  _Intermediación alta (0.152): es un puente entre temas._
+  _Intermediación alta (0.15): es un puente entre temas._
 - **¿Por qué «Habilidades de los agentes» conecta la comunidad 2 con las comunidades 0, 3, 4, 5?**
   _Intermediación alta (0.048): es un puente entre temas._
 - **¿Por qué «Registro de decisiones» conecta la comunidad 3 con las comunidades 1, 2, 4, 5?**
-  _Intermediación alta (0.047): es un puente entre temas._
-- **¿Se aprueba D-019 · Calidad exigente, todo pasa por un socio y cada rechazo se rehace aprendiendo? Sigue en propuesta y la citan 23 secciones.**
+  _Intermediación alta (0.046): es un puente entre temas._
+- **¿Se aprueba D-019 · Calidad exigente, todo pasa por un socio y cada rechazo se rehace aprendiendo? Sigue en propuesta y la citan 24 secciones.**
   _Una decisión en propuesta que ya sostiene mucho contenido._
 - **¿Se aprueba D-024 · Paquete de dominio de seguros con un archivo máquina como fuente de las reglas? Sigue en propuesta y la citan 16 secciones.**
   _Una decisión en propuesta que ya sostiene mucho contenido._
-- **¿Se aprueba D-027 · Cada proceso tiene un nivel de autonomía A0–A4 con techo y criterio? Sigue en propuesta y la citan 14 secciones.**
+- **¿Se aprueba D-027 · Cada proceso tiene un nivel de autonomía A0–A4 con techo y criterio? Sigue en propuesta y la citan 15 secciones.**
   _Una decisión en propuesta que ya sostiene mucho contenido._
 - **¿Deberían enlazarse «knowledge/plantillas/entregables/02-informe-diagnostico.md» y «processes/templates/proceso-cliente.md»?**
   _Tratan lo mismo (relación INFERIDA 0.85) pero no se citan._

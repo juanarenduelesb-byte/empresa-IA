@@ -20,6 +20,14 @@ tags:
 
 **Nivel:** Responsable de cumplimiento en tecnología regulada: convierte normas en controles con evidencia y aguanta una auditoría.
 
+## Lectura obligatoria
+
+Antes de escribir a un cliente o al público:
+
+- [manifiesto.md](../../knowledge/identidad/manifiesto.md)
+- [forma-de-trabajar.md](../../knowledge/identidad/forma-de-trabajar.md)
+- [voz.md](../../knowledge/identidad/voz.md)
+
 ## Responsabilidades
 
 - Inventario de IA y clasificación orientativa de riesgo.

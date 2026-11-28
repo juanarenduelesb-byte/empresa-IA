@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 6
-miembros: 52
-cohesion: 0.16
+miembros: 50
+cohesion: 0.17
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 6 · processes/catalog · Índice del conocimiento de Varios y Arquitecto de procesos
 
-52 nodos agrupados por el algoritmo de Louvain. Cohesión 0.16.
+50 nodos agrupados por el algoritmo de Louvain. Cohesión 0.17.
 
 ## Documentos
 
@@ -33,11 +33,9 @@ tags:
 - [[knowledge/procesos/README|Procesos y operaciones]]
 - [[knowledge/comercial/prospeccion|Especialista en prospección]]
 - [[knowledge/comercial/marketing-contenido|Especialista en marketing y contenido]]
-- [[processes/README|Procesos]]
 - [[processes/templates/proceso-cliente|<sector> · <proceso>]]
 - [[knowledge/comercial/README|Comercial y clientes]]
 - [[knowledge/metodologias-transversales/consultar-historico|Protocolo: consultar el histórico antes de empezar]]
-- [[processes/definitions/README|Definiciones ejecutables]]
 - [[claude/habilidades/cualificacion-oportunidad|Cualificación de oportunidad]]
 - [[precedents/plantilla-incidente|Incidente: <título>]]
 - [[knowledge/plantillas/ficha-kpi|KPI: <nombre>]]

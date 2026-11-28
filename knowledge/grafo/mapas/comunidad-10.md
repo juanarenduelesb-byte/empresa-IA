@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 10
-miembros: 33
-cohesion: 0.34
+miembros: 32
+cohesion: 0.36
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 10 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Flujo ceo
 
-33 nodos agrupados por el algoritmo de Louvain. Cohesión 0.34.
+32 nodos agrupados por el algoritmo de Louvain. Cohesión 0.36.
 
 ## Documentos
 
@@ -22,13 +22,13 @@ tags:
 - [[docs/fuentes/09_09_comunicaciones_estados|Comunicaciones estados]]
 - [[docs/fuentes/06_06_calidad_gobierno|Calidad gobierno]]
 - [[docs/16-correcciones|Registro de correcciones a los documentos recibidos el 17/11/2026]]
-- [[docs/fuentes/05_05_seguridad_clientes|Seguridad clientes]]
 - [[docs/atlas/08-seguridad|08 · Seguridad, identidad y aislamiento de clientes]]
-- [[docs/fuentes/08_08_ciclo_vida_proyecto|Ciclo vida proyecto]]
+- [[docs/fuentes/05_05_seguridad_clientes|Seguridad clientes]]
 - [[docs/atlas/07-conocimiento|07 · Motor de conocimiento con Obsidian]]
 - [[docs/atlas/README|Atlas de diagramas]]
-- [[docs/atlas/02-flujo-ceo|02 · Flujo completo del CEO digital]]
 - [[docs/fuentes/07_07_infraestructura_portabilidad|Infraestructura portabilidad]]
+- [[docs/fuentes/08_08_ciclo_vida_proyecto|Ciclo vida proyecto]]
+- [[docs/atlas/02-flujo-ceo|02 · Flujo completo del CEO digital]]
 - [[docs/atlas/04-ejecucion|04 · Ejecución: motor de procesos, agentes y herramientas]]
 - [[docs/atlas/05-gateway|05 · Puerta de herramientas]]
 - [[docs/atlas/16-estados|16 · Estados de un encargo]]
@@ -43,6 +43,5 @@ tags:
 - [[docs/atlas/10-cambios-modelos|10 · Cambios y elección de modelos de IA]]
 - [[docs/atlas/13-ciclo-dato|13 · Ciclo de vida de un dato]]
 - [[docs/04-motor-de-conocimiento|Motor de conocimiento]]
-- [[docs/03-ceo-digital-y-orquestacion|CEO digital y orquestación]]
 - [[docs/atlas/06-fallos|06 · Fallos, reintentos y recuperación]]
 - [[precedents/lessons-learned/2026-11-correcciones-documentales|Lección: los documentos base también tienen errores]]

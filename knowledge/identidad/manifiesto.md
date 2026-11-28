@@ -26,14 +26,14 @@ Ayudamos a empresas medianas de sectores regulados a que la IA haga trabajo real
 3. **Las decisiones importantes las toma una persona.** La IA no decide cobertura, culpa, fraude, importes ni rechazos, y nada sale fuera, se paga o se firma sin la aprobación de una persona autorizada (anexo de IA, [04](../../governance/legal/borradores/04-anexo-uso-ia.md)).
 4. **Los datos de cada cliente, separados.** Cada cliente ve solo lo suyo; lo comprueban pruebas en cada cambio y la propia base de datos (D-005, D-023).
 5. **Todo queda registrado.** Quién pidió, quién aprobó, qué versión y por qué; el registro no se puede borrar.
-6. **Lo dejamos documentado.** Si mañana el cliente quiere seguir sin nosotros, puede.
+6. **Lo dejamos documentado** ([docs/00](../../docs/00-negocio.md): «lo montamos y lo dejamos documentado»). Qué es del cliente y qué nuestro (método, motor, plantillas) lo fija el contrato: [contrato marco, cláusula 5](../../governance/legal/borradores/01-contrato-marco-servicios.md), borrador para abogado (M-029). Hasta entonces no prometemos que pueda seguir sin nosotros.
 
 ## Lo que no prometemos
 - **Cero errores.** Prometemos detectarlos, corregirlos y que cada error se convierta en una regla o una prueba nueva.
 - **Cumplimiento normativo certificado.** Preparamos controles y evidencias; quien certifica es un profesional competente.
 - **Un «CEO digital» ni una plataforma que lo haga todo.** Vendemos un resultado medible en un proceso (D-006).
 - **Ahorros, plazos o cifras que no hayamos medido.** Sin línea base no hay cifra.
-- **Todos los sectores a la vez.** Uno bien antes que seis a medias.
+- **Todos los sectores a la vez.** Uno bien antes que seis a medias: un solo proceso de referencia (D-011). Qué nicho comercial elegimos sigue abierto (M-011, pregunta 11 de [docs/21](../../docs/21-trabajo-nocturno.md)); si los socios eligen presentarse a varios sectores, esta línea cambia.
 
 ## Quiénes somos
 Dos socios: uno construye el producto y otro lleva la relación con los clientes (reparto pendiente de confirmar, `CLAUDE.md`). Quien vende es quien ejecuta. [Biografías y nombre de la empresa, cuando los socios lo decidan.]

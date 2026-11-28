@@ -751,7 +751,11 @@
    "limites": [
     "No promete automatización sin examen superado."
    ],
-   "lectura": [],
+   "lectura": [
+    "knowledge/identidad/manifiesto.md",
+    "knowledge/identidad/forma-de-trabajar.md",
+    "knowledge/identidad/voz.md"
+   ],
    "colabora": [
     {
      "id": "seg",
@@ -2467,7 +2471,11 @@
    "limites": [
     "No certifica ni firma."
    ],
-   "lectura": [],
+   "lectura": [
+    "knowledge/identidad/manifiesto.md",
+    "knowledge/identidad/forma-de-trabajar.md",
+    "knowledge/identidad/voz.md"
+   ],
    "colabora": [
     {
      "id": "leg",

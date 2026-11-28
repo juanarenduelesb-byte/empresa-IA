@@ -600,9 +600,10 @@ AGENTES = A
 
 
 # Lectura obligatoria (I1): los agentes que escriben a clientes o al público leen la identidad de la empresa antes de
-# escribir. agentes_gen.py comprueba que cada ruta existe.
+# escribir. Arquitecto de procesos (informe AS-IS / TO-BE) y Cumplimiento (respuesta a cuestionarios de clientes)
+# añadidos en el repaso del 28/11. agentes_gen.py comprueba que cada ruta existe.
 IDENTIDAD = ["knowledge/identidad/manifiesto.md", "knowledge/identidad/forma-de-trabajar.md", "knowledge/identidad/voz.md"]
-ESCRIBEN_A_CLIENTES = ("comj", "val", "pros", "prop", "cont", "exito")
+ESCRIBEN_A_CLIENTES = ("comj", "val", "pros", "prop", "cont", "exito", "proj", "cump")
 for _a in A:
     if _a["id"] in ESCRIBEN_A_CLIENTES:
         _a["lectura"] = IDENTIDAD + [x for x in _a["lectura"] if x not in IDENTIDAD]

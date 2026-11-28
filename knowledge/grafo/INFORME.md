@@ -5,8 +5,8 @@ Cómo está conectado el cerebro de Varios: qué sostiene todo, qué temas forma
 
 ## Resumen
 
-- 5298 nodos: seccion 4532, documento 395, fuente 148, habilidad 65, proceso 38, especialista 34, agente 34, decision 33, puerta 12, departamento 7.
-- 7777 relaciones: 64 % EXTRACTADAS (escritas en la fuente), 35 % INFERIDAS (temas compartidos, con puntuación) y 81 AMBIGUAS (para revisar).
+- 5299 nodos: seccion 4533, documento 395, fuente 148, habilidad 65, proceso 38, especialista 34, agente 34, decision 33, puerta 12, departamento 7.
+- 7778 relaciones: 64 % EXTRACTADAS (escritas en la fuente), 35 % INFERIDAS (temas compartidos, con puntuación) y 81 AMBIGUAS (para revisar).
 - 13 comunidades de temas.
 
 ## Nodos centrales
@@ -92,7 +92,7 @@ Cohesión 0.13 · 45 nodos: Varios · empresa-ia; CEO digital; Especialista en c
 
 ### 8 · processes/catalog · P22 · Gestión de errores y reintentos y Catálogo de procesos P01–P38
 
-Cohesión 0.47 · 38 nodos: P22 · Gestión de errores y reintentos; Catálogo de procesos P01–P38; P28 · Gestión de incidentes; P22 · Gestión de errores y reintentos; P27 · Gestión de proveedores y dependencias; P05 · Diseño del plan; P13 · Aprendizaje y actualización de la wiki; P11 · Entrega y cierre (y 30 más)
+Cohesión 0.47 · 38 nodos: P22 · Gestión de errores y reintentos; Catálogo de procesos P01–P38; P28 · Gestión de incidentes; P22 · Gestión de errores y reintentos; P27 · Gestión de proveedores y dependencias; P13 · Aprendizaje y actualización de la wiki; P05 · Diseño del plan; P11 · Entrega y cierre (y 30 más)
 
 ### 9 · knowledge/plantillas · Atlas Evolucion v1.1 Modelo Operativo Procesos y Despliegue y Matriz de aprobaciones · BORRADOR
 

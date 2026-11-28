@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 1
-miembros: 101
+miembros: 102
 cohesion: 0.06
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 1 · knowledge/sectores · Registro de fuentes y Coordinación sectorial y seguros
 
-101 nodos agrupados por el algoritmo de Louvain. Cohesión 0.06.
+102 nodos agrupados por el algoritmo de Louvain. Cohesión 0.06.
 
 ## Documentos
 
@@ -25,12 +25,12 @@ tags:
 - [[knowledge/sectores/sector-industria|Experto en industria manufacturera]]
 - [[knowledge/ingenieria/diseno-experiencia|Diseñador de producto y experiencia (UX)]]
 - [[knowledge/sectores/priorizacion|Priorización de sectores]]
-- [[docs/fuentes/Marco_Integral_Legal_Ciberseguridad_IA_Espana_UE_2026-11-16|Marco Integral Legal Ciberseguridad IA Espana UE 2026-11-16]]
 - [[knowledge/sectores/seguros/README|Paquete de dominio · seguros y corredurías]]
 - [[knowledge/sectores/seguros/glosario-siniestros|Glosario de siniestros]]
 - [[knowledge/sectores/README|Sectores]]
 - [[governance/legal/borradores/README|Borradores legales para abogado (D1)]]
 - [[governance/legal/borradores/01-contrato-marco-servicios|Contrato marco de prestación de servicios · BORRADOR PARA ABOGADO]]
+- [[governance/legal/borradores/04-anexo-uso-ia|Anexo de uso de inteligencia artificial · BORRADOR PARA ABOGADO]]
 - [[governance/legal/borradores/02-encargo-tratamiento|Contrato de encargo del tratamiento (art. 28 RGPD) · BORRADOR PARA ABOGADO]]
 - [[knowledge/metodologias-transversales/investigar|Protocolo: investigar fuera]]
 - [[governance/socios/03-preguntas-seguro-rc-y-ciber|M-020 · Preguntas para el corredor: responsabilidad civil profesional y ciberriesgos]]
@@ -96,6 +96,7 @@ tags:
 - [[knowledge/grafo/fuentes/EEDS-2025-327|EEDS-2025-327 · Reglamento (UE) 2025/327, Espacio Europeo de Datos de Salud]]
 - [[knowledge/grafo/fuentes/GOVUK-LENGUAJE-CLARO|GOVUK-LENGUAJE-CLARO · Use clear language (Writing to GOV.UK standards)]]
 - [[knowledge/grafo/fuentes/MAILCHIMP-VOZ|MAILCHIMP-VOZ · Voice and Tone · Mailchimp Content Style Guide]]
+- [[knowledge/grafo/fuentes/RIA-2024-1689|RIA-2024-1689 · Reglamento (UE) 2024/1689, de inteligencia artificial]]
 - [[knowledge/grafo/fuentes/ADCF-MONCLOA-2026|ADCF-MONCLOA-2026 · Autoridad Administrativa Independiente de Defensa del Cliente Financiero: compromiso de retomar la tramitación]]
 - [[knowledge/grafo/fuentes/AEPD-DIRECTRICES-ENCARGO|AEPD-DIRECTRICES-ENCARGO · Directrices para la elaboración de contratos entre responsables y encargados del tratamiento]]
 - [[knowledge/grafo/fuentes/AEPD-GUIA-COOKIES|AEPD-GUIA-COOKIES · Guía sobre el uso de las cookies]]
@@ -109,5 +110,4 @@ tags:
 - [[knowledge/grafo/fuentes/LEY-1-2019-SECRETOS|LEY-1-2019-SECRETOS · Ley 1/2019, de 20 de febrero, de Secretos Empresariales]]
 - [[knowledge/grafo/fuentes/LEY-35-2015|LEY-35-2015 · Ley 35/2015, de reforma del sistema para la valoración de los daños y perjuicios causados a las personas en accidentes de circulación]]
 - [[knowledge/grafo/fuentes/LEY-5-2025|LEY-5-2025 · Ley 5/2025, de 24 de julio, por la que se modifican el texto refundido de la Ley sobre responsabilidad civil y seguro en la circulación de vehículos a motor y la Ley 20/2015]]
-- [[knowledge/grafo/fuentes/LOPDGDD-DA17|LOPDGDD-DA17 · Ley Orgánica 3/2018 (LOPDGDD), disposición adicional decimoséptima: tratamientos de datos de salud]]
-- … y 10 más
+- … y 11 más

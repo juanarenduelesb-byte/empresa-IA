@@ -1,15 +1,15 @@
 ---
 tipo: "mapa"
 comunidad: 10
-miembros: 31
-cohesion: 0.38
+miembros: 32
+cohesion: 0.36
 tags:
   - "mapa"
 ---
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 10 · docs/atlas · Guia de Arranque Proyecto v1.4 Diseno Cerrado y Flujo ceo
 
-31 nodos agrupados por el algoritmo de Louvain. Cohesión 0.38.
+32 nodos agrupados por el algoritmo de Louvain. Cohesión 0.36.
 
 ## Documentos
 
@@ -17,6 +17,7 @@ tags:
 - [[docs/fuentes/02_02_flujo_ceo|Flujo ceo]]
 - [[docs/fuentes/04_04_ejecucion_agentes|Ejecucion agentes]]
 - [[docs/fuentes/03_03_motor_conocimiento_obsidian|Motor conocimiento obsidian]]
+- [[docs/fuentes/Marco_Integral_Legal_Ciberseguridad_IA_Espana_UE_2026-11-16|Marco Integral Legal Ciberseguridad IA Espana UE 2026-11-16]]
 - [[docs/atlas/12-ciclo-proyecto|12 · Ciclo de vida de un proyecto con cliente]]
 - [[docs/fuentes/09_09_comunicaciones_estados|Comunicaciones estados]]
 - [[docs/atlas/08-seguridad|08 · Seguridad, identidad y aislamiento de clientes]]

@@ -1,7 +1,7 @@
 ---
 tipo: "mapa"
 comunidad: 3
-miembros: 94
+miembros: 92
 cohesion: 0.08
 tags:
   - "mapa"
@@ -9,7 +9,7 @@ tags:
 <!-- Generado por tools/obsidian_gen.py. No editar a mano: se regenera con tools/brain_build.py. -->
 # Comunidad 3 · docs · Registro de decisiones y Trabajo nocturno de Claude
 
-94 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
+92 nodos agrupados por el algoritmo de Louvain. Cohesión 0.08.
 
 ## Documentos
 
@@ -18,8 +18,8 @@ tags:
 - [[docs/informes/2026-11-27|Informe de la mañana · 27/11/2026]]
 - [[docs/24-base-de-datos|Base de datos (D-023, propuesta)]]
 - [[docs/informes/2026-11-28|Informe de la mañana · 28/11/2026]]
-- [[docs/informes/2026-11-26|Informe de la mañana · 26/11/2026]]
 - [[docs/23-plan-maestro|Plan maestro: la empresa completa, sin que se escape nada]]
+- [[docs/informes/2026-11-26|Informe de la mañana · 26/11/2026]]
 - [[governance/legal/borradores/06-politica-uso-ia|Política de uso de inteligencia artificial de Varios · BORRADOR PARA ABOGADO]]
 - [[docs/17-cerebro-y-procesos|17 · Cerebro, conocimiento y procesos: auditoría e informe]]
 - [[docs/31-identidad|Identidad y roles: opciones para los socios y, más adelante, los clientes (S3a)]]
@@ -33,13 +33,13 @@ tags:
 - [[docs/30-inventario-web|Inventario de la web interna (site/) frente a la web para clientes (N5)]]
 - [[docs/19-obsidian|Obsidian: el cerebro abierto en tu equipo]]
 - [[docs/26-web-clientes|Web para clientes: estudio de referencias, estructura y textos (F2)]]
-- [[governance/legal/borradores/04-anexo-uso-ia|Anexo de uso de inteligencia artificial · BORRADOR PARA ABOGADO]]
 - [[governance/socios/01-marca-esclusa-o-varios|M-002 · ¿Una sola marca: Esclusa o Varios?]]
 - [[integrations/README|Integraciones]]
 - [[governance/socios/02-acuerdo-de-socios-puntos|M-003 · Acuerdo de socios: lo que tenéis que decidir]]
 - [[Inicio|Inicio · cerebro de Varios]]
 - [[docs/04-motor-de-conocimiento|Motor de conocimiento]]
 - [[governance/socios/README|Decisiones de los socios (borradores)]]
+- [[docs/informes/README|Informes de la mañana]]
 - [[docs/06-seguridad-y-gobierno|Seguridad, privacidad y gobierno]]
 - [[processes/ceo-control-a/README|Banco del Control A: 25 encargos para el CEO limitado (C2)]]
 - [[docs/07-calidad-infraestructura-y-operacion|Calidad, infraestructura y operación]]
@@ -47,7 +47,6 @@ tags:
 - [[governance/README|Gobierno, seguridad y legal]]
 - [[docs/11-cerebro-en-claude|Cerebro en Claude]]
 - [[web/README|Web para clientes (borrador)]]
-- [[docs/informes/README|Informes de la mañana]]
 - [[integrations/contracts/README|Contratos de datos]]
 - [[knowledge/estudios/2026-11-26-prospectos-pymes-alvaro/README|Estudio de prospectos: automatización para pymes (Álvaro, noviembre de 2026)]]
 - [[integrations/tests/README|Pruebas de integración]]
@@ -110,6 +109,5 @@ tags:
 - [[knowledge/grafo/fuentes/NEAT-2002|NEAT-2002 · Neuroevolution of augmenting topologies (NEAT)]]
 - [[knowledge/grafo/fuentes/OWASP-BD|OWASP-BD · Database Security Cheat Sheet]]
 - [[knowledge/grafo/fuentes/OWASP-INYECCION|OWASP-INYECCION · LLM Prompt Injection Prevention Cheat Sheet]]
-- [[knowledge/grafo/fuentes/RIA-2024-1689|RIA-2024-1689 · Reglamento (UE) 2024/1689, de inteligencia artificial]]
 - [[knowledge/grafo/fuentes/ZITADEL-AGPL|ZITADEL-AGPL · Strengthening Our Open Source Foundation: Moving to AGPL 3.0]]
 - [[knowledge/grafo/fuentes/ZITADEL-MFA|ZITADEL-MFA · ZITADEL Default Settings (segundos factores)]]
